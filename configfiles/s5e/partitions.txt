@@ -1,0 +1,12 @@
+env@nanda
+app@nandb
+boot_a@nandc
+boot_b@nandd
+system_a@nande
+system_b@nandf
+audio_recovery@nandg
+audio_bit@nandh
+audio_default@nandi
+audio_custom@nandj
+reserve@nandk
+UDISK@nandl
