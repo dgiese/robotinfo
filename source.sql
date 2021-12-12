@@ -66,7 +66,7 @@ CREATE TABLE `robotinfo` (
   `status` varchar(200) DEFAULT NULL,
   `warning` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `robotinfo` WRITE;
@@ -102,6 +102,7 @@ INSERT INTO `robotinfo` VALUES (29,'wyze-robot','Wyze Robot Vacuum (viomi clone)
 INSERT INTO `robotinfo` VALUES (30,'conga-robot-3090','Conga 3090 (viomi clone)',NULL,NULL,'zip, sqfs, unencrypted',NULL,NULL,NULL,'Allwinner A33 (4x)',512,'512 MByte',256,'256MByte NAND','GD32F103VCT6','RTL8189ETV',0,'OpenWRT','3.4.x',4,2019,'','','y','n','y','y (replaces dustbin)','n',NULL,'4x',NULL,'IR','','conga-iot','y','Q4/2020','y','y','https://dontvacuum.me/teardowns/viomi-vacuum/','easy via usb-adb','','','',NULL,NULL,NULL,NULL);
 INSERT INTO `robotinfo` VALUES (31,'dreame.vacuum.p2187','Dreame Robot Vacuum D9 Pro','','p2187','X=enc(2x), signed, sqfs',NULL,'tar.gz, unsigned',NULL,'Allwinner MR133 (4x)',256,'256 MByte',256,'256MByte NAND','GD32F303*ET6','RTL8189FTV (6189N-SFC)',0,'OpenWRT','4.9.x',2,2021,'firmwares/dreame.vacuum.p2187.html','https://builder.dontvacuum.me/pkg/voice/dreame','y','n','y','y','n','y',NULL,'y','IR','3.5.8',NULL,'y','Q3/2021','y','y','','easy via UART, minimal teardown',NULL,'http://builder.dontvacuum.me/_dreame_p2187.html','dreame_d9pro.jpg','https://builder.dontvacuum.me/dreame/',NULL,NULL,NULL);
 INSERT INTO `robotinfo` VALUES (32,'dreame.vacuum.p2259','Dreame Robot Vacuum D9 Max','','p2259','X=enc(2x), signed, sqfs',NULL,'tar.gz, unsigned',NULL,'Allwinner MR112 (2x)',128,'128 MByte',128,'128MByte SPI NAND','','',0,'OpenWRT','4.9.x',3,2021,'','','y','n','y','y','n','y',NULL,'y','IR','3.5.8',NULL,'','','','n','','will not run Valetudo due to resources',NULL,'','',NULL,'Device has relatively weak hardware (in comparison to cheaper D9 variants). <br>\r\nHardware too limited to run Valetudo or other custom software. <br>\r\nNot recommended device if you ever plan to root! <br>','<strong style=\"color: red;\">Not recommended for purchase and rooting!</strong>',NULL);
+INSERT INTO `robotinfo` VALUES (33,'dreame.vacuum.p2027','Dreame Robot Vacuum W10 Pro','','p2027','X=enc(2x), signed, sqfs',NULL,'tar.gz, unsigned',NULL,'Allwinner MR133 (4x)',256,'256 MByte',128,'128MByte SPI','GD32F303*ET6','RTL8189FTV (6189N-SFC)',0,'OpenWRT','4.9.x',4,2021,'firmwares/dreame.vacuum.p2027.html','https://builder.dontvacuum.me/pkg/voice/dreame','y','n','y','y','y (included, water change)','y',NULL,'y','IR','4.1.6',NULL,'y','Q4/2021','n','n','','easy via UART, minimal teardown',NULL,'http://builder.dontvacuum.me/_dreame_p2009.html','','https://builder.dontvacuum.me/dreame/','Device has relatively weak hardware (in comparison to other Dreame robots). <br>\r\nHardware too limited to run Valetudo or other custom software. <br>\r\nNot recommended device if you ever plan to root! <br>','<strong style=\"color: red;\">Not recommended for purchase and rooting!</strong>',NULL);
 /*!40000 ALTER TABLE `robotinfo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
