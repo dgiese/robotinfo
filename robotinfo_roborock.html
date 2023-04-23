@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+  <head>
+    <title>Vacuum Robot Overview</title>
+    <meta name="google-site-verification" content="I23EHbKwpo4c4BA5XiOHSIPcC9_5ibgP6fE-s0fHvOo" />
+    <link rel="stylesheet" href="../css.css"></link>
+    <meta name="author" content="Dennis Giese">
+<style>
+body {
+  background-color: #ebebeb;
+  width: 1300px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; font-weight:300; font-stretch:normal;
+  line-height: 1.4em;
+}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{border-color:inherit;text-align:left;vertical-align:top}
+
+</style>
+  </head>
+  <body>
+<h1>Vacuum Robot Overview</h1>
+<p>Here are some information I collected over time of my own vacuum robots and some information I found elsewhere. This table is far from complete, as I still need to sort my documents and files ;) If you find a mistake, feel free to contact me (dennis [at] dontvacuum.me).</p>
+<p><a href="#hardware">Robot hardware and firmware</a><br /> <a href="#features">Robot features</a><br /> <a href="#root">Rootability, custom firmware, config files and teardowns</a><br /> <a href="#pictures">Pictures of models</a></p>
+<hr />
+Filters: <a href="robotinfo_roborock.html">Roborock-only</a> <a href="robotinfo_dreame.html">Dreame-only</a>
+<h3><a id="hardware"></a>Robot hardware and firmware   WHERE OEM="roborock"</h3>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-0pky"><span style="font-weight: bold;">Modelname</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;"><a href="robotinfo_model.html">Model ID</a></span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Codename</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Firmware</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Soundfiles</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">SoC</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;"><a href="robotinfo_ram.html">RAM</a></span></th>
+<th class="tg-0pky"><span style="font-weight: bold;"><a href="robotinfo_flash.html">Flash</a></span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">MCU</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">WiFi</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">OS (Kernel)</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;"><a href="robotinfo_release.html">Year</a></span></th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.a08_0.html">Roborock S6 Pure</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.a08_0.html">roborock.vacuum.a08</a></td>
+<td class="tg-0pky">rubysc1<br>OEM: Roborock</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.p5.html">enc(AES-256-CBC), signed (RSA), sqfs</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/rubysc1/app/voice-pkg/info">B=enc, signed, sqfs, ogg</a></td>
+<td class="tg-0pky">Allwinner R16 (4x)</td>
+<td class="tg-0pky">256 MByte</td>
+<td class="tg-0pky">512MByte NAND</td>
+<td class="tg-0pky">STM32F103VCT6</td>
+<td class="tg-0pky">RTL8189ETV</td>
+<td class="tg-0pky">Ubuntu 14.04 (3.4.x)</td>
+<td class="tg-0pky">Q1/2020<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.a09_0.html">Roborock T7 Pro</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.a09_0.html">roborock.vacuum.a09</a></td>
+<td class="tg-0pky">tanosv<br>OEM: Roborock</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.a09.html">enc, signed, header in TZ</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/tanosv/app/voice-pkg/info"></a></td>
+<td class="tg-0pky">Qualcomm APQ8053 (8x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">4GByte eMCP</td>
+<td class="tg-0pky">STM32F103VCT6</td>
+<td class="tg-0pky">Qualcomm</td>
+<td class="tg-0pky">Android (3.18.x)</td>
+<td class="tg-0pky">Q2/2020</td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.a10_0.html">Roborock S6 MaxV</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.a10_0.html">roborock.vacuum.a10</a></td>
+<td class="tg-0pky">tanosv<br>OEM: Roborock</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.a10.html">enc, signed, header in TZ</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/tanosv/app/voice-pkg/info"></a></td>
+<td class="tg-0pky">Qualcomm APQ8053 (8x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">4GByte eMCP</td>
+<td class="tg-0pky">STM32F103VCT6</td>
+<td class="tg-0pky">Qualcomm</td>
+<td class="tg-0pky">Android (3.18.x)</td>
+<td class="tg-0pky">Q2/2020<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.a11_0.html">Roborock T7</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.a11_0.html">roborock.vacuum.a11</a></td>
+<td class="tg-0pky">tanose<br>OEM: Roborock</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.a11.html">enc(AES-256-CBC), signed (RSA), sqfs</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/tanose/app/voice-pkg/info">B=enc, signed, sqfs, ogg</a></td>
+<td class="tg-0pky">Allwinner R16 (4x)</td>
+<td class="tg-0pky">256 MByte</td>
+<td class="tg-0pky">512MByte NAND</td>
+<td class="tg-0pky">STM32F103VCT6</td>
+<td class="tg-0pky">RTL8189ETV</td>
+<td class="tg-0pky">Ubuntu 14.04 (3.4.x)</td>
+<td class="tg-0pky">Q1/2020<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.a14_0.html">Roborock T7S</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.a14_0.html">roborock.vacuum.a14</a></td>
+<td class="tg-0pky">tanoss<br>OEM: Roborock</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.a14.html">enc(AES-256-CBC), signed (RSA), sqfs</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/tanoss/app/voice-pkg/info">B=enc, signed, sqfs, ogg</a></td>
+<td class="tg-0pky">Allwinner R16 (4x)</td>
+<td class="tg-0pky">256 MByte</td>
+<td class="tg-0pky">256MByte NAND</td>
+<td class="tg-0pky">STM32F103VCT6</td>
+<td class="tg-0pky">RTL8189ETV</td>
+<td class="tg-0pky">Ubuntu 14.04 (3.5.x)</td>
+<td class="tg-0pky">Q1/2021</td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.a15_0.html">Roborock S7</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.a15_0.html">roborock.vacuum.a15</a></td>
+<td class="tg-0pky">tanoss<br>OEM: Roborock</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.a15.html">enc(AES-256-CBC), signed (RSA), sqfs</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/tanoss/app/voice-pkg/info">B=enc, signed, sqfs, ogg</a></td>
+<td class="tg-0pky">Allwinner R16 (4x)</td>
+<td class="tg-0pky">256 MByte</td>
+<td class="tg-0pky">256MByte NAND</td>
+<td class="tg-0pky">STM32F103VCT6</td>
+<td class="tg-0pky">RTL8189ETV</td>
+<td class="tg-0pky">Ubuntu 14.04 (3.5.x)</td>
+<td class="tg-0pky">Q1/2021<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.a19_0.html">Roborock S4 Max</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.a19_0.html">roborock.vacuum.a19</a></td>
+<td class="tg-0pky"><br>OEM: Roborock</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.a19.html">enc(AES-256-CBC), signed (RSA), sqfs</a></td>
+<td class="tg-0pky"><a href="https://builder.dontvacuum.me/pkg/voice/roborock/">B=enc, signed, sqfs, ogg</a></td>
+<td class="tg-0pky">Allwinner R16 (4x)</td>
+<td class="tg-0pky">256 MByte</td>
+<td class="tg-0pky">256MByte NAND</td>
+<td class="tg-0pky">STM32F103VCT6</td>
+<td class="tg-0pky">RTL8189ETV</td>
+<td class="tg-0pky">Ubuntu 14.04 (3.4.x)</td>
+<td class="tg-0pky">Q4/2020<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.m1s_0.html">Xiaomi Vacuum Robot 1S</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.m1s_0.html">roborock.vacuum.m1s</a></td>
+<td class="tg-0pky">ruby2<br>OEM: Roborock<br>SKU: SDJQR03RR</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.m1s.html">enc, sign, header in TZ</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/ruby2/app/voice-pkg/info">A=enc, signed</a></td>
+<td class="tg-0pky">Rockchip RK3326 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">4Gbyte eMMC</td>
+<td class="tg-0pky">STM32F103VET6</td>
+<td class="tg-0pky">RTL8189ETV</td>
+<td class="tg-0pky">Linux (4.4.x)</td>
+<td class="tg-0pky">Q2/2019<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.p5_0.html">Roborock P5</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.p5_0.html">roborock.vacuum.p5</a></td>
+<td class="tg-0pky">rubysc1<br>OEM: Roborock</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.p5.html">enc(AES-256-CBC), signed (RSA), sqfs</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/rubysc1/app/voice-pkg/info">B=enc, signed, sqfs, ogg</a></td>
+<td class="tg-0pky">Allwinner R16 (4x)</td>
+<td class="tg-0pky">256 MByte</td>
+<td class="tg-0pky">512MByte NAND</td>
+<td class="tg-0pky">STM32F103VCT6</td>
+<td class="tg-0pky">RTL8189ETV</td>
+<td class="tg-0pky">Ubuntu 14.04 (3.4.x)</td>
+<td class="tg-0pky">Q4/2019<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.s4_0.html">Roborock S4</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.s4_0.html">roborock.vacuum.s4</a></td>
+<td class="tg-0pky">rubyplus<br>OEM: Roborock</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.s4.html">enc(AES-256-CBC), signed (RSA)</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/rubyplus/app/voice-pkg/info">A=enc, signed</a></td>
+<td class="tg-0pky">Allwinner R16 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">4GByte eMMC</td>
+<td class="tg-0pky">STM32F103VCT6</td>
+<td class="tg-0pky">RTL8189ETV</td>
+<td class="tg-0pky">Ubuntu 14.04 (3.4.x)</td>
+<td class="tg-0pky">Q3/2018</td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.s5_0.html">Roborock S5 / S50</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.s5_0.html">roborock.vacuum.s5</a></td>
+<td class="tg-0pky">rubys<br>OEM: Roborock<br>SKU: S50</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.s5.html">ccrypt, unsigned</a></td>
+<td class="tg-0pky"><a href="https://cnbj2.fds.api.xiaomi.com/rubys/app/voice-pkg/info">ccrypt, unsigned</a></td>
+<td class="tg-0pky">Allwinner R16 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">4GByte eMMC</td>
+<td class="tg-0pky">STM32F103VCT6</td>
+<td class="tg-0pky">RTL8189ETV</td>
+<td class="tg-0pky">Ubuntu 14.04 (3.4.x)</td>
+<td class="tg-0pky">Q4/2017<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.s5e_0.html">Roborock S5 Max</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.s5e_0.html">roborock.vacuum.s5e</a></td>
+<td class="tg-0pky">rubyslite<br>OEM: Roborock<br>SKU: S5E02-00</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.s5e.html">enc(AES-256-CBC), signed (RSA), sqfs</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/rubyslite/app/voice-pkg/info">B=enc, signed, sqfs, ogg</a></td>
+<td class="tg-0pky">Allwinner R16 (4x)</td>
+<td class="tg-0pky">256 MByte</td>
+<td class="tg-0pky">512MByte NAND</td>
+<td class="tg-0pky">STM32F103VCT6</td>
+<td class="tg-0pky">RTL8189ETV</td>
+<td class="tg-0pky">Ubuntu 14.04 (3.4.x)</td>
+<td class="tg-0pky">Q4/2019</td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.s5e_1.html">Roborock S5 Max (Variant 2)</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.s5e_1.html">roborock.vacuum.s5e</a></td>
+<td class="tg-0pky">rubyslite<br>OEM: Roborock</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.s5e.html">enc(AES-256-CBC), signed (RSA), sqfs</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/rubyslite/app/voice-pkg/info">B=enc, signed, sqfs, ogg</a></td>
+<td class="tg-0pky">Allwinner R16 (4x)</td>
+<td class="tg-0pky">256 MByte</td>
+<td class="tg-0pky">256MByte NAND</td>
+<td class="tg-0pky">STM32F103VCT6</td>
+<td class="tg-0pky">RTL8189ETV</td>
+<td class="tg-0pky">Ubuntu 14.04 (3.4.x)</td>
+<td class="tg-0pky">Q2/2020</td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.s6_0.html">Roborock S6</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.s6_0.html">roborock.vacuum.s6</a></td>
+<td class="tg-0pky">tanos<br>OEM: Roborock</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.s6.html">enc(AES-256-CBC), signed (RSA)</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/tanos/app/voice-pkg/info">A=enc, signed</a></td>
+<td class="tg-0pky">Allwinner R16 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">4GByte eMMC</td>
+<td class="tg-0pky">STM32F103VCT6</td>
+<td class="tg-0pky">RTL8189ETV</td>
+<td class="tg-0pky">Ubuntu 14.04 (3.4.x)</td>
+<td class="tg-0pky">Q2/2018<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.t4_0.html">Roborock T4</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.t4_0.html">roborock.vacuum.t4</a></td>
+<td class="tg-0pky">rubyplus<br>OEM: Roborock</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.s4.html">enc(AES-256-CBC), signed (RSA)</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/rubyplus/app/voice-pkg/info">A=enc, signed</a></td>
+<td class="tg-0pky">Allwinner R16 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">4GByte eMMC</td>
+<td class="tg-0pky">STM32F103VCT6</td>
+<td class="tg-0pky">RTL8189ETV</td>
+<td class="tg-0pky">Ubuntu 14.04 (3.4.x)</td>
+<td class="tg-0pky">Q3/2018<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.t6_0.html">Roborock T6</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.t6_0.html">roborock.vacuum.t6</a></td>
+<td class="tg-0pky">tanos<br>OEM: Roborock<br>SKU: R61RR</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.s6.html">enc(AES-256-CBC), signed (RSA)</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/tanos/app/voice-pkg/info">A=enc, signed</a></td>
+<td class="tg-0pky">Allwinner R16 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">4GByte eMMC</td>
+<td class="tg-0pky">STM32F103VCT6</td>
+<td class="tg-0pky">RTL8189ETV</td>
+<td class="tg-0pky">Ubuntu 14.04 (3.4.x)</td>
+<td class="tg-0pky">Q2/2018<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_rockrobo.vacuum.v1_0.html">Xiaomi Vacuum Robot</a></td>
+<td class="tg-0pky"><a href="detail_rockrobo.vacuum.v1_0.html">rockrobo.vacuum.v1</a></td>
+<td class="tg-0pky">ruby<br>OEM: Roborock</td>
+<td class="tg-0pky"><a href="firmwares/rockrobo.vacuum.v1.html">ccrypt, unsigned</a></td>
+<td class="tg-0pky"><a href="http://builder.dontvacuum.me/pkg/voice/rockrobo/voice-v1/">ccrypt, unsigned</a></td>
+<td class="tg-0pky">Allwinner R16 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">4GByte eMMC</td>
+<td class="tg-0pky">STM32F103VCT6</td>
+<td class="tg-0pky">RTL8189ETV</td>
+<td class="tg-0pky">Ubuntu 14.04 (3.4.x)</td>
+<td class="tg-0pky">Q3/2016<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.a27_0.html">Roborock S7 MaxV</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.a27_0.html">roborock.vacuum.a27</a></td>
+<td class="tg-0pky">TopazSV<br>OEM: Roborock<br>SKU: S270RR</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.a27.html">enc, signed, header in TZ</a></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">JLQ JA308 (4xA55)</td>
+<td class="tg-0pky">1 GByte (DDR4)</td>
+<td class="tg-0pky">8GByte eMMC</td>
+<td class="tg-0pky">NATION N32G455VEL7</td>
+<td class="tg-0pky">FN-Link SV6158</td>
+<td class="tg-0pky">Android (4.16.61)</td>
+<td class="tg-0pky">Q2/2022<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.a26_0.html">Roborock G10S Pro</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.a26_0.html">roborock.vacuum.a26</a></td>
+<td class="tg-0pky">TopazSV<br>OEM: Roborock</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.a27.html">enc, signed, header in TZ</a></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">JLQ JA308 (4xA55)</td>
+<td class="tg-0pky">1 GByte (DDR4)</td>
+<td class="tg-0pky">8GByte eMMC</td>
+<td class="tg-0pky">NATION N32G455VEL7</td>
+<td class="tg-0pky">FN-Link SV6158</td>
+<td class="tg-0pky">Android (4.16.61)</td>
+<td class="tg-0pky">Q2/2022<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.a38_0.html">Roborock Q7 Max</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.a38_0.html">roborock.vacuum.a38</a></td>
+<td class="tg-0pky">TanosSLite<br>OEM: Roborock<br>SKU: Q38DRR</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.a38.html">enc(AES-256-CBC), signed (RSA), sqfs</a></td>
+<td class="tg-0pky">B=enc, signed, sqfs, ogg</td>
+<td class="tg-0pky">Allwinner R16 (4x)</td>
+<td class="tg-0pky">256 MByte</td>
+<td class="tg-0pky">256MByte NAND</td>
+<td class="tg-0pky">NATION N32G455VEL7</td>
+<td class="tg-0pky">Hi3881</td>
+<td class="tg-0pky">Ubuntu 14.04 (3.4.x)</td>
+<td class="tg-0pky">Q1/2022<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.a70_0.html">Roborock S8 Pro Ultra</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.a70_0.html">roborock.vacuum.a70</a></td>
+<td class="tg-0pky"><br>OEM: Roborock</td>
+<td class="tg-0pky">enc, signed, header in TZ</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">Allwinner MR813 (4x)</td>
+<td class="tg-0pky">512 Mbyte (DDR4)</td>
+<td class="tg-0pky">4GByte eMMC</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q1/2023<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.a51_0.html">Roborock S8</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.a51_0.html">roborock.vacuum.a51</a></td>
+<td class="tg-0pky">ULTRON-SOUTH<br>OEM: Roborock</td>
+<td class="tg-0pky">enc, signed, header in TZ</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">Allwinner MR813 (4x)</td>
+<td class="tg-0pky">512 Mbyte (DDR4)</td>
+<td class="tg-0pky">4GByte eMMC</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q1/2023<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_roborock.vacuum.a62_0.html">Roborock S7 Pro Ultra</a></td>
+<td class="tg-0pky"><a href="detail_roborock.vacuum.a62_0.html">roborock.vacuum.a62</a></td>
+<td class="tg-0pky">TopazS<br>OEM: Roborock<br>SKU: S300RR</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.a62.html">enc(AES-256-CBC), signed (RSA), sqfs</a></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">Allwinner R16 (4x)</td>
+<td class="tg-0pky">256 MByte</td>
+<td class="tg-0pky">256MByte NAND</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">Hi3881</td>
+<td class="tg-0pky">Ubuntu 14.04 (3.4.x)</td>
+<td class="tg-0pky">Q3/2022<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+<h3><a id="features"></a>Robot features</h3>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-0lax"><span style="font-weight: bold;">Modelname</span></th>
+<th class="tg-0lax"><a href="robotinfo_lidar.html"><span style="font-weight: bold;">LIDAR</span></a></th>
+<th class="tg-0lax"><a href="robotinfo_camera.html"><span style="font-weight: bold;">Camera</span></a></th>
+<th class="tg-0lax"><span style="font-weight: bold;">Mop</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">Waterpump</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">LIDAR-tower bumper</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">IR-dropsensors</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">IR-sidesensor</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">Frontsensor</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">Cloud</span></th>
+</tr>
+</thead>
+<tbody>
+
+<tr><td class="tg-0lax">Roborock S6 Pure<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">3.5.8, tuya</td>
+</tr>
+<tr><td class="tg-0lax">Roborock T7 Pro</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (2x OV5695 front [1920x1080]) with IR illumination</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">Cameras</td>
+<td class="tg-0lax">3.5.8, tuya</td>
+</tr>
+<tr><td class="tg-0lax">Roborock S6 MaxV<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (2x OV5695 front [1920x1080]) with IR illumination</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">Cameras</td>
+<td class="tg-0lax">3.5.8, tuya</td>
+</tr>
+<tr><td class="tg-0lax">Roborock T7<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">3.5.8, tuya</td>
+</tr>
+<tr><td class="tg-0lax">Roborock T7S</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">4.1.2, tuya</td>
+</tr>
+<tr><td class="tg-0lax">Roborock S7<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y (vibrating)</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">4.1.2, tuya</td>
+</tr>
+<tr><td class="tg-0lax">Roborock S4 Max<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">4.1.2, tuya</td>
+</tr>
+<tr><td class="tg-0lax">Xiaomi Vacuum Robot 1S<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (1x OV7251 up facing[640x480])</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">3.5.8</td>
+</tr>
+<tr><td class="tg-0lax">Roborock P5<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">3.5.8, tuya</td>
+</tr>
+<tr><td class="tg-0lax">Roborock S4</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">3.5.8, tuya</td>
+</tr>
+<tr><td class="tg-0lax">Roborock S5 / S50<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">3.3.9, 3.5.8</td>
+</tr>
+<tr><td class="tg-0lax">Roborock S5 Max</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">3.5.8, tuya</td>
+</tr>
+<tr><td class="tg-0lax">Roborock S5 Max</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">3.5.8, tuya</td>
+</tr>
+<tr><td class="tg-0lax">Roborock S6<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">3.5.8, tuya</td>
+</tr>
+<tr><td class="tg-0lax">Roborock T4<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">3.5.8, tuya</td>
+</tr>
+<tr><td class="tg-0lax">Roborock T6<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">3.5.8, tuya</td>
+</tr>
+<tr><td class="tg-0lax">Xiaomi Vacuum Robot<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">Ultrasonic</td>
+<td class="tg-0lax">3.3.9, 3.5.8</td>
+</tr>
+<tr><td class="tg-0lax">Roborock S7 MaxV<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (2x OV5695 front [1920x1080]) with IR illumination, 1xlinelaser</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">Cameras,Linelaser</td>
+<td class="tg-0lax">4.1.5, rriot</td>
+</tr>
+<tr><td class="tg-0lax">Roborock G10S Pro<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (2x OV5695 front [1920x1080]) with IR illumination, 1xlinelaser</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">Cameras,Linelaser</td>
+<td class="tg-0lax">4.1.5, rriot</td>
+</tr>
+<tr><td class="tg-0lax">Roborock Q7 Max<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">4.1.5, tuya</td>
+</tr>
+<tr><td class="tg-0lax">Roborock S8 Pro Ultra<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+</tr>
+<tr><td class="tg-0lax">Roborock S8<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+</tr>
+<tr><td class="tg-0lax">Roborock S7 Pro Ultra<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">2x</td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax">4.1.8, rriot</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3><a id="root"></a>Rootability, custom firmware, config files and teardowns</h3>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-0pky"><span style="font-weight: bold;">Modelname</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Root possible? (since) *</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Root method public? *</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Root complexity</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;"><a href="https://github.com/Hypfer/Valetudo" target="_blank" rel="noopener">Valetudo</a> support</span></th>
+<th class="tg-0pky">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="tg-0pky">Roborock S6 Pure<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y (Q1/2020)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">disassembly, simple soldering</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.p5.html">FW</a> <a href="https://builder.dontvacuum.me/_a08.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock T7 Pro</td>
+<td class="tg-0pky">y (Q2/2020)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">very hard (BGA soldering or ISP)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/roborock.vacuum.a10/">Teardown</a> <a href="firmwares/roborock.vacuum.a09.html">FW</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock S6 MaxV<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y (Q2/2020)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">very hard (BGA soldering or ISP)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/roborock.vacuum.a10/">Teardown</a> <a href="firmwares/roborock.vacuum.a10.html">FW</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock T7<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y (Q1/2020)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">disassembly, simple soldering</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.a11.html">FW</a> <a href="https://builder.dontvacuum.me/_a11.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock T7S</td>
+<td class="tg-0pky">y (Q1/2021)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">disassembly, simple soldering</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/roborock.vacuum.a15/">Teardown</a> <a href="firmwares/roborock.vacuum.a14.html">FW</a> <a href="https://builder.dontvacuum.me/_a15.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock S7<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y (Q1/2021)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">disassembly, simple soldering</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/roborock.vacuum.a15/">Teardown</a> <a href="firmwares/roborock.vacuum.a15.html">FW</a> <a href="https://builder.dontvacuum.me/_a15.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock S4 Max<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y (Q4/2020)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">disassembly, simple soldering</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.a19.html">FW</a> <a href="https://builder.dontvacuum.me/_a19.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Xiaomi Vacuum Robot 1S<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y (Q2/2019)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">very hard (BGA soldering or ISP)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/roborock.vacuum.m1s/">Teardown</a> <a href="firmwares/roborock.vacuum.m1s.html">FW</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock P5<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y (Q1/2020)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">disassembly, simple soldering</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.p5.html">FW</a> <a href="https://builder.dontvacuum.me/_a08.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock S4</td>
+<td class="tg-0pky">y (Q3/2019)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">disassembly, simple soldering</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/roborock.vacuum.x4/">Teardown</a> <a href="https://dontvacuum.me/robotinfo/configfiles/roborock.s4/">Config-files</a> <a href="firmwares/roborock.vacuum.s4.html">FW</a> <a href="https://builder.dontvacuum.me/_s4.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock S5 / S50<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y (Q1/2018)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">fw &lt; v2020: easy, else: disassembly, simple soldering</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/roborock.vacuum.s5/">Teardown</a> <a href="https://dontvacuum.me/robotinfo/configfiles/roborock.s5/">Config-files</a> <a href="firmwares/roborock.vacuum.s5.html">FW</a> <a href="https://builder.dontvacuum.me/_s5.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock S5 Max</td>
+<td class="tg-0pky">y (Q1/2020)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">disassembly, simple soldering</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/roborock.vacuum.s5e/">Teardown</a> <a href="https://dontvacuum.me/robotinfo/configfiles/roborock.s5e/">Config-files</a> <a href="firmwares/roborock.vacuum.s5e.html">FW</a> <a href="https://builder.dontvacuum.me/_s5e.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock S5 Max</td>
+<td class="tg-0pky">y (Q1/2020)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">disassembly, simple soldering</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/roborock.vacuum.s5e/">Teardown</a> <a href="https://dontvacuum.me/robotinfo/configfiles/roborock.s5e/">Config-files</a> <a href="firmwares/roborock.vacuum.s5e.html">FW</a> <a href="https://builder.dontvacuum.me/_s5e.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock S6<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y (Q2/2019)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">disassembly, simple soldering</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/roborock.vacuum.x6/">Teardown</a> <a href="https://dontvacuum.me/robotinfo/configfiles/roborock.s6/">Config-files</a> <a href="firmwares/roborock.vacuum.s6.html">FW</a> <a href="https://builder.dontvacuum.me/_s6.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock T4<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y (Q3/2019)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">disassembly, simple soldering</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/roborock.vacuum.x4/">Teardown</a> <a href="firmwares/roborock.vacuum.s4.html">FW</a> <a href="https://builder.dontvacuum.me/_s4.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock T6<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y (Q2/2019)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">disassembly, simple soldering</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/roborock.vacuum.x6/">Teardown</a> <a href="https://dontvacuum.me/robotinfo/configfiles/roborock.t6/">Config-files</a> <a href="firmwares/roborock.vacuum.s6.html">FW</a> <a href="https://builder.dontvacuum.me/_s6.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Xiaomi Vacuum Robot<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y (Q4/2017)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">fw &lt; v4004: easy, else: disassembly, simple soldering</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/rockrobo.vacuum.v1/">Teardown</a> <a href="https://dontvacuum.me/robotinfo/configfiles/rockrobo.v1/">Config-files</a> <a href="firmwares/rockrobo.vacuum.v1.html">FW</a> <a href="https://builder.dontvacuum.me/_v1.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock S7 MaxV<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y (Q4/2022)</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky">nearly unrootable</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.a27.html">FW</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock G10S Pro<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y (Q4/2022)</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky">nearly unrootable</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.a27.html">FW</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock Q7 Max<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y (Q2/2022)</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky">disassembly, simple soldering</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.a38.html">FW</a> <a href="https://builder.dontvacuum.me/_a38.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Roborock S8 Pro Ultra<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky">Roborock S8<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky">Roborock S7 Pro Ultra<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y (01/2023)</td>
+<td class="tg-0pky">03/2023</td>
+<td class="tg-0pky">teardown required</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/roborock.vacuum.a62.html">FW</a> <a href="https://builder.dontvacuum.me/_a62.html">Builder</a> </td>
+</tr>
+</tbody>
+</table>
+<p>* No does not mean that it is not possible or does not exist. It is just that I don't own the model, have no interest in it, it is not on my priority list or I did not publish it yet. "Since" date gives you an idea since when *my* robots were rooted or when I rooted someone else robot.</p>
+<p>&nbsp;</p>
+<hr />
+<h3><a id="pictures"></a>Pictures</h3>
+<p>Click on the picture to enlarge it</p>
+<h4>Roborock S6 Pure</h4>
+<p><a href="./full/roborock.vacuum.a08.jpg"><img src="./small/roborock.vacuum.a08.jpg" width="1200" alt="Roborock S6 Pure picture, click to enlarge"/></a></p>
+<h4>Roborock S7</h4>
+<p><a href="./full/roborock.vacuum.a15.jpg"><img src="./small/roborock.vacuum.a15.jpg" width="1200" alt="Roborock S7 picture, click to enlarge"/></a></p>
+<h4>Roborock S4 Max</h4>
+<p><a href="./full/roborock.vacuum.a19.jpg"><img src="./small/roborock.vacuum.a19.jpg" width="1200" alt="Roborock S4 Max picture, click to enlarge"/></a></p>
+<h4>Xiaomi Vacuum Robot 1S</h4>
+<p><a href="./full/roborock.vacuum.m1s.jpg"><img src="./small/roborock.vacuum.m1s.jpg" width="1200" alt="Xiaomi Vacuum Robot 1S picture, click to enlarge"/></a></p>
+<h4>Roborock S4</h4>
+<p><a href="./full/roborock.vacuum.s4.jpg"><img src="./small/roborock.vacuum.s4.jpg" width="1200" alt="Roborock S4 picture, click to enlarge"/></a></p>
+<h4>Roborock S5 / S50</h4>
+<p><a href="./full/roborock.vacuum.s5.jpg"><img src="./small/roborock.vacuum.s5.jpg" width="1200" alt="Roborock S5 / S50 picture, click to enlarge"/></a></p>
+<h4>Roborock S5 Max</h4>
+<p><a href="./full/roborock.vacuum.s5e.jpg"><img src="./small/roborock.vacuum.s5e.jpg" width="1200" alt="Roborock S5 Max picture, click to enlarge"/></a></p>
+<h4>Roborock S6</h4>
+<p><a href="./full/roborock.vacuum.s6.jpg"><img src="./small/roborock.vacuum.s6.jpg" width="1200" alt="Roborock S6 picture, click to enlarge"/></a></p>
+<h4>Xiaomi Vacuum Robot</h4>
+<p><a href="./full/v1.jpg"><img src="./small/v1.jpg" width="1200" alt="Xiaomi Vacuum Robot picture, click to enlarge"/></a></p>
+<h4>Roborock Q7 Max</h4>
+<p><a href="./full/roborock.vacuum.a38.jpg"><img src="./small/roborock.vacuum.a38.jpg" width="1200" alt="Roborock Q7 Max picture, click to enlarge"/></a></p>
+<h4>Roborock S7 Pro Ultra</h4>
+<p><a href="./full/roborock.vacuum.a62.jpg"><img src="./small/roborock.vacuum.a62.jpg" width="1200" alt="Roborock S7 Pro Ultra picture, click to enlarge"/></a></p>
+
+<p>You miss a device here and feel generous? Check out the <a href="https://builder.dontvacuum.me/donations.txt">Donations page here ;)</a></p>
+<hr />
+<p><a href="https://dontvacuum.me">&lt;-- Back to my homepage</a></p><br>
+<b>Note: If you use information from this table, please reference it, eg. "Dennis Giese, Robotinfo, https://dontvacuum.me/robotinfo".<br>Please contact me prior using any of the images.</b>  
+</body>
+</html>

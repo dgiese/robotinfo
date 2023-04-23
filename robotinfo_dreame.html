@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+  <head>
+    <title>Vacuum Robot Overview</title>
+    <meta name="google-site-verification" content="I23EHbKwpo4c4BA5XiOHSIPcC9_5ibgP6fE-s0fHvOo" />
+    <link rel="stylesheet" href="../css.css"></link>
+    <meta name="author" content="Dennis Giese">
+<style>
+body {
+  background-color: #ebebeb;
+  width: 1300px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; font-weight:300; font-stretch:normal;
+  line-height: 1.4em;
+}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{border-color:inherit;text-align:left;vertical-align:top}
+
+</style>
+  </head>
+  <body>
+<h1>Vacuum Robot Overview</h1>
+<p>Here are some information I collected over time of my own vacuum robots and some information I found elsewhere. This table is far from complete, as I still need to sort my documents and files ;) If you find a mistake, feel free to contact me (dennis [at] dontvacuum.me).</p>
+<p><a href="#hardware">Robot hardware and firmware</a><br /> <a href="#features">Robot features</a><br /> <a href="#root">Rootability, custom firmware, config files and teardowns</a><br /> <a href="#pictures">Pictures of models</a></p>
+<hr />
+Filters: <a href="robotinfo_roborock.html">Roborock-only</a> <a href="robotinfo_dreame.html">Dreame-only</a>
+<h3><a id="hardware"></a>Robot hardware and firmware   WHERE OEM="dreame"</h3>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-0pky"><span style="font-weight: bold;">Modelname</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;"><a href="robotinfo_model.html">Model ID</a></span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Codename</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Firmware</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Soundfiles</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">SoC</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;"><a href="robotinfo_ram.html">RAM</a></span></th>
+<th class="tg-0pky"><span style="font-weight: bold;"><a href="robotinfo_flash.html">Flash</a></span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">MCU</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">WiFi</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">OS (Kernel)</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;"><a href="robotinfo_release.html">Year</a></span></th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.mc1808_0.html">Xiaomi Vacuum 1C</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.mc1808_0.html">dreame.vacuum.mc1808</a></td>
+<td class="tg-0pky">p1904<br>OEM: Dreame<br>SKU: STYTJ01ZHM</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.mc1808.html">enc(2x), signed, sqfs</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/dreame-product/dreame.vacuum.p2008/voices/soundpackage.json">tar.gz, unsigned</a></td>
+<td class="tg-0pky">Allwinner MR133 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">256MByte NAND</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q4/2019<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.p2008_0.html">Dreame Robot Vacuum-Mop F9</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.p2008_0.html">dreame.vacuum.p2008</a></td>
+<td class="tg-0pky">p2008<br>OEM: Dreame</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2008.html">enc(2x), signed, sqfs</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/dreame-product/dreame.vacuum.p2008/voices/soundpackage.json">tar.gz, unsigned</a></td>
+<td class="tg-0pky">Allwinner MR133 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">256MByte NAND</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q2/2020<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.p2009_0.html">Dreame Robot Vacuum D9</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.p2009_0.html">dreame.vacuum.p2009</a></td>
+<td class="tg-0pky">p2009<br>OEM: Dreame<br>SKU: RLS5</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2009.html">enc(2x), signed, sqfs</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/dreame-product/dreame.vacuum.p2009/voices/soundpackage.json">tar.gz, unsigned</a></td>
+<td class="tg-0pky">Allwinner MR133 (4x)</td>
+<td class="tg-0pky">256 MByte</td>
+<td class="tg-0pky">256MByte NAND</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q4/2020</td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.p2027_0.html">Dreame Robot Vacuum W10</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.p2027_0.html">dreame.vacuum.p2027</a></td>
+<td class="tg-0pky">p2027<br>OEM: Dreame<br>SKU: RLS5C</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2027.html">enc(2x), signed, sqfs(signed)</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/dreame-product/dreame.vacuum.p2027/voices/soundpackage.json">tar.gz, unsigned</a></td>
+<td class="tg-0pky">Allwinner MR133 (4x)</td>
+<td class="tg-0pky">256 MByte</td>
+<td class="tg-0pky">256MByte NAND</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q4/2021<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.p2028_0.html">Dreame Bot Z10 Pro</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.p2028_0.html">dreame.vacuum.p2028</a></td>
+<td class="tg-0pky">p2028<br>OEM: Dreame<br>SKU: RLS5D</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2028.html">enc(2x), signed, sqfs(signed)</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/dreame-product/dreame.vacuum.p2028/voices/soundpackage.json">tar.gz, unsigned</a></td>
+<td class="tg-0pky">Allwinner MR813 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">512MByte NAND</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q2/2021<br><p style="color:red;"><b>EOL/EOS</b></p><br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.p2028_1.html">Dreame Bot Z10 Pro (110V) (Variant 2)</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.p2028_1.html">dreame.vacuum.p2028</a></td>
+<td class="tg-0pky">p2028<br>OEM: Dreame</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2028.html">enc(2x), signed, sqfs(signed)</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/dreame-product/dreame.vacuum.p2028/voices/soundpackage.json">tar.gz, unsigned</a></td>
+<td class="tg-0pky">Allwinner MR813 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">512MByte NAND</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q2/2021<br><p style="color:red;"><b>EOL/EOS</b></p><br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.p2029_0.html">Dreame Bot L10 Pro</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.p2029_0.html">dreame.vacuum.p2029</a></td>
+<td class="tg-0pky">p2029<br>OEM: Dreame<br>SKU: RL5SL</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2029.html">enc(2x), signed, sqfs(signed)</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/dreame-product/dreame.vacuum.p2029/voices/soundpackage.json">tar.gz, unsigned</a></td>
+<td class="tg-0pky">Allwinner MR813 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">512MByte NAND</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q1/2021<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.p2041_0.html">Xiaomi Vacuum 1T</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.p2041_0.html">dreame.vacuum.p2041</a></td>
+<td class="tg-0pky">p2041<br>OEM: Dreame<br>SKU: STYTJ02ZHM</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2041.html">enc(2x), signed, sqfs</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/dreame-product/dreame.vacuum.p2041/voices/soundpackage.json">tar.gz, unsigned</a></td>
+<td class="tg-0pky">Allwinner MR813 (4x)</td>
+<td class="tg-0pky">1 GByte</td>
+<td class="tg-0pky">512MByte NAND</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q4/2020</td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.p2041o_0.html">Xiaomi Vacuum 2 Pro+</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.p2041o_0.html">dreame.vacuum.p2041o</a></td>
+<td class="tg-0pky">p2041<br>OEM: Dreame</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2041.html">enc(2x), signed, sqfs</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/dreame-product/dreame.vacuum.p2041/voices/soundpackage.json">tar.gz, unsigned</a></td>
+<td class="tg-0pky">Allwinner MR813 (4x)</td>
+<td class="tg-0pky">1 GByte</td>
+<td class="tg-0pky">512MByte NAND</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q4/2020</td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.p2114a_0.html">Xiaomi Robot Vacuum X10+</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.p2114a_0.html">dreame.vacuum.p2114a</a></td>
+<td class="tg-0pky">r2213<br>OEM: Dreame<br>SKU: B101GL</td>
+<td class="tg-0pky">enc(zip), signed, enc, sqfs(signed)</td>
+<td class="tg-0pky">tar.gz, unsigned</td>
+<td class="tg-0pky">Allwinner MR813 (4x)</td>
+<td class="tg-0pky">1 GByte</td>
+<td class="tg-0pky">4GByte eMMC</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8723DS(BT+WiFi)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q3/2022</td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.p2148o_0.html">Mijia Robot Vacuum-Mop Ultra Slim</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.p2148o_0.html">dreame.vacuum.p2148o</a></td>
+<td class="tg-0pky">p2148<br>OEM: Dreame<br>SKU: STYTJ04ZHM</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2148o.html">enc(2x), signed, sqfs</a></td>
+<td class="tg-0pky">tar.gz, unsigned</td>
+<td class="tg-0pky">Allwinner MR813 (4x)</td>
+<td class="tg-0pky">1 GByte</td>
+<td class="tg-0pky">512MByte NAND</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q2/2021<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.p2149o_0.html">Xiaomi Self-Cleaning Robot Vacuum-Mop Pro</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.p2149o_0.html">dreame.vacuum.p2149o</a></td>
+<td class="tg-0pky">p2149<br>OEM: Dreame</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2149o.html">enc(2x), signed, sqfs(signed)</a></td>
+<td class="tg-0pky">tar.gz, unsigned</td>
+<td class="tg-0pky">Allwinner MR813 (4x)</td>
+<td class="tg-0pky">1 GByte</td>
+<td class="tg-0pky">512MByte NAND</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8723DS(BT+WiFi)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q1/2022</td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.p2156o_0.html">MOVA Z500 Robot Vacuum and Mop Cleaner</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.p2156o_0.html">dreame.vacuum.p2156o</a></td>
+<td class="tg-0pky">p2156<br>OEM: Dreame</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2156o.html">enc(2x), signed, sqfs</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/dreame-product/dreame.vacuum.p2009/voices/soundpackage.json">tar.gz, unsigned</a></td>
+<td class="tg-0pky">Allwinner MR133 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">256MByte NAND</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q4/2021<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.p2187_0.html">Dreame Robot Vacuum D9 Pro</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.p2187_0.html">dreame.vacuum.p2187</a></td>
+<td class="tg-0pky">p2187<br>OEM: Dreame<br>SKU: RLS6L</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2187.html">enc(2x), signed, sqfs</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/dreame-product/dreame.vacuum.p2187/voices/soundpackage.json">tar.gz, unsigned</a></td>
+<td class="tg-0pky">Allwinner MR133 (4x)</td>
+<td class="tg-0pky">256 MByte</td>
+<td class="tg-0pky">256MByte NAND</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q2/2021<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.p2259_0.html">Dreame Robot Vacuum D9 Max</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.p2259_0.html">dreame.vacuum.p2259</a></td>
+<td class="tg-0pky">p2259<br>OEM: Dreame</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2259.html">enc(2x), signed, sqfs</a></td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/dreame-product/dreame.vacuum.p2009/voices/soundpackage.json">tar.gz, unsigned</a></td>
+<td class="tg-0pky">Allwinner MR112 (2x)</td>
+<td class="tg-0pky">128 MByte</td>
+<td class="tg-0pky">128MByte SPI NAND</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q3/2021<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.r2104_0.html">Dreame Bot W10 Pro</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.r2104_0.html">dreame.vacuum.r2104</a></td>
+<td class="tg-0pky">r2104<br>OEM: Dreame</td>
+<td class="tg-0pky">enc(2x), signed, sqfs(signed)</td>
+<td class="tg-0pky">tar.gz, unsigned</td>
+<td class="tg-0pky">Allwinner MR813 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">512MByte NAND</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8723DS(BT+WiFi)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q1/2022</td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.r2216o_0.html">Dreame Bot L10S Pro</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.r2216o_0.html">dreame.vacuum.r2216o</a></td>
+<td class="tg-0pky">r2216<br>OEM: Dreame<br>SKU: RLS6L</td>
+<td class="tg-0pky">enc(zip), signed, enc, sqfs(signed)</td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/dreame-product/dreame.vacuum.r2216o/voices/soundpackage.json">tar.gz, unsigned</a></td>
+<td class="tg-0pky">Allwinner MR133 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">256MByte NAND</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">RTL8723DS(BT+WiFi)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q4/2022</td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.r2257o_0.html">DreameBot L10 Ultra</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.r2257o_0.html">dreame.vacuum.r2257o</a></td>
+<td class="tg-0pky">r2257<br>OEM: Dreame</td>
+<td class="tg-0pky">enc(2x), signed, sqfs(signed)</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">Allwinner MR133 (4x)</td>
+<td class="tg-0pky">256 MByte</td>
+<td class="tg-0pky">256MByte NAND</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">RTL8723DS(BT+WiFi)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q4/2022<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.r2228o_0.html">Dreame Robot L10S Ultra</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.r2228o_0.html">dreame.vacuum.r2228o</a></td>
+<td class="tg-0pky">p2228<br>OEM: Dreame<br>SKU: RLS6LADC</td>
+<td class="tg-0pky">enc(zip), signed, enc, sqfs(signed)</td>
+<td class="tg-0pky"><a href="https://awsde0.fds.api.xiaomi.com/dreame-product/dreame.vacuum.r2228o/voices/soundpackage.json">tar.gz, unsigned</a></td>
+<td class="tg-0pky">Allwinner MR813 (4x)</td>
+<td class="tg-0pky">1 GByte</td>
+<td class="tg-0pky">4GByte eMMC</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">RTL8723DS(BT+WiFi)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q3/2022<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.r2205_0.html">Dreame Bot D10</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.r2205_0.html">dreame.vacuum.r2205</a></td>
+<td class="tg-0pky">r2205<br>OEM: Dreame</td>
+<td class="tg-0pky">enc(2x), signed, sqfs</td>
+<td class="tg-0pky">tar.gz, unsigned</td>
+<td class="tg-0pky">Allwinner MR112 (2x)</td>
+<td class="tg-0pky">128 MByte</td>
+<td class="tg-0pky">256MByte SPI NAND</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q3/2022<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.r2205_1.html">Dreame Bot D10 (110V) (Variant 2)</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.r2205_1.html">dreame.vacuum.r2205</a></td>
+<td class="tg-0pky">r2205<br>OEM: Dreame</td>
+<td class="tg-0pky">enc(2x), signed, sqfs</td>
+<td class="tg-0pky">tar.gz, unsigned</td>
+<td class="tg-0pky">Allwinner MR112 (2x)</td>
+<td class="tg-0pky">128 MByte</td>
+<td class="tg-0pky">256MByte SPI NAND</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q3/2022<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.r2243_0.html">Dreame Bot D10s</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.r2243_0.html">dreame.vacuum.r2243</a></td>
+<td class="tg-0pky">r2243<br>OEM: Dreame</td>
+<td class="tg-0pky">enc(2x), signed, sqfs</td>
+<td class="tg-0pky">tar.gz, unsigned</td>
+<td class="tg-0pky">Allwinner MR112 (2x)</td>
+<td class="tg-0pky">128 MByte</td>
+<td class="tg-0pky">256MByte SPI NAND</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q3/2022<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.r2250_0.html">Dreame Bot D10s Pro</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.r2250_0.html">dreame.vacuum.r2250</a></td>
+<td class="tg-0pky">r2250<br>OEM: Dreame<br>SKU: RLS6A</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.r2250.html">enc(2x), signed, sqfs(signed)</a></td>
+<td class="tg-0pky">tar.gz, unsigned</td>
+<td class="tg-0pky">Allwinner MR813 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">4GByte eMMC</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q3/2022<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.r2240_0.html">Dreame Bot D10s Plus</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.r2240_0.html">dreame.vacuum.r2240</a></td>
+<td class="tg-0pky">r2240<br>OEM: Dreame</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.r2240.html">enc(2x), signed, sqfs(signed)</a></td>
+<td class="tg-0pky">tar.gz, unsigned</td>
+<td class="tg-0pky">Allwinner MR813 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">4GByte eMMC</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q3/2022<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_dreame.vacuum.r2240_1.html">Dreame Bot D10s Plus (110V) (Variant 2)</a></td>
+<td class="tg-0pky"><a href="detail_dreame.vacuum.r2240_1.html">dreame.vacuum.r2240</a></td>
+<td class="tg-0pky">r2240<br>OEM: Dreame</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.r2240.html">enc(2x), signed, sqfs(signed)</a></td>
+<td class="tg-0pky">tar.gz, unsigned</td>
+<td class="tg-0pky">Allwinner MR813 (4x)</td>
+<td class="tg-0pky">512 MByte</td>
+<td class="tg-0pky">4GByte eMMC</td>
+<td class="tg-0pky">GD32F303*ET6</td>
+<td class="tg-0pky">RTL8189FTV (6189N-SFC)</td>
+<td class="tg-0pky">OpenWRT (custom Tina) (4.9.x)</td>
+<td class="tg-0pky">Q3/2022<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+<h3><a id="features"></a>Robot features</h3>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-0lax"><span style="font-weight: bold;">Modelname</span></th>
+<th class="tg-0lax"><a href="robotinfo_lidar.html"><span style="font-weight: bold;">LIDAR</span></a></th>
+<th class="tg-0lax"><a href="robotinfo_camera.html"><span style="font-weight: bold;">Camera</span></a></th>
+<th class="tg-0lax"><span style="font-weight: bold;">Mop</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">Waterpump</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">LIDAR-tower bumper</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">IR-dropsensors</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">IR-sidesensor</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">Frontsensor</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">Cloud</span></th>
+</tr>
+</thead>
+<tbody>
+
+<tr><td class="tg-0lax">Xiaomi Vacuum 1C<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y (1x OV7251 up facing[640x480])</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">4x + 1x</td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax">IR bar</td>
+<td class="tg-0lax">3.5.8</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Robot Vacuum-Mop F9<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y (1x SC031GS up facing[640x480])</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">4x + 1x</td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax">IR bar</td>
+<td class="tg-0lax">3.5.8</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Robot Vacuum D9</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">3.5.8</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Robot Vacuum W10<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y (rotating)</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">4.1.6</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Bot Z10 Pro<br><p style="color:red;"><b>EOL</b></p><br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (1x SC031GS front facing [640x480] for linelaser)</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">LineLaser</td>
+<td class="tg-0lax">4.1.2</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Bot Z10 Pro (110V)<br><p style="color:red;"><b>EOL</b></p><br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (1x SC031GS front facing [640x480] for linelaser)</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">LineLaser</td>
+<td class="tg-0lax">4.1.2, dreame-iot</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Bot L10 Pro<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (1x SC031GS front facing [640x480] for linelaser)</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">LineLaser</td>
+<td class="tg-0lax">4.1.2, dreame-iot</td>
+</tr>
+<tr><td class="tg-0lax">Xiaomi Vacuum 1T</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y (1x SC031GS up facing [640x480], 1x ToF camera to the front[224x1558])</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">4x + 1x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">ToF</td>
+<td class="tg-0lax">(4.1.2 + Security Chip)</td>
+</tr>
+<tr><td class="tg-0lax">Xiaomi Vacuum 2 Pro+</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y (1x SC031GS up facing [640x480], 1x ToF camera to the front[224x1558])</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">4x + 1x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">ToF</td>
+<td class="tg-0lax">(4.1.2 + Security Chip)</td>
+</tr>
+<tr><td class="tg-0lax">Xiaomi Robot Vacuum X10+</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (1x OV8856 front facing [RGB,8MP), 1x SC031GS line laser [640x480])</td>
+<td class="tg-0lax">y (rotating)</td>
+<td class="tg-0lax">y (in basestation)</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">Camera, Linelaser</td>
+<td class="tg-0lax">(4.3.3 + Security Chip)</td>
+</tr>
+<tr><td class="tg-0lax">Mijia Robot Vacuum-Mop Ultra Slim<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">4x +1x</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">ToF</td>
+<td class="tg-0lax">(4.1.2 + Security Chip)</td>
+</tr>
+<tr><td class="tg-0lax">Xiaomi Self-Cleaning Robot Vacuum-Mop Pro</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax">(4.1.2 + Security Chip)</td>
+</tr>
+<tr><td class="tg-0lax">MOVA Z500 Robot Vacuum and Mop Cleaner<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y (1x SC031GS up facing[640x480])</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR bar</td>
+<td class="tg-0lax">3.5.8</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Robot Vacuum D9 Pro<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">3.5.8</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Robot Vacuum D9 Max<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">3.5.8</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Bot W10 Pro</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax">4.1.2</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Bot L10S Pro</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (1x SC031GS front facing [640x480])</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">LineLaser</td>
+<td class="tg-0lax">4.1.2, dreame-iot</td>
+</tr>
+<tr><td class="tg-0lax">DreameBot L10 Ultra<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y(rotating)</td>
+<td class="tg-0lax">y (in basestation)</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">4.3.3, dreame-iot</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Robot L10S Ultra<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (1x OV8856 front facing [RGB,8MP), 1x SC031GS line laser [640x480])</td>
+<td class="tg-0lax">y(rotating)</td>
+<td class="tg-0lax">y (in basestation)</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">4x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">Camera, Linelaser</td>
+<td class="tg-0lax">4.3.3, dreame-iot</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Bot D10<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">4.1.2, dreame-iot</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Bot D10 (110V)<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">4.1.2, dreame-iot</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Bot D10s<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">IR</td>
+<td class="tg-0lax">4.1.2, dreame-iot</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Bot D10s Pro<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (1x OV8856 front facing [RGB,8MP))</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">LineLaser</td>
+<td class="tg-0lax">, dreame-iot</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Bot D10s Plus<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (1x OV8856 front facing [RGB,8MP))</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">LineLaser</td>
+<td class="tg-0lax">, dreame-iot</td>
+</tr>
+<tr><td class="tg-0lax">Dreame Bot D10s Plus (110V)<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (1x OV8856 front facing [RGB,8MP))</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">LineLaser</td>
+<td class="tg-0lax">, dreame-iot</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3><a id="root"></a>Rootability, custom firmware, config files and teardowns</h3>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-0pky"><span style="font-weight: bold;">Modelname</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Root possible? (since) *</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Root method public? *</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Root complexity</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;"><a href="https://github.com/Hypfer/Valetudo" target="_blank" rel="noopener">Valetudo</a> support</span></th>
+<th class="tg-0pky">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="tg-0pky">Xiaomi Vacuum 1C<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y (Q4/2019)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">easy via UART, minimal teardown</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/xiaomi-1c/">Teardown</a> <a href="https://dontvacuum.me/robotinfo/configfiles/dreame.1c/">Config-files</a> <a href="firmwares/dreame.vacuum.mc1808.html">FW</a> <a href="https://builder.dontvacuum.me/_dreame_mc1808.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Dreame Robot Vacuum-Mop F9<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y (Q2/2020)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">easy via UART, minimal teardown</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/robotinfo/configfiles/dreame.f9/">Config-files</a> <a href="firmwares/dreame.vacuum.p2008.html">FW</a> <a href="https://builder.dontvacuum.me/_dreame_p2008.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Dreame Robot Vacuum D9</td>
+<td class="tg-0pky">y (Q4/2020)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">easy via UART, minimal teardown</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2009.html">FW</a> <a href="https://builder.dontvacuum.me/_dreame_p2009.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Dreame Robot Vacuum W10<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y (Q4/2021)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">easy via UART, minimal teardown</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/dreame.vacuum.p2027/">Teardown</a> <a href="firmwares/dreame.vacuum.p2027.html">FW</a> <a href="https://builder.dontvacuum.me/_dreame_p2027.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Dreame Bot Z10 Pro<br><p style="color:red;"><b>EOL</b></p><br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y (Q2/2021)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">easy via UART, minimal teardown</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2028.html">FW</a> <a href="https://builder.dontvacuum.me/_dreame_p2028.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Dreame Bot Z10 Pro (110V)<br><p style="color:red;"><b>EOL</b></p><br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y (Q2/2021)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">easy via UART, minimal teardown</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2028.html">FW</a> <a href="https://builder.dontvacuum.me/_dreame_p2028.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Dreame Bot L10 Pro<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y (Q2/2021)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">easy via UART, minimal teardown</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/dreame.vacuum.p2029/">Teardown</a> <a href="firmwares/dreame.vacuum.p2029.html">FW</a> <a href="https://builder.dontvacuum.me/_dreame_p2029.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Xiaomi Vacuum 1T</td>
+<td class="tg-0pky">y (Q2/2021)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">easy via UART, minimal teardown</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/dreame.vacuum.p2041/">Teardown</a> <a href="firmwares/dreame.vacuum.p2041.html">FW</a> <a href="https://builder.dontvacuum.me/_dreame_p2041.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Xiaomi Vacuum 2 Pro+</td>
+<td class="tg-0pky">y (Q2/2021)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">easy via UART, minimal teardown</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="https://dontvacuum.me/teardowns/dreame.vacuum.p2041/">Teardown</a> <a href="firmwares/dreame.vacuum.p2041.html">FW</a> <a href="https://builder.dontvacuum.me/_dreame_p2041.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Xiaomi Robot Vacuum X10+</td>
+<td class="tg-0pky">y (Q4/2022)</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky">Mijia Robot Vacuum-Mop Ultra Slim<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y (Q2/2021)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">easy via UART, minimal teardown</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2148o.html">FW</a> <a href="https://builder.dontvacuum.me/_dreame_p2148.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Xiaomi Self-Cleaning Robot Vacuum-Mop Pro</td>
+<td class="tg-0pky">y (Q2/2022)</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2149o.html">FW</a> </td>
+</tr>
+<tr><td class="tg-0pky">MOVA Z500 Robot Vacuum and Mop Cleaner<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y (Q2/2021)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">easy via UART, minimal teardown</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2156o.html">FW</a> <a href="https://builder.dontvacuum.me/_dreame_p2156.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Dreame Robot Vacuum D9 Pro<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y (Q3/2021)</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky">easy via UART, minimal teardown</td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2187.html">FW</a> <a href="https://builder.dontvacuum.me/_dreame_p2187.html">Builder</a> </td>
+</tr>
+<tr><td class="tg-0pky">Dreame Robot Vacuum D9 Max<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky">y ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky">will not run Valetudo due to resources</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.p2259.html">FW</a> </td>
+</tr>
+<tr><td class="tg-0pky">Dreame Bot W10 Pro</td>
+<td class="tg-0pky">y ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky">Dreame Bot L10S Pro</td>
+<td class="tg-0pky">y (Q4/2022)</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky">DreameBot L10 Ultra<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y (Q1/2023)</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky">Dreame Robot L10S Ultra<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y (Q4/2022)</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky">Dreame Bot D10<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky">will not run Valetudo due to resources</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky">Dreame Bot D10 (110V)<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky">will not run Valetudo due to resources</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky">Dreame Bot D10s<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky">will not run Valetudo due to resources</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky">Dreame Bot D10s Pro<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y (Q4/2022)</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.r2250.html">FW</a> </td>
+</tr>
+<tr><td class="tg-0pky">Dreame Bot D10s Plus<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y (Q4/2022)</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.r2240.html">FW</a> </td>
+</tr>
+<tr><td class="tg-0pky">Dreame Bot D10s Plus (110V)<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky">y ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">y</td>
+<td class="tg-0pky"><a href="firmwares/dreame.vacuum.r2240.html">FW</a> </td>
+</tr>
+</tbody>
+</table>
+<p>* No does not mean that it is not possible or does not exist. It is just that I don't own the model, have no interest in it, it is not on my priority list or I did not publish it yet. "Since" date gives you an idea since when *my* robots were rooted or when I rooted someone else robot.</p>
+<p>&nbsp;</p>
+<hr />
+<h3><a id="pictures"></a>Pictures</h3>
+<p>Click on the picture to enlarge it</p>
+<h4>Xiaomi Vacuum 1C</h4>
+<p><a href="./full/dreame.vacuum.mc1808.jpg"><img src="./small/dreame.vacuum.mc1808.jpg" width="1200" alt="Xiaomi Vacuum 1C picture, click to enlarge"/></a></p>
+<h4>Dreame Robot Vacuum-Mop F9</h4>
+<p><a href="./full/dreame.vacuum.p2008.jpg"><img src="./small/dreame.vacuum.p2008.jpg" width="1200" alt="Dreame Robot Vacuum-Mop F9 picture, click to enlarge"/></a></p>
+<h4>Dreame Robot Vacuum D9</h4>
+<p><a href="./full/dreame.vacuum.p2009.jpg"><img src="./small/dreame.vacuum.p2009.jpg" width="1200" alt="Dreame Robot Vacuum D9 picture, click to enlarge"/></a></p>
+<h4>Dreame Robot Vacuum W10</h4>
+<p><a href="./full/dreame.vacuum.p2027.jpg"><img src="./small/dreame.vacuum.p2027.jpg" width="1200" alt="Dreame Robot Vacuum W10 picture, click to enlarge"/></a></p>
+<h4>Dreame Bot Z10 Pro</h4>
+<p><a href="./full/dreame.vacuum.p2028.jpg"><img src="./small/dreame.vacuum.p2028.jpg" width="1200" alt="Dreame Bot Z10 Pro picture, click to enlarge"/></a></p>
+<h4>Dreame Bot L10 Pro</h4>
+<p><a href="./full/dreame.vacuum.p2029.jpg"><img src="./small/dreame.vacuum.p2029.jpg" width="1200" alt="Dreame Bot L10 Pro picture, click to enlarge"/></a></p>
+<h4>Xiaomi Vacuum 1T</h4>
+<p><a href="./full/dreame.vacuum.p2041.jpg"><img src="./small/dreame.vacuum.p2041.jpg" width="1200" alt="Xiaomi Vacuum 1T picture, click to enlarge"/></a></p>
+<h4>Xiaomi Vacuum 2 Pro+</h4>
+<p><a href="./full/dreame.vacuum.p2041.jpg"><img src="./small/dreame.vacuum.p2041.jpg" width="1200" alt="Xiaomi Vacuum 2 Pro+ picture, click to enlarge"/></a></p>
+<h4>Xiaomi Robot Vacuum X10+</h4>
+<p><a href="./full/dreame.vacuum.p2114a.jpg"><img src="./small/dreame.vacuum.p2114a.jpg" width="1200" alt="Xiaomi Robot Vacuum X10+ picture, click to enlarge"/></a></p>
+<h4>Mijia Robot Vacuum-Mop Ultra Slim</h4>
+<p><a href="./full/dreame.vacuum.p2148o.jpg"><img src="./small/dreame.vacuum.p2148o.jpg" width="1200" alt="Mijia Robot Vacuum-Mop Ultra Slim picture, click to enlarge"/></a></p>
+<h4>MOVA Z500 Robot Vacuum and Mop Cleaner</h4>
+<p><a href="./full/dreame.vacuum.p2156o.jpg"><img src="./small/dreame.vacuum.p2156o.jpg" width="1200" alt="MOVA Z500 Robot Vacuum and Mop Cleaner picture, click to enlarge"/></a></p>
+<h4>Dreame Robot Vacuum D9 Pro</h4>
+<p><a href="./full/dreame.vacuum.p2187.jpg"><img src="./small/dreame.vacuum.p2187.jpg" width="1200" alt="Dreame Robot Vacuum D9 Pro picture, click to enlarge"/></a></p>
+<h4>Dreame Bot L10S Pro</h4>
+<p><a href="./full/dreame.vacuum.r2216o.jpg"><img src="./small/dreame.vacuum.r2216o.jpg" width="1200" alt="Dreame Bot L10S Pro picture, click to enlarge"/></a></p>
+<h4>Dreame Robot L10S Ultra</h4>
+<p><a href="./full/dreame.vacuum.r2228o.jpg"><img src="./small/dreame.vacuum.r2228o.jpg" width="1200" alt="Dreame Robot L10S Ultra picture, click to enlarge"/></a></p>
+<h4>Dreame Bot D10s Pro</h4>
+<p><a href="./full/dreame.vacuum.r2250.jpg"><img src="./small/dreame.vacuum.r2250.jpg" width="1200" alt="Dreame Bot D10s Pro picture, click to enlarge"/></a></p>
+<h4>Dreame Bot D10s Plus</h4>
+<p><a href="./full/dreame.vacuum.r2240.jpg"><img src="./small/dreame.vacuum.r2240.jpg" width="1200" alt="Dreame Bot D10s Plus picture, click to enlarge"/></a></p>
+
+<p>You miss a device here and feel generous? Check out the <a href="https://builder.dontvacuum.me/donations.txt">Donations page here ;)</a></p>
+<hr />
+<p><a href="https://dontvacuum.me">&lt;-- Back to my homepage</a></p><br>
+<b>Note: If you use information from this table, please reference it, eg. "Dennis Giese, Robotinfo, https://dontvacuum.me/robotinfo".<br>Please contact me prior using any of the images.</b>  
+</body>
+</html>
