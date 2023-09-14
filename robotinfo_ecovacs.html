@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+  <head>
+    <title>Vacuum Robot Overview</title>
+    <meta name="google-site-verification" content="I23EHbKwpo4c4BA5XiOHSIPcC9_5ibgP6fE-s0fHvOo" />
+    <link rel="stylesheet" href="../css.css"></link>
+    <meta name="author" content="Dennis Giese">
+<style>
+body {
+  background-color: #ebebeb;
+  width: 1300px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; font-weight:300; font-stretch:normal;
+  line-height: 1.4em;
+}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{border-color:inherit;text-align:left;vertical-align:top}
+
+</style>
+  </head>
+  <body>
+<h1>Vacuum Robot Overview</h1>
+<p>Here are some information I collected over time of my own vacuum robots and some information I found elsewhere. This table is far from complete, as I still need to sort my documents and files ;) If you find a mistake, feel free to contact me (dennis [at] dontvacuum.me).</p>
+<p><a href="#hardware">Robot hardware and firmware</a><br /> <a href="#features">Robot features</a><br /> <a href="#root">Rootability, custom firmware, config files and teardowns</a><br /> <a href="#pictures">Pictures of models</a></p>
+<hr />
+Filters: <a href="robotinfo_roborock.html">Roborock-only</a> <a href="robotinfo_dreame.html">Dreame-only</a> <a href="robotinfo_ecovacs.html">Ecovacs-only</a> <a href="robotinfo_empty.html">auto-empty capable</a> <a href="robotinfo_wash.html">auto-mop-wash capable</a> <a href="robotinfo_emptywash.html">auto-empty+mop-wash capable</a>
+<br>Last import timestamp: 2023-09-14 04:41:04<h3><a id="hardware"></a>Robot hardware and firmware   WHERE OEM="ecovacs"</h3>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-0pky"><span style="font-weight: bold;">Modelname</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;"><a href="robotinfo_model.html">Model ID</a></span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Codename</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Firmware</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Soundfiles</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">SoC</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;"><a href="robotinfo_ram.html">RAM</a></span></th>
+<th class="tg-0pky"><span style="font-weight: bold;"><a href="robotinfo_flash.html">Flash</a></span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">MCU</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">WiFi</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">OS (Kernel)</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;"><a href="robotinfo_release.html">Year</a></span></th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.x1.turbo_0.html">Ecovacs X1 Turbo</a></td>
+<td class="tg-0pky"><a href="detail_ecovacs.x1.turbo_0.html">ecovacs.x1.turbo</a></td>
+<td class="tg-0pky">zj2102-x3-t10<br>OEM: Ecovacs</td>
+<td class="tg-0pky">signed, encrypted</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">Horizon X3M (4x)</td>
+<td class="tg-0pky">1 GByte (DDR4)</td>
+<td class="tg-0pky">512MByte SPI-NAND</td>
+<td class="tg-0pky">GD32F103VCT6</td>
+<td class="tg-0pky">FN-Link 6223a</td>
+<td class="tg-0pky">Linux (4.14.x)</td>
+<td class="tg-0pky">Q2/2022<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.x1.omni_0.html">Ecovacs X1 Omni</a></td>
+<td class="tg-0pky"><a href="detail_ecovacs.x1.omni_0.html">ecovacs.x1.omni</a></td>
+<td class="tg-0pky">zj2102-x3-t10<br>OEM: Ecovacs</td>
+<td class="tg-0pky">signed, encrypted</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">Horizon X3M (4x)</td>
+<td class="tg-0pky">1 GByte (DDR4)</td>
+<td class="tg-0pky">512MByte SPI-NAND</td>
+<td class="tg-0pky">GD32F103VCT6</td>
+<td class="tg-0pky">FN-Link 6223a</td>
+<td class="tg-0pky">Linux (4.14.x)</td>
+<td class="tg-0pky">Q2/2022<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.ozmo.950_0.html">Ecovacs Ozmo 950</a></td>
+<td class="tg-0pky"><a href="detail_ecovacs.ozmo.950_0.html">ecovacs.ozmo.950</a></td>
+<td class="tg-0pky">ZJ1816<br>OEM: Ecovacs</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">Q/2019<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.deebot.900_0.html">Ecovacs Deebot 900</a></td>
+<td class="tg-0pky"><a href="detail_ecovacs.deebot.900_0.html">ecovacs.deebot.900</a></td>
+<td class="tg-0pky">ZJ1711<br>OEM: Ecovacs</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">Q3/2018<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.t8.aivi_0.html">Ecovacs T8 AIVI</a></td>
+<td class="tg-0pky"><a href="detail_ecovacs.t8.aivi_0.html">ecovacs.t8.aivi</a></td>
+<td class="tg-0pky">ZJ1913<br>OEM: Ecovacs<br>SKU: DLX11-55</td>
+<td class="tg-0pky">signed, encrypted</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">Q4/2021<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.n8_0.html">Ecovacs N8</a></td>
+<td class="tg-0pky"><a href="detail_ecovacs.n8_0.html">ecovacs.n8</a></td>
+<td class="tg-0pky">ZJ1921<br>OEM: Ecovacs</td>
+<td class="tg-0pky">signed, encrypted</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">Q4/2021<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.t8_0.html">Ecovacs T8</a></td>
+<td class="tg-0pky"><a href="detail_ecovacs.t8_0.html">ecovacs.t8</a></td>
+<td class="tg-0pky">ZJ1921<br>OEM: Ecovacs</td>
+<td class="tg-0pky">signed, encrypted</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">Q/<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.ozmo.930_0.html">Ecovacs Ozmo 930</a></td>
+<td class="tg-0pky"><a href="detail_ecovacs.ozmo.930_0.html">ecovacs.ozmo.930</a></td>
+<td class="tg-0pky">ZJ1602<br>OEM: Ecovacs</td>
+<td class="tg-0pky">signed, encrypted</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">Q/2018<br><p style="color:red;"><b>EOL/EOS</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.t10.omni_0.html">Ecovacs T10 Omni</a></td>
+<td class="tg-0pky"><a href="detail_ecovacs.t10.omni_0.html">ecovacs.t10.omni</a></td>
+<td class="tg-0pky">ZJ2209<br>OEM: Ecovacs</td>
+<td class="tg-0pky">signed, encrypted</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">Horizon X3M (4x)</td>
+<td class="tg-0pky">1 GByte (DDR4)</td>
+<td class="tg-0pky">512MByte SPI-NAND</td>
+<td class="tg-0pky">GD32F103VCT6</td>
+<td class="tg-0pky">FN-Link 6223a</td>
+<td class="tg-0pky">Linux (4.14.x)</td>
+<td class="tg-0pky">Q1/2023<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.t10.plus_0.html">Ecovacs T10 Plus</a></td>
+<td class="tg-0pky"><a href="detail_ecovacs.t10.plus_0.html">ecovacs.t10.plus</a></td>
+<td class="tg-0pky">ZJ2113<br>OEM: Ecovacs</td>
+<td class="tg-0pky">signed, encrypted</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">Horizon X3M (4x)</td>
+<td class="tg-0pky">1 GByte (DDR4)</td>
+<td class="tg-0pky">512MByte SPI-NAND</td>
+<td class="tg-0pky">GD32F103VCT6</td>
+<td class="tg-0pky">FN-Link 6223a</td>
+<td class="tg-0pky">Linux (4.14.x)</td>
+<td class="tg-0pky">Q1/2023<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.x1.plus_0.html">Evovacs X1 Plus</a></td>
+<td class="tg-0pky"><a href="detail_ecovacs.x1.plus_0.html">ecovacs.x1.plus</a></td>
+<td class="tg-0pky">ZJ2115<br>OEM: Ecovacs</td>
+<td class="tg-0pky">signed, encrypted</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">Horizon X3M (4x)</td>
+<td class="tg-0pky">1 GByte (DDR4)</td>
+<td class="tg-0pky">512MByte SPI-NAND</td>
+<td class="tg-0pky">GD32F103VCT6</td>
+<td class="tg-0pky">FN-Link 6223a</td>
+<td class="tg-0pky">Linux (4.14.x)</td>
+<td class="tg-0pky">Q3/2022<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.t20.omni_0.html">Ecovacs T20 Omni</a></td>
+<td class="tg-0pky"><a href="detail_ecovacs.t20.omni_0.html">ecovacs.t20.omni</a></td>
+<td class="tg-0pky">ZJ2231<br>OEM: Ecovacs</td>
+<td class="tg-0pky">signed, encrypted</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">Rockchip RK3326 (4x)</td>
+<td class="tg-0pky">512 MByte RAM</td>
+<td class="tg-0pky">512MByte NAND</td>
+<td class="tg-0pky">GD32F103VCT6</td>
+<td class="tg-0pky">FN-Link 6223a</td>
+<td class="tg-0pky">Linux (4.14.x)</td>
+<td class="tg-0pky">Q2/2023<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.goat.g1_0.html">Ecovacs Goat G1</a></td>
+<td class="tg-0pky"><a href="detail_ecovacs.goat.g1_0.html">ecovacs.goat.g1</a></td>
+<td class="tg-0pky">MR2201<br>OEM: Ecovacs</td>
+<td class="tg-0pky">signed, encrypted</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">Rockchip RK3588 (8x)</td>
+<td class="tg-0pky">4 Gbyte (DDR4)</td>
+<td class="tg-0pky">16Gbyte eMMC</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">RTL8723DS(BT+WiFi)</td>
+<td class="tg-0pky">Linux (5.10.x)</td>
+<td class="tg-0pky">Q2/2023<br><p style="color:green;"><b>ACTIVE</b></p></td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+<h3><a id="features"></a>Robot features</h3>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-0lax"><span style="font-weight: bold;">Modelname</span></th>
+<th class="tg-0lax"><a href="robotinfo_lidar.html"><span style="font-weight: bold;">LIDAR</span></a></th>
+<th class="tg-0lax"><a href="robotinfo_camera.html"><span style="font-weight: bold;">Camera</span></a></th>
+<th class="tg-0lax"><span style="font-weight: bold;">Mop</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">Waterpump</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">LIDAR-tower bumper</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">IR-dropsensors</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">IR-sidesensor</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">Frontsensor</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">Carpet sensor</span></th>
+<th class="tg-0lax"><span style="font-weight: bold;">Cloud</span></th>
+</tr>
+</thead>
+<tbody>
+
+<tr><td class="tg-0lax"><a href="detail_ecovacs.x1.turbo_0.html">Ecovacs X1 Turbo</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (rotating)</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">Cameras,Linelaser</td>
+<td class="tg-0lax">y (ultrasonic)</td>
+<td class="tg-0lax">, ecovacs</td>
+</tr>
+<tr><td class="tg-0lax"><a href="detail_ecovacs.x1.omni_0.html">Ecovacs X1 Omni</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (rotating)</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">Cameras,Linelaser</td>
+<td class="tg-0lax">y (ultrasonic)</td>
+<td class="tg-0lax">, ecovacs</td>
+</tr>
+<tr><td class="tg-0lax"><a href="detail_ecovacs.ozmo.950_0.html">Ecovacs Ozmo 950</a>
+<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+</tr>
+<tr><td class="tg-0lax"><a href="detail_ecovacs.deebot.900_0.html">Ecovacs Deebot 900</a>
+<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+</tr>
+<tr><td class="tg-0lax"><a href="detail_ecovacs.t8.aivi_0.html">Ecovacs T8 AIVI</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+</tr>
+<tr><td class="tg-0lax"><a href="detail_ecovacs.n8_0.html">Ecovacs N8</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+</tr>
+<tr><td class="tg-0lax"><a href="detail_ecovacs.t8_0.html">Ecovacs T8</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax">, ecovacs</td>
+</tr>
+<tr><td class="tg-0lax"><a href="detail_ecovacs.ozmo.930_0.html">Ecovacs Ozmo 930</a>
+<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+</tr>
+<tr><td class="tg-0lax"><a href="detail_ecovacs.t10.omni_0.html">Ecovacs T10 Omni</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+</tr>
+<tr><td class="tg-0lax"><a href="detail_ecovacs.t10.plus_0.html">Ecovacs T10 Plus</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+</tr>
+<tr><td class="tg-0lax"><a href="detail_ecovacs.x1.plus_0.html">Evovacs X1 Plus</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+<td class="tg-0lax"></td>
+</tr>
+<tr><td class="tg-0lax"><a href="detail_ecovacs.t20.omni_0.html">Ecovacs T20 Omni</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y (rotating)</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">6x</td>
+<td class="tg-0lax">y</td>
+<td class="tg-0lax">Linelaser</td>
+<td class="tg-0lax">y (ultrasonic)</td>
+<td class="tg-0lax">, ecovacs</td>
+</tr>
+<tr><td class="tg-0lax"><a href="detail_ecovacs.goat.g1_0.html">Ecovacs Goat G1</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">y (SC230AI fisheye, SC301IOT omni)</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">ToF</td>
+<td class="tg-0lax">n</td>
+<td class="tg-0lax">, ecovacs</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3><a id="root"></a>Rootability, custom firmware, config files and teardowns</h3>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-0pky"><span style="font-weight: bold;">Modelname</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Root possible? (since) *</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Root method public? *</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;">Root complexity</span></th>
+<th class="tg-0pky"><span style="font-weight: bold;"><a href="https://github.com/Hypfer/Valetudo" target="_blank" rel="noopener">Valetudo</a> support</span></th>
+<th class="tg-0pky">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.x1.turbo_0.html">Ecovacs X1 Turbo</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.x1.omni_0.html">Ecovacs X1 Omni</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.ozmo.950_0.html">Ecovacs Ozmo 950</a>
+<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.deebot.900_0.html">Ecovacs Deebot 900</a>
+<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.t8.aivi_0.html">Ecovacs T8 AIVI</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.n8_0.html">Ecovacs N8</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.t8_0.html">Ecovacs T8</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.ozmo.930_0.html">Ecovacs Ozmo 930</a>
+<br><p style="color:red;"><b>EOL</b></p></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.t10.omni_0.html">Ecovacs T10 Omni</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.t10.plus_0.html">Ecovacs T10 Plus</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.x1.plus_0.html">Evovacs X1 Plus</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.t20.omni_0.html">Ecovacs T20 Omni</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+</tr>
+<tr><td class="tg-0pky"><a href="detail_ecovacs.goat.g1_0.html">Ecovacs Goat G1</a>
+<br><p style="color:green;"><b>ACTIVE</b></p></td>
+<td class="tg-0pky"> ()</td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+<td class="tg-0pky">n</td>
+<td class="tg-0pky"></td>
+</tr>
+</tbody>
+</table>
+<p>* No does not mean that it is not possible or does not exist. It is just that I don't own the model, have no interest in it, it is not on my priority list or I did not publish it yet. "Since" date gives you an idea since when *my* robots were rooted or when I rooted someone else robot.</p>
+<p>&nbsp;</p>
+<hr />
+<h3><a id="pictures"></a>Pictures</h3>
+<p>Click on the picture to enlarge it</p>
+<h4>Ecovacs X1 Omni</h4>
+<p><a href="./full/ecovacs.zj2102.jpg"><img src="./small/ecovacs.zj2102.jpg" width="1200" alt="Ecovacs X1 Omni picture, click to enlarge"/></a></p>
+<h4>Ecovacs Goat G1</h4>
+<p><a href="./full/ecovacs.mr2201.jpg"><img src="./small/ecovacs.mr2201.jpg" width="1200" alt="Ecovacs Goat G1 picture, click to enlarge"/></a></p>
+
+<p>You miss a device here and feel generous? Check out the <a href="https://builder.dontvacuum.me/donations.txt">Donations page here ;)</a></p>
+<hr />
+<p><a href="https://dontvacuum.me">&lt;-- Back to my homepage</a></p><br>
+<b>Note: If you use information from this table, please reference it, eg. "Dennis Giese, Robotinfo, https://robotinfo.dev".<br>Please contact me prior using any of the images.</b>  
+</body>
+</html>
