@@ -1,7 +1,7 @@
 -- --------------------------------------------------------
 -- Robotinfo DATABASE
--- (c) 2021 Dennis Giese (dennis [at] dontvacuum.me)
--- This DB generates https://dontvacuum.me/robotinfo/
+-- (c) 2024 Dennis Giese (dennis [at] dontvacuum.me)
+-- This DB generates https://robotinfo.dev/
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
