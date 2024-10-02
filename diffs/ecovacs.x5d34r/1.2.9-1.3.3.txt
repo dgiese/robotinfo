@@ -1,0 +1,104 @@
+Firmware diff for DEEBOT OZMO T8 AIVI (ecovacs.x5d34r)
+Old version: 1.2.9 New version: 1.3.3
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/conf/wifi_service.conf          |   2 +-
+ .../{1.2.9 => 1.3.3}/xout/_root/etc/fw.fix         |   2 +-
+ .../{1.2.9 => 1.3.3}/xout/_root/etc/fw.manifest    |   4 +-
+ .../{1.2.9 => 1.3.3}/xout/_root/etc/rc.d/medusa.sh |   2 +
+ .../xout/_root/etc/rc.d/pre_boot.sh                |   1 +
+ .../xout/_root/etc/wifi/err_hook.sh}               |  29 +++
+ .../xout/_root/etc/wifi/netmon_hook.sh             |  22 +--
+ .../xout/_root/etc/wifi/wd_hook.sh                 |  15 +-
+ .../1.3.3/xout/_root/etc/wifi/ws_wait_hook.sh}     |  78 ++++++++
+ .../{1.2.9 => 1.3.3}/xout/_root/opt/data.tar.bz2   | Bin 415 -> 421 bytes
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 865208 -> 873440 bytes
+ .../{1.2.9 => 1.3.3}/xout/_root/usr/bin/awss       | Bin 19920 -> 19920 bytes
+ .../{1.2.9 => 1.3.3}/xout/_root/usr/bin/awss_cli   | Bin 7344 -> 7344 bytes
+ .../{1.2.9 => 1.3.3}/xout/_root/usr/bin/eco_cert   | Bin 15136 -> 15136 bytes
+ .../{1.2.9 => 1.3.3}/xout/_root/usr/bin/eco_passwd | Bin 11104 -> 11256 bytes
+ .../xout/_root/usr/bin/factory_fun                 |  36 +++-
+ .../{1.2.9 => 1.3.3}/xout/_root/usr/bin/fw_target  | Bin 19472 -> 19576 bytes
+ .../{1.2.9 => 1.3.3}/xout/_root/usr/bin/netmon_ctl | Bin 11136 -> 11136 bytes
+ .../{1.2.9 => 1.3.3}/xout/_root/usr/bin/scan_ap    | Bin 77672 -> 77672 bytes
+ .../xout/_root/usr/bin/wifi_service                | Bin 106016 -> 106016 bytes
+ .../xout/_root/usr/lib/WHmethods/libWHmethods.so   | Bin 148224 -> 148960 bytes
+ .../xout/_root/usr/lib/libDeebot.so                | Bin 884632 -> 876440 bytes
+ .../xout/_root/usr/lib/libFinalReturn.so           | Bin 16488 -> 17736 bytes
+ .../xout/_root/usr/lib/libeco_crypto.so            | Bin 8832 -> 9448 bytes
+ .../_root/usr/lib/libfeiyan.so.2.3.0 => dev/null}  | Bin 1038088 -> 0 bytes
+ .../xout/_root/usr/lib/liblinkkit.so}              |   0
+ .../1.3.3/xout/_root/usr/lib/liblinkkit.so.2.3.0}  | Bin 0 -> 1024704 bytes
+ .../xout/_root/usr/lib/medusa/plug_fw_v3.so        | Bin 30064 -> 30304 bytes
+ .../xout/_root/usr/lib/medusa/plug_link.so         | Bin 37080 -> 37080 bytes
+ .../xout/_root/usr/lib/medusa/plug_lvision.so      | Bin 2179520 -> 2183616 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_ros_node.so  | Bin 64736 -> 60640 bytes
+ .../xout/_root/usr/lib/node/liberos_node_clean.so  | Bin 521176 -> 541944 bytes
+ .../usr/lib/node/liberos_node_hardware_platform.so | Bin 1035488 -> 1048600 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     | Bin 356352 -> 356448 bytes
+ .../usr/lib/node/liberos_node_task_manager.so      | Bin 1594360 -> 1650696 bytes
+ .../lib/python2.7/site-packages/motor/__init__.pyc | Bin 218 -> 218 bytes
+ .../site-packages/motor/msg/_ControlMotor.pyc      | Bin 7074 -> 7074 bytes
+ .../site-packages/motor/msg/_ControlMotorValue.pyc | Bin 6394 -> 6394 bytes
+ .../site-packages/motor/msg/_MotorCleanSilent.py   |   4 +-
+ .../site-packages/motor/msg/_MotorCleanSilent.pyc  | Bin 5295 -> 5356 bytes
+ .../site-packages/motor/msg/_MotorControlType.pyc  | Bin 5390 -> 5390 bytes
+ .../site-packages/motor/msg/_MotorCurrent.pyc      | Bin 6464 -> 6464 bytes
+ .../site-packages/motor/msg/_MotorCurrentValue.pyc | Bin 5752 -> 5752 bytes
+ .../site-packages/motor/msg/_MotorType.pyc         | Bin 5385 -> 5385 bytes
+ .../python2.7/site-packages/motor/msg/__init__.pyc | Bin 461 -> 461 bytes
+ .../lib/python2.7/site-packages/task/__init__.pyc  | Bin 216 -> 216 bytes
+ .../site-packages/task/msg/_AiPointStatue.pyc      | Bin 5286 -> 5286 bytes
+ .../python2.7/site-packages/task/msg/_AiPoints.pyc | Bin 5901 -> 5901 bytes
+ .../site-packages/task/msg/_CleanWorkData.pyc      | Bin 7581 -> 7581 bytes
+ .../site-packages/task/msg/_ExtraWorkData.pyc      | Bin 10672 -> 10672 bytes
+ .../site-packages/task/msg/_MapBuildState.pyc      | Bin 5395 -> 5395 bytes
+ .../site-packages/task/msg/_RelocationReport.pyc   | Bin 6132 -> 6132 bytes
+ .../site-packages/task/msg/_RemoteMove.pyc         | Bin 6196 -> 6196 bytes
+ .../site-packages/task/msg/_RobotManageType.pyc    | Bin 4894 -> 4894 bytes
+ .../site-packages/task/msg/_TaskControl.pyc        | Bin 5979 -> 5979 bytes
+ .../site-packages/task/msg/_TaskResult.pyc         | Bin 6488 -> 6488 bytes
+ .../site-packages/task/msg/_TaskStateReport.pyc    | Bin 5373 -> 5373 bytes
+ .../site-packages/task/msg/_TaskStateType.pyc      | Bin 5131 -> 5131 bytes
+ .../site-packages/task/msg/_WorkCauseType.pyc      | Bin 5313 -> 5313 bytes
+ .../site-packages/task/msg/_WorkControlType.pyc    | Bin 4983 -> 4983 bytes
+ .../python2.7/site-packages/task/msg/_WorkData.pyc | Bin 13316 -> 13316 bytes
+ .../site-packages/task/msg/_WorkResponseType.pyc   | Bin 6091 -> 6091 bytes
+ .../site-packages/task/msg/_WorkState.pyc          | Bin 14227 -> 14227 bytes
+ .../site-packages/task/msg/_WorkStateType.pyc      | Bin 4740 -> 4740 bytes
+ .../python2.7/site-packages/task/msg/_WorkType.pyc | Bin 5830 -> 5830 bytes
+ .../python2.7/site-packages/task/msg/__init__.pyc  | Bin 996 -> 996 bytes
+ .../site-packages/task/msg/_common_task.pyc        | Bin 6645 -> 6645 bytes
+ .../site-packages/task/msg/_common_task_result.pyc | Bin 6969 -> 6969 bytes
+ .../site-packages/task/msg/_relocation_task.pyc    | Bin 9060 -> 9060 bytes
+ .../task/msg/_relocation_task_result.pyc           | Bin 11497 -> 11497 bytes
+ .../site-packages/task/msg/_sleepstate.pyc         | Bin 5303 -> 5303 bytes
+ .../lib/python2.7/site-packages/task/msg/_task.pyc | Bin 5727 -> 5727 bytes
+ .../site-packages/task/srv/_GetIsBreakPoint.py}    | 205 +++++++++++++++++++++
+ .../site-packages/task/srv/_GetIsBreakPoint.pyc}   | Bin 0 -> 9671 bytes
+ .../site-packages/task/srv/_GetMapBuildState.pyc   | Bin 10330 -> 10330 bytes
+ .../site-packages/task/srv/_RobotManage.pyc        | Bin 9576 -> 9576 bytes
+ .../site-packages/task/srv/_WorkManage.pyc         | Bin 18574 -> 18574 bytes
+ .../python2.7/site-packages/task/srv/__init__.py   |   1 +
+ .../python2.7/site-packages/task/srv/__init__.pyc  | Bin 325 -> 358 bytes
+ .../python2.7/site-packages/worklog/__init__.pyc   | Bin 222 -> 222 bytes
+ .../site-packages/worklog/msg/_AiWorkStatistic.pyc | Bin 6666 -> 6666 bytes
+ .../site-packages/worklog/msg/_LogContent.pyc      | Bin 16444 -> 16444 bytes
+ .../site-packages/worklog/msg/_LogReportType.pyc   | Bin 4717 -> 4717 bytes
+ .../site-packages/worklog/msg/_ManipulateLog.pyc   | Bin 14841 -> 14841 bytes
+ .../site-packages/worklog/msg/_ReportLog.pyc       | Bin 16102 -> 16102 bytes
+ .../site-packages/worklog/msg/_WorkLog.pyc         | Bin 17391 -> 17391 bytes
+ .../site-packages/worklog/msg/_WorkStartReason.pyc | Bin 5089 -> 5089 bytes
+ .../site-packages/worklog/msg/_WorkStatistic.pyc   | Bin 5585 -> 5585 bytes
+ .../worklog/msg/_WorkStatisticToWifi.pyc           | Bin 6236 -> 6236 bytes
+ .../site-packages/worklog/msg/_WorkStopReason.pyc  | Bin 5298 -> 5298 bytes
+ .../site-packages/worklog/msg/__init__.pyc         | Bin 548 -> 548 bytes
+ .../worklog/srv/_GetAiWorkStatistic.pyc            | Bin 11745 -> 11745 bytes
+ .../site-packages/worklog/srv/_GetLastLogInfo.py   |  92 +++++++--
+ .../site-packages/worklog/srv/_GetLastLogInfo.pyc  | Bin 10917 -> 12828 bytes
+ .../site-packages/worklog/srv/_GetLogInfo.pyc      | Bin 10010 -> 10010 bytes
+ .../site-packages/worklog/srv/__init__.pyc         | Bin 336 -> 336 bytes
+ .../{1.2.9 => 1.3.3}/xout/_root/usr/version.txt    |   2 +-
+ .../{1.2.9 => 1.3.3}/xout/_root/version.txt        |  10 +-
+ 98 files changed, 462 insertions(+), 43 deletions(-)

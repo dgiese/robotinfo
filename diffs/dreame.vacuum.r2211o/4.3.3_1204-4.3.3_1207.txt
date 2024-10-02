@@ -1,0 +1,24 @@
+Firmware diff for Xiaomi Robot Vacuum S10+ (dreame.vacuum.r2211o)
+Old version: 4.3.3_1204 New version: 4.3.3_1207
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 113784 -> 113784 bytes
+ .../xout/_root/ava/lib/node_lasercamera_calibr.so  | Bin 197324 -> 205528 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 904840 -> 904888 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 554428 -> 554428 bytes
+ .../xout/_root/ava/lib/node_themis.so              | Bin 3460732 -> 3458180 bytes
+ .../xout/_root/etc/init.d/mount_data.sh            |  11 +++++++----
+ .../xout/_root/etc/init.d/mount_misc.sh            |   7 ++-----
+ .../xout/_root/etc/os-release                      |   4 ++--
+ .../xout/_root/etc/rc.d/ava.sh                     |   3 +++
+ .../xout/_root/etc/rc.sysinit                      |   4 ++--
+ .../xout/_root/misc/data.tar.bz2                   | Bin 550 -> 561 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/cpu.sh                      |   2 +-
+ .../4.3.3_1207/xout/_root/usr/lib/libsmp_shm.so}   | Bin 0 -> 33304 bytes
+ .../usr/lib/tree_lib/libthemis_tactics_tree.so     | Bin 1087960 -> 1087980 bytes
+ .../xout/_root/version_record                      |  10 +++++-----
+ .../{4.3.3_1204 => 4.3.3_1207}/xout/kernel.img     | Bin 2934784 -> 2934784 bytes
+ .../{4.3.3_1204 => 4.3.3_1207}/xout/toc1.fex       | Bin 1507328 -> 1507328 bytes
+ 18 files changed, 23 insertions(+), 20 deletions(-)

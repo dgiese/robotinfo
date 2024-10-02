@@ -1,0 +1,43 @@
+Firmware diff for DEEBOT OZMO 950 Series (ecovacs.yna5xi)
+Old version: 1.7.3 New version: 1.7.6
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../{1.7.3 => 1.7.6}/xout/_root/etc/fw.manifest    |   4 ++--
+ .../xout/_root/media/music/EN/105.ogg              | Bin 22409 -> 37247 bytes
+ .../xout/_root/media/music/EN/106.ogg              | Bin 25634 -> 44524 bytes
+ .../xout/_root/media/music/EN/109.ogg              | Bin 26157 -> 32400 bytes
+ .../xout/_root/media/music/EN/110.ogg              | Bin 19271 -> 26476 bytes
+ .../xout/_root/media/music/EN/111.ogg              | Bin 20230 -> 27471 bytes
+ .../xout/_root/media/music/EN/112.ogg              | Bin 19575 -> 30586 bytes
+ .../xout/_root/media/music/EN/113.ogg              | Bin 20111 -> 29402 bytes
+ .../1.7.6/xout/_root/media/music/EN/135.ogg}       | Bin 0 -> 24152 bytes
+ .../xout/_root/media/music/EN/18.ogg               | Bin 16929 -> 13663 bytes
+ .../xout/_root/media/music/EN/35.ogg               | Bin 22978 -> 17449 bytes
+ .../xout/_root/media/music/EN/55.ogg               | Bin 16017 -> 29578 bytes
+ .../1.7.6/xout/_root/media/music/RU/105.ogg}       | Bin 0 -> 51324 bytes
+ .../1.7.6/xout/_root/media/music/RU/106.ogg}       | Bin 0 -> 61596 bytes
+ .../1.7.6/xout/_root/media/music/RU/110.ogg}       | Bin 0 -> 26561 bytes
+ .../1.7.6/xout/_root/media/music/RU/111.ogg}       | Bin 0 -> 27081 bytes
+ .../1.7.6/xout/_root/media/music/RU/112.ogg}       | Bin 0 -> 25124 bytes
+ .../1.7.6/xout/_root/media/music/RU/113.ogg}       | Bin 0 -> 26617 bytes
+ .../1.7.6/xout/_root/media/music/RU/133.ogg}       | Bin 0 -> 32287 bytes
+ .../1.7.6/xout/_root/media/music/RU/134.ogg}       | Bin 0 -> 38580 bytes
+ .../1.7.6/xout/_root/media/music/RU/135.ogg}       | Bin 0 -> 34542 bytes
+ .../1.7.6/xout/_root/media/music/RU/136.ogg}       | Bin 0 -> 58638 bytes
+ .../1.7.6/xout/_root/media/music/RU/137.ogg}       | Bin 0 -> 27709 bytes
+ .../1.7.6/xout/_root/media/music/RU/138.ogg}       | Bin 0 -> 41228 bytes
+ .../1.7.6/xout/_root/media/music/RU/139.ogg}       | Bin 0 -> 48546 bytes
+ .../1.7.6/xout/_root/media/music/RU/140.ogg}       | Bin 0 -> 45258 bytes
+ .../1.7.6/xout/_root/media/music/RU/30.ogg}        | Bin 0 -> 17275 bytes
+ .../1.7.6/xout/_root/media/music/RU/4.ogg}         | Bin 0 -> 28775 bytes
+ .../1.7.6/xout/_root/media/music/RU/55.ogg}        | Bin 0 -> 44463 bytes
+ .../1.7.6/xout/_root/media/music/RU/6.ogg}         | Bin 0 -> 33034 bytes
+ .../1.7.6/xout/_root/media/music/RU/73.ogg}        | Bin 0 -> 67858 bytes
+ .../{1.7.3 => 1.7.6}/xout/_root/opt/data.tar.bz2   | Bin 345 -> 341 bytes
+ .../xout/_root/usr/lib/libEcovacs.so               | Bin 59600 -> 63708 bytes
+ .../xout/_root/usr/lib/libXspace.so                | Bin 68312 -> 68548 bytes
+ .../_root/usr/lib/medusa/plug_medusa_plugin_map.so | Bin 138836 -> 139312 bytes
+ .../lib/medusa/plug_medusa_plugin_task_ergodic.so  | Bin 341872 -> 345216 bytes
+ .../{1.7.3 => 1.7.6}/xout/_root/version.txt        |   8 ++++----
+ 37 files changed, 6 insertions(+), 6 deletions(-)

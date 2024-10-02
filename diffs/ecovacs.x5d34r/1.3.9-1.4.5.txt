@@ -1,0 +1,278 @@
+Firmware diff for DEEBOT OZMO T8 AIVI (ecovacs.x5d34r)
+Old version: 1.3.9 New version: 1.4.5
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/conf/dxai_node.json             |   1 +
+ .../xout/_root/etc/conf/medusa/deebot_px30_ai.conf |   4 ++--
+ .../_root/etc/conf/medusa/xmpp_server_status.sh    |  19 ++++++++++++-----
+ .../xout/_root/etc/conf/wifi_service.conf          |   2 +-
+ .../{1.3.9 => 1.4.5}/xout/_root/etc/fw.fix         |   2 +-
+ .../{1.3.9 => 1.4.5}/xout/_root/etc/fw.manifest    |   4 ++--
+ .../{1.3.9 => 1.4.5}/xout/_root/etc/rc.d/deebot.sh |   1 +
+ .../xout/_root/etc/rc.d/play_boot_music.sh         |   2 +-
+ .../xout/_root/etc/rc.d/pre_boot.sh                |   6 +++---
+ .../{1.3.9 => 1.4.5}/xout/_root/etc/rc.d/ros.sh    |   7 ++++++-
+ .../xout/_root/etc/rc.d/wifi-rtl8192eu.sh          |   0
+ .../xout/_root/etc/wifi/netmon_hook.sh             |  23 +++++----------------
+ .../1.4.5/xout/_root/media/music/EN/142.ogg}       | Bin 0 -> 27352 bytes
+ .../1.4.5/xout/_root/media/music/EN/143.ogg}       | Bin 0 -> 25491 bytes
+ .../1.4.5/xout/_root/media/music/EN/144.ogg}       | Bin 0 -> 18731 bytes
+ .../1.4.5/xout/_root/media/music/EN/145.ogg}       | Bin 0 -> 40293 bytes
+ .../1.4.5/xout/_root/media/music/EN/147.ogg}       | Bin 0 -> 16058 bytes
+ .../1.4.5/xout/_root/media/music/EN/148.ogg}       | Bin 0 -> 26261 bytes
+ .../1.4.5/xout/_root/media/music/EN/149.ogg}       | Bin 0 -> 28481 bytes
+ .../1.4.5/xout/_root/media/music/EN/150.ogg}       | Bin 0 -> 21349 bytes
+ .../1.4.5/xout/_root/media/music/EN/151.ogg}       | Bin 0 -> 23297 bytes
+ .../1.4.5/xout/_root/media/music/EN/152.ogg}       | Bin 0 -> 26458 bytes
+ .../1.4.5/xout/_root/media/music/EN/153.ogg}       | Bin 0 -> 27568 bytes
+ .../1.4.5/xout/_root/media/music/EN/154.ogg}       | Bin 0 -> 28337 bytes
+ .../1.4.5/xout/_root/media/music/EN/155.ogg}       | Bin 0 -> 27834 bytes
+ .../1.4.5/xout/_root/media/music/EN/156.ogg}       | Bin 0 -> 36493 bytes
+ .../1.4.5/xout/_root/media/music/EN/157.ogg}       | Bin 0 -> 21689 bytes
+ .../1.4.5/xout/_root/media/music/EN/158.ogg}       | Bin 0 -> 19308 bytes
+ .../1.4.5/xout/_root/media/music/EN/159.ogg}       | Bin 0 -> 15446 bytes
+ .../1.4.5/xout/_root/media/music/EN/160.ogg}       | Bin 0 -> 19040 bytes
+ .../1.4.5/xout/_root/media/music/EN/161.ogg}       | Bin 0 -> 45441 bytes
+ .../1.4.5/xout/_root/media/music/EN/162.ogg}       | Bin 0 -> 45730 bytes
+ .../1.4.5/xout/_root/media/music/EN/163.ogg}       | Bin 0 -> 36803 bytes
+ .../1.4.5/xout/_root/media/music/EN/164.ogg}       | Bin 0 -> 33267 bytes
+ .../1.4.5/xout/_root/media/music/EN/165.ogg}       | Bin 0 -> 28249 bytes
+ .../1.4.5/xout/_root/media/music/EN/166.ogg}       | Bin 0 -> 27742 bytes
+ .../1.4.5/xout/_root/media/music/EN/167.ogg}       | Bin 0 -> 37951 bytes
+ .../1.4.5/xout/_root/media/music/EN/168.ogg}       | Bin 0 -> 38219 bytes
+ .../1.4.5/xout/_root/media/music/EN/169.ogg}       | Bin 0 -> 19012 bytes
+ .../1.4.5/xout/_root/media/music/EN/170.ogg}       | Bin 0 -> 25994 bytes
+ .../1.4.5/xout/_root/media/music/EN/171.ogg}       | Bin 0 -> 42483 bytes
+ .../1.4.5/xout/_root/media/music/EN/172.ogg}       | Bin 0 -> 27337 bytes
+ .../1.4.5/xout/_root/media/music/EN/173.ogg}       | Bin 0 -> 34976 bytes
+ .../1.4.5/xout/_root/media/music/EN/174.ogg}       | Bin 0 -> 23570 bytes
+ .../{1.3.9 => 1.4.5}/xout/_root/opt/data.tar.bz2   | Bin 421 -> 422 bytes
+ .../xout/_root/opt/ros/melodic/_setup_util.py      |   2 +-
+ .../xout/_root/opt/ros/melodic/bin/rospack         | Bin 7072 -> 7072 bytes
+ .../xout/_root/opt/ros/melodic/bin/rosstack        | Bin 7072 -> 7072 bytes
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 873440 -> 877648 bytes
+ .../opt/ros/melodic/lib/libconsole_bridge.so.0.4   | Bin 15936 -> 15936 bytes
+ .../_root/opt/ros/melodic/lib/libcpp_common.so     | Bin 41528 -> 41568 bytes
+ .../_root/opt/ros/melodic/lib/librosconsole.so     | Bin 210472 -> 214608 bytes
+ .../melodic/lib/librosconsole_backend_interface.so | Bin 5016 -> 5016 bytes
+ .../opt/ros/melodic/lib/librosconsole_print.so     | Bin 6952 -> 6952 bytes
+ .../xout/_root/opt/ros/melodic/lib/libroscpp.so    | Bin 1659352 -> 1663448 bytes
+ .../opt/ros/melodic/lib/libroscpp_serialization.so | Bin 8592 -> 8592 bytes
+ .../xout/_root/opt/ros/melodic/lib/libroslib.so    | Bin 70960 -> 70960 bytes
+ .../xout/_root/opt/ros/melodic/lib/librospack.so   | Bin 250696 -> 250728 bytes
+ .../xout/_root/opt/ros/melodic/lib/librostime.so   | Bin 104992 -> 105008 bytes
+ .../xout/_root/opt/ros/melodic/lib/libxmlrpcpp.so  | Bin 128552 -> 128552 bytes
+ .../python2.7/site-packages/catkin/__init__.pyc    | Bin 150 -> 150 bytes
+ .../lib/python2.7/site-packages/catkin/builder.pyc | Bin 37311 -> 37311 bytes
+ .../lib/python2.7/site-packages/catkin/cmake.pyc   | Bin 897 -> 897 bytes
+ .../site-packages/catkin/environment_cache.pyc     | Bin 3161 -> 3161 bytes
+ .../site-packages/catkin/find_in_workspaces.pyc    | Bin 4778 -> 4778 bytes
+ .../site-packages/catkin/init_workspace.pyc        | Bin 3483 -> 3483 bytes
+ .../site-packages/catkin/package_version.pyc       | Bin 214 -> 214 bytes
+ .../site-packages/catkin/terminal_color.pyc        | Bin 212 -> 212 bytes
+ .../site-packages/catkin/test_results.pyc          | Bin 8217 -> 8217 bytes
+ .../python2.7/site-packages/catkin/tidy_xml.pyc    | Bin 1712 -> 1712 bytes
+ .../python2.7/site-packages/catkin/workspace.pyc   | Bin 1688 -> 1688 bytes
+ .../site-packages/catkin/workspace_vcs.pyc         | Bin 210 -> 210 bytes
+ .../python2.7/site-packages/genmsg/__init__.pyc    | Bin 1177 -> 1177 bytes
+ .../lib/python2.7/site-packages/genmsg/base.pyc    | Bin 1858 -> 1858 bytes
+ .../site-packages/genmsg/command_line.pyc          | Bin 554 -> 554 bytes
+ .../lib/python2.7/site-packages/genmsg/deps.pyc    | Bin 2300 -> 2300 bytes
+ .../python2.7/site-packages/genmsg/gentools.pyc    | Bin 5268 -> 5268 bytes
+ .../python2.7/site-packages/genmsg/msg_loader.pyc  | Bin 19208 -> 19208 bytes
+ .../lib/python2.7/site-packages/genmsg/msgs.pyc    | Bin 11836 -> 11836 bytes
+ .../lib/python2.7/site-packages/genmsg/names.pyc   | Bin 3958 -> 3958 bytes
+ .../lib/python2.7/site-packages/genmsg/srvs.pyc    | Bin 1958 -> 1958 bytes
+ .../site-packages/genmsg/template_tools.pyc        | Bin 5551 -> 5551 bytes
+ .../lib/python2.7/site-packages/genpy/__init__.pyc | Bin 509 -> 509 bytes
+ .../lib/python2.7/site-packages/genpy/base.pyc     | Bin 900 -> 900 bytes
+ .../lib/python2.7/site-packages/genpy/dynamic.pyc  | Bin 5236 -> 5236 bytes
+ .../site-packages/genpy/generate_initpy.pyc        | Bin 1939 -> 1939 bytes
+ .../site-packages/genpy/generate_numpy.pyc         | Bin 1326 -> 1326 bytes
+ .../site-packages/genpy/generate_struct.pyc        | Bin 4916 -> 4916 bytes
+ .../python2.7/site-packages/genpy/generator.pyc    | Bin 32340 -> 32340 bytes
+ .../python2.7/site-packages/genpy/genpy_main.pyc   | Bin 2141 -> 2141 bytes
+ .../lib/python2.7/site-packages/genpy/message.pyc  | Bin 22026 -> 22026 bytes
+ .../lib/python2.7/site-packages/genpy/rostime.pyc  | Bin 17758 -> 17758 bytes
+ .../python2.7/site-packages/rosclean/__init__.pyc  | Bin 8842 -> 8842 bytes
+ .../python2.7/site-packages/rosgraph/__init__.pyc  | Bin 1174 -> 1174 bytes
+ .../site-packages/rosgraph/impl/__init__.pyc       | Bin 157 -> 157 bytes
+ .../site-packages/rosgraph/impl/graph.pyc          | Bin 17306 -> 17306 bytes
+ .../python2.7/site-packages/rosgraph/masterapi.pyc | Bin 20735 -> 20735 bytes
+ .../lib/python2.7/site-packages/rosgraph/names.pyc | Bin 9906 -> 9906 bytes
+ .../python2.7/site-packages/rosgraph/network.pyc   | Bin 13121 -> 13121 bytes
+ .../python2.7/site-packages/rosgraph/rosenv.pyc    | Bin 1296 -> 1296 bytes
+ .../site-packages/rosgraph/rosgraph_main.pyc       | Bin 2125 -> 2125 bytes
+ .../site-packages/rosgraph/roslogging.pyc          | Bin 8971 -> 8971 bytes
+ .../python2.7/site-packages/rosgraph/xmlrpc.pyc    | Bin 9796 -> 9796 bytes
+ .../site-packages/rosgraph_msgs/__init__.pyc       | Bin 232 -> 241 bytes
+ .../site-packages/rosgraph_msgs/msg/_Clock.pyc     | Bin 6051 -> 6141 bytes
+ .../site-packages/rosgraph_msgs/msg/_Log.pyc       | Bin 12098 -> 12197 bytes
+ .../rosgraph_msgs/msg/_TopicStatistics.pyc         | Bin 11150 -> 11240 bytes
+ .../site-packages/rosgraph_msgs/msg/__init__.pyc   | Bin 327 -> 336 bytes
+ .../python2.7/site-packages/roslaunch/__init__.pyc | Bin 11030 -> 11030 bytes
+ .../python2.7/site-packages/roslaunch/arg_dump.pyc | Bin 2037 -> 2037 bytes
+ .../python2.7/site-packages/roslaunch/child.pyc    | Bin 3594 -> 3594 bytes
+ .../python2.7/site-packages/roslaunch/config.pyc   | Bin 15929 -> 15929 bytes
+ .../lib/python2.7/site-packages/roslaunch/core.pyc | Bin 26377 -> 26377 bytes
+ .../python2.7/site-packages/roslaunch/depends.pyc  | Bin 12701 -> 12701 bytes
+ .../python2.7/site-packages/roslaunch/launch.pyc   | Bin 25221 -> 25221 bytes
+ .../python2.7/site-packages/roslaunch/loader.pyc   | Bin 15903 -> 15903 bytes
+ .../python2.7/site-packages/roslaunch/netapi.pyc   | Bin 2418 -> 2418 bytes
+ .../site-packages/roslaunch/node_args.pyc          | Bin 8326 -> 8326 bytes
+ .../site-packages/roslaunch/nodeprocess.pyc        | Bin 17723 -> 17723 bytes
+ .../site-packages/roslaunch/param_dump.pyc         | Bin 1310 -> 1310 bytes
+ .../python2.7/site-packages/roslaunch/parent.pyc   | Bin 10420 -> 10420 bytes
+ .../lib/python2.7/site-packages/roslaunch/pmon.pyc | Bin 23502 -> 23502 bytes
+ .../python2.7/site-packages/roslaunch/remote.pyc   | Bin 6468 -> 6468 bytes
+ .../site-packages/roslaunch/remoteprocess.pyc      | Bin 10177 -> 10177 bytes
+ .../python2.7/site-packages/roslaunch/rlutil.pyc   | Bin 8566 -> 8566 bytes
+ .../site-packages/roslaunch/roslaunch_logs.pyc     | Bin 1478 -> 1478 bytes
+ .../site-packages/roslaunch/scriptapi.pyc          | Bin 3920 -> 3920 bytes
+ .../python2.7/site-packages/roslaunch/server.pyc   | Bin 20368 -> 20368 bytes
+ .../site-packages/roslaunch/substitution_args.pyc  | Bin 16990 -> 16990 bytes
+ .../site-packages/roslaunch/xmlloader.pyc          | Bin 27755 -> 27755 bytes
+ .../python2.7/site-packages/roslib/__init__.pyc    | Bin 1940 -> 1940 bytes
+ .../python2.7/site-packages/roslib/exceptions.pyc  | Bin 556 -> 556 bytes
+ .../python2.7/site-packages/roslib/gentools.pyc    | Bin 9960 -> 9960 bytes
+ .../python2.7/site-packages/roslib/launcher.pyc    | Bin 2775 -> 2775 bytes
+ .../python2.7/site-packages/roslib/manifest.pyc    | Bin 4793 -> 4793 bytes
+ .../python2.7/site-packages/roslib/manifestlib.pyc | Bin 23117 -> 23117 bytes
+ .../lib/python2.7/site-packages/roslib/message.pyc | Bin 2567 -> 2567 bytes
+ .../lib/python2.7/site-packages/roslib/msgs.pyc    | Bin 25391 -> 25391 bytes
+ .../lib/python2.7/site-packages/roslib/names.pyc   | Bin 13042 -> 13042 bytes
+ .../lib/python2.7/site-packages/roslib/network.pyc | Bin 10902 -> 10902 bytes
+ .../python2.7/site-packages/roslib/packages.pyc    | Bin 15607 -> 15607 bytes
+ .../python2.7/site-packages/roslib/resources.pyc   | Bin 3323 -> 3323 bytes
+ .../lib/python2.7/site-packages/roslib/rosenv.pyc  | Bin 6496 -> 6496 bytes
+ .../lib/python2.7/site-packages/roslib/rospack.pyc | Bin 5552 -> 5552 bytes
+ .../python2.7/site-packages/roslib/scriptutil.pyc  | Bin 3008 -> 3008 bytes
+ .../lib/python2.7/site-packages/roslib/srvs.pyc    | Bin 7182 -> 7182 bytes
+ .../site-packages/roslib/stack_manifest.pyc        | Bin 3479 -> 3479 bytes
+ .../lib/python2.7/site-packages/roslib/stacks.pyc  | Bin 7644 -> 7644 bytes
+ .../python2.7/site-packages/rosmake/__init__.pyc   | Bin 489 -> 489 bytes
+ .../lib/python2.7/site-packages/rosmake/engine.pyc | Bin 29324 -> 29324 bytes
+ .../site-packages/rosmake/gcc_output_parse.pyc     | Bin 2193 -> 2193 bytes
+ .../site-packages/rosmake/package_stats.pyc        | Bin 7067 -> 7067 bytes
+ .../site-packages/rosmake/parallel_build.pyc       | Bin 9310 -> 9310 bytes
+ .../python2.7/site-packages/rosmaster/__init__.pyc | Bin 275 -> 275 bytes
+ .../site-packages/rosmaster/exceptions.pyc         | Bin 450 -> 450 bytes
+ .../lib/python2.7/site-packages/rosmaster/main.pyc | Bin 4032 -> 4032 bytes
+ .../python2.7/site-packages/rosmaster/master.pyc   | Bin 2133 -> 2133 bytes
+ .../site-packages/rosmaster/master_api.pyc         | Bin 33746 -> 33746 bytes
+ .../site-packages/rosmaster/paramserver.pyc        | Bin 10630 -> 10630 bytes
+ .../site-packages/rosmaster/registrations.pyc      | Bin 17901 -> 17901 bytes
+ .../site-packages/rosmaster/threadpool.pyc         | Bin 6688 -> 6688 bytes
+ .../lib/python2.7/site-packages/rosmaster/util.pyc | Bin 1907 -> 1907 bytes
+ .../site-packages/rosmaster/validators.pyc         | Bin 8646 -> 8646 bytes
+ .../lib/python2.7/site-packages/rospy/__init__.pyc | Bin 3314 -> 3314 bytes
+ .../lib/python2.7/site-packages/rospy/client.pyc   | Bin 18789 -> 18789 bytes
+ .../lib/python2.7/site-packages/rospy/core.pyc     | Bin 22320 -> 22320 bytes
+ .../python2.7/site-packages/rospy/exceptions.pyc   | Bin 3186 -> 3186 bytes
+ .../site-packages/rospy/impl/__init__.pyc          | Bin 154 -> 154 bytes
+ .../python2.7/site-packages/rospy/impl/init.pyc    | Bin 3261 -> 3261 bytes
+ .../site-packages/rospy/impl/masterslave.pyc       | Bin 19612 -> 19612 bytes
+ .../site-packages/rospy/impl/paramserver.pyc       | Bin 3262 -> 3262 bytes
+ .../site-packages/rospy/impl/registration.pyc      | Bin 17320 -> 17320 bytes
+ .../python2.7/site-packages/rospy/impl/rosout.pyc  | Bin 3507 -> 3507 bytes
+ .../python2.7/site-packages/rospy/impl/simtime.pyc | Bin 2503 -> 2503 bytes
+ .../site-packages/rospy/impl/statistics.pyc        | Bin 8401 -> 8401 bytes
+ .../python2.7/site-packages/rospy/impl/tcpros.pyc  | Bin 1434 -> 1434 bytes
+ .../site-packages/rospy/impl/tcpros_base.pyc       | Bin 27846 -> 27846 bytes
+ .../site-packages/rospy/impl/tcpros_pubsub.pyc     | Bin 15585 -> 15585 bytes
+ .../site-packages/rospy/impl/tcpros_service.pyc    | Bin 25912 -> 25912 bytes
+ .../site-packages/rospy/impl/transport.pyc         | Bin 4760 -> 4760 bytes
+ .../python2.7/site-packages/rospy/impl/udpros.pyc  | Bin 10317 -> 10317 bytes
+ .../site-packages/rospy/impl/validators.pyc        | Bin 1485 -> 1485 bytes
+ .../rospy/logger_level_service_caller.pyc          | Bin 4693 -> 4693 bytes
+ .../lib/python2.7/site-packages/rospy/msg.pyc      | Bin 6765 -> 6765 bytes
+ .../lib/python2.7/site-packages/rospy/msproxy.pyc  | Bin 6658 -> 6658 bytes
+ .../lib/python2.7/site-packages/rospy/names.pyc    | Bin 10487 -> 10487 bytes
+ .../python2.7/site-packages/rospy/numpy_msg.pyc    | Bin 2057 -> 2057 bytes
+ .../python2.7/site-packages/rospy/rosconsole.pyc   | Bin 10030 -> 10030 bytes
+ .../lib/python2.7/site-packages/rospy/rostime.pyc  | Bin 9166 -> 9166 bytes
+ .../lib/python2.7/site-packages/rospy/service.pyc  | Bin 4751 -> 4751 bytes
+ .../lib/python2.7/site-packages/rospy/timer.pyc    | Bin 7320 -> 7320 bytes
+ .../lib/python2.7/site-packages/rospy/topics.pyc   | Bin 49132 -> 49132 bytes
+ .../python2.7/site-packages/rosunit/__init__.pyc   | Bin 648 -> 648 bytes
+ .../python2.7/site-packages/rosunit/baretest.pyc   | Bin 16747 -> 16747 bytes
+ .../lib/python2.7/site-packages/rosunit/core.pyc   | Bin 4966 -> 4966 bytes
+ .../python2.7/site-packages/rosunit/junitxml.pyc   | Bin 19559 -> 19559 bytes
+ .../lib/python2.7/site-packages/rosunit/pmon.pyc   | Bin 17372 -> 17372 bytes
+ .../lib/python2.7/site-packages/rosunit/pyunit.pyc | Bin 5045 -> 5045 bytes
+ .../site-packages/rosunit/rosunit_main.pyc         | Bin 3150 -> 3150 bytes
+ .../python2.7/site-packages/rosunit/xmlrunner.pyc  | Bin 11639 -> 11639 bytes
+ .../python2.7/site-packages/std_msgs/__init__.pyc  | Bin 203 -> 212 bytes
+ .../python2.7/site-packages/std_msgs/msg/_Bool.pyc | Bin 5285 -> 5375 bytes
+ .../python2.7/site-packages/std_msgs/msg/_Byte.pyc | Bin 5236 -> 5326 bytes
+ .../site-packages/std_msgs/msg/_ByteMultiArray.pyc | Bin 9302 -> 9392 bytes
+ .../python2.7/site-packages/std_msgs/msg/_Char.pyc | Bin 5235 -> 5325 bytes
+ .../site-packages/std_msgs/msg/_ColorRGBA.pyc      | Bin 5702 -> 5792 bytes
+ .../site-packages/std_msgs/msg/_Duration.pyc       | Bin 5613 -> 5703 bytes
+ .../site-packages/std_msgs/msg/_Empty.pyc          | Bin 4564 -> 4645 bytes
+ .../site-packages/std_msgs/msg/_Float32.pyc        | Bin 5284 -> 5374 bytes
+ .../std_msgs/msg/_Float32MultiArray.pyc            | Bin 9347 -> 9437 bytes
+ .../site-packages/std_msgs/msg/_Float64.pyc        | Bin 5284 -> 5374 bytes
+ .../std_msgs/msg/_Float64MultiArray.pyc            | Bin 9347 -> 9437 bytes
+ .../site-packages/std_msgs/msg/_Header.pyc         | Bin 7039 -> 7129 bytes
+ .../site-packages/std_msgs/msg/_Int16.pyc          | Bin 5251 -> 5341 bytes
+ .../std_msgs/msg/_Int16MultiArray.pyc              | Bin 9317 -> 9407 bytes
+ .../site-packages/std_msgs/msg/_Int32.pyc          | Bin 5250 -> 5340 bytes
+ .../std_msgs/msg/_Int32MultiArray.pyc              | Bin 9317 -> 9407 bytes
+ .../site-packages/std_msgs/msg/_Int64.pyc          | Bin 5250 -> 5340 bytes
+ .../std_msgs/msg/_Int64MultiArray.pyc              | Bin 9317 -> 9407 bytes
+ .../python2.7/site-packages/std_msgs/msg/_Int8.pyc | Bin 5236 -> 5326 bytes
+ .../site-packages/std_msgs/msg/_Int8MultiArray.pyc | Bin 9302 -> 9392 bytes
+ .../std_msgs/msg/_MultiArrayDimension.pyc          | Bin 6511 -> 6601 bytes
+ .../std_msgs/msg/_MultiArrayLayout.pyc             | Bin 8310 -> 8400 bytes
+ .../site-packages/std_msgs/msg/_String.pyc         | Bin 5437 -> 5518 bytes
+ .../python2.7/site-packages/std_msgs/msg/_Time.pyc | Bin 5553 -> 5643 bytes
+ .../site-packages/std_msgs/msg/_UInt16.pyc         | Bin 5266 -> 5356 bytes
+ .../std_msgs/msg/_UInt16MultiArray.pyc             | Bin 9332 -> 9422 bytes
+ .../site-packages/std_msgs/msg/_UInt32.pyc         | Bin 4950 -> 5031 bytes
+ .../std_msgs/msg/_UInt32MultiArray.pyc             | Bin 9332 -> 9422 bytes
+ .../site-packages/std_msgs/msg/_UInt64.pyc         | Bin 5265 -> 5355 bytes
+ .../std_msgs/msg/_UInt64MultiArray.pyc             | Bin 9332 -> 9422 bytes
+ .../site-packages/std_msgs/msg/_UInt8.pyc          | Bin 5251 -> 5341 bytes
+ .../std_msgs/msg/_UInt8MultiArray.pyc              | Bin 9238 -> 9328 bytes
+ .../site-packages/std_msgs/msg/__init__.pyc        | Bin 1108 -> 1117 bytes
+ .../xout/_root/opt/ros/melodic/lib/rosout/rosout   | Bin 82408 -> 82440 bytes
+ .../xout/_root/usr/bin/catkin_create_pkg           |   2 +-
+ .../xout/_root/usr/bin/catkin_find_pkg             |   2 +-
+ .../xout/_root/usr/bin/catkin_generate_changelog   |   2 +-
+ .../xout/_root/usr/bin/catkin_package_version      |   2 +-
+ .../xout/_root/usr/bin/catkin_prepare_release      |   2 +-
+ .../xout/_root/usr/bin/catkin_tag_changelog        |   2 +-
+ .../xout/_root/usr/bin/catkin_test_changelog       |   2 +-
+ .../{1.3.9 => 1.4.5}/xout/_root/usr/bin/netmon_ctl | Bin 11136 -> 11136 bytes
+ .../{1.3.9 => 1.4.5}/xout/_root/usr/bin/scan_ap    | Bin 77672 -> 77672 bytes
+ .../xout/_root/usr/bin/wifi_service                | Bin 106016 -> 106056 bytes
+ .../xout/_root/usr/lib/WHmethods/libWHmethods.so   | Bin 149120 -> 149088 bytes
+ .../xout/_root/usr/lib/libDeebot.so                | Bin 883296 -> 889024 bytes
+ .../xout/_root/usr/lib/libFinalReturn.so           | Bin 17736 -> 15304 bytes
+ .../xout/_root/usr/lib/libfeiyan.so.2.3.0          | Bin 1038088 -> 1046488 bytes
+ .../xout/_root/usr/lib/librobot_side_cxx.so        | Bin 40872 -> 40792 bytes
+ .../xout/_root/usr/lib/librobot_stuck_handler.so   | Bin 218896 -> 218064 bytes
+ .../xout/_root/usr/lib/libroom_analyze.so          | Bin 115400 -> 115792 bytes
+ .../{1.3.9 => 1.4.5}/xout/_root/usr/lib/libslam.so | Bin 115536 -> 1480376 bytes
+ .../xout/_root/usr/lib/medusa/plug_link_en.so-bk   | Bin 37064 -> 37064 bytes
+ .../xout/_root/usr/lib/medusa/plug_lvision.so-bk   | Bin 2183616 -> 2183616 bytes
+ .../_root/usr/lib/medusa/plug_lvision_en.so-bk     | Bin 2183616 -> 2183616 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_ros_node.so  | Bin 65240 -> 62088 bytes
+ .../xout/_root/usr/lib/node/liberos_node_alert.so  | Bin 209384 -> 209384 bytes
+ .../xout/_root/usr/lib/node/liberos_node_clean.so  | Bin 537856 -> 568000 bytes
+ .../usr/lib/node/liberos_node_hardware_platform.so | Bin 1048600 -> 1040808 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    | Bin 651640 -> 654704 bytes
+ .../xout/_root/usr/lib/node/liberos_node_return.so | Bin 382056 -> 356208 bytes
+ .../xout/_root/usr/lib/node/liberos_node_slam.so   | Bin 358240 -> 327368 bytes
+ .../usr/lib/node/liberos_node_task_manager.so      | Bin 1680064 -> 1705296 bytes
+ .../python2.7/site-packages/wifimsg/__init__.pyc   | Bin 222 -> 222 bytes
+ .../site-packages/wifimsg/msg/__init__.pyc         | Bin 328 -> 328 bytes
+ .../site-packages/wifimsg/msg/_handrelocation.pyc  | Bin 5087 -> 5087 bytes
+ .../site-packages/wifimsg/msg/_wifimsg.pyc         | Bin 5461 -> 5461 bytes
+ .../site-packages/wifimsg/msg/_wifimsgreport.py    |   4 +++-
+ .../site-packages/wifimsg/msg/_wifimsgreport.pyc   | Bin 7080 -> 7168 bytes
+ .../{1.3.9 => 1.4.5}/xout/_root/usr/version.txt    |   2 +-
+ .../{1.3.9 => 1.4.5}/xout/_root/version.txt        |  22 ++++++++++----------
+ 272 files changed, 60 insertions(+), 55 deletions(-)

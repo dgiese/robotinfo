@@ -1,0 +1,111 @@
+Firmware diff for GOAT G1 (ecovacs.5xu9h3)
+Old version: 1.21.5 New version: 1.29.0
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/conf/dxai_node.json             |   27 +-
+ .../xout/_root/etc/conf/medusa/deebot_3588.conf    |   10 +-
+ .../xout/_root/etc/conf/medusa/ota_play_sound.sh   |    7 +-
+ .../_root/etc/conf/medusa/xmpp_server_status.sh    |    3 +
+ .../_root/etc/conf/wifi_daemon.conf => dev/null}   |   17 -
+ .../{1.21.5 => 1.29.0}/xout/_root/etc/fw.manifest  |    6 +-
+ .../{1.21.5 => 1.29.0}/xout/_root/etc/rc.conf      |    2 +-
+ .../xout/_root/etc/rc.d/medusa.sh                  |    7 +-
+ .../xout/_root/etc/rc.d/time_sync.sh               |    5 +
+ .../_root/etc/rc.d/wifi_daemon.sh => dev/null}     |   25 -
+ .../etc/ssl/certs/iotspeechwss.pem => dev/null}    | 3138 --------------------
+ .../_root/etc/wifi/dnsmasq_hook.sh => dev/null}    |   23 -
+ .../xout/_root/etc/wifi/station_ap.sh => dev/null} |  207 --
+ .../xout/_root/etc/wifi/wd_hook.sh => dev/null}    |  373 ---
+ .../{1.21.5 => 1.29.0}/xout/_root/opt/data.tar.bz2 |  Bin 4219 -> 4222 bytes
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    |  Bin 3638896 -> 3626296 bytes
+ .../xout/_root/usr/bin/autoOTA.sh                  |    9 +-
+ .../xout/_root/usr/bin/bt_hook.sh                  |    2 +-
+ .../xout/_root/usr/bin/eros_data_upload.sh         |   58 +-
+ .../usr/bin/list-cached-files.sh => dev/null}      |   41 -
+ .../1.21.5/xout/_root/usr/bin/mack => dev/null}    |  Bin 7664 -> 0 bytes
+ .../xout/_root/usr/bin/net_manager                 |  Bin 216784 -> 220888 bytes
+ .../{1.21.5 => 1.29.0}/xout/_root/usr/bin/scan_ap  |  Bin 76840 -> 76840 bytes
+ .../xout/_root/usr/bin/sl_spi_tool => dev/null}    |  Bin 15576 -> 0 bytes
+ .../xout/_root/usr/bin/spidev_fdx => dev/null}     |  Bin 19240 -> 0 bytes
+ .../xout/_root/usr/bin/trace.sh => dev/null}       |   99 -
+ .../xout/_root/usr/bin/wifi_daemon => dev/null}    |  Bin 25912 -> 0 bytes
+ .../xout/_root/usr/bin/wifi_service                |  Bin 117712 -> 117712 bytes
+ .../xout/_root/usr/bin/xspace_tool                 |  Bin 421056 -> 450720 bytes
+ .../1.29.0/xout/_root/usr/bin/zlog-chk-conf}       |  Bin 0 -> 10344 bytes
+ .../_root/usr/lib/WHmethods/libWHMapMethods.so     |  Bin 227952 -> 227952 bytes
+ .../xout/_root/usr/lib/WHmethods/libWHmethods.so   |  Bin 457632 -> 461728 bytes
+ .../jsoncpp/jsoncpp-namespaced-targets.cmake}      |    7 +
+ .../cmake/jsoncpp/jsoncpp-targets-release.cmake}   |   39 +
+ .../usr/lib/cmake/jsoncpp/jsoncpp-targets.cmake}   |  111 +
+ .../usr/lib/cmake/jsoncpp/jsoncppConfig.cmake}     |   35 +
+ .../lib/cmake/jsoncpp/jsoncppConfigVersion.cmake}  |   51 +
+ .../usr/lib/eco_ai_interface/libecoaidetectface.so |  Bin 3124056 -> 3128232 bytes
+ .../xout/_root/usr/lib/engines-1.1/afalg.so        |  Bin 16080 -> 16080 bytes
+ .../xout/_root/usr/lib/engines-1.1/capi.so         |  Bin 4352 -> 4352 bytes
+ .../xout/_root/usr/lib/engines-1.1/padlock.so      |  Bin 4352 -> 4352 bytes
+ .../xout/_root/usr/lib/eros_node_data_filter.pc}   |    8 +
+ .../_root/usr/lib/libAudioDecoder.so => dev/null}  |  Bin 795072 -> 0 bytes
+ .../_root/usr/lib/libAudioEncoder.so => dev/null}  |  Bin 881672 -> 0 bytes
+ .../_root/usr/lib/libBDSpeechSDK.so => dev/null}   |  Bin 1733048 -> 0 bytes
+ .../usr/lib/libEcoYUVOmniRing2YUVRectangle.so      |  Bin 199912 -> 193792 bytes
+ .../xout/_root/usr/lib/libXspace.so                |  Bin 946416 -> 956984 bytes
+ .../xout/_root/usr/lib/libXspace.so.1              |  Bin 946416 -> 956984 bytes
+ .../xout/_root/usr/lib/libXspace.so.1.0            |  Bin 946416 -> 956984 bytes
+ .../xout/_root/usr/lib/libai_image_filter.so}      |  Bin 0 -> 407464 bytes
+ .../xout/_root/usr/lib/libcrypto.so.1.1            |  Bin 2233736 -> 2243944 bytes
+ .../xout/_root/usr/lib/libcurl.so.4.5.0            |  Bin 320384 -> 404120 bytes
+ .../1.29.0/xout/_root/usr/lib/libdata_filter.so}   |  Bin 0 -> 524448 bytes
+ .../xout/_root/usr/lib/libeco_navi.so              |  Bin 13018168 -> 13345760 bytes
+ .../xout/_root/usr/lib/libeco_vio.so               |  Bin 2258424 -> 2254320 bytes
+ .../xout/_root/usr/lib/libeco_vslam.so             |  Bin 4218672 -> 4218672 bytes
+ .../xout/_root/usr/lib/libhttpDNS.so => dev/null}  |  Bin 68416 -> 0 bytes
+ .../xout/_root/usr/lib/libiconv.so.2 => dev/null}  |    0
+ .../_root/usr/lib/libiconv.so.2.5.1 => dev/null}   |  Bin 919576 -> 0 bytes
+ .../xout/_root/usr/lib/libjob_schedule_midware.so  |  Bin 3190816 -> 3193792 bytes
+ .../_root/usr/lib/libjob_schedule_ros_convert.so   |  Bin 2113848 -> 2113912 bytes
+ .../xout/_root/usr/lib/libjsoncpp.so               |  Bin 217576 -> 0 bytes
+ .../1.29.0/xout/_root/usr/lib/libjsoncpp.so.1.9.5} |  Bin 0 -> 221800 bytes
+ .../xout/_root/usr/lib/libjsoncpp.so.25}           |    0
+ .../xout/_root/usr/lib/libmigu.so => dev/null}     |  Bin 65592 -> 0 bytes
+ .../xout/_root/usr/lib/libmower_interface.so       |  Bin 5518208 -> 5533641 bytes
+ .../xout/_root/usr/lib/libnghttp2.so => dev/null}  |  Bin 116360 -> 0 bytes
+ .../_root/usr/lib/libnghttp2.so.14 => dev/null}    |  Bin 116360 -> 0 bytes
+ .../usr/lib/libnghttp2.so.14.13.3 => dev/null}     |  Bin 116360 -> 0 bytes
+ .../xout/_root/usr/lib/libsqlite3.so => dev/null}  |  Bin 836560 -> 0 bytes
+ .../xout/_root/usr/lib/libssl.so.1.1               |  Bin 507264 -> 490040 bytes
+ .../xout/_root/usr/lib/libuuid.so.1.3.0            |  Bin 11176 -> 23712 bytes
+ .../xout/_root/usr/lib/libz.so.1.2.8 => dev/null}  |  Bin 89312 -> 0 bytes
+ .../_root/usr/lib/libzlog.so.1.1.0 => dev/null}    |  Bin 84984 -> 0 bytes
+ .../1.29.0/xout/_root/usr/lib/libzlog.so.1.2.12}   |  Bin 0 -> 126136 bytes
+ .../xout/_root/usr/lib/medusa/plug_kvs_webrtc.so   |  Bin 257904 -> 257904 bytes
+ .../xout/_root/usr/lib/medusa/plug_link.so         |  Bin 44424 -> 40328 bytes
+ .../xout/_root/usr/lib/medusa/plug_lvision.so      |  Bin 215544 -> 215552 bytes
+ .../_root/usr/lib/medusa/plug_media_control.so     |  Bin 43464 -> 43464 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_ros_node.so  |  Bin 174896 -> 170800 bytes
+ .../xout/_root/usr/lib/medusa/plug_rk_mpp.so       |  Bin 65216 -> 65216 bytes
+ .../usr/lib/medusa/plug_station.so => dev/null}    |  Bin 47712 -> 0 bytes
+ .../_root/usr/lib/medusa/plug_udp.so => dev/null}  |  Bin 16688 -> 0 bytes
+ .../usr/lib/medusa/plug_udp_test.so => dev/null}   |  Bin 11040 -> 0 bytes
+ .../5.10.66/kernel/drivers/bluetooth/bfusb.ko      |  Bin 618336 -> 618568 bytes
+ .../5.10.66/kernel/drivers/bluetooth/btbcm.ko      |  Bin 558184 -> 558408 bytes
+ .../5.10.66/kernel/drivers/bluetooth/btintel.ko    |  Bin 622168 -> 622392 bytes
+ .../5.10.66/kernel/drivers/bluetooth/btrtl.ko      |  Bin 544512 -> 544744 bytes
+ .../5.10.66/kernel/drivers/bluetooth/btusb.ko      |  Bin 1075104 -> 1075328 bytes
+ .../kernel/drivers/media/spi/cxd2880-spi.ko        |  Bin 475760 -> 475992 bytes
+ .../xout/_root/usr/lib/node/liberos_node_alert.so  |  Bin 276936 -> 272896 bytes
+ .../_root/usr/lib/node/liberos_node_bigdata.so     |  Bin 1315008 -> 1323232 bytes
+ .../usr/lib/node/liberos_node_bluetoothhandler.so  |  Bin 1713864 -> 1721560 bytes
+ .../usr/lib/node/liberos_node_data_filter.so}      |  Bin 0 -> 738144 bytes
+ .../usr/lib/node/liberos_node_hardware_platform.so |  Bin 2144096 -> 2140000 bytes
+ .../usr/lib/node/liberos_node_job_schedule.so      |  Bin 561240 -> 560344 bytes
+ .../_root/usr/lib/node/liberos_node_lifespan.so    |  Bin 226424 -> 226752 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    |  Bin 2006680 -> 2011120 bytes
+ .../_root/usr/lib/node/liberos_node_postTunnel.so  |  Bin 853128 -> 869296 bytes
+ .../xout/_root/usr/lib/node/liberos_node_return.so |  Bin 505064 -> 504832 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     |  Bin 726088 -> 719320 bytes
+ .../xout/_root/usr/lib/node/liberos_node_vslam.so  |  Bin 1062392 -> 1066488 bytes
+ .../jsoncpp_object/json_reader.cpp.o}              |  Bin 0 -> 133472 bytes
+ .../jsoncpp_object/json_value.cpp.o}               |  Bin 0 -> 118112 bytes
+ .../jsoncpp_object/json_writer.cpp.o}              |  Bin 0 -> 95704 bytes
+ 105 files changed, 354 insertions(+), 3956 deletions(-)

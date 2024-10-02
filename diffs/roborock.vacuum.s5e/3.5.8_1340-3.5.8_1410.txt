@@ -1,0 +1,66 @@
+Firmware diff for Roborock S5 Max (roborock.vacuum.s5e)
+Old version: 3.5.8_1340 New version: 3.5.8_1410
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/OS_VERSION                      |   8 +-
+ .../3.5.8_1410/xout/_root/etc/hi3881_fw.bin}       | Bin 0 -> 145664 bytes
+ .../3.5.8_1410/xout/_root/etc/hi3881_mfg_fw.bin}   | Bin 0 -> 147648 bytes
+ .../3.5.8_1410/xout/_root/etc/hi3881_wifi.cfg}     |  11 +
+ .../3.5.8_1410/xout/_root/etc/hi3881_wifi_ce.cfg}  |  11 +
+ .../xout/_root/etc/hi3881_wifi_factory.cfg}        |  12 ++
+ .../3.5.8_1410/xout/_root/etc/hi3881_wifi_fcc.cfg} |  11 +
+ .../xout/_root/etc/init/S04wdgenv                  |   1 +
+ .../xout/_root/etc/inittab                         |   2 +-
+ .../xout/_root/etc/os-release                      |   2 +-
+ .../xout/_root/etc/rr-info                         |   2 +-
+ .../3.5.8_1410/xout/_root/etc/ssv6x5x-wifi.cfg}    |   4 +
+ .../xout/_root/lib/modules/3.4.39/8189es.ko        | Bin 2255720 -> 2255932 bytes
+ .../xout/_root/lib/modules/3.4.39/Module.symvers   | 120 +++++++++++
+ .../xout/_root/lib/modules/3.4.39/hi3881.ko}       | Bin 0 -> 1003568 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 302448 -> 302432 bytes
+ .../xout/_root/lib/modules/3.4.39/modules.alias    |   4 +
+ .../_root/lib/modules/3.4.39/modules.alias.bin     | Bin 171 -> 389 bytes
+ .../xout/_root/lib/modules/3.4.39/modules.dep      |   2 +
+ .../xout/_root/lib/modules/3.4.39/modules.dep.bin  | Bin 684 -> 735 bytes
+ .../xout/_root/lib/modules/3.4.39/modules.symbols  |  45 ++++
+ .../_root/lib/modules/3.4.39/modules.symbols.bin   | Bin 11521 -> 13739 bytes
+ .../xout/_root/lib/modules/3.4.39/ssv6x5x.ko}      | Bin 0 -> 582452 bytes
+ .../xout/_root/lib/modules/3.4.39/st480.ko         | Bin 48672 -> 48672 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 66448 -> 66440 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../xout/_root/opt/rockrobo/cleaner/bin/AppProxy   | Bin 892632 -> 896728 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboController  | Bin 236480 -> 236480 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerM | Bin 302480 -> 302480 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerR | Bin 236480 -> 236480 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/SysUpdate  | Bin 101456 -> 101456 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/rr_loader  | Bin 69324 -> 69324 bytes
+ .../_root/opt/rockrobo/cleaner/lib/libroboipc.so   | Bin 44776 -> 44776 bytes
+ .../opt/rockrobo/cleaner/lib/librobopersist.so     | Bin 71964 -> 71964 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_chassis.so   | Bin 63428 -> 67524 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_compass.so   | Bin 22224 -> 22224 bytes
+ .../opt/rockrobo/cleaner/lib/librr_plugin_laser.so | Bin 59432 -> 59432 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_logger.so    | Bin 5544 -> 5544 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrlog.so     | Bin 294556 -> 294556 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 2400236 -> 2400236 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrslamdrv.so | Bin 281212 -> 281212 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrutils.so   | Bin 9788 -> 9788 bytes
+ .../xout/_root/opt/rockrobo/cleaner/lib/libstat.so | Bin 374032 -> 374032 bytes
+ .../opt/rockrobo/cleaner/lib/libuart_api.so.4.0.1  | Bin 126976 -> 127336 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ ....A3.G1_M4.0.1_RELEASE_20210423-144637_FULL.bin} | Bin 217072 -> 217072 bytes
+ ...A3_M4.0.1_RELEASE_20210423-144540_INV_FULL.bin} | Bin 217072 -> 217072 bytes
+ .../firmware/uart_test-4.0.1-20210111 => dev/null} | Bin 493476 -> 0 bytes
+ .../rockrobo/firmware/uart_test-4.0.1-20210423}    | Bin 0 -> 501768 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_rr         | Bin 186704 -> 190808 bytes
+ .../xout/_root/opt/rockrobo/rriot/rriot_tuya       | Bin 640784 -> 640784 bytes
+ .../xout/_root/opt/rockrobo/rrlog/rrlogd           | Bin 285220 -> 285220 bytes
+ .../xout/_root/opt/rockrobo/watchdog/WatchDoge     | Bin 80212 -> 80212 bytes
+ .../xout/_root/opt/rockrobo/wlan/wifi_start.sh     | 235 +++++++++++++++------
+ .../xout/_root/opt/rockrobo/wlan/wlanmgr           | Bin 38936 -> 38932 bytes
+ .../xout/bootout_aboot/bootimg.cfg                 |   2 +-
+ .../xout/bootout_aboot/zImage                      | Bin 3827056 -> 3949496 bytes
+ .../xout/bootout_aboot/zImage_3.5.8_1410.elf}      | Bin 9974427 -> 10303078 bytes
+ .../{3.5.8_1340 => 3.5.8_1410}/xout/kernel.img     | Bin 3829760 -> 3952640 bytes
+ 60 files changed, 404 insertions(+), 74 deletions(-)

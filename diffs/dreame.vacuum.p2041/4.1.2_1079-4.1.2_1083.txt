@@ -1,0 +1,58 @@
+Firmware diff for Mi Robot Vacuum-Mop 1T (dreame.vacuum.p2041)
+Old version: 4.1.2_1079 New version: 4.1.2_1083
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_calibr.so              | Bin 239072 -> 239072 bytes
+ .../xout/_root/ava/lib/node_camera.so              | Bin 94640 -> 94640 bytes
+ .../xout/_root/ava/lib/node_camera_tof.so          | Bin 142800 -> 142800 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 65640 -> 65640 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 36464 -> 36464 bytes
+ .../xout/_root/ava/lib/node_health_nyx.so          | Bin 127176 -> 127176 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 98752 -> 98752 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 36392 -> 36392 bytes
+ .../xout/_root/ava/lib/node_map_accumulator.so     | Bin 798088 -> 798088 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 459808 -> 458192 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 77624 -> 77624 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 769400 -> 769400 bytes
+ .../xout/_root/ava/lib/node_nyx.so                 | Bin 798688 -> 798688 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 73592 -> 73608 bytes
+ .../xout/_root/ava/lib/node_signal_tab.so          | Bin 147232 -> 147232 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 120048 -> 120048 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 102992 -> 102992 bytes
+ .../_root/ava/lib/node_tof_extrinsic_calibrate.so  | Bin 369320 -> 369320 bytes
+ .../xout/_root/ava/lib/node_tracecheck.so          | Bin 53632 -> 53632 bytes
+ .../xout/_root/ava/lib/node_vision.so              | Bin 2153472 -> 2145296 bytes
+ .../xout/_root/ava/script/ota_dw_fw.sh             |   2 +-
+ .../xout/_root/etc/crontabs/root                   |   1 +
+ .../xout/_root/etc/os-release                      |   6 +-
+ .../xout/_root/etc/rc.d/play_update_music.sh       |  20 +--
+ .../xout/_root/misc/data.tar.bz2                   | Bin 634 -> 630 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 150544 -> 150544 bytes
+ .../xout/_root/usr/bin/change_internal_user.sh}    |  47 +++++++
+ .../xout/_root/usr/bin/check_silent_upgrade.sh     | 146 ++++++++-------------
+ .../xout/_root/usr/bin/ofilm_calibration           | Bin 20328 -> 20328 bytes
+ .../xout/_root/usr/bin/sunny_calibration           | Bin 29856 -> 29856 bytes
+ .../4.1.2_1083/xout/_root/usr/lib/libRakNetDLL.so} | Bin 0 -> 2019304 bytes
+ .../xout/_root/usr/lib/libavcodec.so.58.91.100     | Bin 10801456 -> 10801488 bytes
+ .../xout/_root/usr/lib/libavformat.so.58.45.100    | Bin 2229264 -> 2229272 bytes
+ .../xout/_root/usr/lib/libavutil.so.56.51.100      | Bin 527448 -> 527448 bytes
+ .../xout/_root/usr/lib/libbehaviortree_cpp.so      | Bin 1948968 -> 1948968 bytes
+ .../xout/_root/usr/lib/libdlib.so => dev/null}     |   0
+ .../_root/usr/lib/libdlib.so.19.19.99 => dev/null} | Bin 2473288 -> 0 bytes
+ .../xout/_root/usr/lib/libmessenger.so             | Bin 52688 -> 52688 bytes
+ .../xout/_root/usr/lib/libnanomsg.so.5.1.0         | Bin 228240 -> 228240 bytes
+ .../xout/_root/usr/lib/libopencv_core.so.4.2.0     | Bin 3401640 -> 3401576 bytes
+ .../xout/_root/usr/lib/libopencv_videoio.so.4.2.0  | Bin 361408 -> 331544 bytes
+ .../xout/_root/usr/lib/libprotobuf_msg.so          | Bin 131776 -> 131776 bytes
+ .../xout/_root/usr/lib/libswresample.so.3.7.100    | Bin 74808 -> 74808 bytes
+ .../xout/_root/usr/lib/libswscale.so.5.7.100       | Bin 353760 -> 353768 bytes
+ .../_root/usr/lib/tree_lib/libnyx_route_nodes.so   | Bin 3789848 -> 3789848 bytes
+ .../_root/usr/lib/tree_lib/libnyx_tactics_tree.so  | Bin 932808 -> 932808 bytes
+ .../xout/_root/usr/lib/tree_lib/libnyx_tree.so     | Bin 10539360 -> 10539360 bytes
+ .../xout/_root/version_record                      |  12 +-
+ .../{4.1.2_1079 => 4.1.2_1083}/xout/kernel.img     | Bin 10049536 -> 10049536 bytes
+ .../{4.1.2_1079 => 4.1.2_1083}/xout/mcu.bin        | Bin 145160 -> 141624 bytes
+ .../{4.1.2_1079 => 4.1.2_1083}/xout/toc1.fex       | Bin 1130496 -> 1130496 bytes
+ 52 files changed, 123 insertions(+), 113 deletions(-)

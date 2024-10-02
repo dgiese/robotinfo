@@ -1,0 +1,890 @@
+Firmware diff for GOAT G1 (ecovacs.5xu9h3)
+Old version: 1.36.168.6 New version: 1.8.8
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../{1.36.168.6 => 1.8.8}/xout/_root/bin/bash      |  Bin 834816 -> 929784 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/bin/busybox   |  Bin 1381744 -> 1381744 bytes
+ .../xout/_root/etc/conf/audio_daemon.conf          |    2 -
+ .../xout/_root/etc/conf/dxai_node.json             |   32 +-
+ .../xout/_root/etc/conf/dxai_ota.json              |    4 -
+ .../etc/conf/eros_node_job_schedule_report.json    |    0
+ .../xout/_root/etc/conf/hw_monitor.conf            |   11 -
+ .../xout/_root/etc/conf/medusa/deebot_3588.conf    |   61 +-
+ .../_root/etc/conf/medusa/download_fw_hook_v3.sh   |   30 -
+ .../xout/_root/etc/conf/medusa/get_audio_help.sh   |    8 +-
+ .../xout/_root/etc/conf/medusa/ota_play_sound.sh   |    7 +-
+ .../xout/_root/etc/conf/medusa/process_picture.sh  |    6 +-
+ .../_root/etc/conf/medusa/process_security_pic.sh  |   35 +-
+ .../_root/etc/conf/medusa/send_token_to_eco_iot.sh |    3 +-
+ .../xout/_root/etc/conf/medusa/start_ota.sh        |  113 +-
+ .../_root/etc/conf/medusa/xmpp_server_status.sh    |   11 +-
+ .../_root/etc/conf/mower_conf/navi_config.yaml     |    2 +-
+ .../xout/_root/etc/conf/netd_log.conf              |    2 +-
+ .../xout/_root/etc/conf/tdkimu_node.json           |    0
+ .../1.8.8/xout/_root/etc/conf/wifi_daemon.conf}    |   17 +
+ .../xout/_root/etc/conf/wifi_service.conf          |    7 +-
+ .../xout/_root/etc/conf/work_node.json             |   14 +-
+ .../xout/_root/etc/fw.manifest                     |    6 +-
+ .../{1.36.168.6 => 1.8.8}/xout/_root/etc/inittab   |    2 +-
+ .../etc/iqfiles/SC301IOT_default_default.json      |    6 +-
+ .../{1.36.168.6 => 1.8.8}/xout/_root/etc/rc.conf   |    2 +-
+ .../xout/_root/etc/rc.d/bt-monitor.sh              |  250 +-
+ .../xout/_root/etc/rc.d/bt-pincodecheck.sh         |   11 +-
+ .../xout/_root/etc/rc.d/bt-rtl8723.sh              |    2 +-
+ .../xout/_root/etc/rc.d/channel.sh                 |    2 +-
+ .../xout/_root/etc/rc.d/deebot.sh                  |    6 -
+ .../xout/_root/etc/rc.d/hw_monitor.sh              |   10 -
+ .../xout/_root/etc/rc.d/map_tables.sh              |    3 +-
+ .../xout/_root/etc/rc.d/medusa.sh                  |   24 +-
+ .../xout/_root/etc/rc.d/net_manager.sh             |    8 -
+ .../xout/_root/etc/rc.d/play_boot_music.sh         |    3 -
+ .../xout/_root/etc/rc.d/pre_boot.sh                |    4 -
+ .../xout/_root/etc/rc.d/system.sh                  |   25 +-
+ .../xout/_root/etc/rc.d/time_sync.sh               |   28 +-
+ .../xout/_root/etc/rc.d/wifi-rtl8723.sh            |    8 +-
+ .../1.8.8/xout/_root/etc/rc.d/wifi_daemon.sh}      |   25 +
+ .../xout/_root/etc/ssl/certs/iotspeechwss.pem}     | 3138 ++++++++++++++++++++
+ .../xout/_root/etc/wifi/bumbee_hook.sh             |   88 +-
+ .../1.8.8/xout/_root/etc/wifi/dnsmasq_hook.sh}     |   23 +
+ .../xout/_root/etc/wifi/netmon_hook.sh             |   11 -
+ .../xout/_root/etc/wifi/rtl8723.tar.bz2            |  Bin 10240 -> 10240 bytes
+ .../xout/_root/etc/wifi/send_token_to_eco_iot.sh   |    3 +-
+ .../1.8.8/xout/_root/etc/wifi/station_ap.sh}       |  207 ++
+ .../1.8.8/xout/_root/etc/wifi/wd_hook.sh}          |  373 +++
+ .../xout/_root/etc/wifi/ws_wait_hook.sh            |    4 +-
+ .../xout/_root/etc/www/cgi-bin/startFct            |  Bin 25792 -> 21712 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/etc/www/reqDo |  Bin 34944 -> 26872 bytes
+ .../xout/_root/media/music/EN/132.ogg => dev/null} |  Bin 9245 -> 0 bytes
+ .../xout/_root/media/music/EN/133.ogg => dev/null} |  Bin 8309 -> 0 bytes
+ .../xout/_root/media/music/EN/134.ogg => dev/null} |  Bin 9292 -> 0 bytes
+ .../xout/_root/media/music/EN/135.ogg => dev/null} |  Bin 9265 -> 0 bytes
+ .../xout/_root/media/music/EN/136.ogg => dev/null} |  Bin 22490 -> 0 bytes
+ .../xout/_root/media/music/EN/8.ogg                |  Bin 13335 -> 14543 bytes
+ .../xout/_root/media/music/ZH/110.ogg              |  Bin 20666 -> 19624 bytes
+ .../xout/_root/media/music/ZH/113.ogg              |  Bin 14190 -> 12723 bytes
+ .../xout/_root/media/music/ZH/115.ogg              |  Bin 18972 -> 17979 bytes
+ .../xout/_root/media/music/ZH/122.ogg              |  Bin 18033 -> 20217 bytes
+ .../xout/_root/media/music/ZH/132.ogg => dev/null} |  Bin 8176 -> 0 bytes
+ .../xout/_root/media/music/ZH/133.ogg => dev/null} |  Bin 8367 -> 0 bytes
+ .../xout/_root/media/music/ZH/134.ogg => dev/null} |  Bin 8045 -> 0 bytes
+ .../xout/_root/media/music/ZH/135.ogg => dev/null} |  Bin 8021 -> 0 bytes
+ .../xout/_root/media/music/ZH/136.ogg => dev/null} |  Bin 15015 -> 0 bytes
+ .../1.8.8/xout/_root/media/music/ZH/3.ogg}         |  Bin 0 -> 11310 bytes
+ .../xout/_root/media/music/ZH/30.ogg               |  Bin 22465 -> 13319 bytes
+ .../xout/_root/media/music/ZH/77.ogg               |  Bin 21827 -> 12954 bytes
+ .../xout/_root/media/music/ZH/79.ogg               |  Bin 20994 -> 19601 bytes
+ .../xout/_root/media/music/ZH/88.ogg               |  Bin 18062 -> 22269 bytes
+ .../model/EcoAiFaceDetect/Face.rknn => dev/null}   |  Bin 7557248 -> 0 bytes
+ .../model/EcoAiFaceDetect/models.json => dev/null} |   24 -
+ .../xout/_root/model/EcoAiGrass/ai_grass_seg.rknn  |  Bin 8868891 -> 8868891 bytes
+ .../xout/_root/model/EcoAiGrass/models.json        |  102 +-
+ .../xout/_root/model/EcoAiLine/models.json         |  109 +-
+ .../xout/_root/model/EcoAiLine/shuiguan_jm.rknn    |  Bin 3847584 -> 3847584 bytes
+ .../xout/_root/model/EcoAiPets/Pets_Detect.rknn}   |  Bin 0 -> 3510672 bytes
+ .../EcoAiPets/Pets_Detect_0.0.3.rknn => dev/null}  |  Bin 3510672 -> 0 bytes
+ .../xout/_root/model/EcoAiPets/models.json         |  404 +--
+ .../model/EcoAiScrtHumanDetect/Human_Detect.rknn   |  Bin 23699909 -> 23699920 bytes
+ .../_root/model/EcoAiScrtHumanDetect/models.json   |    4 +-
+ .../xout/_root/opt/data.tar.bz2                    |  Bin 4220 -> 4223 bytes
+ .../xout/_root/opt/ros/melodic/_setup_util.py      |    2 +-
+ .../xout/_root/opt/ros/melodic/bin/rospack         |  Bin 10504 -> 10504 bytes
+ .../xout/_root/opt/ros/melodic/bin/rosstack        |  Bin 10504 -> 10504 bytes
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    |  Bin 3681304 -> 40472704 bytes
+ .../_root/opt/ros/melodic/lib/libcpp_common.so     |  Bin 47720 -> 47712 bytes
+ .../_root/opt/ros/melodic/lib/librosconsole.so     |  Bin 237152 -> 237152 bytes
+ .../opt/ros/melodic/lib/librosconsole_print.so     |  Bin 10064 -> 10064 bytes
+ .../xout/_root/opt/ros/melodic/lib/libroscpp.so    |  Bin 1747736 -> 49057152 bytes
+ .../opt/ros/melodic/lib/libroscpp_serialization.so |  Bin 10368 -> 10368 bytes
+ .../xout/_root/opt/ros/melodic/lib/libroslib.so    |  Bin 80520 -> 80504 bytes
+ .../xout/_root/opt/ros/melodic/lib/librospack.so   |  Bin 278664 -> 266328 bytes
+ .../xout/_root/opt/ros/melodic/lib/librostime.so   |  Bin 121976 -> 117880 bytes
+ .../xout/_root/opt/ros/melodic/lib/libxmlrpcpp.so  |  Bin 130712 -> 130712 bytes
+ .../site-packages/libgmock.so => dev/null}         |  Bin 146048 -> 0 bytes
+ .../site-packages/libgmock_main.so => dev/null}    |  Bin 10208 -> 0 bytes
+ .../site-packages/libgtest.so => dev/null}         |  Bin 486856 -> 0 bytes
+ .../python2.7/site-packages/rosgraph/__init__.pyc  |  Bin 1174 -> 1174 bytes
+ .../site-packages/rosgraph/impl/__init__.pyc       |  Bin 157 -> 157 bytes
+ .../site-packages/rosgraph/impl/graph.pyc          |  Bin 17306 -> 17306 bytes
+ .../python2.7/site-packages/rosgraph/masterapi.pyc |  Bin 20735 -> 20735 bytes
+ .../lib/python2.7/site-packages/rosgraph/names.pyc |  Bin 9906 -> 9906 bytes
+ .../python2.7/site-packages/rosgraph/network.pyc   |  Bin 13121 -> 13121 bytes
+ .../python2.7/site-packages/rosgraph/rosenv.pyc    |  Bin 1296 -> 1296 bytes
+ .../site-packages/rosgraph/rosgraph_main.pyc       |  Bin 2125 -> 2125 bytes
+ .../site-packages/rosgraph/roslogging.pyc          |  Bin 8971 -> 8971 bytes
+ .../python2.7/site-packages/rosgraph/xmlrpc.pyc    |  Bin 9796 -> 9796 bytes
+ .../site-packages/rosgraph_msgs/__init__.pyc       |  Bin 266 -> 233 bytes
+ .../site-packages/rosgraph_msgs/msg/_Clock.pyc     |  Bin 6391 -> 6061 bytes
+ .../site-packages/rosgraph_msgs/msg/_Log.pyc       |  Bin 12472 -> 12109 bytes
+ .../rosgraph_msgs/msg/_TopicStatistics.pyc         |  Bin 11490 -> 11160 bytes
+ .../site-packages/rosgraph_msgs/msg/__init__.pyc   |  Bin 361 -> 328 bytes
+ .../python2.7/site-packages/roslaunch/__init__.pyc |  Bin 11030 -> 11030 bytes
+ .../python2.7/site-packages/roslaunch/arg_dump.pyc |  Bin 2037 -> 2037 bytes
+ .../python2.7/site-packages/roslaunch/child.pyc    |  Bin 3594 -> 3594 bytes
+ .../python2.7/site-packages/roslaunch/config.pyc   |  Bin 15929 -> 15929 bytes
+ .../lib/python2.7/site-packages/roslaunch/core.pyc |  Bin 26377 -> 26377 bytes
+ .../python2.7/site-packages/roslaunch/depends.pyc  |  Bin 12701 -> 12701 bytes
+ .../python2.7/site-packages/roslaunch/launch.pyc   |  Bin 25221 -> 25221 bytes
+ .../python2.7/site-packages/roslaunch/loader.pyc   |  Bin 15903 -> 15903 bytes
+ .../python2.7/site-packages/roslaunch/netapi.pyc   |  Bin 2418 -> 2418 bytes
+ .../site-packages/roslaunch/node_args.pyc          |  Bin 8326 -> 8326 bytes
+ .../site-packages/roslaunch/nodeprocess.pyc        |  Bin 17723 -> 17723 bytes
+ .../site-packages/roslaunch/param_dump.pyc         |  Bin 1310 -> 1310 bytes
+ .../python2.7/site-packages/roslaunch/parent.pyc   |  Bin 10420 -> 10420 bytes
+ .../lib/python2.7/site-packages/roslaunch/pmon.pyc |  Bin 23502 -> 23502 bytes
+ .../python2.7/site-packages/roslaunch/remote.pyc   |  Bin 6468 -> 6468 bytes
+ .../site-packages/roslaunch/remoteprocess.pyc      |  Bin 10177 -> 10177 bytes
+ .../python2.7/site-packages/roslaunch/rlutil.pyc   |  Bin 8566 -> 8566 bytes
+ .../site-packages/roslaunch/roslaunch_logs.pyc     |  Bin 1478 -> 1478 bytes
+ .../site-packages/roslaunch/scriptapi.pyc          |  Bin 3920 -> 3920 bytes
+ .../python2.7/site-packages/roslaunch/server.pyc   |  Bin 20368 -> 20368 bytes
+ .../site-packages/roslaunch/substitution_args.pyc  |  Bin 16990 -> 16990 bytes
+ .../site-packages/roslaunch/xmlloader.pyc          |  Bin 27755 -> 27755 bytes
+ .../python2.7/site-packages/roslib/__init__.pyc    |  Bin 1940 -> 1940 bytes
+ .../python2.7/site-packages/roslib/exceptions.pyc  |  Bin 556 -> 556 bytes
+ .../python2.7/site-packages/roslib/gentools.pyc    |  Bin 9960 -> 9960 bytes
+ .../python2.7/site-packages/roslib/launcher.pyc    |  Bin 2775 -> 2775 bytes
+ .../python2.7/site-packages/roslib/manifest.pyc    |  Bin 4793 -> 4793 bytes
+ .../python2.7/site-packages/roslib/manifestlib.pyc |  Bin 23117 -> 23117 bytes
+ .../lib/python2.7/site-packages/roslib/message.pyc |  Bin 2567 -> 2567 bytes
+ .../lib/python2.7/site-packages/roslib/msgs.pyc    |  Bin 25391 -> 25391 bytes
+ .../lib/python2.7/site-packages/roslib/names.pyc   |  Bin 13042 -> 13042 bytes
+ .../lib/python2.7/site-packages/roslib/network.pyc |  Bin 10902 -> 10902 bytes
+ .../python2.7/site-packages/roslib/packages.pyc    |  Bin 15607 -> 15607 bytes
+ .../python2.7/site-packages/roslib/resources.pyc   |  Bin 3323 -> 3323 bytes
+ .../lib/python2.7/site-packages/roslib/rosenv.pyc  |  Bin 6496 -> 6496 bytes
+ .../lib/python2.7/site-packages/roslib/rospack.pyc |  Bin 5552 -> 5552 bytes
+ .../python2.7/site-packages/roslib/scriptutil.pyc  |  Bin 3008 -> 3008 bytes
+ .../lib/python2.7/site-packages/roslib/srvs.pyc    |  Bin 7182 -> 7182 bytes
+ .../site-packages/roslib/stack_manifest.pyc        |  Bin 3479 -> 3479 bytes
+ .../lib/python2.7/site-packages/roslib/stacks.pyc  |  Bin 7644 -> 7644 bytes
+ .../python2.7/site-packages/rosmake/__init__.pyc   |  Bin 489 -> 489 bytes
+ .../lib/python2.7/site-packages/rosmake/engine.pyc |  Bin 29324 -> 29324 bytes
+ .../site-packages/rosmake/gcc_output_parse.pyc     |  Bin 2193 -> 2193 bytes
+ .../site-packages/rosmake/package_stats.pyc        |  Bin 7067 -> 7067 bytes
+ .../site-packages/rosmake/parallel_build.pyc       |  Bin 9310 -> 9310 bytes
+ .../python2.7/site-packages/rosmaster/__init__.pyc |  Bin 275 -> 275 bytes
+ .../site-packages/rosmaster/exceptions.pyc         |  Bin 450 -> 450 bytes
+ .../lib/python2.7/site-packages/rosmaster/main.pyc |  Bin 4032 -> 4032 bytes
+ .../python2.7/site-packages/rosmaster/master.pyc   |  Bin 2133 -> 2133 bytes
+ .../site-packages/rosmaster/master_api.pyc         |  Bin 33746 -> 33746 bytes
+ .../site-packages/rosmaster/paramserver.pyc        |  Bin 10630 -> 10630 bytes
+ .../site-packages/rosmaster/registrations.pyc      |  Bin 17901 -> 17901 bytes
+ .../site-packages/rosmaster/threadpool.pyc         |  Bin 6688 -> 6688 bytes
+ .../lib/python2.7/site-packages/rosmaster/util.pyc |  Bin 1907 -> 1907 bytes
+ .../site-packages/rosmaster/validators.pyc         |  Bin 8646 -> 8646 bytes
+ .../lib/python2.7/site-packages/rospy/__init__.pyc |  Bin 3314 -> 3314 bytes
+ .../lib/python2.7/site-packages/rospy/client.pyc   |  Bin 18789 -> 18789 bytes
+ .../lib/python2.7/site-packages/rospy/core.pyc     |  Bin 22320 -> 22320 bytes
+ .../python2.7/site-packages/rospy/exceptions.pyc   |  Bin 3186 -> 3186 bytes
+ .../site-packages/rospy/impl/__init__.pyc          |  Bin 154 -> 154 bytes
+ .../python2.7/site-packages/rospy/impl/init.pyc    |  Bin 3261 -> 3261 bytes
+ .../site-packages/rospy/impl/masterslave.pyc       |  Bin 19612 -> 19612 bytes
+ .../site-packages/rospy/impl/paramserver.pyc       |  Bin 3262 -> 3262 bytes
+ .../site-packages/rospy/impl/registration.pyc      |  Bin 17320 -> 17320 bytes
+ .../python2.7/site-packages/rospy/impl/rosout.pyc  |  Bin 3507 -> 3507 bytes
+ .../python2.7/site-packages/rospy/impl/simtime.pyc |  Bin 2503 -> 2503 bytes
+ .../site-packages/rospy/impl/statistics.pyc        |  Bin 8401 -> 8401 bytes
+ .../python2.7/site-packages/rospy/impl/tcpros.pyc  |  Bin 1434 -> 1434 bytes
+ .../site-packages/rospy/impl/tcpros_base.pyc       |  Bin 27846 -> 27846 bytes
+ .../site-packages/rospy/impl/tcpros_pubsub.pyc     |  Bin 15585 -> 15585 bytes
+ .../site-packages/rospy/impl/tcpros_service.pyc    |  Bin 25912 -> 25912 bytes
+ .../site-packages/rospy/impl/transport.pyc         |  Bin 4760 -> 4760 bytes
+ .../python2.7/site-packages/rospy/impl/udpros.pyc  |  Bin 10317 -> 10317 bytes
+ .../site-packages/rospy/impl/validators.pyc        |  Bin 1485 -> 1485 bytes
+ .../rospy/logger_level_service_caller.pyc          |  Bin 4693 -> 4693 bytes
+ .../lib/python2.7/site-packages/rospy/msg.pyc      |  Bin 6765 -> 6765 bytes
+ .../lib/python2.7/site-packages/rospy/msproxy.pyc  |  Bin 6658 -> 6658 bytes
+ .../lib/python2.7/site-packages/rospy/names.pyc    |  Bin 10487 -> 10487 bytes
+ .../python2.7/site-packages/rospy/numpy_msg.pyc    |  Bin 2057 -> 2057 bytes
+ .../python2.7/site-packages/rospy/rosconsole.pyc   |  Bin 10030 -> 10030 bytes
+ .../lib/python2.7/site-packages/rospy/rostime.pyc  |  Bin 9166 -> 9166 bytes
+ .../lib/python2.7/site-packages/rospy/service.pyc  |  Bin 4751 -> 4751 bytes
+ .../lib/python2.7/site-packages/rospy/timer.pyc    |  Bin 7320 -> 7320 bytes
+ .../lib/python2.7/site-packages/rospy/topics.pyc   |  Bin 49132 -> 49132 bytes
+ .../python2.7/site-packages/rosunit/__init__.pyc   |  Bin 648 -> 648 bytes
+ .../python2.7/site-packages/rosunit/baretest.pyc   |  Bin 16747 -> 16747 bytes
+ .../lib/python2.7/site-packages/rosunit/core.pyc   |  Bin 4966 -> 4966 bytes
+ .../python2.7/site-packages/rosunit/junitxml.pyc   |  Bin 19559 -> 19559 bytes
+ .../lib/python2.7/site-packages/rosunit/pmon.pyc   |  Bin 17372 -> 17372 bytes
+ .../lib/python2.7/site-packages/rosunit/pyunit.pyc |  Bin 5045 -> 5045 bytes
+ .../site-packages/rosunit/rosunit_main.pyc         |  Bin 3150 -> 3150 bytes
+ .../python2.7/site-packages/rosunit/xmlrunner.pyc  |  Bin 11639 -> 11639 bytes
+ .../python2.7/site-packages/std_msgs/__init__.pyc  |  Bin 242 -> 204 bytes
+ .../python2.7/site-packages/std_msgs/msg/_Bool.pyc |  Bin 5675 -> 5295 bytes
+ .../python2.7/site-packages/std_msgs/msg/_Byte.pyc |  Bin 5626 -> 5246 bytes
+ .../site-packages/std_msgs/msg/_ByteMultiArray.pyc |  Bin 9692 -> 9312 bytes
+ .../python2.7/site-packages/std_msgs/msg/_Char.pyc |  Bin 5625 -> 5245 bytes
+ .../site-packages/std_msgs/msg/_ColorRGBA.pyc      |  Bin 6092 -> 5712 bytes
+ .../site-packages/std_msgs/msg/_Duration.pyc       |  Bin 6003 -> 5623 bytes
+ .../site-packages/std_msgs/msg/_Empty.pyc          |  Bin 4915 -> 4573 bytes
+ .../site-packages/std_msgs/msg/_Float32.pyc        |  Bin 5674 -> 5294 bytes
+ .../std_msgs/msg/_Float32MultiArray.pyc            |  Bin 9737 -> 9357 bytes
+ .../site-packages/std_msgs/msg/_Float64.pyc        |  Bin 5674 -> 5294 bytes
+ .../std_msgs/msg/_Float64MultiArray.pyc            |  Bin 9737 -> 9357 bytes
+ .../site-packages/std_msgs/msg/_Header.pyc         |  Bin 7429 -> 7049 bytes
+ .../site-packages/std_msgs/msg/_Int16.pyc          |  Bin 5641 -> 5261 bytes
+ .../std_msgs/msg/_Int16MultiArray.pyc              |  Bin 9707 -> 9327 bytes
+ .../site-packages/std_msgs/msg/_Int32.pyc          |  Bin 5640 -> 5260 bytes
+ .../std_msgs/msg/_Int32MultiArray.pyc              |  Bin 9707 -> 9327 bytes
+ .../site-packages/std_msgs/msg/_Int64.pyc          |  Bin 5640 -> 5260 bytes
+ .../std_msgs/msg/_Int64MultiArray.pyc              |  Bin 9707 -> 9327 bytes
+ .../python2.7/site-packages/std_msgs/msg/_Int8.pyc |  Bin 5626 -> 5246 bytes
+ .../site-packages/std_msgs/msg/_Int8MultiArray.pyc |  Bin 9692 -> 9312 bytes
+ .../std_msgs/msg/_MultiArrayDimension.pyc          |  Bin 6901 -> 6521 bytes
+ .../std_msgs/msg/_MultiArrayLayout.pyc             |  Bin 8700 -> 8320 bytes
+ .../site-packages/std_msgs/msg/_String.pyc         |  Bin 5788 -> 5446 bytes
+ .../python2.7/site-packages/std_msgs/msg/_Time.pyc |  Bin 5943 -> 5563 bytes
+ .../site-packages/std_msgs/msg/_UInt16.pyc         |  Bin 5656 -> 5276 bytes
+ .../std_msgs/msg/_UInt16MultiArray.pyc             |  Bin 9722 -> 9342 bytes
+ .../site-packages/std_msgs/msg/_UInt32.pyc         |  Bin 5301 -> 4959 bytes
+ .../std_msgs/msg/_UInt32MultiArray.pyc             |  Bin 9722 -> 9342 bytes
+ .../site-packages/std_msgs/msg/_UInt64.pyc         |  Bin 5655 -> 5275 bytes
+ .../std_msgs/msg/_UInt64MultiArray.pyc             |  Bin 9722 -> 9342 bytes
+ .../site-packages/std_msgs/msg/_UInt8.pyc          |  Bin 5641 -> 5261 bytes
+ .../std_msgs/msg/_UInt8MultiArray.pyc              |  Bin 9628 -> 9248 bytes
+ .../site-packages/std_msgs/msg/__init__.pyc        |  Bin 1147 -> 1109 bytes
+ .../xout/_root/opt/ros/melodic/lib/rosout/rosout   |  Bin 84776 -> 84776 bytes
+ .../xout/_root/opt/uwb/uwb.bin => dev/null}        |  Bin 42968 -> 0 bytes
+ .../_root/opt/uwb/uwb_version.json => dev/null}    |    4 -
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/dhcpcd   |  Bin 118784 -> 82784 bytes
+ .../xout/_root/sbin/doc_loadbios                   |  Bin 10408 -> 7448 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/docfdisk |  Bin 14488 -> 11152 bytes
+ .../xout/_root/sbin/flash_erase                    |  Bin 47480 -> 43896 bytes
+ .../xout/_root/sbin/flash_lock                     |  Bin 14512 -> 10912 bytes
+ .../xout/_root/sbin/flash_otp_dump                 |  Bin 10376 -> 6776 bytes
+ .../xout/_root/sbin/flash_otp_info                 |  Bin 10344 -> 6744 bytes
+ .../xout/_root/sbin/flash_otp_lock                 |  Bin 10432 -> 8920 bytes
+ .../xout/_root/sbin/flash_otp_write                |  Bin 10440 -> 8976 bytes
+ .../xout/_root/sbin/flash_unlock                   |  Bin 14520 -> 10912 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/flashcp  |  Bin 14568 -> 13056 bytes
+ .../xout/_root/sbin/ftl_check                      |  Bin 14552 -> 10952 bytes
+ .../xout/_root/sbin/ftl_format                     |  Bin 14600 -> 12504 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/iw       |  Bin 119736 -> 112064 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/lsmtd    |  Bin 80936 -> 75296 bytes
+ .../xout/_root/sbin/mkfs.ubifs                     |  Bin 138328 -> 126704 bytes
+ .../xout/_root/sbin/mtd_debug                      |  Bin 14672 -> 13376 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/mtdinfo  |  Bin 59768 -> 56328 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/mtdpart  |  Bin 14536 -> 10984 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/nanddump |  Bin 51568 -> 46752 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/nandtest |  Bin 14576 -> 13528 bytes
+ .../xout/_root/sbin/nandwrite                      |  Bin 51568 -> 48360 bytes
+ .../xout/_root/sbin/nftl_format                    |  Bin 18664 -> 15064 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/nftldump |  Bin 14576 -> 12232 bytes
+ .../xout/_root/sbin/recv_image                     |  Bin 31168 -> 28696 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/rfddump  |  Bin 14560 -> 11416 bytes
+ .../xout/_root/sbin/rfdformat                      |  Bin 10432 -> 8904 bytes
+ .../xout/_root/sbin/serve_image                    |  Bin 27064 -> 23464 bytes
+ .../xout/_root/sbin/ubi_atomic_update_leb          |  Bin 39232 -> 35632 bytes
+ .../xout/_root/sbin/ubi_leb_update_str             |  Bin 39232 -> 33424 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/ubi_read |  Bin 39232 -> 35632 bytes
+ .../xout/_root/sbin/ubiattach                      |  Bin 43392 -> 37176 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/ubiblock |  Bin 35112 -> 31512 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/ubicrc32 |  Bin 14520 -> 9960 bytes
+ .../xout/_root/sbin/ubidetach                      |  Bin 35144 -> 32328 bytes
+ .../xout/_root/sbin/ubiformat                      |  Bin 100856 -> 94648 bytes
+ .../xout/_root/sbin/ubihealthd => dev/null}        |  Bin 35176 -> 0 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/ubimkvol |  Bin 43400 -> 38328 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/ubinfo   |  Bin 43384 -> 40272 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/ubinize  |  Bin 47552 -> 44016 bytes
+ .../xout/_root/sbin/ubirename                      |  Bin 35088 -> 30472 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/ubirmvol |  Bin 35144 -> 31968 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/sbin/ubirsvol |  Bin 39296 -> 36416 bytes
+ .../xout/_root/sbin/ubiupdatevol                   |  Bin 39232 -> 35632 bytes
+ .../xout/_root/usr/.rosinstall => dev/null}        |    2 -
+ .../xout/_root/usr/_setup_util.py                  |    2 +-
+ .../xout/_root/usr/bin/Getversion => dev/null}     |  Bin 68280 -> 0 bytes
+ .../xout/_root/usr/bin/abn2.sh                     |    6 +-
+ .../xout/_root/usr/bin/addr2line                   |  Bin 965264 -> 863376 bytes
+ .../xout/_root/usr/bin/aimodels_hotupdate.sh       |   10 +-
+ .../xout/_root/usr/bin/amixer                      |  Bin 52536 -> 45616 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/usr/bin/aplay |  Bin 68968 -> 69528 bytes
+ .../xout/_root/usr/bin/audioDaemon                 |  Bin 89520 -> 89520 bytes
+ .../xout/_root/usr/bin/autoOTA.sh                  |   12 +-
+ .../ecovacs.5xu9h3/1.8.8/xout/_root/usr/bin/awss}  |  Bin 0 -> 7528 bytes
+ .../1.8.8/xout/_root/usr/bin/awss_cli}             |  Bin 0 -> 17608 bytes
+ .../xout/_root/usr/bin/bashbug                     |    4 +-
+ .../xout/_root/usr/bin/bluetooth-player            |  Bin 192464 -> 192464 bytes
+ .../xout/_root/usr/bin/bluetoothctl                |  Bin 270760 -> 270760 bytes
+ .../xout/_root/usr/bin/bluetoothd                  |  Bin 1250056 -> 1250056 bytes
+ .../xout/_root/usr/bin/bt_hook.sh                  |   51 +-
+ .../xout/_root/usr/bin/btgatt-server               |  Bin 402432 -> 397520 bytes
+ .../xout/_root/usr/bin/btmgmt                      |  Bin 401656 -> 401656 bytes
+ .../xout/_root/usr/bin/bus-tools                   |  Bin 10352 -> 6776 bytes
+ .../xout/_root/usr/bin/c_rehash                    |   31 +-
+ .../xout/_root/usr/bin/catkin_create_pkg           |    2 +-
+ .../xout/_root/usr/bin/catkin_find_pkg             |    2 +-
+ .../xout/_root/usr/bin/catkin_generate_changelog   |    2 +-
+ .../xout/_root/usr/bin/catkin_package_version      |    2 +-
+ .../xout/_root/usr/bin/catkin_prepare_release      |    2 +-
+ .../xout/_root/usr/bin/catkin_tag_changelog        |    2 +-
+ .../xout/_root/usr/bin/catkin_test_changelog       |    2 +-
+ .../xout/_root/usr/bin/cjp.0.1.0                   |  Bin 10400 -> 7032 bytes
+ .../usr/bin/cjp.x-bugfix-0.11.11crash-0_9e2bc4f}   |  Bin 6856 -> 6856 bytes
+ .../xout/_root/usr/bin/cjpf.0.1.0 => dev/null}     |  Bin 10456 -> 0 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/usr/bin/curl  |  Bin 355232 -> 341448 bytes
+ .../xout/_root/usr/bin/curl-config                 |    6 +-
+ .../xout/_root/usr/bin/dbus-cleanup-sockets        |  Bin 14576 -> 10984 bytes
+ .../xout/_root/usr/bin/dbus-daemon                 |  Bin 528296 -> 465888 bytes
+ .../xout/_root/usr/bin/dbus-launch                 |  Bin 22904 -> 19976 bytes
+ .../xout/_root/usr/bin/dbus-monitor                |  Bin 18840 -> 17872 bytes
+ .../xout/_root/usr/bin/dbus-run-session            |  Bin 14536 -> 11600 bytes
+ .../xout/_root/usr/bin/dbus-send                   |  Bin 27176 -> 23600 bytes
+ .../xout/_root/usr/bin/dbus-test-tool              |  Bin 18928 -> 18200 bytes
+ .../xout/_root/usr/bin/dbus-uuidgen                |  Bin 10400 -> 7576 bytes
+ .../xout/_root/usr/bin/deebot                      |  Bin 401160 -> 397960 bytes
+ .../xout/_root/usr/bin/down_audio_hook.sh          |    3 +-
+ .../xout/_root/usr/bin/ecoSystem                   |  Bin 10392 -> 10392 bytes
+ .../xout/_root/usr/bin/eco_cert                    |  Bin 18696 -> 18696 bytes
+ .../xout/_root/usr/bin/eco_passwd                  |  Bin 14664 -> 14664 bytes
+ .../xout/_root/usr/bin/encodepin => dev/null}      |  Bin 10424 -> 0 bytes
+ .../_root/usr/bin/eros_data_upload.sh => dev/null} |  365 ---
+ .../xout/_root/usr/bin/factory_fun                 |   10 +-
+ .../xout/_root/usr/bin/factory_reset.sh            |    6 +-
+ .../xout/_root/usr/bin/ffmpeg                      |  Bin 234576 -> 234416 bytes
+ .../xout/_root/usr/bin/fw_cut.sh                   |   15 +-
+ .../xout/_root/usr/bin/fw_upgrade.sh               |   37 +-
+ .../xout/_root/usr/bin/gatttool                    |  Bin 373048 -> 373048 bytes
+ .../xout/_root/usr/bin/get_lvds2.sh => dev/null}   |   19 -
+ .../xout/_root/usr/bin/hcitool                     |  Bin 202104 -> 197984 bytes
+ .../xout/_root/usr/bin/hw_monitor                  |  Bin 31136 -> 31208 bytes
+ .../xout/_root/usr/bin/hw_monitor.sh               |    6 -
+ .../xout/_root/usr/bin/iio_attr                    |  Bin 43696 -> 43696 bytes
+ .../xout/_root/usr/bin/iio_genxml                  |  Bin 18704 -> 18704 bytes
+ .../xout/_root/usr/bin/iio_info                    |  Bin 23064 -> 23064 bytes
+ .../xout/_root/usr/bin/iio_readdev                 |  Bin 23032 -> 23032 bytes
+ .../xout/_root/usr/bin/iio_reg                     |  Bin 18712 -> 18712 bytes
+ .../xout/_root/usr/bin/iio_writedev                |  Bin 23056 -> 23056 bytes
+ .../xout/_root/usr/bin/ikslint                     |  Bin 14752 -> 11160 bytes
+ .../xout/_root/usr/bin/iksperf                     |  Bin 14936 -> 11344 bytes
+ .../xout/_root/usr/bin/iksroster                   |  Bin 15096 -> 13464 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/usr/bin/jshn  |  Bin 14776 -> 14776 bytes
+ .../xout/_root/usr/bin/key-service                 |  Bin 27072 -> 25936 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/usr/bin/kmod  |  Bin 76904 -> 69200 bytes
+ .../1.8.8/xout/_root/usr/bin/list-cached-files.sh} |   41 +
+ .../{1.36.168.6 => 1.8.8}/xout/_root/usr/bin/lua   |  Bin 228160 -> 180736 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/usr/bin/luac  |  Bin 154072 -> 122800 bytes
+ .../ecovacs.5xu9h3/1.8.8/xout/_root/usr/bin/mack}  |  Bin 0 -> 7664 bytes
+ .../xout/_root/usr/bin/madplay                     |  Bin 101504 -> 93808 bytes
+ .../1.8.8/xout/_root/usr/bin/mdsctl.0.1.1}         |  Bin 0 -> 15336 bytes
+ .../xout/_root/usr/bin/mdsctl.DEV => dev/null}     |  Bin 14648 -> 0 bytes
+ .../1.8.8/xout/_root/usr/bin/medusa.0.1.1}         |  Bin 0 -> 32520 bytes
+ .../xout/_root/usr/bin/medusa.DEV => dev/null}     |  Bin 35328 -> 0 bytes
+ .../xout/_root/usr/bin/mpi_dec_mt_test             |  Bin 61416 -> 61416 bytes
+ .../xout/_root/usr/bin/mpi_dec_multi_test          |  Bin 65512 -> 65512 bytes
+ .../xout/_root/usr/bin/mpi_dec_test                |  Bin 65568 -> 65568 bytes
+ .../xout/_root/usr/bin/mpi_enc_test                |  Bin 94360 -> 94360 bytes
+ .../xout/_root/usr/bin/mpi_rc2_test                |  Bin 90752 -> 90752 bytes
+ .../xout/_root/usr/bin/mpp_info_test               |  Bin 14648 -> 14648 bytes
+ .../xout/_root/usr/bin/mpris-proxy                 |  Bin 101944 -> 101944 bytes
+ .../xout/_root/usr/bin/net_manager                 |  Bin 220888 -> 208568 bytes
+ .../xout/_root/usr/bin/net_test.sh => dev/null}    |   70 -
+ .../xout/_root/usr/bin/netmon_ctl                  |  Bin 14600 -> 14600 bytes
+ .../xout/_root/usr/bin/ogg123                      |  Bin 69800 -> 58304 bytes
+ ...omniRing2Rectangle_SC301_omniBackExposureMatrix |  Bin 231872 -> 240208 bytes
+ .../_root/usr/bin/onlineReport.sh => dev/null}     |   42 -
+ .../xout/_root/usr/bin/onlinelog.sh => dev/null}   |  279 --
+ .../xout/_root/usr/bin/onlinelog_tool => dev/null} |  Bin 215416 -> 0 bytes
+ .../xout/_root/usr/bin/openssl                     |  Bin 620464 -> 585840 bytes
+ .../xout/_root/usr/bin/pidstat                     |  Bin 60200 -> 60200 bytes
+ .../xout/_root/usr/bin/procrank                    |  Bin 22872 -> 19248 bytes
+ .../xout/_root/usr/bin/protoc => dev/null}         |  Bin 18840 -> 0 bytes
+ .../xout/_root/usr/bin/python2.7                   |  Bin 6192 -> 5160 bytes
+ .../xout/_root/usr/bin/radio_hook.sh               |   21 -
+ .../xout/_root/usr/bin/rtwpriv                     |  Bin 573808 -> 516240 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/usr/bin/sar   |  Bin 120592 -> 120592 bytes
+ .../xout/_root/usr/bin/scan_ap                     |  Bin 76840 -> 76840 bytes
+ .../.catkin => 1.8.8/xout/_root/usr/bin/screen}    |    0
+ .../1.8.8/xout/_root/usr/bin/screen-4.8.0}         |  Bin 0 -> 566832 bytes
+ .../xout/_root/usr/bin/sdptool                     |  Bin 271952 -> 271952 bytes
+ .../1.8.8/xout/_root/usr/bin/sl_spi_tool}          |  Bin 0 -> 15576 bytes
+ .../1.8.8/xout/_root/usr/bin/spidev_fdx}           |  Bin 0 -> 19240 bytes
+ .../xout/_root/usr/bin/stdlogctl                   |  Bin 6232 -> 5016 bytes
+ .../xout/_root/usr/bin/tinycap                     |  Bin 10440 -> 9192 bytes
+ .../xout/_root/usr/bin/tinymix                     |  Bin 14736 -> 12832 bytes
+ .../xout/_root/usr/bin/tinypcminfo                 |  Bin 10368 -> 8120 bytes
+ .../xout/_root/usr/bin/tinyplay                    |  Bin 18664 -> 15080 bytes
+ .../1.8.8/xout/_root/usr/bin/trace.sh}             |   99 +
+ .../{1.36.168.6 => 1.8.8}/xout/_root/usr/bin/ubus  |  Bin 18784 -> 18784 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/usr/bin/ubusd |  Bin 31432 -> 31432 bytes
+ .../xout/_root/usr/bin/udevadm                     |  Bin 163112 -> 143168 bytes
+ .../xout/_root/usr/bin/upload_log.sh               |    5 +-
+ .../xout/_root/usr/bin/upload_mowerlog.sh          |    5 +-
+ .../1.8.8/xout/_root/usr/bin/wifi_daemon}          |  Bin 0 -> 25912 bytes
+ .../xout/_root/usr/bin/wifi_service                |  Bin 117712 -> 117712 bytes
+ .../xout/_root/usr/bin/xml2-config                 |   42 +-
+ .../xout/_root/usr/bin/xmlcatalog                  |  Bin 18768 -> 15200 bytes
+ .../xout/_root/usr/bin/xmllint                     |  Bin 65840 -> 59288 bytes
+ .../{1.36.168.6 => 1.8.8}/xout/_root/usr/bin/xmlwf |  Bin 27168 -> 25312 bytes
+ .../xout/_root/usr/bin/xspace_tool => dev/null}    |  Bin 473720 -> 0 bytes
+ .../xout/_root/usr/bin/zlog-chk-conf => dev/null}  |  Bin 10344 -> 0 bytes
+ .../xout/_root/usr/doc/Pln_report.json}            |   12 +-
+ .../_root/usr/doc/Xspace_report.json => dev/null}  |   20 -
+ .../xout/_root/usr/doc/alert_report.json           |   74 +-
+ .../xout/_root/usr/doc/brief.md => dev/null}       |   92 -
+ .../1.8.8/xout/_root/usr/doc/cleanareareport.json} |   28 +
+ .../xout/_root/usr/doc/cleanorderreport.json}      |   28 +
+ .../1.8.8/xout/_root/usr/doc/cleanreport.json}     |   28 +
+ .../xout/_root/usr/doc/config.ini => dev/null}     |   30 -
+ .../_root/usr/doc/config_charge.ini => dev/null}   |   32 -
+ .../null}                                          |   20 -
+ .../eros_node_hardware_platform_test_report.json}  |   26 +
+ .../usr/doc/eros_node_job_schedule_report.json     |   14 +-
+ .../_root/usr/doc/eros_node_return_report.json}    |   14 +-
+ .../doc/eros_node_tdk_imu_report.json => dev/null} |   20 -
+ .../usr/doc/job_schedule_midware_report.json}      |   12 +-
+ .../xout/_root/usr/doc/librobot_dock_report.json}  |   28 +
+ .../usr/doc/medusa_plugin_ros_vslam_report.json}   |   12 +-
+ .../xout/_root/usr/doc/report.json                 |   20 +
+ .../task\347\212\266\346\200\201.md" => /dev/null  |   79 -
+ .../xout/_root/usr/doc/update.log                  |   10 +-
+ .../dev/null                                       |   96 -
+ .../dev/null                                       |   11 -
+ .../usr/lib/FeiyanCvtMethod/libFeiyanCvtMethod.so  |  Bin 129448 -> 136160 bytes
+ .../_root/usr/lib/WHmethods/libWHMapMethods.so     |  Bin 232056 -> 227944 bytes
+ .../xout/_root/usr/lib/WHmethods/libWHmethods.so   |  Bin 469976 -> 445328 bytes
+ .../xout/_root/usr/lib/ao/plugins-4/libalsa.la     |    2 +-
+ .../xout/_root/usr/lib/ao/plugins-4/libalsa.so     |  Bin 27024 -> 31752 bytes
+ .../xout/_root/usr/lib/ao/plugins-4/liboss.la      |    2 +-
+ .../xout/_root/usr/lib/ao/plugins-4/liboss.so      |  Bin 14472 -> 10976 bytes
+ .../xout/_root/usr/lib/bash/Makefile.inc           |    8 +-
+ .../xout/_root/usr/lib/bash/basename               |  Bin 10096 -> 11368 bytes
+ .../xout/_root/usr/lib/bash/dirname                |  Bin 10032 -> 10424 bytes
+ .../xout/_root/usr/lib/bash/finfo                  |  Bin 19624 -> 17448 bytes
+ .../xout/_root/usr/lib/bash/head                   |  Bin 14712 -> 12520 bytes
+ .../xout/_root/usr/lib/bash/id                     |  Bin 14664 -> 12624 bytes
+ .../xout/_root/usr/lib/bash/ln                     |  Bin 14696 -> 12912 bytes
+ .../xout/_root/usr/lib/bash/logname                |  Bin 10064 -> 10280 bytes
+ .../xout/_root/usr/lib/bash/mkdir                  |  Bin 14872 -> 13736 bytes
+ .../xout/_root/usr/lib/bash/mypid                  |  Bin 10104 -> 10224 bytes
+ .../xout/_root/usr/lib/bash/pathchk                |  Bin 14584 -> 12760 bytes
+ .../xout/_root/usr/lib/bash/print                  |  Bin 14880 -> 13088 bytes
+ .../xout/_root/usr/lib/bash/printenv               |  Bin 10232 -> 11512 bytes
+ .../xout/_root/usr/lib/bash/push                   |  Bin 14936 -> 12784 bytes
+ .../xout/_root/usr/lib/bash/realpath               |  Bin 14440 -> 11632 bytes
+ .../xout/_root/usr/lib/bash/rmdir                  |  Bin 10000 -> 10032 bytes
+ .../xout/_root/usr/lib/bash/setpgid                |  Bin 10064 -> 11336 bytes
+ .../xout/_root/usr/lib/bash/sleep                  |  Bin 9896 -> 9832 bytes
+ .../xout/_root/usr/lib/bash/strftime               |  Bin 14416 -> 11592 bytes
+ .../xout/_root/usr/lib/bash/sync                   |  Bin 9776 -> 9200 bytes
+ .../xout/_root/usr/lib/bash/tee                    |  Bin 14552 -> 12096 bytes
+ .../xout/_root/usr/lib/bash/truefalse              |  Bin 9928 -> 9592 bytes
+ .../xout/_root/usr/lib/bash/tty                    |  Bin 9984 -> 10232 bytes
+ .../xout/_root/usr/lib/bash/uname                  |  Bin 10216 -> 11520 bytes
+ .../xout/_root/usr/lib/bash/unlink                 |  Bin 9992 -> 9976 bytes
+ .../xout/_root/usr/lib/bash/whoami                 |  Bin 10040 -> 10088 bytes
+ .../xout/_root/usr/lib/bus-tools/libi2c.so         |  Bin 10200 -> 7464 bytes
+ .../jsoncpp-namespaced-targets.cmake => dev/null}  |    7 -
+ .../jsoncpp-targets-release.cmake => dev/null}     |   39 -
+ .../cmake/jsoncpp/jsoncppConfig.cmake => dev/null} |   35 -
+ .../jsoncppConfigVersion.cmake => dev/null}        |   51 -
+ .../cmake/libwebsockets/LibwebsocketsTargets.cmake |    2 +-
+ .../libwebsockets-config-version.cmake             |    2 +-
+ .../libxml2/libxml2-config.cmake => dev/null}      |  115 -
+ .../lib/cmake/opencv4/OpenCVConfig-version.cmake}  |   15 +
+ .../usr/lib/cmake/opencv4/OpenCVConfig.cmake}      |  329 ++
+ .../lib/cmake/opencv4/OpenCVModules-release.cmake} |   99 +
+ .../usr/lib/cmake/opencv4/OpenCVModules.cmake}     |   73 +-
+ .../usr/lib/cmake/tinyxml2/tinyxml2Targets.cmake   |    8 +-
+ .../_root/usr/lib/eco_ai_interface/libecoaiPets.so |  Bin 169032 -> 131816 bytes
+ .../usr/lib/eco_ai_interface/libecoaibladepause.so |  Bin 6236008 -> 6244184 bytes
+ .../libecoaidetectface.so => dev/null}             |  Bin 3124136 -> 0 bytes
+ .../lib/eco_ai_interface/libecoaidetectsecurity.so |  Bin 6269240 -> 6270760 bytes
+ .../usr/lib/eco_ai_interface/libecoaigrassseg.so   |  Bin 6049272 -> 6061560 bytes
+ .../usr/lib/eco_ai_interface/libecoailinedec.so    |  Bin 118936 -> 118928 bytes
+ .../1.8.8/xout/_root/usr/lib/eco_mali.cl}          | 1024 +++++++
+ .../1.8.8/xout/_root/usr/lib/eco_mali_single.cl}   | 1020 +++++++
+ .../1.8.8/xout/_root/usr/lib/eig_val.cl}           |  269 ++
+ .../xout/_root/usr/lib/engines-1.1/afalg.so        |  Bin 19096 -> 16080 bytes
+ .../xout/_root/usr/lib/engines-1.1/capi.so         |  Bin 5944 -> 4352 bytes
+ .../xout/_root/usr/lib/engines-1.1/padlock.so      |  Bin 5944 -> 4352 bytes
+ .../1.8.8/xout/_root/usr/lib/eros.pc}              |    8 +
+ .../1.8.8/xout/_root/usr/lib/eros_node_alert.pc}   |    8 +
+ .../1.8.8/xout/_root/usr/lib/eros_node_bigdata.pc} |    8 +
+ .../_root/usr/lib/eros_node_bluetoothhandler.pc}   |    8 +
+ .../1.8.8/xout/_root/usr/lib/eros_node_clean.pc}   |    8 +
+ .../_root/usr/lib/eros_node_hardware_platform.pc}  |    8 +
+ .../xout/_root/usr/lib/eros_node_job_schedule.pc}  |    8 +
+ .../xout/_root/usr/lib/eros_node_lifespan.pc}      |    8 +
+ .../1.8.8/xout/_root/usr/lib/eros_node_map.pc}     |    8 +
+ .../xout/_root/usr/lib/eros_node_ofei_tof.pc}      |    8 +
+ .../xout/_root/usr/lib/eros_node_postTunnel.pc}    |    8 +
+ .../1.8.8/xout/_root/usr/lib/eros_node_return.pc}  |    8 +
+ .../1.8.8/xout/_root/usr/lib/eros_node_setting.pc} |    8 +
+ .../1.8.8/xout/_root/usr/lib/eros_node_sysinfo.pc} |    8 +
+ .../1.8.8/xout/_root/usr/lib/eros_node_tdk_imu.pc} |    8 +
+ .../1.8.8/xout/_root/usr/lib/eros_node_vslam.pc}   |    8 +
+ .../usr/lib/firmware/rtl8723b_config => dev/null}  |  Bin 22 -> 0 bytes
+ .../usr/lib/firmware/rtl8723b_fw => dev/null}      |  Bin 45560 -> 0 bytes
+ .../xout/_root/usr/lib/firmware/rtl8723du_fw       |  Bin 55012 -> 53796 bytes
+ .../usr/lib/firmware/rtl8723fu_config => dev/null} |  Bin 14 -> 0 bytes
+ .../usr/lib/firmware/rtl8723fu_fw => dev/null}     |  Bin 45988 -> 0 bytes
+ .../usr/lib/firmware/rtl8725au_config => dev/null} |  Bin 14 -> 0 bytes
+ .../usr/lib/firmware/rtl8725au_fw => dev/null}     |  Bin 48396 -> 0 bytes
+ .../usr/lib/firmware/rtl8761a_config => dev/null}  |  Bin 14 -> 0 bytes
+ .../lib/firmware/rtl8761au8192ee_fw => dev/null}   |  Bin 72768 -> 0 bytes
+ .../lib/firmware/rtl8761au8812ae_fw => dev/null}   |  Bin 70100 -> 0 bytes
+ .../usr/lib/firmware/rtl8761au_fw => dev/null}     |  Bin 66684 -> 0 bytes
+ .../usr/lib/firmware/rtl8761aw_config => dev/null} |  Bin 37 -> 0 bytes
+ .../usr/lib/firmware/rtl8761aw_fw => dev/null}     |  Bin 72768 -> 0 bytes
+ .../usr/lib/firmware/rtl8761bu_config => dev/null} |  Bin 14 -> 0 bytes
+ .../usr/lib/firmware/rtl8761bu_fw => dev/null}     |  Bin 40812 -> 0 bytes
+ .../usr/lib/firmware/rtl8821a_config => dev/null}  |  Bin 14 -> 0 bytes
+ .../usr/lib/firmware/rtl8821a_fw => dev/null}      |  Bin 40024 -> 0 bytes
+ .../usr/lib/firmware/rtl8821cu_config => dev/null} |  Bin 18 -> 0 bytes
+ .../usr/lib/firmware/rtl8821cu_fw => dev/null}     |  Bin 50344 -> 0 bytes
+ .../usr/lib/firmware/rtl8821du_config => dev/null} |  Bin 14 -> 0 bytes
+ .../usr/lib/firmware/rtl8821du_fw => dev/null}     |  Bin 58140 -> 0 bytes
+ .../usr/lib/firmware/rtl8822bu_config => dev/null} |  Bin 18 -> 0 bytes
+ .../usr/lib/firmware/rtl8822bu_fw => dev/null}     |  Bin 51032 -> 0 bytes
+ .../usr/lib/firmware/rtl8822cu_config => dev/null} |  Bin 14 -> 0 bytes
+ .../usr/lib/firmware/rtl8822cu_fw => dev/null}     |  Bin 58140 -> 0 bytes
+ .../usr/lib/firmware/rtl8851au_config => dev/null} |  Bin 14 -> 0 bytes
+ .../usr/lib/firmware/rtl8851au_fw => dev/null}     |  Bin 51284 -> 0 bytes
+ .../usr/lib/firmware/rtl8852au_config => dev/null} |  Bin 14 -> 0 bytes
+ .../usr/lib/firmware/rtl8852au_fw => dev/null}     |  Bin 40020 -> 0 bytes
+ .../usr/lib/firmware/rtl8852bu_config => dev/null} |  Bin 14 -> 0 bytes
+ .../usr/lib/firmware/rtl8852bu_fw => dev/null}     |  Bin 51284 -> 0 bytes
+ .../usr/lib/firmware/rtl8852cu_config => dev/null} |  Bin 14 -> 0 bytes
+ .../usr/lib/firmware/rtl8852cu_fw => dev/null}     |  Bin 28804 -> 0 bytes
+ .../1.8.8/xout/_root/usr/lib/job_schedule.pc}      |    8 +
+ .../xout/_root/usr/lib/job_schedule_midware.pc}    |    8 +
+ .../_root/usr/lib/job_schedule_ros_convert.pc}     |    8 +
+ .../1.8.8/xout/_root/usr/lib/libAudioDecoder.so}   |  Bin 0 -> 795072 bytes
+ .../1.8.8/xout/_root/usr/lib/libAudioEncoder.so}   |  Bin 0 -> 881672 bytes
+ .../1.8.8/xout/_root/usr/lib/libBDSpeechSDK.so}    |  Bin 0 -> 1733048 bytes
+ .../1.8.8/xout/_root/usr/lib/libDeebot.so}         |  Bin 0 -> 326384 bytes
+ .../1.8.8/xout/_root/usr/lib/libDeleteOutRange.so} |  Bin 0 -> 182224 bytes
+ .../xout/_root/usr/lib/libEcoRobot.so              |  Bin 35496 -> 36216 bytes
+ .../usr/lib/libEcoYUVOmniRing2YUVRectangle.so      |  Bin 193792 -> 203608 bytes
+ .../xout/_root/usr/lib/libEcoiio.so                |  Bin 73568 -> 73568 bytes
+ .../xout/_root/usr/lib/libEcovacs.so               |  Bin 105144 -> 93568 bytes
+ .../xout/_root/usr/lib/libIotPlatform.so           |  Bin 22680 -> 23296 bytes
+ .../1.8.8/xout/_root/usr/lib/libLineLaser.so}      |  Bin 0 -> 1771264 bytes
+ .../1.8.8/xout/_root/usr/lib/libPln.so}            |  Bin 0 -> 2600504 bytes
+ .../xout/_root/usr/lib/libProCvtUtils.so           |  Bin 10176 -> 8288 bytes
+ .../1.8.8/xout/_root/usr/lib/libSlFit.so}          |  Bin 0 -> 1577280 bytes
+ .../1.8.8/xout/_root/usr/lib/libSlRbd.so}          |  Bin 0 -> 318840 bytes
+ .../1.8.8/xout/_root/usr/lib/libSlTrack.so}        |  Bin 0 -> 140336 bytes
+ .../xout/_root/usr/lib/libXspace.so                |  Bin 0 -> 2394096 bytes
+ .../xout/_root/usr/lib/libXspace.so.1              |  Bin 0 -> 2394096 bytes
+ .../xout/_root/usr/lib/libXspace.so.1.0            |  Bin 987752 -> 2394096 bytes
+ .../usr/lib/libai_image_filter.so => dev/null}     |  Bin 318944 -> 0 bytes
+ .../1.8.8/xout/_root/usr/lib/libai_tof_animal.so}  |  Bin 0 -> 7506536 bytes
+ .../usr/lib/libai_tof_grass_point.so => dev/null}  |  Bin 927112 -> 0 bytes
+ .../xout/_root/usr/lib/libai_tof_grassseg.so       |  Bin 1244520 -> 8811224 bytes
+ .../xout/_root/usr/lib/libai_tof_obstacle.so       |  Bin 395856 -> 8026520 bytes
+ .../1.8.8/xout/_root/usr/lib/libaigrassseg.so}     |  Bin 0 -> 5957448 bytes
+ .../xout/_root/usr/lib/libao.so.4.1.0              |  Bin 40064 -> 33096 bytes
+ .../xout/_root/usr/lib/libasound.so.2.0.0          |  Bin 1109960 -> 943384 bytes
+ .../xout/_root/usr/lib/libavcodec.so.58.54.100     |  Bin 787064 -> 807712 bytes
+ .../xout/_root/usr/lib/libavdevice.so.58.8.100     |  Bin 14504 -> 11800 bytes
+ .../xout/_root/usr/lib/libavfilter.so.7.57.100     |  Bin 165168 -> 149104 bytes
+ .../xout/_root/usr/lib/libavformat.so.58.29.100    |  Bin 427176 -> 402480 bytes
+ .../xout/_root/usr/lib/libavutil.so.56.31.100      |  Bin 449456 -> 423496 bytes
+ .../xout/_root/usr/lib/libblkid.so.1.0             |  Bin 55992 -> 55992 bytes
+ .../xout/_root/usr/lib/libblkid.so.1.1.0           |  Bin 344936 -> 287456 bytes
+ .../xout/_root/usr/lib/libblobmsg_json.so          |  Bin 14408 -> 14408 bytes
+ .../xout/_root/usr/lib/libboost_chrono.so.1.66.0   |  Bin 35168 -> 29984 bytes
+ .../_root/usr/lib/libboost_date_time.so.1.66.0     |  Bin 72160 -> 67200 bytes
+ .../_root/usr/lib/libboost_filesystem.so.1.66.0    |  Bin 105632 -> 103408 bytes
+ .../xout/_root/usr/lib/libboost_regex.so.1.66.0    |  Bin 1024792 -> 956864 bytes
+ .../xout/_root/usr/lib/libboost_signals.so.1.66.0  |  Bin 101064 -> 94920 bytes
+ .../xout/_root/usr/lib/libboost_system.so.1.66.0   |  Bin 18512 -> 16160 bytes
+ .../xout/_root/usr/lib/libboost_thread.so.1.66.0   |  Bin 191808 -> 165208 bytes
+ .../xout/_root/usr/lib/libcamera_cheater_ros.so    |  Bin 109384 -> 109376 bytes
+ .../usr/lib/libcf.so.0.11.17_2b7add9 => dev/null}  |  Bin 840872 -> 0 bytes
+ .../lib/libcf.so.x-bugfix-0.11.11crash-0_9e2bc4f}  |  Bin 0 -> 621528 bytes
+ .../xout/_root/usr/lib/libchunfeng.so.0.1.0        |  Bin 131088 -> 127976 bytes
+ .../xout/_root/usr/lib/libcom_err.so.2.1           |  Bin 14592 -> 14592 bytes
+ .../xout/_root/usr/lib/libcommon.so.0.0.1          |  Bin 18680 -> 18672 bytes
+ .../xout/_root/usr/lib/libcrypto.so.1.1            |  Bin 2630520 -> 2233736 bytes
+ .../xout/_root/usr/lib/libcrypto_helper.so         |  Bin 14456 -> 9728 bytes
+ .../xout/_root/usr/lib/libcurl.so.4.5.0            |  Bin 463688 -> 320384 bytes
+ .../_root/usr/lib/libdata_filter.so => dev/null}   |  Bin 438416 -> 0 bytes
+ .../xout/_root/usr/lib/libdbus-1.so.3.10.1         |  Bin 356088 -> 311888 bytes
+ .../_root/usr/lib/libdeebot_comm.so => dev/null}   |  Bin 692768 -> 0 bytes
+ .../xout/_root/usr/lib/libdepthcomputation.so      |  Bin 2520920 -> 2516672 bytes
+ .../xout/_root/usr/lib/libdepthmapwrapper.so       |  Bin 44928 -> 44928 bytes
+ .../cjpf => 1.8.8/xout/_root/usr/lib/libdrm.so}    |    0
+ .../xout/_root/usr/lib/libdrm.so.2}                |    0
+ .../1.8.8/xout/_root/usr/lib/libdrm.so.2.4.0}      |  Bin 0 -> 72400 bytes
+ .../xout/_root/usr/lib/libe2p.so.2.3               |  Bin 36656 -> 36656 bytes
+ .../xout/_root/usr/lib/libearthshaker_trans_ros.so |  Bin 88832 -> 88824 bytes
+ .../1.8.8/xout/_root/usr/lib/libeco_ai_lib.so}     |  Bin 0 -> 342928 bytes
+ .../xout/_root/usr/lib/libeco_navi.so              |  Bin 13865264 -> 2394392 bytes
+ .../xout/_root/usr/lib/libeco_v4l2_capture.so      |  Bin 31984 -> 31984 bytes
+ .../xout/_root/usr/lib/libeco_vio.so               |  Bin 2254320 -> 2258344 bytes
+ .../xout/_root/usr/lib/libeco_vslam.so             |  Bin 4223232 -> 3865888 bytes
+ .../xout/_root/usr/lib/libecoaibladepause.so}      |  Bin 0 -> 6241448 bytes
+ .../xout/_root/usr/lib/libecoaidetectsecurity.so}  |  Bin 0 -> 6265080 bytes
+ .../xout/_root/usr/lib/libecoaidispatch.so         |  Bin 55904 -> 64096 bytes
+ .../1.8.8/xout/_root/usr/lib/libecoaigrassseg.so}  |  Bin 0 -> 6057480 bytes
+ .../xout/_root/usr/lib/liberos.so                  |  Bin 183712 -> 168904 bytes
+ .../xout/_root/usr/lib/liberos_pb_msg.so           |  Bin 313488 -> 298400 bytes
+ .../xout/_root/usr/lib/libestr.so.0.0.0            |  Bin 14288 -> 9776 bytes
+ .../xout/_root/usr/lib/libexpat.so.1.6.7           |  Bin 157872 -> 145264 bytes
+ .../_root/usr/lib/libexploring.so => dev/null}     |  Bin 266272 -> 0 bytes
+ .../xout/_root/usr/lib/libext2fs.so.2.4            |  Bin 334352 -> 334352 bytes
+ .../xout/_root/usr/lib/libgomp.so.1.0.0            |  Bin 253464 -> 155368 bytes
+ .../xout/_root/usr/lib/libhistory.so.7.0           |  Bin 39320 -> 33448 bytes
+ .../1.8.8/xout/_root/usr/lib/libhttpDNS.so}        |  Bin 0 -> 68416 bytes
+ .../xout/_root/usr/lib/libiconv.so}                |    0
+ .../1.8.8/xout/_root/usr/lib/libiconv.so.2}        |    0
+ .../1.8.8/xout/_root/usr/lib/libiconv.so.2.5.1}    |  Bin 0 -> 919576 bytes
+ .../xout/_root/usr/lib/libid3tag.so.0.3.0          |  Bin 97264 -> 88104 bytes
+ .../xout/_root/usr/lib/libiio.so.0.21              |  Bin 101440 -> 101440 bytes
+ .../xout/_root/usr/lib/libiksemel.so.3.1.1         |  Bin 51816 -> 44608 bytes
+ .../xout/_root/usr/lib/libiot_hal.so               |  Bin 355752 -> 315464 bytes
+ .../1.8.8/xout/_root/usr/lib/libjob_schedule}      |  Bin 0 -> 142008 bytes
+ .../xout/_root/usr/lib/libjob_schedule.so          |  Bin 142560 -> 103352 bytes
+ .../xout/_root/usr/lib/libjob_schedule_midware.so  |  Bin 3320080 -> 3084608 bytes
+ .../_root/usr/lib/libjob_schedule_ros_convert.so   |  Bin 2183320 -> 2008800 bytes
+ .../xout/_root/usr/lib/libjson-c.so.2.0.1          |  Bin 43248 -> 35824 bytes
+ .../xout/_root/usr/lib/libjson_script.so           |  Bin 14536 -> 14536 bytes
+ .../xout/_root/usr/lib/libjsoncpp.so               |  Bin 0 -> 217576 bytes
+ .../_root/usr/lib/libjsoncpp.so.1.9.5 => dev/null} |  Bin 221800 -> 0 bytes
+ .../xout/_root/usr/lib/libkmod.so.2.1.1            |  Bin 84704 -> 67056 bytes
+ .../xout/_root/usr/lib/libkvsWebrtcClient.so       |  Bin 1119368 -> 1116344 bytes
+ .../_root/usr/lib/libkvsWebrtcSignalingClient.so   |  Bin 144824 -> 162704 bytes
+ .../usr/lib/liblink_visual_device.so => dev/null}  |  Bin 1196016 -> 0 bytes
+ .../xout/_root/usr/lib/liblinkkit.so               |  Bin 479264 -> 423608 bytes
+ .../xout/_root/usr/lib/liblogging-stdlog.so.0.0.0  |  Bin 18536 -> 13608 bytes
+ .../xout/_root/usr/lib/liblogprintf.so             |  Bin 10320 -> 10336 bytes
+ .../xout/_root/usr/lib/liblua.so                   |  Bin 241256 -> 192800 bytes
+ .../xout/_root/usr/lib/libmad.so.0.2.1             |  Bin 125200 -> 122456 bytes
+ .../xout/_root/usr/lib/libmap_management_PX30.so}  |  Bin 0 -> 293824 bytes
+ .../_root/usr/lib/libmap_update.so => dev/null}    |  Bin 613432 -> 0 bytes
+ .../1.8.8/xout/_root/usr/lib/libmigu.so}           |  Bin 0 -> 65592 bytes
+ .../xout/_root/usr/lib/libmower_interface.so       |  Bin 5580340 -> 4923155 bytes
+ .../1.8.8/xout/_root/usr/lib/libnghttp2.so}        |  Bin 0 -> 116360 bytes
+ .../1.8.8/xout/_root/usr/lib/libnghttp2.so.14}     |  Bin 0 -> 116360 bytes
+ .../xout/_root/usr/lib/libnghttp2.so.14.13.3}      |  Bin 0 -> 116360 bytes
+ .../xout/_root/usr/lib/libnl-3.so.200.19.0         |  Bin 126712 -> 103520 bytes
+ .../xout/_root/usr/lib/libnl-genl-3.so.200.19.0    |  Bin 27944 -> 21536 bytes
+ .../xout/_root/usr/lib/libogg.so.0.8.2             |  Bin 26768 -> 20544 bytes
+ .../xout/_root/usr/lib/libopencv_calib3d.so.4.1}   |    0
+ .../xout/_root/usr/lib/libopencv_calib3d.so.4.1.2} |  Bin 0 -> 1291200 bytes
+ .../xout/_root/usr/lib/libopencv_core.so.4.1}      |    0
+ .../xout/_root/usr/lib/libopencv_core.so.4.1.2}    |  Bin 0 -> 3138640 bytes
+ .../_root/usr/lib/libopencv_features2d.so.4.1}     |    0
+ .../_root/usr/lib/libopencv_features2d.so.4.1.2}   |  Bin 0 -> 634000 bytes
+ .../xout/_root/usr/lib/libopencv_flann.so.4.1}     |    0
+ .../xout/_root/usr/lib/libopencv_flann.so.4.1.2}   |  Bin 0 -> 314456 bytes
+ .../xout/_root/usr/lib/libopencv_highgui.so.4.1}   |    0
+ .../xout/_root/usr/lib/libopencv_highgui.so.4.1.2} |  Bin 0 -> 42216 bytes
+ .../xout/_root/usr/lib/libopencv_imgcodecs.so.4.1} |    0
+ .../_root/usr/lib/libopencv_imgcodecs.so.4.1.2}    |  Bin 0 -> 821624 bytes
+ .../xout/_root/usr/lib/libopencv_imgproc.so.4.1}   |    0
+ .../xout/_root/usr/lib/libopencv_imgproc.so.4.1.2} |  Bin 0 -> 3264592 bytes
+ .../1.8.8/xout/_root/usr/lib/libopencv_ml.so.4.1}  |    0
+ .../xout/_root/usr/lib/libopencv_ml.so.4.1.2}      |  Bin 0 -> 621128 bytes
+ .../xout/_root/usr/lib/libopencv_objdetect.so.4.1} |    0
+ .../_root/usr/lib/libopencv_objdetect.so.4.1.2}    |  Bin 0 -> 361848 bytes
+ .../xout/_root/usr/lib/libpcap.so.1.7.4            |  Bin 323128 -> 300416 bytes
+ .../xout/_root/usr/lib/libprofiler.so.0.5.5        |  Bin 94016 -> 60688 bytes
+ .../xout/_root/usr/lib/libprotobuf.so.20           |  Bin 0 -> 2675456 bytes
+ .../usr/lib/libprotobuf.so.20.0.1 => dev/null}     |  Bin 2675456 -> 0 bytes
+ .../1.8.8/xout/_root/usr/lib/libpthread-2.23.so}   |  Bin 0 -> 97688 bytes
+ .../xout/_root/usr/lib/libpython2.7.so.1.0         |  Bin 1868040 -> 1739728 bytes
+ .../xout/_root/usr/lib/libreadline.so.7.0          |  Bin 325432 -> 287496 bytes
+ .../1.8.8/xout/_root/usr/lib/librelp.so.0.4.0}     |  Bin 0 -> 53520 bytes
+ .../_root/usr/lib/librelp.so.0.5.0 => dev/null}    |  Bin 68624 -> 0 bytes
+ .../xout/_root/usr/lib/libresource_task.so         |  Bin 184056 -> 609616 bytes
+ .../xout/_root/usr/lib/librkaiq.so                 |  Bin 11702312 -> 11714592 bytes
+ .../xout/_root/usr/lib/librockchip_mpp.so.0        |  Bin 1577392 -> 1577392 bytes
+ .../xout/_root/usr/lib/librockchip_vpu.so.0        |  Bin 68600 -> 72696 bytes
+ .../xout/_root/usr/lib/libroswapper-c.so           |  Bin 122120 -> 117752 bytes
+ .../xout/_root/usr/lib/libslipFunction_module.so   |  Bin 73592 -> 73584 bytes
+ .../xout/_root/usr/lib/libsmallAreaReturn.so       |  Bin 22696 -> 21240 bytes
+ .../1.8.8/xout/_root/usr/lib/libsqlite3.so}        |  Bin 0 -> 836560 bytes
+ .../xout/_root/usr/lib/libsrtp2.so.2.4.0           |  Bin 81032 -> 93152 bytes
+ .../xout/_root/usr/lib/libss.so.2.0                |  Bin 27144 -> 27144 bytes
+ .../xout/_root/usr/lib/libssl.so.1.1               |  Bin 568592 -> 507264 bytes
+ .../xout/_root/usr/lib/libswresample.so.3.5.100    |  Bin 84240 -> 79056 bytes
+ .../xout/_root/usr/lib/libswscale.so.5.5.100       |  Bin 387312 -> 354832 bytes
+ .../xout/_root/usr/lib/libtaskmanager.so           |  Bin 311472 -> 313504 bytes
+ .../xout/_root/usr/lib/libtcmalloc.so.4.5.10       |  Bin 754408 -> 305144 bytes
+ .../usr/lib/libtcmalloc_and_profiler.so.4.6.5      |  Bin 796192 -> 326008 bytes
+ .../xout/_root/usr/lib/libtcmalloc_debug.so.4.5.10 |  Bin 775328 -> 337992 bytes
+ .../_root/usr/lib/libtcmalloc_minimal.so.4.5.10    |  Bin 319512 -> 168416 bytes
+ .../usr/lib/libtcmalloc_minimal_debug.so.4.5.10    |  Bin 340544 -> 197216 bytes
+ .../xout/_root/usr/lib/libtinyalsa.so              |  Bin 31216 -> 24168 bytes
+ .../xout/_root/usr/lib/libtinyxml2.so.7.0.1        |  Bin 89328 -> 96024 bytes
+ .../xout/_root/usr/lib/libubox.so                  |  Bin 52112 -> 52112 bytes
+ .../xout/_root/usr/lib/libubus.so                  |  Bin 27152 -> 27152 bytes
+ .../xout/_root/usr/lib/libudev.so.0.13.1           |  Bin 60000 -> 46600 bytes
+ .../xout/_root/usr/lib/libuuid.so.1.2              |  Bin 14688 -> 14688 bytes
+ .../xout/_root/usr/lib/libuuid.so.1.3.0            |  Bin 27128 -> 11176 bytes
+ .../1.8.8/xout/_root/usr/lib/libvfh.so}            |  Bin 0 -> 99672 bytes
+ .../xout/_root/usr/lib/libvorbis.so.0.4.8          |  Bin 166560 -> 155360 bytes
+ .../xout/_root/usr/lib/libvorbisenc.so.2.0.11      |  Bin 653376 -> 648688 bytes
+ .../xout/_root/usr/lib/libvorbisfile.so.3.3.7      |  Bin 31136 -> 28032 bytes
+ .../xout/_root/usr/lib/libwebsockets.so.18         |  Bin 369784 -> 431968 bytes
+ .../1.8.8/xout/_root/usr/lib/libxml2.so.2.7.8}     |  Bin 0 -> 1237048 bytes
+ .../_root/usr/lib/libxml2.so.2.9.14 => dev/null}   |  Bin 1468632 -> 0 bytes
+ .../1.8.8/xout/_root/usr/lib/libxml2.so.2.9.5}     |  Bin 0 -> 1262464 bytes
+ .../xout/_root/usr/lib/libz.so.1.2.5.1             |  Bin 96704 -> 89312 bytes
+ .../1.8.8/xout/_root/usr/lib/libz.so.1.2.8}        |  Bin 0 -> 89312 bytes
+ .../1.8.8/xout/_root/usr/lib/libzlog.so.1.1.0}     |  Bin 0 -> 84984 bytes
+ .../_root/usr/lib/libzlog.so.1.2.12 => dev/null}   |  Bin 126136 -> 0 bytes
+ .../xout/_root/usr/lib/medusa/plug_aidispatch.so   |  Bin 35376 -> 22968 bytes
+ .../xout/_root/usr/lib/medusa/plug_audio.so        |  Bin 47696 -> 47688 bytes
+ .../usr/lib/medusa/plug_buf_cmd_to_json_cmd.so     |  Bin 10424 -> 9344 bytes
+ .../_root/usr/lib/medusa/plug_camera_cheater.so    |  Bin 14656 -> 14656 bytes
+ .../xout/_root/usr/lib/medusa/plug_cmd.so          |  Bin 14648 -> 15352 bytes
+ .../xout/_root/usr/lib/medusa/plug_dev_status.so   |  Bin 26960 -> 26960 bytes
+ .../_root/usr/lib/medusa/plug_earthshaker_trans.so |  Bin 14624 -> 14632 bytes
+ .../xout/_root/usr/lib/medusa/plug_file_sink.so    |  Bin 22744 -> 18648 bytes
+ .../xout/_root/usr/lib/medusa/plug_fw_v3.so        |  Bin 35320 -> 36544 bytes
+ .../xout/_root/usr/lib/medusa/plug_kvs_webrtc.so   |  Bin 257872 -> 262000 bytes
+ .../1.8.8/xout/_root/usr/lib/medusa/plug_led.so}   |  Bin 0 -> 10392 bytes
+ .../xout/_root/usr/lib/medusa/plug_link.so         |  Bin 40352 -> 37072 bytes
+ .../xout/_root/usr/lib/medusa/plug_live_pwd.so     |  Bin 22888 -> 24656 bytes
+ .../usr/lib/medusa/plug_lvision.so => dev/null}    |  Bin 215552 -> 0 bytes
+ .../_root/usr/lib/medusa/plug_media_control.so     |  Bin 43464 -> 47560 bytes
+ .../medusa/plug_medusa_plugin_feiyan_convert.so    |  Bin 18776 -> 18304 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_mcuota.so    |  Bin 23008 -> 17560 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_ros_node.so  |  Bin 174904 -> 162568 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_switch.so    |  Bin 22880 -> 22008 bytes
+ .../lib/medusa/plug_medusa_plugin_wifiHandler.so   |  Bin 35456 -> 31336 bytes
+ .../xout/_root/usr/lib/medusa/plug_network.so      |  Bin 35328 -> 27136 bytes
+ .../xout/_root/usr/lib/medusa/plug_rk_aiq.so       |  Bin 33536 -> 33536 bytes
+ .../xout/_root/usr/lib/medusa/plug_rk_mpp.so       |  Bin 69312 -> 65192 bytes
+ .../xout/_root/usr/lib/medusa/plug_rk_rga.so       |  Bin 39480 -> 43544 bytes
+ .../xout/_root/usr/lib/medusa/plug_rtsp_sink.so}   |  Bin 0 -> 57064 bytes
+ .../xout/_root/usr/lib/medusa/plug_station.so}     |  Bin 0 -> 47712 bytes
+ .../xout/_root/usr/lib/medusa/plug_sys.so          |  Bin 51752 -> 51752 bytes
+ .../xout/_root/usr/lib/medusa/plug_time.so         |  Bin 27128 -> 27128 bytes
+ .../1.8.8/xout/_root/usr/lib/medusa/plug_udp.so}   |  Bin 0 -> 16688 bytes
+ .../xout/_root/usr/lib/medusa/plug_udp_test.so}    |  Bin 0 -> 11040 bytes
+ .../xout/_root/usr/lib/medusa/plug_v4l2_v4.so      |  Bin 22976 -> 22968 bytes
+ .../usr/lib/modules/5.10.66/external/rtk_btusb.ko  |  Bin 1912840 -> 1904928 bytes
+ .../usr/lib/modules/5.10.66/external/rtl8723.ko    |  Bin 3901312 -> 3887768 bytes
+ .../5.10.66/kernel/drivers/bluetooth/bfusb.ko      |  Bin 618616 -> 618336 bytes
+ .../5.10.66/kernel/drivers/bluetooth/btbcm.ko      |  Bin 558456 -> 558176 bytes
+ .../5.10.66/kernel/drivers/bluetooth/btintel.ko    |  Bin 622440 -> 622160 bytes
+ .../5.10.66/kernel/drivers/bluetooth/btrtl.ko      |  Bin 544792 -> 544512 bytes
+ .../5.10.66/kernel/drivers/bluetooth/btusb.ko      |  Bin 1075376 -> 1075096 bytes
+ .../kernel/drivers/media/spi/cxd2880-spi.ko        |  Bin 476040 -> 475760 bytes
+ .../5.10.66/modules.builtin.alias.bin => dev/null} |  Bin 50929 -> 0 bytes
+ .../lib/modules/5.10.66/modules.builtin.modinfo    |  Bin 154404 -> 154399 bytes
+ .../_root/usr/lib/modules/5.10.66/modules.devname  |    1 +
+ .../1.8.8/xout/_root/usr/lib/netmon_ctl}           |    0
+ .../xout/_root/usr/lib/node/liberos_node_alert.so  |  Bin 402104 -> 272656 bytes
+ .../node/liberos_node_autobuild.so => dev/null}    |  Bin 101288 -> 0 bytes
+ .../_root/usr/lib/node/liberos_node_bigdata.so     |  Bin 1504064 -> 1143088 bytes
+ .../usr/lib/node/liberos_node_bluetoothhandler.so  |  Bin 1916576 -> 1607288 bytes
+ .../xout/_root/usr/lib/node/liberos_node_clean.so  |  Bin 1077408 -> 855584 bytes
+ .../node/liberos_node_data_filter.so => dev/null}  |  Bin 776600 -> 0 bytes
+ .../node/liberos_node_exploring.so => dev/null}    |  Bin 851360 -> 0 bytes
+ .../usr/lib/node/liberos_node_hardware_platform.so |  Bin 2242424 -> 1912968 bytes
+ .../usr/lib/node/liberos_node_inspect_charger.so   |  Bin 208248 -> 163488 bytes
+ .../usr/lib/node/liberos_node_job_schedule.so      |  Bin 702704 -> 531504 bytes
+ .../_root/usr/lib/node/liberos_node_lifespan.so    |  Bin 245504 -> 230088 bytes
+ .../usr/lib/node/liberos_node_log.so => dev/null}  |  Bin 105208 -> 0 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    |  Bin 2431784 -> 1877696 bytes
+ .../_root/usr/lib/node/liberos_node_ofei_tof.so    |  Bin 622504 -> 575976 bytes
+ .../_root/usr/lib/node/liberos_node_postTunnel.so  |  Bin 957992 -> 815512 bytes
+ .../xout/_root/usr/lib/node/liberos_node_return.so |  Bin 607952 -> 480376 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     |  Bin 751152 -> 652176 bytes
+ .../_root/usr/lib/node/liberos_node_sysinfo.so     |  Bin 249648 -> 246328 bytes
+ .../usr/lib/node/liberos_node_task_manager.so}     |  Bin 0 -> 6491336 bytes
+ .../_root/usr/lib/node/liberos_node_tdk_imu.so     |  Bin 138976 -> 171496 bytes
+ .../xout/_root/usr/lib/node/liberos_node_vslam.so  |  Bin 1068712 -> 976760 bytes
+ .../1.8.8/xout/_root/usr/lib/nodelet.pc}           |    8 +
+ .../jsoncpp_object/json_reader.cpp.o => dev/null}  |  Bin 133472 -> 0 bytes
+ .../jsoncpp_object/json_value.cpp.o => dev/null}   |  Bin 118112 -> 0 bytes
+ .../jsoncpp_object/json_writer.cpp.o => dev/null}  |  Bin 95704 -> 0 bytes
+ .../_root/usr/lib/python2.7/_sysconfigdata.pyc     |  Bin 21415 -> 21026 bytes
+ .../xout/_root/usr/lib/python2.7/config/Makefile   |   22 +-
+ .../lib-dynload/Python-2.7.12-py2.7.egg-info}      |    2 +-
+ .../_root/usr/lib/python2.7/lib-dynload/_bisect.so |  Bin 10608 -> 8728 bytes
+ .../lib/python2.7/lib-dynload/_codecs_iso2022.so   |  Bin 26720 -> 29120 bytes
+ .../usr/lib/python2.7/lib-dynload/_collections.so  |  Bin 33600 -> 34224 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/_csv.so    |  Bin 29216 -> 25832 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/_ctypes.so |  Bin 160224 -> 174864 bytes
+ .../usr/lib/python2.7/lib-dynload/_ctypes_test.so  |  Bin 30904 -> 23800 bytes
+ .../usr/lib/python2.7/lib-dynload/_elementtree.so  |  Bin 54144 -> 54840 bytes
+ .../usr/lib/python2.7/lib-dynload/_functools.so    |  Bin 15224 -> 12536 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/_heapq.so  |  Bin 14592 -> 12480 bytes
+ .../usr/lib/python2.7/lib-dynload/_hotshot.so      |  Bin 28680 -> 29312 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/_io.so     |  Bin 143304 -> 136752 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/_json.so   |  Bin 36792 -> 41520 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/_locale.so |  Bin 23168 -> 20544 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/_lsprof.so |  Bin 19512 -> 16704 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/_md5.so    |  Bin 15144 -> 12056 bytes
+ .../lib/python2.7/lib-dynload/_multibytecodec.so   |  Bin 33984 -> 38664 bytes
+ .../lib/python2.7/lib-dynload/_multiprocessing.so  |  Bin 29048 -> 33840 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/_random.so |  Bin 15088 -> 12776 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/_sha.so    |  Bin 15160 -> 13968 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/_sha256.so |  Bin 19744 -> 17584 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/_sha512.so |  Bin 19744 -> 22016 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/_socket.so |  Bin 71200 -> 64984 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/_struct.so |  Bin 42480 -> 38584 bytes
+ .../usr/lib/python2.7/lib-dynload/_testcapi.so     |  Bin 64904 -> 58624 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/array.so   |  Bin 45576 -> 42152 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/audioop.so |  Bin 31656 -> 28144 bytes
+ .../usr/lib/python2.7/lib-dynload/binascii.so      |  Bin 23184 -> 21320 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/cPickle.so |  Bin 86936 -> 79520 bytes
+ .../usr/lib/python2.7/lib-dynload/cStringIO.so     |  Bin 20456 -> 21064 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/cmath.so   |  Bin 31528 -> 36192 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/crypt.so   |  Bin 6112 -> 5072 bytes
+ .../usr/lib/python2.7/lib-dynload/datetime.so      |  Bin 95504 -> 86072 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/fcntl.so   |  Bin 14512 -> 15072 bytes
+ .../lib/python2.7/lib-dynload/future_builtins.so   |  Bin 6224 -> 5768 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/grp.so     |  Bin 10504 -> 8984 bytes
+ .../usr/lib/python2.7/lib-dynload/itertools.so     |  Bin 60832 -> 50728 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/math.so    |  Bin 44648 -> 41144 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/mmap.so    |  Bin 23800 -> 21520 bytes
+ .../usr/lib/python2.7/lib-dynload/operator.so      |  Bin 40064 -> 36560 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/parser.so  |  Bin 73448 -> 62688 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/pyexpat.so |  Bin 55280 -> 60856 bytes
+ .../usr/lib/python2.7/lib-dynload/resource.so      |  Bin 14832 -> 11288 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/select.so  |  Bin 24288 -> 25352 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/spwd.so    |  Bin 10520 -> 8168 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/strop.so   |  Bin 27456 -> 23928 bytes
+ .../lib-dynload/sysconfigdata/_sysconfigdata.pyc   |  Bin 21441 -> 21052 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/syslog.so  |  Bin 10536 -> 9408 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/termios.so |  Bin 22296 -> 21512 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/time.so    |  Bin 19232 -> 17088 bytes
+ .../usr/lib/python2.7/lib-dynload/unicodedata.so   |  Bin 694232 -> 691696 bytes
+ .../catkin_pkg-0.4.12-py2.7.egg-info/SOURCES.txt   |    1 -
+ .../defusedxml-0.5.0-py2.7.egg-info/SOURCES.txt    |    1 -
+ .../earthshaker_trans_ros/__init__.pyc             |  Bin 284 -> 263 bytes
+ .../earthshaker_trans_ros/msg/__init__.pyc         |  Bin 377 -> 356 bytes
+ .../msg/_earthshaker_cam_update.pyc                |  Bin 6477 -> 6267 bytes
+ .../msg/_earthshaker_trans.pyc                     |  Bin 7779 -> 7590 bytes
+ .../netifaces-0.10.6-py2.7.egg-info/SOURCES.txt    |    1 -
+ .../usr/lib/python2.7/site-packages/netifaces.so   |  Bin 18768 -> 16848 bytes
+ .../pyparsing-2.1.10-py2.7.egg-info/SOURCES.txt    |    1 -
+ .../rospkg-1.0.40-py2.7.egg-info/SOURCES.txt       |    1 -
+ .../lib/python2.7/sysconfigdata/_sysconfigdata.pyc |  Bin 21429 -> 21040 bytes
+ .../1.8.8/xout/_root/usr/lib/taskmanager.pc}       |    8 +
+ .../{1.36.168.6 => 1.8.8}/xout/_root/usr/lib/test  |  Bin 10400 -> 8528 bytes
+ .../1.8.8/xout/_root/usr/lib/test_g_id.cl}         |  762 +++++
+ .../xout/_root/usr/lib/udev/accelerometer          |  Bin 53368 -> 46840 bytes
+ .../xout/_root/usr/lib/udev/ata_id                 |  Bin 35224 -> 30240 bytes
+ .../xout/_root/usr/lib/udev/cdrom_id               |  Bin 47576 -> 45136 bytes
+ .../xout/_root/usr/lib/udev/collect                |  Bin 31680 -> 28568 bytes
+ .../xout/_root/usr/lib/udev/mtd_probe              |  Bin 15664 -> 14408 bytes
+ .../xout/_root/usr/lib/udev/scsi_id                |  Bin 47800 -> 44024 bytes
+ .../xout/_root/usr/lib/udev/udevd                  |  Bin 199312 -> 184304 bytes
+ .../xout/_root/usr/lib/udev/v4l_id                 |  Bin 15544 -> 14128 bytes
+ .../xout/_root/usr/lib/xml2Conf.sh                 |    4 +-
+ .../{1.36.168.6 => 1.8.8}/xout/_root/usr/sbin/adbd |  Bin 102504 -> 90736 bytes
+ .../xout/_root/usr/sbin/blkid                      |  Bin 109960 -> 91056 bytes
+ .../xout/_root/usr/sbin/dnsmasq                    |  Bin 303848 -> 261392 bytes
+ .../xout/_root/usr/sbin/fsck.ext4                  |  Bin 287952 -> 287952 bytes
+ .../1.8.8/xout/_root/usr/sbin/hostapd}             |  Bin 0 -> 635488 bytes
+ .../xout/_root/usr/sbin/mkfs.ext4                  |  Bin 122792 -> 122792 bytes
+ .../xout/_root/usr/sbin/quectel-CM                 |  Bin 203640 -> 207736 bytes
+ .../xout/_root/usr/sbin/resize2fs                  |  Bin 56512 -> 56512 bytes
+ .../xout/_root/usr/sbin/tcpdump                    |  Bin 887840 -> 896608 bytes
+ .../xout/_root/usr/sbin/vsftpd                     |  Bin 115744 -> 91672 bytes
+ .../xout/_root/usr/sbin/wpa_cli                    |  Bin 121680 -> 121680 bytes
+ .../xout/_root/usr/sbin/wpa_passphrase             |  Bin 60680 -> 60680 bytes
+ .../xout/_root/usr/sbin/wpa_supplicant             |  Bin 1810360 -> 1822648 bytes
+ .../xout/_root/usr/share/dstat/dstat.py            |    0
+ .../xout/_root/usr/share/update.log                |   13 +-
+ 884 files changed, 8154 insertions(+), 3118 deletions(-)

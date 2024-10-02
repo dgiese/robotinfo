@@ -1,0 +1,102 @@
+Firmware diff for DreameBot L10s Ultra (dreame.vacuum.r2228o)
+Old version: 4.3.9_3031 New version: 4.3.9_3102
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/63.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/64.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/65.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/66.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/67.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/68.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/69.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/70.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/71.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/75.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/76.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/77.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/78.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/79.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/80.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/81.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/82.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/83.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/84.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/85.ogg}    |   0
+ .../4.3.9_3102/xout/_root/audio/TEST/EN/86.ogg}    |   0
+ .../xout/_root/audio/TEST/ZH/35.ogg                | Bin 3751 -> 3751 bytes
+ .../xout/_root/audio/TEST/ZH/63.ogg                | Bin 18059 -> 11541 bytes
+ .../xout/_root/audio/TEST/ZH/64.ogg                | Bin 17404 -> 11732 bytes
+ .../xout/_root/audio/TEST/ZH/65.ogg                | Bin 15023 -> 9556 bytes
+ .../xout/_root/audio/TEST/ZH/66.ogg                | Bin 16698 -> 11040 bytes
+ .../xout/_root/audio/TEST/ZH/67.ogg                | Bin 15790 -> 10674 bytes
+ .../xout/_root/audio/TEST/ZH/68.ogg                | Bin 19080 -> 12404 bytes
+ .../xout/_root/audio/TEST/ZH/69.ogg                | Bin 18631 -> 12064 bytes
+ .../xout/_root/audio/TEST/ZH/70.ogg                | Bin 15988 -> 10515 bytes
+ .../xout/_root/audio/TEST/ZH/71.ogg                | Bin 10027 -> 10099 bytes
+ .../xout/_root/audio/TEST/ZH/72.ogg                | Bin 13059 -> 11781 bytes
+ .../xout/_root/audio/TEST/ZH/73.ogg                | Bin 12704 -> 10967 bytes
+ .../xout/_root/audio/TEST/ZH/74.ogg                | Bin 13041 -> 11218 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/75.ogg}    | Bin 0 -> 13042 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/76.ogg}    | Bin 0 -> 12995 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/77.ogg}    | Bin 0 -> 13651 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/78.ogg}    | Bin 0 -> 13613 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/79.ogg}    | Bin 0 -> 13216 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/80.ogg}    | Bin 0 -> 12487 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/81.ogg}    | Bin 0 -> 10934 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/82.ogg}    | Bin 0 -> 12344 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/83.ogg}    | Bin 0 -> 10465 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/84.ogg}    | Bin 0 -> 9445 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/85.ogg}    | Bin 0 -> 9596 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/86.ogg}    | Bin 0 -> 11618 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/87.ogg}    | Bin 0 -> 8097 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/88.ogg}    | Bin 0 -> 8344 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/89.ogg}    | Bin 0 -> 8138 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/90.ogg}    | Bin 0 -> 9480 bytes
+ .../4.3.9_3102/xout/_root/audio/TEST/ZH/91.ogg}    | Bin 0 -> 12165 bytes
+ .../xout/_root/ava/conf/ota.conf                   |   3 +-
+ .../xout/_root/ava/conf/ppid.json                  |   1 +
+ .../xout/_root/ava/conf/r2228.conf                 |   9 +-
+ .../xout/_root/ava/conf/unical-robot.jsonc}        |  91 +++++++++++++++++++++
+ .../xout/_root/ava/lib/node_ai_area_recognition.so | Bin 621440 -> 621440 bytes
+ .../xout/_root/ava/lib/node_arges.so               | Bin 5971456 -> 5971456 bytes
+ .../xout/_root/ava/lib/node_bsp.so                 | Bin 49240 -> 49240 bytes
+ .../xout/_root/ava/lib/node_camera_ai.so           | Bin 727360 -> 727360 bytes
+ .../xout/_root/ava/lib/node_camera_laser.so        | Bin 176680 -> 176680 bytes
+ .../xout/_root/ava/lib/node_camera_streamer.so     | Bin 398856 -> 398856 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 73352 -> 73352 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 44824 -> 44824 bytes
+ .../xout/_root/ava/lib/node_health_arges.so        | Bin 376928 -> 376928 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 124264 -> 124264 bytes
+ .../_root/ava/lib/node_laser_point_extractor.so    | Bin 307992 -> 307992 bytes
+ .../xout/_root/ava/lib/node_laser_transfer.so      | Bin 2569000 -> 2568784 bytes
+ .../xout/_root/ava/lib/node_lasercamera_calibr.so  | Bin 275632 -> 275632 bytes
+ .../xout/_root/ava/lib/node_laserplane_calibr.so   | Bin 299600 -> 299600 bytes
+ .../xout/_root/ava/lib/node_lds.so                 | Bin 472736 -> 472736 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 115576 -> 115608 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 2354448 -> 2358640 bytes
+ .../xout/_root/ava/lib/node_linelaser_calibr.so    | Bin 128112 -> 128112 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 140376 -> 140376 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 1604896 -> 1604896 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 123784 -> 123784 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 1462104 -> 1458008 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 82088 -> 82088 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 372280 -> 380840 bytes
+ .../xout/_root/ava/lib/node_snap.so                | Bin 263472 -> 263472 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 177488 -> 177488 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 127808 -> 127808 bytes
+ .../4.3.9_3102/xout/_root/ava/lib/node_unical.so}  | Bin 0 -> 1497608 bytes
+ .../xout/_root/etc/os-release                      |   6 +-
+ .../xout/_root/misc/data.tar.bz2                   | Bin 574 -> 577 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 190848 -> 190848 bytes
+ .../xout/_root/usr/bin/dreameiot                   | Bin 53096 -> 53096 bytes
+ .../xout/_root/usr/bin/packlog.sh                  |   9 +-
+ .../_root/usr/lib/tree_lib/libarges_route_nodes.so | Bin 12294856 -> 12294888 bytes
+ .../usr/lib/tree_lib/libarges_tactics_tree.so      | Bin 2011856 -> 2016392 bytes
+ .../xout/_root/usr/lib/tree_lib/libarges_tree.so   | Bin 5656816 -> 5673168 bytes
+ .../xout/_root/version_record                      |  32 ++++----
+ .../{4.3.9_3031 => 4.3.9_3102}/xout/kernel.img     | Bin 10835968 -> 10835968 bytes
+ .../{4.3.9_3031 => 4.3.9_3102}/xout/mcu.bin        | Bin 184632 -> 184752 bytes
+ .../{4.3.9_3031 => 4.3.9_3102}/xout/toc1.fex       | Bin 1245184 -> 1245184 bytes
+ 96 files changed, 127 insertions(+), 26 deletions(-)

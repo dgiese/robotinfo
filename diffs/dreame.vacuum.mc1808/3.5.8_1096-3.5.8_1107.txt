@@ -1,0 +1,48 @@
+Firmware diff for Mi Robot Vacuum-Mop (dreame.vacuum.mc1808)
+Old version: 3.5.8_1096 New version: 3.5.8_1107
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_calibr.so              | Bin 214152 -> 214192 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 242192 -> 62480 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 28412 -> 28436 bytes
+ .../xout/_root/ava/lib/node_health_khaos.so        | Bin 94132 -> 162388 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 280840 -> 280936 bytes
+ .../xout/_root/ava/lib/node_khaos.so               | Bin 621748 -> 746308 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 385640 -> 446932 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 192580 -> 205012 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 701032 -> 713344 bytes
+ .../xout/_root/ava/lib/node_signal_tab.so          | Bin 136016 -> 136216 bytes
+ .../xout/_root/ava/lib/node_tracecheck.so          | Bin 44320 -> 44364 bytes
+ .../xout/_root/ava/lib/node_vision.so              | Bin 2037060 -> 2016724 bytes
+ .../xout/_root/ava/script/msg_cvt.sh               |   6 +++
+ .../xout/_root/etc/init.d/factory_ap.sh            |   5 +++
+ .../xout/_root/etc/os-release                      |   6 +--
+ .../xout/_root/etc/rc.d/monitor.sh                 |   4 +-
+ .../xout/_root/etc/rc.d/msg_trans.sh               |  13 +++---
+ .../xout/_root/etc/rc.d/msg_trans_monitor.sh       |  11 +-----
+ .../xout/_root/etc/rc.sysinit                      |   1 -
+ .../xout/_root/misc/data.tar.bz2                   | Bin 595 -> 597 bytes
+ .../3.5.8_1107/xout/_root/time.txt}                |   1 +
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 538988 -> 145984 bytes
+ .../xout/_root/usr/bin/avacmd                      | Bin 6632 -> 5884 bytes
+ .../xout/_root/usr/bin/exec_proc                   | Bin 14252 -> 8196 bytes
+ .../xout/_root/usr/bin/mediad                      | Bin 33932 -> 33932 bytes
+ .../_root/usr/bin/miio_client_helper_nomqtt.sh     |  44 +++++++++++----------
+ .../xout/_root/usr/bin/msg_trans                   | Bin 8440 -> 22748 bytes
+ .../xout/_root/usr/lib/libbehaviortree_cpp.so      | Bin 1641992 -> 1659764 bytes
+ .../xout/_root/usr/lib/libmessenger.so             | Bin 34824 -> 46008 bytes
+ .../xout/_root/usr/lib/libopencv_calib3d.so.4.2.0  | Bin 1357212 -> 1357328 bytes
+ .../xout/_root/usr/lib/libopencv_core.so.4.2.0     | Bin 2659668 -> 2606388 bytes
+ .../_root/usr/lib/libopencv_features2d.so.4.2.0    | Bin 581000 -> 581000 bytes
+ .../xout/_root/usr/lib/libopencv_flann.so.4.2.0    | Bin 256656 -> 256684 bytes
+ .../_root/usr/lib/libopencv_imgcodecs.so.4.2.0     | Bin 1575860 -> 281364 bytes
+ .../xout/_root/usr/lib/libopencv_imgproc.so.4.2.0  | Bin 2696840 -> 2675392 bytes
+ .../xout/_root/usr/lib/libopencv_video.so.4.2.0    | Bin 379004 -> 379116 bytes
+ .../xout/_root/usr/lib/libopencv_ximgproc.so.4.2.0 | Bin 1089076 -> 1089076 bytes
+ .../_root/usr/lib/tree_lib/libkhaos_route_nodes.so | Bin 3225528 -> 4209840 bytes
+ .../usr/lib/tree_lib/libkhaos_tactics_tree.so      | Bin 721000 -> 1019012 bytes
+ .../xout/_root/usr/lib/tree_lib/libkhaos_tree.so   | Bin 12471380 -> 6888964 bytes
+ .../{3.5.8_1096 => 3.5.8_1107}/xout/mcu.bin        | Bin 132028 -> 134972 bytes
+ 42 files changed, 50 insertions(+), 43 deletions(-)

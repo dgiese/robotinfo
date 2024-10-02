@@ -1,0 +1,31 @@
+Firmware diff for Roborock S5 Max (roborock.vacuum.s5e)
+Old version: 4.1.2_1662 New version: 4.1.2_1668
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/OS_VERSION                      |  10 +++++-----
+ .../xout/_root/etc/os-release                      |   2 +-
+ .../xout/_root/etc/rr-info                         |   2 +-
+ .../xout/_root/lib/modules/3.4.39/8189es.ko        | Bin 2252592 -> 2252592 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 302464 -> 302440 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 66464 -> 66444 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../xout/_root/opt/rockrobo/cleaner/bin/AppProxy   | Bin 1003416 -> 1003416 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboController  | Bin 261140 -> 261140 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerM | Bin 327140 -> 327140 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerR | Bin 261140 -> 261140 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/SysUpdate  | Bin 101456 -> 101456 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 2474012 -> 2474012 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ ...A14.G1_M4.0.1_RELEASE_20230207-210717_FULL.bin} | Bin 217072 -> 217072 bytes
+ ...14_M4.0.1_RELEASE_20230207-210620_INV_FULL.bin} | Bin 217072 -> 217072 bytes
+ ....A3.G1_M4.0.1_RELEASE_20230207-210523_FULL.bin} | Bin 217072 -> 217072 bytes
+ ...A3_M4.0.1_RELEASE_20230207-210431_INV_FULL.bin} | Bin 217072 -> 217072 bytes
+ .../rockrobo/firmware/uart_test-4.0.1-20230207}    | Bin 509980 -> 509980 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_rr         | Bin 199000 -> 199000 bytes
+ .../xout/_root/opt/rockrobo/watchdog/WatchDoge     | Bin 80212 -> 80212 bytes
+ .../xout/bootout_aboot/zImage                      | Bin 3797384 -> 3797376 bytes
+ .../xout/bootout_aboot/zImage_4.1.2_1668.elf}      | Bin 9951989 -> 9951989 bytes
+ .../{4.1.2_1662 => 4.1.2_1668}/xout/kernel.img     | Bin 3801088 -> 3801088 bytes
+ 25 files changed, 10 insertions(+), 10 deletions(-)

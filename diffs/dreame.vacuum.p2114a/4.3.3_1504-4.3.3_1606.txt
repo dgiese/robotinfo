@@ -1,0 +1,57 @@
+Firmware diff for Xiaomi Robot Vacuum X10+ (dreame.vacuum.p2114a)
+Old version: 4.3.3_1504 New version: 4.3.3_1606
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/conf/config.yaml                |  13 ++++++++++++
+ .../xout/_root/ava/conf/p2114.conf                 |   6 +++++-
+ .../xout/_root/ava/lib/node_ai_area_recognition.so | Bin 613304 -> 613304 bytes
+ .../xout/_root/ava/lib/node_camera_ai.so           | Bin 515160 -> 515160 bytes
+ .../xout/_root/ava/lib/node_camera_laser.so        | Bin 103928 -> 140144 bytes
+ .../xout/_root/ava/lib/node_camera_streamer.so     | Bin 345360 -> 345360 bytes
+ .../xout/_root/ava/lib/node_cameracalibr_ai.so     | Bin 308872 -> 313352 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 73352 -> 73352 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 44824 -> 44824 bytes
+ .../xout/_root/ava/lib/node_health_nemesis.so      | Bin 335000 -> 335000 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 124352 -> 124352 bytes
+ .../_root/ava/lib/node_laser_point_extractor.so    | Bin 323960 -> 311416 bytes
+ .../xout/_root/ava/lib/node_laser_transfer.so      | Bin 1762432 -> 1762432 bytes
+ .../_root/ava/lib/node_lasercali.so => dev/null}   | Bin 204808 -> 0 bytes
+ .../xout/_root/ava/lib/node_lasercamera_calibr.so  | Bin 221792 -> 275712 bytes
+ .../xout/_root/ava/lib/node_laserplane_calibr.so   | Bin 324008 -> 304336 bytes
+ .../xout/_root/ava/lib/node_lds.so                 | Bin 377640 -> 377640 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 115576 -> 115576 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 2063496 -> 2063496 bytes
+ .../xout/_root/ava/lib/node_linelaser_calibr.so}   | Bin 0 -> 128112 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 133096 -> 133096 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 1073712 -> 1073712 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 100088 -> 100088 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 1110192 -> 1114320 bytes
+ .../xout/_root/ava/lib/node_nemesis.so             | Bin 4067480 -> 4067480 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 78464 -> 78464 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 579776 -> 579776 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 144312 -> 144312 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 123520 -> 123520 bytes
+ .../xout/_root/etc/config/sensor_list_cfg.ini      |  22 +++++++++++++--------
+ .../xout/_root/etc/os-release                      |   4 ++--
+ .../xout/_root/misc/data.tar.bz2                   | Bin 556 -> 560 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 183888 -> 183888 bytes
+ .../xout/_root/usr/lib/libAWIspApi.so              | Bin 6528 -> 7000 bytes
+ .../xout/_root/usr/lib/libiniparser.so             | Bin 14912 -> 14912 bytes
+ .../xout/_root/usr/lib/libisp.so                   | Bin 600080 -> 610576 bytes
+ .../xout/_root/usr/lib/libisp_dev.so               | Bin 38856 -> 39760 bytes
+ .../xout/_root/usr/lib/libisp_ini.so               | Bin 1446688 -> 1794512 bytes
+ .../xout/_root/usr/lib/libisp_math.so              | Bin 14744 -> 14744 bytes
+ .../usr/lib/modules/4.9.191/external/8723ds.ko     | Bin 2228888 -> 3132944 bytes
+ .../lib/modules/4.9.191/external/ov8856_mipi.ko    | Bin 19936 -> 20032 bytes
+ .../lib/modules/4.9.191/external/sc031gs_mipi.ko   | Bin 23488 -> 23824 bytes
+ .../lib/modules/4.9.191/external/sc035gs_mipi.ko}  | Bin 0 -> 25104 bytes
+ .../usr/lib/modules/4.9.191/external/vin_io.ko     | Bin 74368 -> 74944 bytes
+ .../usr/lib/modules/4.9.191/external/vin_v4l2.ko   | Bin 300744 -> 300968 bytes
+ .../usr/lib/tree_lib/libnemesis_tactics_tree.so    | Bin 1271800 -> 1271800 bytes
+ .../xout/_root/version_record                      |  16 +++++++--------
+ .../{4.3.3_1504 => 4.3.3_1606}/xout/kernel.img     | Bin 10684416 -> 10835968 bytes
+ .../{4.3.3_1504 => 4.3.3_1606}/xout/mcu.bin        | Bin 163936 -> 163936 bytes
+ .../{4.3.3_1504 => 4.3.3_1606}/xout/toc1.fex       | Bin 1245184 -> 1245184 bytes
+ 51 files changed, 43 insertions(+), 20 deletions(-)

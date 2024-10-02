@@ -1,0 +1,41 @@
+Firmware diff for DEEBOT N8 (ecovacs.36xnxf)
+Old version: 1.1.5 New version: 1.2.0
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../{1.1.5 => 1.2.0}/xout/_root/etc/fw.manifest    |   4 +--
+ .../{1.1.5 => 1.2.0}/xout/_root/etc/rc.d/medusa.sh |   1 +
+ .../{1.1.5 => 1.2.0}/xout/_root/opt/data.tar.bz2   | Bin 422 -> 421 bytes
+ .../xout/_root/usr/bin/cjp.0.11.8}                 | Bin 6904 -> 6904 bytes
+ .../{1.1.5 => 1.2.0}/xout/_root/usr/bin/ecoSystem  | Bin 6928 -> 6928 bytes
+ .../xout/_root/usr/bin/mdsctl.0.1.0 => dev/null}   | Bin 15216 -> 0 bytes
+ .../1.2.0/xout/_root/usr/bin/mdsctl.0.1.1}         | Bin 0 -> 15336 bytes
+ .../xout/_root/usr/bin/medusa.0.1.0 => dev/null}   | Bin 30168 -> 0 bytes
+ .../1.2.0/xout/_root/usr/bin/medusa.0.1.1}         | Bin 0 -> 32520 bytes
+ .../xout/_root/usr/doc/_update.log                 |  33 ++++++++++++++----
+ .../usr/doc/cleanareareport.json => dev/null}      |  28 ----------------
+ .../usr/doc/cleanorderreport.json => dev/null}     |  28 ----------------
+ .../_root/usr/doc/cleanreport.json => dev/null}    |  28 ----------------
+ .../{1.1.5 => 1.2.0}/xout/_root/usr/doc/update.log |  26 +++++++--------
+ .../xout/_root/usr/lib/WHmethods/libWHmethods.so   | Bin 193816 -> 197944 bytes
+ .../xout/_root/usr/lib/libDeebot.so                | Bin 659576 -> 750688 bytes
+ .../_root/usr/lib/libcf.so.0.11.5 => dev/null}     | Bin 736360 -> 0 bytes
+ .../1.2.0/xout/_root/usr/lib/libcf.so.0.11.8}      | Bin 0 -> 740464 bytes
+ .../xout/_root/usr/lib/libcf_diff.so.0.0.1         | Bin 17264 -> 17264 bytes
+ .../xout/_root/usr/lib/libcommon.so.0.0.1          | Bin 17560 -> 17560 bytes
+ .../xout/_root/usr/lib/medusa/plug_audio.so        | Bin 48448 -> 48448 bytes
+ .../usr/lib/medusa/plug_buf_cmd_to_json_cmd.so     | Bin 8776 -> 9344 bytes
+ .../xout/_root/usr/lib/medusa/plug_cmd.so          | Bin 13912 -> 15352 bytes
+ .../xout/_root/usr/lib/medusa/plug_dev_status.so   | Bin 21792 -> 21792 bytes
+ .../xout/_root/usr/lib/medusa/plug_file_sink.so    | Bin 15224 -> 15224 bytes
+ .../xout/_root/usr/lib/medusa/plug_input_event.so  | Bin 9464 -> 9464 bytes
+ .../xout/_root/usr/lib/medusa/plug_log.so          | Bin 12000 -> 12000 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_ros_node.so  | Bin 81296 -> 81296 bytes
+ .../xout/_root/usr/lib/medusa/plug_network.so      | Bin 19856 -> 19856 bytes
+ .../xout/_root/usr/lib/medusa/plug_sys.so          | Bin 40728 -> 40728 bytes
+ .../xout/_root/usr/lib/medusa/plug_time.so         | Bin 21688 -> 22016 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     | Bin 397808 -> 414408 bytes
+ .../usr/lib/node/liberos_node_task_manager.so      | Bin 2088544 -> 2249472 bytes
+ .../{1.1.5 => 1.2.0}/xout/_root/version.json       |  37 +++------------------
+ .../{1.1.5 => 1.2.0}/xout/_root/version.txt        |  34 ++++---------------
+ 35 files changed, 54 insertions(+), 165 deletions(-)

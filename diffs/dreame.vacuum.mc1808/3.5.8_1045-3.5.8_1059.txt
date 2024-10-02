@@ -1,0 +1,21 @@
+Firmware diff for Mi Robot Vacuum-Mop (dreame.vacuum.mc1808)
+Old version: 3.5.8_1045 New version: 3.5.8_1059
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/conf/p1904.conf                 |   2 +-
+ .../xout/_root/ava/lib/node_calibr.so              | Bin 193540 -> 193532 bytes
+ .../xout/_root/ava/lib/node_tr_vslam.so            | Bin 66264 -> 66292 bytes
+ .../xout/_root/ava/lib/node_tracecheck.so          | Bin 38140 -> 38116 bytes
+ .../xout/_root/ava/lib/node_vision.so              | Bin 1907852 -> 1909684 bytes
+ .../xout/_root/etc/init.d/play_boot_music.sh       |   5 +++
+ .../xout/_root/etc/os-release                      |   4 +--
+ .../xout/_root/etc/rc.d/monitor.sh                 |  34 +++++++++++++++---
+ .../xout/_root/misc/data.tar.bz2                   | Bin 597 -> 590 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/config                      |   1 +
+ .../xout/_root/usr/bin/factory_reset.sh            |  40 +++++++++++++++++----
+ .../xout/_root/usr/bin/restart_ava.sh              |   8 +++--
+ .../_root/usr/lib/tree_lib/libcleanbot_pro_tree.so | Bin 6422276 -> 6439292 bytes
+ .../xout/_root/usr/lib/tree_lib/libroute_nodes.so  | Bin 2074544 -> 2074368 bytes
+ 15 files changed, 78 insertions(+), 18 deletions(-)

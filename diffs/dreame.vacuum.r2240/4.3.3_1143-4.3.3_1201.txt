@@ -1,0 +1,20 @@
+Firmware diff for D10s Plus (dreame.vacuum.r2240)
+Old version: 4.3.3_1143 New version: 4.3.3_1201
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_ai_area_recognition.so | Bin 617440 -> 621872 bytes
+ .../xout/_root/ava/lib/node_camera_ai.so           | Bin 644008 -> 644016 bytes
+ .../xout/_root/ava/lib/node_camera_streamer.so     | Bin 377000 -> 377000 bytes
+ .../xout/_root/etc/os-release                      |   4 ++--
+ .../xout/_root/misc/data.tar.bz2                   | Bin 587 -> 573 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/dreameiot                   | Bin 44448 -> 44448 bytes
+ .../xout/_root/usr/bin/video_monitor               | Bin 2549232 -> 2549232 bytes
+ .../4.3.3_1201/xout/_root/usr/lib/libsmp_shm.so}   | Bin 0 -> 40760 bytes
+ .../_root/usr/lib/tree_lib/libmimas_route_nodes.so | Bin 10994480 -> 10998576 bytes
+ .../xout/_root/usr/lib/tree_lib/libmimas_tree.so   | Bin 4019632 -> 4018376 bytes
+ .../xout/_root/version_record                      |   4 ++--
+ .../{4.3.3_1143 => 4.3.3_1201}/xout/kernel.img     | Bin 10684416 -> 10684416 bytes
+ .../{4.3.3_1143 => 4.3.3_1201}/xout/toc1.fex       | Bin 1245184 -> 1245184 bytes
+ 14 files changed, 5 insertions(+), 5 deletions(-)

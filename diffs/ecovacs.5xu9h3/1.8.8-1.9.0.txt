@@ -1,0 +1,19 @@
+Firmware diff for GOAT G1 (ecovacs.5xu9h3)
+Old version: 1.8.8 New version: 1.9.0
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../{1.8.8 => 1.9.0}/xout/_root/etc/fw.manifest    |   6 +++---
+ .../{1.8.8 => 1.9.0}/xout/_root/opt/data.tar.bz2   | Bin 4223 -> 4225 bytes
+ .../xout/_root/usr/lib/libeco_navi.so              | Bin 2394392 -> 2398856 bytes
+ .../xout/_root/usr/lib/libeco_vslam.so             | Bin 3865888 -> 3873072 bytes
+ .../5.10.66/kernel/drivers/bluetooth/bfusb.ko      | Bin 618336 -> 618320 bytes
+ .../5.10.66/kernel/drivers/bluetooth/btbcm.ko      | Bin 558176 -> 558160 bytes
+ .../5.10.66/kernel/drivers/bluetooth/btintel.ko    | Bin 622160 -> 622144 bytes
+ .../5.10.66/kernel/drivers/bluetooth/btrtl.ko      | Bin 544512 -> 544496 bytes
+ .../5.10.66/kernel/drivers/bluetooth/btusb.ko      | Bin 1075096 -> 1075080 bytes
+ .../kernel/drivers/media/spi/cxd2880-spi.ko        | Bin 475760 -> 475744 bytes
+ .../lib/modules/5.10.66/modules.builtin.alias.bin} | Bin 0 -> 50929 bytes
+ .../lib/modules/5.10.66/modules.builtin.modinfo    | Bin 154399 -> 154401 bytes
+ .../_root/usr/lib/modules/5.10.66/modules.devname  |   1 -
+ 13 files changed, 3 insertions(+), 4 deletions(-)

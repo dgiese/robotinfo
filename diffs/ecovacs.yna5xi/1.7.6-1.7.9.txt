@@ -1,0 +1,50 @@
+Firmware diff for DEEBOT OZMO 950 Series (ecovacs.yna5xi)
+Old version: 1.7.6 New version: 1.7.9
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/conf/medusa/deebot_dx3.conf     |   1 +
+ .../xout/_root/etc/conf/medusa/fw_reboot.sh        |   1 +
+ .../xout/_root/etc/conf/medusa/get_audio_help.sh   |   6 +-
+ .../conf/medusa/mapInteraction.conf => dev/null}   |   9 -
+ .../{1.7.6 => 1.7.9}/xout/_root/etc/fw.manifest    |   4 +-
+ .../{1.7.6 => 1.7.9}/xout/_root/etc/rc.d/medusa.sh |   2 +
+ .../xout/_root/etc/rc.d/start_ap.sh                |  16 +-
+ .../xout/_root/media/music/RU/105.ogg => dev/null} | Bin 51324 -> 0 bytes
+ .../xout/_root/media/music/RU/106.ogg => dev/null} | Bin 61596 -> 0 bytes
+ .../xout/_root/media/music/RU/110.ogg => dev/null} | Bin 26561 -> 0 bytes
+ .../xout/_root/media/music/RU/111.ogg => dev/null} | Bin 27081 -> 0 bytes
+ .../xout/_root/media/music/RU/112.ogg => dev/null} | Bin 25124 -> 0 bytes
+ .../xout/_root/media/music/RU/113.ogg => dev/null} | Bin 26617 -> 0 bytes
+ .../xout/_root/media/music/RU/133.ogg => dev/null} | Bin 32287 -> 0 bytes
+ .../xout/_root/media/music/RU/134.ogg => dev/null} | Bin 38580 -> 0 bytes
+ .../xout/_root/media/music/RU/135.ogg => dev/null} | Bin 34542 -> 0 bytes
+ .../xout/_root/media/music/RU/136.ogg => dev/null} | Bin 58638 -> 0 bytes
+ .../xout/_root/media/music/RU/137.ogg => dev/null} | Bin 27709 -> 0 bytes
+ .../xout/_root/media/music/RU/138.ogg => dev/null} | Bin 41228 -> 0 bytes
+ .../xout/_root/media/music/RU/139.ogg => dev/null} | Bin 48546 -> 0 bytes
+ .../xout/_root/media/music/RU/140.ogg => dev/null} | Bin 45258 -> 0 bytes
+ .../xout/_root/media/music/RU/30.ogg => dev/null}  | Bin 17275 -> 0 bytes
+ .../xout/_root/media/music/RU/4.ogg => dev/null}   | Bin 28775 -> 0 bytes
+ .../xout/_root/media/music/RU/55.ogg => dev/null}  | Bin 44463 -> 0 bytes
+ .../xout/_root/media/music/RU/6.ogg => dev/null}   | Bin 33034 -> 0 bytes
+ .../xout/_root/media/music/RU/73.ogg => dev/null}  | Bin 67858 -> 0 bytes
+ .../{1.7.6 => 1.7.9}/xout/_root/opt/data.tar.bz2   | Bin 341 -> 344 bytes
+ .../xout/_root/usr/bin/factory_reset.sh            |   1 +
+ .../{1.7.6 => 1.7.9}/xout/_root/usr/bin/mack       | Bin 5296 -> 5296 bytes
+ .../usr/bin/map_download_progress.sh => dev/null}  |  85 ----------
+ .../xout/_root/usr/bin/map_upload.sh => dev/null}  | 186 ---------------------
+ .../xout/_root/usr/bin/wifi_daemon                 | Bin 17528 -> 18444 bytes
+ .../xout/_root/usr/lib/libDeebot.so                | Bin 516324 -> 532736 bytes
+ .../xout/_root/usr/lib/libcommon.so.0.0.1          | Bin 12912 -> 13012 bytes
+ .../xout/_root/usr/lib/librobot_side_cxx.so        | Bin 30556 -> 31008 bytes
+ .../xout/_root/usr/lib/medusa/plug_audio_new.so    | Bin 44200 -> 44240 bytes
+ .../plug_medusa_mapInteraction.so => dev/null}     | Bin 21644 -> 0 bytes
+ .../medusa/plug_medusa_plugin_big_data_transfer.so | Bin 56768 -> 47260 bytes
+ .../_root/usr/lib/medusa/plug_medusa_plugin_map.so | Bin 139312 -> 139328 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_task_erg.so  | Bin 82680 -> 84244 bytes
+ .../lib/medusa/plug_medusa_plugin_task_ergodic.so  | Bin 345216 -> 332852 bytes
+ .../lib/medusa/plug_medusa_plugin_wifiHandler.so   | Bin 348048 -> 352144 bytes
+ .../xout/_root/usr/lib/medusa/plug_mmi_periph.so   | Bin 519784 -> 526568 bytes
+ .../{1.7.6 => 1.7.9}/xout/_root/version.txt        |  12 +-
+ 44 files changed, 32 insertions(+), 291 deletions(-)

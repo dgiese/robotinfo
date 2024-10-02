@@ -1,0 +1,28 @@
+Firmware diff for Roborock S7 (roborock.vacuum.a15)
+Old version: 4.1.2_0798 New version: 4.1.2_0816
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/OS_VERSION                      |   8 ++++----
+ .../xout/_root/etc/os-release                      |   2 +-
+ .../xout/_root/etc/rr-info                         |   2 +-
+ .../xout/_root/lib/modules/3.4.39/8189es.ko        | Bin 2208812 -> 2208812 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 301392 -> 301392 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 66048 -> 66048 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../_root/opt/rockrobo/cleaner/bin/RoboController  | Bin 273464 -> 273464 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerM | Bin 339464 -> 339464 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerR | Bin 273464 -> 273464 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 3048188 -> 3048188 bytes
+ .../rockrobo/firmware/bin/CARPET_FIRMWARE_MATCH    |   2 +-
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ ..._TANOS-S_CARPET_GD330_C0.6_20210203-195425.bin} | Bin 16384 -> 16384 bytes
+ ....A3.G1_M4.0.1_RELEASE_20210203-195926_FULL.bin} | Bin 217072 -> 217072 bytes
+ ...A3_M4.0.1_RELEASE_20210203-195757_INV_FULL.bin} | Bin 217072 -> 217072 bytes
+ .../rockrobo/firmware/uart_test-4.0.1-20210203}    | Bin 584712 -> 584712 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_rr         | Bin 190804 -> 190804 bytes
+ .../xout/bootout_aboot/zImage                      | Bin 3829344 -> 3829336 bytes
+ .../xout/bootout_aboot/zImage_4.1.2_0816.elf}      | Bin 9991680 -> 9991680 bytes
+ .../{4.1.2_0798 => 4.1.2_0816}/xout/kernel.img     | Bin 3831808 -> 3831808 bytes
+ 22 files changed, 10 insertions(+), 10 deletions(-)

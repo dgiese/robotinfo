@@ -1,0 +1,13 @@
+Firmware diff for DEEBOT OZMO T8 AIVI (ecovacs.x5d34r)
+Old version: 1.11.5 New version: 1.11.8
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../{1.11.5 => 1.11.8}/xout/_root/etc/fw.manifest  |   4 ++--
+ .../{1.11.5 => 1.11.8}/xout/_root/opt/data.tar.bz2 | Bin 414 -> 409 bytes
+ .../xout/_root/usr/lib/libfile_io.so               | Bin 110920 -> 114104 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    | Bin 943984 -> 944432 bytes
+ .../xout/_root/usr/lib/rkisp/ae/librkisp_aec.so    | Bin 473264 -> 473392 bytes
+ .../{1.11.5 => 1.11.8}/xout/_root/version.json     |  20 ++++++++++----------
+ .../{1.11.5 => 1.11.8}/xout/_root/version.txt      |  16 ++++++++--------
+ 7 files changed, 20 insertions(+), 20 deletions(-)

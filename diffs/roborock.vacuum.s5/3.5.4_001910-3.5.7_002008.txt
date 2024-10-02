@@ -1,0 +1,5 @@
+Firmware diff for Roborock S5 (roborock.vacuum.s5)
+Old version: 3.5.4_001910 New version: 3.5.7_002008
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---

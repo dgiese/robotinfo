@@ -1,0 +1,64 @@
+Firmware diff for Mijia Self-Cleaning Robot Vacuum-Mop Pro (dreame.vacuum.p2149o)
+Old version: 4.1.8_1065 New version: 4.1.8_1086
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/audio/EN/107.ogg                    | Bin 25686 -> 25705 bytes
+ .../xout/_root/audio/EN/154.ogg => dev/null}       | Bin 36596 -> 0 bytes
+ .../4.1.8_1086/xout/_root/audio/EN/159.ogg}        | Bin 0 -> 33790 bytes
+ .../4.1.8_1086/xout/_root/audio/EN/160.ogg}        | Bin 0 -> 51654 bytes
+ .../4.1.8_1086/xout/_root/audio/EN/82.ogg}         | Bin 0 -> 22227 bytes
+ .../4.1.8_1086/xout/_root/audio/EN/84.ogg}         | Bin 0 -> 23725 bytes
+ .../xout/_root/audio/SYS/adb_usage_warn.ogg}       | Bin 0 -> 12793 bytes
+ .../xout/_root/audio/ZH/107.ogg                    | Bin 19546 -> 17504 bytes
+ .../xout/_root/audio/ZH/154.ogg => dev/null}       | Bin 32824 -> 0 bytes
+ .../4.1.8_1086/xout/_root/audio/ZH/159.ogg}        | Bin 0 -> 27759 bytes
+ .../4.1.8_1086/xout/_root/audio/ZH/160.ogg}        | Bin 0 -> 36877 bytes
+ .../4.1.8_1086/xout/_root/audio/ZH/82.ogg}         | Bin 0 -> 15348 bytes
+ .../4.1.8_1086/xout/_root/audio/ZH/84.ogg}         | Bin 0 -> 13872 bytes
+ .../xout/_root/ava/lib/node_clotho.so              | Bin 2083680 -> 2199728 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 73336 -> 77432 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 40648 -> 40648 bytes
+ .../xout/_root/ava/lib/node_health_clotho.so       | Bin 252552 -> 248432 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 124280 -> 124280 bytes
+ .../xout/_root/ava/lib/node_lds.so                 | Bin 181448 -> 181448 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 115560 -> 115560 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 2166944 -> 2205176 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 40896 -> 132920 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 770256 -> 824312 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 94376 -> 94376 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 904088 -> 904104 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 77936 -> 77936 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 200208 -> 200336 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 140184 -> 140184 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 106864 -> 106864 bytes
+ .../{4.1.8_1065 => 4.1.8_1086}/xout/_root/bin/adbd | Bin 111208 -> 110704 bytes
+ .../xout/_root/etc/os-release                      |   6 ++---
+ .../xout/_root/etc/rc.d/miio.sh                    |   4 +++
+ .../xout/_root/etc/rc.d/monitor.sh                 |  16 ++++++++++--
+ .../xout/_root/misc/data.tar.bz2                   | Bin 643 -> 756 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/adbd_auth_service           | Bin 6664 -> 6664 bytes
+ .../xout/_root/usr/bin/ava                         | Bin 175872 -> 175872 bytes
+ .../_root/usr/bin/miio_client_helper_nomqtt.sh     |  29 ++++++++++++++++-----
+ .../xout/_root/usr/bin/wifi_cli                    | Bin 86888 -> 86968 bytes
+ .../xout/_root/usr/bin/wifi_conf_monitor.sh        |   8 +++---
+ .../xout/_root/usr/bin/wifi_connect                |   4 +--
+ .../xout/_root/usr/bin/wifi_manager                | Bin 245488 -> 245488 bytes
+ .../xout/_root/usr/bin/wifi_setup.sh               |   3 +++
+ .../xout/_root/usr/bin/ymodem_bs                   | Bin 15040 -> 15040 bytes
+ .../xout/_root/usr/lib/libawadbauth.so             | Bin 12376 -> 12344 bytes
+ .../usr/lib/modules/4.9.191/external/8723ds.ko     | Bin 3258176 -> 3258176 bytes
+ .../lib/modules/4.9.191/external/sc031gs_mipi.ko   | Bin 15672 -> 15672 bytes
+ .../4.9.191/external/videobuf2-dma-contig.ko       | Bin 18376 -> 18376 bytes
+ .../lib/modules/4.9.191/external/videobuf2-v4l2.ko | Bin 19848 -> 19848 bytes
+ .../usr/lib/modules/4.9.191/external/vin_io.ko     | Bin 74944 -> 74944 bytes
+ .../usr/lib/modules/4.9.191/external/vin_v4l2.ko   | Bin 273368 -> 273368 bytes
+ .../usr/lib/tree_lib/libclotho_route_nodes.so      | Bin 5847104 -> 5904992 bytes
+ .../usr/lib/tree_lib/libclotho_tactics_tree.so     | Bin 1572616 -> 1657416 bytes
+ .../xout/_root/usr/lib/tree_lib/libclotho_tree.so  | Bin 7905640 -> 8025768 bytes
+ .../xout/_root/version_record                      |  14 +++++-----
+ .../{4.1.8_1065 => 4.1.8_1086}/xout/kernel.img     | Bin 10313728 -> 10524672 bytes
+ .../{4.1.8_1065 => 4.1.8_1086}/xout/mcu.bin        | Bin 147756 -> 148844 bytes
+ .../{4.1.8_1065 => 4.1.8_1086}/xout/toc1.fex       | Bin 1196032 -> 1196032 bytes
+ 58 files changed, 60 insertions(+), 26 deletions(-)

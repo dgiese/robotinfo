@@ -1,0 +1,23 @@
+Firmware diff for DEEBOT X2 (ecovacs.lf3bn4)
+Old version: 1.70.0 New version: 1.75.0
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/conf/slam_node_config.json      |      3 +-
+ .../{1.70.0 => 1.75.0}/xout/_root/etc/fw.manifest  |      6 +-
+ .../{1.70.0 => 1.75.0}/xout/_root/opt/data.tar.bz2 |    Bin 4231 -> 4225 bytes
+ .../1.75.0/xout/_root/usr/lib/1.txt}               | 922780 ++++++++++++++++++
+ .../xout/_root/usr/lib/eros_node_postTunnel.pc     |      4 +-
+ .../xout/_root/usr/lib/libEdgeFollow.so            |    Bin 1002912 -> 1007192 bytes
+ .../xout/_root/usr/lib/libPerception.so            |    Bin 1225256 -> 1221160 bytes
+ .../xout/_root/usr/lib/libPln.so                   |    Bin 3664744 -> 3675048 bytes
+ .../xout/_root/usr/lib/libbigdata.so               |    Bin 191272 -> 198704 bytes
+ .../xout/_root/usr/lib/libjob_schedule_midware.so  |    Bin 3226264 -> 3259952 bytes
+ .../xout/_root/usr/lib/librl_navi.so               |    Bin 431352 -> 431352 bytes
+ .../_root/usr/lib/node/liberos_node_bigdata.so     |    Bin 1672592 -> 1702576 bytes
+ .../xout/_root/usr/lib/node/liberos_node_clean.so  |    Bin 1225984 -> 1234208 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    |    Bin 2183936 -> 2205032 bytes
+ .../_root/usr/lib/node/liberos_node_postTunnel.so  |    Bin 1119000 -> 1176456 bytes
+ .../xout/_root/usr/lib/node/liberos_node_return.so |    Bin 487976 -> 496240 bytes
+ .../xout/_root/usr/lib/node/liberos_node_slam.so   |    Bin 715304 -> 715352 bytes
+ 17 files changed, 922787 insertions(+), 6 deletions(-)

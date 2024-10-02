@@ -1,0 +1,56 @@
+Firmware diff for MOVA Z500 Robot Vacuum and Mop Cleaner (dreame.vacuum.p2156o)
+Old version: 3.5.8_1011 New version: 3.5.8_1018
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_calibr.so              | Bin 214152 -> 214144 bytes
+ .../xout/_root/ava/lib/node_camera.so              | Bin 88860 -> 88924 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 242192 -> 62464 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 28412 -> 29736 bytes
+ .../xout/_root/ava/lib/node_health_hypnos.so       | Bin 102652 -> 102664 bytes
+ .../xout/_root/ava/lib/node_hypnos.so              | Bin 651272 -> 651272 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 91256 -> 91400 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 30888 -> 30888 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 422028 -> 417924 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 70856 -> 71992 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 700696 -> 700696 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 65020 -> 65036 bytes
+ .../xout/_root/ava/lib/node_signal_tab.so          | Bin 129928 -> 130016 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 105052 -> 105052 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 94192 -> 94272 bytes
+ .../xout/_root/ava/lib/node_tracecheck.so          | Bin 44320 -> 44320 bytes
+ .../xout/_root/ava/lib/node_vision.so              | Bin 1934372 -> 1934452 bytes
+ .../xout/_root/ava/script/get_size.sh              |   9 +++++++++
+ .../xout/_root/etc/os-release                      |   6 +++---
+ .../xout/_root/etc/rc.d/msg_trans.sh               |   8 ++++++--
+ .../xout/_root/misc/data.tar.bz2                   | Bin 723 -> 607 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 551304 -> 135096 bytes
+ .../xout/_root/usr/bin/avacmd                      | Bin 6632 -> 5884 bytes
+ .../xout/_root/usr/bin/exec_proc                   | Bin 14252 -> 8196 bytes
+ .../_root/usr/bin/miio_client_helper_nomqtt.sh     |   2 +-
+ .../xout/_root/usr/bin/msg_trans                   | Bin 19240 -> 18600 bytes
+ .../3.5.8_1018/xout/_root/usr/lib/libRakNetDLL.so} | Bin 0 -> 1795040 bytes
+ .../xout/_root/usr/lib/libbehaviortree_cpp.so      | Bin 1641992 -> 1641992 bytes
+ .../xout/_root/usr/lib/libmessenger.so             | Bin 43060 -> 43060 bytes
+ .../xout/_root/usr/lib/libopencv_calib3d.so.4.2.0  | Bin 1357212 -> 1357328 bytes
+ .../xout/_root/usr/lib/libopencv_core.so.4.2.0     | Bin 2659668 -> 2606388 bytes
+ .../_root/usr/lib/libopencv_features2d.so.4.2.0    | Bin 581000 -> 581000 bytes
+ .../xout/_root/usr/lib/libopencv_flann.so.4.2.0    | Bin 256656 -> 256684 bytes
+ .../_root/usr/lib/libopencv_imgcodecs.so.4.2.0     | Bin 1575860 -> 281364 bytes
+ .../xout/_root/usr/lib/libopencv_imgproc.so.4.2.0  | Bin 2696840 -> 2675392 bytes
+ .../xout/_root/usr/lib/libopencv_video.so.4.2.0    | Bin 379004 -> 379116 bytes
+ .../usr/lib/libopencv_videoio.so => dev/null}      |   0
+ .../usr/lib/libopencv_videoio.so.4.2 => dev/null}  |   0
+ .../lib/libopencv_videoio.so.4.2.0 => dev/null}    | Bin 324136 -> 0 bytes
+ .../xout/_root/usr/lib/libopencv_ximgproc.so.4.2.0 | Bin 1089076 -> 1089076 bytes
+ .../xout/_root/usr/lib/libprotobuf-lite.so.3.6.1   | Bin 299780 -> 299780 bytes
+ .../xout/_root/usr/lib/libprotobuf.so.3.6.1        | Bin 2213524 -> 2213524 bytes
+ .../xout/_root/usr/lib/libprotobuf_msg.so          | Bin 102272 -> 102272 bytes
+ .../xout/_root/usr/lib/libprotoc.so.3.6.1          | Bin 2116192 -> 2116192 bytes
+ .../usr/lib/tree_lib/libhypnos_route_nodes.so      | Bin 3399432 -> 3399416 bytes
+ .../usr/lib/tree_lib/libhypnos_tactics_tree.so     | Bin 759312 -> 762336 bytes
+ .../xout/_root/usr/lib/tree_lib/libhypnos_tree.so  | Bin 14711056 -> 14711056 bytes
+ .../xout/_root/version_record                      |  11 +++++------
+ .../{3.5.8_1011 => 3.5.8_1018}/xout/mcu.bin        | Bin 115280 -> 118328 bytes
+ 50 files changed, 25 insertions(+), 13 deletions(-)

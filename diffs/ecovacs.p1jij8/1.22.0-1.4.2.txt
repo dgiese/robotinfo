@@ -1,0 +1,127 @@
+Firmware diff for DEEBOT T20 OMNI (ecovacs.p1jij8)
+Old version: 1.22.0 New version: 1.4.2
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/conf/dxai_node.json             |   4 -
+ .../xout/_root/etc/conf/medusa/deebot_k960.conf    |  16 +-
+ .../xout/_root/etc/conf/medusa/fw_reboot.sh        |  19 +--
+ .../_root/etc/conf/medusa/xmpp_server_status.sh    |   4 +-
+ .../_root/etc/conf/pln_config.json => dev/null}    |  92 ----------
+ .../xout/_root/etc/conf/speech_inter.conf          |   2 +-
+ .../{1.22.0 => 1.4.2}/xout/_root/etc/fw.manifest   |   6 +-
+ .../{1.22.0 => 1.4.2}/xout/_root/etc/rc.d/dog.sh   |   1 -
+ .../xout/_root/etc/rc.d/speech_recognition.sh      |   2 +-
+ .../xout/_root/etc/rc.d/start_watchdog.sh          |   2 +-
+ .../xout/_root/etc/rc.d/time_sync.sh               |   6 +-
+ .../xout/_root/etc/rc.d/wifi-rtl8189ftv.sh         |   1 -
+ .../xout/_root/etc/wifi/netmon_hook.sh             |  21 +--
+ .../xout/_root/etc/wifi/station_ap.sh              |  14 +-
+ .../xout/_root/media/music/EN/120.ogg              | Bin 42219 -> 37933 bytes
+ .../xout/_root/media/music/EN/1651.ogg             | Bin 20296 -> 19570 bytes
+ .../xout/_root/media/music/EN/1652.ogg             | Bin 17281 -> 15136 bytes
+ .../xout/_root/media/music/EN/1655.ogg             | Bin 24634 -> 22398 bytes
+ .../xout/_root/media/music/EN/1656.ogg             | Bin 13056 -> 10570 bytes
+ .../xout/_root/media/music/EN/1657.ogg             | Bin 30790 -> 26805 bytes
+ .../xout/_root/media/music/EN/1665.ogg             | Bin 28331 -> 23123 bytes
+ .../xout/_root/media/music/EN/1674.ogg             | Bin 27644 -> 23051 bytes
+ .../_root/media/music/EN/1675.ogg => dev/null}     | Bin 20815 -> 0 bytes
+ .../_root/media/music/EN/1676.ogg => dev/null}     | Bin 19137 -> 0 bytes
+ .../_root/media/music/EN/1677.ogg => dev/null}     | Bin 19791 -> 0 bytes
+ .../_root/media/music/EN/1678.ogg => dev/null}     | Bin 15146 -> 0 bytes
+ .../_root/media/music/EN/1679.ogg => dev/null}     | Bin 15873 -> 0 bytes
+ .../_root/media/music/EN/1680.ogg => dev/null}     | Bin 17240 -> 0 bytes
+ .../_root/media/music/EN/1681.ogg => dev/null}     | Bin 16056 -> 0 bytes
+ .../_root/media/music/EN/1682.ogg => dev/null}     | Bin 18426 -> 0 bytes
+ .../_root/media/music/EN/1683.ogg => dev/null}     | Bin 12261 -> 0 bytes
+ .../_root/media/music/EN/1684.ogg => dev/null}     | Bin 13436 -> 0 bytes
+ .../_root/media/music/EN/1685.ogg => dev/null}     | Bin 12402 -> 0 bytes
+ .../_root/media/music/EN/1686.ogg => dev/null}     | Bin 14668 -> 0 bytes
+ .../_root/media/music/EN/1687.ogg => dev/null}     | Bin 17093 -> 0 bytes
+ .../_root/media/music/EN/1688.ogg => dev/null}     | Bin 17587 -> 0 bytes
+ .../_root/media/music/EN/1689.ogg => dev/null}     | Bin 16510 -> 0 bytes
+ .../_root/media/music/EN/1690.ogg => dev/null}     | Bin 17003 -> 0 bytes
+ .../_root/media/music/EN/1691.ogg => dev/null}     | Bin 17757 -> 0 bytes
+ .../_root/media/music/EN/1692.ogg => dev/null}     | Bin 16917 -> 0 bytes
+ .../_root/media/music/EN/1693.ogg => dev/null}     | Bin 18889 -> 0 bytes
+ .../_root/media/music/EN/1694.ogg => dev/null}     | Bin 53436 -> 0 bytes
+ .../_root/media/music/EN/1695.ogg => dev/null}     | Bin 13120 -> 0 bytes
+ .../_root/media/music/EN/1696.ogg => dev/null}     | Bin 12490 -> 0 bytes
+ .../_root/media/music/EN/1697.ogg => dev/null}     | Bin 15474 -> 0 bytes
+ .../_root/media/music/EN/1698.ogg => dev/null}     | Bin 18648 -> 0 bytes
+ .../_root/media/music/EN/1699.ogg => dev/null}     | Bin 24238 -> 0 bytes
+ .../xout/_root/media/music/EN/177.ogg              | Bin 11412 -> 11456 bytes
+ .../_root/media/music/EN/1790.ogg => dev/null}     | Bin 17916 -> 0 bytes
+ .../_root/media/music/EN/1791.ogg => dev/null}     | Bin 25197 -> 0 bytes
+ .../xout/_root/media/music/EN/249.ogg              | Bin 40912 -> 15222 bytes
+ .../xout/_root/media/music/EN/275.ogg              | Bin 15859 -> 14416 bytes
+ .../xout/_root/media/music/EN/276.ogg              | Bin 12553 -> 10550 bytes
+ .../xout/_root/media/music/EN/284.ogg => dev/null} | Bin 15497 -> 0 bytes
+ .../_root/media/music/ZH/1073.ogg => dev/null}     | Bin 11994 -> 0 bytes
+ .../_root/media/music/ZH/1648.ogg => dev/null}     | Bin 10339 -> 0 bytes
+ .../_root/media/music/ZH/1675.ogg => dev/null}     | Bin 11892 -> 0 bytes
+ .../xout/_root/media/music/ZH/249.ogg              | Bin 19730 -> 10919 bytes
+ .../xout/_root/media/music/ZH/284.ogg => dev/null} | Bin 8480 -> 0 bytes
+ .../{1.22.0 => 1.4.2}/xout/_root/opt/data.tar.bz2  | Bin 3950 -> 3946 bytes
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 2113264 -> 2082256 bytes
+ .../{1.22.0 => 1.4.2}/xout/_root/opt/sl.bin        | Bin 35217 -> 35964 bytes
+ .../xout/_root/opt/station/mcu.json                |   2 +-
+ .../xout/_root/opt/station/mcu_station.bin         | Bin 106668 -> 101820 bytes
+ .../xout/_root/usr/bin/audio_record                | Bin 11528 -> 11752 bytes
+ .../{1.22.0 => 1.4.2}/xout/_root/usr/bin/ecoSystem | Bin 6928 -> 6928 bytes
+ .../xout/_root/usr/bin/factory_fun                 |   5 +-
+ .../{1.22.0 => 1.4.2}/xout/_root/usr/bin/fw_cut.sh |  49 +-----
+ .../xout/_root/usr/bin/fw_upgrade.sh               |  44 +++--
+ .../xout/_root/usr/bin/net_test.sh => dev/null}    |  70 --------
+ .../xout/_root/usr/bin/netmon_ctl                  | Bin 11168 -> 11168 bytes
+ .../{1.22.0 => 1.4.2}/xout/_root/usr/bin/reboot.sh |   3 -
+ .../{1.22.0 => 1.4.2}/xout/_root/usr/bin/scan_ap   | Bin 77760 -> 77760 bytes
+ .../xout/_root/usr/bin/speech_inter_client         | Bin 626344 -> 626344 bytes
+ .../xout/_root/usr/bin/speech_mute_notify          | Bin 27960 -> 27960 bytes
+ .../xout/_root/usr/bin/speech_sleep                | Bin 69224 -> 69216 bytes
+ .../{1.22.0 => 1.4.2}/xout/_root/usr/bin/udisk.sh  |   6 -
+ .../xout/_root/usr/bin/wifi_repair.sh => dev/null} | 190 ---------------------
+ .../xout/_root/usr/bin/wifi_service                | Bin 120272 -> 118720 bytes
+ .../_root/usr/lib/WHmethods/libWHMapMethods.so     | Bin 237696 -> 233600 bytes
+ .../xout/_root/usr/lib/WHmethods/libWHWbMethods.so | Bin 184032 -> 180960 bytes
+ .../xout/_root/usr/lib/WHmethods/libWHmethods.so   | Bin 554496 -> 546376 bytes
+ .../_root/usr/lib/eros_node_RobotInfoCollect.pc    |   4 +-
+ .../xout/_root/usr/lib/eros_node_job_schedule.pc   |   4 +-
+ .../xout/_root/usr/lib/eros_node_lifespan.pc       |   4 +-
+ .../xout/_root/usr/lib/eros_node_map.pc            |   4 +-
+ .../xout/_root/usr/lib/eros_node_omni.pc           |   4 +-
+ .../xout/_root/usr/lib/eros_node_postTunnel.pc     |   4 +-
+ .../xout/_root/usr/lib/eros_node_setting.pc        |   4 +-
+ .../xout/_root/usr/lib/libDeebot.so                | Bin 134600 -> 134600 bytes
+ .../xout/_root/usr/lib/libEcoRobot.so              | Bin 32184 -> 36192 bytes
+ .../{1.22.0 => 1.4.2}/xout/_root/usr/lib/libPln.so | Bin 3786832 -> 3786136 bytes
+ .../xout/_root/usr/lib/libcf_diff.so.0.0.1         | Bin 17232 -> 17232 bytes
+ .../xout/_root/usr/lib/libcommon.so.0.0.1          | Bin 18152 -> 18072 bytes
+ .../xout/_root/usr/lib/liberos_pb_msg.so           | Bin 298408 -> 298408 bytes
+ .../xout/_root/usr/lib/libjob_schedule_midware.so  | Bin 4543872 -> 4462336 bytes
+ .../xout/_root/usr/lib/librelocation.so            | Bin 57424 -> 57424 bytes
+ .../xout/_root/usr/lib/medusa/plug_audio.so        | Bin 48400 -> 48400 bytes
+ .../xout/_root/usr/lib/medusa/plug_dev_status.so   | Bin 29320 -> 29328 bytes
+ .../xout/_root/usr/lib/medusa/plug_input_event.so  | Bin 9432 -> 9432 bytes
+ .../xout/_root/usr/lib/medusa/plug_log.so          | Bin 11968 -> 11968 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_mcuota.so    | Bin 17176 -> 17472 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_ros_node.so  | Bin 151576 -> 141152 bytes
+ .../xout/_root/usr/lib/medusa/plug_network.so      | Bin 34088 -> 28464 bytes
+ .../xout/_root/usr/lib/medusa/plug_sys.so          | Bin 46088 -> 46088 bytes
+ .../xout/_root/usr/lib/medusa/plug_time.so         | Bin 24872 -> 24872 bytes
+ .../usr/lib/modules/4.4.185/external/rtl8189.ko    | Bin 2861272 -> 2740576 bytes
+ .../xout/_root/usr/lib/nlp/libeis_wakeup.so        | Bin 1631840 -> 1502728 bytes
+ .../usr/lib/node/liberos_node_RobotInfoCollect.so  | Bin 1009568 -> 757568 bytes
+ .../xout/_root/usr/lib/node/liberos_node_alert.so  | Bin 198112 -> 221712 bytes
+ .../_root/usr/lib/node/liberos_node_bigdata.so     | Bin 2264128 -> 2198360 bytes
+ .../xout/_root/usr/lib/node/liberos_node_clean.so  | Bin 1138656 -> 1146840 bytes
+ .../usr/lib/node/liberos_node_hardware_platform.so | Bin 1373016 -> 1368776 bytes
+ .../usr/lib/node/liberos_node_job_schedule.so      | Bin 812240 -> 767048 bytes
+ .../_root/usr/lib/node/liberos_node_lifespan.so    | Bin 307520 -> 306904 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    | Bin 1783112 -> 1784824 bytes
+ .../xout/_root/usr/lib/node/liberos_node_omni.so   | Bin 489304 -> 481080 bytes
+ .../_root/usr/lib/node/liberos_node_postTunnel.so  | Bin 797672 -> 801768 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     | Bin 840256 -> 824224 bytes
+ .../xout/_root/usr/lib/node/liberos_node_slam.so   | Bin 491368 -> 495472 bytes
+ .../xout/_root/usr/model/audiomodel/wakeup.conf    |  14 +-
+ 121 files changed, 75 insertions(+), 526 deletions(-)

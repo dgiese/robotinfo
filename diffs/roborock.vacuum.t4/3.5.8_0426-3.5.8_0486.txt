@@ -1,0 +1,60 @@
+Firmware diff for Roborock T4 (roborock.vacuum.t4)
+Old version: 3.5.8_0426 New version: 3.5.8_0486
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/boot/zImage                         | Bin 3886552 -> 3886400 bytes
+ .../xout/_root/etc/OS_VERSION                      |   8 ++++----
+ .../xout/_root/etc/init/S02network                 |   1 +
+ .../xout/_root/etc/inittab                         |   2 +-
+ .../xout/_root/etc/ld.so.cache                     | Bin 9702 -> 9619 bytes
+ .../xout/_root/etc/os-release                      |   2 +-
+ .../xout/_root/etc/rr-info                         |   2 +-
+ .../3.5.8_0486/xout/_root/etc/sysctl.conf}         |   5 +++++
+ .../xout/_root/lib/modules/3.4.39/8189es.ko        | Bin 2255632 -> 2255632 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 302224 -> 302256 bytes
+ .../xout/_root/lib/modules/3.4.39/st480.ko         | Bin 36744 -> 37204 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 66360 -> 66372 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../xout/_root/opt/rockrobo/cleaner/bin/AppProxy   | Bin 859736 -> 880240 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboController  | Bin 244656 -> 248764 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerM | Bin 310660 -> 314764 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerR | Bin 244656 -> 248764 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/SysUpdate  | Bin 105552 -> 105552 bytes
+ .../_root/opt/rockrobo/cleaner/lib/libblcommon.so  | Bin 9708 -> 9708 bytes
+ .../_root/opt/rockrobo/cleaner/lib/libroboipc.so   | Bin 48848 -> 48872 bytes
+ .../opt/rockrobo/cleaner/lib/librobopersist.so     | Bin 71964 -> 71964 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_chassis.so   | Bin 67524 -> 67524 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_compass.so   | Bin 26320 -> 26320 bytes
+ .../opt/rockrobo/cleaner/lib/librr_plugin_laser.so | Bin 63528 -> 63528 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_support.so   | Bin 9820 -> 9820 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrlocale.so  | Bin 203764 -> 203764 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrlog.so     | Bin 294556 -> 294556 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 2281232 -> 2314060 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrslamdrv.so | Bin 277076 -> 285296 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrutils.so   | Bin 9764 -> 9788 bytes
+ .../xout/_root/opt/rockrobo/cleaner/lib/libstat.so | Bin 328520 -> 361592 bytes
+ .../opt/rockrobo/cleaner/lib/libuart_api.so.4.0.0  | Bin 143472 -> 118740 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ .../_root/opt/rockrobo/firmware/img/McuVersion.txt |   6 +++---
+ ...M32.G1_M4.0.0_RELEASE_20201028-134217_FULL.bin} | Bin 215040 -> 215040 bytes
+ .../firmware/uart_test-4.0.0-20200623 => dev/null} | Bin 450336 -> 0 bytes
+ .../rockrobo/firmware/uart_test-4.0.0-20201028}    | Bin 0 -> 455496 bytes
+ .../opt/rockrobo/resources/sounds/en/sound.ver     |   2 +-
+ .../resources/sounds/en/sysupd_notready.wav        | Bin 128402 -> 174396 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_rr         | Bin 170292 -> 186704 bytes
+ .../xout/_root/opt/rockrobo/rriot/rriot_tuya       | Bin 648968 -> 640784 bytes
+ .../xout/_root/opt/rockrobo/rrlog/rrlogd           | Bin 275840 -> 279984 bytes
+ .../_root/opt/rockrobo/rrlog/tar_extra_file.sh     |  10 ++++++----
+ .../_root/opt/rockrobo/watchdog/ProcessList.conf   |   1 +
+ .../xout/_root/opt/rockrobo/watchdog/WatchDoge     | Bin 80196 -> 84296 bytes
+ .../xout/_root/opt/rockrobo/wlan/wifi_start.sh     |   4 ++--
+ .../xout/_root/opt/rockrobo/wlan/wlanmgr           | Bin 47120 -> 34776 bytes
+ .../3.5.8_0486/xout/_root/sbin/rr_login}           | Bin 0 -> 14084 bytes
+ .../xout/_root/usr/bin/adbd                        | Bin 493632 -> 76208 bytes
+ .../libpcap.so.0.8 => dev/null}                    |   0
+ .../libpcap.so.1.5.3 => dev/null}                  | Bin 174268 -> 0 bytes
+ .../xout/_root/usr/sbin/dropbear                   | Bin 149480 -> 137772 bytes
+ .../xout/_root/usr/sbin/tcpdump => dev/null}       | Bin 677920 -> 0 bytes
+ 54 files changed, 29 insertions(+), 20 deletions(-)

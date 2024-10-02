@@ -1,0 +1,18 @@
+Firmware diff for Roborock S8 Pro Ultra (roborock.vacuum.a70)
+Old version: 4.3.5_1366 New version: 4.3.5_1422
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/rr-info                         |   4 ++--
+ .../xout/_root/etc/signature                       | Bin 11864 -> 11864 bytes
+ .../xout/_root/lib/bash/Makefile.inc               |   4 ++--
+ .../xout/_root/lib/modules/4.9.191/8189fs.ko       | Bin 3149888 -> 3149888 bytes
+ .../xout/_root/lib/modules/4.9.191/pvrsrvkm.ko     | Bin 1810040 -> 1810168 bytes
+ .../xout/_root/lib/pkgconfig/bash.pc               |   4 ++--
+ .../xout/_root/usr/lib/libiniparser.a              | Bin 2048 -> 2048 bytes
+ .../xout/_root/usr/lib/libisp_dev.a                | Bin 51358 -> 51358 bytes
+ .../xout/_root/usr/lib/libisp_math.a               | Bin 23054 -> 23054 bytes
+ .../xout/_root/usr/lib/libstdc++.so.6.0.28-gdb.py  |   4 ++--
+ .../{4.3.5_1366 => 4.3.5_1422}/xout/boot/zImage    | Bin 21354508 -> 21354508 bytes
+ .../{4.3.5_1366 => 4.3.5_1422}/xout/kernel.img     | Bin 21362688 -> 21362688 bytes
+ 12 files changed, 8 insertions(+), 8 deletions(-)

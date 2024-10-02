@@ -1,0 +1,131 @@
+Firmware diff for Roborock Qrevo (roborock.vacuum.a75)
+Old version: 4.3.9_1952 New version: 4.3.9_1976
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/bin/busybox                         | Bin 256908 -> 256912 bytes
+ .../{4.3.9_1952 => 4.3.9_1976}/xout/_root/bin/free | Bin 13968 -> 13968 bytes
+ .../{4.3.9_1952 => 4.3.9_1976}/xout/_root/bin/kill | Bin 18148 -> 18148 bytes
+ .../xout/_root/bin/pgrep                           | Bin 18152 -> 18152 bytes
+ .../xout/_root/bin/pidof                           | Bin 9856 -> 9856 bytes
+ .../xout/_root/bin/pkill                           | Bin 18152 -> 18152 bytes
+ .../{4.3.9_1952 => 4.3.9_1976}/xout/_root/bin/pmap | Bin 9784 -> 9784 bytes
+ .../{4.3.9_1952 => 4.3.9_1976}/xout/_root/bin/ps   | Bin 63580 -> 63580 bytes
+ .../{4.3.9_1952 => 4.3.9_1976}/xout/_root/bin/top  | Bin 44008 -> 44008 bytes
+ .../xout/_root/bin/uptime                          | Bin 5692 -> 5692 bytes
+ .../xout/_root/bin/vmstat                          | Bin 18128 -> 18128 bytes
+ .../{4.3.9_1952 => 4.3.9_1976}/xout/_root/bin/w    | Bin 13984 -> 13984 bytes
+ .../xout/_root/bin/watch                           | Bin 10036 -> 10036 bytes
+ .../xout/_root/etc/rr-info                         |   2 +-
+ .../xout/_root/etc/signature                       | Bin 11644 -> 11612 bytes
+ .../xout/_root/lib/bash/Makefile.inc               |   4 ++--
+ .../xout/_root/lib/libc-2.31.so                    | Bin 922428 -> 922428 bytes
+ .../xout/_root/lib/libproc-3.2.8.so                | Bin 38768 -> 38768 bytes
+ .../xout/_root/lib/modules/3.4.39/8189fs.ko        | Bin 2151572 -> 2151572 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 280764 -> 280692 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 60448 -> 60424 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../xout/_root/opt/rockrobo/cleaner/bin/AppProxy   | Bin 1426180 -> 1495956 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboController  | Bin 508192 -> 524676 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerM | Bin 619260 -> 639840 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerR | Bin 229008 -> 233144 bytes
+ .../opt/rockrobo/cleaner/bin/RoboControllerSC      | Bin 541196 -> 557680 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/SysUpdate  | Bin 134168 -> 134168 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/rr_loader  | Bin 69760 -> 69816 bytes
+ .../opt/rockrobo/cleaner/lib/libNavUnitTest.so     | Bin 1231516 -> 1264280 bytes
+ .../opt/rockrobo/cleaner/lib/libcalibration.so     | Bin 1805360 -> 1813564 bytes
+ .../opt/rockrobo/cleaner/lib/libcarpetdetector.so  | Bin 26308 -> 26308 bytes
+ .../_root/opt/rockrobo/cleaner/lib/libroboipc.so   | Bin 73736 -> 77832 bytes
+ .../opt/rockrobo/cleaner/lib/librobopersist.so     | Bin 142068 -> 166752 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_chassis.so   | Bin 227908 -> 227908 bytes
+ .../opt/rockrobo/cleaner/lib/librr_plugin_laser.so | Bin 67560 -> 67560 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_logger.so    | Bin 5448 -> 5448 bytes
+ .../cleaner/lib/librr_plugin_structlight.so        | Bin 166568 -> 166568 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrlog.so     | Bin 298404 -> 302548 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 4971140 -> 5159644 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrslamdrv.so | Bin 437412 -> 486472 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrutils.so   | Bin 26168 -> 26168 bytes
+ .../xout/_root/opt/rockrobo/cleaner/lib/libstat.so | Bin 566492 -> 599776 bytes
+ .../opt/rockrobo/cleaner/lib/libuart_api.so.6.0.0  | Bin 358392 -> 358396 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ ...PEARL.A14.G1_M6.0.0_R_20240802-213340_FULL.bin} | Bin 524288 -> 524288 bytes
+ ..._PEARL.A3.G1_M6.0.0_R_20240802-213157_FULL.bin} | Bin 262144 -> 262144 bytes
+ .../rockrobo/firmware/robo_tool-6.0.0-20240802}    | Bin 1051768 -> 1055896 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_rr         | Bin 170048 -> 170048 bytes
+ .../xout/_root/opt/rockrobo/rrlog/rrlogd           | Bin 462772 -> 462800 bytes
+ .../xout/_root/opt/rockrobo/watchdog/WatchDoge     | Bin 88496 -> 88496 bytes
+ .../xout/_root/sbin/sysctl                         | Bin 14052 -> 14052 bytes
+ .../xout/_root/usr/bin/asn1Coding                  | Bin 9824 -> 9824 bytes
+ .../xout/_root/usr/bin/asn1Decoding                | Bin 9824 -> 9824 bytes
+ .../xout/_root/usr/bin/asn1Parser                  | Bin 9784 -> 9784 bytes
+ .../xout/_root/usr/bin/htop                        | Bin 98264 -> 98264 bytes
+ .../xout/_root/usr/bin/lsof                        | Bin 105640 -> 105640 bytes
+ .../xout/_root/usr/bin/lzmadec                     | Bin 9800 -> 9800 bytes
+ .../xout/_root/usr/bin/lzmainfo                    | Bin 9784 -> 9784 bytes
+ .../xout/_root/usr/bin/ntpdate                     | Bin 96288 -> 96288 bytes
+ .../xout/_root/usr/bin/opencv_annotation           | Bin 13996 -> 13996 bytes
+ .../_root/usr/bin/opencv_interactive-calibration   | Bin 59456 -> 59456 bytes
+ .../xout/_root/usr/bin/opencv_version              | Bin 18216 -> 18216 bytes
+ .../xout/_root/usr/bin/opencv_visualisation        | Bin 22248 -> 22248 bytes
+ .../xout/_root/usr/bin/pcregrep                    | Bin 27440 -> 27440 bytes
+ .../xout/_root/usr/bin/pcretest                    | Bin 42740 -> 42740 bytes
+ .../xout/_root/usr/bin/protoc                      | Bin 9808 -> 9808 bytes
+ .../xout/_root/usr/bin/xz                          | Bin 47316 -> 47316 bytes
+ .../xout/_root/usr/bin/xzdec                       | Bin 9800 -> 9800 bytes
+ .../xout/_root/usr/bin/zipcmp                      | Bin 10392 -> 14492 bytes
+ .../xout/_root/usr/bin/zipmerge                    | Bin 10316 -> 10316 bytes
+ .../xout/_root/usr/bin/ziptool                     | Bin 22784 -> 22780 bytes
+ .../xout/_root/usr/lib/libboost_atomic.so.1.72.0   | Bin 5372 -> 5420 bytes
+ .../xout/_root/usr/lib/libboost_chrono.so.1.72.0   | Bin 26180 -> 30324 bytes
+ .../_root/usr/lib/libboost_filesystem.so.1.72.0    | Bin 67632 -> 100656 bytes
+ .../xout/_root/usr/lib/libboost_graph.so.1.72.0    | Bin 199044 -> 418832 bytes
+ .../xout/_root/usr/lib/libboost_regex.so.1.72.0    | Bin 499804 -> 1066716 bytes
+ .../xout/_root/usr/lib/libboost_system.so.1.72.0   | Bin 5372 -> 5372 bytes
+ .../xout/_root/usr/lib/libboost_thread.so.1.72.0   | Bin 108828 -> 175300 bytes
+ .../xout/_root/usr/lib/libconfig++.so.9.2.0        | Bin 55512 -> 55512 bytes
+ .../xout/_root/usr/lib/libcrypto.so.1.1            | Bin 1587484 -> 1587484 bytes
+ .../xout/_root/usr/lib/libcurl.so.4.6.0            | Bin 253076 -> 253076 bytes
+ .../xout/_root/usr/lib/libglog.so.0.6.0            | Bin 76272 -> 92588 bytes
+ .../xout/_root/usr/lib/libgmpxx.so.4.5.2           | Bin 17976 -> 17976 bytes
+ .../xout/_root/usr/lib/libgnutls.so.30.27.0        | Bin 1113036 -> 1113036 bytes
+ .../xout/_root/usr/lib/libgnutlsxx.so.28.1.0       | Bin 43100 -> 43100 bytes
+ .../xout/_root/usr/lib/libkmod.so.2.3.4            | Bin 46848 -> 46848 bytes
+ .../xout/_root/usr/lib/libmbedcrypto.so.2.16.6     | Bin 237016 -> 241100 bytes
+ .../xout/_root/usr/lib/libmbedtls.so.2.16.6        | Bin 129140 -> 129140 bytes
+ .../xout/_root/usr/lib/libmbedx509.so.2.16.6       | Bin 100164 -> 100164 bytes
+ .../xout/_root/usr/lib/libmosquitto.so.1           | Bin 55360 -> 59464 bytes
+ .../xout/_root/usr/lib/libnl-genl-3.so.200.26.0    | Bin 14396 -> 14396 bytes
+ .../xout/_root/usr/lib/libnl-idiag-3.so.200.26.0   | Bin 26740 -> 26740 bytes
+ .../xout/_root/usr/lib/libnl-nf-3.so.200.26.0      | Bin 61748 -> 61748 bytes
+ .../xout/_root/usr/lib/libnl-route-3.so.200.26.0   | Bin 319732 -> 319732 bytes
+ .../xout/_root/usr/lib/libnl-xfrm-3.so.200.26.0    | Bin 52312 -> 52312 bytes
+ .../xout/_root/usr/lib/libogg.so => dev/null}      |   0
+ .../xout/_root/usr/lib/libogg.so.0 => dev/null}    |   0
+ .../_root/usr/lib/libogg.so.0.8.4 => dev/null}     | Bin 21904 -> 0 bytes
+ .../xout/_root/usr/lib/libopencv_aruco.so.3.4.2    | Bin 243692 -> 243692 bytes
+ .../xout/_root/usr/lib/libopencv_calib3d.so.3.4.2  | Bin 531784 -> 531784 bytes
+ .../xout/_root/usr/lib/libopencv_core.so.3.4.2     | Bin 1042816 -> 1042816 bytes
+ .../xout/_root/usr/lib/libopencv_dnn.so.3.4.2      | Bin 1358600 -> 1358600 bytes
+ .../_root/usr/lib/libopencv_features2d.so.3.4.2    | Bin 265096 -> 265096 bytes
+ .../xout/_root/usr/lib/libopencv_flann.so.3.4.2    | Bin 145868 -> 145868 bytes
+ .../xout/_root/usr/lib/libopencv_highgui.so.3.4.2  | Bin 26228 -> 26228 bytes
+ .../_root/usr/lib/libopencv_imgcodecs.so.3.4.2     | Bin 458364 -> 458364 bytes
+ .../xout/_root/usr/lib/libopencv_imgproc.so.3.4.2  | Bin 1178344 -> 1178344 bytes
+ .../usr/lib/libopencv_line_descriptor.so.3.4.2     | Bin 88432 -> 88432 bytes
+ .../xout/_root/usr/lib/libopencv_ml.so.3.4.2       | Bin 240552 -> 240552 bytes
+ .../xout/_root/usr/lib/libopencv_videoio.so.3.4.2  | Bin 63548 -> 63548 bytes
+ .../xout/_root/usr/lib/libopencv_ximgproc.so.3.4.2 | Bin 413336 -> 413336 bytes
+ .../xout/_root/usr/lib/libpcrecpp.so.0.0.1         | Bin 22192 -> 22192 bytes
+ .../xout/_root/usr/lib/libpcreposix.so.0.0.6       | Bin 5460 -> 5460 bytes
+ .../xout/_root/usr/lib/libprotobuf-lite.so.24.0.0  | Bin 373344 -> 373344 bytes
+ .../xout/_root/usr/lib/libprotobuf.so.24.0.0       | Bin 1665132 -> 1665132 bytes
+ .../xout/_root/usr/lib/libprotoc.so.24.0.0         | Bin 1349164 -> 1349164 bytes
+ .../xout/_root/usr/lib/libssh2.so.1.0.1            | Bin 137444 -> 137444 bytes
+ .../xout/_root/usr/lib/libstdc++.so.6.0.28         | Bin 1014496 -> 1014496 bytes
+ .../xout/_root/usr/lib/libzip.so.5.0               | Bin 55152 -> 59240 bytes
+ .../xout/_root/usr/lib/os-release                  |   2 +-
+ .../xout/bootout_aboot/zImage                      | Bin 3890072 -> 3890080 bytes
+ .../xout/bootout_aboot/zImage_4.3.9_1976.elf}      | Bin 10203656 -> 10203656 bytes
+ .../{4.3.9_1952 => 4.3.9_1976}/xout/kernel.img     | Bin 3893760 -> 3893760 bytes
+ 125 files changed, 7 insertions(+), 7 deletions(-)

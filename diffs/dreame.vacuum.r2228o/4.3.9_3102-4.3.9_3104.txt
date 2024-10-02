@@ -1,0 +1,36 @@
+Firmware diff for DreameBot L10s Ultra (dreame.vacuum.r2228o)
+Old version: 4.3.9_3102 New version: 4.3.9_3104
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_ai_area_recognition.so | Bin 621440 -> 621504 bytes
+ .../xout/_root/ava/lib/node_arges.so               | Bin 5971456 -> 5959168 bytes
+ .../xout/_root/ava/lib/node_camera_ai.so           | Bin 727360 -> 723392 bytes
+ .../xout/_root/ava/lib/node_cameracalibr_ai.so     | Bin 313352 -> 313352 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 73352 -> 73352 bytes
+ .../xout/_root/ava/lib/node_health_arges.so        | Bin 376928 -> 376928 bytes
+ .../_root/ava/lib/node_laser_point_extractor.so    | Bin 307992 -> 308152 bytes
+ .../xout/_root/ava/lib/node_laser_transfer.so      | Bin 2568784 -> 2577800 bytes
+ .../xout/_root/ava/lib/node_lasercamera_calibr.so  | Bin 275632 -> 275632 bytes
+ .../xout/_root/ava/lib/node_laserplane_calibr.so   | Bin 299600 -> 299776 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 115608 -> 115608 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 2358640 -> 2346936 bytes
+ .../xout/_root/ava/lib/node_linelaser_calibr.so    | Bin 128112 -> 128112 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 140376 -> 140392 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 1604896 -> 1605152 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 380840 -> 384912 bytes
+ .../xout/_root/ava/lib/node_snap.so                | Bin 263472 -> 263520 bytes
+ .../xout/_root/ava/lib/node_unical.so              | Bin 1497608 -> 1497816 bytes
+ .../xout/_root/etc/os-release                      |   6 +--
+ .../xout/_root/misc/data.tar.bz2                   | Bin 577 -> 575 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 190848 -> 190880 bytes
+ .../xout/_root/usr/bin/dreameiot                   | Bin 53096 -> 53096 bytes
+ .../xout/_root/usr/bin/exec_proc                   | Bin 15304 -> 15304 bytes
+ .../_root/usr/lib/tree_lib/libarges_route_nodes.so | Bin 12294888 -> 12295400 bytes
+ .../usr/lib/tree_lib/libarges_tactics_tree.so      | Bin 2016392 -> 2004168 bytes
+ .../xout/_root/version_record                      |  46 ++++++++++-----------
+ .../{4.3.9_3102 => 4.3.9_3104}/xout/kernel.img     | Bin 10835968 -> 10835968 bytes
+ .../{4.3.9_3102 => 4.3.9_3104}/xout/mcu.bin        | Bin 184752 -> 184800 bytes
+ .../{4.3.9_3102 => 4.3.9_3104}/xout/toc1.fex       | Bin 1245184 -> 1245184 bytes
+ 30 files changed, 27 insertions(+), 27 deletions(-)

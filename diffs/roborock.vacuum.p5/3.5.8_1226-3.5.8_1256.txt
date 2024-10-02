@@ -1,0 +1,32 @@
+Firmware diff for Roborock P5 (roborock.vacuum.p5)
+Old version: 3.5.8_1226 New version: 3.5.8_1256
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/OS_VERSION                      |   8 ++++----
+ .../xout/_root/etc/os-release                      |   2 +-
+ .../xout/_root/etc/rr-info                         |   2 +-
+ .../xout/_root/lib/modules/3.4.39/8189es.ko        | Bin 2255892 -> 2255892 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 302104 -> 302128 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 66316 -> 66340 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../xout/_root/opt/rockrobo/cleaner/bin/AppProxy   | Bin 888520 -> 888520 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboController  | Bin 236476 -> 236476 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerM | Bin 302476 -> 302476 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerR | Bin 236476 -> 236476 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_chassis.so   | Bin 63428 -> 63428 bytes
+ .../opt/rockrobo/cleaner/lib/librr_plugin_laser.so | Bin 59432 -> 59432 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 2396124 -> 2396124 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrutils.so   | Bin 9788 -> 9788 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ ....A3.G1_M4.0.1_RELEASE_20210514-145650_FULL.bin} | Bin 217072 -> 217072 bytes
+ ...A3_M4.0.1_RELEASE_20210514-145549_INV_FULL.bin} | Bin 217072 -> 217072 bytes
+ .../rockrobo/firmware/uart_test-4.0.1-20210514}    | Bin 493032 -> 493032 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_rr         | Bin 190808 -> 190808 bytes
+ .../xout/_root/opt/rockrobo/rrlog/rrlogd           | Bin 285220 -> 285220 bytes
+ .../xout/_root/opt/rockrobo/watchdog/WatchDoge     | Bin 80212 -> 80212 bytes
+ .../xout/bootout_aboot/zImage                      | Bin 3949432 -> 3949416 bytes
+ .../xout/bootout_aboot/zImage_3.5.8_1256.elf}      | Bin 10303078 -> 10303078 bytes
+ .../{3.5.8_1226 => 3.5.8_1256}/xout/kernel.img     | Bin 3952640 -> 3952640 bytes
+ 26 files changed, 9 insertions(+), 9 deletions(-)

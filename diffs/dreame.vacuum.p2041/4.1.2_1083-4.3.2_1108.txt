@@ -1,0 +1,435 @@
+Firmware diff for Mi Robot Vacuum-Mop 1T (dreame.vacuum.p2041)
+Old version: 4.1.2_1083 New version: 4.3.2_1108
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../4.3.2_1108/xout/_root/audio/TEST/37.ogg}       | Bin 0 -> 8606 bytes
+ .../4.3.2_1108/xout/_root/audio/TEST/38.ogg}       | Bin 0 -> 8439 bytes
+ .../4.3.2_1108/xout/_root/audio/TEST/39.ogg}       | Bin 0 -> 11554 bytes
+ .../4.3.2_1108/xout/_root/audio/TEST/40.ogg}       | Bin 0 -> 20938 bytes
+ .../4.3.2_1108/xout/_root/audio/TEST/BLEMEDIA.ogg} | Bin 0 -> 23199 bytes
+ .../_root/ava/conf/accum_config.json => dev/null}  | 114 ----
+ .../xout/_root/ava/conf/accum_config_2041.json     |  20 +-
+ .../xout/_root/ava/conf/ota.conf                   | 238 ++++----
+ .../xout/_root/ava/conf/p2041.conf                 |  10 +-
+ .../xout/_root/ava/lib/node_calibr.so              | Bin 239072 -> 239072 bytes
+ .../xout/_root/ava/lib/node_camera.so              | Bin 94640 -> 94688 bytes
+ .../xout/_root/ava/lib/node_camera_tof.so          | Bin 142800 -> 142864 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 65640 -> 65632 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 36464 -> 37608 bytes
+ .../xout/_root/ava/lib/node_health_nyx.so          | Bin 127176 -> 194888 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 98752 -> 98784 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 36392 -> 36416 bytes
+ .../xout/_root/ava/lib/node_map_accumulator.so     | Bin 798088 -> 918288 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 458192 -> 499776 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 77624 -> 77688 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 769400 -> 865584 bytes
+ .../xout/_root/ava/lib/node_nyx.so                 | Bin 798688 -> 930296 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 73608 -> 73632 bytes
+ .../xout/_root/ava/lib/node_signal_tab.so          | Bin 147232 -> 151328 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 120048 -> 123336 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 102992 -> 103856 bytes
+ .../_root/ava/lib/node_tof_extrinsic_calibrate.so  | Bin 369320 -> 373432 bytes
+ .../xout/_root/ava/lib/node_tracecheck.so          | Bin 53632 -> 53632 bytes
+ .../xout/_root/ava/lib/node_vision.so              | Bin 2145296 -> 2149088 bytes
+ .../xout/_root/ava/script/camera_test.sh           |  15 +-
+ .../xout/_root/ava/script/enchip_test.sh           |   8 +-
+ .../xout/_root/ava/script/fds_hook.sh              |  69 ++-
+ .../xout/_root/ava/script/gdb_attach_ava.sh}       |   6 +
+ .../4.3.2_1108/xout/_root/ava/script/gdb_cmd.txt}  |   6 +
+ .../xout/_root/ava/script/get_size.sh              |   4 +-
+ .../4.3.2_1108/xout/_root/ava/script/ivr_test.sh}  |  10 +
+ .../xout/_root/ava/script/led_test.sh              |  26 +-
+ .../xout/_root/ava/script/media_download.sh        |   4 +-
+ .../xout/_root/ava/script/media_service.sh         |  16 +-
+ .../xout/_root/ava/script/mediad_script.sh         |  16 +-
+ .../xout/_root/ava/script/msg_cvt.sh               | 103 +++-
+ .../xout/_root/ava/script/ota_arm_update.sh        |  83 +--
+ .../xout/_root/ava/script/ota_base_station.sh}     |  86 +++
+ .../xout/_root/ava/script/ota_dw_fw.sh             |  46 +-
+ .../xout/_root/ava/script/ota_link_lib.sh          |  18 +-
+ .../xout/_root/ava/script/ota_mcu_update.sh        |   2 -
+ .../xout/_root/ava/script/ota_unpack.sh            | 201 ++++---
+ .../xout/_root/ava/script/ota_watch_mcu_update.sh  |  26 +-
+ .../xout/_root/ava/script/rotpk_test.sh            |  28 +-
+ .../xout/_root/ava/script/sys_set_private.sh       |   3 +-
+ .../xout/_root/ava/script/wifi_test.sh             |   6 +-
+ .../{4.1.2_1083 => 4.3.2_1108}/xout/_root/bin/adbd | Bin 111176 -> 111208 bytes
+ .../xout/_root/etc/crontabs/root                   |   2 +-
+ .../xout/_root/etc/factory_reset.conf              |   2 +-
+ .../xout/_root/etc/init.d/factory_ap.sh            |  39 +-
+ .../xout/_root/etc/init.d/set_device_conf.sh       |   2 +-
+ .../xout/_root/etc/init.d/set_gpio.sh              |   2 +-
+ .../xout/_root/etc/init.d/tof_calibrate.sh         |   9 +
+ .../xout/_root/etc/init.d/wpa_supplicant.sh        |  34 +-
+ .../xout/_root/etc/os-release                      |   6 +-
+ .../xout/_root/etc/rc.d/factory_reset_daemon.sh    |   9 +
+ .../xout/_root/etc/rc.d/iot_sdk_monitor.sh}        |  43 ++
+ .../xout/_root/etc/rc.d/miio.sh                    | 122 ++--
+ .../xout/_root/etc/rc.d/miio_monitor.sh            |  27 +-
+ .../xout/_root/etc/rc.d/msg_trans.sh               |   6 +-
+ .../xout/_root/etc/rc.d/msg_trans_monitor.sh       | 228 +++++++-
+ .../xout/_root/etc/rc.d/wifi_manager.sh            |  23 +-
+ .../xout/_root/etc/rc.d/wifi_monitor.sh            |  61 +-
+ .../xout/_root/etc/rc.sysinit                      |   4 -
+ .../xout/_root/etc/rsyslog.conf                    |   5 +-
+ .../xout/_root/etc/wifi/hostapd.conf               |   4 +-
+ .../xout/_root/etc/wifi/udhcpc.sh => dev/null}     |  45 --
+ .../_root/etc/wifi/wifi_manager.json => dev/null}  |  10 -
+ .../4.3.2_1108/xout/_root/mi_iot_version}          |   1 +
+ .../xout/_root/misc/data.tar.bz2                   | Bin 630 -> 659 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/adbd_auth_service           | Bin 6664 -> 6664 bytes
+ .../xout/_root/usr/bin/autossh.sh => dev/null}     |  39 --
+ .../xout/_root/usr/bin/ava                         | Bin 150544 -> 150536 bytes
+ .../xout/_root/usr/bin/ava_crash_dog.sh            |   3 +-
+ .../4.3.2_1108/xout/_root/usr/bin/boardconfig}     |   3 +
+ .../xout/_root/usr/bin/change_internal_user.sh     |  20 +-
+ .../_root/usr/bin/check_release_silent_upgrade.sh} |  40 ++
+ .../xout/_root/usr/bin/check_silent_upgrade.sh     | 100 +---
+ .../xout/_root/usr/bin/config                      |  24 +-
+ .../xout/_root/usr/bin/do_start_ap.sh              |  75 ++-
+ .../xout/_root/usr/bin/factory_reset_daemon        | Bin 11200 -> 11200 bytes
+ .../xout/_root/usr/bin/fw_printenv                 | Bin 27816 -> 27832 bytes
+ .../4.3.2_1108/xout/_root/usr/bin/getssid}         |  29 +
+ .../4.3.2_1108/xout/_root/usr/bin/iot_sdk.sh}      | 137 +++++
+ .../4.3.2_1108/xout/_root/usr/bin/log.sh}          |  11 +
+ .../xout/_root/usr/bin/mda_cli                     | Bin 5848 -> 5848 bytes
+ .../xout/_root/usr/bin/mediad                      | Bin 23504 -> 23504 bytes
+ .../xout/_root/usr/bin/miio_client                 | Bin 522744 -> 690184 bytes
+ .../bin/miio_client_helper_mjac.sh => dev/null}    | 457 ---------------
+ .../_root/usr/bin/miio_client_helper_nomqtt.sh}    | 598 +++++++++++++++++++
+ .../xout/_root/usr/bin/miio_recv_line              | Bin 5608 -> 5584 bytes
+ .../4.3.2_1108/xout/_root/usr/bin/miio_sdk.sh}     |  73 +++
+ .../xout/_root/usr/bin/miio_send_line              | Bin 5360 -> 5352 bytes
+ .../xout/_root/usr/bin/msg_trans                   | Bin 24088 -> 28288 bytes
+ .../4.3.2_1108/xout/_root/usr/bin/network_hook.sh} |  11 +
+ .../xout/_root/usr/bin/ofilm_calibration           | Bin 20328 -> 20328 bytes
+ .../xout/_root/usr/bin/play_wifi_tip_media.sh      |  68 ++-
+ .../4.3.2_1108/xout/_root/usr/bin/record_mcu_log}  | Bin 0 -> 28072 bytes
+ .../xout/_root/usr/bin/record_mcu_log.conf}        |  12 +
+ .../xout/_root/usr/bin/start_ap_hook.sh            |  15 +-
+ .../xout/_root/usr/bin/sunny_calibration           | Bin 29856 -> 29872 bytes
+ .../xout/_root/usr/bin/sysmon.sh                   |   3 +
+ .../4.3.2_1108/xout/_root/usr/bin/udhcpc.sh}       |  18 +
+ .../4.3.2_1108/xout/_root/usr/bin/wifi_act.sh}     |  68 +++
+ .../xout/_root/usr/bin/wifi_cli => dev/null}       | Bin 86888 -> 0 bytes
+ .../xout/_root/usr/bin/wifi_conf_monitor.sh        |   4 +-
+ .../xout/_root/usr/bin/wifi_connect                |   6 +-
+ .../xout/_root/usr/bin/wifi_manager => dev/null}   | Bin 241544 -> 0 bytes
+ .../xout/_root/usr/bin/wifi_setup.sh               | 134 +----
+ .../xout/_root/usr/bin/wifi_start.sh               | 651 ++++++++++++++++++---
+ .../xout/_root/usr/bin/wifi_state.sh => dev/null}  |  86 ---
+ .../xout/_root/usr/bin/wpa_cli                     | Bin 90872 -> 91152 bytes
+ .../4.3.2_1108/xout/_root/usr/bin/wpa_event.sh}    |  71 +++
+ .../xout/_root/usr/bin/wpa_passphrase              | Bin 44616 -> 44616 bytes
+ .../xout/_root/usr/bin/wpa_supplicant              | Bin 1387776 -> 1387776 bytes
+ .../4.3.2_1108/xout/_root/usr/bin/zclient}         | Bin 0 -> 5936 bytes
+ .../usr/lib/ckport/db/libao.ckport => dev/null}    |  33 --
+ .../glog/glog-config-version.cmake => dev/null}    |  46 --
+ .../lib/cmake/glog/glog-config.cmake => dev/null}  |  21 -
+ .../glog/glog-targets-release.cmake => dev/null}   |  19 -
+ .../lib/cmake/glog/glog-targets.cmake => dev/null} |  94 ---
+ .../usr/lib/engines-1.1/afalg.so => dev/null}      | Bin 15456 -> 0 bytes
+ .../_root/usr/lib/engines-1.1/capi.so => dev/null} | Bin 4256 -> 0 bytes
+ .../usr/lib/engines-1.1/padlock.so => dev/null}    | Bin 4256 -> 0 bytes
+ .../xout/_root/usr/lib/libCalcPhaseRadialGray.so   | Bin 15536 -> 15536 bytes
+ .../xout/_root/usr/lib/libCorFppnWiggling.so       | Bin 8824 -> 8840 bytes
+ .../xout/_root/usr/lib/libCorPSF.so                | Bin 23176 -> 23176 bytes
+ .../xout/_root/usr/lib/libDepthFilter.so           | Bin 21280 -> 23008 bytes
+ .../xout/_root/usr/lib/libGeneral_TOF_Calculate.so | Bin 32720 -> 33224 bytes
+ .../usr/lib/libGeneral_TOF_Cor_Intermediate.so     | Bin 24504 -> 24816 bytes
+ .../xout/_root/usr/lib/libawadbauth.so             | Bin 12328 -> 12376 bytes
+ .../xout/_root/usr/lib/libbehaviortree_cpp.so      | Bin 1948968 -> 1969376 bytes
+ .../usr/lib/libboost_atomic.so.1.65.1 => dev/null} | Bin 6480 -> 0 bytes
+ .../usr/lib/libboost_chrono.so.1.65.1 => dev/null} | Bin 28264 -> 0 bytes
+ .../lib/libboost_container.so.1.65.1 => dev/null}  | Bin 90936 -> 0 bytes
+ .../lib/libboost_context.so.1.65.1 => dev/null}    | Bin 7520 -> 0 bytes
+ .../lib/libboost_coroutine.so.1.65.1 => dev/null}  | Bin 66816 -> 0 bytes
+ .../lib/libboost_date_time.so.1.65.1 => dev/null}  | Bin 67072 -> 0 bytes
+ .../usr/lib/libboost_fiber.so.1.65.1 => dev/null}  | Bin 340992 -> 0 bytes
+ .../lib/libboost_filesystem.so.1.65.1 => dev/null} | Bin 103200 -> 0 bytes
+ .../usr/lib/libboost_graph.so.1.65.1 => dev/null}  | Bin 326960 -> 0 bytes
+ .../lib/libboost_iostreams.so.1.65.1 => dev/null}  | Bin 83856 -> 0 bytes
+ .../usr/lib/libboost_locale.so.1.65.1 => dev/null} | Bin 643704 -> 0 bytes
+ .../usr/lib/libboost_log.so.1.65.1 => dev/null}    | Bin 852752 -> 0 bytes
+ .../lib/libboost_log_setup.so.1.65.1 => dev/null}  | Bin 639888 -> 0 bytes
+ .../lib/libboost_math_c99.so.1.65.1 => dev/null}   | Bin 154464 -> 0 bytes
+ .../usr/lib/libboost_math_c99f.so => dev/null}     |   0
+ .../lib/libboost_math_c99f.so.1.65.1 => dev/null}  | Bin 119024 -> 0 bytes
+ .../usr/lib/libboost_math_c99l.so => dev/null}     |   0
+ .../lib/libboost_math_c99l.so.1.65.1 => dev/null}  | Bin 138392 -> 0 bytes
+ .../usr/lib/libboost_math_tr1.so => dev/null}      |   0
+ .../lib/libboost_math_tr1.so.1.65.1 => dev/null}   | Bin 424272 -> 0 bytes
+ .../usr/lib/libboost_math_tr1f.so => dev/null}     |   0
+ .../lib/libboost_math_tr1f.so.1.65.1 => dev/null}  | Bin 318416 -> 0 bytes
+ .../usr/lib/libboost_math_tr1l.so => dev/null}     |   0
+ .../lib/libboost_math_tr1l.so.1.65.1 => dev/null}  | Bin 374024 -> 0 bytes
+ .../lib/libboost_prg_exec_monitor.so => dev/null}  |   0
+ .../null}                                          | Bin 63752 -> 0 bytes
+ .../lib/libboost_program_options.so => dev/null}   |   0
+ .../null}                                          | Bin 484760 -> 0 bytes
+ .../_root/usr/lib/libboost_random.so => dev/null}  |   0
+ .../usr/lib/libboost_random.so.1.65.1 => dev/null} | Bin 28304 -> 0 bytes
+ .../_root/usr/lib/libboost_regex.so => dev/null}   |   0
+ .../usr/lib/libboost_regex.so.1.65.1 => dev/null}  | Bin 942456 -> 0 bytes
+ .../usr/lib/libboost_serialization.so => dev/null} |   0
+ .../libboost_serialization.so.1.65.1 => dev/null}  | Bin 257880 -> 0 bytes
+ .../_root/usr/lib/libboost_signals.so => dev/null} |   0
+ .../lib/libboost_signals.so.1.65.1 => dev/null}    | Bin 95152 -> 0 bytes
+ .../libboost_stacktrace_addr2line.so => dev/null}  |   0
+ .../null}                                          | Bin 49248 -> 0 bytes
+ .../libboost_stacktrace_backtrace.so => dev/null}  |   0
+ .../null}                                          | Bin 71744 -> 0 bytes
+ .../lib/libboost_stacktrace_basic.so => dev/null}  |   0
+ .../null}                                          | Bin 24040 -> 0 bytes
+ .../lib/libboost_stacktrace_noop.so => dev/null}   |   0
+ .../null}                                          | Bin 5312 -> 0 bytes
+ .../_root/usr/lib/libboost_system.so => dev/null}  |   0
+ .../usr/lib/libboost_system.so.1.65.1 => dev/null} | Bin 16144 -> 0 bytes
+ .../_root/usr/lib/libboost_thread.so => dev/null}  |   0
+ .../usr/lib/libboost_thread.so.1.65.1 => dev/null} | Bin 165080 -> 0 bytes
+ .../_root/usr/lib/libboost_timer.so => dev/null}   |   0
+ .../usr/lib/libboost_timer.so.1.65.1 => dev/null}  | Bin 20992 -> 0 bytes
+ .../usr/lib/libboost_type_erasure.so => dev/null}  |   0
+ .../libboost_type_erasure.so.1.65.1 => dev/null}   | Bin 58840 -> 0 bytes
+ .../libboost_unit_test_framework.so => dev/null}   |   0
+ .../null}                                          | Bin 761304 -> 0 bytes
+ .../_root/usr/lib/libboost_wave.so => dev/null}    |   0
+ .../usr/lib/libboost_wave.so.1.65.1 => dev/null}   | Bin 1172344 -> 0 bytes
+ .../lib/libboost_wserialization.so => dev/null}    |   0
+ .../libboost_wserialization.so.1.65.1 => dev/null} | Bin 172072 -> 0 bytes
+ .../xout/_root/usr/lib/libflann.so => dev/null}    |   0
+ .../_root/usr/lib/libflann.so.1.9 => dev/null}     |   0
+ .../_root/usr/lib/libflann.so.1.9.1 => dev/null}   | Bin 5017512 -> 0 bytes
+ .../_root/usr/lib/libflann_cpp.so => dev/null}     |   0
+ .../_root/usr/lib/libflann_cpp.so.1.9 => dev/null} |   0
+ .../usr/lib/libflann_cpp.so.1.9.1 => dev/null}     | Bin 4704 -> 0 bytes
+ .../xout/_root/usr/lib/libip4tc.so}                |   0
+ .../xout/_root/usr/lib/libip4tc.so.0}              |   0
+ .../xout/_root/usr/lib/libip4tc.so.0.1.0}          | Bin 0 -> 24632 bytes
+ .../xout/_root/usr/lib/libip6tc.so}                |   0
+ .../xout/_root/usr/lib/libip6tc.so.0}              |   0
+ .../xout/_root/usr/lib/libip6tc.so.0.1.0}          | Bin 0 -> 25512 bytes
+ .../xout/_root/usr/lib/libiptc.so}                 |   0
+ .../xout/_root/usr/lib/libiptc.so.0}               |   0
+ .../xout/_root/usr/lib/libiptc.so.0.0.0}           | Bin 0 -> 4168 bytes
+ .../xout/_root/usr/lib/liblz4.so => dev/null}      |   0
+ .../xout/_root/usr/lib/liblz4.so.1 => dev/null}    |   0
+ .../_root/usr/lib/liblz4.so.1.9.2 => dev/null}     | Bin 151840 -> 0 bytes
+ .../xout/_root/usr/lib/libmessenger.so             | Bin 52688 -> 57344 bytes
+ .../usr/lib/libnl/cli/cls/basic.a => dev/null}     | Bin 4710 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/basic.la => dev/null}    |  41 --
+ .../usr/lib/libnl/cli/cls/basic.so => dev/null}    | Bin 6712 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/cgroup.a => dev/null}    | Bin 3968 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/cgroup.la => dev/null}   |  41 --
+ .../usr/lib/libnl/cli/cls/cgroup.so => dev/null}   | Bin 5704 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/bfifo.a => dev/null}   | Bin 4208 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/bfifo.la => dev/null}  |  41 --
+ .../usr/lib/libnl/cli/qdisc/bfifo.so => dev/null}  | Bin 6648 -> 0 bytes
+ .../lib/libnl/cli/qdisc/blackhole.a => dev/null}   | Bin 3624 -> 0 bytes
+ .../lib/libnl/cli/qdisc/blackhole.la => dev/null}  |  41 --
+ .../lib/libnl/cli/qdisc/blackhole.so => dev/null}  | Bin 5248 -> 0 bytes
+ .../lib/libnl/cli/qdisc/fq_codel.a => dev/null}    | Bin 5126 -> 0 bytes
+ .../lib/libnl/cli/qdisc/fq_codel.la => dev/null}   |  41 --
+ .../lib/libnl/cli/qdisc/fq_codel.so => dev/null}   | Bin 6800 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/hfsc.a => dev/null}    | Bin 7670 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/hfsc.la => dev/null}   |  41 --
+ .../usr/lib/libnl/cli/qdisc/hfsc.so => dev/null}   | Bin 8536 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/htb.a => dev/null}     | Bin 7956 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/htb.la => dev/null}    |  41 --
+ .../usr/lib/libnl/cli/qdisc/htb.so => dev/null}    | Bin 8792 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/ingress.a => dev/null} | Bin 3588 -> 0 bytes
+ .../lib/libnl/cli/qdisc/ingress.la => dev/null}    |  41 --
+ .../lib/libnl/cli/qdisc/ingress.so => dev/null}    | Bin 5216 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/pfifo.a => dev/null}   | Bin 3984 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/pfifo.la => dev/null}  |  41 --
+ .../usr/lib/libnl/cli/qdisc/pfifo.so => dev/null}  | Bin 5680 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/plug.a => dev/null}    | Bin 5678 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/plug.la => dev/null}   |  41 --
+ .../usr/lib/libnl/cli/qdisc/plug.so => dev/null}   | Bin 7480 -> 0 bytes
+ .../_root/usr/lib/libpcl_common.so => dev/null}    |   0
+ .../usr/lib/libpcl_common.so.1.10 => dev/null}     |   0
+ .../lib/libpcl_common.so.1.10.0.99 => dev/null}    | Bin 680752 -> 0 bytes
+ .../_root/usr/lib/libpcl_features.so => dev/null}  |   0
+ .../usr/lib/libpcl_features.so.1.10 => dev/null}   |   0
+ .../lib/libpcl_features.so.1.10.0.99 => dev/null}  | Bin 39485944 -> 0 bytes
+ .../_root/usr/lib/libpcl_filters.so => dev/null}   |   0
+ .../usr/lib/libpcl_filters.so.1.10 => dev/null}    |   0
+ .../lib/libpcl_filters.so.1.10.0.99 => dev/null}   | Bin 7766600 -> 0 bytes
+ .../xout/_root/usr/lib/libpcl_io.so => dev/null}   |   0
+ .../_root/usr/lib/libpcl_io.so.1.10 => dev/null}   |   0
+ .../usr/lib/libpcl_io.so.1.10.0.99 => dev/null}    | Bin 1157472 -> 0 bytes
+ .../_root/usr/lib/libpcl_io_ply.so => dev/null}    |   0
+ .../usr/lib/libpcl_io_ply.so.1.10 => dev/null}     |   0
+ .../lib/libpcl_io_ply.so.1.10.0.99 => dev/null}    | Bin 348304 -> 0 bytes
+ .../_root/usr/lib/libpcl_kdtree.so => dev/null}    |   0
+ .../usr/lib/libpcl_kdtree.so.1.10 => dev/null}     |   0
+ .../lib/libpcl_kdtree.so.1.10.0.99 => dev/null}    | Bin 1245776 -> 0 bytes
+ .../_root/usr/lib/libpcl_keypoints.so => dev/null} |   0
+ .../usr/lib/libpcl_keypoints.so.1.10 => dev/null}  |   0
+ .../lib/libpcl_keypoints.so.1.10.0.99 => dev/null} | Bin 1597376 -> 0 bytes
+ .../xout/_root/usr/lib/libpcl_ml.so => dev/null}   |   0
+ .../_root/usr/lib/libpcl_ml.so.1.10 => dev/null}   |   0
+ .../usr/lib/libpcl_ml.so.1.10.0.99 => dev/null}    | Bin 149256 -> 0 bytes
+ .../_root/usr/lib/libpcl_octree.so => dev/null}    |   0
+ .../usr/lib/libpcl_octree.so.1.10 => dev/null}     |   0
+ .../lib/libpcl_octree.so.1.10.0.99 => dev/null}    | Bin 1975472 -> 0 bytes
+ .../usr/lib/libpcl_recognition.so => dev/null}     |   0
+ .../lib/libpcl_recognition.so.1.10 => dev/null}    |   0
+ .../libpcl_recognition.so.1.10.0.99 => dev/null}   | Bin 4666248 -> 0 bytes
+ .../usr/lib/libpcl_registration.so => dev/null}    |   0
+ .../lib/libpcl_registration.so.1.10 => dev/null}   |   0
+ .../libpcl_registration.so.1.10.0.99 => dev/null}  | Bin 1761664 -> 0 bytes
+ .../lib/libpcl_sample_consensus.so => dev/null}    |   0
+ .../libpcl_sample_consensus.so.1.10 => dev/null}   |   0
+ .../null}                                          | Bin 12984528 -> 0 bytes
+ .../_root/usr/lib/libpcl_search.so => dev/null}    |   0
+ .../usr/lib/libpcl_search.so.1.10 => dev/null}     |   0
+ .../lib/libpcl_search.so.1.10.0.99 => dev/null}    | Bin 2003856 -> 0 bytes
+ .../usr/lib/libpcl_segmentation.so => dev/null}    |   0
+ .../lib/libpcl_segmentation.so.1.10 => dev/null}   |   0
+ .../libpcl_segmentation.so.1.10.0.99 => dev/null}  | Bin 13055344 -> 0 bytes
+ .../_root/usr/lib/libpcl_stereo.so => dev/null}    |   0
+ .../usr/lib/libpcl_stereo.so.1.10 => dev/null}     |   0
+ .../lib/libpcl_stereo.so.1.10.0.99 => dev/null}    | Bin 216832 -> 0 bytes
+ .../_root/usr/lib/libpcl_surface.so => dev/null}   |   0
+ .../usr/lib/libpcl_surface.so.1.10 => dev/null}    |   0
+ .../lib/libpcl_surface.so.1.10.0.99 => dev/null}   | Bin 12579904 -> 0 bytes
+ .../4.3.2_1108/xout/_root/usr/lib/libserial.so}    | Bin 0 -> 6496 bytes
+ .../xout/_root/usr/lib/libtof_mod_sdk.so           | Bin 261992 -> 261992 bytes
+ .../xout/_root/usr/lib/libxtables.so}              |   0
+ .../xout/_root/usr/lib/libxtables.so.10}           |   0
+ .../xout/_root/usr/lib/libxtables.so.10.0.0}       | Bin 0 -> 44816 bytes
+ .../usr/lib/modules/4.9.191/external/8189fs.ko     | Bin 1764392 -> 1764392 bytes
+ .../usr/lib/modules/4.9.191/external/ofilm0092.ko  | Bin 19392 -> 19392 bytes
+ .../lib/modules/4.9.191/external/sc031gs_mipi.ko   | Bin 15672 -> 15672 bytes
+ .../usr/lib/modules/4.9.191/external/sunnytof.ko   | Bin 20352 -> 20352 bytes
+ .../4.9.191/external/videobuf2-dma-contig.ko       | Bin 18376 -> 18376 bytes
+ .../lib/modules/4.9.191/external/videobuf2-v4l2.ko | Bin 19848 -> 19848 bytes
+ .../usr/lib/modules/4.9.191/external/vin_io.ko     | Bin 74944 -> 74944 bytes
+ .../usr/lib/modules/4.9.191/external/vin_v4l2.ko   | Bin 273368 -> 273368 bytes
+ .../_root/usr/lib/tree_lib/libnyx_route_nodes.so   | Bin 3789848 -> 4681840 bytes
+ .../_root/usr/lib/tree_lib/libnyx_tactics_tree.so  | Bin 932808 -> 1198880 bytes
+ .../xout/_root/usr/lib/tree_lib/libnyx_tree.so     | Bin 10539360 -> 6179392 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_DNAT.so}    | Bin 0 -> 8488 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_DNPT.so}    | Bin 0 -> 6912 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_HL.so}      | Bin 0 -> 6952 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_LOG.so}     | Bin 0 -> 8152 bytes
+ .../_root/usr/lib/xtables/libip6t_MASQUERADE.so}   | Bin 0 -> 6920 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_NETMAP.so}  | Bin 0 -> 6856 bytes
+ .../_root/usr/lib/xtables/libip6t_REDIRECT.so}     | Bin 0 -> 6928 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_REJECT.so}  | Bin 0 -> 7416 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_SNAT.so}    | Bin 0 -> 8472 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_SNPT.so}    | Bin 0 -> 6912 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_ah.so}      | Bin 0 -> 6936 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_dst.so}     | Bin 0 -> 7704 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_eui64.so}   | Bin 0 -> 4632 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_frag.so}    | Bin 0 -> 7384 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_hbh.so}     | Bin 0 -> 7768 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_hl.so}      | Bin 0 -> 7056 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_icmp6.so}   | Bin 0 -> 9136 bytes
+ .../_root/usr/lib/xtables/libip6t_ipv6header.so}   | Bin 0 -> 8720 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_mh.so}      | Bin 0 -> 8384 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_rt.so}      | Bin 0 -> 9080 bytes
+ .../_root/usr/lib/xtables/libipt_CLUSTERIP.so}     | Bin 0 -> 7608 bytes
+ .../xout/_root/usr/lib/xtables/libipt_DNAT.so}     | Bin 0 -> 8536 bytes
+ .../xout/_root/usr/lib/xtables/libipt_ECN.so}      | Bin 0 -> 7000 bytes
+ .../xout/_root/usr/lib/xtables/libipt_LOG.so}      | Bin 0 -> 8160 bytes
+ .../_root/usr/lib/xtables/libipt_MASQUERADE.so}    | Bin 0 -> 6920 bytes
+ .../xout/_root/usr/lib/xtables/libipt_MIRROR.so}   | Bin 0 -> 4640 bytes
+ .../xout/_root/usr/lib/xtables/libipt_NETMAP.so}   | Bin 0 -> 5784 bytes
+ .../xout/_root/usr/lib/xtables/libipt_REDIRECT.so} | Bin 0 -> 6928 bytes
+ .../xout/_root/usr/lib/xtables/libipt_REJECT.so}   | Bin 0 -> 8328 bytes
+ .../xout/_root/usr/lib/xtables/libipt_SAME.so}     | Bin 0 -> 7600 bytes
+ .../xout/_root/usr/lib/xtables/libipt_SNAT.so}     | Bin 0 -> 8520 bytes
+ .../xout/_root/usr/lib/xtables/libipt_TTL.so}      | Bin 0 -> 6952 bytes
+ .../xout/_root/usr/lib/xtables/libipt_ULOG.so}     | Bin 0 -> 7032 bytes
+ .../xout/_root/usr/lib/xtables/libipt_ah.so}       | Bin 0 -> 6848 bytes
+ .../xout/_root/usr/lib/xtables/libipt_icmp.so}     | Bin 0 -> 11632 bytes
+ .../xout/_root/usr/lib/xtables/libipt_realm.so}    | Bin 0 -> 7136 bytes
+ .../xout/_root/usr/lib/xtables/libipt_ttl.so}      | Bin 0 -> 6992 bytes
+ .../xout/_root/usr/lib/xtables/libipt_unclean.so}  | Bin 0 -> 4632 bytes
+ .../xout/_root/usr/lib/xtables/libxt_AUDIT.so}     | Bin 0 -> 6864 bytes
+ .../xout/_root/usr/lib/xtables/libxt_CHECKSUM.so}  | Bin 0 -> 5592 bytes
+ .../xout/_root/usr/lib/xtables/libxt_CLASSIFY.so}  | Bin 0 -> 6864 bytes
+ .../xout/_root/usr/lib/xtables/libxt_CONNMARK.so}  | Bin 0 -> 9944 bytes
+ .../_root/usr/lib/xtables/libxt_CONNSECMARK.so}    | Bin 0 -> 6904 bytes
+ .../xout/_root/usr/lib/xtables/libxt_CT.so}        | Bin 0 -> 12840 bytes
+ .../xout/_root/usr/lib/xtables/libxt_DSCP.so}      | Bin 0 -> 7640 bytes
+ .../xout/_root/usr/lib/xtables/libxt_HMARK.so}     | Bin 0 -> 12080 bytes
+ .../xout/_root/usr/lib/xtables/libxt_IDLETIMER.so} | Bin 0 -> 5704 bytes
+ .../xout/_root/usr/lib/xtables/libxt_LED.so}       | Bin 0 -> 7112 bytes
+ .../xout/_root/usr/lib/xtables/libxt_MARK.so}      | Bin 0 -> 8880 bytes
+ .../xout/_root/usr/lib/xtables/libxt_NFLOG.so}     | Bin 0 -> 7016 bytes
+ .../xout/_root/usr/lib/xtables/libxt_NFQUEUE.so}   | Bin 0 -> 8424 bytes
+ .../xout/_root/usr/lib/xtables/libxt_NOTRACK.so}   | Bin 0 -> 12840 bytes
+ .../xout/_root/usr/lib/xtables/libxt_RATEEST.so}   | Bin 0 -> 7528 bytes
+ .../xout/_root/usr/lib/xtables/libxt_SECMARK.so}   | Bin 0 -> 5768 bytes
+ .../xout/_root/usr/lib/xtables/libxt_SET.so}       | Bin 0 -> 13048 bytes
+ .../xout/_root/usr/lib/xtables/libxt_SYNPROXY.so}  | Bin 0 -> 7040 bytes
+ .../xout/_root/usr/lib/xtables/libxt_TCPMSS.so}    | Bin 0 -> 7232 bytes
+ .../_root/usr/lib/xtables/libxt_TCPOPTSTRIP.so}    | Bin 0 -> 7584 bytes
+ .../xout/_root/usr/lib/xtables/libxt_TEE.so}       | Bin 0 -> 7120 bytes
+ .../xout/_root/usr/lib/xtables/libxt_TOS.so}       | Bin 0 -> 8512 bytes
+ .../xout/_root/usr/lib/xtables/libxt_TPROXY.so}    | Bin 0 -> 7640 bytes
+ .../xout/_root/usr/lib/xtables/libxt_TRACE.so}     | Bin 0 -> 4640 bytes
+ .../xout/_root/usr/lib/xtables/libxt_addrtype.so}  | Bin 0 -> 9856 bytes
+ .../xout/_root/usr/lib/xtables/libxt_bpf.so}       | Bin 0 -> 7000 bytes
+ .../xout/_root/usr/lib/xtables/libxt_cluster.so}   | Bin 0 -> 7024 bytes
+ .../xout/_root/usr/lib/xtables/libxt_comment.so}   | Bin 0 -> 5584 bytes
+ .../xout/_root/usr/lib/xtables/libxt_connbytes.so} | Bin 0 -> 7424 bytes
+ .../xout/_root/usr/lib/xtables/libxt_connlimit.so} | Bin 0 -> 8656 bytes
+ .../xout/_root/usr/lib/xtables/libxt_connmark.so}  | Bin 0 -> 7032 bytes
+ .../xout/_root/usr/lib/xtables/libxt_conntrack.so} | Bin 0 -> 24280 bytes
+ .../xout/_root/usr/lib/xtables/libxt_cpu.so}       | Bin 0 -> 5520 bytes
+ .../xout/_root/usr/lib/xtables/libxt_dccp.so}      | Bin 0 -> 9088 bytes
+ .../xout/_root/usr/lib/xtables/libxt_devgroup.so}  | Bin 0 -> 7728 bytes
+ .../xout/_root/usr/lib/xtables/libxt_dscp.so}      | Bin 0 -> 7584 bytes
+ .../xout/_root/usr/lib/xtables/libxt_ecn.so}       | Bin 0 -> 6944 bytes
+ .../xout/_root/usr/lib/xtables/libxt_esp.so}       | Bin 0 -> 6840 bytes
+ .../xout/_root/usr/lib/xtables/libxt_hashlimit.so} | Bin 0 -> 16536 bytes
+ .../xout/_root/usr/lib/xtables/libxt_helper.so}    | Bin 0 -> 5704 bytes
+ .../xout/_root/usr/lib/xtables/libxt_iprange.so}   | Bin 0 -> 11448 bytes
+ .../xout/_root/usr/lib/xtables/libxt_ipvs.so}      | Bin 0 -> 9928 bytes
+ .../xout/_root/usr/lib/xtables/libxt_length.so}    | Bin 0 -> 5840 bytes
+ .../xout/_root/usr/lib/xtables/libxt_limit.so}     | Bin 0 -> 7216 bytes
+ .../xout/_root/usr/lib/xtables/libxt_mac.so}       | Bin 0 -> 5704 bytes
+ .../xout/_root/usr/lib/xtables/libxt_mark.so}      | Bin 0 -> 7024 bytes
+ .../xout/_root/usr/lib/xtables/libxt_multiport.so} | Bin 0 -> 11736 bytes
+ .../xout/_root/usr/lib/xtables/libxt_nfacct.so}    | Bin 0 -> 6864 bytes
+ .../xout/_root/usr/lib/xtables/libxt_osf.so}       | Bin 0 -> 6944 bytes
+ .../xout/_root/usr/lib/xtables/libxt_owner.so}     | Bin 0 -> 12624 bytes
+ .../xout/_root/usr/lib/xtables/libxt_physdev.so}   | Bin 0 -> 7344 bytes
+ .../xout/_root/usr/lib/xtables/libxt_pkttype.so}   | Bin 0 -> 7008 bytes
+ .../xout/_root/usr/lib/xtables/libxt_policy.so}    | Bin 0 -> 12024 bytes
+ .../xout/_root/usr/lib/xtables/libxt_quota.so}     | Bin 0 -> 5536 bytes
+ .../xout/_root/usr/lib/xtables/libxt_rateest.so}   | Bin 0 -> 11920 bytes
+ .../xout/_root/usr/lib/xtables/libxt_recent.so}    | Bin 0 -> 12440 bytes
+ .../xout/_root/usr/lib/xtables/libxt_rpfilter.so}  | Bin 0 -> 6984 bytes
+ .../xout/_root/usr/lib/xtables/libxt_sctp.so}      | Bin 0 -> 13304 bytes
+ .../xout/_root/usr/lib/xtables/libxt_set.so}       | Bin 0 -> 16240 bytes
+ .../xout/_root/usr/lib/xtables/libxt_socket.so}    | Bin 0 -> 7352 bytes
+ .../xout/_root/usr/lib/xtables/libxt_standard.so}  | Bin 0 -> 4840 bytes
+ .../xout/_root/usr/lib/xtables/libxt_state.so}     | Bin 0 -> 24280 bytes
+ .../xout/_root/usr/lib/xtables/libxt_statistic.so} | Bin 0 -> 7184 bytes
+ .../xout/_root/usr/lib/xtables/libxt_string.so}    | Bin 0 -> 11432 bytes
+ .../xout/_root/usr/lib/xtables/libxt_tcp.so}       | Bin 0 -> 11312 bytes
+ .../xout/_root/usr/lib/xtables/libxt_tcpmss.so}    | Bin 0 -> 5832 bytes
+ .../xout/_root/usr/lib/xtables/libxt_time.so}      | Bin 0 -> 12576 bytes
+ .../xout/_root/usr/lib/xtables/libxt_tos.so}       | Bin 0 -> 7520 bytes
+ .../xout/_root/usr/lib/xtables/libxt_u32.so}       | Bin 0 -> 8456 bytes
+ .../xout/_root/usr/lib/xtables/libxt_udp.so}       | Bin 0 -> 7000 bytes
+ .../xout/_root/usr/sbin/ip6tables}                 |   0
+ .../xout/_root/usr/sbin/ip6tables-restore}         |   0
+ .../xout/_root/usr/sbin/ip6tables-save}            |   0
+ .../xout/_root/usr/sbin/iptables}                  |   0
+ .../xout/_root/usr/sbin/iptables-restore}          |   0
+ .../xout/_root/usr/sbin/iptables-save}             |   0
+ .../4.3.2_1108/xout/_root/usr/sbin/xtables-multi}  | Bin 0 -> 79880 bytes
+ .../xout/_root/version_record                      |  16 +-
+ .../{4.1.2_1083 => 4.3.2_1108}/xout/kernel.img     | Bin 10049536 -> 10194944 bytes
+ .../{4.1.2_1083 => 4.3.2_1108}/xout/mcu.bin        | Bin 141624 -> 143724 bytes
+ .../{4.1.2_1083 => 4.3.2_1108}/xout/toc0.fex       | Bin 81920 -> 98304 bytes
+ .../{4.1.2_1083 => 4.3.2_1108}/xout/toc1.fex       | Bin 1130496 -> 1163264 bytes
+ 429 files changed, 3005 insertions(+), 2240 deletions(-)

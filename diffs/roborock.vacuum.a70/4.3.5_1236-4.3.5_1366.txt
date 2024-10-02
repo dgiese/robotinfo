@@ -1,0 +1,20 @@
+Firmware diff for Roborock S8 Pro Ultra (roborock.vacuum.a70)
+Old version: 4.3.5_1236 New version: 4.3.5_1366
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../4.3.5_1236/xout/_root/bin/rr_load => dev/null} | Bin 6128 -> 0 bytes
+ .../xout/_root/etc/init.d/S01boot                  |   1 -
+ .../xout/_root/etc/rr-info                         |   4 ++--
+ .../xout/_root/etc/signature                       | Bin 11952 -> 11864 bytes
+ .../xout/_root/lib/modules/4.9.191/8189fs.ko       | Bin 3149888 -> 3149888 bytes
+ .../_root/lib/modules/4.9.191/sc035hgs_mipi.ko     | Bin 31944 -> 31696 bytes
+ .../xout/_root/usr/bin/camerademo => dev/null}     | Bin 60904 -> 0 bytes
+ .../xout/_root/usr/lib/libiniparser.a              | Bin 2048 -> 2048 bytes
+ .../xout/_root/usr/lib/libisp.so                   | Bin 630872 -> 630872 bytes
+ .../xout/_root/usr/lib/libisp_dev.a                | Bin 51358 -> 51358 bytes
+ .../xout/_root/usr/lib/libisp_ini.so               | Bin 2329312 -> 2329312 bytes
+ .../xout/_root/usr/lib/libisp_math.a               | Bin 23054 -> 23054 bytes
+ .../{4.3.5_1236 => 4.3.5_1366}/xout/boot/zImage    | Bin 21354508 -> 21354508 bytes
+ .../{4.3.5_1236 => 4.3.5_1366}/xout/kernel.img     | Bin 21362688 -> 21362688 bytes
+ 14 files changed, 2 insertions(+), 3 deletions(-)

@@ -1,0 +1,5 @@
+Firmware diff for Mi Robot Vacuum-Mop P (viomi.vacuum.v8)
+Old version: 3.5.3_0017 New version: 3.5.8_0021
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---

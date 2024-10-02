@@ -1,0 +1,44 @@
+Firmware diff for DEEBOT OZMO 950 Series (ecovacs.yna5xi)
+Old version: 1.8.1 New version: 1.8.2
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/conf/medusa/deebot_dx3.conf     |  14 +-
+ .../conf/medusa/deebot_dx3.conf.bak => dev/null}   | 675 ---------------------
+ .../xout/_root/etc/conf/medusa/press_key_help.sh   |   2 +-
+ .../xout/_root/etc/conf/wifi_service.conf          |   4 +-
+ .../{1.8.1 => 1.8.2}/xout/_root/etc/fw.manifest    |   4 +-
+ .../{1.8.1 => 1.8.2}/xout/_root/etc/rc.d/dog.sh    |  13 +-
+ .../{1.8.1 => 1.8.2}/xout/_root/etc/rc.d/medusa.sh |  23 +-
+ .../{1.8.1 => 1.8.2}/xout/_root/etc/rc.d/wifi.sh   |   3 +-
+ .../1.8.2/xout/_root/etc/wifi/SCCFGResHook.sh}     |  12 +
+ .../1.8.2/xout/_root/etc/wifi/err_hook.sh}         | 111 ++++
+ .../xout/_root/etc/wifi/netmon_hook.sh             |  13 +-
+ .../xout/_root/etc/wifi/wd_hook.sh                 |  14 +
+ .../1.8.2/xout/_root/etc/wifi/ws_wait_hook.sh}     |  78 +++
+ .../1.8.2/xout/_root/media/music/EN/161.ogg}       | Bin 0 -> 45441 bytes
+ .../1.8.2/xout/_root/media/music/EN/162.ogg}       | Bin 0 -> 45730 bytes
+ .../1.8.2/xout/_root/media/music/EN/163.ogg}       | Bin 0 -> 36803 bytes
+ .../1.8.2/xout/_root/media/music/ZH/161.ogg}       | Bin 0 -> 25016 bytes
+ .../1.8.2/xout/_root/media/music/ZH/162.ogg}       | Bin 0 -> 31533 bytes
+ .../1.8.2/xout/_root/media/music/ZH/163.ogg}       | Bin 0 -> 30407 bytes
+ .../{1.8.1 => 1.8.2}/xout/_root/opt/data.tar.bz2   | Bin 345 -> 341 bytes
+ .../xout/_root/usr/bin/factory_fun                 |  36 ++
+ .../{1.8.1 => 1.8.2}/xout/_root/usr/bin/netmon_ctl | Bin 7244 -> 7232 bytes
+ .../xout/_root/usr/bin/wifi_service                | Bin 77900 -> 84212 bytes
+ .../xout/_root/usr/lib/libcommon.so.0.0.1          | Bin 13012 -> 13012 bytes
+ .../1.8.2/xout/_root/usr/lib/liblua.so}            |   0
+ .../1.8.2/xout/_root/usr/lib/liblua.so.5.3.4}      | Bin 0 -> 127572 bytes
+ .../xout/_root/usr/lib/medusa/plug_audio_new.so    | Bin 44240 -> 44240 bytes
+ .../xout/_root/usr/lib/medusa/plug_bumbee.so       | Bin 36720 -> 60480 bytes
+ .../xout/_root/usr/lib/medusa/plug_dev_status.so   | Bin 8464 -> 8840 bytes
+ .../xout/_root/usr/lib/medusa/plug_fw_dx3.so       | Bin 24340 -> 25048 bytes
+ .../xout/_root/usr/lib/medusa/plug_log.so          | Bin 10144 -> 10144 bytes
+ .../lib/medusa/plug_medusa_plugin_task_ergodic.so  | Bin 332852 -> 332852 bytes
+ .../lib/medusa/plug_medusa_plugin_wifiHandler.so   | Bin 352144 -> 352152 bytes
+ .../xout/_root/usr/lib/medusa/plug_mqtt.so         | Bin 10316 -> 27084 bytes
+ .../xout/_root/usr/lib/medusa/plug_network.so      | Bin 15520 -> 15520 bytes
+ .../xout/_root/usr/lib/medusa/plug_sys.so          | Bin 39008 -> 39008 bytes
+ .../xout/_root/usr/lib/medusa/plug_time.so         | Bin 18420 -> 18420 bytes
+ .../{1.8.1 => 1.8.2}/xout/_root/version.txt        |   2 +-
+ 38 files changed, 296 insertions(+), 708 deletions(-)

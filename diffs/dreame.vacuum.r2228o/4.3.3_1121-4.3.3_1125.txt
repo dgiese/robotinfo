@@ -1,0 +1,19 @@
+Firmware diff for DreameBot L10s Ultra (dreame.vacuum.r2228o)
+Old version: 4.3.3_1121 New version: 4.3.3_1125
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_signal.so              | Bin 576928 -> 576928 bytes
+ .../xout/_root/etc/os-release                      |   4 ++--
+ .../xout/_root/misc/data.tar.bz2                   | Bin 565 -> 570 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/dmio.sh                     |  10 ----------
+ .../xout/_root/usr/bin/dmiot                       | Bin 152304 -> 233392 bytes
+ .../xout/_root/usr/bin/dreameiot                   | Bin 44448 -> 44448 bytes
+ .../xout/_root/usr/lib/libpaho-mqtt3as.so.1.3.10   | Bin 216536 -> 187504 bytes
+ .../xout/_root/usr/lib/libpaho-mqtt3cs.so.1.3.10   | Bin 193944 -> 166928 bytes
+ .../xout/_root/usr/lib/tree_lib/libarges_tree.so   | Bin 4020240 -> 4020240 bytes
+ .../xout/_root/version_record                      |  10 +++++-----
+ .../{4.3.3_1121 => 4.3.3_1125}/xout/kernel.img     | Bin 10835968 -> 10835968 bytes
+ .../{4.3.3_1121 => 4.3.3_1125}/xout/toc1.fex       | Bin 1245184 -> 1245184 bytes
+ 13 files changed, 8 insertions(+), 18 deletions(-)

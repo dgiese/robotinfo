@@ -1,0 +1,26 @@
+Firmware diff for Roborock T6 (roborock.vacuum.t6)
+Old version: 3.5.4_0622 New version: 3.5.4_0850
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/boot/zImage                         | Bin 3882608 -> 3882608 bytes
+ .../xout/_root/etc/OS_VERSION                      |   8 ++++----
+ .../xout/_root/etc/os-release                      |   2 +-
+ .../xout/_root/lib/modules/3.4.39/8189es.ko        | Bin 2255576 -> 2255576 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 301672 -> 301696 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 66148 -> 66160 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../xout/_root/opt/rockrobo/cleaner/bin/AppProxy   | Bin 753008 -> 753008 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboController  | Bin 219988 -> 220000 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerM | Bin 294236 -> 294248 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerR | Bin 215892 -> 220000 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 3321152 -> 3325248 bytes
+ .../xout/_root/opt/rockrobo/cleaner/lib/libstat.so | Bin 270564 -> 270564 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ ....A3.G1_M3.3.0_RELEASE_20191028-203636_FULL.bin} | Bin 217072 -> 217072 bytes
+ .../rockrobo/firmware/uart_test-3.3.0-20191028}    | Bin 524384 -> 524384 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rrlog/misc.sh          |  10 ++--------
+ .../xout/_root/opt/rockrobo/rrlog/rrlogd           | Bin 127324 -> 127336 bytes
+ .../xout/_root/var/cache/ldconfig/aux-cache        | Bin 13257 -> 13257 bytes
+ 20 files changed, 10 insertions(+), 16 deletions(-)

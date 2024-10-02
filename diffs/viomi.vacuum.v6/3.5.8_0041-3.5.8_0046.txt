@@ -1,0 +1,5 @@
+Firmware diff for Viomi Cleaning Robot (viomi.vacuum.v6)
+Old version: 3.5.8_0041 New version: 3.5.8_0046
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---

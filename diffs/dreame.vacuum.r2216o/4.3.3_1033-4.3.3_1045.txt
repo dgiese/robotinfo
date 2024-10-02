@@ -1,0 +1,49 @@
+Firmware diff for DreameBot L10s Pro (dreame.vacuum.r2216o)
+Old version: 4.3.3_1033 New version: 4.3.3_1045
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/audio/EN/23.ogg => dev/null}        | Bin 29028 -> 0 bytes
+ .../audio/SYS/CAL/ai_califile_non-existent.ogg}    | Bin 8498 -> 8498 bytes
+ .../audio/SYS/CAL/laser_califile_non-existent.ogg} | Bin 0 -> 9394 bytes
+ .../audio/SYS/CAL/lds_califile_non-existent.ogg}   | Bin 9699 -> 9699 bytes
+ .../audio/SYS/CAL/machine_camera_uncalibrated.ogg} | Bin 0 -> 7841 bytes
+ .../CAL/tof_external_parameter_uncalibrated.ogg}   | Bin 0 -> 10260 bytes
+ .../audio/SYS/machine_camera_uncalibrated.ogg      | Bin 7841 -> 12636 bytes
+ .../xout/_root/audio/TEST/EN/35.ogg                | Bin 14860 -> 3751 bytes
+ .../xout/_root/audio/TEST/EN/36.ogg => dev/null}   | Bin 12797 -> 0 bytes
+ .../xout/_root/audio/TEST/EN/40.ogg => dev/null}   | Bin 13695 -> 0 bytes
+ .../xout/_root/audio/TEST/ZH/35.ogg                | Bin 9394 -> 3751 bytes
+ .../xout/_root/audio/ZH/23.ogg => dev/null}        | Bin 21159 -> 0 bytes
+ .../4.3.3_1045/xout/_root/ava/conf/ppid.json}      |  18 +++++++++++++
+ .../xout/_root/ava/lib/node_com.so                 | Bin 36580 -> 36588 bytes
+ .../_root/ava/lib/node_laser_point_extractor.so    | Bin 291628 -> 291628 bytes
+ .../xout/_root/ava/lib/node_laser_transfer.so      | Bin 1010976 -> 1011496 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 1851708 -> 1851708 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 35044 -> 35044 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 91176 -> 91184 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 69924 -> 69932 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 545124 -> 545124 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 126952 -> 126960 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 110344 -> 110352 bytes
+ .../xout/_root/ava/lib/node_tethys.so              | Bin 3386376 -> 3392020 bytes
+ .../xout/_root/ava/script/sys_set_private.sh       |  28 +++++++++++++--------
+ .../xout/_root/etc/init.d/mount_data.sh            |  12 +++++++++
+ .../xout/_root/etc/os-release                      |   6 ++---
+ .../xout/_root/etc/rc.d/bak_calibration.sh         |  10 ++++----
+ .../xout/_root/etc/rc.d/report_cpu_info.sh         |   1 +
+ .../xout/_root/misc/data.tar.bz2                   | Bin 558 -> 557 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/dreame_bt                   | Bin 186460 -> 185496 bytes
+ .../xout/_root/usr/bin/dreameiot                   | Bin 112828 -> 112828 bytes
+ .../xout/_root/usr/bin/dreameiot_cli               | Bin 93904 -> 93904 bytes
+ .../xout/_root/usr/bin/factory_reset.sh            |  13 ++++++----
+ .../xout/_root/usr/lib/libbehaviortree_cpp.so      | Bin 2125688 -> 677836 bytes
+ .../usr/lib/tree_lib/libtethys_route_nodes.so      | Bin 9205888 -> 9222400 bytes
+ .../usr/lib/tree_lib/libtethys_tactics_tree.so     | Bin 1074236 -> 1076264 bytes
+ .../xout/_root/usr/lib/tree_lib/libtethys_tree.so  | Bin 3113788 -> 3125360 bytes
+ .../xout/_root/version_record                      |  14 +++++------
+ .../{4.3.3_1033 => 4.3.3_1045}/xout/kernel.img     | Bin 2936832 -> 2936832 bytes
+ .../{4.3.3_1033 => 4.3.3_1045}/xout/mcu.bin        | Bin 188956 -> 189264 bytes
+ .../{4.3.3_1033 => 4.3.3_1045}/xout/toc1.fex       | Bin 1507328 -> 1507328 bytes
+ 43 files changed, 72 insertions(+), 32 deletions(-)

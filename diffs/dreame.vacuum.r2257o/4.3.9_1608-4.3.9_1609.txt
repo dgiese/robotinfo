@@ -1,0 +1,28 @@
+Firmware diff for L10 Ultra (dreame.vacuum.r2257o)
+Old version: 4.3.9_1608 New version: 4.3.9_1609
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/conf/dock_template.json}        | 16958 +++++++++++++++++++
+ .../xout/_root/ava/conf/r2257.conf                 |     1 +
+ .../xout/_root/ava/lib/node_cmd.so                 |   Bin 69072 -> 69152 bytes
+ .../xout/_root/ava/lib/node_health_phorcys.so      |   Bin 329008 -> 332844 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     |   Bin 109464 -> 109464 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          |   Bin 2144864 -> 2145608 bytes
+ .../xout/_root/ava/lib/node_log.so                 |   Bin 126060 -> 126060 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          |   Bin 1309384 -> 1309648 bytes
+ .../xout/_root/ava/lib/node_phorcys.so             |   Bin 5013612 -> 5013852 bytes
+ .../xout/_root/ava/lib/node_signal.so              |   Bin 257100 -> 257548 bytes
+ .../xout/_root/etc/os-release                      |     4 +-
+ .../xout/_root/misc/data.tar.bz2                   |   Bin 552 -> 547 bytes
+ .../xout/_root/timestamp                           |     2 +-
+ .../xout/_root/usr/bin/ava                         |   Bin 170380 -> 170380 bytes
+ .../xout/_root/usr/bin/dreame_bt                   |   Bin 185496 -> 185496 bytes
+ .../xout/_root/usr/bin/dreameiot                   |   Bin 52664 -> 52664 bytes
+ .../xout/_root/usr/bin/exec_proc                   |   Bin 12256 -> 12292 bytes
+ .../usr/lib/tree_lib/libphorcys_route_nodes.so     |   Bin 11084280 -> 11087312 bytes
+ .../usr/lib/tree_lib/libphorcys_tactics_tree.so    |   Bin 1811532 -> 1811532 bytes
+ .../xout/_root/version_record                      |    34 +-
+ .../{4.3.9_1608 => 4.3.9_1609}/xout/kernel.img     |   Bin 2934784 -> 2934784 bytes
+ .../{4.3.9_1608 => 4.3.9_1609}/xout/toc1.fex       |   Bin 1507328 -> 1507328 bytes
+ 22 files changed, 16979 insertions(+), 20 deletions(-)

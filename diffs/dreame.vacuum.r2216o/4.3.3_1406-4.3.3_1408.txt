@@ -1,0 +1,32 @@
+Firmware diff for DreameBot L10s Pro (dreame.vacuum.r2216o)
+Old version: 4.3.3_1406 New version: 4.3.3_1408
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_health_tethys.so       | Bin 287528 -> 287180 bytes
+ .../_root/ava/lib/node_laser_point_extractor.so    | Bin 291376 -> 291376 bytes
+ .../xout/_root/ava/lib/node_laser_transfer.so      | Bin 1049596 -> 1046920 bytes
+ .../xout/_root/ava/lib/node_lasercamera_calibr.so  | Bin 255068 -> 255068 bytes
+ .../xout/_root/ava/lib/node_laserplane_calibr.so   | Bin 287156 -> 287156 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 126024 -> 126024 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 1855808 -> 1855820 bytes
+ .../xout/_root/ava/lib/node_linelaser_calibr.so    | Bin 118848 -> 118076 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 946676 -> 946548 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 545216 -> 541680 bytes
+ .../xout/_root/ava/lib/node_tethys.so              | Bin 3394848 -> 3394192 bytes
+ .../xout/_root/etc/init.d/set_device_conf.sh       |  13 +++++++++----
+ .../xout/_root/etc/os-release                      |   4 ++--
+ .../xout/_root/misc/data.tar.bz2                   | Bin 562 -> 565 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/daemon                      | Bin 22664 -> 22664 bytes
+ .../xout/_root/usr/bin/dreame_bt                   | Bin 185496 -> 185496 bytes
+ .../xout/_root/usr/bin/dreameiot                   | Bin 112824 -> 112824 bytes
+ .../xout/_root/usr/bin/dreameiot_cli               | Bin 93648 -> 93648 bytes
+ .../xout/_root/usr/bin/dummy_cli                   | Bin 10256 -> 10256 bytes
+ .../xout/_root/usr/lib/libsys_guard.so             | Bin 31832 -> 31832 bytes
+ .../usr/lib/tree_lib/libtethys_route_nodes.so      | Bin 9263640 -> 9259544 bytes
+ .../usr/lib/tree_lib/libtethys_tactics_tree.so     | Bin 1077256 -> 1077160 bytes
+ .../xout/_root/version_record                      |   8 ++++----
+ .../{4.3.3_1406 => 4.3.3_1408}/xout/kernel.img     | Bin 2932736 -> 2932736 bytes
+ .../{4.3.3_1406 => 4.3.3_1408}/xout/toc1.fex       | Bin 1507328 -> 1507328 bytes
+ 26 files changed, 16 insertions(+), 11 deletions(-)

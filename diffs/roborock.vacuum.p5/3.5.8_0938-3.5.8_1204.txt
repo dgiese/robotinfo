@@ -1,0 +1,61 @@
+Firmware diff for Roborock P5 (roborock.vacuum.p5)
+Old version: 3.5.8_0938 New version: 3.5.8_1204
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/OS_VERSION                      |  10 +++++-----
+ .../xout/_root/etc/os-release                      |   2 +-
+ .../xout/_root/etc/rr-info                         |   2 +-
+ .../xout/_root/lib/modules/3.4.39/8189es.ko        | Bin 2255720 -> 2255720 bytes
+ .../xout/_root/lib/modules/3.4.39/disp.ko          | Bin 1077456 -> 1077456 bytes
+ .../xout/_root/lib/modules/3.4.39/drm.ko           | Bin 286056 -> 286056 bytes
+ .../xout/_root/lib/modules/3.4.39/g_android.ko     | Bin 64428 -> 64428 bytes
+ .../xout/_root/lib/modules/3.4.39/i2c-algo-bit.ko  | Bin 10948 -> 10948 bytes
+ .../xout/_root/lib/modules/3.4.39/lcd.ko           | Bin 54528 -> 54528 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 302808 -> 302112 bytes
+ .../xout/_root/lib/modules/3.4.39/mali_drm.ko      | Bin 8916 -> 8916 bytes
+ .../_root/lib/modules/3.4.39/scsi_wait_scan.ko     | Bin 3392 -> 3392 bytes
+ .../xout/_root/lib/modules/3.4.39/st480.ko         | Bin 48672 -> 48672 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 66592 -> 66316 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../xout/_root/opt/rockrobo/cleaner/bin/AppProxy   | Bin 863848 -> 876136 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboController  | Bin 236476 -> 236476 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerM | Bin 302476 -> 302476 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerR | Bin 232380 -> 232380 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/SysUpdate  | Bin 101456 -> 101456 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/rr_loader  | Bin 69172 -> 69228 bytes
+ .../_root/opt/rockrobo/cleaner/lib/libroboipc.so   | Bin 44776 -> 44776 bytes
+ .../opt/rockrobo/cleaner/lib/librobopersist.so     | Bin 67868 -> 67868 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_chassis.so   | Bin 63428 -> 63428 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_compass.so   | Bin 22224 -> 22224 bytes
+ .../opt/rockrobo/cleaner/lib/librr_plugin_laser.so | Bin 59432 -> 59432 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_logger.so    | Bin 5544 -> 5544 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrlocale.so  | Bin 203764 -> 203764 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 2383828 -> 2396124 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrslamdrv.so | Bin 277104 -> 281212 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrutils.so   | Bin 9788 -> 9788 bytes
+ .../cleaner/lib/libuart_api.so.4.0.0 => dev/null}  | Bin 118740 -> 0 bytes
+ .../opt/rockrobo/cleaner/lib/libuart_api.so.4.0.1} | Bin 0 -> 126976 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ .../firmware/bin/MCU_FIRMWARE_SCAN_FOLDER}         |   1 +
+ .../xout/_root/opt/rockrobo/firmware/bin/test}     |   1 +
+ ....A3.G1_M4.0.1_RELEASE_20210111-170827_FULL.bin} | Bin 217072 -> 217072 bytes
+ ...A3_M4.0.1_RELEASE_20210111-170729_INV_FULL.bin} | Bin 0 -> 217072 bytes
+ .../firmware/uart_test-4.0.0-20200928 => dev/null} | Bin 484652 -> 0 bytes
+ .../rockrobo/firmware/uart_test-4.0.1-20210111}    | Bin 0 -> 488844 bytes
+ .../opt/rockrobo/miio/miio_client_helper_nomqtt.sh |  18 ++++++++++++++++++
+ .../xout/_root/opt/rockrobo/miio/miio_recv_line    | Bin 3780 -> 3780 bytes
+ .../xout/_root/opt/rockrobo/miio/miio_send_line    | Bin 3500 -> 3652 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_rr         | Bin 186704 -> 186704 bytes
+ .../xout/_root/opt/rockrobo/rrlog/rrlogd           | Bin 281104 -> 285216 bytes
+ .../xout/_root/opt/rockrobo/watchdog/WatchDoge     | Bin 80204 -> 80212 bytes
+ .../xout/_root/opt/rockrobo/watchdog/core_helper   |   5 +++--
+ .../xout/_root/opt/rockrobo/wlan/wlanmgr           | Bin 34804 -> 34804 bytes
+ .../xout/_root/usr/bin/adbd                        | Bin 76208 -> 76208 bytes
+ .../xout/_root/usr/bin/rr_boot_flags               | Bin 9820 -> 9820 bytes
+ .../xout/_root/usr/bin/rr_try_mount                | Bin 9900 -> 9900 bytes
+ .../xout/bootout_aboot/zImage                      | Bin 3827048 -> 3827056 bytes
+ .../xout/bootout_aboot/zImage_3.5.8_1204.elf}      | Bin 9974427 -> 9974427 bytes
+ .../{3.5.8_0938 => 3.5.8_1204}/xout/kernel.img     | Bin 3829760 -> 3829760 bytes
+ 55 files changed, 33 insertions(+), 12 deletions(-)

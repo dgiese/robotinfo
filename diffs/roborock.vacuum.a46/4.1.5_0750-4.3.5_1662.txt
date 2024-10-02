@@ -1,0 +1,181 @@
+Firmware diff for Roborock G10S (roborock.vacuum.a46)
+Old version: 4.1.5_0750 New version: 4.3.5_1662
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/openwrt_release                 |   4 +-
+ .../xout/_root/etc/rr-info                         |   4 +-
+ .../targeted/contexts/files/file_contexts.homedirs |   2 +-
+ .../xout/_root/etc/signature                       | Bin 93840 -> 94116 bytes
+ .../xout/_root/lib/modules/4.9.191/8189es.ko       | Bin 2881144 -> 3024744 bytes
+ .../xout/_root/lib/modules/4.9.191/8189fs.ko}      | Bin 0 -> 2881144 bytes
+ .../xout/_root/lib/modules/4.9.191/pvrsrvkm.ko     | Bin 1730520 -> 1730520 bytes
+ .../xout/_root/lib/modules/4.9.191/vin_v4l2.ko     | Bin 301576 -> 301800 bytes
+ .../xout/_root/usr/bin/rrpkg                       | Bin 14128 -> 14128 bytes
+ .../xout/_root/usr/lib/libblkid.so.1.1.0           | Bin 223816 -> 223816 bytes
+ .../xout/_root/usr/lib/libgdbm.so.4.0.0            | Bin 38640 -> 38640 bytes
+ .../xout/_root/usr/lib/libical.so.0.48.0           | Bin 346152 -> 346152 bytes
+ .../xout/_root/usr/lib/libpython2.7.so.1.0         | Bin 1672216 -> 1672216 bytes
+ .../xout/_root/usr/lib/librrpkg.so                 | Bin 38616 -> 38616 bytes
+ .../xout/_root/usr/lib/libstdc++.so.6.0.28-gdb.py  |   4 +-
+ .../xout/_root/usr/lib/opkg/info/alsa-lib.control  |   2 +-
+ .../_root/usr/lib/opkg/info/base-files.conffiles   |   4 +-
+ .../_root/usr/lib/opkg/info/base-files.control     |   4 +-
+ .../xout/_root/usr/lib/opkg/info/bash.control      |   2 +-
+ .../_root/usr/lib/opkg/info/block-mount.control    |   2 +-
+ .../_root/usr/lib/opkg/info/boost-atomic.control   |   2 +-
+ .../_root/usr/lib/opkg/info/boost-chrono.control   |   2 +-
+ .../usr/lib/opkg/info/boost-filesystem.control     |   2 +-
+ .../_root/usr/lib/opkg/info/boost-graph.control    |   2 +-
+ .../_root/usr/lib/opkg/info/boost-regex.control    |   2 +-
+ .../_root/usr/lib/opkg/info/boost-signals.control  |   2 +-
+ .../_root/usr/lib/opkg/info/boost-thread.control   |   2 +-
+ .../usr/lib/opkg/info/ca-certificates.control      |   2 +-
+ .../_root/usr/lib/opkg/info/cryptsetup.control     |   2 +-
+ .../_root/usr/lib/opkg/info/dbus-utils.control     |   2 +-
+ .../xout/_root/usr/lib/opkg/info/dbus.control      |   2 +-
+ .../xout/_root/usr/lib/opkg/info/e2fsprogs.control |   2 +-
+ .../xout/_root/usr/lib/opkg/info/fstools.control   |   2 +-
+ .../xout/_root/usr/lib/opkg/info/jshn.control      |   2 +-
+ .../_root/usr/lib/opkg/info/jsonfilter.control     |   2 +-
+ .../xout/_root/usr/lib/opkg/info/kernel.control    |   2 +-
+ .../_root/usr/lib/opkg/info/kmod-compass.control   |   4 +-
+ .../usr/lib/opkg/info/kmod-crypto-aead.control     |   2 +-
+ .../usr/lib/opkg/info/kmod-crypto-hash.control     |   4 +-
+ .../usr/lib/opkg/info/kmod-crypto-manager.control  |   2 +-
+ .../lib/opkg/info/kmod-crypto-pcompress.control    |   2 +-
+ .../xout/_root/usr/lib/opkg/info/kmod-dm.control   |   4 +-
+ .../lib/opkg/info/kmod-ge8300-km-opencl.control    |   4 +-
+ .../usr/lib/opkg/info/kmod-input-core.control      |   2 +-
+ .../usr/lib/opkg/info/kmod-lib-textsearch.control  |   2 +-
+ .../opkg/info/kmod-net-rtl8189es-v51286.control}   |  10 +
+ .../lib/opkg/info/kmod-net-rtl8189es-v51286.list}  |   1 +
+ .../lib/opkg/info/kmod-net-rtl8189fs-v5113.control |   4 +-
+ .../lib/opkg/info/kmod-net-rtl8189fs-v5113.list    |   2 +-
+ .../opkg/info/kmod-net-sv6158.20q2.2113.01.control |   4 +-
+ .../_root/usr/lib/opkg/info/kmod-sunxi-vin.control |   4 +-
+ .../usr/lib/opkg/info/kmod-video-core.control      |   2 +-
+ .../xout/_root/usr/lib/opkg/info/ldd.control       |   2 +-
+ .../_root/usr/lib/opkg/info/libAWIspApi.control    |   2 +-
+ .../usr/lib/opkg/info/liballwinner-base.control    |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libatomic.control |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libattr.control   |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libaudit.control  |   2 +-
+ .../usr/lib/opkg/info/libblobmsg-json.control      |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libbz2.control    |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libc.control      |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libdb47.control   |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libdbus.control   |   2 +-
+ .../_root/usr/lib/opkg/info/libdevmapper.control   |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libevdev.control  |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libexpat.control  |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libext2fs.control |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libffi.control    |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libgcc.control    |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libgcrypt.control |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libgnutls.control |   2 +-
+ .../_root/usr/lib/opkg/info/libgpu-opencl.control  |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libical.control   |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libjpeg.control   |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libjson-c.control |   2 +-
+ .../xout/_root/usr/lib/opkg/info/liblzma.control   |   2 +-
+ .../_root/usr/lib/opkg/info/libncurses.control     |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libnettle.control |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libogg.control    |   2 +-
+ .../xout/_root/usr/lib/opkg/info/liboil.control    |   2 +-
+ .../_root/usr/lib/opkg/info/libopenssl.control     |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libopus.control   |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libpcap.control   |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libpixman.control |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libpopt.control   |   2 +-
+ .../_root/usr/lib/opkg/info/libreadline.control    |   2 +-
+ .../_root/usr/lib/opkg/info/libsec_key.control     |   2 +-
+ .../usr/lib/opkg/info/libselinux-utils.control     |   2 +-
+ .../_root/usr/lib/opkg/info/libselinux.control     |   2 +-
+ .../_root/usr/lib/opkg/info/libsemanage.control    |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libsepol.control  |   2 +-
+ .../_root/usr/lib/opkg/info/libsqlite3.control     |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libstdcpp.control |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libtheora.control |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libuapi.control   |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libubox.control   |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libubus.control   |   2 +-
+ .../_root/usr/lib/opkg/info/libuclient.control     |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libuuid.control   |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libv4l.control    |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libvorbis.control |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libvpx.control    |   2 +-
+ .../_root/usr/lib/opkg/info/libxtables.control     |   2 +-
+ .../xout/_root/usr/lib/opkg/info/logd.control      |   2 +-
+ .../xout/_root/usr/lib/opkg/info/lvm2.control      |   2 +-
+ .../xout/_root/usr/lib/opkg/info/mtdev.control     |   2 +-
+ .../xout/_root/usr/lib/opkg/info/musl-fts.control  |   2 +-
+ .../xout/_root/usr/lib/opkg/info/netifd.control    |   2 +-
+ .../xout/_root/usr/lib/opkg/info/ntpdate.control   |   2 +-
+ .../usr/lib/opkg/info/optee-client-3.7.control     |   2 +-
+ .../xout/_root/usr/lib/opkg/info/optee-rr.control  |   2 +-
+ .../xout/_root/usr/lib/opkg/info/procd.control     |   2 +-
+ .../_root/usr/lib/opkg/info/procps-pgrep.control   |   2 +-
+ .../_root/usr/lib/opkg/info/procps-pmap.control    |   2 +-
+ .../xout/_root/usr/lib/opkg/info/procps-ps.control |   2 +-
+ .../_root/usr/lib/opkg/info/procps-tload.control   |   2 +-
+ .../_root/usr/lib/opkg/info/procps-top.control     |   2 +-
+ .../xout/_root/usr/lib/opkg/info/procps-w.control  |   2 +-
+ .../_root/usr/lib/opkg/info/procps-watch.control   |   2 +-
+ .../xout/_root/usr/lib/opkg/info/procps.control    |   2 +-
+ .../_root/usr/lib/opkg/info/python-base.control    |   2 +-
+ .../_root/usr/lib/opkg/info/python-codecs.control  |   2 +-
+ .../usr/lib/opkg/info/python-compiler.control      |   2 +-
+ .../xout/_root/usr/lib/opkg/info/python-db.control |   2 +-
+ .../_root/usr/lib/opkg/info/python-decimal.control |   2 +-
+ .../usr/lib/opkg/info/python-distutils.control     |   2 +-
+ .../_root/usr/lib/opkg/info/python-gdbm.control    |   2 +-
+ .../usr/lib/opkg/info/python-libselinux.control    |   2 +-
+ .../_root/usr/lib/opkg/info/python-light.control   |   2 +-
+ .../_root/usr/lib/opkg/info/python-logging.control |   2 +-
+ .../lib/opkg/info/python-multiprocessing.control   |   2 +-
+ .../_root/usr/lib/opkg/info/python-ncurses.control |   2 +-
+ .../_root/usr/lib/opkg/info/python-openssl.control |   2 +-
+ .../_root/usr/lib/opkg/info/python-pydoc.control   |   2 +-
+ .../usr/lib/opkg/info/python-sepolgen.control      |   2 +-
+ .../usr/lib/opkg/info/python-sepolicy.control      |   2 +-
+ .../_root/usr/lib/opkg/info/python-sqlite3.control |   2 +-
+ .../usr/lib/opkg/info/python-unittest.control      |   2 +-
+ .../_root/usr/lib/opkg/info/python-xml.control     |   2 +-
+ .../xout/_root/usr/lib/opkg/info/refpolicy.control |   2 +-
+ .../xout/_root/usr/lib/opkg/info/rr_boot.control   |   2 +-
+ .../_root/usr/lib/opkg/info/rr_dropbear.control    |   2 +-
+ .../xout/_root/usr/lib/opkg/info/rr_login.control  |   2 +-
+ .../xout/_root/usr/lib/opkg/info/rradb.control     |   2 +-
+ .../_root/usr/lib/opkg/info/selinux-chcat.control  |   2 +-
+ .../usr/lib/opkg/info/selinux-semanage.control     |   2 +-
+ .../xout/_root/usr/lib/opkg/info/terminfo.control  |   2 +-
+ .../_root/usr/lib/opkg/info/uboot-envtools.control |   2 +-
+ .../xout/_root/usr/lib/opkg/info/ubox.control      |   2 +-
+ .../xout/_root/usr/lib/opkg/info/ubus.control      |   2 +-
+ .../xout/_root/usr/lib/opkg/info/wpa-cli.control   |   2 +-
+ .../_root/usr/lib/opkg/info/wpa-supplicant.control |   2 +-
+ .../xout/_root/usr/lib/opkg/info/xz.control        |   2 +-
+ .../xout/_root/usr/lib/opkg/info/zlib.control      |   2 +-
+ .../usr/lib/opkg/info/zoneinfo-africa.control      |   2 +-
+ .../_root/usr/lib/opkg/info/zoneinfo-asia.control  |   2 +-
+ .../usr/lib/opkg/info/zoneinfo-atlantic.control    |   2 +-
+ .../lib/opkg/info/zoneinfo-australia-nz.control    |   2 +-
+ .../_root/usr/lib/opkg/info/zoneinfo-core.control  |   2 +-
+ .../usr/lib/opkg/info/zoneinfo-europe.control      |   2 +-
+ .../_root/usr/lib/opkg/info/zoneinfo-india.control |   2 +-
+ .../lib/opkg/info/zoneinfo-northamerica.control    |   2 +-
+ .../_root/usr/lib/opkg/info/zoneinfo-poles.control |   2 +-
+ .../usr/lib/opkg/info/zoneinfo-simple.control      |   2 +-
+ .../lib/opkg/info/zoneinfo-southamerica.control    |   2 +-
+ .../xout/_root/usr/lib/opkg/status                 | 437 +++++++++++----------
+ .../xout/_root/usr/lib/python2.7/_sysconfigdata.py |  22 +-
+ .../_root/usr/lib/python2.7/lib-dynload/_ssl.so    | Bin 91712 -> 91712 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/array.so   | Bin 41136 -> 41136 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/gdbm.so    | Bin 17992 -> 17992 bytes
+ .../_root/usr/lib/python2.7/lib-dynload/pyexpat.so | Bin 174568 -> 174568 bytes
+ .../xout/_root/usr/sbin/ntpdate                    | Bin 96528 -> 96528 bytes
+ .../xout/_root/usr/share/udhcpc/default.script     |  13 +
+ .../{4.1.5_0750 => 4.3.5_1662}/xout/boot/zImage    | Bin 21372940 -> 21372940 bytes
+ .../{4.1.5_0750 => 4.3.5_1662}/xout/kernel.img     | Bin 21381120 -> 21381120 bytes
+ 175 files changed, 421 insertions(+), 390 deletions(-)

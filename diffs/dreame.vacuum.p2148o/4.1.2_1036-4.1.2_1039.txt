@@ -1,0 +1,29 @@
+Firmware diff for Mijia Robot Vacuum-Mop Ultra Slim (dreame.vacuum.p2148o)
+Old version: 4.1.2_1036 New version: 4.1.2_1039
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_calibr.so              | Bin 239072 -> 239072 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 98784 -> 98784 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 832384 -> 832384 bytes
+ .../xout/_root/ava/lib/node_vision.so              | Bin 2149440 -> 2152880 bytes
+ .../xout/_root/etc/init.d/tof_calibrate.sh         |   9 +++
+ .../xout/_root/etc/os-release                      |   4 +-
+ .../xout/_root/etc/rc.sysinit                      |   1 -
+ .../xout/_root/misc/data.tar.bz2                   | Bin 630 -> 743 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../_root/usr/bin/curl_download.sh => dev/null}    |  17 ------
+ .../xout/_root/usr/bin/curl_upload.sh => dev/null} |  15 -----
+ .../xout/_root/usr/bin/factory_reset.sh            |   2 +-
+ .../xout/_root/usr/bin/fw_printenv                 | Bin 27816 -> 27832 bytes
+ .../4.1.2_1039/xout/_root/usr/bin/lock_area.sh}    |  63 +++++++++++++++++++++
+ .../xout/_root/usr/bin/ofilm_calibration           | Bin 16792 -> 16792 bytes
+ .../xout/_root/usr/bin/sunny_calibration           | Bin 31960 -> 31960 bytes
+ .../usr/lib/modules/4.9.191/external/8723ds.ko     | Bin 3258176 -> 3258176 bytes
+ .../usr/lib/tree_lib/liblachesis_route_nodes.so    | Bin 4190416 -> 4216504 bytes
+ .../usr/lib/tree_lib/liblachesis_tactics_tree.so   | Bin 1101096 -> 1099904 bytes
+ .../_root/usr/lib/tree_lib/liblachesis_tree.so     | Bin 5544344 -> 5549472 bytes
+ .../xout/_root/version_record                      |   6 +-
+ .../{4.1.2_1036 => 4.1.2_1039}/xout/kernel.img     | Bin 10379264 -> 10379264 bytes
+ .../{4.1.2_1036 => 4.1.2_1039}/xout/toc1.fex       | Bin 1179648 -> 1179648 bytes
+ 23 files changed, 79 insertions(+), 40 deletions(-)

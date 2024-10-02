@@ -1,0 +1,967 @@
+Firmware diff for DEEBOT X2 (ecovacs.lf3bn4)
+Old version: 0.6.0 New version: 1.17.3
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../lstm2d_editedattn.opt.tnnmodel}                | Bin 0 -> 303001 bytes
+ .../lstm2d_editedattn.opt.tnnproto}                |  31 ++
+ .../null}                                          | Bin 24172253 -> 0 bytes
+ .../null}                                          | 115 --------
+ .../_model/audiomodel/wakeup_resource/wakeup.conf  |   5 +-
+ .../{0.6.0 => 1.17.3}/xout/_model/models.json      | 324 ++++++++++++++++++++-
+ .../{0.6.0 => 1.17.3}/xout/_model/rl_navi.bin      | Bin 2831314 -> 2831314 bytes
+ .../xout/_model/rnnppo_hybrid_horizonrt.bin}       | Bin 0 -> 4659439 bytes
+ .../xout/_root/data/config/kvs_webrtc_sdk_log.conf |   1 +
+ .../xout/_root/etc/conf/SettingConfig.json         |   4 +-
+ .../etc/conf/config_ecovacs_sweeper_hh2_3_1.lst}   | Bin 0 -> 147576 bytes
+ .../xout/_root/etc/conf/dxai_node.json             |   8 +-
+ .../xout/_root/etc/conf/dxai_ota.json              |   7 +-
+ .../xout/_root/etc/conf/kvs_webrtc_sdk_log.conf    |   1 +
+ .../xout/_root/etc/conf/medusa/bddsp_ota_hook.sh   |  14 +-
+ .../xout/_root/etc/conf/medusa/deebot_x3_dz.conf   |  31 +-
+ .../xout/_root/etc/conf/medusa/erp_hook.sh         | 152 ++++++++--
+ .../xout/_root/etc/conf/medusa/fw_reboot.sh        |  36 ++-
+ .../xout/_root/etc/conf/medusa/press_key_help.sh   |  26 +-
+ .../xout/_root/etc/conf/medusa/process_picture.sh  |   2 +
+ .../_root/etc/conf/medusa/xmpp_server_status.sh    |   6 +-
+ .../xout/_root/etc/conf/messageConfig.json         | 110 ++++++-
+ .../xout/_root/etc/conf/netd.conf                  |   2 +-
+ .../xout/_root/etc/conf/nlp/ecouser.net.cert}      |   0
+ .../xout/_root/etc/conf/nlp/eis.json               |   8 +-
+ .../xout/_root/etc/conf/pln_config.json            |  31 +-
+ .../xout/_root/etc/conf/speech_recognition.conf    |   2 +-
+ .../xout/_root/etc/conf/wifi_service.conf          |   4 +-
+ .../{0.6.0 => 1.17.3}/xout/_root/etc/fw.manifest   |   6 +-
+ .../{0.6.0 => 1.17.3}/xout/_root/etc/rc.conf       |   2 +-
+ .../xout/_root/etc/rc.d/bt-monitor.sh              |  11 +-
+ .../xout/_root/etc/rc.d/bt_bumbee_hook.sh          |  19 +-
+ .../1.17.3/xout/_root/etc/rc.d/cpuReport.sh}       |  45 +++
+ .../xout/_root/etc/rc.d/deebot.sh                  |   8 +-
+ .../xout/_root/etc/rc.d/distance-table.sh          |   2 +-
+ .../{0.6.0 => 1.17.3}/xout/_root/etc/rc.d/dog.sh   |   1 +
+ .../xout/_root/etc/rc.d/goahead.sh                 |   6 +-
+ .../1.17.3/xout/_root/etc/rc.d/klogd.sh}           |   6 +
+ .../xout/_root/etc/rc.d/mcu_ota_check.sh           |   2 +-
+ .../xout/_root/etc/rc.d/medusa.sh                  |   6 +-
+ .../xout/_root/etc/rc.d/mount_data.sh              | 114 ++++++--
+ .../xout/_root/etc/rc.d/pre_boot.sh                |   2 +-
+ .../xout/_root/etc/rc.d/sl_ota_check.sh            |   2 +-
+ .../xout/_root/etc/rc.d/speech_recognition.sh      |  28 +-
+ .../xout/_root/etc/rc.d/time_sync.sh               |  26 +-
+ .../xout/_root/etc/rc.d/wifi-rtl8723.sh            |   6 +-
+ .../xout/_root/etc/wifi/bumbee_hook.sh             | 114 +++++++-
+ .../xout/_root/etc/wifi/netmon_hook.sh             |  31 +-
+ .../xout/_root/etc/wifi/rtl8723.tar.bz2            | Bin 10240 -> 1540 bytes
+ .../xout/_root/etc/www/cgi-bin/startFct            | Bin 21712 -> 19824 bytes
+ .../{0.6.0 => 1.17.3}/xout/_root/etc/www/reqDo     | Bin 26872 -> 28912 bytes
+ .../null}                                          | Bin 178 -> 0 bytes
+ .../EN/native_audio/AUTO_DIRTWATER_BOX_FULL.mp3}   | Bin 0 -> 21024 bytes
+ .../media/music/EN/native_audio/AsrFailed.mp3}     | Bin 0 -> 28080 bytes
+ .../EN/native_audio/BATTERY_LOW_DEEBOT_OFF.mp3     | Bin 16272 -> 16272 bytes
+ .../music/EN/native_audio/BATTERY_LOW_RETURN.mp3}  | Bin 0 -> 22320 bytes
+ .../music/EN/native_audio/BLUETOOTH_ERROR.mp3      | Bin 9792 -> 9792 bytes
+ .../music/EN/native_audio/BLUETOOTH_RELEASE.mp3    | Bin 11664 -> 11664 bytes
+ .../EN/native_audio/BLUETOOTH_RELEASE_APP_NET.mp3  | Bin 24192 -> 24192 bytes
+ .../music/EN/native_audio/BRUSH_MAIN_ERROR.mp3     | Bin 15840 -> 15840 bytes
+ .../music/EN/native_audio/BRUSH_SIDE_ERROR.mp3     | Bin 16416 -> 16416 bytes
+ .../EN/native_audio/BUILDMAP_OVER_THEN_CLEAN.mp3   | Bin 20016 -> 19152 bytes
+ .../music/EN/native_audio/BUILD_MAP_ERROR.mp3      | Bin 7920 -> 7920 bytes
+ .../music/EN/native_audio/BUILD_MAP_PAUSED.mp3     | Bin 7920 -> 7920 bytes
+ .../media/music/EN/native_audio/CHARGE_ERROR.mp3   | Bin 17136 -> 17136 bytes
+ .../_root/media/music/EN/native_audio/CHARGING.mp3 | Bin 8352 -> 8352 bytes
+ .../media/music/EN/native_audio/CHILD_LOCKING.mp3  | Bin 18144 -> 18144 bytes
+ .../music/EN/native_audio/CHILD_LOCK_DISABLE.mp3   | Bin 9504 -> 9504 bytes
+ .../music/EN/native_audio/CHILD_LOCK_ENABLE.mp3    | Bin 9072 -> 9072 bytes
+ .../music/EN/native_audio/CHILD_LOCK_IS_CLOSED.mp3 | Bin 9504 -> 9504 bytes
+ .../media/music/EN/native_audio/CLEAN_COMPLETE.mp3 | Bin 16128 -> 16128 bytes
+ .../native_audio/CLEAN_COMPLETE_RETURN_ORIGIN.mp3  | Bin 18288 -> 18288 bytes
+ .../native_audio/CLEAN_COMPLETE_RETURN_STATION.mp3 | Bin 16128 -> 16704 bytes
+ .../null}                                          | Bin 34128 -> 0 bytes
+ .../null}                                          | Bin 34416 -> 0 bytes
+ .../CLEAN_OVER_NEED_CONTINUE.mp3 => dev/null}      | Bin 19872 -> 0 bytes
+ .../media/music/EN/native_audio/CLEAN_PAUSED.mp3   | Bin 7920 -> 7920 bytes
+ .../EN/native_audio/CLEAN_TANK_WATER_FULL.mp3      | Bin 16560 -> 16560 bytes
+ .../CLEAN_WATER_COMMAND_AGAIN.mp3 => dev/null}     | Bin 19728 -> 0 bytes
+ .../CLEAN_WATER_ERROR_TO_SWEEP.mp3 => dev/null}    | Bin 30240 -> 0 bytes
+ .../music/EN/native_audio/CLEAN_WATER_LACK.mp3     | Bin 19872 -> 19872 bytes
+ .../media/music/EN/native_audio/COME_SAY_AGAIN.mp3 | Bin 26064 -> 26064 bytes
+ .../music/EN/native_audio/CONSUMABLE_RIGHT.mp3     | Bin 13536 -> 13536 bytes
+ .../music/EN/native_audio/CONTINUE_BUILD_MAP.mp3   | Bin 8064 -> 8064 bytes
+ .../CONTINUE_CLEAN_WHEN_CHARGE_FULL.mp3            | Bin 15408 -> 15408 bytes
+ .../music/EN/native_audio/CONTINUE_RETURN.mp3      | Bin 8352 -> 8352 bytes
+ .../media/music/EN/native_audio/CONTINUE_WORK.mp3  | Bin 8064 -> 8064 bytes
+ .../music/EN/native_audio/CURRENT_BATTERY_FULL.mp3 | Bin 7344 -> 7344 bytes
+ .../music/EN/native_audio/CURRENT_SUCK_NORMAL.mp3  | Bin 14112 -> 14112 bytes
+ .../music/EN/native_audio/CURRENT_SUCK_SILENT.mp3  | Bin 13968 -> 13968 bytes
+ .../music/EN/native_audio/CURRENT_SUCK_STRONG.mp3  | Bin 13536 -> 13536 bytes
+ .../EN/native_audio/CURRENT_SUCK_VERYSTRONG.mp3    | Bin 14832 -> 14832 bytes
+ .../music/EN/native_audio/CURRENT_WATER_HIGH.mp3   | Bin 12384 -> 12384 bytes
+ .../music/EN/native_audio/CURRENT_WATER_LOW.mp3    | Bin 12240 -> 12240 bytes
+ .../music/EN/native_audio/CURRENT_WATER_MIDDLE.mp3 | Bin 12672 -> 12672 bytes
+ .../EN/native_audio/CURRENT_WATER_VERYHIGH.mp3     | Bin 13680 -> 13680 bytes
+ .../music/EN/native_audio/DIRTWATER_BOX_FULL.mp3   | Bin 20304 -> 20304 bytes
+ .../music/EN/native_audio/DIRTY_BOX_CLEAN.mp3      | Bin 10224 -> 10224 bytes
+ .../media/music/EN/native_audio/DIRT_BAG_FULL.mp3  | Bin 18000 -> 18000 bytes
+ .../EN/native_audio/DIRT_BAG_INSTALL_ERROR.mp3     | Bin 18432 -> 18432 bytes
+ .../media/music/EN/native_audio/DIRT_BAG_RIGHT.mp3 | Bin 11808 -> 11808 bytes
+ .../music/EN/native_audio/DIRT_COLLECTING.mp3      | Bin 18720 -> 18720 bytes
+ .../DIRT_WATER_COMMAND_AGAIN.mp3 => dev/null}      | Bin 21888 -> 0 bytes
+ .../DIRT_WATER_ERROR_TO_SWEEP.mp3 => dev/null}     | Bin 23472 -> 0 bytes
+ .../media/music/EN/native_audio/DOWNIN_ERROR.mp3   | Bin 22608 -> 22608 bytes
+ .../EN/native_audio/DTOF_STOP_PLEASE_DETECTION.mp3 | Bin 17712 -> 17712 bytes
+ .../media/music/EN/native_audio/ERROR_RELIEVE.mp3  | Bin 17424 -> 17424 bytes
+ .../media/music/EN/native_audio/EXIT_OMNI.mp3      | Bin 23184 -> 23184 bytes
+ .../EN/native_audio/EXPAND_ERROR_BUILD_AGAIN.mp3   | Bin 20592 -> 20592 bytes
+ .../music/EN/native_audio/EXPAND_ERROR_RETRY.mp3   | Bin 16272 -> 16272 bytes
+ .../media/music/EN/native_audio/EXPAND_OVER.mp3    | Bin 16704 -> 17136 bytes
+ .../EN/native_audio/FAILED_FIND_OMNI_CONTINUE.mp3  | Bin 19008 -> 19008 bytes
+ .../FAIL_FIND_APPOINT_AREA_RETURN_OMNI.mp3         | Bin 19872 -> 19872 bytes
+ .../music/EN/native_audio/FAIL_TO_FIND_CHARGE.mp3  | Bin 21600 -> 21600 bytes
+ .../music/EN/native_audio/FAST_BUILD_OVER.mp3      | Bin 18576 -> 18576 bytes
+ .../music/EN/native_audio/FILTER_UNINSTALL.mp3     | Bin 18432 -> 18432 bytes
+ .../native_audio/FILTER_UNINSTALL_CHECK_CLEAN.mp3  | Bin 24336 -> 24336 bytes
+ .../native_audio/FIND_PET_PAUSED.mp3 => dev/null}  | Bin 9792 -> 0 bytes
+ .../_root/media/music/EN/native_audio/FIND_YOU.mp3 | Bin 6768 -> 6624 bytes
+ .../native_audio/FIND_YOU_I_COME.mp3 => dev/null}  | Bin 13536 -> 0 bytes
+ .../FIND_YOU_PLEASE_POINT.mp3 => dev/null}         | Bin 20448 -> 0 bytes
+ .../media/music/EN/native_audio/GET_TO_TARGET.mp3  | Bin 9936 -> 9936 bytes
+ .../media/music/EN/native_audio/GOTO_PAUSED.mp3    | Bin 11952 -> 11952 bytes
+ .../media/music/EN/native_audio/GO_CHARGE_FAIL.mp3 | Bin 35424 -> 35424 bytes
+ .../_root/media/music/EN/native_audio/HELLO_I.mp3  | Bin 13248 -> 12384 bytes
+ .../music/EN/native_audio/HELLO_I_AM_YIKO.mp3      | Bin 31824 -> 30528 bytes
+ .../music/EN/native_audio/HOTDRY_MODULE_ERROR.mp3  | Bin 18576 -> 18576 bytes
+ .../music/EN/native_audio/HOT_DRY_MOP_COMPLETE.mp3 | Bin 9792 -> 9792 bytes
+ .../music/EN/native_audio/IN_AUTO_CLEAN_YET.mp3    | Bin 11232 -> 11232 bytes
+ .../music/EN/native_audio/IN_DISTRIBUTE_NET.mp3    | Bin 13392 -> 13392 bytes
+ .../media/music/EN/native_audio/IN_DOWN_WATER.mp3} | Bin 0 -> 16992 bytes
+ .../media/music/EN/native_audio/IN_HOT_DRYMOP.mp3  | Bin 11520 -> 11520 bytes
+ .../media/music/EN/native_audio/IN_MOP_AUTO.mp3    | Bin 11088 -> 11088 bytes
+ .../EN/native_audio/IN_ONEKEY_DOWN_WATER.mp3}      | Bin 0 -> 11088 bytes
+ .../media/music/EN/native_audio/IN_POSITION.mp3    | Bin 10224 -> 10224 bytes
+ .../music/EN/native_audio/IN_POSITION_TRY.mp3}     | Bin 0 -> 14976 bytes
+ .../EN/native_audio/IN_SWEEP_AND_MOP_AUTO.mp3      | Bin 13248 -> 13248 bytes
+ .../media/music/EN/native_audio/IN_SWEEP_AUTO.mp3  | Bin 11664 -> 11664 bytes
+ .../EN/native_audio/IN_SWEEP_BEFORE_MOP_AUTO.mp3   | Bin 15264 -> 15264 bytes
+ .../media/music/EN/native_audio/IN_THIS_TASK.mp3   | Bin 8784 -> 8784 bytes
+ .../EN/native_audio/IN_TRUSTSHIP_CLEAN_YET.mp3     | Bin 10080 -> 10080 bytes
+ .../media/music/EN/native_audio/IN_UPGRADE.mp3     | Bin 16272 -> 16272 bytes
+ .../media/music/EN/native_audio/IN_UP_WATER.mp3}   | Bin 0 -> 16272 bytes
+ .../_root/media/music/EN/native_audio/IN_VIDEO.mp3 | Bin 10080 -> 10080 bytes
+ .../IS_SWEEP_MODE_YET.mp3 => dev/null}             | Bin 9216 -> 0 bytes
+ .../_root/media/music/EN/native_audio/I_AM.mp3     | Bin 6480 -> 6480 bytes
+ .../_root/media/music/EN/native_audio/I_AM_1.mp3   | Bin 5616 -> 5616 bytes
+ .../_root/media/music/EN/native_audio/I_AM_2.mp3}  | Bin 0 -> 8928 bytes
+ .../_root/media/music/EN/native_audio/I_AM_3.mp3}  | Bin 0 -> 7920 bytes
+ .../_root/media/music/EN/native_audio/I_AM_4.mp3}  | Bin 0 -> 7056 bytes
+ .../media/music/EN/native_audio/I_AM_BUILD_MAP.mp3 | Bin 6768 -> 6768 bytes
+ .../media/music/EN/native_audio/I_AM_CHARGING.mp3  | Bin 7056 -> 7056 bytes
+ .../native_audio/I_AM_CHARGING_CANNOT_CONTINUE.mp3 | Bin 14976 -> 14976 bytes
+ .../EN/native_audio/I_AM_CHARGING_CANNOT_STOP.mp3  | Bin 13968 -> 13968 bytes
+ .../media/music/EN/native_audio/I_AM_CLEAN.mp3     | Bin 6912 -> 6912 bytes
+ .../EN/native_audio/I_AM_FIND_PET.mp3 => dev/null} | Bin 9072 -> 0 bytes
+ .../media/music/EN/native_audio/I_AM_GOTO.mp3      | Bin 11520 -> 11520 bytes
+ .../media/music/EN/native_audio/I_AM_HERE.mp3      | Bin 6480 -> 6480 bytes
+ .../music/EN/native_audio/I_AM_HOT_DRYMOP.mp3      | Bin 10080 -> 10080 bytes
+ .../music/EN/native_audio/I_AM_HOT_WASH_MOP.mp3    | Bin 12672 -> 12672 bytes
+ .../media/music/EN/native_audio/I_AM_IDLE.mp3      | Bin 8208 -> 8208 bytes
+ .../EN/native_audio/I_AM_IDLE_CANNOT_CONTINUE.mp3  | Bin 15552 -> 15552 bytes
+ .../EN/native_audio/I_AM_IDLE_CANNOT_STOP.mp3      | Bin 14688 -> 14688 bytes
+ .../music/EN/native_audio/I_AM_LOW_CHARGE.mp3}     | Bin 0 -> 14112 bytes
+ .../media/music/EN/native_audio/I_AM_OUT_OMNI.mp3  | Bin 9648 -> 9648 bytes
+ .../media/music/EN/native_audio/I_AM_PATROL.mp3    | Bin 7632 -> 8496 bytes
+ .../media/music/EN/native_audio/I_AM_READY.mp3     | Bin 24480 -> 24480 bytes
+ .../music/EN/native_audio/I_AM_RETURN_OMNI.mp3     | Bin 9936 -> 9936 bytes
+ .../media/music/EN/native_audio/I_AM_WASH_MOP.mp3  | Bin 10080 -> 10080 bytes
+ .../music/EN/native_audio/LONG_TIME_BUMPING.mp3    | Bin 23040 -> 23040 bytes
+ .../EN/native_audio/LOW_BATTERY_IN_CHARGE.mp3      | Bin 16272 -> 16272 bytes
+ .../EN/native_audio/LOW_BATTERY_TO_RETURN.mp3      | Bin 15552 -> 15552 bytes
+ .../EN/native_audio/MAP_EXIST_BUILD_AGAIN.mp3}     | Bin 0 -> 16704 bytes
+ .../EN/native_audio/MOP_AND_DIRTY_BOX_CLEAN.mp3    | Bin 15552 -> 15552 bytes
+ .../music/EN/native_audio/MOP_HANDLE_DETACH.mp3    | Bin 10368 -> 10368 bytes
+ .../native_audio/MOP_HANDLE_DETACH_STOP_TASK.mp3   | Bin 17280 -> 17280 bytes
+ .../media/music/EN/native_audio/MOP_HANDLE_FIX.mp3 | Bin 10656 -> 10656 bytes
+ .../music/EN/native_audio/MOP_HANDLE_UNINSTALL.mp3 | Bin 19872 -> 19872 bytes
+ .../music/EN/native_audio/MOP_HANDLE_WRAP.mp3      | Bin 16848 -> 16848 bytes
+ .../music/EN/native_audio/MOP_MODE_NOT_SUCK.mp3    | Bin 20592 -> 20592 bytes
+ .../media/music/EN/native_audio/MOVE_ROBOT_OK.mp3} | Bin 0 -> 6048 bytes
+ .../media/music/EN/native_audio/NET_CONNECTING.mp3 | Bin 15408 -> 15408 bytes
+ .../music/EN/native_audio/NET_CONNECT_ERROR.mp3    | Bin 9360 -> 9360 bytes
+ .../music/EN/native_audio/NET_CONNECT_SUCCESS.mp3  | Bin 10512 -> 10512 bytes
+ .../media/music/EN/native_audio/NET_FAILED.mp3     | Bin 20160 -> 20160 bytes
+ .../media/music/EN/native_audio/NET_OVERTIME.mp3   | Bin 24768 -> 24768 bytes
+ .../music/EN/native_audio/NOT_MOVE_FORWARD.mp3     | Bin 8784 -> 8784 bytes
+ .../music/EN/native_audio/NOT_WASN_THEN_CLEAN.mp3  | Bin 18864 -> 18864 bytes
+ .../native_audio/NO_MAP_WILL_BUDIL_THEN_CLEAN.mp3  | Bin 35856 -> 36000 bytes
+ .../media/music/EN/native_audio/NO_PAILIN.mp3      | Bin 15696 -> 15696 bytes
+ .../xout/_root/media/music/EN/native_audio/OK.mp3  | Bin 6048 -> 6048 bytes
+ .../music/EN/native_audio/OK_BLUETOOTH_RELEASE.mp3 | Bin 14544 -> 14544 bytes
+ .../OK_CALL_ME_IF_NEED.mp3 => dev/null}            | Bin 11376 -> 0 bytes
+ .../music/EN/native_audio/OK_CHILD_LOCK_CLOSE.mp3  | Bin 11952 -> 11952 bytes
+ .../OK_COMPLETEWORK_START_TRUSTSHIP.mp3            | Bin 22608 -> 22608 bytes
+ .../EN/native_audio/OK_CONTINUE_BULID_MAP.mp3      | Bin 20880 -> 20880 bytes
+ .../EN/native_audio/OK_CONTINUE_HOT_WASH_MOP.mp3   | Bin 16560 -> 16560 bytes
+ .../music/EN/native_audio/OK_CONTINUE_WASHMOP.mp3  | Bin 13248 -> 13248 bytes
+ .../music/EN/native_audio/OK_CONTINUE_WORK.mp3     | Bin 10512 -> 10512 bytes
+ .../music/EN/native_audio/OK_I_CAN_AUTO_CLEAN.mp3  | Bin 63648 -> 62352 bytes
+ .../EN/native_audio/OK_I_CAN_CLEAN_BEDROOM.mp3     | Bin 54288 -> 53136 bytes
+ .../music/EN/native_audio/OK_I_CAN_COLECT_DIRT.mp3 | Bin 56592 -> 55152 bytes
+ .../music/EN/native_audio/OK_I_CAN_CONSUMABLE.mp3  | Bin 55728 -> 54144 bytes
+ .../music/EN/native_audio/OK_I_CAN_CONTINUE.mp3    | Bin 51840 -> 50400 bytes
+ .../media/music/EN/native_audio/OK_I_CAN_PAUSE.mp3 | Bin 50832 -> 49392 bytes
+ .../music/EN/native_audio/OK_I_CAN_RETURN.mp3      | Bin 50400 -> 49680 bytes
+ .../music/EN/native_audio/OK_I_CAN_SELFCLEAN.mp3   | Bin 57312 -> 56160 bytes
+ .../music/EN/native_audio/OK_I_CAN_SUCK_NORMAL.mp3 | Bin 60048 -> 58608 bytes
+ .../EN/native_audio/OK_I_CAN_SWEEP_BEFORE_MOP.mp3  | Bin 67968 -> 65952 bytes
+ .../music/EN/native_audio/OK_I_CAN_VOLUME_50.mp3   | Bin 56160 -> 54720 bytes
+ .../music/EN/native_audio/OK_I_CAN_WASHMOP.mp3     | Bin 59904 -> 58464 bytes
+ .../EN/native_audio/OK_I_CAN_WATER_MIDDLE.mp3      | Bin 59760 -> 58464 bytes
+ .../music/EN/native_audio/OK_I_CAN_WHERE_YOU.mp3   | Bin 51264 -> 50112 bytes
+ .../EN/native_audio/OK_I_COME.mp3 => dev/null}     | Bin 8784 -> 0 bytes
+ .../media/music/EN/native_audio/OK_I_QUIT.mp3      | Bin 12240 -> 23184 bytes
+ .../EN/native_audio/OK_I_QUIT_1.mp3 => dev/null}   | Bin 11376 -> 0 bytes
+ .../OK_I_QUIT_CALL_ME.mp3 => dev/null}             | Bin 20736 -> 0 bytes
+ .../EN/native_audio/OK_I_RETURN.mp3 => dev/null}   | Bin 13392 -> 0 bytes
+ .../media/music/EN/native_audio/OK_I_WILL_AWAY.mp3 | Bin 9792 -> 9792 bytes
+ .../OK_LETME_FIND_YOU.mp3 => dev/null}             | Bin 12816 -> 0 bytes
+ .../EN/native_audio/OK_LETME_SEE.mp3 => dev/null}  | Bin 12384 -> 0 bytes
+ .../media/music/EN/native_audio/OK_LINK_TO_APP.mp3 | Bin 25200 -> 25200 bytes
+ .../EN/native_audio/OK_RETURN_COLECT_DIRT.mp3      | Bin 12960 -> 12960 bytes
+ .../EN/native_audio/OK_RETURN_HOT_WASH_MOP.mp3     | Bin 16704 -> 16704 bytes
+ .../media/music/EN/native_audio/OK_RETURN_OMNI.mp3 | Bin 10080 -> 10080 bytes
+ .../music/EN/native_audio/OK_RETURN_WASH_MOP.mp3   | Bin 13248 -> 13248 bytes
+ .../EN/native_audio/OK_START_AUTO_COLECT_DIRT.mp3  | Bin 11088 -> 11088 bytes
+ .../media/music/EN/native_audio/OK_START_CLEAN.mp3 | Bin 12816 -> 12816 bytes
+ .../EN/native_audio/OK_START_FAST_BUILDMAP.mp3     | Bin 21456 -> 21456 bytes
+ .../music/EN/native_audio/OK_START_HOT_DRYMOP.mp3  | Bin 11664 -> 11664 bytes
+ .../EN/native_audio/OK_START_HOT_WASH_MOP.mp3      | Bin 15984 -> 15984 bytes
+ .../media/music/EN/native_audio/OK_START_MOP.mp3   | Bin 12816 -> 12816 bytes
+ .../music/EN/native_audio/OK_START_SELFCLEAN.mp3   | Bin 31392 -> 31392 bytes
+ .../media/music/EN/native_audio/OK_START_SWEEP.mp3 | Bin 13392 -> 13392 bytes
+ .../EN/native_audio/OK_START_SWEEP_AND_MOP.mp3     | Bin 15552 -> 15552 bytes
+ .../EN/native_audio/OK_START_SWEEP_BEFORE_MOP.mp3  | Bin 17856 -> 17856 bytes
+ .../music/EN/native_audio/OK_START_TRUSTSHIP.mp3   | Bin 16416 -> 16416 bytes
+ .../music/EN/native_audio/OK_START_WASHMOP.mp3     | Bin 12672 -> 12672 bytes
+ .../music/EN/native_audio/OK_START_WIND_DRYMOP.mp3 | Bin 11664 -> 11664 bytes
+ .../music/EN/native_audio/OK_STOP_TRUSTSHIP.mp3    | Bin 12816 -> 12816 bytes
+ .../music/EN/native_audio/OK_SUCK_ADJUST_MAX.mp3   | Bin 15120 -> 15120 bytes
+ .../music/EN/native_audio/OK_SUCK_ADJUST_MIN.mp3   | Bin 14544 -> 14544 bytes
+ .../EN/native_audio/OK_SUCK_ADJUST_NORMAL.mp3      | Bin 14256 -> 14256 bytes
+ .../EN/native_audio/OK_SUCK_ADJUST_SILENT.mp3      | Bin 14112 -> 14112 bytes
+ .../EN/native_audio/OK_SUCK_ADJUST_STRONG.mp3      | Bin 14256 -> 14256 bytes
+ .../EN/native_audio/OK_SUCK_ADJUST_VERYSTRONG.mp3  | Bin 15552 -> 15552 bytes
+ .../music/EN/native_audio/OK_SUCK_MAX_YET.mp3      | Bin 13824 -> 13824 bytes
+ .../music/EN/native_audio/OK_SUCK_MIN_YET.mp3      | Bin 13392 -> 13392 bytes
+ .../music/EN/native_audio/OK_SUCK_NORMAL_YET.mp3   | Bin 11520 -> 11520 bytes
+ .../music/EN/native_audio/OK_SUCK_SILENT_YET.mp3   | Bin 11520 -> 11520 bytes
+ .../music/EN/native_audio/OK_SUCK_STRONG_YET.mp3   | Bin 11664 -> 11664 bytes
+ .../EN/native_audio/OK_SUCK_VERYSTRONG_YET.mp3     | Bin 12960 -> 12960 bytes
+ .../music/EN/native_audio/OK_VOLUME_ADJUST.mp3     | Bin 11520 -> 11520 bytes
+ .../music/EN/native_audio/OK_VOLUME_ADJUST_MAX.mp3 | Bin 13248 -> 13248 bytes
+ .../music/EN/native_audio/OK_VOLUME_ADJUST_MIN.mp3 | Bin 15840 -> 12816 bytes
+ .../music/EN/native_audio/OK_VOLUME_MAX_YET.mp3    | Bin 11808 -> 11808 bytes
+ .../music/EN/native_audio/OK_VOLUME_MIN_YET.mp3    | Bin 10800 -> 10800 bytes
+ .../music/EN/native_audio/OK_WATER_ADJUST_HIGH.mp3 | Bin 14544 -> 14544 bytes
+ .../music/EN/native_audio/OK_WATER_ADJUST_LOW.mp3  | Bin 14400 -> 14400 bytes
+ .../music/EN/native_audio/OK_WATER_ADJUST_MAX.mp3  | Bin 15696 -> 15696 bytes
+ .../EN/native_audio/OK_WATER_ADJUST_MIDDLE.mp3     | Bin 14832 -> 14832 bytes
+ .../music/EN/native_audio/OK_WATER_ADJUST_MIN.mp3  | Bin 15408 -> 15408 bytes
+ .../music/EN/native_audio/OK_WATER_HIGH_YET.mp3    | Bin 11808 -> 11808 bytes
+ .../music/EN/native_audio/OK_WATER_LOW_YET.mp3     | Bin 11664 -> 11664 bytes
+ .../music/EN/native_audio/OK_WATER_MAX_YET.mp3     | Bin 13680 -> 13680 bytes
+ .../music/EN/native_audio/OK_WATER_MIDDLE_YET.mp3  | Bin 12096 -> 12096 bytes
+ .../music/EN/native_audio/OK_WATER_MIN_YET.mp3     | Bin 13104 -> 13104 bytes
+ .../media/music/EN/native_audio/OK_WILL_DONE.mp3   | Bin 12528 -> 12528 bytes
+ .../media/music/EN/native_audio/OMNI_ERROR.mp3     | Bin 21888 -> 21888 bytes
+ .../music/EN/native_audio/OMNI_SELFCLEANING.mp3    | Bin 31248 -> 31248 bytes
+ .../music/EN/native_audio/OMNI_WORK_COMPLETE.mp3   | Bin 7200 -> 7200 bytes
+ .../_root/media/music/EN/native_audio/ON_HERE.mp3  | Bin 6480 -> 6480 bytes
+ .../music/EN/native_audio/ORDER_TO_CLEAN.mp3}      | Bin 0 -> 11088 bytes
+ .../music/EN/native_audio/PARDON_WHICH_TIME.mp3    | Bin 21168 -> 21168 bytes
+ .../media/music/EN/native_audio/PATROL_PAUSED.mp3  | Bin 8208 -> 8928 bytes
+ .../_root/media/music/EN/native_audio/PAUSE.mp3    | Bin 7920 -> 7920 bytes
+ .../music/EN/native_audio/PAUSE_BUILD_MAP.mp3      | Bin 7488 -> 7488 bytes
+ .../media/music/EN/native_audio/PAUSE_RETURN.mp3   | Bin 7632 -> 7632 bytes
+ .../media/music/EN/native_audio/PHONE_CONNECT.mp3  | Bin 19440 -> 19440 bytes
+ .../music/EN/native_audio/PLEASE_ADD_DETERGENT.mp3 | Bin 29376 -> 29376 bytes
+ .../music/EN/native_audio/PLEASE_CALL_ME_OUT.mp3   | Bin 14112 -> 14112 bytes
+ .../music/EN/native_audio/PLEASE_INSTALL_MOP.mp3   | Bin 12960 -> 12960 bytes
+ .../media/music/EN/native_audio/PREPARATING.mp3    | Bin 12816 -> 12816 bytes
+ .../EN/native_audio/RELOCATE_ERROR_START_BUILD.mp3 | Bin 17856 -> 17856 bytes
+ .../_root/media/music/EN/native_audio/REMOTING.mp3 | Bin 15408 -> 15408 bytes
+ .../media/music/EN/native_audio/RETURN_OMNI.mp3    | Bin 8352 -> 8352 bytes
+ .../music/EN/native_audio/RETURN_OMNI_PAUSED.mp3   | Bin 10800 -> 10800 bytes
+ .../music/EN/native_audio/RETURN_TO_WASHMOP.mp3    | Bin 11664 -> 11664 bytes
+ .../media/music/EN/native_audio/ROBOT_CONFUSED.mp3 | Bin 18000 -> 18000 bytes
+ .../music/EN/native_audio/ROBOT_IS_ONLINE.mp3      | Bin 8928 -> 8928 bytes
+ .../media/music/EN/native_audio/SAY_AGAIN.mp3      | Bin 23616 -> 23616 bytes
+ .../music/EN/native_audio/SCH_FAIL_BLOCKTIME.mp3   | Bin 28944 -> 28944 bytes
+ .../media/music/EN/native_audio/SCH_FAIL_FULL.mp3  | Bin 28656 -> 28656 bytes
+ .../music/EN/native_audio/SCH_FAIL_SAME_TIME.mp3   | Bin 20304 -> 20304 bytes
+ .../SEARCHING_PLEASE_TO_MY_HORIZON.mp3             | Bin 13536 -> 13536 bytes
+ .../native_audio/SELF_CLEAN_COMPLETE_CONTINUE.mp3  | Bin 17568 -> 17568 bytes
+ .../EN/native_audio/SELF_CLEAN_TASK_PAUSE.mp3      | Bin 18000 -> 18000 bytes
+ .../music/EN/native_audio/SERVER_OVERTIME.mp3      | Bin 24768 -> 24768 bytes
+ .../music/EN/native_audio/SOLUTION_TO_APP.mp3      | Bin 20304 -> 20304 bytes
+ .../native_audio/SORRY_CANNOT_PAUSE_HOT_DRYMOP.mp3 | Bin 14256 -> 14256 bytes
+ .../null}                                          | Bin 14544 -> 0 bytes
+ .../SORRY_FAIL_FIND_PLACE_QUIT.mp3 => dev/null}    | Bin 28080 -> 0 bytes
+ .../SORRY_FAIL_FIND_WHERE_YOU_ARE.mp3 => dev/null} | Bin 29376 -> 0 bytes
+ .../null}                                          | Bin 38880 -> 0 bytes
+ .../EN/native_audio/SORRY_IN_CLEAN_NOT_MODE.mp3    | Bin 21168 -> 21168 bytes
+ .../EN/native_audio/SORRY_IN_SCENE_NOT_CHANGE.mp3  | Bin 19584 -> 21600 bytes
+ .../native_audio/SORRY_IN_TRUSTSHIP_NOT_CHANGE.mp3 | Bin 25776 -> 25776 bytes
+ .../music/EN/native_audio/SORRY_IN_WASHMOP.mp3     | Bin 23184 -> 23184 bytes
+ .../media/music/EN/native_audio/SORRY_IN_WORK.mp3} | Bin 0 -> 17424 bytes
+ .../music/EN/native_audio/SORRY_I_AM_OUT_OMNI.mp3  | Bin 25200 -> 25200 bytes
+ .../EN/native_audio/SORRY_MAP_EXIST_TOAPP.mp3      | Bin 24912 -> 24912 bytes
+ .../EN/native_audio/SORRY_NET_NOT_CONNECTED.mp3    | Bin 24480 -> 24480 bytes
+ .../media/music/EN/native_audio/SORRY_NOT_ADD.mp3  | Bin 12816 -> 12816 bytes
+ .../music/EN/native_audio/SORRY_NOT_FIND_PLACE.mp3 | Bin 22896 -> 21312 bytes
+ .../music/EN/native_audio/SORRY_NOT_HEAR_QUIT.mp3  | Bin 25488 -> 23904 bytes
+ .../music/EN/native_audio/SORRY_NOT_IN_CLEAN.mp3   | Bin 8640 -> 8640 bytes
+ .../EN/native_audio/SORRY_NOT_KNOW_ENVIRONMENT.mp3 | Bin 26064 -> 26064 bytes
+ .../music/EN/native_audio/SORRY_NOT_SUPPORT.mp3    | Bin 13248 -> 13248 bytes
+ .../EN/native_audio/SORRY_NOT_SUPPORT_CANCEL.mp3   | Bin 27504 -> 25920 bytes
+ .../music/EN/native_audio/SORRY_NOT_UNDERSTAND.mp3 | Bin 31104 -> 31104 bytes
+ .../music/EN/native_audio/SORRY_NOT_VOICE_BUY.mp3  | Bin 28656 -> 28656 bytes
+ .../music/EN/native_audio/SORRY_PLEASE_BUTTON.mp3  | Bin 31248 -> 31248 bytes
+ .../SORRY_PLEASE_TO_MY_HORIZON.mp3 => dev/null}    | Bin 17424 -> 0 bytes
+ .../music/EN/native_audio/SORRY_SAY_WHAT_DO.mp3    | Bin 35712 -> 34272 bytes
+ .../EN/native_audio/SORRY_SCENE_CLEAN_LOSE.mp3     | Bin 21744 -> 25200 bytes
+ .../music/EN/native_audio/SORRY_TIME_PAST.mp3      | Bin 24480 -> 22896 bytes
+ .../music/EN/native_audio/SORRY_WAIT_BUILD_MAP.mp3 | Bin 21312 -> 21312 bytes
+ .../music/EN/native_audio/SORRY_WAIT_CLEAN.mp3     | Bin 21312 -> 21312 bytes
+ .../music/EN/native_audio/START_AP_NET_CONNECT.mp3 | Bin 10224 -> 10224 bytes
+ .../EN/native_audio/START_AUTO_COLECT_DIRT.mp3     | Bin 11664 -> 11664 bytes
+ .../media/music/EN/native_audio/START_CHARGING.mp3 | Bin 7920 -> 7920 bytes
+ .../media/music/EN/native_audio/START_CLEAN.mp3    | Bin 7776 -> 7776 bytes
+ .../music/EN/native_audio/START_CONTINUE_WORK.mp3  | Bin 10080 -> 10080 bytes
+ .../media/music/EN/native_audio/START_EXPAND.mp3   | Bin 8496 -> 8496 bytes
+ .../music/EN/native_audio/START_FACTORY_RESET.mp3  | Bin 10368 -> 10368 bytes
+ .../music/EN/native_audio/START_FAST_BUILDMAP.mp3  | Bin 8784 -> 8784 bytes
+ .../START_FAST_BUILDMAP_THEN_CLEAN.mp3             | Bin 27936 -> 28080 bytes
+ .../music/EN/native_audio/START_GO_TARGET.mp3      | Bin 11520 -> 11520 bytes
+ .../music/EN/native_audio/START_HOT_DRYMOP.mp3     | Bin 10080 -> 10080 bytes
+ .../music/EN/native_audio/START_HOT_WASH_MOP.mp3   | Bin 13968 -> 13968 bytes
+ .../media/music/EN/native_audio/START_MOP.mp3      | Bin 7488 -> 7488 bytes
+ .../music/EN/native_audio/START_NET_CONNECT.mp3    | Bin 9216 -> 9216 bytes
+ .../media/music/EN/native_audio/START_PATROL.mp3   | Bin 8064 -> 8064 bytes
+ .../music/EN/native_audio/START_SELF_CLEAN.mp3     | Bin 39024 -> 39024 bytes
+ .../media/music/EN/native_audio/START_SWEEP.mp3    | Bin 8064 -> 8064 bytes
+ .../music/EN/native_audio/START_SWEEP_AND_MOP.mp3  | Bin 10512 -> 10512 bytes
+ .../EN/native_audio/START_SWEEP_BEFORE_MOP.mp3     | Bin 10800 -> 10800 bytes
+ .../EN/native_audio/START_TMALL_NET_CONNECT.mp3    | Bin 13392 -> 13392 bytes
+ .../music/EN/native_audio/START_TRUSTSHIP.mp3      | Bin 13104 -> 13104 bytes
+ .../media/music/EN/native_audio/START_WASHMOP.mp3  | Bin 10512 -> 10512 bytes
+ .../music/EN/native_audio/START_WILL_DONE.mp3      | Bin 12816 -> 12816 bytes
+ .../media/music/EN/native_audio/STOP_RETURN.mp3    | Bin 7920 -> 7920 bytes
+ .../music/EN/native_audio/SWEEP_MODE_NOT_WATER.mp3 | Bin 22032 -> 22032 bytes
+ .../null}                                          | Bin 15264 -> 0 bytes
+ .../media/music/EN/native_audio/TASK_IS_LIMIT.mp3  | Bin 28656 -> 28656 bytes
+ .../media/music/EN/native_audio/TELE_COMPLETE.mp3  | Bin 8352 -> 8352 bytes
+ .../media/music/EN/native_audio/UPGRADE_FAILED.mp3 | Bin 15408 -> 15408 bytes
+ .../music/EN/native_audio/UPGRADE_SUCCESS.mp3      | Bin 8064 -> 8064 bytes
+ .../music/EN/native_audio/UP_WATER_ERROR.mp3}      | Bin 0 -> 20016 bytes
+ .../media/music/EN/native_audio/VIDEO_OPENED.mp3   | Bin 9360 -> 9360 bytes
+ .../EN/native_audio/WASHING_MOP_PLEASE_WAIT.mp3    | Bin 15408 -> 15408 bytes
+ .../music/EN/native_audio/WASH_MOP_PAUSED.mp3}     | Bin 0 -> 10800 bytes
+ .../music/EN/native_audio/WELCOME_USE_ECOVAS.mp3   | Bin 24624 -> 24624 bytes
+ .../media/music/EN/native_audio/WHEEL_ERROR.mp3    | Bin 19152 -> 19152 bytes
+ .../media/music/EN/native_audio/WHEEL_FALL.mp3     | Bin 15408 -> 15408 bytes
+ .../media/music/EN/native_audio/WHICH_LEVEL_TO.mp3 | Bin 10944 -> 10944 bytes
+ .../media/music/EN/native_audio/WHICH_TIME.mp3     | Bin 6480 -> 6480 bytes
+ .../music/EN/native_audio/WHICH_TO_ADJUST.mp3      | Bin 23760 -> 23760 bytes
+ .../music/EN/native_audio/WIFI_PASSWORD_ERROR.mp3  | Bin 22896 -> 22896 bytes
+ .../EN/native_audio/WORKCOMPLETE_HOT_DRYMOP.mp3    | Bin 16560 -> 16416 bytes
+ .../EN/native_audio/WORKCOMPLETE_WIND_DRYMOP.mp3   | Bin 16560 -> 16560 bytes
+ .../native_audio/YIKO_IS_LEARNING.mp3 => dev/null} | Bin 32544 -> 0 bytes
+ .../EN/native_kb/kb230328b0/qa.json => dev/null}   |   1 -
+ .../media/music/EN/native_kb/kb230407b1/qa.json}   |   1 +
+ .../media/music/EN/native_kb/kb230407b1}/task.json |   0
+ .../media/music/EN/native_kb/kb230512b1/qa.json}   |   1 +
+ .../media/music/EN/native_kb/kb230512b1/task.json} |   1 +
+ .../xout/_root/media/music/EN/version.json         |   2 +-
+ .../ZH/native_audio/AUTO_DIRTWATER_BOX_FULL.mp3}   | Bin 0 -> 7560 bytes
+ .../media/music/ZH/native_audio/AsrFailed.mp3}     | Bin 0 -> 9072 bytes
+ .../ZH/native_audio/BATTERY_LOW_DEEBOT_OFF.mp3     | Bin 4320 -> 3960 bytes
+ .../music/ZH/native_audio/BATTERY_LOW_RETURN.mp3   | Bin 6624 -> 6192 bytes
+ .../music/ZH/native_audio/BLUETOOTH_ERROR.mp3      | Bin 3096 -> 2592 bytes
+ .../music/ZH/native_audio/BLUETOOTH_RELEASE.mp3    | Bin 3384 -> 2880 bytes
+ .../ZH/native_audio/BLUETOOTH_RELEASE_APP_NET.mp3  | Bin 7992 -> 7632 bytes
+ .../music/ZH/native_audio/BRUSH_MAIN_ERROR.mp3     | Bin 4824 -> 4392 bytes
+ .../music/ZH/native_audio/BRUSH_SIDE_ERROR.mp3     | Bin 4824 -> 4392 bytes
+ .../ZH/native_audio/BUILDMAP_OVER_THEN_CLEAN.mp3   | Bin 7128 -> 6696 bytes
+ .../music/ZH/native_audio/BUILD_MAP_ERROR.mp3      | Bin 2376 -> 1872 bytes
+ .../music/ZH/native_audio/BUILD_MAP_PAUSED.mp3     | Bin 2952 -> 2448 bytes
+ .../media/music/ZH/native_audio/CHARGE_ERROR.mp3   | Bin 6912 -> 6552 bytes
+ .../_root/media/music/ZH/native_audio/CHARGING.mp3 | Bin 2592 -> 2088 bytes
+ .../media/music/ZH/native_audio/CHILD_LOCKING.mp3  | Bin 4464 -> 4032 bytes
+ .../music/ZH/native_audio/CHILD_LOCK_DISABLE.mp3   | Bin 2952 -> 2448 bytes
+ .../music/ZH/native_audio/CHILD_LOCK_ENABLE.mp3    | Bin 2808 -> 2304 bytes
+ .../music/ZH/native_audio/CHILD_LOCK_IS_CLOSED.mp3 | Bin 4608 -> 4104 bytes
+ .../media/music/ZH/native_audio/CLEAN_COMPLETE.mp3 | Bin 4824 -> 4392 bytes
+ .../native_audio/CLEAN_COMPLETE_RETURN_ORIGIN.mp3  | Bin 6336 -> 5904 bytes
+ .../native_audio/CLEAN_COMPLETE_RETURN_STATION.mp3 | Bin 13968 -> 4392 bytes
+ .../null}                                          | Bin 14688 -> 0 bytes
+ .../null}                                          | Bin 15048 -> 0 bytes
+ .../CLEAN_OVER_NEED_CONTINUE.mp3 => dev/null}      | Bin 8280 -> 0 bytes
+ .../media/music/ZH/native_audio/CLEAN_PAUSED.mp3   | Bin 2880 -> 2376 bytes
+ .../ZH/native_audio/CLEAN_TANK_WATER_FULL.mp3      | Bin 4896 -> 9432 bytes
+ .../CLEAN_WATER_COMMAND_AGAIN.mp3 => dev/null}     | Bin 9288 -> 0 bytes
+ .../CLEAN_WATER_ERROR_TO_SWEEP.mp3 => dev/null}    | Bin 11952 -> 0 bytes
+ .../music/ZH/native_audio/CLEAN_WATER_LACK.mp3     | Bin 7488 -> 7128 bytes
+ .../media/music/ZH/native_audio/COME_SAY_AGAIN.mp3 | Bin 9720 -> 9288 bytes
+ .../music/ZH/native_audio/CONSUMABLE_RIGHT.mp3     | Bin 6696 -> 6336 bytes
+ .../music/ZH/native_audio/CONTINUE_BUILD_MAP.mp3   | Bin 2520 -> 2016 bytes
+ .../CONTINUE_CLEAN_WHEN_CHARGE_FULL.mp3            | Bin 5400 -> 4896 bytes
+ .../music/ZH/native_audio/CONTINUE_RETURN.mp3      | Bin 2520 -> 2016 bytes
+ .../media/music/ZH/native_audio/CONTINUE_WORK.mp3  | Bin 2232 -> 1800 bytes
+ .../music/ZH/native_audio/CURRENT_BATTERY_FULL.mp3 | Bin 6048 -> 5616 bytes
+ .../music/ZH/native_audio/CURRENT_SUCK_NORMAL.mp3  | Bin 3960 -> 3456 bytes
+ .../music/ZH/native_audio/CURRENT_SUCK_SILENT.mp3  | Bin 3888 -> 3456 bytes
+ .../music/ZH/native_audio/CURRENT_SUCK_STRONG.mp3  | Bin 3960 -> 3456 bytes
+ .../ZH/native_audio/CURRENT_SUCK_VERYSTRONG.mp3    | Bin 4392 -> 3888 bytes
+ .../music/ZH/native_audio/CURRENT_WATER_HIGH.mp3   | Bin 3456 -> 2952 bytes
+ .../music/ZH/native_audio/CURRENT_WATER_LOW.mp3    | Bin 3456 -> 2952 bytes
+ .../music/ZH/native_audio/CURRENT_WATER_MIDDLE.mp3 | Bin 3528 -> 3024 bytes
+ .../ZH/native_audio/CURRENT_WATER_VERYHIGH.mp3     | Bin 3960 -> 3456 bytes
+ .../music/ZH/native_audio/DIRTWATER_BOX_FULL.mp3   | Bin 7272 -> 6912 bytes
+ .../music/ZH/native_audio/DIRTY_BOX_CLEAN.mp3      | Bin 2592 -> 2088 bytes
+ .../media/music/ZH/native_audio/DIRT_BAG_FULL.mp3  | Bin 5328 -> 4968 bytes
+ .../ZH/native_audio/DIRT_BAG_INSTALL_ERROR.mp3     | Bin 5760 -> 5400 bytes
+ .../media/music/ZH/native_audio/DIRT_BAG_RIGHT.mp3 | Bin 6336 -> 5904 bytes
+ .../music/ZH/native_audio/DIRT_COLLECTING.mp3      | Bin 4104 -> 3672 bytes
+ .../DIRT_WATER_COMMAND_AGAIN.mp3 => dev/null}      | Bin 10440 -> 0 bytes
+ .../DIRT_WATER_ERROR_TO_SWEEP.mp3 => dev/null}     | Bin 10872 -> 0 bytes
+ .../media/music/ZH/native_audio/DOWNIN_ERROR.mp3   | Bin 5832 -> 5472 bytes
+ .../ZH/native_audio/DTOF_STOP_PLEASE_DETECTION.mp3 | Bin 6912 -> 6408 bytes
+ .../media/music/ZH/native_audio/ERROR_RELIEVE.mp3  | Bin 7560 -> 7200 bytes
+ .../media/music/ZH/native_audio/EXIT_OMNI.mp3      | Bin 6552 -> 6192 bytes
+ .../ZH/native_audio/EXPAND_ERROR_BUILD_AGAIN.mp3   | Bin 5688 -> 5328 bytes
+ .../music/ZH/native_audio/EXPAND_ERROR_RETRY.mp3   | Bin 4536 -> 4104 bytes
+ .../media/music/ZH/native_audio/EXPAND_OVER.mp3    | Bin 6408 -> 5976 bytes
+ .../ZH/native_audio/FAILED_FIND_OMNI_CONTINUE.mp3  | Bin 5976 -> 5616 bytes
+ .../FAIL_FIND_APPOINT_AREA_RETURN_OMNI.mp3         | Bin 7272 -> 6840 bytes
+ .../music/ZH/native_audio/FAIL_TO_FIND_CHARGE.mp3  | Bin 7344 -> 6984 bytes
+ .../music/ZH/native_audio/FAST_BUILD_OVER.mp3      | Bin 6768 -> 6408 bytes
+ .../music/ZH/native_audio/FILTER_UNINSTALL.mp3     | Bin 5688 -> 5256 bytes
+ .../native_audio/FILTER_UNINSTALL_CHECK_CLEAN.mp3  | Bin 9792 -> 9360 bytes
+ .../_root/media/music/ZH/native_audio/FINDED.mp3   | Bin 1872 -> 1440 bytes
+ .../native_audio/FIND_PET_PAUSED.mp3 => dev/null}  | Bin 3816 -> 0 bytes
+ .../_root/media/music/ZH/native_audio/FIND_YOU.mp3 | Bin 2160 -> 1656 bytes
+ .../native_audio/FIND_YOU_I_COME.mp3 => dev/null}  | Bin 3744 -> 0 bytes
+ .../FIND_YOU_PLEASE_POINT.mp3 => dev/null}         | Bin 5256 -> 0 bytes
+ .../media/music/ZH/native_audio/GET_TO_TARGET.mp3  | Bin 3024 -> 2520 bytes
+ .../media/music/ZH/native_audio/GOTO_PAUSED.mp3    | Bin 4104 -> 3600 bytes
+ .../media/music/ZH/native_audio/GO_CHARGE_FAIL.mp3 | Bin 13536 -> 13896 bytes
+ .../_root/media/music/ZH/native_audio/HELLO_I.mp3  | Bin 3672 -> 3312 bytes
+ .../music/ZH/native_audio/HELLO_I_AM_YIKO.mp3      | Bin 14184 -> 13536 bytes
+ .../music/ZH/native_audio/HOTDRY_MODULE_ERROR.mp3  | Bin 5472 -> 5112 bytes
+ .../music/ZH/native_audio/HOT_DRY_MOP_COMPLETE.mp3 | Bin 2664 -> 2232 bytes
+ .../music/ZH/native_audio/IN_AUTO_CLEAN_YET.mp3    | Bin 4176 -> 3672 bytes
+ .../music/ZH/native_audio/IN_DISTRIBUTE_NET.mp3    | Bin 4104 -> 3672 bytes
+ .../media/music/ZH/native_audio/IN_DOWN_WATER.mp3} | Bin 0 -> 5616 bytes
+ .../media/music/ZH/native_audio/IN_HOT_DRYMOP.mp3  | Bin 2664 -> 2232 bytes
+ .../media/music/ZH/native_audio/IN_MOP_AUTO.mp3    | Bin 2808 -> 2304 bytes
+ .../ZH/native_audio/IN_OMNI_ONEKEY_DOWN_WATER.mp3} | Bin 0 -> 5184 bytes
+ .../ZH/native_audio/IN_ONEKEY_DOWN_WATER.mp3}      | Bin 0 -> 4824 bytes
+ .../media/music/ZH/native_audio/IN_POSITION.mp3    | Bin 3960 -> 3600 bytes
+ .../music/ZH/native_audio/IN_POSITION_TRY.mp3}     | Bin 0 -> 4392 bytes
+ .../ZH/native_audio/IN_SWEEP_AND_MOP_AUTO.mp3      | Bin 4392 -> 3888 bytes
+ .../media/music/ZH/native_audio/IN_SWEEP_AUTO.mp3  | Bin 2880 -> 2376 bytes
+ .../ZH/native_audio/IN_SWEEP_BEFORE_MOP_AUTO.mp3   | Bin 4392 -> 3888 bytes
+ .../media/music/ZH/native_audio/IN_THIS_TASK.mp3   | Bin 2952 -> 2520 bytes
+ .../ZH/native_audio/IN_TRUSTSHIP_CLEAN_YET.mp3     | Bin 4464 -> 4032 bytes
+ .../media/music/ZH/native_audio/IN_UPGRADE.mp3     | Bin 7128 -> 6696 bytes
+ .../media/music/ZH/native_audio/IN_UP_WATER.mp3}   | Bin 0 -> 5760 bytes
+ .../_root/media/music/ZH/native_audio/IN_VIDEO.mp3 | Bin 2808 -> 2304 bytes
+ .../IS_SWEEP_MODE_YET.mp3 => dev/null}             | Bin 3816 -> 0 bytes
+ .../_root/media/music/ZH/native_audio/I_AM.mp3     | Bin 1584 -> 1080 bytes
+ .../_root/media/music/ZH/native_audio/I_AM_1.mp3   | Bin 1584 -> 1152 bytes
+ .../_root/media/music/ZH/native_audio/I_AM_2.mp3   | Bin 1368 -> 1656 bytes
+ .../_root/media/music/ZH/native_audio/I_AM_3.mp3   | Bin 1728 -> 1296 bytes
+ .../_root/media/music/ZH/native_audio/I_AM_4.mp3}  | Bin 0 -> 1368 bytes
+ .../media/music/ZH/native_audio/I_AM_BUILD_MAP.mp3 | Bin 2736 -> 2232 bytes
+ .../media/music/ZH/native_audio/I_AM_CHARGING.mp3  | Bin 2592 -> 2088 bytes
+ .../native_audio/I_AM_CHARGING_CANNOT_CONTINUE.mp3 | Bin 6192 -> 5760 bytes
+ .../ZH/native_audio/I_AM_CHARGING_CANNOT_STOP.mp3  | Bin 6120 -> 5688 bytes
+ .../media/music/ZH/native_audio/I_AM_CLEAN.mp3     | Bin 2664 -> 2232 bytes
+ .../ZH/native_audio/I_AM_FIND_PET.mp3 => dev/null} | Bin 3456 -> 0 bytes
+ .../media/music/ZH/native_audio/I_AM_GOTO.mp3      | Bin 3744 -> 3312 bytes
+ .../media/music/ZH/native_audio/I_AM_HERE.mp3      | Bin 2088 -> 1656 bytes
+ .../music/ZH/native_audio/I_AM_HOT_DRYMOP.mp3      | Bin 2592 -> 2160 bytes
+ .../music/ZH/native_audio/I_AM_HOT_WASH_MOP.mp3    | Bin 4032 -> 3600 bytes
+ .../media/music/ZH/native_audio/I_AM_IDLE.mp3      | Bin 2592 -> 2160 bytes
+ .../ZH/native_audio/I_AM_IDLE_CANNOT_CONTINUE.mp3  | Bin 6192 -> 5760 bytes
+ .../ZH/native_audio/I_AM_IDLE_CANNOT_STOP.mp3      | Bin 6120 -> 5688 bytes
+ .../music/ZH/native_audio/I_AM_LOW_CHARGE.mp3      | Bin 3816 -> 3312 bytes
+ .../media/music/ZH/native_audio/I_AM_OUT_OMNI.mp3  | Bin 2952 -> 2448 bytes
+ .../media/music/ZH/native_audio/I_AM_PATROL.mp3    | Bin 2664 -> 3024 bytes
+ .../media/music/ZH/native_audio/I_AM_READY.mp3     | Bin 10944 -> 10512 bytes
+ .../music/ZH/native_audio/I_AM_RETURN_OMNI.mp3     | Bin 3312 -> 2808 bytes
+ .../media/music/ZH/native_audio/I_AM_WASH_MOP.mp3  | Bin 3312 -> 2880 bytes
+ .../music/ZH/native_audio/LONG_TIME_BUMPING.mp3    | Bin 7704 -> 7344 bytes
+ .../ZH/native_audio/LOW_BATTERY_IN_CHARGE.mp3      | Bin 4248 -> 3816 bytes
+ .../ZH/native_audio/LOW_BATTERY_TO_RETURN.mp3      | Bin 4248 -> 3888 bytes
+ .../ZH/native_audio/MAP_EXIST_BUILD_AGAIN.mp3      | Bin 6984 -> 6624 bytes
+ .../ZH/native_audio/MAP_EXIST_BUILD_AGAIN_1.mp3    | Bin 6048 -> 5616 bytes
+ .../ZH/native_audio/MOP_AND_DIRTY_BOX_CLEAN.mp3    | Bin 9792 -> 3888 bytes
+ .../music/ZH/native_audio/MOP_HANDLE_DETACH.mp3    | Bin 3312 -> 2880 bytes
+ .../native_audio/MOP_HANDLE_DETACH_STOP_TASK.mp3   | Bin 6264 -> 5832 bytes
+ .../media/music/ZH/native_audio/MOP_HANDLE_FIX.mp3 | Bin 3312 -> 2808 bytes
+ .../music/ZH/native_audio/MOP_HANDLE_UNINSTALL.mp3 | Bin 6408 -> 5976 bytes
+ .../music/ZH/native_audio/MOP_HANDLE_WRAP.mp3      | Bin 5616 -> 5184 bytes
+ .../music/ZH/native_audio/MOP_MODE_NOT_SUCK.mp3    | Bin 7344 -> 6912 bytes
+ .../media/music/ZH/native_audio/NET_CONNECTING.mp3 | Bin 6696 -> 6264 bytes
+ .../music/ZH/native_audio/NET_CONNECT_ERROR.mp3    | Bin 2376 -> 1872 bytes
+ .../music/ZH/native_audio/NET_CONNECT_SUCCESS.mp3  | Bin 3024 -> 2592 bytes
+ .../media/music/ZH/native_audio/NET_FAILED.mp3     | Bin 7776 -> 7416 bytes
+ .../media/music/ZH/native_audio/NET_OVERTIME.mp3   | Bin 7632 -> 7200 bytes
+ .../music/ZH/native_audio/NOT_MOVE_FORWARD.mp3     | Bin 3168 -> 2664 bytes
+ .../music/ZH/native_audio/NOT_WASN_THEN_CLEAN.mp3  | Bin 5472 -> 5040 bytes
+ .../native_audio/NO_MAP_WILL_BUDIL_THEN_CLEAN.mp3  | Bin 12384 -> 11952 bytes
+ .../media/music/ZH/native_audio/NO_PAILIN.mp3      | Bin 4968 -> 4608 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_BASE.mp3    | Bin 1584 -> 1152 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_BIN.mp3     | Bin 1944 -> 1512 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_CAT.mp3     | Bin 2016 -> 1512 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_CATSAND.mp3 | Bin 1656 -> 1224 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_CEREAL.mp3  | Bin 1584 -> 1152 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_CHARGE.mp3  | Bin 2088 -> 1656 bytes
+ .../native_audio/OBJ_DET_TYPE_CHARGE_STATION.mp3   | Bin 1656 -> 1152 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_CLOTH.mp3   | Bin 1440 -> 1008 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_DOG.mp3     | Bin 2016 -> 1584 bytes
+ .../ZH/native_audio/OBJ_DET_TYPE_MELOGSEED.mp3     | Bin 2160 -> 1656 bytes
+ .../ZH/native_audio/OBJ_DET_TYPE_MELOGSEEDS.mp3    | Bin 2448 -> 2016 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_PETFOOD.mp3 | Bin 1728 -> 1224 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_RICE.mp3    | Bin 1656 -> 1224 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_RUG.mp3     | Bin 1584 -> 1152 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_SHIT.mp3    | Bin 2376 -> 1872 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_SHOE.mp3    | Bin 1584 -> 1152 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_STAIN.mp3   | Bin 1584 -> 1152 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_UCHAIR.mp3  | Bin 1944 -> 1512 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_WEIGHT.mp3  | Bin 2016 -> 1512 bytes
+ .../music/ZH/native_audio/OBJ_DET_TYPE_WIRE.mp3    | Bin 1656 -> 1224 bytes
+ .../xout/_root/media/music/ZH/native_audio/OK.mp3  | Bin 1584 -> 1080 bytes
+ .../music/ZH/native_audio/OK_BLUETOOTH_RELEASE.mp3 | Bin 4824 -> 4392 bytes
+ .../OK_CALL_ME_IF_NEED.mp3 => dev/null}            | Bin 4176 -> 0 bytes
+ .../music/ZH/native_audio/OK_CHILD_LOCK_CLOSE.mp3  | Bin 4104 -> 3960 bytes
+ .../OK_COMPLETEWORK_START_TRUSTSHIP.mp3            | Bin 10728 -> 10296 bytes
+ .../ZH/native_audio/OK_CONTINUE_BULID_MAP.mp3      | Bin 8640 -> 8208 bytes
+ .../ZH/native_audio/OK_CONTINUE_HOT_WASH_MOP.mp3   | Bin 5328 -> 4896 bytes
+ .../music/ZH/native_audio/OK_CONTINUE_WASHMOP.mp3  | Bin 4464 -> 4032 bytes
+ .../music/ZH/native_audio/OK_CONTINUE_WORK.mp3     | Bin 3672 -> 3312 bytes
+ .../music/ZH/native_audio/OK_I_CAN_AUTO_CLEAN.mp3  | Bin 24912 -> 24408 bytes
+ .../ZH/native_audio/OK_I_CAN_CLEAN_BEDROOM.mp3     | Bin 23400 -> 22896 bytes
+ .../music/ZH/native_audio/OK_I_CAN_COLECT_DIRT.mp3 | Bin 24984 -> 24552 bytes
+ .../music/ZH/native_audio/OK_I_CAN_CONSUMABLE.mp3  | Bin 25128 -> 25488 bytes
+ .../music/ZH/native_audio/OK_I_CAN_CONTINUE.mp3    | Bin 22608 -> 22320 bytes
+ .../media/music/ZH/native_audio/OK_I_CAN_PAUSE.mp3 | Bin 22824 -> 22464 bytes
+ .../music/ZH/native_audio/OK_I_CAN_RETURN.mp3      | Bin 22680 -> 22320 bytes
+ .../music/ZH/native_audio/OK_I_CAN_SELFCLEAN.mp3   | Bin 25992 -> 25416 bytes
+ .../music/ZH/native_audio/OK_I_CAN_SUCK_NORMAL.mp3 | Bin 27000 -> 25632 bytes
+ .../ZH/native_audio/OK_I_CAN_SWEEP_BEFORE_MOP.mp3  | Bin 24912 -> 24408 bytes
+ .../music/ZH/native_audio/OK_I_CAN_VOLUME_50.mp3   | Bin 25992 -> 25272 bytes
+ .../music/ZH/native_audio/OK_I_CAN_WASHMOP.mp3     | Bin 25416 -> 24984 bytes
+ .../ZH/native_audio/OK_I_CAN_WATER_MIDDLE.mp3      | Bin 25992 -> 25416 bytes
+ .../music/ZH/native_audio/OK_I_CAN_WHERE_YOU.mp3   | Bin 23112 -> 22752 bytes
+ .../ZH/native_audio/OK_I_COME.mp3 => dev/null}     | Bin 3168 -> 0 bytes
+ .../media/music/ZH/native_audio/OK_I_QUIT.mp3      | Bin 4248 -> 3816 bytes
+ .../media/music/ZH/native_audio/OK_I_QUIT_1.mp3    | Bin 4176 -> 3744 bytes
+ .../music/ZH/native_audio/OK_I_QUIT_CALL_ME.mp3    | Bin 7776 -> 7344 bytes
+ .../ZH/native_audio/OK_I_RETURN.mp3 => dev/null}   | Bin 5040 -> 0 bytes
+ .../media/music/ZH/native_audio/OK_I_WILL_AWAY.mp3 | Bin 3960 -> 3528 bytes
+ .../OK_LETME_FIND_YOU.mp3 => dev/null}             | Bin 4032 -> 0 bytes
+ .../ZH/native_audio/OK_LETME_SEE.mp3 => dev/null}  | Bin 4680 -> 0 bytes
+ .../media/music/ZH/native_audio/OK_LINK_TO_APP.mp3 | Bin 9504 -> 9072 bytes
+ .../ZH/native_audio/OK_RETURN_COLECT_DIRT.mp3      | Bin 4032 -> 3600 bytes
+ .../ZH/native_audio/OK_RETURN_HOT_WASH_MOP.mp3     | Bin 5472 -> 5040 bytes
+ .../media/music/ZH/native_audio/OK_RETURN_OMNI.mp3 | Bin 3816 -> 3384 bytes
+ .../music/ZH/native_audio/OK_RETURN_WASH_MOP.mp3   | Bin 4608 -> 4176 bytes
+ .../ZH/native_audio/OK_START_AUTO_COLECT_DIRT.mp3  | Bin 3960 -> 3528 bytes
+ .../media/music/ZH/native_audio/OK_START_CLEAN.mp3 | Bin 4680 -> 4248 bytes
+ .../ZH/native_audio/OK_START_FAST_BUILDMAP.mp3     | Bin 9504 -> 9072 bytes
+ .../music/ZH/native_audio/OK_START_HOT_DRYMOP.mp3  | Bin 4464 -> 4032 bytes
+ .../ZH/native_audio/OK_START_HOT_WASH_MOP.mp3      | Bin 5328 -> 4896 bytes
+ .../media/music/ZH/native_audio/OK_START_MOP.mp3   | Bin 4248 -> 3816 bytes
+ .../music/ZH/native_audio/OK_START_SELFCLEAN.mp3   | Bin 11088 -> 10656 bytes
+ .../media/music/ZH/native_audio/OK_START_SWEEP.mp3 | Bin 4392 -> 3960 bytes
+ .../ZH/native_audio/OK_START_SWEEP_AND_MOP.mp3     | Bin 6192 -> 5832 bytes
+ .../ZH/native_audio/OK_START_SWEEP_BEFORE_MOP.mp3  | Bin 6192 -> 5832 bytes
+ .../music/ZH/native_audio/OK_START_TRUSTSHIP.mp3   | Bin 7128 -> 6696 bytes
+ .../music/ZH/native_audio/OK_START_WASHMOP.mp3     | Bin 4536 -> 4104 bytes
+ .../music/ZH/native_audio/OK_START_WIND_DRYMOP.mp3 | Bin 4536 -> 4104 bytes
+ .../music/ZH/native_audio/OK_STOP_TRUSTSHIP.mp3    | Bin 4968 -> 4536 bytes
+ .../music/ZH/native_audio/OK_SUCK_ADJUST_MAX.mp3   | Bin 5832 -> 5400 bytes
+ .../music/ZH/native_audio/OK_SUCK_ADJUST_MIN.mp3   | Bin 5832 -> 5472 bytes
+ .../ZH/native_audio/OK_SUCK_ADJUST_NORMAL.mp3      | Bin 5760 -> 5328 bytes
+ .../ZH/native_audio/OK_SUCK_ADJUST_SILENT.mp3      | Bin 5688 -> 5256 bytes
+ .../ZH/native_audio/OK_SUCK_ADJUST_STRONG.mp3      | Bin 5832 -> 5472 bytes
+ .../ZH/native_audio/OK_SUCK_ADJUST_VERYSTRONG.mp3  | Bin 5832 -> 5472 bytes
+ .../music/ZH/native_audio/OK_SUCK_MAX_YET.mp3      | Bin 3960 -> 3456 bytes
+ .../music/ZH/native_audio/OK_SUCK_MIN_YET.mp3      | Bin 4032 -> 3528 bytes
+ .../music/ZH/native_audio/OK_SUCK_NORMAL_YET.mp3   | Bin 4248 -> 3744 bytes
+ .../music/ZH/native_audio/OK_SUCK_SILENT_YET.mp3   | Bin 4248 -> 3744 bytes
+ .../music/ZH/native_audio/OK_SUCK_STRONG_YET.mp3   | Bin 4320 -> 3816 bytes
+ .../ZH/native_audio/OK_SUCK_VERYSTRONG_YET.mp3     | Bin 4248 -> 3672 bytes
+ .../music/ZH/native_audio/OK_VOLUME_ADJUST.mp3     | Bin 2664 -> 2232 bytes
+ .../music/ZH/native_audio/OK_VOLUME_ADJUST_MAX.mp3 | Bin 5544 -> 5112 bytes
+ .../music/ZH/native_audio/OK_VOLUME_ADJUST_MIN.mp3 | Bin 8064 -> 5256 bytes
+ .../music/ZH/native_audio/OK_VOLUME_MAX_YET.mp3    | Bin 3744 -> 3240 bytes
+ .../music/ZH/native_audio/OK_VOLUME_MIN_YET.mp3    | Bin 3744 -> 3312 bytes
+ .../music/ZH/native_audio/OK_WATER_ADJUST_HIGH.mp3 | Bin 5328 -> 4896 bytes
+ .../music/ZH/native_audio/OK_WATER_ADJUST_LOW.mp3  | Bin 5328 -> 4896 bytes
+ .../music/ZH/native_audio/OK_WATER_ADJUST_MAX.mp3  | Bin 5832 -> 5400 bytes
+ .../ZH/native_audio/OK_WATER_ADJUST_MIDDLE.mp3     | Bin 5328 -> 4896 bytes
+ .../music/ZH/native_audio/OK_WATER_ADJUST_MIN.mp3  | Bin 5904 -> 5472 bytes
+ .../music/ZH/native_audio/OK_WATER_HIGH_YET.mp3    | Bin 3744 -> 3312 bytes
+ .../music/ZH/native_audio/OK_WATER_LOW_YET.mp3     | Bin 3744 -> 3312 bytes
+ .../music/ZH/native_audio/OK_WATER_MAX_YET.mp3     | Bin 3888 -> 3384 bytes
+ .../music/ZH/native_audio/OK_WATER_MIDDLE_YET.mp3  | Bin 3816 -> 3312 bytes
+ .../music/ZH/native_audio/OK_WATER_MIN_YET.mp3     | Bin 4032 -> 3528 bytes
+ .../media/music/ZH/native_audio/OK_WILL_DONE.mp3   | Bin 3744 -> 3312 bytes
+ .../media/music/ZH/native_audio/OMNI_ERROR.mp3     | Bin 5184 -> 4752 bytes
+ .../OMNI_ONEKEY_DOWN_WATER_COMPLETE.mp3}           | Bin 0 -> 3168 bytes
+ .../music/ZH/native_audio/OMNI_SELFCLEANING.mp3    | Bin 10800 -> 10368 bytes
+ .../music/ZH/native_audio/OMNI_WORK_COMPLETE.mp3   | Bin 2592 -> 2088 bytes
+ .../_root/media/music/ZH/native_audio/ON_HERE.mp3  | Bin 1872 -> 1440 bytes
+ .../media/music/ZH/native_audio/ORDER_TO_CLEAN.mp3 | Bin 4968 -> 4536 bytes
+ .../music/ZH/native_audio/PARDON_WHICH_TIME.mp3    | Bin 5472 -> 4896 bytes
+ .../media/music/ZH/native_audio/PATROL_PAUSED.mp3  | Bin 2952 -> 3312 bytes
+ .../_root/media/music/ZH/native_audio/PAUSE.mp3    | Bin 2376 -> 1872 bytes
+ .../music/ZH/native_audio/PAUSE_BUILD_MAP.mp3      | Bin 2592 -> 2160 bytes
+ .../ZH/native_audio/PAUSE_NOT_START_ON_CARPET.mp3  | Bin 15048 -> 14616 bytes
+ .../media/music/ZH/native_audio/PAUSE_RETURN.mp3   | Bin 2592 -> 2160 bytes
+ .../media/music/ZH/native_audio/PHONE_CONNECT.mp3  | Bin 9720 -> 9360 bytes
+ .../music/ZH/native_audio/PLEASE_ADD_DETERGENT.mp3 | Bin 11808 -> 11376 bytes
+ .../music/ZH/native_audio/PLEASE_CALL_ME_OUT.mp3   | Bin 4536 -> 4032 bytes
+ .../music/ZH/native_audio/PLEASE_INSTALL_MOP.mp3   | Bin 3888 -> 3384 bytes
+ .../media/music/ZH/native_audio/PREPARATING.mp3    | Bin 4680 -> 4320 bytes
+ .../ZH/native_audio/RELOCATE_ERROR_START_BUILD.mp3 | Bin 6408 -> 5976 bytes
+ .../_root/media/music/ZH/native_audio/REMOTING.mp3 | Bin 4104 -> 3672 bytes
+ .../media/music/ZH/native_audio/RETURN_OMNI.mp3    | Bin 2376 -> 1872 bytes
+ .../music/ZH/native_audio/RETURN_OMNI_PAUSED.mp3   | Bin 3672 -> 3168 bytes
+ .../music/ZH/native_audio/RETURN_TO_WASHMOP.mp3    | Bin 2736 -> 2232 bytes
+ .../media/music/ZH/native_audio/ROBOT_CONFUSED.mp3 | Bin 6336 -> 5904 bytes
+ .../music/ZH/native_audio/ROBOT_IS_ONLINE.mp3      | Bin 2952 -> 2520 bytes
+ .../media/music/ZH/native_audio/SAY_AGAIN.mp3      | Bin 7200 -> 6768 bytes
+ .../music/ZH/native_audio/SCH_FAIL_BLOCKTIME.mp3   | Bin 9432 -> 9072 bytes
+ .../media/music/ZH/native_audio/SCH_FAIL_FULL.mp3  | Bin 9648 -> 9216 bytes
+ .../music/ZH/native_audio/SCH_FAIL_SAME_TIME.mp3   | Bin 7128 -> 6768 bytes
+ .../SEARCHING_PLEASE_TO_MY_HORIZON.mp3             | Bin 7128 -> 6696 bytes
+ .../native_audio/SELF_CLEAN_COMPLETE_CONTINUE.mp3  | Bin 5544 -> 5112 bytes
+ .../ZH/native_audio/SELF_CLEAN_TASK_PAUSE.mp3      | Bin 6120 -> 5760 bytes
+ .../music/ZH/native_audio/SERVER_OVERTIME.mp3      | Bin 7992 -> 7560 bytes
+ .../music/ZH/native_audio/SOLUTION_TO_APP.mp3      | Bin 8208 -> 7848 bytes
+ .../native_audio/SORRY_CANNOT_PAUSE_HOT_DRYMOP.mp3 | Bin 4824 -> 4392 bytes
+ .../null}                                          | Bin 4824 -> 0 bytes
+ .../SORRY_FAIL_FIND_PLACE_QUIT.mp3 => dev/null}    | Bin 9936 -> 0 bytes
+ .../SORRY_FAIL_FIND_WHERE_YOU_ARE.mp3 => dev/null} | Bin 11232 -> 0 bytes
+ .../null}                                          | Bin 13608 -> 0 bytes
+ .../ZH/native_audio/SORRY_IN_CLEAN_NOT_MODE.mp3    | Bin 10368 -> 9936 bytes
+ .../ZH/native_audio/SORRY_IN_SCENE_NOT_CHANGE.mp3  | Bin 7128 -> 6768 bytes
+ .../native_audio/SORRY_IN_TRUSTSHIP_NOT_CHANGE.mp3 | Bin 7200 -> 6840 bytes
+ .../music/ZH/native_audio/SORRY_IN_WASHMOP.mp3     | Bin 7632 -> 7272 bytes
+ .../media/music/ZH/native_audio/SORRY_IN_WORK.mp3  | Bin 4824 -> 4392 bytes
+ .../music/ZH/native_audio/SORRY_I_AM_OUT_OMNI.mp3  | Bin 8352 -> 7992 bytes
+ .../ZH/native_audio/SORRY_MAP_EXIST_TOAPP.mp3      | Bin 11088 -> 10656 bytes
+ .../ZH/native_audio/SORRY_MULTI_MODE_CYCLE.mp3}    | Bin 0 -> 5328 bytes
+ .../ZH/native_audio/SORRY_NET_NOT_CONNECTED.mp3    | Bin 9360 -> 8928 bytes
+ .../media/music/ZH/native_audio/SORRY_NOT_ADD.mp3  | Bin 4320 -> 3816 bytes
+ .../music/ZH/native_audio/SORRY_NOT_FIND_PLACE.mp3 | Bin 8568 -> 8064 bytes
+ .../music/ZH/native_audio/SORRY_NOT_HEAR_QUIT.mp3  | Bin 8136 -> 7704 bytes
+ .../music/ZH/native_audio/SORRY_NOT_IN_CLEAN.mp3   | Bin 3528 -> 3096 bytes
+ .../ZH/native_audio/SORRY_NOT_KNOW_ENVIRONMENT.mp3 | Bin 9072 -> 8712 bytes
+ .../music/ZH/native_audio/SORRY_NOT_SUPPORT.mp3    | Bin 5904 -> 5472 bytes
+ .../ZH/native_audio/SORRY_NOT_SUPPORT_CANCEL.mp3   | Bin 12240 -> 11664 bytes
+ .../music/ZH/native_audio/SORRY_NOT_UNDERSTAND.mp3 | Bin 10368 -> 10008 bytes
+ .../music/ZH/native_audio/SORRY_NOT_VOICE_BUY.mp3  | Bin 11808 -> 11448 bytes
+ .../music/ZH/native_audio/SORRY_PLEASE_BUTTON.mp3  | Bin 10800 -> 10368 bytes
+ .../SORRY_PLEASE_TO_MY_HORIZON.mp3 => dev/null}    | Bin 7272 -> 0 bytes
+ .../music/ZH/native_audio/SORRY_SAY_WHAT_DO.mp3    | Bin 14688 -> 14328 bytes
+ .../ZH/native_audio/SORRY_SCENE_CLEAN_LOSE.mp3     | Bin 9216 -> 8784 bytes
+ .../music/ZH/native_audio/SORRY_TIME_PAST.mp3      | Bin 9792 -> 9144 bytes
+ .../music/ZH/native_audio/SORRY_WAIT_BUILD_MAP.mp3 | Bin 8280 -> 7920 bytes
+ .../music/ZH/native_audio/SORRY_WAIT_CLEAN.mp3     | Bin 8352 -> 7992 bytes
+ .../music/ZH/native_audio/START_AP_NET_CONNECT.mp3 | Bin 4032 -> 3528 bytes
+ .../ZH/native_audio/START_AUTO_COLECT_DIRT.mp3     | Bin 3312 -> 2808 bytes
+ .../media/music/ZH/native_audio/START_CHARGING.mp3 | Bin 2304 -> 1872 bytes
+ .../media/music/ZH/native_audio/START_CLEAN.mp3    | Bin 2448 -> 1944 bytes
+ .../music/ZH/native_audio/START_CONTINUE_WORK.mp3  | Bin 3096 -> 2592 bytes
+ .../media/music/ZH/native_audio/START_EXPAND.mp3   | Bin 2376 -> 1872 bytes
+ .../music/ZH/native_audio/START_FACTORY_RESET.mp3  | Bin 3888 -> 3384 bytes
+ .../music/ZH/native_audio/START_FAST_BUILDMAP.mp3  | Bin 3312 -> 2808 bytes
+ .../START_FAST_BUILDMAP_THEN_CLEAN.mp3             | Bin 9432 -> 9072 bytes
+ .../music/ZH/native_audio/START_GO_TARGET.mp3      | Bin 3600 -> 3096 bytes
+ .../music/ZH/native_audio/START_HOT_DRYMOP.mp3     | Bin 3024 -> 2592 bytes
+ .../music/ZH/native_audio/START_HOT_WASH_MOP.mp3   | Bin 3888 -> 3384 bytes
+ .../media/music/ZH/native_audio/START_MOP.mp3      | Bin 2304 -> 1872 bytes
+ .../music/ZH/native_audio/START_NET_CONNECT.mp3    | Bin 3888 -> 3384 bytes
+ .../media/music/ZH/native_audio/START_PATROL.mp3   | Bin 2448 -> 1944 bytes
+ .../music/ZH/native_audio/START_SELF_CLEAN.mp3     | Bin 12816 -> 12384 bytes
+ .../media/music/ZH/native_audio/START_SWEEP.mp3    | Bin 2376 -> 1944 bytes
+ .../music/ZH/native_audio/START_SWEEP_AND_MOP.mp3  | Bin 3240 -> 2736 bytes
+ .../ZH/native_audio/START_SWEEP_BEFORE_MOP.mp3     | Bin 3240 -> 2736 bytes
+ .../ZH/native_audio/START_TMALL_NET_CONNECT.mp3    | Bin 5472 -> 4968 bytes
+ .../music/ZH/native_audio/START_TRUSTSHIP.mp3      | Bin 5544 -> 5112 bytes
+ .../media/music/ZH/native_audio/START_WASHMOP.mp3  | Bin 3096 -> 2592 bytes
+ .../music/ZH/native_audio/START_WILL_DONE.mp3      | Bin 4752 -> 4320 bytes
+ .../media/music/ZH/native_audio/STOP_RETURN.mp3    | Bin 3168 -> 2664 bytes
+ .../music/ZH/native_audio/SWEEP_MODE_NOT_WATER.mp3 | Bin 7416 -> 6984 bytes
+ .../null}                                          | Bin 8280 -> 0 bytes
+ .../media/music/ZH/native_audio/TASK_IS_LIMIT.mp3  | Bin 9648 -> 9288 bytes
+ .../media/music/ZH/native_audio/TELE_COMPLETE.mp3  | Bin 3312 -> 2808 bytes
+ .../media/music/ZH/native_audio/UPGRADE_FAILED.mp3 | Bin 5904 -> 5472 bytes
+ .../music/ZH/native_audio/UPGRADE_SUCCESS.mp3      | Bin 3240 -> 2736 bytes
+ .../music/ZH/native_audio/UP_WATER_ERROR.mp3}      | Bin 0 -> 8568 bytes
+ .../media/music/ZH/native_audio/VIDEO_OPENED.mp3   | Bin 2736 -> 2232 bytes
+ .../ZH/native_audio/WASHING_MOP_PLEASE_WAIT.mp3    | Bin 4824 -> 4392 bytes
+ .../music/ZH/native_audio/WASH_MOP_PAUSED.mp3}     | Bin 0 -> 2952 bytes
+ .../music/ZH/native_audio/WATEROVER_PUMP.mp3}      | Bin 0 -> 5832 bytes
+ .../music/ZH/native_audio/WELCOME_USE_ECOVAS.mp3   | Bin 13464 -> 13032 bytes
+ .../media/music/ZH/native_audio/WHEEL_ERROR.mp3    | Bin 5616 -> 5256 bytes
+ .../media/music/ZH/native_audio/WHEEL_FALL.mp3     | Bin 5616 -> 5184 bytes
+ .../media/music/ZH/native_audio/WHICH_LEVEL_TO.mp3 | Bin 2736 -> 2232 bytes
+ .../media/music/ZH/native_audio/WHICH_TIME.mp3     | Bin 1944 -> 1512 bytes
+ .../music/ZH/native_audio/WHICH_TO_ADJUST.mp3      | Bin 8208 -> 7776 bytes
+ .../music/ZH/native_audio/WIFI_PASSWORD_ERROR.mp3  | Bin 10296 -> 9792 bytes
+ .../ZH/native_audio/WORKCOMPLETE_HOT_DRYMOP.mp3    | Bin 5544 -> 5112 bytes
+ .../ZH/native_audio/WORKCOMPLETE_WIND_DRYMOP.mp3   | Bin 5616 -> 5184 bytes
+ .../native_audio/YIKO_IS_LEARNING.mp3 => dev/null} | Bin 12816 -> 0 bytes
+ .../media/music/ZH/native_kb/kb230322b0/qa.json    |   2 +-
+ .../media/music/ZH/native_kb/kb230331b1/qa.json    |   2 +-
+ .../media/music/ZH/native_kb/kb230331b2/qa.json    |   2 +-
+ .../xout/_root/media/music/ZH/version.json         |   2 +-
+ .../{0.6.0 => 1.17.3}/xout/_root/opt/StarOta.json  |   2 +-
+ .../{0.6.0 => 1.17.3}/xout/_root/opt/data.tar.bz2  | Bin 4228 -> 4233 bytes
+ .../{0.6.0 => 1.17.3}/xout/_root/opt/dsp-fw.json   |   2 +-
+ .../xout/_root/opt/dsp-t10-ch-v1.00.018.00648.bin} | Bin 0 -> 6401172 bytes
+ .../xout/_root/opt/dsp-t10-en-v1.00.018.00652.bin} | Bin 0 -> 5081428 bytes
+ .../opt/dsp-t10-v1.00.018.00574.bin => dev/null}   | Bin 2015504 -> 0 bytes
+ .../{0.6.0 => 1.17.3}/xout/_root/opt/gemini.bin    | Bin 29876 -> 33052 bytes
+ .../{0.6.0 => 1.17.3}/xout/_root/opt/mcu_sl.bin    | Bin 83068 -> 83068 bytes
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 3948360 -> 4297752 bytes
+ .../{0.6.0 => 1.17.3}/xout/_root/usr/bin/abn.sh    |   2 +-
+ .../{0.6.0 => 1.17.3}/xout/_root/usr/bin/abn2.sh   |  10 +-
+ .../xout/_root/usr/bin/aimodels_hotupdate.sh       |  28 +-
+ .../xout/_root/usr/bin/alsa_pcm_capture            | Bin 10152 -> 10152 bytes
+ .../xout/_root/usr/bin/audio_record                | Bin 22616 -> 22616 bytes
+ .../xout/_root/usr/bin/autoOTA.sh                  |   2 +
+ .../xout/_root/usr/bin/bds_audio_service           | Bin 22024 -> 22016 bytes
+ .../xout/_root/usr/bin/bds_setup.sh                |   1 +
+ .../xout/_root/usr/bin/bt_hook.sh                  |  24 +-
+ .../ecovacs.lf3bn4/1.17.3/xout/_root/usr/bin/cjpf} |   0
+ .../1.17.3/xout/_root/usr/bin/cjpf.0.1.0}          | Bin 0 -> 10152 bytes
+ .../xout/_root/usr/bin/curl_timeout_hook.sh        |   2 +
+ .../{0.6.0 => 1.17.3}/xout/_root/usr/bin/dns_parse | Bin 10152 -> 10152 bytes
+ .../xout/_root/usr/bin/down_audio_hook.sh          |   1 +
+ .../{0.6.0 => 1.17.3}/xout/_root/usr/bin/ecoSystem | Bin 10152 -> 10152 bytes
+ .../1.17.3/xout/_root/usr/bin/example2.0}          | Bin 0 -> 307920 bytes
+ .../xout/_root/usr/bin/factory_fun                 |   6 +-
+ .../{0.6.0 => 1.17.3}/xout/_root/usr/bin/fw_cut.sh |   2 +
+ .../xout/_root/usr/bin/fw_mcuOta.sh                |  73 ++++-
+ .../xout/_root/usr/bin/fw_upgrade.sh               |  99 ++++---
+ .../xout/_root/usr/bin/net_manager                 | Bin 55376 -> 59472 bytes
+ .../1.17.3/xout/_root/usr/bin/net_test.sh}         |  70 +++++
+ .../xout/_root/usr/bin/netmon_ctl                  | Bin 14248 -> 14248 bytes
+ .../1.17.3/xout/_root/usr/bin/network_overtime.sh} |   2 +
+ .../1.17.3/xout/_root/usr/bin/peripheral.sh}       | 132 +++++++++
+ .../{0.6.0 => 1.17.3}/xout/_root/usr/bin/reboot.sh |  19 ++
+ .../{0.6.0 => 1.17.3}/xout/_root/usr/bin/scan_ap   | Bin 84184 -> 84184 bytes
+ .../xout/_root/usr/bin/speech_ecovacs_tts          | Bin 22528 -> 26624 bytes
+ .../xout/_root/usr/bin/speech_inter_client         | Bin 1743032 -> 690472 bytes
+ .../xout/_root/usr/bin/speech_play_local_audio}    | Bin 0 -> 141408 bytes
+ .../xout/_root/usr/bin/speech_recognition          | Bin 485672 -> 555328 bytes
+ .../1.17.3/xout/_root/usr/bin/speech_sleep}        | Bin 0 -> 104536 bytes
+ .../xout/_root/usr/bin/speech_tts => dev/null}     | Bin 152384 -> 0 bytes
+ .../xout/_root/usr/bin/speech_wakeup               | Bin 26704 -> 26704 bytes
+ .../xout/_root/usr/bin/stop_local_audio_play.sh}   |   2 +
+ .../{0.6.0 => 1.17.3}/xout/_root/usr/bin/udisk.sh  |  14 +-
+ .../xout/_root/usr/bin/wakeup_file.sh              |  16 +-
+ .../xout/_root/usr/bin/wifi_hook.sh => dev/null}   |  17 --
+ .../1.17.3/xout/_root/usr/bin/wifi_repair.sh}      | 190 ++++++++++++
+ .../xout/_root/usr/bin/wifi_service                | Bin 124840 -> 128936 bytes
+ .../xout/_root/usr/bin/xspace_tool                 | Bin 417184 -> 450592 bytes
+ .../1.17.3/xout/_root/usr/lib/Segmentation.pc}     |   8 +
+ .../usr/lib/cmake/libSRTP/libSRTPTargets.cmake     |   2 +-
+ .../cmake/libwebsockets/LibwebsocketsTargets.cmake |   4 +-
+ .../cmake/libwebsockets/libwebsockets-config.cmake |   2 +-
+ .../1.17.3/xout/_root/usr/lib/debug.log}           |   1 +
+ .../xout/_root/usr/lib/eros_node_data_filter.pc    |   4 +-
+ .../xout/_root/usr/lib/eros_node_map.pc            |   4 +-
+ .../xout/_root/usr/lib/eros_node_setting.pc        |   4 +-
+ .../xout/_root/usr/lib/libBDSpeechSDK.so           | Bin 1965664 -> 1970048 bytes
+ .../1.17.3/xout/_root/usr/lib/libDwa.so}           | Bin 0 -> 193984 bytes
+ .../1.17.3/xout/_root/usr/lib/libEdgeFollow.so}    | Bin 0 -> 945280 bytes
+ .../xout/_root/usr/lib/libLineBaseDector.so        | Bin 51040 -> 65160 bytes
+ .../xout/_root/usr/lib/libMethodsUtils.so          | Bin 10056 -> 10056 bytes
+ .../xout/_root/usr/lib/libPerception.so            | Bin 1055888 -> 1139312 bytes
+ .../{0.6.0 => 1.17.3}/xout/_root/usr/lib/libPln.so | Bin 4252096 -> 3481264 bytes
+ .../xout/_root/usr/lib/libSegmentation.so          | Bin 276264 -> 313560 bytes
+ .../{0.6.0 => 1.17.3}/xout/_root/usr/lib/libTEB.so | Bin 82080 -> 77928 bytes
+ .../xout/_root/usr/lib/libXspace.so.1.0            | Bin 939088 -> 958664 bytes
+ .../xout/_root/usr/lib/libai_map.so                | Bin 2523880 -> 2518008 bytes
+ .../xout/_root/usr/lib/libarea_segmentation.so}    | Bin 0 -> 2148352 bytes
+ .../xout/_root/usr/lib/libaudrpc_spil.so           | Bin 40904 -> 40904 bytes
+ .../xout/_root/usr/lib/libbdAudProxy.so            | Bin 150040 -> 152760 bytes
+ .../xout/_root/usr/lib/libbdMicDetect.so           | Bin 24264 -> 24264 bytes
+ .../xout/_root/usr/lib/libbdSPILAudioProc.so}      | Bin 0 -> 2040984 bytes
+ .../xout/_root/usr/lib/libbd_alsa_audio_client.so  | Bin 58144 -> 58120 bytes
+ .../xout/_root/usr/lib/libbd_audio_vdev.so         | Bin 165896 -> 166600 bytes
+ .../xout/_root/usr/lib/libbddspdev.so              | Bin 148312 -> 149624 bytes
+ .../xout/_root/usr/lib/libbds_audio_client.so      | Bin 391408 -> 395304 bytes
+ .../1.17.3/xout/_root/usr/lib/libbigdata.so}       | Bin 0 -> 168240 bytes
+ .../{0.6.0 => 1.17.3}/xout/_root/usr/lib/libcam.so | Bin 249984 -> 249984 bytes
+ .../xout/_root/usr/lib/libcf_diff.so.0.0.1         | Bin 18616 -> 18616 bytes
+ .../xout/_root/usr/lib/libchunfeng.so.0.1.0        | Bin 131064 -> 131064 bytes
+ .../xout/_root/usr/lib/libcommon.so.0.0.1          | Bin 18648 -> 18648 bytes
+ .../xout/_root/usr/lib/libdummy.so                 | Bin 14512 -> 14512 bytes
+ .../xout/_root/usr/lib/libeco_ai_lib.so            | Bin 679456 -> 679832 bytes
+ .../xout/_root/usr/lib/libeco_slash2straight.so    | Bin 127120 -> 124328 bytes
+ .../xout/_root/usr/lib/liberos_pb_msg.so           | Bin 351688 -> 351944 bytes
+ .../{0.6.0 => 1.17.3}/xout/_root/usr/lib/libf37.so | Bin 17424 -> 17424 bytes
+ .../xout/_root/usr/lib/libgc4663.so                | Bin 16696 -> 16696 bytes
+ .../xout/_root/usr/lib/libgc4c33.so                | Bin 23664 -> 23664 bytes
+ .../xout/_root/usr/lib/libimx219.so                | Bin 15024 -> 15024 bytes
+ .../xout/_root/usr/lib/libimx307.so                | Bin 29944 -> 29944 bytes
+ .../xout/_root/usr/lib/libimx327.so                | Bin 51304 -> 51304 bytes
+ .../xout/_root/usr/lib/libimx415.so                | Bin 21240 -> 21240 bytes
+ .../xout/_root/usr/lib/libimx477.so                | Bin 19488 -> 19488 bytes
+ .../xout/_root/usr/lib/libimx586.so                | Bin 24232 -> 24232 bytes
+ .../xout/_root/usr/lib/libjob_schedule_midware.so  | Bin 3045768 -> 3070432 bytes
+ .../_root/usr/lib/libjob_schedule_ros_convert.so   | Bin 2601048 -> 2676320 bytes
+ .../xout/_root/usr/lib/libkvsWebrtcClient.so       | Bin 1201368 -> 1213656 bytes
+ .../_root/usr/lib/libkvsWebrtcSignalingClient.so   | Bin 190240 -> 190240 bytes
+ .../xout/_root/usr/lib/libmap_package.so           | Bin 61792 -> 61792 bytes
+ .../xout/_root/usr/lib/libnavigation.so            | Bin 413576 -> 467200 bytes
+ .../xout/_root/usr/lib/libov5647.so                | Bin 16064 -> 16064 bytes
+ .../xout/_root/usr/lib/libpixel2location.so        | Bin 82360 -> 639928 bytes
+ .../xout/_root/usr/lib/libresource_task.so         | Bin 193624 -> 197376 bytes
+ .../xout/_root/usr/lib/libreturnnavigation.so      | Bin 389104 -> 458696 bytes
+ .../1.17.3/xout/_root/usr/lib/librl_navi.so}       | Bin 0 -> 298088 bytes
+ .../xout/_root/usr/lib/libs5kgm1sp.so              | Bin 27608 -> 27608 bytes
+ .../xout/_root/usr/lib/libsc1330t.so               | Bin 21720 -> 21720 bytes
+ .../xout/_root/usr/lib/libsc1330t_hdr.so.V1        | Bin 32872 -> 32992 bytes
+ .../xout/_root/usr/lib/libslam.so                  | Bin 227512 -> 228296 bytes
+ .../xout/_root/usr/lib/libslam_common.so           | Bin 160776 -> 164128 bytes
+ .../xout/_root/usr/lib/libslam_error_check.so      | Bin 62864 -> 53216 bytes
+ .../xout/_root/usr/lib/libslam_house_layout.so     | Bin 168480 -> 197888 bytes
+ .../xout/_root/usr/lib/libsmallAreaReturn.so       | Bin 32120 -> 32784 bytes
+ .../xout/_root/usr/lib/libsrtp2.so.2.5.0           | Bin 97400 -> 97400 bytes
+ .../1.17.3/xout/_root/usr/lib/libstuck.so}         | Bin 0 -> 254416 bytes
+ .../xout/_root/usr/lib/libtaskmanager.so           | Bin 313216 -> 313496 bytes
+ .../xout/_root/usr/lib/libtsp_ga.so                | Bin 319352 -> 328680 bytes
+ .../xout/_root/usr/lib/libvcam.so                  | Bin 10184 -> 10184 bytes
+ .../xout/_root/usr/lib/libvio.so.2                 | Bin 1321056 -> 1312864 bytes
+ .../xout/_root/usr/lib/libvirtual.so               | Bin 10392 -> 10392 bytes
+ .../xout/_root/usr/lib/libwebsockets.so.19         | Bin 510192 -> 510192 bytes
+ .../xout/_root/usr/lib/libzlog.so.1.2.12           | Bin 126112 -> 126112 bytes
+ .../xout/_root/usr/lib/medusa/plug_audio.so        | Bin 39360 -> 35264 bytes
+ .../xout/_root/usr/lib/medusa/plug_dev_status.so   | Bin 26936 -> 26936 bytes
+ .../xout/_root/usr/lib/medusa/plug_input_event.so  | Bin 10360 -> 10360 bytes
+ .../xout/_root/usr/lib/medusa/plug_kvs_push.so     | Bin 305512 -> 308040 bytes
+ .../xout/_root/usr/lib/medusa/plug_live_pwd.so     | Bin 22864 -> 22864 bytes
+ .../xout/_root/usr/lib/medusa/plug_log.so          | Bin 14528 -> 14528 bytes
+ .../xout/_root/usr/lib/medusa/plug_lvision.so      | Bin 215464 -> 227752 bytes
+ .../_root/usr/lib/medusa/plug_media_control.so     | Bin 35160 -> 35168 bytes
+ .../_root/usr/lib/medusa/plug_medusa_plugin_bpu.so | Bin 58824 -> 55976 bytes
+ .../medusa/plug_medusa_plugin_objectDetector.so    | Bin 504272 -> 508760 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_ros_node.so  | Bin 72104 -> 72104 bytes
+ .../medusa/plug_medusa_plugin_video_generator.so   | Bin 60176 -> 80696 bytes
+ .../lib/medusa/plug_medusa_plugin_wifiHandler.so   | Bin 23008 -> 23016 bytes
+ .../xout/_root/usr/lib/medusa/plug_network.so      | Bin 31208 -> 35304 bytes
+ .../xout/_root/usr/lib/medusa/plug_sys.so          | Bin 51728 -> 51728 bytes
+ .../xout/_root/usr/lib/medusa/plug_time.so         | Bin 27104 -> 27104 bytes
+ .../_root/usr/lib/medusa_plugin_objectDetector.pc  |   4 +-
+ .../xout/_root/usr/lib/modules/4.14.87/ac101.ko    | Bin 44864 -> 44864 bytes
+ .../_root/usr/lib/modules/4.14.87/ac108_driver.ko  | Bin 98208 -> 98208 bytes
+ .../_root/usr/lib/modules/4.14.87/bif_dev_sd.ko    | Bin 46664 -> 46664 bytes
+ .../_root/usr/lib/modules/4.14.87/bif_dev_spi.ko   | Bin 41264 -> 41264 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/bif_lite.ko | Bin 39008 -> 39008 bytes
+ .../_root/usr/lib/modules/4.14.87/bif_platform.ko  | Bin 5936 -> 5936 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/bif_sio.ko  | Bin 36680 -> 36680 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/bifbase.ko  | Bin 73616 -> 73616 bytes
+ .../_root/usr/lib/modules/4.14.87/bpu_framework.ko | Bin 80616 -> 80616 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/btbcm.ko    | Bin 17464 -> 17464 bytes
+ .../_root/usr/lib/modules/4.14.87/crypto_engine.ko | Bin 12368 -> 12368 bytes
+ .../_root/usr/lib/modules/4.14.87/dummy-cpudai.ko  | Bin 10312 -> 10312 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/es7210.ko   | Bin 21776 -> 30560 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/es8156.ko   | Bin 26504 -> 26016 bytes
+ .../usr/lib/modules/4.14.87/extcon-vbus-gpio.ko    | Bin 9456 -> 9456 bytes
+ .../_root/usr/lib/modules/4.14.87/hbipc_lite.ko    | Bin 48016 -> 48016 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/hci_uart.ko | Bin 69576 -> 69576 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot-cpudai.ko  | Bin 30912 -> 32256 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/hobot-fb.ko | Bin 19704 -> 19704 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot-i2s-dma.ko | Bin 41632 -> 41456 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot-snd-101.ko | Bin 15856 -> 15856 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot-snd-102.ko | Bin 15224 -> 15224 bytes
+ .../usr/lib/modules/4.14.87/hobot-snd-1977.ko      | Bin 15456 -> 15456 bytes
+ .../usr/lib/modules/4.14.87/hobot-snd-7210.ko      | Bin 15440 -> 15440 bytes
+ .../usr/lib/modules/4.14.87/hobot-snd-8156.ko      | Bin 15272 -> 15272 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot-snd-96.ko  | Bin 15776 -> 15776 bytes
+ .../usr/lib/modules/4.14.87/hobot-snd-dummy.ko     | Bin 15720 -> 15720 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_bifsd.ko   | Bin 27472 -> 27472 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_bifspi.ko  | Bin 29384 -> 29384 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_codec.ko   | Bin 8944 -> 8944 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_dwe.ko     | Bin 106728 -> 106728 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_gdc.ko     | Bin 46160 -> 46160 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_ipu.ko     | Bin 244600 -> 244600 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/hobot_iq.ko | Bin 110224 -> 110224 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_isp.ko     | Bin 972664 -> 972640 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_isp_log.ko | Bin 11176 -> 10888 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_jpu.ko     | Bin 93568 -> 93568 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_lens.ko    | Bin 64592 -> 64592 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_osd.ko     | Bin 99576 -> 99576 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_pym.ko     | Bin 136320 -> 136320 bytes
+ .../usr/lib/modules/4.14.87/hobot_remoteproc.ko    | Bin 33192 -> 33192 bytes
+ .../usr/lib/modules/4.14.87/hobot_rpmsg_char.ko    | Bin 35408 -> 35408 bytes
+ .../usr/lib/modules/4.14.87/hobot_sched_logger.ko  | Bin 14616 -> 14616 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_sensor.ko  | Bin 102400 -> 102400 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_sif.ko     | Bin 202112 -> 202112 bytes
+ .../usr/lib/modules/4.14.87/hobot_sns_bridge.ko    | Bin 50440 -> 50440 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_spidev.ko  | Bin 51600 -> 51600 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_sscg.ko    | Bin 38128 -> 38128 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_vpu.ko     | Bin 177472 -> 177472 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/iar.ko      | Bin 300800 -> 300800 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/iar_cdev.ko | Bin 48744 -> 48744 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/iar_mmap.ko | Bin 8168 -> 8168 bytes
+ .../_root/usr/lib/modules/4.14.87/remoteproc.ko    | Bin 71784 -> 71784 bytes
+ .../_root/usr/lib/modules/4.14.87/rpmsg_core.ko    | Bin 16032 -> 16032 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/sc1330t.ko  | Bin 13040 -> 12992 bytes
+ .../_root/usr/lib/modules/4.14.87/snd-hwdep.ko     | Bin 20528 -> 20528 bytes
+ .../_root/usr/lib/modules/4.14.87/snd-rawmidi.ko   | Bin 48928 -> 48928 bytes
+ .../_root/usr/lib/modules/4.14.87/snd-soc-ac102.ko | Bin 44904 -> 44904 bytes
+ .../lib/modules/4.14.87/snd-soc-adau1977-i2c.ko    | Bin 6016 -> 6016 bytes
+ .../usr/lib/modules/4.14.87/snd-soc-adau1977.ko    | Bin 24152 -> 24152 bytes
+ .../_root/usr/lib/modules/4.14.87/snd-usb-audio.ko | Bin 328144 -> 328144 bytes
+ .../usr/lib/modules/4.14.87/snd-usbmidi-lib.ko     | Bin 45416 -> 45416 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/uvcvideo.ko | Bin 141368 -> 141368 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/v4l2-tpg.ko | Bin 66112 -> 66112 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/v4l2_avb.ko | Bin 22264 -> 22264 bytes
+ .../_root/usr/lib/modules/4.14.87/videobuf-core.ko | Bin 32872 -> 32872 bytes
+ .../lib/modules/4.14.87/videobuf2-dma-contig.ko    | Bin 20512 -> 20512 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/virtio.ko   | Bin 15664 -> 15664 bytes
+ .../_root/usr/lib/modules/4.14.87/virtio_crypto.ko | Bin 29632 -> 29632 bytes
+ .../_root/usr/lib/modules/4.14.87/virtio_ring.ko   | Bin 27728 -> 27728 bytes
+ .../usr/lib/modules/4.14.87/virtio_rpmsg_bus.ko    | Bin 27200 -> 27200 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/vivid.ko    | Bin 219472 -> 219472 bytes
+ .../xout/_root/usr/lib/nlp/libeis_sdk.so           | Bin 14537648 -> 16486080 bytes
+ .../xout/_root/usr/lib/nlp/libeis_wakeup.so        | Bin 1607056 -> 2994832 bytes
+ .../usr/lib/node/liberos_node_RobotInfoCollect.so  | Bin 832048 -> 829344 bytes
+ .../xout/_root/usr/lib/node/liberos_node_ai_map.so | Bin 442296 -> 397120 bytes
+ .../xout/_root/usr/lib/node/liberos_node_alert.so  | Bin 222576 -> 222432 bytes
+ .../_root/usr/lib/node/liberos_node_bigdata.so     | Bin 1068632 -> 1312112 bytes
+ .../xout/_root/usr/lib/node/liberos_node_clean.so  | Bin 1037424 -> 1088568 bytes
+ .../_root/usr/lib/node/liberos_node_data_filter.so | Bin 724504 -> 724504 bytes
+ .../_root/usr/lib/node/liberos_node_fastbuild.so   | Bin 247576 -> 247696 bytes
+ .../usr/lib/node/liberos_node_hardware_platform.so | Bin 1597824 -> 1619792 bytes
+ .../usr/lib/node/liberos_node_house_layout.so      | Bin 320256 -> 348832 bytes
+ .../usr/lib/node/liberos_node_job_schedule.so      | Bin 632168 -> 648600 bytes
+ .../_root/usr/lib/node/liberos_node_lifespan.so    | Bin 316288 -> 311424 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    | Bin 2050384 -> 2143232 bytes
+ .../xout/_root/usr/lib/node/liberos_node_omni.so   | Bin 652512 -> 677168 bytes
+ .../_root/usr/lib/node/liberos_node_postTunnel.so  | Bin 1041400 -> 1098600 bytes
+ .../_root/usr/lib/node/liberos_node_relocation.so  | Bin 231880 -> 248600 bytes
+ .../xout/_root/usr/lib/node/liberos_node_return.so | Bin 451856 -> 487960 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     | Bin 956288 -> 1013568 bytes
+ .../xout/_root/usr/lib/node/liberos_node_slam.so   | Bin 420472 -> 513256 bytes
+ 961 files changed, 1742 insertions(+), 378 deletions(-)

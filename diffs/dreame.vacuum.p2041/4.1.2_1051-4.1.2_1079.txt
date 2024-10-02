@@ -1,0 +1,128 @@
+Firmware diff for Mi Robot Vacuum-Mop 1T (dreame.vacuum.p2041)
+Old version: 4.1.2_1051 New version: 4.1.2_1079
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/audio/TEST/31.ogg                   | Bin 8606 -> 26136 bytes
+ .../xout/_root/audio/TEST/32.ogg                   | Bin 8439 -> 27992 bytes
+ .../xout/_root/audio/TEST/33.ogg                   | Bin 11554 -> 29683 bytes
+ .../4.1.2_1079/xout/_root/audio/TEST/34.ogg}       | Bin 0 -> 28688 bytes
+ .../4.1.2_1079/xout/_root/audio/TEST/35.ogg}       | Bin 0 -> 19360 bytes
+ .../4.1.2_1079/xout/_root/audio/TEST/36.ogg}       | Bin 0 -> 19668 bytes
+ .../4.1.2_1079/xout/_root/audio/TEST/NUM_0.ogg}    | Bin 0 -> 6595 bytes
+ .../xout/_root/ava/conf/accum_config_2041.json}    | 106 +++++++++++++++++++++
+ .../xout/_root/ava/conf/p2041.conf                 |   5 +-
+ .../xout/_root/ava/lib/node_calibr.so              | Bin 239072 -> 239072 bytes
+ .../xout/_root/ava/lib/node_camera.so              | Bin 94608 -> 94640 bytes
+ .../xout/_root/ava/lib/node_camera_tof.so          | Bin 142328 -> 142800 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 282912 -> 65640 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 36464 -> 36464 bytes
+ .../xout/_root/ava/lib/node_health_nyx.so          | Bin 109352 -> 127176 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 98736 -> 98752 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 36392 -> 36392 bytes
+ .../xout/_root/ava/lib/node_map_accumulator.so     | Bin 771616 -> 798088 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 405008 -> 459808 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 77624 -> 77624 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 724192 -> 769400 bytes
+ .../xout/_root/ava/lib/node_nyx.so                 | Bin 771424 -> 798688 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 73592 -> 73592 bytes
+ .../xout/_root/ava/lib/node_signal_tab.so          | Bin 147232 -> 147232 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 119928 -> 120048 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 74200 -> 102992 bytes
+ .../_root/ava/lib/node_tof_extrinsic_calibrate.so  | Bin 414600 -> 369320 bytes
+ .../xout/_root/ava/lib/node_tracecheck.so          | Bin 53632 -> 53632 bytes
+ .../xout/_root/ava/lib/node_vision.so              | Bin 2165552 -> 2153472 bytes
+ .../xout/_root/ava/script/fds_hook.sh              |  48 ++++++----
+ .../xout/_root/ava/script/msg_cvt.sh               |  76 +++++++++++++--
+ .../xout/_root/ava/script/ota_arm_update.sh        |   2 +
+ .../xout/_root/ava/script/sys_set_private.sh       |   2 +-
+ .../4.1.2_1079/xout/_root/bin/arecord}             | Bin 0 -> 69408 bytes
+ .../xout/_root/etc/crontabs/root                   |   2 +
+ .../xout/_root/etc/init.d/factory_ap.sh            |  14 ++-
+ .../xout/_root/etc/init.d/tof_calibrate.sh         |  18 ++--
+ .../xout/_root/etc/os-release                      |   6 +-
+ .../xout/_root/etc/profile                         |   5 +-
+ .../xout/_root/etc/rc.d/miio_monitor.sh            |   5 +-
+ .../xout/_root/etc/rc.d/monitor.sh                 |  39 ++++----
+ .../xout/_root/etc/rc.d/monitor_cpu.sh             |   4 +-
+ .../xout/_root/etc/rc.d/msg_trans.sh               |  11 ++-
+ .../xout/_root/etc/rc.d/msg_trans_monitor.sh       |  10 --
+ .../xout/_root/etc/rc.d/wifi_manager.sh            |   1 -
+ .../xout/_root/etc/rc.d/wifi_monitor.sh            |   8 +-
+ .../xout/_root/misc/data.tar.bz2                   | Bin 748 -> 634 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../4.1.2_1079/xout/_root/usr/bin/autossh.sh}      |  39 ++++++++
+ .../xout/_root/usr/bin/ava                         | Bin 606096 -> 150544 bytes
+ .../xout/_root/usr/bin/ava_crash_dog.sh}           |  60 ++++++++++++
+ .../xout/_root/usr/bin/avacmd                      | Bin 9032 -> 8080 bytes
+ .../xout/_root/usr/bin/check_silent_upgrade.sh     | 101 ++++++++++++++++----
+ .../xout/_root/usr/bin/config                      |  14 ++-
+ .../xout/_root/usr/bin/curl_download.sh}           |  17 ++++
+ .../4.1.2_1079/xout/_root/usr/bin/curl_upload.sh}  |  15 +++
+ .../xout/_root/usr/bin/do_start_ap.sh              |   2 +
+ .../xout/_root/usr/bin/exec_proc                   | Bin 17664 -> 11160 bytes
+ .../xout/_root/usr/bin/factory_reset.sh            |  24 ++++-
+ .../xout/_root/usr/bin/factory_reset_daemon        | Bin 11200 -> 11200 bytes
+ .../xout/_root/usr/bin/flashtest                   | Bin 9016 -> 9976 bytes
+ .../xout/_root/usr/bin/fw_printenv                 | Bin 27832 -> 27816 bytes
+ .../xout/_root/usr/bin/get_ava_status.sh}          |  13 +++
+ .../xout/_root/usr/bin/miio_client_helper_mjac.sh  |  18 ++--
+ .../xout/_root/usr/bin/msg_trans                   | Bin 11496 -> 24088 bytes
+ .../xout/_root/usr/bin/ofilm_calibration           | Bin 20328 -> 20328 bytes
+ .../xout/_root/usr/bin/packlog.sh                  |   4 +-
+ .../xout/_root/usr/bin/play_wifi_tip_media.sh      |  36 ++++---
+ .../4.1.2_1079/xout/_root/usr/bin/procmem}         | Bin 0 -> 14976 bytes
+ .../4.1.2_1079/xout/_root/usr/bin/procrank}        | Bin 0 -> 16144 bytes
+ .../xout/_root/usr/bin/record_cpu_max_usage.sh}    |  18 ++++
+ .../xout/_root/usr/bin/report_system_usage.sh}     |  53 +++++++++++
+ .../xout/_root/usr/bin/restart_ava.sh              |   2 +-
+ .../4.1.2_1079/xout/_root/usr/bin/rossetupenv.sh}  |  15 +++
+ .../xout/_root/usr/bin/sunny_calibration           | Bin 29824 -> 29856 bytes
+ .../xout/_root/usr/bin/sysmon.sh                   |  25 ++++-
+ .../xout/_root/usr/bin/uart_hex                    | Bin 9504 -> 9504 bytes
+ .../xout/_root/usr/bin/wifi_cli                    | Bin 86872 -> 86888 bytes
+ .../xout/_root/usr/bin/wifi_manager                | Bin 241512 -> 241544 bytes
+ .../xout/_root/usr/lib/libCalcPhaseRadialGray.so   | Bin 15520 -> 15536 bytes
+ .../xout/_root/usr/lib/libCaliIniProcessing.so     | Bin 8704 -> 8704 bytes
+ .../xout/_root/usr/lib/libCorFppnWiggling.so       | Bin 8824 -> 8824 bytes
+ .../xout/_root/usr/lib/libCorPSF.so                | Bin 23176 -> 23176 bytes
+ .../xout/_root/usr/lib/libDepthFilter.so           | Bin 21280 -> 21280 bytes
+ .../xout/_root/usr/lib/libGeneral_TOF_Calculate.so | Bin 31944 -> 32720 bytes
+ .../usr/lib/libGeneral_TOF_Cor_Intermediate.so     | Bin 24248 -> 24504 bytes
+ .../4.1.2_1079/xout/_root/usr/lib/libavcodec.so}   |   0
+ .../xout/_root/usr/lib/libavcodec.so.58}           |   0
+ .../xout/_root/usr/lib/libavcodec.so.58.91.100}    | Bin 0 -> 10801456 bytes
+ .../4.1.2_1079/xout/_root/usr/lib/libavformat.so}  |   0
+ .../xout/_root/usr/lib/libavformat.so.58}          |   0
+ .../xout/_root/usr/lib/libavformat.so.58.45.100}   | Bin 0 -> 2229264 bytes
+ .../4.1.2_1079/xout/_root/usr/lib/libavutil.so}    |   0
+ .../4.1.2_1079/xout/_root/usr/lib/libavutil.so.56} |   0
+ .../xout/_root/usr/lib/libavutil.so.56.51.100}     | Bin 0 -> 527448 bytes
+ .../xout/_root/usr/lib/libbz2.so                   | Bin 63400 -> 63400 bytes
+ .../xout/_root/usr/lib/libdepthmapwrapper.so       | Bin 1490168 -> 1486088 bytes
+ .../xout/_root/usr/lib/libmessenger.so             | Bin 44336 -> 52688 bytes
+ .../xout/_root/usr/lib/libopencv_videoio.so.4.2.0  | Bin 331544 -> 361408 bytes
+ .../xout/_root/usr/lib/libspectre3.so              | Bin 504360 -> 504360 bytes
+ .../xout/_root/usr/lib/libspectre_processing.so    | Bin 20552 -> 20552 bytes
+ .../xout/_root/usr/lib/libswresample.so}           |   0
+ .../xout/_root/usr/lib/libswresample.so.3}         |   0
+ .../xout/_root/usr/lib/libswresample.so.3.7.100}   | Bin 0 -> 74808 bytes
+ .../4.1.2_1079/xout/_root/usr/lib/libswscale.so}   |   0
+ .../4.1.2_1079/xout/_root/usr/lib/libswscale.so.5} |   0
+ .../xout/_root/usr/lib/libswscale.so.5.7.100}      | Bin 0 -> 353760 bytes
+ .../xout/_root/usr/lib/libtof_mod_sdk.so           | Bin 261984 -> 261992 bytes
+ .../xout/_root/usr/lib/libz.so.1.2.9 => dev/null}  | Bin 93328 -> 0 bytes
+ .../usr/lib/modules/4.9.191/external/8189fs.ko     | Bin 1764392 -> 1764392 bytes
+ .../usr/lib/modules/4.9.191/external/sunnytof.ko   | Bin 18928 -> 20352 bytes
+ .../usr/lib/modules/4.9.191/external/vin_io.ko     | Bin 74792 -> 74944 bytes
+ .../usr/lib/modules/4.9.191/external/vin_v4l2.ko   | Bin 273064 -> 273368 bytes
+ .../_root/usr/lib/tree_lib/libnyx_route_nodes.so   | Bin 3535496 -> 3789848 bytes
+ .../_root/usr/lib/tree_lib/libnyx_tactics_tree.so  | Bin 844232 -> 932808 bytes
+ .../xout/_root/usr/lib/tree_lib/libnyx_tree.so     | Bin 9269768 -> 10539360 bytes
+ .../xout/_root/usr/share/udhcpc/default.script     |   3 +-
+ .../xout/_root/version_record                      |  16 ++--
+ .../{4.1.2_1051 => 4.1.2_1079}/xout/kernel.img     | Bin 10049536 -> 10049536 bytes
+ .../{4.1.2_1051 => 4.1.2_1079}/xout/mcu.bin        | Bin 141404 -> 145160 bytes
+ .../dreame.vacuum.p2041/4.1.2_1079/xout/toc0.fex}  | Bin 0 -> 81920 bytes
+ .../{4.1.2_1051 => 4.1.2_1079}/xout/toc1.fex       | Bin 1130496 -> 1130496 bytes
+ 122 files changed, 699 insertions(+), 140 deletions(-)

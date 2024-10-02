@@ -1,0 +1,20 @@
+Firmware diff for Xiaomi Robot Vacuum S10+ (dreame.vacuum.r2211o)
+Old version: 4.3.3_1062 New version: 4.3.3_1204
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_signal.so              | Bin 554428 -> 554428 bytes
+ .../xout/_root/etc/init.d/checkcputable.sh}        |   6 +
+ .../xout/_root/etc/os-release                      |   4 +-
+ .../xout/_root/etc/rc.sysinit                      |   1 +
+ .../xout/_root/misc/data.tar.bz2                   | Bin 541 -> 550 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/cpu.sh                      | 132 ++++++++++++++++++---
+ .../usr/lib/modules/4.9.118+/external/8723ds.ko    | Bin 2676436 -> 2676436 bytes
+ .../xout/_root/usr/lib/tree_lib/libthemis_tree.so  | Bin 3182756 -> 3182756 bytes
+ .../xout/_root/version_record                      |   8 +-
+ .../xout/boot_package.fex                          | Bin 1507328 -> 1507328 bytes
+ .../{4.3.3_1062 => 4.3.3_1204}/xout/kernel.img     | Bin 2934784 -> 2934784 bytes
+ .../{4.3.3_1062 => 4.3.3_1204}/xout/toc0.fex       | Bin 114688 -> 114688 bytes
+ .../{4.3.3_1062 => 4.3.3_1204}/xout/toc1.fex       | Bin 1507328 -> 1507328 bytes
+ 14 files changed, 127 insertions(+), 26 deletions(-)

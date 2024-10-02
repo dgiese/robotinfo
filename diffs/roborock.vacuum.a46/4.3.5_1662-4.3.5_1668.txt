@@ -1,0 +1,14 @@
+Firmware diff for Roborock G10S (roborock.vacuum.a46)
+Old version: 4.3.5_1662 New version: 4.3.5_1668
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/rr-info                         |   4 ++--
+ .../xout/_root/etc/signature                       | Bin 94116 -> 94116 bytes
+ .../xout/_root/usr/lib/libical.so.0.48.0           | Bin 346152 -> 346152 bytes
+ .../_root/usr/lib/opkg/info/base-files.control     |   2 +-
+ .../xout/_root/usr/lib/opkg/info/libical.control   |   2 +-
+ .../xout/_root/usr/lib/opkg/status                 |   2 +-
+ .../{4.3.5_1662 => 4.3.5_1668}/xout/boot/zImage    | Bin 21372940 -> 21372940 bytes
+ .../{4.3.5_1662 => 4.3.5_1668}/xout/kernel.img     | Bin 21381120 -> 21381120 bytes
+ 8 files changed, 5 insertions(+), 5 deletions(-)

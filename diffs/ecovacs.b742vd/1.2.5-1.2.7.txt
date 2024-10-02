@@ -1,0 +1,135 @@
+Firmware diff for DEEBOT OZMO T8 (ecovacs.b742vd)
+Old version: 1.2.5 New version: 1.2.7
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../1.2.7/xout/_root/etc/conf/dxai_ota.json}       |  22 +
+ .../_root/etc/conf/medusa/download_fw_hook_v3.sh   |  20 +-
+ .../{1.2.5 => 1.2.7}/xout/_root/etc/fw.fix         |   2 +-
+ .../{1.2.5 => 1.2.7}/xout/_root/etc/fw.manifest    |   4 +-
+ .../{1.2.5 => 1.2.7}/xout/_root/opt/data.tar.bz2   | Bin 411 -> 413 bytes
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 975768 -> 975816 bytes
+ .../{1.2.5 => 1.2.7}/xout/_root/usr/bin/fw_cut.sh  |   2 +-
+ .../xout/_root/usr/lib/libDeebot.so                | Bin 1169712 -> 1171728 bytes
+ .../xout/_root/usr/lib/libLineLaser.so             | Bin 1568280 -> 1556256 bytes
+ .../xout/_root/usr/lib/libSlRbd.so                 | Bin 247400 -> 268784 bytes
+ .../xout/_root/usr/lib/libSlTrack.so               | Bin 326400 -> 330648 bytes
+ .../usr/lib/node/liberos_node_hardware_platform.so | Bin 1150352 -> 1178304 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     | Bin 391080 -> 393464 bytes
+ .../usr/lib/node/liberos_node_task_manager.so      | Bin 6456616 -> 6495848 bytes
+ .../python2.7/site-packages/bigdata/__init__.pyc   | Bin 222 -> 222 bytes
+ .../site-packages/bigdata/msg/_ACTION.pyc          | Bin 5151 -> 5151 bytes
+ .../site-packages/bigdata/msg/_BIG_DATA_ACTION.pyc | Bin 5144 -> 5144 bytes
+ .../bigdata/msg/_BIG_DATA_UPDATE_ACTION.pyc        | Bin 5394 -> 5394 bytes
+ .../bigdata/msg/_BigDataBasicInfo.pyc              | Bin 7490 -> 7490 bytes
+ .../bigdata/msg/_BigDataONorOFFlineStruct.pyc      | Bin 7669 -> 7669 bytes
+ .../bigdata/msg/_BigDataPowerOnOffStruct.pyc       | Bin 5642 -> 5642 bytes
+ .../site-packages/bigdata/msg/_BigDataSetting.pyc  | Bin 7530 -> 7530 bytes
+ .../bigdata/msg/_BigDataTaskStruct.pyc             | Bin 8905 -> 8905 bytes
+ .../site-packages/bigdata/msg/_BigDataTrigger.py   |   2 +
+ .../site-packages/bigdata/msg/_BigDataTrigger.pyc  | Bin 5950 -> 6021 bytes
+ .../bigdata/msg/_BigDataUpdateStruct.pyc           | Bin 10091 -> 10091 bytes
+ .../bigdata/msg/_BigDataVideoManagerStruct.pyc     | Bin 5507 -> 5507 bytes
+ .../bigdata/msg/_CastDataToInternet.pyc            | Bin 6314 -> 6314 bytes
+ .../bigdata/msg/_InternetAvaliable.pyc             | Bin 5186 -> 5186 bytes
+ .../bigdata/msg/_MdsBigDataNetConnetStatus.pyc     | Bin 6326 -> 6326 bytes
+ .../bigdata/msg/_MdsBigDataNetConnetStatusNode.pyc | Bin 5812 -> 5812 bytes
+ .../bigdata/msg/_MdsBigDataSystemStatus.pyc        | Bin 7452 -> 7452 bytes
+ .../bigdata/msg/_MdsBigDataSystemStatusNode.pyc    | Bin 7214 -> 7214 bytes
+ .../site-packages/bigdata/msg/_RESULT.pyc          | Bin 5032 -> 5032 bytes
+ .../site-packages/bigdata/msg/_SLEEP_TYPE.pyc      | Bin 4695 -> 4695 bytes
+ .../site-packages/bigdata/msg/_SUBTASK.pyc         | Bin 6480 -> 6480 bytes
+ .../site-packages/bigdata/msg/_SenserReport.pyc    | Bin 5402 -> 5402 bytes
+ .../site-packages/bigdata/msg/_SleepTrg.pyc        | Bin 5308 -> 5308 bytes
+ .../site-packages/bigdata/msg/_TASKTYPE.pyc        | Bin 5246 -> 5246 bytes
+ .../site-packages/bigdata/msg/_UPDATE_ISForce.pyc  | Bin 5155 -> 5155 bytes
+ .../bigdata/msg/_UPDATE_STOPREASON.pyc             | Bin 5865 -> 5865 bytes
+ .../site-packages/bigdata/msg/_UPDATE_TYPE.pyc     | Bin 5119 -> 5119 bytes
+ .../site-packages/bigdata/msg/__init__.pyc         | Bin 1133 -> 1133 bytes
+ .../lib/python2.7/site-packages/fct/__init__.pyc   | Bin 214 -> 214 bytes
+ .../site-packages/fct/msg/_ChargeTest.py}          | 104 ++++
+ .../site-packages/fct/msg/_ChargeTest.pyc}         | Bin 0 -> 4990 bytes
+ .../python2.7/site-packages/fct/msg/_DownTest.py}  |  98 ++++
+ .../python2.7/site-packages/fct/msg/_DownTest.pyc} | Bin 0 -> 4846 bytes
+ .../site-packages/fct/msg/_FrontAndSideTest.py}    |  98 ++++
+ .../site-packages/fct/msg/_FrontAndSideTest.pyc}   | Bin 0 -> 4934 bytes
+ .../site-packages/fct/msg/_FunMotorTest.py}        |  98 ++++
+ .../site-packages/fct/msg/_FunMotorTest.pyc}       | Bin 0 -> 4909 bytes
+ .../python2.7/site-packages/fct/msg/_GetCharge.py} | 117 +++++
+ .../site-packages/fct/msg/_GetCharge.pyc}          | Bin 0 -> 5507 bytes
+ .../python2.7/site-packages/fct/msg/_GetDown.py}   | 122 +++++
+ .../python2.7/site-packages/fct/msg/_GetDown.pyc}  | Bin 0 -> 5583 bytes
+ .../site-packages/fct/msg/_GetFrontAndSide.py}     | 118 +++++
+ .../site-packages/fct/msg/_GetFrontAndSide.pyc}    | Bin 0 -> 5500 bytes
+ .../site-packages/fct/msg/_GetFunMotor.py}         |  98 ++++
+ .../site-packages/fct/msg/_GetFunMotor.pyc}        | Bin 0 -> 4898 bytes
+ .../python2.7/site-packages/fct/msg/_GetGroy.py}   | 125 +++++
+ .../python2.7/site-packages/fct/msg/_GetGroy.pyc}  | Bin 0 -> 5657 bytes
+ .../site-packages/fct/msg/_GetGunBrush.py}         |  98 ++++
+ .../site-packages/fct/msg/_GetGunBrush.pyc}        | Bin 0 -> 4896 bytes
+ .../site-packages/fct/msg/_GetHardConfig.py}       | 113 +++++
+ .../site-packages/fct/msg/_GetHardConfig.pyc}      | Bin 0 -> 5407 bytes
+ .../python2.7/site-packages/fct/msg/_GetOnOff.py}  | 118 +++++
+ .../python2.7/site-packages/fct/msg/_GetOnOff.pyc} | Bin 0 -> 5435 bytes
+ .../site-packages/fct/msg/_GetRemoteTest.py}       | 113 +++++
+ .../site-packages/fct/msg/_GetRemoteTest.pyc}      | Bin 0 -> 5352 bytes
+ .../site-packages/fct/msg/_GetRrontAndSide.py}     | 118 +++++
+ .../site-packages/fct/msg/_GetRrontAndSide.pyc}    | Bin 0 -> 5500 bytes
+ .../site-packages/fct/msg/_GetSideBrush.py}        |  98 ++++
+ .../site-packages/fct/msg/_GetSideBrush.pyc}       | Bin 0 -> 4907 bytes
+ .../python2.7/site-packages/fct/msg/_GetVer.py}    | 124 +++++
+ .../python2.7/site-packages/fct/msg/_GetVer.pyc}   | Bin 0 -> 5395 bytes
+ .../site-packages/fct/msg/_GetWaterBoxState.py}    | 125 +++++
+ .../site-packages/fct/msg/_GetWaterBoxState.pyc}   | Bin 0 -> 5756 bytes
+ .../site-packages/fct/msg/_GetWheelMotor.py}       | 109 +++++
+ .../site-packages/fct/msg/_GetWheelMotor.pyc}      | Bin 0 -> 5240 bytes
+ .../site-packages/fct/msg/_GunBrushTest.py}        |  98 ++++
+ .../site-packages/fct/msg/_GunBrushTest.pyc}       | Bin 0 -> 4913 bytes
+ .../site-packages/fct/msg/_HardConfig.py}          | 113 +++++
+ .../site-packages/fct/msg/_HardConfig.pyc}         | Bin 0 -> 5374 bytes
+ .../site-packages/fct/msg/_LightCtrlTest.py}       | 104 ++++
+ .../site-packages/fct/msg/_LightCtrlTest.pyc}      | Bin 0 -> 5019 bytes
+ .../python2.7/site-packages/fct/msg/_OnOffTest.py} |  98 ++++
+ .../site-packages/fct/msg/_OnOffTest.pyc}          | Bin 0 -> 4857 bytes
+ .../site-packages/fct/msg/_SideBrushTest.py}       |  98 ++++
+ .../site-packages/fct/msg/_SideBrushTest.pyc}      | Bin 0 -> 4924 bytes
+ .../python2.7/site-packages/fct/msg/_UltraTest.py} | 105 ++++
+ .../site-packages/fct/msg/_UltraTest.pyc}          | Bin 0 -> 5061 bytes
+ .../site-packages/fct/msg/_UltrasonicTest.py}      | 125 +++++
+ .../site-packages/fct/msg/_UltrasonicTest.pyc}     | Bin 0 -> 5734 bytes
+ .../site-packages/fct/msg/_WheelMotorTest.py}      | 109 +++++
+ .../site-packages/fct/msg/_WheelMotorTest.pyc}     | Bin 0 -> 5251 bytes
+ .../python2.7/site-packages/fct/msg/__init__.py}   |  24 +
+ .../python2.7/site-packages/fct/msg/__init__.pyc}  | Bin 0 -> 935 bytes
+ .../python2.7/site-packages/fct/srv/__init__.pyc   | Bin 256 -> 256 bytes
+ .../lib/python2.7/site-packages/fct/srv/_fctsrv.py | 537 +++++++++++++++++----
+ .../python2.7/site-packages/fct/srv/_fctsrv.pyc    | Bin 11358 -> 24982 bytes
+ .../python2.7/site-packages/onOffInfo/__init__.pyc | Bin 226 -> 226 bytes
+ .../site-packages/onOffInfo/msg/_BumpValue.pyc     | Bin 5388 -> 5388 bytes
+ .../site-packages/onOffInfo/msg/_CarpetValue.pyc   | Bin 5343 -> 5343 bytes
+ .../site-packages/onOffInfo/msg/_DirtBoxValue.pyc  | Bin 5347 -> 5347 bytes
+ .../site-packages/onOffInfo/msg/_DownInValue.pyc   | Bin 5644 -> 5644 bytes
+ .../site-packages/onOffInfo/msg/_FallValue.pyc     | Bin 5332 -> 5332 bytes
+ .../onOffInfo/msg/_LackofWaterValue.pyc            | Bin 5425 -> 5425 bytes
+ .../site-packages/onOffInfo/msg/_OnOffInfo.pyc     | Bin 6082 -> 6082 bytes
+ .../onOffInfo/msg/_OnOffSensorValue.pyc            | Bin 5536 -> 5536 bytes
+ .../onOffInfo/msg/_TestOnOffSensor.py}             |  97 ++++
+ .../onOffInfo/msg/_TestOnOffSensor.pyc}            | Bin 0 -> 5030 bytes
+ .../onOffInfo/msg/_WaterBoxStateReport.py}         | 116 +++++
+ .../onOffInfo/msg/_WaterBoxStateReport.pyc}        | Bin 0 -> 5474 bytes
+ .../site-packages/onOffInfo/msg/_WaterBoxValue.pyc | Bin 5494 -> 5494 bytes
+ .../site-packages/onOffInfo/msg/__init__.py        |   2 +
+ .../site-packages/onOffInfo/msg/__init__.pyc       | Bin 512 -> 582 bytes
+ .../python2.7/site-packages/wifimsg/__init__.pyc   | Bin 222 -> 222 bytes
+ .../wifimsg/msg/_PatrolPointStatue.pyc             | Bin 5443 -> 5443 bytes
+ .../site-packages/wifimsg/msg/_PatrolPoints.pyc    | Bin 6061 -> 6061 bytes
+ .../site-packages/wifimsg/msg/__init__.pyc         | Bin 504 -> 504 bytes
+ .../wifimsg/msg/_breakpointstatereport.pyc         | Bin 5407 -> 5407 bytes
+ .../site-packages/wifimsg/msg/_handrelocation.pyc  | Bin 5087 -> 5087 bytes
+ .../site-packages/wifimsg/msg/_wifimsg.pyc         | Bin 5461 -> 5461 bytes
+ .../wifimsg/msg/_wifimsgcameractrl.pyc             | Bin 6808 -> 6808 bytes
+ .../wifimsg/msg/_wifimsgcamerareport.pyc           | Bin 6402 -> 6402 bytes
+ .../site-packages/wifimsg/msg/_wifimsgreport.py    |   3 +
+ .../site-packages/wifimsg/msg/_wifimsgreport.pyc   | Bin 7981 -> 8089 bytes
+ .../{1.2.5 => 1.2.7}/xout/_root/version.txt        |  18 +-
+ 129 files changed, 3588 insertions(+), 105 deletions(-)

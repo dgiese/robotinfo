@@ -1,0 +1,58 @@
+Firmware diff for DreameBot L10s Ultra (dreame.vacuum.r2228o)
+Old version: 4.3.6_3018 New version: 4.3.6_3030
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_ai_area_recognition.so | Bin 621440 -> 621440 bytes
+ .../xout/_root/ava/lib/node_arges.so               | Bin 5934256 -> 5971456 bytes
+ .../xout/_root/ava/lib/node_bsp.so                 | Bin 49240 -> 49240 bytes
+ .../xout/_root/ava/lib/node_camera_ai.so           | Bin 723256 -> 727360 bytes
+ .../xout/_root/ava/lib/node_camera_laser.so        | Bin 180520 -> 176680 bytes
+ .../xout/_root/ava/lib/node_camera_streamer.so     | Bin 398600 -> 398856 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 73352 -> 73352 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 44824 -> 44824 bytes
+ .../xout/_root/ava/lib/node_health_arges.so        | Bin 376928 -> 376928 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 124264 -> 124264 bytes
+ .../_root/ava/lib/node_laser_point_extractor.so    | Bin 307944 -> 307992 bytes
+ .../xout/_root/ava/lib/node_laser_transfer.so      | Bin 2549664 -> 2569000 bytes
+ .../xout/_root/ava/lib/node_lasercamera_calibr.so  | Bin 275632 -> 275632 bytes
+ .../xout/_root/ava/lib/node_laserplane_calibr.so   | Bin 299584 -> 299584 bytes
+ .../xout/_root/ava/lib/node_lds.so                 | Bin 472736 -> 472736 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 115576 -> 115576 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 2354448 -> 2354448 bytes
+ .../xout/_root/ava/lib/node_linelaser_calibr.so    | Bin 124656 -> 128112 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 140376 -> 140376 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 1604896 -> 1604896 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 123784 -> 123784 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 1458016 -> 1462104 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 82088 -> 82088 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 372280 -> 372280 bytes
+ .../xout/_root/ava/lib/node_snap.so                | Bin 263472 -> 263472 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 177488 -> 177488 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 127808 -> 127808 bytes
+ .../xout/_root/etc/os-release                      |   4 ++--
+ .../xout/_root/misc/data.tar.bz2                   | Bin 567 -> 572 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 190848 -> 190848 bytes
+ .../xout/_root/usr/bin/avacmd                      | Bin 11696 -> 13128 bytes
+ .../xout/_root/usr/bin/dreame_bt                   | Bin 206696 -> 206696 bytes
+ .../xout/_root/usr/bin/dreameiot                   | Bin 53096 -> 53096 bytes
+ .../xout/_root/usr/bin/miio_bt                     | Bin 462016 -> 670024 bytes
+ .../xout/_root/usr/bin/packlog.sh                  |  23 ++++++++++++++-------
+ .../xout/_root/usr/lib/libAWIspApi.so              | Bin 6528 -> 7000 bytes
+ .../xout/_root/usr/lib/libiniparser.so             | Bin 14912 -> 14912 bytes
+ .../xout/_root/usr/lib/libisp.so                   | Bin 600064 -> 610576 bytes
+ .../xout/_root/usr/lib/libisp_dev.so               | Bin 38840 -> 39760 bytes
+ .../xout/_root/usr/lib/libisp_ini.so               | Bin 1562040 -> 1794512 bytes
+ .../xout/_root/usr/lib/libisp_math.so              | Bin 14744 -> 14744 bytes
+ .../usr/lib/modules/4.9.191/external/8723ds.ko     | Bin 3132944 -> 3132944 bytes
+ .../lib/modules/4.9.191/external/ov8856_mipi.ko    | Bin 20032 -> 20032 bytes
+ .../lib/modules/4.9.191/external/sc031gs_mipi.ko   | Bin 23552 -> 23576 bytes
+ .../lib/modules/4.9.191/external/sc035gs_mipi.ko   | Bin 23680 -> 25008 bytes
+ .../_root/usr/lib/tree_lib/libarges_route_nodes.so | Bin 12199488 -> 12294856 bytes
+ .../usr/lib/tree_lib/libarges_tactics_tree.so      | Bin 2015752 -> 2011848 bytes
+ .../xout/_root/usr/lib/tree_lib/libarges_tree.so   | Bin 5550160 -> 5656816 bytes
+ .../xout/_root/version_record                      |  22 ++++++++++----------
+ .../{4.3.6_3018 => 4.3.6_3030}/xout/kernel.img     | Bin 10835968 -> 10835968 bytes
+ .../{4.3.6_3018 => 4.3.6_3030}/xout/toc1.fex       | Bin 1245184 -> 1245184 bytes
+ 52 files changed, 29 insertions(+), 22 deletions(-)

@@ -1,0 +1,189 @@
+Firmware diff for Dreame Robot Vacuum-Mop F9 (dreame.vacuum.p2008)
+Old version: 3.5.8_1039 New version: 3.5.8_1050
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../3.5.8_1050/xout/_root/audio/TEST/31.ogg}       | Bin 0 -> 26136 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/32.ogg}       | Bin 0 -> 27992 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/33.ogg}       | Bin 0 -> 29683 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/34.ogg}       | Bin 0 -> 28688 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/35.ogg}       | Bin 0 -> 19360 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/36.ogg}       | Bin 0 -> 19668 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/37.ogg}       | Bin 0 -> 8606 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/38.ogg}       | Bin 0 -> 8439 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/39.ogg}       | Bin 0 -> 11554 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/NUM_0.ogg}    | Bin 0 -> 6595 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/NUM_1.ogg}    | Bin 0 -> 6116 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/NUM_2.ogg}    | Bin 0 -> 6456 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/NUM_3.ogg}    | Bin 0 -> 6617 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/NUM_4.ogg}    | Bin 0 -> 6958 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/NUM_5.ogg}    | Bin 0 -> 6147 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/NUM_6.ogg}    | Bin 0 -> 6958 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/NUM_7.ogg}    | Bin 0 -> 6610 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/NUM_8.ogg}    | Bin 0 -> 6677 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/NUM_9.ogg}    | Bin 0 -> 7308 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/NUM_A.ogg}    | Bin 0 -> 6026 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/NUM_B.ogg}    | Bin 0 -> 6118 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/NUM_C.ogg}    | Bin 0 -> 6850 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/NUM_D.ogg}    | Bin 0 -> 6016 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/NUM_E.ogg}    | Bin 0 -> 5867 bytes
+ .../3.5.8_1050/xout/_root/audio/TEST/NUM_F.ogg}    | Bin 0 -> 6774 bytes
+ .../xout/_root/audio/TEST/WIFIMEDIA.ogg}           | Bin 0 -> 20720 bytes
+ .../xout/_root/ava/conf/ota.conf                   | 227 +++++++++++----------
+ .../xout/_root/ava/conf/p2008.conf                 |   1 +
+ .../xout/_root/ava/lib/node_calibr.so              | Bin 214152 -> 214144 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 242192 -> 62464 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 28412 -> 30908 bytes
+ .../xout/_root/ava/lib/node_health_tartarus.so     | Bin 94132 -> 152972 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 91208 -> 92808 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 26732 -> 30884 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 385740 -> 446920 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 70856 -> 70892 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 664012 -> 749396 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 64108 -> 65088 bytes
+ .../xout/_root/ava/lib/node_signal_tab.so          | Bin 136016 -> 136216 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 105052 -> 107228 bytes
+ .../xout/_root/ava/lib/node_tartarus.so            | Bin 627740 -> 721288 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 94192 -> 94732 bytes
+ .../xout/_root/ava/lib/node_tracecheck.so          | Bin 44320 -> 44320 bytes
+ .../xout/_root/ava/lib/node_vision.so              | Bin 2040972 -> 2017460 bytes
+ .../xout/_root/ava/script/camera_test.sh           |  15 +-
+ .../xout/_root/ava/script/enchip_test.sh}          |  20 ++
+ .../xout/_root/ava/script/fds_hook.sh              |  59 ++++--
+ .../xout/_root/ava/script/gdb_attach_ava.sh}       |   6 +
+ .../3.5.8_1050/xout/_root/ava/script/gdb_cmd.txt}  |   6 +
+ .../xout/_root/ava/script/get_size.sh              |  10 +
+ .../xout/_root/ava/script/led_test.sh              |  28 ++-
+ .../xout/_root/ava/script/media_service.sh         |  16 +-
+ .../xout/_root/ava/script/mediad_script.sh         |  15 +-
+ .../xout/_root/ava/script/msg_cvt.sh               | 139 +++++++++++--
+ .../xout/_root/ava/script/ota_arm_update.sh        |  82 ++++----
+ .../xout/_root/ava/script/ota_dw_fw.sh             |  49 ++++-
+ .../xout/_root/ava/script/ota_link_lib.sh          |  18 +-
+ .../xout/_root/ava/script/ota_mcu_update.sh        |   2 -
+ .../xout/_root/ava/script/ota_unpack.sh            | 202 +++++++++---------
+ .../xout/_root/ava/script/ota_watch_mcu_update.sh  |  21 +-
+ .../xout/_root/ava/script/rotpk_test.sh}           |  25 +++
+ .../xout/_root/ava/script/sys_set_private.sh       |   3 +-
+ .../3.5.8_1050/xout/_root/ava/script/tof_test.sh}  |  11 +
+ .../ava/script/wifi_light_test.sh => dev/null}     |  13 --
+ .../xout/_root/ava/script/wifi_test.sh             |   2 +-
+ .../{3.5.8_1039 => 3.5.8_1050}/xout/_root/bin/adbd | Bin 105680 -> 101552 bytes
+ .../xout/_root/etc/banner                          |   3 +
+ .../xout/_root/etc/crontabs/root                   |   5 +-
+ .../xout/_root/etc/factory_reset.conf              |   5 +-
+ .../xout/_root/etc/init.d/factory_ap.sh            |  26 ++-
+ .../xout/_root/etc/os-release                      |   6 +-
+ .../xout/_root/etc/profile                         |   5 +-
+ .../xout/_root/etc/rc.d/factory_reset_daemon.sh    |   9 +
+ .../xout/_root/etc/rc.d/iot_sdk_monitor.sh}        |  43 ++++
+ .../xout/_root/etc/rc.d/miio_monitor.sh            |   5 +-
+ .../xout/_root/etc/rc.d/monitor.sh                 |  45 ++--
+ .../xout/_root/etc/rc.d/monitor_cpu.sh             |   4 +-
+ .../xout/_root/etc/rc.d/msg_trans.sh               |  15 +-
+ .../xout/_root/etc/rc.d/msg_trans_monitor.sh       | 210 +++++++++++++++++--
+ .../xout/_root/etc/rc.d/wifi_manager.sh            |  24 ++-
+ .../xout/_root/etc/rc.d/wifi_monitor.sh            |  12 +-
+ .../xout/_root/etc/rc.sysinit                      |   1 -
+ .../xout/_root/etc/wifi/hostapd.conf               |   2 +-
+ .../xout/_root/misc/data.tar.bz2                   | Bin 722 -> 607 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/adbd_auth_service           | Bin 4340 -> 4164 bytes
+ .../3.5.8_1050/xout/_root/usr/bin/autossh.sh}      |  40 ++++
+ .../xout/_root/usr/bin/ava                         | Bin 538988 -> 135096 bytes
+ .../xout/_root/usr/bin/ava_crash_dog.sh}           |  61 ++++++
+ .../xout/_root/usr/bin/avacmd                      | Bin 6632 -> 5884 bytes
+ .../3.5.8_1050/xout/_root/usr/bin/boardconfig}     |   3 +
+ .../xout/_root/usr/bin/change_internal_user.sh}    |  47 +++++
+ .../xout/_root/usr/bin/check_silent_upgrade.sh     | 173 +++++++++++-----
+ .../xout/_root/usr/bin/config                      |  24 ++-
+ .../xout/_root/usr/bin/curl_download.sh}           |  17 ++
+ .../3.5.8_1050/xout/_root/usr/bin/curl_upload.sh}  |  15 ++
+ .../xout/_root/usr/bin/do_start_ap.sh              |  34 ++-
+ .../xout/_root/usr/bin/exec_proc                   | Bin 14252 -> 8196 bytes
+ .../xout/_root/usr/bin/factory_reset.sh            |  24 ++-
+ .../xout/_root/usr/bin/factory_reset_daemon        | Bin 7912 -> 7912 bytes
+ .../xout/_root/usr/bin/flashtest                   | Bin 6592 -> 7496 bytes
+ .../xout/_root/usr/bin/get_ava_status.sh}          |  13 ++
+ .../3.5.8_1050/xout/_root/usr/bin/getssid}         |  29 +++
+ .../3.5.8_1050/xout/_root/usr/bin/iot_sdk.sh}      | 141 +++++++++++++
+ .../3.5.8_1050/xout/_root/usr/bin/log.sh}          |  11 +
+ .../xout/_root/usr/bin/mediad                      | Bin 20392 -> 20972 bytes
+ .../_root/usr/bin/miio_client_helper_nomqtt.sh     |  28 ++-
+ .../3.5.8_1050/xout/_root/usr/bin/miio_sdk.sh}     |  71 +++++++
+ .../xout/_root/usr/bin/msg_trans                   | Bin 8440 -> 20180 bytes
+ .../3.5.8_1050/xout/_root/usr/bin/network_hook.sh} |  11 +
+ .../3.5.8_1050/xout/_root/usr/bin/open_getty.sh}   |   5 +
+ .../xout/_root/usr/bin/packlog.sh                  |   4 +-
+ .../xout/_root/usr/bin/play_wifi_tip_media.sh}     |  31 +++
+ .../3.5.8_1050/xout/_root/usr/bin/procmem}         | Bin 0 -> 12984 bytes
+ .../3.5.8_1050/xout/_root/usr/bin/procrank}        | Bin 0 -> 14144 bytes
+ .../xout/_root/usr/bin/record_cpu_max_usage.sh}    |  18 ++
+ .../3.5.8_1050/xout/_root/usr/bin/record_mcu_log}  | Bin 0 -> 22664 bytes
+ .../xout/_root/usr/bin/record_mcu_log.conf}        |  12 ++
+ .../xout/_root/usr/bin/report_system_usage.sh}     |  53 +++++
+ .../xout/_root/usr/bin/restart_ava.sh              |   2 +-
+ .../3.5.8_1050/xout/_root/usr/bin/rossetupenv.sh}  |  15 ++
+ .../xout/_root/usr/bin/start_ap_hook.sh            |  12 +-
+ .../xout/_root/usr/bin/sysmon.sh                   |  25 ++-
+ .../xout/_root/usr/bin/wifi_cli                    | Bin 80012 -> 80012 bytes
+ .../xout/_root/usr/bin/wifi_manager                | Bin 221104 -> 221104 bytes
+ .../xout/_root/usr/bin/wifi_setup.sh               |  60 ++++--
+ .../xout/_root/usr/bin/wifi_state.sh               |   7 +-
+ .../3.5.8_1050/xout/_root/usr/bin/zclient}         | Bin 0 -> 9880 bytes
+ .../usr/lib/ckport/db/libao.ckport => dev/null}    |  33 ---
+ .../usr/lib/engines-1.1/afalg.so => dev/null}      | Bin 12156 -> 0 bytes
+ .../_root/usr/lib/engines-1.1/capi.so => dev/null} | Bin 2872 -> 0 bytes
+ .../usr/lib/engines-1.1/padlock.so => dev/null}    | Bin 2872 -> 0 bytes
+ .../xout/_root/usr/lib/libRakNetDLL.so             | Bin 1036828 -> 1795040 bytes
+ .../xout/_root/usr/lib/libawadbauth.so             | Bin 11176 -> 9876 bytes
+ .../xout/_root/usr/lib/libbehaviortree_cpp.so      | Bin 1641992 -> 1659764 bytes
+ .../xout/_root/usr/lib/libmessenger.so             | Bin 34824 -> 44788 bytes
+ .../usr/lib/libnl/cli/cls/basic.a => dev/null}     | Bin 3450 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/basic.la => dev/null}    |  41 ----
+ .../usr/lib/libnl/cli/cls/basic.so => dev/null}    | Bin 4536 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/cgroup.a => dev/null}    | Bin 2900 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/cgroup.la => dev/null}   |  41 ----
+ .../usr/lib/libnl/cli/cls/cgroup.so => dev/null}   | Bin 3896 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/bfifo.a => dev/null}   | Bin 3092 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/bfifo.la => dev/null}  |  41 ----
+ .../usr/lib/libnl/cli/qdisc/bfifo.so => dev/null}  | Bin 4068 -> 0 bytes
+ .../lib/libnl/cli/qdisc/blackhole.a => dev/null}   | Bin 2700 -> 0 bytes
+ .../lib/libnl/cli/qdisc/blackhole.la => dev/null}  |  41 ----
+ .../lib/libnl/cli/qdisc/blackhole.so => dev/null}  | Bin 3580 -> 0 bytes
+ .../lib/libnl/cli/qdisc/fq_codel.a => dev/null}    | Bin 3722 -> 0 bytes
+ .../lib/libnl/cli/qdisc/fq_codel.la => dev/null}   |  41 ----
+ .../lib/libnl/cli/qdisc/fq_codel.so => dev/null}   | Bin 4768 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/hfsc.a => dev/null}    | Bin 5410 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/hfsc.la => dev/null}   |  41 ----
+ .../usr/lib/libnl/cli/qdisc/hfsc.so => dev/null}   | Bin 6300 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/htb.a => dev/null}     | Bin 5656 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/htb.la => dev/null}    |  41 ----
+ .../usr/lib/libnl/cli/qdisc/htb.so => dev/null}    | Bin 6464 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/ingress.a => dev/null} | Bin 2660 -> 0 bytes
+ .../lib/libnl/cli/qdisc/ingress.la => dev/null}    |  41 ----
+ .../lib/libnl/cli/qdisc/ingress.so => dev/null}    | Bin 3560 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/pfifo.a => dev/null}   | Bin 2952 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/pfifo.la => dev/null}  |  41 ----
+ .../usr/lib/libnl/cli/qdisc/pfifo.so => dev/null}  | Bin 3928 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/plug.a => dev/null}    | Bin 4466 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/plug.la => dev/null}   |  41 ----
+ .../usr/lib/libnl/cli/qdisc/plug.so => dev/null}   | Bin 5772 -> 0 bytes
+ .../xout/_root/usr/lib/libopencv_core.so.4.2.0     | Bin 2659668 -> 2604680 bytes
+ .../_root/usr/lib/libopencv_imgcodecs.so.4.2.0     | Bin 1575860 -> 279036 bytes
+ .../xout/_root/usr/lib/libopencv_imgproc.so.4.2.0  | Bin 2696840 -> 2675336 bytes
+ .../usr/lib/libprotobuf-lite.so.17 => dev/null}    |   0
+ .../lib/libprotobuf-lite.so.17.0.0 => dev/null}    | Bin 287532 -> 0 bytes
+ .../xout/_root/usr/lib/libprotobuf-lite.so.3.6.1   | Bin 299780 -> 299780 bytes
+ .../_root/usr/lib/libprotobuf.so.17 => dev/null}   |   0
+ .../usr/lib/libprotobuf.so.17.0.0 => dev/null}     | Bin 2094688 -> 0 bytes
+ .../xout/_root/usr/lib/libprotobuf.so.3.6.1        | Bin 2213524 -> 2213524 bytes
+ .../xout/_root/usr/lib/libprotobuf_msg.so          | Bin 102272 -> 102272 bytes
+ .../xout/_root/usr/lib/libprotoc.so.17.0.0         | Bin 2030676 -> 2030676 bytes
+ .../xout/_root/usr/lib/libprotoc.so.3.6.1          | Bin 2116192 -> 2116192 bytes
+ .../usr/lib/tree_lib/libtartarus_route_nodes.so    | Bin 3229696 -> 3800432 bytes
+ .../usr/lib/tree_lib/libtartarus_tactics_tree.so   | Bin 726232 -> 919848 bytes
+ .../_root/usr/lib/tree_lib/libtartarus_tree.so     | Bin 12902240 -> 6156212 bytes
+ .../xout/_root/version_record                      |  14 +-
+ .../{3.5.8_1039 => 3.5.8_1050}/xout/mcu.bin        | Bin 119988 -> 123348 bytes
+ 183 files changed, 1862 insertions(+), 973 deletions(-)

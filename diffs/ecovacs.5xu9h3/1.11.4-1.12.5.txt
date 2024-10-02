@@ -1,0 +1,55 @@
+Firmware diff for GOAT G1 (ecovacs.5xu9h3)
+Old version: 1.11.4 New version: 1.12.5
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/conf/medusa/deebot_3588.conf    |   8 +-
+ .../xout/_root/etc/conf/medusa/start_ota.sh        |  42 +++++++--
+ .../{1.11.4 => 1.12.5}/xout/_root/etc/fw.manifest  |   6 +-
+ .../xout/_root/etc/rc.d/bt-monitor.sh              | 103 ++++++++++++++++-----
+ .../xout/_root/etc/rc.d/channel.sh                 |   2 +-
+ .../xout/_root/etc/rc.d/map_tables.sh              |   3 +-
+ .../xout/_root/etc/rc.d/system.sh                  |  18 ++--
+ .../xout/_root/etc/wifi/netmon_hook.sh             |   7 ++
+ .../xout/_root/media/music/ZH/30.ogg               | Bin 23475 -> 22465 bytes
+ .../xout/_root/media/music/ZH/77.ogg               | Bin 23015 -> 21827 bytes
+ .../{1.11.4 => 1.12.5}/xout/_root/opt/data.tar.bz2 | Bin 4224 -> 4221 bytes
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 3506352 -> 3502520 bytes
+ .../xout/_root/usr/bin/bt_hook.sh                  |  15 ++-
+ .../xout/_root/usr/bin/btgatt-server               | Bin 401616 -> 401616 bytes
+ .../1.12.5/xout/_root/usr/bin/get_lvds2.sh}        |  19 ++++
+ .../xout/_root/usr/bin/hw_monitor                  | Bin 35304 -> 27032 bytes
+ .../xout/_root/usr/bin/net_manager                 | Bin 208568 -> 234736 bytes
+ .../xout/_root/usr/bin/radio_hook.sh               |   5 +
+ .../{1.11.4 => 1.12.5}/xout/_root/usr/bin/scan_ap  | Bin 76840 -> 76840 bytes
+ .../xout/_root/usr/bin/wifi_service                | Bin 117712 -> 117712 bytes
+ .../_root/usr/lib/WHmethods/libWHMapMethods.so     | Bin 227944 -> 223856 bytes
+ .../xout/_root/usr/lib/WHmethods/libWHmethods.so   | Bin 449424 -> 445344 bytes
+ .../_root/usr/lib/eros_node_hardware_platform.pc   |   4 +-
+ .../xout/_root/usr/lib/eros_node_ofei_tof.pc       |   4 +-
+ .../xout/_root/usr/lib/libDeleteOutRange.so        | Bin 185472 -> 202872 bytes
+ .../xout/_root/usr/lib/libai_tof_grassseg.so       | Bin 8787688 -> 8787960 bytes
+ .../xout/_root/usr/lib/libai_tof_obstacle.so       | Bin 8032328 -> 8046856 bytes
+ .../xout/_root/usr/lib/libeco_navi.so              | Bin 2555000 -> 45181736 bytes
+ .../xout/_root/usr/lib/libeco_vio.so               | Bin 2254328 -> 2266624 bytes
+ .../xout/_root/usr/lib/libeco_vslam.so             | Bin 4200560 -> 4198096 bytes
+ .../xout/_root/usr/lib/libjob_schedule_midware.so  | Bin 3122336 -> 3142832 bytes
+ .../_root/usr/lib/libjob_schedule_ros_convert.so   | Bin 2052408 -> 2046968 bytes
+ .../xout/_root/usr/lib/libmap_management_PX30.so   | Bin 290592 -> 287176 bytes
+ .../xout/_root/usr/lib/libmower_interface.so       | Bin 5043079 -> 5043287 bytes
+ .../xout/_root/usr/lib/libroswapper-c.so           | Bin 117688 -> 121848 bytes
+ .../xout/_root/usr/lib/libtaskmanager.so           | Bin 313504 -> 313496 bytes
+ .../xout/_root/usr/lib/medusa/plug_kvs_webrtc.so   | Bin 262000 -> 257904 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_ros_node.so  | Bin 170784 -> 170784 bytes
+ .../_root/usr/lib/node/liberos_node_bigdata.so     | Bin 1147232 -> 1256352 bytes
+ .../usr/lib/node/liberos_node_bluetoothhandler.so  | Bin 1653168 -> 1653224 bytes
+ .../xout/_root/usr/lib/node/liberos_node_clean.so  | Bin 878536 -> 884064 bytes
+ .../usr/lib/node/liberos_node_hardware_platform.so | Bin 2119576 -> 2128816 bytes
+ .../usr/lib/node/liberos_node_job_schedule.so      | Bin 537048 -> 540560 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    | Bin 1977408 -> 2010328 bytes
+ .../_root/usr/lib/node/liberos_node_ofei_tof.so    | Bin 602720 -> 598896 bytes
+ .../_root/usr/lib/node/liberos_node_postTunnel.so  | Bin 843416 -> 847544 bytes
+ .../xout/_root/usr/lib/node/liberos_node_return.so | Bin 499888 -> 500144 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     | Bin 652176 -> 672728 bytes
+ .../xout/_root/usr/lib/node/liberos_node_vslam.so  | Bin 1003512 -> 1025768 bytes
+ 49 files changed, 187 insertions(+), 49 deletions(-)

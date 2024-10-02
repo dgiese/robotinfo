@@ -1,0 +1,278 @@
+Firmware diff for Roborock T4 (roborock.vacuum.t4)
+Old version: 3.5.3_0298 New version: 3.5.7_0314
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/boot/zImage                         | Bin 3885800 -> 3885800 bytes
+ .../xout/_root/etc/OS_VERSION                      |   8 ++++----
+ .../xout/_root/etc/os-release                      |   2 +-
+ .../xout/_root/lib/modules/3.4.39/8189es.ko        | Bin 1666142 -> 1666142 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 3370145 -> 3370113 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 671247 -> 671239 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../xout/_root/opt/rockrobo/cleaner/bin/AppProxy   | Bin 757104 -> 773488 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboController  | Bin 224076 -> 224076 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerM | Bin 298324 -> 302420 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerR | Bin 224076 -> 224076 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_chassis.so   | Bin 67528 -> 67528 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 1978564 -> 1978564 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrutils.so   | Bin 5552 -> 5552 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ .../_root/opt/rockrobo/firmware/img/McuVersion.txt |   8 +++-----
+ ...M32.G1_M4.0.0_RELEASE_20191205-163857_FULL.bin} | Bin 215040 -> 215040 bytes
+ .../rockrobo/firmware/uart_test-4.0.0-20191205}    | Bin 510976 -> 510976 bytes
+ .../xout/_root/opt/rockrobo/miio/miio_client       | Bin 111936 -> 115480 bytes
+ .../Facsounds/en/UART_TEST_0.wav => dev/null}      | Bin 18604 -> 0 bytes
+ .../Facsounds/en/UART_TEST_1.wav => dev/null}      | Bin 16684 -> 0 bytes
+ .../Facsounds/en/UART_TEST_10.wav => dev/null}     | Bin 16684 -> 0 bytes
+ .../Facsounds/en/UART_TEST_100.wav => dev/null}    | Bin 26284 -> 0 bytes
+ .../Facsounds/en/UART_TEST_1000.wav => dev/null}   | Bin 26924 -> 0 bytes
+ .../Facsounds/en/UART_TEST_11.wav => dev/null}     | Bin 19884 -> 0 bytes
+ .../Facsounds/en/UART_TEST_12.wav => dev/null}     | Bin 20524 -> 0 bytes
+ .../Facsounds/en/UART_TEST_13.wav => dev/null}     | Bin 30124 -> 0 bytes
+ .../Facsounds/en/UART_TEST_14.wav => dev/null}     | Bin 25644 -> 0 bytes
+ .../Facsounds/en/UART_TEST_15.wav => dev/null}     | Bin 23724 -> 0 bytes
+ .../Facsounds/en/UART_TEST_16.wav => dev/null}     | Bin 28204 -> 0 bytes
+ .../Facsounds/en/UART_TEST_17.wav => dev/null}     | Bin 30764 -> 0 bytes
+ .../Facsounds/en/UART_TEST_18.wav => dev/null}     | Bin 23724 -> 0 bytes
+ .../Facsounds/en/UART_TEST_19.wav => dev/null}     | Bin 26284 -> 0 bytes
+ .../Facsounds/en/UART_TEST_1KHZ.wav => dev/null}   | Bin 176444 -> 0 bytes
+ .../Facsounds/en/UART_TEST_2.wav => dev/null}      | Bin 16044 -> 0 bytes
+ .../Facsounds/en/UART_TEST_20.wav => dev/null}     | Bin 21804 -> 0 bytes
+ .../Facsounds/en/UART_TEST_3.wav => dev/null}      | Bin 15404 -> 0 bytes
+ .../Facsounds/en/UART_TEST_30.wav => dev/null}     | Bin 21804 -> 0 bytes
+ .../Facsounds/en/UART_TEST_4.wav => dev/null}      | Bin 16684 -> 0 bytes
+ .../Facsounds/en/UART_TEST_40.wav => dev/null}     | Bin 23084 -> 0 bytes
+ .../Facsounds/en/UART_TEST_5.wav => dev/null}      | Bin 25644 -> 0 bytes
+ .../Facsounds/en/UART_TEST_50.wav => dev/null}     | Bin 18604 -> 0 bytes
+ .../Facsounds/en/UART_TEST_6.wav => dev/null}      | Bin 20524 -> 0 bytes
+ .../Facsounds/en/UART_TEST_60.wav => dev/null}     | Bin 23084 -> 0 bytes
+ .../Facsounds/en/UART_TEST_7.wav => dev/null}      | Bin 20524 -> 0 bytes
+ .../Facsounds/en/UART_TEST_70.wav => dev/null}     | Bin 25004 -> 0 bytes
+ .../Facsounds/en/UART_TEST_8.wav => dev/null}      | Bin 14764 -> 0 bytes
+ .../Facsounds/en/UART_TEST_80.wav => dev/null}     | Bin 16044 -> 0 bytes
+ .../Facsounds/en/UART_TEST_9.wav => dev/null}      | Bin 17964 -> 0 bytes
+ .../Facsounds/en/UART_TEST_90.wav => dev/null}     | Bin 21164 -> 0 bytes
+ .../Facsounds/en/UART_TEST_A.wav => dev/null}      | Bin 16044 -> 0 bytes
+ .../en/UART_TEST_ACTIVE_TIME.wav => dev/null}      | Bin 39084 -> 0 bytes
+ .../en/UART_TEST_AUTO_BIT_MODE.wav => dev/null}    | Bin 41644 -> 0 bytes
+ .../Facsounds/en/UART_TEST_B.wav => dev/null}      | Bin 16684 -> 0 bytes
+ .../en/UART_TEST_BATTERY.wav => dev/null}          | Bin 19884 -> 0 bytes
+ .../en/UART_TEST_BIT_OR_NOISE.wav => dev/null}     | Bin 236844 -> 0 bytes
+ .../Facsounds/en/UART_TEST_BRUSH.wav => dev/null}  | Bin 18604 -> 0 bytes
+ .../en/UART_TEST_BRUSH_OC.wav => dev/null}         | Bin 39084 -> 0 bytes
+ .../en/UART_TEST_BUMPER_L.wav => dev/null}         | Bin 30764 -> 0 bytes
+ .../en/UART_TEST_BUMPER_R.wav => dev/null}         | Bin 30764 -> 0 bytes
+ .../Facsounds/en/UART_TEST_C.wav => dev/null}      | Bin 16044 -> 0 bytes
+ .../Facsounds/en/UART_TEST_CAM.wav => dev/null}    | Bin 13484 -> 0 bytes
+ .../en/UART_TEST_CHARGING.wav => dev/null}         | Bin 26924 -> 0 bytes
+ .../en/UART_TEST_CHARGING_CURRENT.wav => dev/null} | Bin 33964 -> 0 bytes
+ .../en/UART_TEST_CLEAN_TIME.wav => dev/null}       | Bin 30124 -> 0 bytes
+ .../en/UART_TEST_CLIFFS_DROPS.wav => dev/null}     | Bin 32684 -> 0 bytes
+ .../en/UART_TEST_CLIFF_BL.wav => dev/null}         | Bin 30124 -> 0 bytes
+ .../en/UART_TEST_CLIFF_BR.wav => dev/null}         | Bin 34604 -> 0 bytes
+ .../en/UART_TEST_CLIFF_FL.wav => dev/null}         | Bin 32044 -> 0 bytes
+ .../en/UART_TEST_CLIFF_FR.wav => dev/null}         | Bin 34604 -> 0 bytes
+ .../en/UART_TEST_CLIFF_L.wav => dev/null}          | Bin 23084 -> 0 bytes
+ .../en/UART_TEST_CLIFF_R.wav => dev/null}          | Bin 24364 -> 0 bytes
+ .../en/UART_TEST_COMPASS.wav => dev/null}          | Bin 19884 -> 0 bytes
+ .../en/UART_TEST_COMPASS_L.wav => dev/null}        | Bin 30764 -> 0 bytes
+ .../en/UART_TEST_COMPASS_R.wav => dev/null}        | Bin 31404 -> 0 bytes
+ .../Facsounds/en/UART_TEST_D.wav => dev/null}      | Bin 10284 -> 0 bytes
+ .../Facsounds/en/UART_TEST_DBXON.wav => dev/null}  | Bin 30124 -> 0 bytes
+ .../Facsounds/en/UART_TEST_DROP_L.wav => dev/null} | Bin 29484 -> 0 bytes
+ .../Facsounds/en/UART_TEST_DROP_R.wav => dev/null} | Bin 27564 -> 0 bytes
+ .../Facsounds/en/UART_TEST_E.wav => dev/null}      | Bin 12204 -> 0 bytes
+ .../Facsounds/en/UART_TEST_F.wav => dev/null}      | Bin 14124 -> 0 bytes
+ .../Facsounds/en/UART_TEST_FAIL.wav => dev/null}   | Bin 17964 -> 0 bytes
+ .../Facsounds/en/UART_TEST_FAN.wav => dev/null}    | Bin 18604 -> 0 bytes
+ .../Facsounds/en/UART_TEST_G.wav => dev/null}      | Bin 17964 -> 0 bytes
+ .../Facsounds/en/UART_TEST_H.wav => dev/null}      | Bin 11564 -> 0 bytes
+ .../Facsounds/en/UART_TEST_HOUR.wav => dev/null}   | Bin 14124 -> 0 bytes
+ .../Facsounds/en/UART_TEST_HOURS.wav => dev/null}  | Bin 20524 -> 0 bytes
+ .../Facsounds/en/UART_TEST_I.wav => dev/null}      | Bin 12844 -> 0 bytes
+ .../Facsounds/en/UART_TEST_IMU.wav => dev/null}    | Bin 32684 -> 0 bytes
+ .../en/UART_TEST_IR_FRONT.wav => dev/null}         | Bin 28204 -> 0 bytes
+ .../en/UART_TEST_IR_FRONT_L.wav => dev/null}       | Bin 37804 -> 0 bytes
+ .../en/UART_TEST_IR_FRONT_R.wav => dev/null}       | Bin 36524 -> 0 bytes
+ .../en/UART_TEST_IR_SIDE_R.wav => dev/null}        | Bin 32044 -> 0 bytes
+ .../Facsounds/en/UART_TEST_J.wav => dev/null}      | Bin 16684 -> 0 bytes
+ .../Facsounds/en/UART_TEST_K.wav => dev/null}      | Bin 12844 -> 0 bytes
+ .../Facsounds/en/UART_TEST_L.wav => dev/null}      | Bin 11564 -> 0 bytes
+ .../Facsounds/en/UART_TEST_LDS.wav => dev/null}    | Bin 19884 -> 0 bytes
+ .../en/UART_TEST_LDS_BUMPER.wav => dev/null}       | Bin 28844 -> 0 bytes
+ .../en/UART_TEST_LDS_DATA_TIMEOUT.wav => dev/null} | Bin 38444 -> 0 bytes
+ .../UART_TEST_LDS_NO_VALID_POINT.wav => dev/null}  | Bin 30124 -> 0 bytes
+ .../en/UART_TEST_LDS_SPEED_CONTRL.wav => dev/null} | Bin 35244 -> 0 bytes
+ .../Facsounds/en/UART_TEST_LED.wav => dev/null}    | Bin 26924 -> 0 bytes
+ .../en/UART_TEST_LOWPOWER.wav => dev/null}         | Bin 21804 -> 0 bytes
+ .../Facsounds/en/UART_TEST_M.wav => dev/null}      | Bin 14124 -> 0 bytes
+ .../en/UART_TEST_MAC_ADDR.wav => dev/null}         | Bin 29484 -> 0 bytes
+ .../en/UART_TEST_MANUAL_BIT_MODE.wav => dev/null}  | Bin 43564 -> 0 bytes
+ .../Facsounds/en/UART_TEST_MINUTE.wav => dev/null} | Bin 16044 -> 0 bytes
+ .../en/UART_TEST_MINUTES.wav => dev/null}          | Bin 19244 -> 0 bytes
+ .../Facsounds/en/UART_TEST_N.wav => dev/null}      | Bin 14764 -> 0 bytes
+ .../Facsounds/en/UART_TEST_NOISE.wav => dev/null}  | Bin 34604 -> 0 bytes
+ .../en/UART_TEST_NOISE_MT.wav => dev/null}         | Bin 172204 -> 0 bytes
+ .../en/UART_TEST_NOISE_START.wav => dev/null}      | Bin 43564 -> 0 bytes
+ .../en/UART_TEST_NOT_CONFIGURED.wav => dev/null}   | Bin 38444 -> 0 bytes
+ .../Facsounds/en/UART_TEST_O.wav => dev/null}      | Bin 13484 -> 0 bytes
+ .../Facsounds/en/UART_TEST_OS_VER.wav => dev/null} | Bin 35244 -> 0 bytes
+ .../Facsounds/en/UART_TEST_P.wav => dev/null}      | Bin 14764 -> 0 bytes
+ .../Facsounds/en/UART_TEST_POINT.wav => dev/null}  | Bin 19244 -> 0 bytes
+ .../Facsounds/en/UART_TEST_POWER.wav => dev/null}  | Bin 17964 -> 0 bytes
+ .../en/UART_TEST_POWER_OFF.wav => dev/null}        | Bin 29484 -> 0 bytes
+ .../en/UART_TEST_PRE_STATION_FAIL.wav => dev/null} | Bin 58924 -> 0 bytes
+ .../Facsounds/en/UART_TEST_PUMP.wav => dev/null}   | Bin 35884 -> 0 bytes
+ .../Facsounds/en/UART_TEST_Q.wav => dev/null}      | Bin 14764 -> 0 bytes
+ .../Facsounds/en/UART_TEST_R.wav => dev/null}      | Bin 12204 -> 0 bytes
+ .../en/UART_TEST_READ_LDS_TABLE.wav => dev/null}   | Bin 52524 -> 0 bytes
+ .../en/UART_TEST_REBACK_TO_TEST.wav => dev/null}   | Bin 216364 -> 0 bytes
+ .../Facsounds/en/UART_TEST_RESULT.wav => dev/null} | Bin 20524 -> 0 bytes
+ .../Facsounds/en/UART_TEST_S.wav => dev/null}      | Bin 15404 -> 0 bytes
+ .../Facsounds/en/UART_TEST_SECOND.wav => dev/null} | Bin 20524 -> 0 bytes
+ .../en/UART_TEST_SECONDS.wav => dev/null}          | Bin 24364 -> 0 bytes
+ .../Facsounds/en/UART_TEST_SN.wav => dev/null}     | Bin 31404 -> 0 bytes
+ .../en/UART_TEST_SUCCESS.wav => dev/null}          | Bin 21164 -> 0 bytes
+ .../Facsounds/en/UART_TEST_SWEEP.wav => dev/null}  | Bin 18604 -> 0 bytes
+ .../en/UART_TEST_SWEEP_OC.wav => dev/null}         | Bin 41004 -> 0 bytes
+ .../en/UART_TEST_SYS_MODE_ERROR.wav => dev/null}   | Bin 87724 -> 0 bytes
+ .../Facsounds/en/UART_TEST_T.wav => dev/null}      | Bin 13484 -> 0 bytes
+ .../en/UART_TEST_TEST_INFO_NOISE.wav => dev/null}  | Bin 275244 -> 0 bytes
+ .../en/UART_TEST_TEST_OR_GET_INFO.wav => dev/null} | Bin 217004 -> 0 bytes
+ .../en/UART_TEST_TEST_OVER.wav => dev/null}        | Bin 30124 -> 0 bytes
+ .../Facsounds/en/UART_TEST_U.wav => dev/null}      | Bin 17964 -> 0 bytes
+ .../en/UART_TEST_ULTRASONIC.wav => dev/null}       | Bin 27564 -> 0 bytes
+ .../en/UART_TEST_UNKNOWN.wav => dev/null}          | Bin 20524 -> 0 bytes
+ .../Facsounds/en/UART_TEST_V.wav => dev/null}      | Bin 15404 -> 0 bytes
+ .../Facsounds/en/UART_TEST_W.wav => dev/null}      | Bin 21804 -> 0 bytes
+ .../en/UART_TEST_WALLSENSOR.wav => dev/null}       | Bin 25644 -> 0 bytes
+ .../Facsounds/en/UART_TEST_WBXON.wav => dev/null}  | Bin 25644 -> 0 bytes
+ .../en/UART_TEST_WHEEL_L.wav => dev/null}          | Bin 23084 -> 0 bytes
+ .../en/UART_TEST_WHEEL_OC_L.wav => dev/null}       | Bin 47404 -> 0 bytes
+ .../en/UART_TEST_WHEEL_OC_R.wav => dev/null}       | Bin 44844 -> 0 bytes
+ .../en/UART_TEST_WHEEL_R.wav => dev/null}          | Bin 26284 -> 0 bytes
+ .../Facsounds/en/UART_TEST_WIFI.wav => dev/null}   | Bin 25644 -> 0 bytes
+ .../Facsounds/en/UART_TEST_X.wav => dev/null}      | Bin 15404 -> 0 bytes
+ .../Facsounds/en/UART_TEST_Y.wav => dev/null}      | Bin 19244 -> 0 bytes
+ .../Facsounds/en/UART_TEST_Z.wav => dev/null}      | Bin 14124 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_0.wav => dev/null}     | Bin 10604 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_1.wav => dev/null}     | Bin 9644 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_10.wav => dev/null}    | Bin 12844 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_100.wav => dev/null}   | Bin 9644 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_1KHZ.wav => dev/null}  | Bin 176444 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_2.wav => dev/null}     | Bin 9644 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_3.wav => dev/null}     | Bin 10924 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_4.wav => dev/null}     | Bin 11564 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_5.wav => dev/null}     | Bin 9964 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_6.wav => dev/null}     | Bin 10604 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_7.wav => dev/null}     | Bin 11564 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_8.wav => dev/null}     | Bin 9644 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_9.wav => dev/null}     | Bin 10604 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_A.wav => dev/null}     | Bin 6444 -> 0 bytes
+ .../prc/UART_TEST_ACTIVE_TIME.wav => dev/null}     | Bin 37164 -> 0 bytes
+ .../prc/UART_TEST_AUTO_BIT_MODE.wav => dev/null}   | Bin 37484 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_B.wav => dev/null}     | Bin 7724 -> 0 bytes
+ .../prc/UART_TEST_BATTERY.wav => dev/null}         | Bin 26284 -> 0 bytes
+ .../prc/UART_TEST_BIT_OR_NOISE.wav => dev/null}    | Bin 161964 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_BRUSH.wav => dev/null} | Bin 17004 -> 0 bytes
+ .../prc/UART_TEST_BRUSH_OC.wav => dev/null}        | Bin 27564 -> 0 bytes
+ .../prc/UART_TEST_BUMPER_L.wav => dev/null}        | Bin 22444 -> 0 bytes
+ .../prc/UART_TEST_BUMPER_R.wav => dev/null}        | Bin 22764 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_C.wav => dev/null}     | Bin 12204 -> 0 bytes
+ .../prc/UART_TEST_CAMERA.wav => dev/null}          | Bin 15404 -> 0 bytes
+ .../prc/UART_TEST_CHARGING.wav => dev/null}        | Bin 15724 -> 0 bytes
+ .../UART_TEST_CHARGING_CURRENT.wav => dev/null}    | Bin 25644 -> 0 bytes
+ .../prc/UART_TEST_CLEAN_TIME.wav => dev/null}      | Bin 37164 -> 0 bytes
+ .../prc/UART_TEST_CLIFFS_DROPS.wav => dev/null}    | Bin 27564 -> 0 bytes
+ .../prc/UART_TEST_CLIFF_BL.wav => dev/null}        | Bin 29164 -> 0 bytes
+ .../prc/UART_TEST_CLIFF_BR.wav => dev/null}        | Bin 29164 -> 0 bytes
+ .../prc/UART_TEST_CLIFF_FL.wav => dev/null}        | Bin 30444 -> 0 bytes
+ .../prc/UART_TEST_CLIFF_FR.wav => dev/null}        | Bin 30124 -> 0 bytes
+ .../prc/UART_TEST_CLIFF_L.wav => dev/null}         | Bin 23084 -> 0 bytes
+ .../prc/UART_TEST_CLIFF_R.wav => dev/null}         | Bin 23084 -> 0 bytes
+ .../prc/UART_TEST_COMPASS.wav => dev/null}         | Bin 20204 -> 0 bytes
+ .../prc/UART_TEST_COMPASS_L.wav => dev/null}       | Bin 35244 -> 0 bytes
+ .../prc/UART_TEST_COMPASS_R.wav => dev/null}       | Bin 35244 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_D.wav => dev/null}     | Bin 9004 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_DBXON.wav => dev/null} | Bin 18604 -> 0 bytes
+ .../prc/UART_TEST_DROP_L.wav => dev/null}          | Bin 19564 -> 0 bytes
+ .../prc/UART_TEST_DROP_R.wav => dev/null}          | Bin 19244 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_E.wav => dev/null}     | Bin 7724 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_F.wav => dev/null}     | Bin 10284 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_FAIL.wav => dev/null}  | Bin 17004 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_FAN.wav => dev/null}   | Bin 15724 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_G.wav => dev/null}     | Bin 11564 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_H.wav => dev/null}     | Bin 13484 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_HOUR.wav => dev/null}  | Bin 17964 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_I.wav => dev/null}     | Bin 10924 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_IMU.wav => dev/null}   | Bin 14444 -> 0 bytes
+ .../prc/UART_TEST_IR_FRONT.wav => dev/null}        | Bin 31404 -> 0 bytes
+ .../prc/UART_TEST_IR_FRONT_L.wav => dev/null}      | Bin 21804 -> 0 bytes
+ .../prc/UART_TEST_IR_FRONT_R.wav => dev/null}      | Bin 22444 -> 0 bytes
+ .../prc/UART_TEST_IR_SIDE_R.wav => dev/null}       | Bin 25004 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_J.wav => dev/null}     | Bin 12204 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_K.wav => dev/null}     | Bin 11564 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_L.wav => dev/null}     | Bin 12204 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_LDS.wav => dev/null}   | Bin 23084 -> 0 bytes
+ .../prc/UART_TEST_LDS_BUMPER.wav => dev/null}      | Bin 31404 -> 0 bytes
+ .../UART_TEST_LDS_DATA_TIMEOUT.wav => dev/null}    | Bin 38444 -> 0 bytes
+ .../UART_TEST_LDS_NO_VALID_POINT.wav => dev/null}  | Bin 19884 -> 0 bytes
+ .../UART_TEST_LDS_SPEED_CONTRL.wav => dev/null}    | Bin 16684 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_LED.wav => dev/null}   | Bin 19884 -> 0 bytes
+ .../prc/UART_TEST_LOWPOWER.wav => dev/null}        | Bin 20524 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_M.wav => dev/null}     | Bin 10284 -> 0 bytes
+ .../prc/UART_TEST_MAC_ADDR.wav => dev/null}        | Bin 23724 -> 0 bytes
+ .../prc/UART_TEST_MANUAL_BIT_MODE.wav => dev/null} | Bin 39084 -> 0 bytes
+ .../prc/UART_TEST_MINUTE.wav => dev/null}          | Bin 10284 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_N.wav => dev/null}     | Bin 10284 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_NOISE.wav => dev/null} | Bin 36524 -> 0 bytes
+ .../prc/UART_TEST_NOISE_MT.wav => dev/null}        | Bin 160044 -> 0 bytes
+ .../prc/UART_TEST_NOISE_START.wav => dev/null}     | Bin 37164 -> 0 bytes
+ .../prc/UART_TEST_NOT_CONFIGURED.wav => dev/null}  | Bin 19884 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_O.wav => dev/null}     | Bin 8364 -> 0 bytes
+ .../prc/UART_TEST_OS_VER.wav => dev/null}          | Bin 26284 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_P.wav => dev/null}     | Bin 10284 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_POINT.wav => dev/null} | Bin 7724 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_POWER.wav => dev/null} | Bin 14764 -> 0 bytes
+ .../prc/UART_TEST_POWER_OFF.wav => dev/null}       | Bin 20204 -> 0 bytes
+ .../UART_TEST_PRE_STATION_FAIL.wav => dev/null}    | Bin 49324 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_PUMP.wav => dev/null}  | Bin 21164 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_Q.wav => dev/null}     | Bin 9644 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_R.wav => dev/null}     | Bin 7724 -> 0 bytes
+ .../prc/UART_TEST_READ_LDS_TABLE.wav => dev/null}  | Bin 32044 -> 0 bytes
+ .../prc/UART_TEST_REBACK_TO_TEST.wav => dev/null}  | Bin 127404 -> 0 bytes
+ .../prc/UART_TEST_RESULT.wav => dev/null}          | Bin 15724 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_S.wav => dev/null}     | Bin 10284 -> 0 bytes
+ .../prc/UART_TEST_SECOND.wav => dev/null}          | Bin 10284 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_SN.wav => dev/null}    | Bin 26284 -> 0 bytes
+ .../prc/UART_TEST_SUCCESS.wav => dev/null}         | Bin 16044 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_SWEEP.wav => dev/null} | Bin 16364 -> 0 bytes
+ .../prc/UART_TEST_SWEEP_OC.wav => dev/null}        | Bin 27564 -> 0 bytes
+ .../prc/UART_TEST_SYS_MODE_ERROR.wav => dev/null}  | Bin 70444 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_T.wav => dev/null}     | Bin 7084 -> 0 bytes
+ .../prc/UART_TEST_TEST_INFO_NOISE.wav => dev/null} | Bin 211884 -> 0 bytes
+ .../UART_TEST_TEST_OR_GET_INFO.wav => dev/null}    | Bin 142124 -> 0 bytes
+ .../prc/UART_TEST_TEST_OVER.wav => dev/null}       | Bin 25324 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_U.wav => dev/null}     | Bin 8364 -> 0 bytes
+ .../prc/UART_TEST_ULTRASONIC.wav => dev/null}      | Bin 16684 -> 0 bytes
+ .../prc/UART_TEST_UNKNOWN.wav => dev/null}         | Bin 14124 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_V.wav => dev/null}     | Bin 9644 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_W.wav => dev/null}     | Bin 23724 -> 0 bytes
+ .../prc/UART_TEST_WALLSENSOR.wav => dev/null}      | Bin 16684 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_WBXON.wav => dev/null} | Bin 17964 -> 0 bytes
+ .../prc/UART_TEST_WHEEL_L.wav => dev/null}         | Bin 16684 -> 0 bytes
+ .../prc/UART_TEST_WHEEL_OC_L.wav => dev/null}      | Bin 27244 -> 0 bytes
+ .../prc/UART_TEST_WHEEL_OC_R.wav => dev/null}      | Bin 25644 -> 0 bytes
+ .../prc/UART_TEST_WHEEL_R.wav => dev/null}         | Bin 14444 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_WIFI.wav => dev/null}  | Bin 14444 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_X.wav => dev/null}     | Bin 12204 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_Y.wav => dev/null}     | Bin 12204 -> 0 bytes
+ .../Facsounds/prc/UART_TEST_Z.wav => dev/null}     | Bin 8364 -> 0 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_tuya       | Bin 652940 -> 652960 bytes
+ .../xout/_root/opt/rockrobo/rrlog/rrlogd           | Bin 127368 -> 127368 bytes
+ .../xout/_root/opt/rockrobo/watchdog/WatchDoge     | Bin 100692 -> 100692 bytes
+ .../xout/_root/opt/rockrobo/wlan/wlanmgr           | Bin 47136 -> 47136 bytes
+ .../xout/_root/var/cache/ldconfig/aux-cache        | Bin 13257 -> 13257 bytes
+ 272 files changed, 11 insertions(+), 13 deletions(-)

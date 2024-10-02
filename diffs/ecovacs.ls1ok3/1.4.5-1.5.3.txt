@@ -1,0 +1,5 @@
+Firmware diff for DEEBOT 900 Series (ecovacs.ls1ok3)
+Old version: 1.4.5 New version: 1.5.3
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---

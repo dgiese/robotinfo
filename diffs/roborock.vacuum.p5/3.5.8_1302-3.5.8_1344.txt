@@ -1,0 +1,62 @@
+Firmware diff for Roborock P5 (roborock.vacuum.p5)
+Old version: 3.5.8_1302 New version: 3.5.8_1344
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/OS_VERSION                      |   10 +-
+ .../xout/_root/etc/os-release                      |    2 +-
+ .../xout/_root/etc/rr-info                         |    2 +-
+ .../xout/_root/lib/modules/3.4.39/8189es.ko        |  Bin 2255932 -> 2255932 bytes
+ .../xout/_root/lib/modules/3.4.39/hi3881.ko        |  Bin 1003560 -> 1003236 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          |  Bin 302096 -> 302096 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           |  Bin 66316 -> 66308 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |    2 +-
+ .../xout/_root/opt/rockrobo/cleaner/bin/AppProxy   |  Bin 888520 -> 909024 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboController  |  Bin 236476 -> 236476 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerM |  Bin 302476 -> 302476 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerR |  Bin 236476 -> 236476 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/SysUpdate  |  Bin 101456 -> 101456 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/rr_loader  |  Bin 69228 -> 69228 bytes
+ .../opt/rockrobo/cleaner/lib/libpkginfoapi.so      |  Bin 9780 -> 9780 bytes
+ .../_root/opt/rockrobo/cleaner/lib/libroboipc.so   |  Bin 44912 -> 44912 bytes
+ .../opt/rockrobo/cleaner/lib/librobopersist.so     |  Bin 67868 -> 67868 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_chassis.so   |  Bin 63428 -> 63428 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_compass.so   |  Bin 22224 -> 22224 bytes
+ .../opt/rockrobo/cleaner/lib/librr_plugin_laser.so |  Bin 63532 -> 63532 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_logger.so    |  Bin 5544 -> 5544 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_support.so   |  Bin 9872 -> 9872 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrlocale.so  |  Bin 203764 -> 203764 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrlog.so     |  Bin 298668 -> 298656 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  |  Bin 2400220 -> 2408420 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrslamdrv.so |  Bin 281212 -> 281208 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrsound.so   |  Bin 38564 -> 38564 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrutils.so   |  Bin 9788 -> 9788 bytes
+ .../xout/_root/opt/rockrobo/cleaner/lib/libstat.so |  Bin 374032 -> 374032 bytes
+ .../opt/rockrobo/cleaner/lib/libuart_api.so.4.0.1  |  Bin 127432 -> 127432 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |    2 +-
+ ...A14.G1_M4.0.1_RELEASE_20210827-170130_FULL.bin} |  Bin 217072 -> 217072 bytes
+ ...14_M4.0.1_RELEASE_20210827-170016_INV_FULL.bin} |  Bin 217072 -> 217072 bytes
+ ....A3.G1_M4.0.1_RELEASE_20210827-165901_FULL.bin} |  Bin 217072 -> 217072 bytes
+ ...A3_M4.0.1_RELEASE_20210827-165756_INV_FULL.bin} |  Bin 217072 -> 217072 bytes
+ .../firmware/uart_test-4.0.1-20210706 => dev/null} |  Bin 505340 -> 0 bytes
+ .../rockrobo/firmware/uart_test-4.0.1-20210827}    |  Bin 0 -> 505340 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |    2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_rr         |  Bin 190808 -> 190808 bytes
+ .../xout/_root/opt/rockrobo/rriot/rriot_tuya       |  Bin 640784 -> 640788 bytes
+ .../xout/_root/opt/rockrobo/rrlog/rrlogd           |  Bin 285220 -> 299500 bytes
+ .../_root/opt/rockrobo/watchdog/ProcessListMT.conf |    4 +-
+ .../xout/_root/opt/rockrobo/watchdog/WatchDoge     |  Bin 80212 -> 80212 bytes
+ .../xout/_root/opt/rockrobo/wlan/wifi_start.sh     |   26 +-
+ .../xout/_root/opt/rockrobo/wlan/wlanmgr           |  Bin 38932 -> 38932 bytes
+ .../usr/lib/arm-linux-gnueabihf/gconv/GB18030.so}  |  Bin 0 -> 173480 bytes
+ .../usr/lib/arm-linux-gnueabihf/gconv/GBBIG5.so}   |  Bin 0 -> 54700 bytes
+ .../usr/lib/arm-linux-gnueabihf/gconv/GBGBK.so}    |  Bin 0 -> 9640 bytes
+ .../usr/lib/arm-linux-gnueabihf/gconv/GBK.so}      |  Bin 0 -> 112036 bytes
+ .../usr/lib/arm-linux-gnueabihf/gconv/UTF-16.so}   |  Bin 0 -> 13744 bytes
+ .../usr/lib/arm-linux-gnueabihf/gconv/UTF-32.so}   |  Bin 0 -> 9648 bytes
+ .../usr/lib/arm-linux-gnueabihf/gconv/UTF-7.so}    |  Bin 0 -> 13740 bytes
+ .../lib/arm-linux-gnueabihf/gconv/gconv-modules}   | 1970 ++++++++++++++++++++
+ .../xout/bootout_aboot/zImage                      |  Bin 3949528 -> 3949536 bytes
+ .../xout/bootout_aboot/zImage_3.5.8_1344.elf}      |  Bin 10303078 -> 10303078 bytes
+ .../{3.5.8_1302 => 3.5.8_1344}/xout/kernel.img     |  Bin 3952640 -> 3952640 bytes
+ 56 files changed, 1995 insertions(+), 25 deletions(-)

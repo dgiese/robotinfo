@@ -1,0 +1,60 @@
+Firmware diff for Mi Robot Vacuum-Mop (dreame.vacuum.mc1808)
+Old version: 3.5.8_1110 New version: 4.1.8_1118
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_calibr.so              |  Bin 214192 -> 218240 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 |  Bin 62480 -> 62480 bytes
+ .../xout/_root/ava/lib/node_com.so                 |  Bin 28436 -> 28436 bytes
+ .../xout/_root/ava/lib/node_health_khaos.so        |  Bin 162388 -> 166876 bytes
+ .../xout/_root/ava/lib/node_iot.so                 |  Bin 280936 -> 281080 bytes
+ .../xout/_root/ava/lib/node_khaos.so               |  Bin 746308 -> 828908 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             |  Bin 713360 -> 779908 bytes
+ .../xout/_root/ava/lib/node_signal_tab.so          |  Bin 136216 -> 136216 bytes
+ .../xout/_root/ava/script/fds_hook.sh              |   36 +-
+ .../xout/_root/ava/script/msg_cvt.sh               |    3 +-
+ .../xout/_root/etc/crontabs/root                   |    3 +-
+ .../xout/_root/etc/os-release                      |    6 +-
+ .../xout/_root/etc/rc.d/miio.sh                    |   25 +-
+ .../xout/_root/etc/rc.d/miio_monitor.sh            |   84 +-
+ .../xout/_root/etc/rc.d/monitor.sh                 |  100 +-
+ .../xout/_root/etc/rc.d/wifi_manager.sh            |   12 +-
+ .../xout/_root/etc/rc.d/wifi_monitor.sh            |  180 +-
+ .../xout/_root/etc/rc.sysinit                      |    4 +-
+ .../xout/_root/etc/ssl/certs/cacert.pem}           | 3830 ++++++++++++++++++++
+ .../xout/_root/etc/wifi/wifi_manager.json          |    2 +-
+ .../xout/_root/misc/data.tar.bz2                   |  Bin 598 -> 594 bytes
+ .../{3.5.8_1110 => 4.1.8_1118}/xout/_root/time.txt |    2 +-
+ .../xout/_root/timestamp                           |    2 +-
+ .../xout/_root/usr/bin/ava                         |  Bin 145984 -> 145984 bytes
+ .../xout/_root/usr/bin/config                      |   54 +
+ .../xout/_root/usr/bin/do_start_ap.sh              |   35 +-
+ .../xout/_root/usr/bin/miio_client                 |  Bin 117288 -> 614700 bytes
+ .../_root/usr/bin/miio_client_helper_nomqtt.sh     |  402 +-
+ .../xout/_root/usr/bin/miio_recv_line              |  Bin 3780 -> 3812 bytes
+ .../xout/_root/usr/bin/miio_send_line              |  Bin 3500 -> 3680 bytes
+ .../4.1.8_1118/xout/_root/usr/bin/network_hook.sh} |   23 +
+ .../xout/_root/usr/bin/restart_ava.sh              |    4 +-
+ .../xout/_root/usr/bin/start_ap.sh                 |    3 +
+ .../xout/_root/usr/bin/start_sta.sh                |    9 +-
+ .../4.1.8_1118/xout/_root/usr/bin/sysmon.sh}       |   98 +
+ .../xout/_root/usr/bin/wifi_cli                    |  Bin 84104 -> 84104 bytes
+ .../xout/_root/usr/bin/wifi_manager                |  Bin 225404 -> 227588 bytes
+ .../xout/_root/usr/bin/wifi_start.sh               |    8 +-
+ .../xout/_root/usr/bin/wifi_state.sh               |   12 +-
+ .../4.1.8_1118/xout/_root/usr/lib/libRakNetDLL.so} |  Bin 0 -> 1795040 bytes
+ .../_root/usr/lib/libjson-c.so.2.0.2 => dev/null}  |  Bin 29504 -> 0 bytes
+ .../xout/_root/usr/lib/libmbedcrypto.so}           |    0
+ .../xout/_root/usr/lib/libmbedcrypto.so.3}         |  Bin 0 -> 343724 bytes
+ .../4.1.8_1118/xout/_root/usr/lib/libmbedtls.so}   |    0
+ .../xout/_root/usr/lib/libmbedtls.so.12}           |  Bin 0 -> 98244 bytes
+ .../4.1.8_1118/xout/_root/usr/lib/libmbedx509.so}  |    0
+ .../xout/_root/usr/lib/libmbedx509.so.0}           |  Bin 0 -> 45024 bytes
+ .../xout/_root/usr/lib/libmi_sec_log.so}           |    0
+ .../xout/_root/usr/lib/libmi_sec_log.so.1}         |    0
+ .../xout/_root/usr/lib/libmi_sec_log.so.1.0}       |  Bin 0 -> 19636 bytes
+ .../_root/usr/lib/tree_lib/libkhaos_route_nodes.so |  Bin 4209840 -> 4247880 bytes
+ .../usr/lib/tree_lib/libkhaos_tactics_tree.so      |  Bin 1019012 -> 1020240 bytes
+ .../xout/_root/usr/lib/tree_lib/libkhaos_tree.so   |  Bin 6888964 -> 6906696 bytes
+ .../{3.5.8_1110 => 4.1.8_1118}/xout/mcu.bin        |  Bin 134972 -> 135228 bytes
+ 54 files changed, 4688 insertions(+), 249 deletions(-)

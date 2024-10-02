@@ -1,0 +1,5 @@
+Firmware diff for Mi Robot Vacuum (rockrobo.vacuum.v1)
+Old version: 3.3.9_003452 New version: 3.3.9_003468
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---

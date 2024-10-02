@@ -1,0 +1,237 @@
+Firmware diff for DEEBOT OZMO T8 (ecovacs.b742vd)
+Old version: 1.6.6 New version: 1.7.1
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../{1.6.6 => 1.7.1}/xout/_root/etc/fw.fix         |   2 +-
+ .../{1.6.6 => 1.7.1}/xout/_root/etc/fw.manifest    |   4 +-
+ .../xout/_root/media/music/KO/0.ogg                | Bin 16707 -> 13764 bytes
+ .../1.7.1/xout/_root/media/music/KO/100.ogg}       | Bin 0 -> 21413 bytes
+ .../xout/_root/media/music/KO/101.ogg              | Bin 27033 -> 20538 bytes
+ .../xout/_root/media/music/KO/102.ogg              | Bin 14572 -> 13973 bytes
+ .../xout/_root/media/music/KO/105.ogg              | Bin 21277 -> 17040 bytes
+ .../xout/_root/media/music/KO/106.ogg              | Bin 23193 -> 16347 bytes
+ .../xout/_root/media/music/KO/107.ogg              | Bin 24459 -> 18958 bytes
+ .../xout/_root/media/music/KO/108.ogg              | Bin 11660 -> 11698 bytes
+ .../xout/_root/media/music/KO/116.ogg              | Bin 12700 -> 11532 bytes
+ .../xout/_root/media/music/KO/117.ogg              | Bin 11936 -> 14592 bytes
+ .../xout/_root/media/music/KO/118.ogg              | Bin 11962 -> 13438 bytes
+ .../xout/_root/media/music/KO/119.ogg              | Bin 12027 -> 11373 bytes
+ .../xout/_root/media/music/KO/120.ogg              | Bin 13169 -> 20895 bytes
+ .../xout/_root/media/music/KO/121.ogg              | Bin 24878 -> 21387 bytes
+ .../xout/_root/media/music/KO/122.ogg              | Bin 12096 -> 16940 bytes
+ .../xout/_root/media/music/KO/124.ogg              | Bin 33687 -> 33151 bytes
+ .../xout/_root/media/music/KO/125.ogg              | Bin 23119 -> 19279 bytes
+ .../xout/_root/media/music/KO/131.ogg              | Bin 21656 -> 17439 bytes
+ .../xout/_root/media/music/KO/136.ogg              | Bin 21844 -> 17948 bytes
+ .../xout/_root/media/music/KO/137.ogg              | Bin 14341 -> 15235 bytes
+ .../xout/_root/media/music/KO/142.ogg              | Bin 20117 -> 17884 bytes
+ .../xout/_root/media/music/KO/147.ogg => dev/null} | Bin 12453 -> 0 bytes
+ .../xout/_root/media/music/KO/155.ogg              | Bin 14635 -> 14616 bytes
+ .../xout/_root/media/music/KO/156.ogg              | Bin 20908 -> 19195 bytes
+ .../xout/_root/media/music/KO/169.ogg              | Bin 13983 -> 15131 bytes
+ .../xout/_root/media/music/KO/17.ogg               | Bin 5482 -> 5081 bytes
+ .../xout/_root/media/music/KO/170.ogg => dev/null} | Bin 11664 -> 0 bytes
+ .../xout/_root/media/music/KO/172.ogg              | Bin 15318 -> 14438 bytes
+ .../xout/_root/media/music/KO/173.ogg              | Bin 24455 -> 21674 bytes
+ .../xout/_root/media/music/KO/175.ogg              | Bin 16152 -> 16031 bytes
+ .../xout/_root/media/music/KO/176.ogg              | Bin 11280 -> 17586 bytes
+ .../xout/_root/media/music/KO/177.ogg              | Bin 11132 -> 13887 bytes
+ .../xout/_root/media/music/KO/178.ogg              | Bin 11571 -> 11697 bytes
+ .../xout/_root/media/music/KO/180.ogg              | Bin 17805 -> 15183 bytes
+ .../xout/_root/media/music/KO/187.ogg              | Bin 17638 -> 19321 bytes
+ .../1.7.1/xout/_root/media/music/KO/193.ogg}       | Bin 0 -> 21194 bytes
+ .../xout/_root/media/music/KO/198.ogg              | Bin 24405 -> 23137 bytes
+ .../xout/_root/media/music/KO/20.ogg               | Bin 9423 -> 16340 bytes
+ .../xout/_root/media/music/KO/200.ogg              | Bin 12764 -> 11829 bytes
+ .../xout/_root/media/music/KO/205.ogg              | Bin 11830 -> 12657 bytes
+ .../1.7.1/xout/_root/media/music/KO/208.ogg}       | Bin 0 -> 16824 bytes
+ .../xout/_root/media/music/KO/24.ogg               | Bin 18724 -> 16837 bytes
+ .../xout/_root/media/music/KO/29.ogg               | Bin 15658 -> 13892 bytes
+ .../xout/_root/media/music/KO/3.ogg                | Bin 15326 -> 13173 bytes
+ .../xout/_root/media/music/KO/30.ogg               | Bin 12852 -> 9505 bytes
+ .../xout/_root/media/music/KO/31.ogg               | Bin 21650 -> 21242 bytes
+ .../xout/_root/media/music/KO/35.ogg               | Bin 16265 -> 13989 bytes
+ .../xout/_root/media/music/KO/4.ogg                | Bin 13029 -> 11188 bytes
+ .../xout/_root/media/music/KO/48.ogg               | Bin 22346 -> 21194 bytes
+ .../xout/_root/media/music/KO/55.ogg               | Bin 21198 -> 17419 bytes
+ .../xout/_root/media/music/KO/56.ogg               | Bin 11161 -> 8617 bytes
+ .../xout/_root/media/music/KO/6.ogg                | Bin 12277 -> 11941 bytes
+ .../xout/_root/media/music/KO/65.ogg               | Bin 14021 -> 14062 bytes
+ .../xout/_root/media/music/KO/69.ogg               | Bin 22719 -> 19109 bytes
+ .../xout/_root/media/music/KO/73.ogg               | Bin 19885 -> 17029 bytes
+ .../xout/_root/media/music/KO/76.ogg               | Bin 17484 -> 18626 bytes
+ .../xout/_root/media/music/KO/79.ogg               | Bin 11660 -> 11428 bytes
+ .../xout/_root/media/music/KO/83.ogg => dev/null}  | Bin 18087 -> 0 bytes
+ .../xout/_root/media/music/KO/84.ogg               | Bin 12739 -> 11569 bytes
+ .../xout/_root/media/music/KO/90.ogg               | Bin 19526 -> 17376 bytes
+ .../{1.6.6 => 1.7.1}/xout/_root/opt/data.tar.bz2   | Bin 410 -> 411 bytes
+ .../xout/_root/opt/ros/melodic/_setup_util.py      |   2 +-
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 1063016 -> 1067344 bytes
+ .../xout/_root/usr/doc/deebot_bigdata_report.json} |  26 ++
+ .../xout/_root/usr/doc/report.json                 |  14 +-
+ .../usr/lib/FeiyanCvtMethod/libFeiyanCvtMethod.so  | Bin 120640 -> 128472 bytes
+ .../xout/_root/usr/lib/WHmethods/libWHmethods.so   | Bin 193816 -> 189680 bytes
+ .../1.7.1/xout/_root/usr/lib/libfile_io.so}        | Bin 0 -> 114104 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_ros_node.so  | Bin 81296 -> 89520 bytes
+ .../_root/usr/lib/node/liberos_node_bigdata.so     | Bin 1009368 -> 1081800 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    | Bin 851632 -> 944432 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     | Bin 393696 -> 410216 bytes
+ .../usr/lib/node/liberos_node_task_manager.so      | Bin 2096456 -> 2220088 bytes
+ .../lib/python2.7/site-packages/ai/__init__.pyc    | Bin 212 -> 212 bytes
+ .../site-packages/ai/msg/_AIDetResult.pyc          | Bin 12824 -> 12824 bytes
+ .../site-packages/ai/msg/_AIFurniture.py}          | 162 ++++++++
+ .../site-packages/ai/msg/_AIFurniture.pyc}         | Bin 0 -> 6629 bytes
+ .../site-packages/ai/msg/_AIFurnitureType.py}      | 102 +++++
+ .../site-packages/ai/msg/_AIFurnitureType.pyc}     | Bin 0 -> 5143 bytes
+ .../site-packages/ai/msg/_AIFurnitures.py}         | 189 ++++++++++
+ .../site-packages/ai/msg/_AIFurnitures.pyc}        | Bin 0 -> 7091 bytes
+ .../site-packages/ai/msg/_AIObjectDetResult.pyc    | Bin 7996 -> 7996 bytes
+ .../python2.7/site-packages/ai/msg/_AiMissing.pyc  | Bin 7048 -> 7048 bytes
+ .../site-packages/ai/msg/_AiMissingType.pyc        | Bin 6109 -> 6109 bytes
+ .../lib/python2.7/site-packages/ai/msg/_Dot.py}    | 106 ++++++
+ .../lib/python2.7/site-packages/ai/msg/_Dot.pyc}   | Bin 0 -> 4945 bytes
+ .../lib/python2.7/site-packages/ai/msg/__init__.py |   4 +
+ .../python2.7/site-packages/ai/msg/__init__.pyc    | Bin 352 -> 465 bytes
+ .../python2.7/site-packages/bigdata/__init__.pyc   | Bin 222 -> 222 bytes
+ .../site-packages/bigdata/msg/_ACTION.pyc          | Bin 5151 -> 5151 bytes
+ .../site-packages/bigdata/msg/_BIG_DATA_ACTION.pyc | Bin 5144 -> 5144 bytes
+ .../bigdata/msg/_BIG_DATA_UPDATE_ACTION.pyc        | Bin 5394 -> 5394 bytes
+ .../bigdata/msg/_BigDataBasicInfo.pyc              | Bin 7490 -> 7490 bytes
+ .../bigdata/msg/_BigDataBuildMapStruct.pyc         | Bin 6029 -> 6029 bytes
+ .../site-packages/bigdata/msg/_BigDataCharge.pyc   | Bin 5948 -> 5948 bytes
+ .../bigdata/msg/_BigDataDockStruct.pyc             | Bin 5985 -> 5985 bytes
+ .../bigdata/msg/_BigDataONorOFFlineStruct.pyc      | Bin 7669 -> 7669 bytes
+ .../bigdata/msg/_BigDataPowerOnOffStruct.pyc       | Bin 5642 -> 5642 bytes
+ .../site-packages/bigdata/msg/_BigDataSetting.pyc  | Bin 7530 -> 7530 bytes
+ .../bigdata/msg/_BigDataTaskStruct.pyc             | Bin 8905 -> 8905 bytes
+ .../site-packages/bigdata/msg/_BigDataTrigger.pyc  | Bin 6190 -> 6190 bytes
+ .../bigdata/msg/_BigDataUpdateStruct.pyc           | Bin 10091 -> 10091 bytes
+ .../bigdata/msg/_BigDataVideoManagerStruct.pyc     | Bin 5507 -> 5507 bytes
+ .../bigdata/msg/_CastDataToInternet.pyc            | Bin 6314 -> 6314 bytes
+ .../site-packages/bigdata/msg/_CustomCleanSet.py}  | 194 ++++++++++
+ .../site-packages/bigdata/msg/_CustomCleanSet.pyc} | Bin 0 -> 6901 bytes
+ .../bigdata/msg/_InternetAvaliable.pyc             | Bin 5186 -> 5186 bytes
+ .../bigdata/msg/_MdsBigDataNetConnetStatus.pyc     | Bin 6326 -> 6326 bytes
+ .../bigdata/msg/_MdsBigDataNetConnetStatusNode.pyc | Bin 5812 -> 5812 bytes
+ .../bigdata/msg/_MdsBigDataSystemStatus.pyc        | Bin 7452 -> 7452 bytes
+ .../bigdata/msg/_MdsBigDataSystemStatusNode.pyc    | Bin 7214 -> 7214 bytes
+ .../site-packages/bigdata/msg/_RESULT.pyc          | Bin 5032 -> 5032 bytes
+ .../site-packages/bigdata/msg/_SLEEP_TYPE.pyc      | Bin 4695 -> 4695 bytes
+ .../site-packages/bigdata/msg/_SUBTASK.pyc         | Bin 6480 -> 6480 bytes
+ .../site-packages/bigdata/msg/_SenserReport.pyc    | Bin 5534 -> 5534 bytes
+ .../site-packages/bigdata/msg/_SleepTrg.pyc        | Bin 5308 -> 5308 bytes
+ .../site-packages/bigdata/msg/_TASKTYPE.pyc        | Bin 5246 -> 5246 bytes
+ .../site-packages/bigdata/msg/_UPDATE_ISForce.pyc  | Bin 5155 -> 5155 bytes
+ .../bigdata/msg/_UPDATE_STOPREASON.pyc             | Bin 5865 -> 5865 bytes
+ .../site-packages/bigdata/msg/_UPDATE_TYPE.pyc     | Bin 5119 -> 5119 bytes
+ .../site-packages/bigdata/msg/__init__.pyc         | Bin 1238 -> 1238 bytes
+ .../lib/python2.7/site-packages/map/__init__.pyc   | Bin 214 -> 214 bytes
+ .../python2.7/site-packages/map/msg/_AiArea.pyc    | Bin 5043 -> 5043 bytes
+ .../site-packages/map/msg/_AiAreaType.pyc          | Bin 4755 -> 4755 bytes
+ .../python2.7/site-packages/map/msg/_AiAreas.pyc   | Bin 6268 -> 6268 bytes
+ .../site-packages/map/msg/_AppSpotAreas.py}        | 294 +++++++++++++++
+ .../site-packages/map/msg/_AppSpotAreas.pyc}       | Bin 0 -> 9786 bytes
+ .../site-packages/map/msg/_AreaCleanSet.pyc        | Bin 5344 -> 5344 bytes
+ .../site-packages/map/msg/_ChargerDock.pyc         | Bin 5187 -> 5187 bytes
+ .../site-packages/map/msg/_ChargerDockInfo.pyc     | Bin 8291 -> 8291 bytes
+ .../site-packages/map/msg/_CleanAreas.pyc          | Bin 5213 -> 5213 bytes
+ .../site-packages/map/msg/_CompressAllMap.pyc      | Bin 4902 -> 4902 bytes
+ .../map/msg/_CompressAllMapResponse.pyc            | Bin 4986 -> 4986 bytes
+ .../site-packages/map/msg/_CompressMap.pyc         | Bin 7934 -> 7934 bytes
+ .../site-packages/map/msg/_CompressSubMap.pyc      | Bin 5980 -> 5980 bytes
+ .../map/msg/_DoorExtractionControl.pyc             | Bin 5083 -> 5083 bytes
+ .../python2.7/site-packages/map/msg/_DoorSill.pyc  | Bin 5692 -> 5692 bytes
+ .../site-packages/map/msg/_DoorSillFs.pyc          | Bin 6643 -> 6643 bytes
+ .../site-packages/map/msg/_DoorSillInfo.pyc        | Bin 5428 -> 5428 bytes
+ .../python2.7/site-packages/map/msg/_DoorSills.pyc | Bin 6339 -> 6339 bytes
+ .../lib/python2.7/site-packages/map/msg/_Dot.pyc   | Bin 4973 -> 4973 bytes
+ .../site-packages/map/msg/_FurnitureDot.py}        | 106 ++++++
+ .../site-packages/map/msg/_FurnitureDot.pyc}       | Bin 0 -> 5062 bytes
+ .../site-packages/map/msg/_FurnitureInfo.py}       | 152 ++++++++
+ .../site-packages/map/msg/_FurnitureInfo.pyc}      | Bin 0 -> 6373 bytes
+ .../site-packages/map/msg/_GenAreaResult.pyc       | Bin 4943 -> 4943 bytes
+ .../python2.7/site-packages/map/msg/_LineSeg.pyc   | Bin 5582 -> 5582 bytes
+ .../site-packages/map/msg/_ManipulateMap.py        |  52 ++-
+ .../site-packages/map/msg/_ManipulateMap.pyc       | Bin 6427 -> 7146 bytes
+ .../map/msg/_ManipulateMapResponse.pyc             | Bin 9015 -> 9015 bytes
+ .../site-packages/map/msg/_ManipulateMapType.py    |  11 +-
+ .../site-packages/map/msg/_ManipulateMapType.pyc   | Bin 5529 -> 5786 bytes
+ .../site-packages/map/msg/_ManipulateSubMap.pyc    | Bin 6289 -> 6289 bytes
+ .../site-packages/map/msg/_MapAreaSize.pyc         | Bin 5086 -> 5086 bytes
+ .../site-packages/map/msg/_MapAreasSize.pyc        | Bin 5803 -> 5803 bytes
+ .../site-packages/map/msg/_MapControl.pyc          | Bin 6807 -> 6807 bytes
+ .../python2.7/site-packages/map/msg/_MapInfo.py    |  32 +-
+ .../python2.7/site-packages/map/msg/_MapInfo.pyc   | Bin 6367 -> 6663 bytes
+ .../python2.7/site-packages/map/msg/_MapInfos.py   |  20 +-
+ .../python2.7/site-packages/map/msg/_MapInfos.pyc  | Bin 6810 -> 6966 bytes
+ .../site-packages/map/msg/_MapMetaInfo.pyc         | Bin 5928 -> 5928 bytes
+ .../site-packages/map/msg/_OutlineDot.py}          | 110 ++++++
+ .../site-packages/map/msg/_OutlineDot.pyc}         | Bin 0 -> 5362 bytes
+ .../site-packages/map/msg/_OutlineInfo.py}         | 155 ++++++++
+ .../site-packages/map/msg/_OutlineInfo.pyc}        | Bin 0 -> 6572 bytes
+ .../site-packages/map/msg/_ReplaceMapType.pyc      | Bin 5251 -> 5251 bytes
+ .../site-packages/map/msg/_ReportTraceIndex.pyc    | Bin 6002 -> 6002 bytes
+ .../site-packages/map/msg/_ReportWatchPoints.pyc   | Bin 6768 -> 6768 bytes
+ .../site-packages/map/msg/_SaveMapType.pyc         | Bin 4799 -> 4799 bytes
+ .../python2.7/site-packages/map/msg/_SpotArea.pyc  | Bin 9028 -> 9028 bytes
+ .../python2.7/site-packages/map/msg/_SpotAreas.pyc | Bin 9753 -> 9753 bytes
+ .../site-packages/map/msg/_SpotAreasChanged.pyc    | Bin 9828 -> 9828 bytes
+ .../site-packages/map/msg/_SpotAreasSetting.pyc    | Bin 9830 -> 9830 bytes
+ .../lib/python2.7/site-packages/map/msg/_Trace.pyc | Bin 6697 -> 6697 bytes
+ .../site-packages/map/msg/_TracePoint.pyc          | Bin 5468 -> 5468 bytes
+ .../site-packages/map/msg/_TraceUpdate.pyc         | Bin 6575 -> 6575 bytes
+ .../map/msg/_UsingCustomCompressMap.pyc            | Bin 4986 -> 4986 bytes
+ .../python2.7/site-packages/map/msg/_UsingMap.py}  |  97 +++++
+ .../python2.7/site-packages/map/msg/_UsingMap.pyc} | Bin 0 -> 4883 bytes
+ .../site-packages/map/msg/_VirtualWall.pyc         | Bin 6515 -> 6515 bytes
+ .../site-packages/map/msg/_VirtualWalls.pyc        | Bin 7090 -> 7090 bytes
+ .../site-packages/map/msg/_WatchPoint.pyc          | Bin 5480 -> 5480 bytes
+ .../site-packages/map/msg/_WatchPoints.pyc         | Bin 6702 -> 6702 bytes
+ .../python2.7/site-packages/map/msg/__init__.py    |   6 +
+ .../python2.7/site-packages/map/msg/__init__.pyc   | Bin 1582 -> 1756 bytes
+ .../map/srv/_GetCurrentCompressMap.pyc             | Bin 13370 -> 13370 bytes
+ .../site-packages/map/srv/_ManipulateCharger.pyc   | Bin 11079 -> 11079 bytes
+ .../site-packages/map/srv/_ManipulateDoorSill.pyc  | Bin 14092 -> 14092 bytes
+ .../site-packages/map/srv/_ManipulateMapInfos.py   |  27 +-
+ .../site-packages/map/srv/_ManipulateMapInfos.pyc  | Bin 12161 -> 12393 bytes
+ .../site-packages/map/srv/_ManipulateOutline.py}   | 411 +++++++++++++++++++++
+ .../site-packages/map/srv/_ManipulateOutline.pyc}  | Bin 0 -> 14788 bytes
+ .../site-packages/map/srv/_ManipulateShowMap.py    |   7 +-
+ .../site-packages/map/srv/_ManipulateShowMap.pyc   | Bin 13254 -> 13320 bytes
+ .../site-packages/map/srv/_ManipulateSpotArea.pyc  | Bin 20919 -> 20919 bytes
+ .../site-packages/map/srv/_ManipulateTrace.pyc     | Bin 11635 -> 11635 bytes
+ .../map/srv/_ManipulateVirtualWall.pyc             | Bin 15053 -> 15053 bytes
+ .../site-packages/map/srv/_ManipulateWifiMap.pyc   | Bin 13268 -> 13268 bytes
+ .../site-packages/map/srv/_WatchPointManage.pyc    | Bin 14063 -> 14063 bytes
+ .../python2.7/site-packages/map/srv/__init__.py    |   1 +
+ .../python2.7/site-packages/map/srv/__init__.pyc   | Bin 590 -> 625 bytes
+ .../python2.7/site-packages/onOffInfo/__init__.pyc | Bin 226 -> 226 bytes
+ .../site-packages/onOffInfo/msg/_BumpValue.pyc     | Bin 5388 -> 5388 bytes
+ .../site-packages/onOffInfo/msg/_CarpetValue.pyc   | Bin 5343 -> 5343 bytes
+ .../site-packages/onOffInfo/msg/_DirtBoxValue.pyc  | Bin 5347 -> 5347 bytes
+ .../site-packages/onOffInfo/msg/_DownInCovered.pyc | Bin 5059 -> 5059 bytes
+ .../site-packages/onOffInfo/msg/_DownInValue.pyc   | Bin 5644 -> 5644 bytes
+ .../site-packages/onOffInfo/msg/_FallValue.pyc     | Bin 5332 -> 5332 bytes
+ .../onOffInfo/msg/_LackofWaterValue.pyc            | Bin 5425 -> 5425 bytes
+ .../site-packages/onOffInfo/msg/_OnOffInfo.pyc     | Bin 6082 -> 6082 bytes
+ .../onOffInfo/msg/_OnOffSensorValue.pyc            | Bin 5536 -> 5536 bytes
+ .../onOffInfo/msg/_RobotInvalidState.py}           | 109 ++++++
+ .../onOffInfo/msg/_RobotInvalidState.pyc}          | Bin 0 -> 5388 bytes
+ .../onOffInfo/msg/_TestOnOffSensor.pyc             | Bin 5030 -> 5030 bytes
+ .../onOffInfo/msg/_WaterBoxStateReport.pyc         | Bin 5474 -> 5474 bytes
+ .../site-packages/onOffInfo/msg/_WaterBoxValue.pyc | Bin 5494 -> 5494 bytes
+ .../site-packages/onOffInfo/msg/__init__.py        |   1 +
+ .../site-packages/onOffInfo/msg/__init__.pyc       | Bin 613 -> 648 bytes
+ .../python2.7/site-packages/schedule/__init__.pyc  | Bin 224 -> 224 bytes
+ .../site-packages/schedule/msg/__init__.pyc        | Bin 393 -> 393 bytes
+ .../site-packages/schedule/msg/_schedule.pyc       | Bin 7921 -> 7921 bytes
+ .../site-packages/schedule/msg/_schedulearea.pyc   | Bin 5382 -> 5382 bytes
+ .../site-packages/schedule/msg/_scheduleevevt.pyc  | Bin 6190 -> 6190 bytes
+ .../site-packages/schedule/msg/_schedulefail.pyc   | Bin 6294 -> 6294 bytes
+ .../schedule/msg/_schedulefailtype.pyc             | Bin 6692 -> 6692 bytes
+ .../site-packages/schedule/srv/__init__.pyc        | Bin 271 -> 271 bytes
+ .../site-packages/schedule/srv/_schedulesrv.py     |   6 +-
+ .../site-packages/schedule/srv/_schedulesrv.pyc    | Bin 17838 -> 17949 bytes
+ .../{1.6.6 => 1.7.1}/xout/_root/version.txt        |  22 +-
+ 231 files changed, 2352 insertions(+), 72 deletions(-)

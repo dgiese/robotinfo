@@ -1,0 +1,154 @@
+Firmware diff for DEEBOT X1 OMNI (ecovacs.1vxt52)
+Old version: 1.10.9 New version: 1.13.5
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../{1.10.9 => 1.13.5}/xout/_model/models.json     | 853 ++++++++++++++++-----
+ .../{1.10.9 => 1.13.5}/xout/_model/net-en1.bin     | Bin 3936096 -> 3739744 bytes
+ .../1.13.5/xout/_model/net-en11.bin}               | Bin 0 -> 3739488 bytes
+ .../{1.10.9 => 1.13.5}/xout/_model/net-en2.bin     | Bin 3870224 -> 5771344 bytes
+ .../{1.10.9 => 1.13.5}/xout/_model/net-en5.bin     | Bin 532544 -> 2564048 bytes
+ .../{1.10.9 => 1.13.5}/xout/_model/net-en6.bin     | Bin 3739664 -> 3739568 bytes
+ .../ecovacs.1vxt52/1.13.5/xout/_model/net-en7.bin} | Bin 0 -> 3017088 bytes
+ .../ecovacs.1vxt52/1.13.5/xout/_model/net-en8.bin} | Bin 0 -> 3671728 bytes
+ .../etc/conf/medusa/download_fw_hook_v3.sh         |  64 +-
+ .../xout/_recovery/etc/conf/medusa/fw_reboot.sh    |   2 +
+ .../_recovery/etc/conf/medusa/station_ap_check.sh  |  34 +-
+ .../xout/_recovery/etc/fw.manifest                 |   5 +-
+ .../xout/_recovery/etc/wifi/bumbee_hook.sh         |   3 +-
+ .../xout/_recovery/etc/wifi/dnsmasq_hook.sh        |   3 +-
+ .../xout/_recovery/etc/wifi/netmon_hook.sh         |  12 +-
+ .../xout/_recovery/etc/wifi/station_ap.sh          |  15 +-
+ .../xout/_recovery/etc/wifi/wd_hook.sh             |  17 +-
+ .../xout/_recovery/usr/bin/ecoSystem               | Bin 6920 -> 6920 bytes
+ .../xout/_recovery/usr/bin/factory_fun             |   3 +-
+ .../xout/_recovery/usr/bin/fw_cut.sh               |   9 +-
+ .../xout/_recovery/usr/bin/fw_station.sh           |   9 +-
+ .../xout/_recovery/usr/bin/fw_upgrade.sh           |  18 +-
+ .../xout/_recovery/usr/lib/libcf_diff.so.0.0.1     | Bin 17256 -> 17256 bytes
+ .../xout/_recovery/usr/lib/libcommon.so.0.0.1      | Bin 18136 -> 18136 bytes
+ .../xout/_recovery/usr/lib/medusa/plug_audio.so    | Bin 48368 -> 48696 bytes
+ .../_recovery/usr/lib/medusa/plug_dev_status.so    | Bin 24600 -> 24712 bytes
+ .../_recovery/usr/lib/medusa/plug_file_sink.so     | Bin 15216 -> 15216 bytes
+ .../_recovery/usr/lib/medusa/plug_input_event.so   | Bin 9880 -> 9880 bytes
+ .../xout/_recovery/usr/lib/medusa/plug_led.so      | Bin 9520 -> 9520 bytes
+ .../xout/_recovery/usr/lib/medusa/plug_log.so      | Bin 11992 -> 11992 bytes
+ .../xout/_recovery/usr/lib/medusa/plug_network.so  | Bin 32512 -> 32512 bytes
+ .../_recovery/usr/lib/medusa/plug_rtsp_sink.so     | Bin 57936 -> 57936 bytes
+ .../xout/_recovery/usr/lib/medusa/plug_station.so  | Bin 45600 -> 48432 bytes
+ .../xout/_recovery/usr/lib/medusa/plug_sys.so      | Bin 49600 -> 49600 bytes
+ .../xout/_recovery/usr/lib/medusa/plug_time.so     | Bin 24896 -> 24896 bytes
+ .../xout/_recovery/usr/sbin/hostapd                | Bin 552632 -> 552608 bytes
+ .../1.13.5/xout/_recovery/usr/sbin/hostapd_cli}    | Bin 0 -> 49112 bytes
+ .../xout/_recovery/usr/sbin/wpa_cli                | Bin 93456 -> 93448 bytes
+ .../xout/_recovery/usr/sbin/wpa_passphrase         | Bin 45032 -> 45024 bytes
+ .../xout/_recovery/usr/sbin/wpa_supplicant         | Bin 1400168 -> 1400160 bytes
+ .../xout/_root/etc/conf/data_filter_node.json      |   2 +-
+ .../_root/etc/conf/deebot_nodelet_conf_report.json |   0
+ .../xout/_root/etc/conf/dxai_node.json             |   0
+ .../xout/_root/etc/conf/medusa/deebot_x3.conf      |   5 +-
+ .../_root/etc/conf/medusa/download_fw_hook_v3.sh   |  30 +-
+ .../xout/_root/etc/conf/medusa/station_ap_check.sh |  34 +-
+ .../_root/etc/conf/medusa/xmpp_server_status.sh    |  24 +-
+ .../xout/_root/etc/conf/speech_recognition.conf    |   1 +
+ .../{1.10.9 => 1.13.5}/xout/_root/etc/fw.manifest  |   5 +-
+ .../xout/_root/etc/rc.d/medusa.sh                  |   1 +
+ .../xout/_root/etc/rc.d/play_boot_music.sh         |   5 +-
+ .../xout/_root/etc/rc.d/speech_recognition.sh      |   5 +
+ .../xout/_root/etc/rc.d/wifi-rtl8723.sh            |   8 +
+ .../xout/_root/etc/wifi/bumbee_hook.sh             |   8 +-
+ .../xout/_root/etc/wifi/dnsmasq_hook.sh            |   3 +-
+ .../xout/_root/etc/wifi/err_hook.sh                |   2 +-
+ .../xout/_root/etc/wifi/netmon_hook.sh             |  12 +-
+ .../1.13.5/xout/_root/etc/wifi/onHostapdChange.sh} |  12 +
+ .../xout/_root/etc/wifi/rtl8723.tar.bz2            | Bin 1431 -> 10240 bytes
+ .../xout/_root/etc/wifi/station_ap.sh              |  25 +-
+ .../xout/_root/etc/wifi/wd_hook.sh                 |  17 +-
+ .../xout/_root/media/music/ZH/173.ogg              | Bin 16432 -> 28191 bytes
+ .../{1.10.9 => 1.13.5}/xout/_root/opt/data.tar.bz2 | Bin 418 -> 416 bytes
+ .../xout/_root/opt/ros/melodic/_setup_util.py      |   2 +-
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 1771112 -> 1825984 bytes
+ .../xout/_root/usr/bin/audioDaemon                 | Bin 79200 -> 82032 bytes
+ .../xout/_root/usr/bin/audio_record                | Bin 12344 -> 11304 bytes
+ .../xout/_root/usr/bin/audio_record.sh             |   2 +
+ .../xout/_root/usr/bin/curl_timeout_hook.sh        |  12 +-
+ .../xout/_root/usr/bin/dns_parse                   | Bin 5440 -> 5440 bytes
+ .../xout/_root/usr/bin/ecoSystem                   | Bin 6920 -> 6920 bytes
+ .../xout/_root/usr/bin/factory_fun                 |  45 +-
+ .../xout/_root/usr/bin/factory_reset.sh            |   3 +-
+ .../xout/_root/usr/bin/get_bd_quadruples.sh        |  10 +-
+ .../1.13.5/xout/_root/usr/bin/onlinelog.sh}        | 264 +++++++
+ .../xout/_root/usr/bin/speech_inter_client         | Bin 556416 -> 578848 bytes
+ .../xout/_root/usr/bin/speech_mute_notify          | Bin 27952 -> 27952 bytes
+ .../xout/_root/usr/bin/speech_recognition          | Bin 237360 -> 267824 bytes
+ .../xout/_root/usr/bin/speech_sleep                | Bin 69200 -> 69200 bytes
+ .../xout/_root/usr/bin/speech_tts                  | Bin 21312 -> 21440 bytes
+ .../xout/_root/usr/bin/speech_wakeup               | Bin 24120 -> 24120 bytes
+ .../xout/_root/usr/bin/upload_wakeup_audio.sh}     | 127 +++
+ .../xout/_root/usr/bin/wakeup_hook.sh              |   2 +-
+ .../xout/_root/usr/bin/xspace_tool                 | Bin 240344 -> 240344 bytes
+ .../xout/_root/usr/doc/report.json                 |  31 -
+ .../xout/_root/usr/doc/update.log                  |  25 +-
+ .../_root/usr/lib/WHmethods/libWHMapMethods.so     | Bin 212984 -> 218560 bytes
+ .../xout/_root/usr/lib/WHmethods/libWHmethods.so   | Bin 474680 -> 482048 bytes
+ .../xout/_root/usr/lib/eros_node_clean.pc          |   4 +-
+ .../xout/_root/usr/lib/eros_node_data_filter.pc}   |   8 +
+ .../usr/lib/eros_node_reference_virtual_walls.pc}  |   8 +
+ .../xout/_root/usr/lib/eros_node_return.pc         |   4 +-
+ .../xout/_root/usr/lib/job_schedule_midware.pc     |   4 +-
+ .../xout/_root/usr/lib/libDeebot.so                | Bin 130368 -> 130400 bytes
+ .../xout/_root/usr/lib/libPln.so                   | Bin 3524656 -> 3711568 bytes
+ .../xout/_root/usr/lib/libXspace.so.1.0            | Bin 615640 -> 746184 bytes
+ .../xout/_root/usr/lib/libai_image_filter.so       | Bin 367240 -> 375920 bytes
+ .../xout/_root/usr/lib/libai_map.so                | Bin 1914040 -> 2002648 bytes
+ .../xout/_root/usr/lib/libcf_diff.so.0.0.1         | Bin 17256 -> 17256 bytes
+ .../xout/_root/usr/lib/libcommon.so.0.0.1          | Bin 18136 -> 18136 bytes
+ .../xout/_root/usr/lib/libdata_filter.so           | Bin 428920 -> 512112 bytes
+ .../xout/_root/usr/lib/libeco_ai_lib.so            | Bin 347488 -> 410280 bytes
+ .../xout/_root/usr/lib/libjob_schedule.so          | Bin 90768 -> 103248 bytes
+ .../xout/_root/usr/lib/libjob_schedule_midware.so  | Bin 3835848 -> 3848248 bytes
+ .../xout/_root/usr/lib/libkvsWebrtcClient.so       | Bin 1124072 -> 1163560 bytes
+ .../_root/usr/lib/libkvsWebrtcSignalingClient.so   | Bin 158392 -> 173576 bytes
+ .../xout/_root/usr/lib/libnavigation.so            | Bin 394776 -> 403872 bytes
+ .../xout/_root/usr/lib/libopencv_core.so.4.1.2     | Bin 3138640 -> 3138640 bytes
+ .../_root/usr/lib/libopencv_imgcodecs.so.4.1.2     | Bin 821624 -> 1888672 bytes
+ .../xout/_root/usr/lib/libpixel2location.so        | Bin 74280 -> 77664 bytes
+ .../xout/_root/usr/lib/librelocation.so            | Bin 56800 -> 57456 bytes
+ .../xout/_root/usr/lib/libslam_dtof_filter.so      | Bin 29728 -> 29760 bytes
+ .../xout/_root/usr/lib/libslam_error_check.so      | Bin 61944 -> 63304 bytes
+ .../xout/_root/usr/lib/libwebsockets.so.18         | Bin 431968 -> 431968 bytes
+ .../xout/_root/usr/lib/medusa/plug_audio.so        | Bin 48368 -> 48696 bytes
+ .../xout/_root/usr/lib/medusa/plug_dev_status.so   | Bin 24600 -> 24712 bytes
+ .../xout/_root/usr/lib/medusa/plug_file_sink.so    | Bin 15216 -> 15216 bytes
+ .../xout/_root/usr/lib/medusa/plug_input_event.so  | Bin 9880 -> 9880 bytes
+ .../xout/_root/usr/lib/medusa/plug_kvs_webrtc.so   | Bin 245992 -> 250256 bytes
+ .../xout/_root/usr/lib/medusa/plug_led.so          | Bin 9520 -> 9520 bytes
+ .../xout/_root/usr/lib/medusa/plug_link.so         | Bin 37072 -> 41176 bytes
+ .../xout/_root/usr/lib/medusa/plug_log.so          | Bin 11992 -> 11992 bytes
+ .../xout/_root/usr/lib/medusa/plug_lvision.so      | Bin 209872 -> 213504 bytes
+ .../_root/usr/lib/medusa/plug_medusa_plugin_bpu.so | Bin 48544 -> 54424 bytes
+ .../medusa/plug_medusa_plugin_objectDetector.so    | Bin 496408 -> 500448 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_ros_node.so  | Bin 126832 -> 132424 bytes
+ .../medusa/plug_medusa_plugin_video_generator.so   | Bin 43792 -> 60416 bytes
+ .../xout/_root/usr/lib/medusa/plug_network.so      | Bin 32512 -> 32512 bytes
+ .../xout/_root/usr/lib/medusa/plug_rtsp_sink.so    | Bin 57936 -> 57936 bytes
+ .../xout/_root/usr/lib/medusa/plug_station.so      | Bin 45600 -> 48432 bytes
+ .../xout/_root/usr/lib/medusa/plug_sys.so          | Bin 49600 -> 49600 bytes
+ .../xout/_root/usr/lib/medusa/plug_time.so         | Bin 24896 -> 24896 bytes
+ .../_root/usr/lib/medusa_plugin_objectDetector.pc} |   8 +
+ .../_root/usr/lib/node/liberos_node_bigdata.so     | Bin 1929184 -> 1998600 bytes
+ .../xout/_root/usr/lib/node/liberos_node_clean.so  | Bin 909024 -> 983496 bytes
+ .../_root/usr/lib/node/liberos_node_data_filter.so | Bin 616152 -> 666632 bytes
+ .../usr/lib/node/liberos_node_house_layout.so      | Bin 499456 -> 495360 bytes
+ .../usr/lib/node/liberos_node_job_schedule.so      | Bin 513448 -> 520120 bytes
+ .../_root/usr/lib/node/liberos_node_lifespan.so    | Bin 272272 -> 272272 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    | Bin 1662744 -> 1662768 bytes
+ .../node/liberos_node_reference_virtual_walls.so   | Bin 164840 -> 164968 bytes
+ .../xout/_root/usr/lib/node/liberos_node_return.so | Bin 472536 -> 530120 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     | Bin 577904 -> 587792 bytes
+ .../{1.10.9 => 1.13.5}/xout/_root/usr/sbin/hostapd | Bin 552632 -> 552608 bytes
+ .../1.13.5/xout/_root/usr/sbin/hostapd_cli}        | Bin 0 -> 49112 bytes
+ .../{1.10.9 => 1.13.5}/xout/_root/usr/sbin/wpa_cli | Bin 93456 -> 93448 bytes
+ .../xout/_root/usr/sbin/wpa_passphrase             | Bin 45032 -> 45024 bytes
+ .../xout/_root/usr/sbin/wpa_supplicant             | Bin 1400168 -> 1400160 bytes
+ 148 files changed, 1453 insertions(+), 352 deletions(-)

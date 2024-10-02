@@ -1,0 +1,119 @@
+Firmware diff for Mi Robot Vacuum-Mop (dreame.vacuum.mc1808)
+Old version: 3.5.8_1035 New version: 3.5.8_1045
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../3.5.8_1045/xout/_root/README.md}               |   2 +
+ .../xout/_root/audio/EN/46.ogg                     | Bin 41525 -> 41525 bytes
+ .../3.5.8_1045/xout/_root/audio/EN/60.ogg}         | Bin 0 -> 24736 bytes
+ .../3.5.8_1045/xout/_root/audio/ZH/60.ogg}         | Bin 0 -> 27097 bytes
+ .../xout/_root/ava/conf/p1904.conf                 |   5 +-
+ .../xout/_root/ava/conf/vocSmall_20180608.bin      | Bin 4385015 -> 4385015 bytes
+ .../xout/_root/ava/conf/vslam_settings.json        |   5 +-
+ .../xout/_root/ava/lib/node_calibr.so              | Bin 193540 -> 193540 bytes
+ .../xout/_root/ava/lib/node_cleanbot_pro.so        | Bin 410040 -> 464224 bytes
+ .../xout/_root/ava/lib/node_health.so              | Bin 77400 -> 77896 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 269540 -> 273476 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 655508 -> 684528 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 181200 -> 181212 bytes
+ .../xout/_root/ava/lib/node_signal_tab.so          | Bin 119276 -> 126848 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 234000 -> 234000 bytes
+ .../xout/_root/ava/lib/node_tr_vslam.so            | Bin 64828 -> 66264 bytes
+ .../xout/_root/ava/lib/node_tracecheck.so          | Bin 36332 -> 38140 bytes
+ .../xout/_root/ava/lib/node_vision.so              | Bin 1035732 -> 1907852 bytes
+ .../xout/_root/ava/script/fds_hook.sh              |   6 +
+ .../xout/_root/ava/script/ota_unpack.sh            |   5 +
+ .../xout/_root/ava/script/wifi_test.sh             |   4 +-
+ .../xout/_root/etc/crontabs/root                   |   1 +
+ .../xout/_root/etc/init.d/factory_ap.sh            |   3 +-
+ .../xout/_root/etc/init.d/sysconfig.sh             |   1 +
+ .../xout/_root/etc/init.d/wpa_supplicant.sh        |   6 +-
+ .../xout/_root/etc/os-release                      |   6 +-
+ .../3.5.8_1045/xout/_root/etc/rc.d/msg_trans.sh}   |  16 +++
+ .../xout/_root/etc/rc.d/msg_trans_monitor.sh}      |  22 +++
+ .../xout/_root/etc/rc.d/wifi_manager.sh}           |  20 +++
+ .../xout/_root/etc/rc.d/wifi_monitor.sh}           | 151 ++++++++++++++++++++
+ .../_root/etc/rc.d/wifimg_monitor.sh => dev/null}  | 156 ---------------------
+ .../_root/etc/rc.d/wifimg_server.sh => dev/null}   |  19 ---
+ .../xout/_root/etc/rc.sysinit                      |   6 +-
+ .../xout/_root/etc/udev/udev.conf => dev/null}     |   3 -
+ .../xout/_root/etc/wifi/udhcpc.sh}                 |  18 ++-
+ .../xout/_root/etc/wifi/wifi_manager.json}         |  10 ++
+ .../xout/_root/etc/wifi/wpa_supplicant.conf}       |   4 +
+ .../wifi/wpa_supplicant_overlay.conf => dev/null}  |   1 -
+ .../etc/wifi/wpa_supplicant_src.conf => dev/null}  |   4 -
+ .../xout/_root/misc/data.tar.bz2                   | Bin 596 -> 597 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../_root/usr/bin/filter_backslash => dev/null}    | Bin 4036 -> 0 bytes
+ .../xout/_root/usr/bin/filter_ssid => dev/null}    | Bin 4216 -> 0 bytes
+ .../_root/usr/bin/miio_client_helper_nomqtt.sh     |   2 +-
+ .../3.5.8_1045/xout/_root/usr/bin/msg_trans}       | Bin 0 -> 8380 bytes
+ .../3.5.8_1045/xout/_root/usr/bin/restart_wifi.sh} |  10 ++
+ .../xout/_root/usr/bin/start_ap.sh                 |  20 ++-
+ .../xout/_root/usr/bin/start_sta.sh                |   7 +-
+ .../xout/_root/usr/bin/udevadm => dev/null}        | Bin 247908 -> 0 bytes
+ .../3.5.8_1045/xout/_root/usr/bin/wifi_cli}        | Bin 0 -> 84104 bytes
+ .../xout/_root/usr/bin/wifi_conf_monitor.sh        |   8 +-
+ .../3.5.8_1045/xout/_root/usr/bin/wifi_manager}    | Bin 0 -> 219396 bytes
+ .../usr/bin/wifi_reconnect_ap_test => dev/null}    | Bin 6428 -> 0 bytes
+ .../usr/bin/wifi_scan_results_test => dev/null}    | Bin 6996 -> 0 bytes
+ .../xout/_root/usr/bin/wifi_start.sh               |   6 +-
+ .../xout/_root/usr/bin/wifi_state.sh}              |  47 +++----
+ .../bin/wifimg_client_connect_ap_cmd => dev/null}  | Bin 8236 -> 0 bytes
+ .../wifimg_client_get_wifi_info_cmd => dev/null}   | Bin 7956 -> 0 bytes
+ .../wifimg_client_remove_network_cmd => dev/null}  | Bin 8268 -> 0 bytes
+ .../usr/bin/wifimg_server_deamon => dev/null}      | Bin 22356 -> 0 bytes
+ .../xout/_root/usr/bin/wpa_cli                     | Bin 77392 -> 77264 bytes
+ .../xout/_root/usr/bin/wpa_passphrase              | Bin 35076 -> 35008 bytes
+ .../xout/_root/usr/bin/wpa_supplicant              | Bin 1348712 -> 1341636 bytes
+ .../3.5.8_1045/xout/_root/usr/lib/libRakNetDLL.so} | Bin 0 -> 1036828 bytes
+ .../xout/_root/usr/lib/libbehaviortree_cpp.so      | Bin 510504 -> 1539216 bytes
+ .../xout/_root/usr/lib/libmessenger.so             | Bin 19548 -> 34824 bytes
+ .../xout/_root/usr/lib/libprotobuf_msg.so          | Bin 90436 -> 90652 bytes
+ .../xout/_root/usr/lib/libsunxicamera.so           | Bin 13608 -> 14060 bytes
+ .../xout/_root/usr/lib/libudev.so => dev/null}     |   0
+ .../xout/_root/usr/lib/libudev.so.1 => dev/null}   |   0
+ .../_root/usr/lib/libudev.so.1.6.3 => dev/null}    | Bin 113740 -> 0 bytes
+ .../xout/_root/usr/lib/libwifimg.so => dev/null}   | Bin 75984 -> 0 bytes
+ .../_root/usr/lib/libwpa_client.so => dev/null}    | Bin 26888 -> 0 bytes
+ .../usr/lib/modules/4.9.118+/external/8189fs.ko    | Bin 2098684 -> 2083192 bytes
+ .../lib/modules/4.9.118+/external/ov7251_mipi.ko   | Bin 12184 -> 12256 bytes
+ .../lib/modules/4.9.118+/external/sc031gs_mipi.ko} | Bin 0 -> 11544 bytes
+ .../modules/4.9.118+/external/videobuf2-core.ko    | Bin 32336 -> 31764 bytes
+ .../4.9.118+/external/videobuf2-dma-contig.ko      | Bin 14404 -> 13236 bytes
+ .../modules/4.9.118+/external/videobuf2-v4l2.ko    | Bin 17900 -> 17652 bytes
+ .../usr/lib/modules/4.9.118+/external/vin_io.ko    | Bin 48096 -> 47544 bytes
+ .../usr/lib/modules/4.9.118+/external/vin_v4l2.ko  | Bin 220368 -> 219900 bytes
+ .../_root/usr/lib/tree_lib/libcleanbot_pro_tree.so | Bin 6255760 -> 6422276 bytes
+ .../xout/_root/usr/lib/tree_lib/librobottree.so    | Bin 634564 -> 642632 bytes
+ .../xout/_root/usr/lib/tree_lib/libroute_nodes.so  | Bin 1679704 -> 2074544 bytes
+ .../xout/_root/usr/lib/udev/ata_id => dev/null}    | Bin 99156 -> 0 bytes
+ .../xout/_root/usr/lib/udev/cdrom_id => dev/null}  | Bin 114424 -> 0 bytes
+ .../xout/_root/usr/lib/udev/collect => dev/null}   | Bin 99720 -> 0 bytes
+ .../xout/_root/usr/lib/udev/mtd_probe => dev/null} | Bin 7268 -> 0 bytes
+ .../rules.d/50-udev-default.rules => dev/null}     |  79 -----------
+ .../lib/udev/rules.d/60-block.rules => dev/null}   |  11 --
+ .../udev/rules.d/60-cdrom_id.rules => dev/null}    |  29 ----
+ .../usr/lib/udev/rules.d/60-drm.rules => dev/null} |   8 --
+ .../lib/udev/rules.d/60-evdev.rules => dev/null}   |  23 ---
+ .../rules.d/60-persistent-alsa.rules => dev/null}  |  14 --
+ .../rules.d/60-persistent-input.rules => dev/null} |  42 ------
+ .../60-persistent-storage-tape.rules => dev/null}  |  26 ----
+ .../rules.d/60-persistent-v4l.rules => dev/null}   |  20 ---
+ .../lib/udev/rules.d/60-sensor.rules => dev/null}  |  18 ---
+ .../lib/udev/rules.d/60-serial.rules => dev/null}  |  26 ----
+ .../lib/udev/rules.d/64-btrfs.rules => dev/null}   |  13 --
+ .../lib/udev/rules.d/70-mouse.rules => dev/null}   |  18 ---
+ .../udev/rules.d/70-touchpad.rules => dev/null}    |  13 --
+ .../rules.d/75-net-description.rules => dev/null}  |  14 --
+ .../udev/rules.d/75-probe_mtd.rules => dev/null}   |   7 -
+ .../udev/rules.d/78-sound-card.rules => dev/null}  |  96 -------------
+ .../rules.d/80-net-name-slot.rules => dev/null}    |  14 --
+ .../xout/_root/usr/lib/udev/scsi_id => dev/null}   | Bin 109396 -> 0 bytes
+ .../xout/_root/usr/lib/udev/v4l_id => dev/null}    | Bin 67540 -> 0 bytes
+ .../xout/_root/usr/sbin/udevadm => dev/null}       |   0
+ .../xout/_root/usr/sbin/udevd => dev/null}         | Bin 236400 -> 0 bytes
+ .../3.5.8_1045/xout/_root/version}                 |  33 +++++
+ .../{3.5.8_1035 => 3.5.8_1045}/xout/kernel.img     | Bin 3987456 -> 2572288 bytes
+ .../{3.5.8_1035 => 3.5.8_1045}/xout/mcu.bin        | Bin 129008 -> 129768 bytes
+ 113 files changed, 358 insertions(+), 722 deletions(-)

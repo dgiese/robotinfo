@@ -1,0 +1,5 @@
+Firmware diff for Xiaomi Robot Vacuum X10 (dreame.vacuum.r2209)
+Old version: 4.3.3_1305 New version: 4.3.9_1308
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---

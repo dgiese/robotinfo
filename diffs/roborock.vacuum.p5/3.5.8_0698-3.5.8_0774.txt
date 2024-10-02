@@ -1,0 +1,43 @@
+Firmware diff for Roborock P5 (roborock.vacuum.p5)
+Old version: 3.5.8_0698 New version: 3.5.8_0774
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/OS_VERSION                      |   8 +++----
+ .../xout/_root/etc/os-release                      |   2 +-
+ .../xout/_root/etc/rr-info                         |   2 +-
+ .../xout/_root/lib/modules/3.4.39/8189es.ko        | Bin 2255924 -> 2255720 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 302816 -> 302824 bytes
+ .../xout/_root/lib/modules/3.4.39/st480.ko         | Bin 36788 -> 48228 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 66584 -> 66592 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../xout/_root/opt/rockrobo/cleaner/bin/AppProxy   | Bin 847456 -> 851568 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboController  | Bin 232368 -> 232368 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerM | Bin 298372 -> 298372 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerR | Bin 232368 -> 232368 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/SysUpdate  | Bin 101456 -> 101456 bytes
+ .../_root/opt/rockrobo/cleaner/lib/libroboipc.so   | Bin 44744 -> 44752 bytes
+ .../opt/rockrobo/cleaner/lib/librobopersist.so     | Bin 67868 -> 67868 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_chassis.so   | Bin 63428 -> 63428 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_compass.so   | Bin 22224 -> 22224 bytes
+ .../opt/rockrobo/cleaner/lib/librr_plugin_laser.so | Bin 59432 -> 59432 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 2355104 -> 2363328 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrslamdrv.so | Bin 252396 -> 272984 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrutils.so   | Bin 9764 -> 9764 bytes
+ .../xout/_root/opt/rockrobo/cleaner/lib/libstat.so | Bin 328520 -> 328520 bytes
+ .../opt/rockrobo/cleaner/lib/libuart_api.so.4.0.0  | Bin 118740 -> 118740 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ ....A3.G1_M4.0.0_RELEASE_20200611-184530_FULL.bin} | Bin 217072 -> 217072 bytes
+ .../firmware/uart_test-4.0.0-20200420 => dev/null} | Bin 467360 -> 0 bytes
+ .../rockrobo/firmware/uart_test-4.0.0-20200611}    | Bin 0 -> 472364 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_rr         | Bin 170292 -> 170292 bytes
+ .../xout/_root/opt/rockrobo/rriot/rriot_tuya       | Bin 648992 -> 648968 bytes
+ .../xout/_root/opt/rockrobo/rrlog/rrlogd           | Bin 276984 -> 281104 bytes
+ .../xout/_root/opt/rockrobo/scripts/pipes.sh       |  26 ++++++++++++++++++++-
+ .../xout/_root/opt/rockrobo/watchdog/WatchDoge     | Bin 76104 -> 76104 bytes
+ .../xout/_root/opt/rockrobo/wlan/wlanmgr           | Bin 38928 -> 38928 bytes
+ .../xout/bootout_aboot/zImage                      | Bin 3827560 -> 3827560 bytes
+ .../xout/bootout_aboot/zImage_3.5.8_0774.elf}      | Bin 9974457 -> 9974457 bytes
+ .../{3.5.8_0698 => 3.5.8_0774}/xout/kernel.img     | Bin 3829760 -> 3829760 bytes
+ 37 files changed, 34 insertions(+), 10 deletions(-)

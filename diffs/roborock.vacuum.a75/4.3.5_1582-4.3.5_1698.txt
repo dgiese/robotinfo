@@ -1,0 +1,55 @@
+Firmware diff for Roborock Qrevo (roborock.vacuum.a75)
+Old version: 4.3.5_1582 New version: 4.3.5_1698
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/rr-info                         |   2 +-
+ .../xout/_root/etc/signature                       | Bin 11632 -> 11632 bytes
+ .../xout/_root/lib/bash/Makefile.inc               |   4 ++--
+ .../xout/_root/lib/modules/3.4.39/8189fs.ko        | Bin 2151572 -> 2151572 bytes
+ .../xout/_root/lib/modules/3.4.39/hi3881.ko        | Bin 945048 -> 945032 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 280964 -> 280636 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 60528 -> 60400 bytes
+ .../xout/_root/lib/pkgconfig/bash.pc               |   4 ++--
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../xout/_root/opt/rockrobo/cleaner/bin/AppProxy   | Bin 1422076 -> 1422076 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboController  | Bin 499972 -> 499972 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerM | Bin 611040 -> 615136 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerR | Bin 229008 -> 229008 bytes
+ .../opt/rockrobo/cleaner/bin/RoboControllerSC      | Bin 532976 -> 532976 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/SysUpdate  | Bin 134168 -> 134168 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/rr_loader  | Bin 69756 -> 69756 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/rrunittest | Bin 285320 -> 285320 bytes
+ .../opt/rockrobo/cleaner/lib/libNavUnitTest.so     | Bin 1235612 -> 1231516 bytes
+ .../_root/opt/rockrobo/cleaner/lib/libblcommon.so  | Bin 9584 -> 9584 bytes
+ .../opt/rockrobo/cleaner/lib/libcarpetdetector.so  | Bin 26308 -> 26308 bytes
+ .../opt/rockrobo/cleaner/lib/libpkginfoapi.so      | Bin 13732 -> 13732 bytes
+ .../_root/opt/rockrobo/cleaner/lib/libroboipc.so   | Bin 73732 -> 73732 bytes
+ .../opt/rockrobo/cleaner/lib/librobopersist.so     | Bin 142068 -> 142068 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_chassis.so   | Bin 223808 -> 223808 bytes
+ .../opt/rockrobo/cleaner/lib/librr_plugin_laser.so | Bin 67560 -> 67560 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_logger.so    | Bin 5448 -> 5448 bytes
+ .../cleaner/lib/librr_plugin_structlight.so        | Bin 162472 -> 162472 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_support.so   | Bin 13864 -> 13864 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrlocale.so  | Bin 9592 -> 9592 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 4954748 -> 4950652 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrslamdrv.so | Bin 429100 -> 429100 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrutils.so   | Bin 26168 -> 26168 bytes
+ .../xout/_root/opt/rockrobo/cleaner/lib/libstat.so | Bin 566492 -> 566492 bytes
+ .../opt/rockrobo/cleaner/lib/libuart_api.so.6.0.0  | Bin 358392 -> 358392 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ ...PEARL.A14.G1_M6.0.0_R_20231103-161558_FULL.bin} | Bin 524288 -> 524288 bytes
+ ..._PEARL.A3.G1_M6.0.0_R_20231103-161253_FULL.bin} | Bin 262144 -> 262144 bytes
+ .../rockrobo/firmware/robo_tool-6.0.0-20231103}    | Bin 1051768 -> 1051760 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_rr         | Bin 170048 -> 170048 bytes
+ .../xout/_root/opt/rockrobo/rrlog/rrlogd           | Bin 480056 -> 480056 bytes
+ .../xout/_root/opt/rockrobo/watchdog/WatchDoge     | Bin 88496 -> 88496 bytes
+ .../xout/_root/opt/rockrobo/wlan/wlanmgr           | Bin 55408 -> 55408 bytes
+ .../xout/_root/sbin/adbd                           | Bin 142032 -> 142032 bytes
+ .../xout/_root/sbin/mount.sh                       |  13 ++++++++++---
+ .../xout/_root/usr/lib/libstdc++.so.6.0.28-gdb.py  |   4 ++--
+ .../xout/bootout_aboot/zImage                      | Bin 3889952 -> 3889944 bytes
+ .../xout/bootout_aboot/zImage_4.3.5_1698.elf}      | Bin 10203179 -> 10203179 bytes
+ .../{4.3.5_1582 => 4.3.5_1698}/xout/kernel.img     | Bin 3893760 -> 3893760 bytes
+ 49 files changed, 20 insertions(+), 13 deletions(-)

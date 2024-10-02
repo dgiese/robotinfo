@@ -1,0 +1,101 @@
+Firmware diff for GOAT G1 (ecovacs.5xu9h3)
+Old version: 1.12.9 New version: 1.21.0
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/conf/dxai_node.json             |   6 +-
+ .../etc/conf/eros_node_job_schedule_report.json    |   0
+ .../xout/_root/etc/conf/hw_monitor.conf            |   7 +
+ .../xout/_root/etc/conf/medusa/deebot_3588.conf    |  29 +-
+ .../_root/etc/conf/medusa/process_security_pic.sh  |  28 +-
+ .../_root/etc/conf/medusa/xmpp_server_status.sh    |   1 +
+ .../xout/_root/etc/conf/netd_log.conf              |   2 +-
+ .../xout/_root/etc/conf/tdkimu_node.json           |   0
+ .../xout/_root/etc/conf/wifi_service.conf          |   7 +-
+ .../xout/_root/etc/conf/work_node.json             |   0
+ .../{1.12.9 => 1.21.0}/xout/_root/etc/fw.manifest  |   6 +-
+ .../etc/iqfiles/SC301IOT_default_default.json      |   6 +-
+ .../xout/_root/etc/rc.d/deebot.sh                  |   1 +
+ .../xout/_root/etc/rc.d/medusa.sh                  |  17 +-
+ .../xout/_root/etc/rc.d/pre_boot.sh                |   4 +
+ .../xout/_root/etc/rc.d/time_sync.sh               |   2 +-
+ .../xout/_root/media/music/ZH/3.ogg => dev/null}   | Bin 11310 -> 0 bytes
+ .../xout/_root/model/EcoAiFaceDetect/Face.rknn}    | Bin 0 -> 7557248 bytes
+ .../xout/_root/model/EcoAiFaceDetect/models.json}  |  24 ++
+ .../xout/_root/model/EcoAiGrass/ai_grass_seg.rknn  | Bin 8868891 -> 8868891 bytes
+ .../xout/_root/model/EcoAiGrass/models.json        | 102 ++++++-
+ .../xout/_root/model/EcoAiLine/models.json         | 103 ++++++-
+ .../xout/_root/model/EcoAiPets/models.json         | 218 +++++++++++++-
+ .../{1.12.9 => 1.21.0}/xout/_root/opt/data.tar.bz2 | Bin 4234 -> 4224 bytes
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 3502520 -> 3638896 bytes
+ .../{1.12.9 => 1.21.0}/xout/_root/opt/uwb/uwb.bin  | Bin 42272 -> 52748 bytes
+ .../xout/_root/opt/uwb/uwb_version.json            |   4 +-
+ .../{1.12.9 => 1.21.0}/xout/_root/usr/bin/awss     | Bin 7528 -> 22832 bytes
+ .../{1.12.9 => 1.21.0}/xout/_root/usr/bin/awss_cli | Bin 17608 -> 10384 bytes
+ .../1.21.0/xout/_root/usr/bin/eros_data_upload.sh} | 335 +++++++++++++++++++++
+ .../xout/_root/usr/bin/factory_fun                 |   8 +-
+ .../xout/_root/usr/bin/factory_reset.sh            |   6 +-
+ .../xout/_root/usr/bin/hw_monitor                  | Bin 27032 -> 31136 bytes
+ .../xout/_root/usr/bin/net_manager                 | Bin 234736 -> 216784 bytes
+ .../1.21.0/xout/_root/usr/bin/net_test.sh}         |  70 +++++
+ .../1.21.0/xout/_root/usr/bin/onlineReport.sh}     |  42 +++
+ .../xout/_root/usr/bin/radio_hook.sh               |  20 +-
+ .../{1.12.9 => 1.21.0}/xout/_root/usr/bin/scan_ap  | Bin 76840 -> 76840 bytes
+ .../xout/_root/usr/bin/wifi_service                | Bin 117712 -> 117712 bytes
+ .../_root/usr/lib/WHmethods/libWHMapMethods.so     | Bin 223856 -> 227952 bytes
+ .../xout/_root/usr/lib/WHmethods/libWHmethods.so   | Bin 445344 -> 457632 bytes
+ .../usr/lib/eco_ai_interface/libecoaibladepause.so | Bin 6240104 -> 6236008 bytes
+ .../lib/eco_ai_interface/libecoaidetectface.so}    | Bin 0 -> 3124056 bytes
+ .../lib/eco_ai_interface/libecoaidetectsecurity.so | Bin 6273048 -> 6273048 bytes
+ .../usr/lib/eco_ai_interface/libecoaigrassseg.so   | Bin 6061560 -> 6065656 bytes
+ .../{1.12.9 => 1.21.0}/xout/_root/usr/lib/eros.pc  |   4 +-
+ .../_root/usr/lib/eros_node_hardware_platform.pc   |   4 +-
+ .../_root/usr/lib/eros_node_inspect_charger.pc}    |   8 +
+ .../xout/_root/usr/lib/eros_node_ofei_tof.pc       |   4 +-
+ .../xout/_root/usr/lib/eros_node_tdk_imu.pc        |   4 +-
+ .../usr/lib/libEcoYUVOmniRing2YUVRectangle.so      | Bin 203608 -> 199912 bytes
+ .../xout/_root/usr/lib/libai_tof_grassseg.so       | Bin 8787960 -> 1244520 bytes
+ .../xout/_root/usr/lib/libai_tof_obstacle.so       | Bin 8046856 -> 396552 bytes
+ .../xout/_root/usr/lib/libcommon.so.0.0.1          | Bin 18672 -> 18680 bytes
+ .../xout/_root/usr/lib/libeco_navi.so              | Bin 45181736 -> 13026360 bytes
+ .../xout/_root/usr/lib/libeco_vio.so               | Bin 2266624 -> 2258424 bytes
+ .../xout/_root/usr/lib/libeco_vslam.so             | Bin 4198096 -> 4218672 bytes
+ .../xout/_root/usr/lib/libecoaidispatch.so         | Bin 64096 -> 51808 bytes
+ .../xout/_root/usr/lib/liberos.so                  | Bin 168904 -> 171128 bytes
+ .../xout/_root/usr/lib/libiot_hal.so               | Bin 315464 -> 355752 bytes
+ .../xout/_root/usr/lib/libjob_schedule_midware.so  | Bin 3142832 -> 3190816 bytes
+ .../_root/usr/lib/libjob_schedule_ros_convert.so   | Bin 2046968 -> 2113848 bytes
+ .../xout/_root/usr/lib/liblink_visual_device.so}   | Bin 0 -> 1196016 bytes
+ .../xout/_root/usr/lib/liblinkkit.so               | Bin 423608 -> 479264 bytes
+ .../xout/_root/usr/lib/libmap_management_PX30.so   | Bin 287176 -> 287176 bytes
+ .../xout/_root/usr/lib/libmower_interface.so       | Bin 5043287 -> 5518208 bytes
+ .../xout/_root/usr/lib/librkaiq.so                 | Bin 11714592 -> 11702304 bytes
+ .../xout/_root/usr/lib/libslipFunction_module.so   | Bin 73584 -> 73584 bytes
+ .../xout/_root/usr/lib/libtaskmanager.so           | Bin 313496 -> 314560 bytes
+ .../xout/_root/usr/lib/medusa/plug_aidispatch.so   | Bin 22968 -> 31280 bytes
+ .../xout/_root/usr/lib/medusa/plug_audio.so        | Bin 47688 -> 47688 bytes
+ .../xout/_root/usr/lib/medusa/plug_dev_status.so   | Bin 26960 -> 26960 bytes
+ .../_root/usr/lib/medusa/plug_led.so => dev/null}  | Bin 10392 -> 0 bytes
+ .../xout/_root/usr/lib/medusa/plug_link.so         | Bin 37072 -> 44424 bytes
+ .../xout/_root/usr/lib/medusa/plug_lvision.so}     | Bin 0 -> 215544 bytes
+ .../_root/usr/lib/medusa/plug_media_control.so     | Bin 47560 -> 43464 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_ros_node.so  | Bin 170784 -> 174896 bytes
+ .../xout/_root/usr/lib/medusa/plug_network.so      | Bin 27136 -> 35328 bytes
+ .../xout/_root/usr/lib/medusa/plug_rk_mpp.so       | Bin 65192 -> 65216 bytes
+ .../usr/lib/medusa/plug_rtsp_sink.so => dev/null}  | Bin 57064 -> 0 bytes
+ .../xout/_root/usr/lib/node/liberos_node_alert.so  | Bin 272656 -> 276936 bytes
+ .../_root/usr/lib/node/liberos_node_bigdata.so     | Bin 1256352 -> 1315008 bytes
+ .../usr/lib/node/liberos_node_bluetoothhandler.so  | Bin 1653224 -> 1713864 bytes
+ .../xout/_root/usr/lib/node/liberos_node_clean.so  | Bin 884064 -> 920720 bytes
+ .../usr/lib/node/liberos_node_hardware_platform.so | Bin 2129368 -> 2144096 bytes
+ .../usr/lib/node/liberos_node_inspect_charger.so   | Bin 163488 -> 196968 bytes
+ .../usr/lib/node/liberos_node_job_schedule.so      | Bin 540560 -> 561240 bytes
+ .../_root/usr/lib/node/liberos_node_lifespan.so    | Bin 230088 -> 226424 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    | Bin 2010328 -> 2006680 bytes
+ .../_root/usr/lib/node/liberos_node_ofei_tof.so    | Bin 598896 -> 612816 bytes
+ .../_root/usr/lib/node/liberos_node_postTunnel.so  | Bin 847544 -> 853128 bytes
+ .../xout/_root/usr/lib/node/liberos_node_return.so | Bin 500144 -> 505064 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     | Bin 672728 -> 726088 bytes
+ .../_root/usr/lib/node/liberos_node_tdk_imu.so     | Bin 171496 -> 133272 bytes
+ .../xout/_root/usr/lib/node/liberos_node_vslam.so  | Bin 1025768 -> 1062392 bytes
+ 95 files changed, 1027 insertions(+), 45 deletions(-)

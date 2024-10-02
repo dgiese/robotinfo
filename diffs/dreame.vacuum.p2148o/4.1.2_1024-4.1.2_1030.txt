@@ -1,0 +1,48 @@
+Firmware diff for Mijia Robot Vacuum-Mop Ultra Slim (dreame.vacuum.p2148o)
+Old version: 4.1.2_1024 New version: 4.1.2_1030
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/conf/p2148.conf                 |   2 +-
+ .../xout/_root/ava/lib/node_calibr.so              | Bin 239072 -> 239072 bytes
+ .../xout/_root/ava/lib/node_camera.so              | Bin 94640 -> 94640 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 65632 -> 65632 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 37504 -> 37504 bytes
+ .../xout/_root/ava/lib/node_health_lachesis.so     | Bin 178992 -> 185312 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 98784 -> 98784 bytes
+ .../xout/_root/ava/lib/node_lachesis.so            | Bin 871664 -> 871696 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 36416 -> 36416 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 499776 -> 499776 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 77648 -> 77648 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 811416 -> 812024 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 73632 -> 73632 bytes
+ .../xout/_root/ava/lib/node_signal_tab.so          | Bin 151328 -> 151328 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 123328 -> 123328 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 103560 -> 103560 bytes
+ .../xout/_root/ava/lib/node_tof.so                 | Bin 150352 -> 150912 bytes
+ .../_root/ava/lib/node_tof_extrinsic_calibrate.so  | Bin 373432 -> 369616 bytes
+ .../xout/_root/ava/lib/node_vision.so              | Bin 2148832 -> 2149440 bytes
+ .../xout/_root/ava/script/msg_cvt.sh               |  30 +++---
+ .../xout/_root/etc/init.d/factory_ap.sh            |   6 ++
+ .../xout/_root/etc/os-release                      |   6 +-
+ .../xout/_root/misc/data.tar.bz2                   | Bin 626 -> 631 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 150536 -> 150536 bytes
+ .../xout/_root/usr/bin/ava_crash_dog.sh            |   1 +
+ .../xout/_root/usr/bin/change_internal_user.sh}    |  35 +++++++
+ .../_root/usr/bin/check_release_silent_upgrade.sh} |  40 ++++++++
+ .../xout/_root/usr/bin/check_silent_upgrade.sh     | 114 ++-------------------
+ .../xout/_root/usr/bin/config                      |   3 +-
+ .../xout/_root/usr/bin/fw_printenv                 | Bin 27816 -> 27816 bytes
+ .../xout/_root/usr/bin/ofilm_calibration           | Bin 16792 -> 16792 bytes
+ .../xout/_root/usr/bin/sunny_calibration           | Bin 31960 -> 31960 bytes
+ .../usr/lib/modules/4.9.191/external/8723ds.ko     | Bin 3258176 -> 3258176 bytes
+ .../usr/lib/tree_lib/liblachesis_route_nodes.so    | Bin 4187872 -> 4206768 bytes
+ .../usr/lib/tree_lib/liblachesis_tactics_tree.so   | Bin 1090104 -> 1097200 bytes
+ .../_root/usr/lib/tree_lib/liblachesis_tree.so     | Bin 5493624 -> 5517976 bytes
+ .../xout/_root/version_record                      |  16 +--
+ .../{4.1.2_1024 => 4.1.2_1030}/xout/kernel.img     | Bin 10379264 -> 10379264 bytes
+ .../{4.1.2_1024 => 4.1.2_1030}/xout/mcu.bin        | Bin 133472 -> 138112 bytes
+ .../{4.1.2_1024 => 4.1.2_1030}/xout/toc0.fex       | Bin 81920 -> 81920 bytes
+ .../{4.1.2_1024 => 4.1.2_1030}/xout/toc1.fex       | Bin 1179648 -> 1179648 bytes
+ 42 files changed, 125 insertions(+), 130 deletions(-)

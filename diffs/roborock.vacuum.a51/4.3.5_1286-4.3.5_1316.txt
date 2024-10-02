@@ -1,0 +1,14 @@
+Firmware diff for Roborock S8 (roborock.vacuum.a51)
+Old version: 4.3.5_1286 New version: 4.3.5_1316
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/rr-info                         |   4 ++--
+ .../xout/_root/etc/signature                       | Bin 11864 -> 11864 bytes
+ .../xout/_root/lib/modules/4.9.191/8189fs.ko       | Bin 3147448 -> 3147448 bytes
+ .../xout/_root/usr/lib/libiniparser.a              | Bin 2048 -> 2048 bytes
+ .../xout/_root/usr/lib/libisp_dev.a                | Bin 51798 -> 51798 bytes
+ .../xout/_root/usr/lib/libisp_math.a               | Bin 23054 -> 23054 bytes
+ .../{4.3.5_1286 => 4.3.5_1316}/xout/boot/zImage    | Bin 21221388 -> 21221388 bytes
+ .../{4.3.5_1286 => 4.3.5_1316}/xout/kernel.img     | Bin 21229568 -> 21229568 bytes
+ 8 files changed, 2 insertions(+), 2 deletions(-)

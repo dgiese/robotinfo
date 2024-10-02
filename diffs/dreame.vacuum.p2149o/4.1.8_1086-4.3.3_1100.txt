@@ -1,0 +1,296 @@
+Firmware diff for Mijia Self-Cleaning Robot Vacuum-Mop Pro (dreame.vacuum.p2149o)
+Old version: 4.1.8_1086 New version: 4.3.3_1100
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/audio/EN/104.ogg                    | Bin 73638 -> 59944 bytes
+ .../xout/_root/audio/EN/107.ogg                    | Bin 25705 -> 25677 bytes
+ .../xout/_root/audio/EN/108.ogg                    | Bin 61554 -> 62123 bytes
+ .../xout/_root/audio/EN/109.ogg                    | Bin 33361 -> 44767 bytes
+ .../xout/_root/audio/EN/126.ogg                    | Bin 20930 -> 21217 bytes
+ .../xout/_root/audio/EN/127.ogg                    | Bin 24371 -> 27461 bytes
+ .../xout/_root/audio/EN/128.ogg                    | Bin 24371 -> 17483 bytes
+ .../xout/_root/audio/EN/129.ogg                    | Bin 25378 -> 29494 bytes
+ .../xout/_root/audio/EN/130.ogg                    | Bin 25445 -> 20697 bytes
+ .../xout/_root/audio/EN/131.ogg                    | Bin 24409 -> 25616 bytes
+ .../xout/_root/audio/EN/132.ogg                    | Bin 24502 -> 17851 bytes
+ .../xout/_root/audio/EN/133.ogg                    | Bin 24574 -> 26303 bytes
+ .../xout/_root/audio/EN/134.ogg                    | Bin 24574 -> 18754 bytes
+ .../xout/_root/audio/EN/135.ogg                    | Bin 23227 -> 27131 bytes
+ .../xout/_root/audio/EN/136.ogg                    | Bin 23298 -> 17401 bytes
+ .../xout/_root/audio/EN/137.ogg                    | Bin 21067 -> 22456 bytes
+ .../xout/_root/audio/EN/138.ogg                    | Bin 21086 -> 12994 bytes
+ .../xout/_root/audio/EN/14.ogg                     | Bin 56808 -> 94684 bytes
+ .../xout/_root/audio/EN/143.ogg                    | Bin 19599 -> 24438 bytes
+ .../xout/_root/audio/EN/144.ogg                    | Bin 19599 -> 15430 bytes
+ .../xout/_root/audio/EN/145.ogg                    | Bin 35965 -> 40603 bytes
+ .../xout/_root/audio/EN/146.ogg                    | Bin 35965 -> 32737 bytes
+ .../xout/_root/audio/EN/156.ogg                    | Bin 26357 -> 25367 bytes
+ .../xout/_root/audio/EN/16.ogg                     | Bin 39662 -> 78984 bytes
+ .../xout/_root/audio/EN/21.ogg                     | Bin 19151 -> 34658 bytes
+ .../xout/_root/audio/EN/34.ogg                     | Bin 21858 -> 66299 bytes
+ .../xout/_root/audio/EN/35.ogg                     | Bin 24096 -> 52787 bytes
+ .../xout/_root/audio/EN/36.ogg                     | Bin 23360 -> 59648 bytes
+ .../xout/_root/audio/EN/37.ogg                     | Bin 22209 -> 32706 bytes
+ .../xout/_root/audio/EN/38.ogg                     | Bin 22642 -> 32746 bytes
+ .../xout/_root/audio/EN/39.ogg                     | Bin 23089 -> 76075 bytes
+ .../xout/_root/audio/EN/40.ogg                     | Bin 33334 -> 47570 bytes
+ .../xout/_root/audio/EN/41.ogg                     | Bin 31109 -> 53131 bytes
+ .../xout/_root/audio/EN/43.ogg                     | Bin 33833 -> 61276 bytes
+ .../xout/_root/audio/EN/44.ogg                     | Bin 44035 -> 59376 bytes
+ .../xout/_root/audio/EN/52.ogg                     | Bin 41332 -> 67383 bytes
+ .../xout/_root/audio/EN/71.ogg                     | Bin 25985 -> 38195 bytes
+ .../xout/_root/audio/EN/72.ogg                     | Bin 31838 -> 63120 bytes
+ .../xout/_root/audio/EN/73.ogg                     | Bin 51683 -> 39107 bytes
+ .../xout/_root/audio/EN/74.ogg                     | Bin 26290 -> 38832 bytes
+ .../xout/_root/audio/EN/84.ogg                     | Bin 23725 -> 24254 bytes
+ .../xout/_root/audio/EN/91.ogg                     | Bin 46655 -> 59412 bytes
+ .../xout/_root/audio/EN/93.ogg                     | Bin 51520 -> 40094 bytes
+ .../xout/_root/audio/ZH/104.ogg                    | Bin 55036 -> 45599 bytes
+ .../xout/_root/audio/ZH/108.ogg                    | Bin 42263 -> 45775 bytes
+ .../xout/_root/audio/ZH/109.ogg                    | Bin 27887 -> 31513 bytes
+ .../xout/_root/audio/ZH/126.ogg                    | Bin 15804 -> 13728 bytes
+ .../xout/_root/audio/ZH/127.ogg                    | Bin 19800 -> 18945 bytes
+ .../xout/_root/audio/ZH/128.ogg                    | Bin 18833 -> 17732 bytes
+ .../xout/_root/audio/ZH/129.ogg                    | Bin 18848 -> 17512 bytes
+ .../xout/_root/audio/ZH/130.ogg                    | Bin 17819 -> 17211 bytes
+ .../xout/_root/audio/ZH/131.ogg                    | Bin 19715 -> 18359 bytes
+ .../xout/_root/audio/ZH/132.ogg                    | Bin 19387 -> 17587 bytes
+ .../xout/_root/audio/ZH/133.ogg                    | Bin 22028 -> 18118 bytes
+ .../xout/_root/audio/ZH/134.ogg                    | Bin 22020 -> 17664 bytes
+ .../xout/_root/audio/ZH/135.ogg                    | Bin 19390 -> 17529 bytes
+ .../xout/_root/audio/ZH/136.ogg                    | Bin 19187 -> 17363 bytes
+ .../xout/_root/audio/ZH/137.ogg                    | Bin 15930 -> 13100 bytes
+ .../xout/_root/audio/ZH/138.ogg                    | Bin 14826 -> 12955 bytes
+ .../xout/_root/audio/ZH/14.ogg                     | Bin 37434 -> 49789 bytes
+ .../xout/_root/audio/ZH/143.ogg                    | Bin 16005 -> 14648 bytes
+ .../xout/_root/audio/ZH/144.ogg                    | Bin 15173 -> 13663 bytes
+ .../xout/_root/audio/ZH/145.ogg                    | Bin 27295 -> 22834 bytes
+ .../xout/_root/audio/ZH/146.ogg                    | Bin 26383 -> 22424 bytes
+ .../xout/_root/audio/ZH/156.ogg                    | Bin 22487 -> 16886 bytes
+ .../xout/_root/audio/ZH/16.ogg                     | Bin 35116 -> 44038 bytes
+ .../xout/_root/audio/ZH/21.ogg                     | Bin 21509 -> 26223 bytes
+ .../xout/_root/audio/ZH/34.ogg                     | Bin 19558 -> 42963 bytes
+ .../xout/_root/audio/ZH/35.ogg                     | Bin 31407 -> 38072 bytes
+ .../xout/_root/audio/ZH/36.ogg                     | Bin 32397 -> 39043 bytes
+ .../xout/_root/audio/ZH/37.ogg                     | Bin 36971 -> 31916 bytes
+ .../xout/_root/audio/ZH/38.ogg                     | Bin 36862 -> 30792 bytes
+ .../xout/_root/audio/ZH/39.ogg                     | Bin 26999 -> 48682 bytes
+ .../xout/_root/audio/ZH/40.ogg                     | Bin 32032 -> 36854 bytes
+ .../xout/_root/audio/ZH/41.ogg                     | Bin 27936 -> 41007 bytes
+ .../xout/_root/audio/ZH/43.ogg                     | Bin 38422 -> 43383 bytes
+ .../xout/_root/audio/ZH/44.ogg                     | Bin 33560 -> 39083 bytes
+ .../xout/_root/audio/ZH/52.ogg                     | Bin 41061 -> 38404 bytes
+ .../xout/_root/audio/ZH/71.ogg                     | Bin 24009 -> 32187 bytes
+ .../xout/_root/audio/ZH/72.ogg                     | Bin 35650 -> 59646 bytes
+ .../xout/_root/audio/ZH/73.ogg                     | Bin 43672 -> 32437 bytes
+ .../xout/_root/audio/ZH/74.ogg                     | Bin 26734 -> 31175 bytes
+ .../xout/_root/audio/ZH/84.ogg                     | Bin 13872 -> 14474 bytes
+ .../xout/_root/audio/ZH/91.ogg                     | Bin 33726 -> 45504 bytes
+ .../xout/_root/audio/ZH/93.ogg                     | Bin 36334 -> 30535 bytes
+ .../xout/_root/ava/conf/ota.conf                   |   1 -
+ .../xout/_root/ava/conf/p2149.conf                 |   3 +-
+ .../xout/_root/ava/lib/node_clotho.so              | Bin 2199728 -> 2209424 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 77432 -> 77432 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 40648 -> 40648 bytes
+ .../xout/_root/ava/lib/node_health_clotho.so       | Bin 248432 -> 250720 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 124280 -> 124264 bytes
+ .../xout/_root/ava/lib/node_lds.so                 | Bin 181448 -> 181448 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 115560 -> 115560 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 2205176 -> 2194968 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 132920 -> 132992 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 824312 -> 823880 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 94376 -> 94376 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 904104 -> 907672 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 77936 -> 77936 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 200336 -> 201520 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 140184 -> 140184 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 106864 -> 119288 bytes
+ .../xout/_root/ava/script/audio_record.sh}         |  20 +
+ .../xout/_root/ava/script/enchip_test.sh           |   2 +-
+ .../xout/_root/ava/script/mediad_script.sh         |   1 +
+ .../xout/_root/ava/script/wifi_test.sh             |  33 +-
+ .../xout/_root/etc/init.d/factory_ap.sh            |  35 +-
+ .../xout/_root/etc/init.d/wpa_supplicant.sh        |  34 +-
+ .../xout/_root/etc/os-release                      |   6 +-
+ .../4.3.3_1100/xout/_root/etc/private}             |   1 +
+ .../xout/_root/etc/rc.d/miio.sh                    |  12 +-
+ .../xout/_root/etc/rc.d/miio_monitor.sh            |   4 +
+ .../xout/_root/etc/rc.d/msg_trans_monitor.sh       |   2 +-
+ .../xout/_root/etc/rc.d/wifi_monitor.sh            | 173 +++-
+ .../xout/_root/etc/rc.sysinit                      |   3 +-
+ .../xout/_root/etc/wifi/dnsmasq.conf               |   2 +-
+ .../xout/_root/etc/wifi/hostapd.conf               |   2 +-
+ .../xout/_root/etc/wifi/udhcpc.sh => dev/null}     |  45 -
+ .../_root/etc/wifi/wifi_manager.json => dev/null}  |  10 -
+ .../xout/_root/mi_iot_version                      |   2 +-
+ .../xout/_root/misc/data.tar.bz2                   | Bin 756 -> 540 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 175872 -> 175872 bytes
+ .../xout/_root/usr/bin/config                      |  13 +-
+ .../xout/_root/usr/bin/do_start_ap.sh              |  10 +
+ .../xout/_root/usr/bin/exec_proc                   | Bin 11160 -> 11160 bytes
+ .../xout/_root/usr/bin/miio_client                 | Bin 581688 -> 721280 bytes
+ .../_root/usr/bin/miio_client_helper_nomqtt.sh     | 917 ++++++++++-----------
+ .../xout/_root/usr/bin/miio_recv_line              | Bin 5568 -> 5312 bytes
+ .../xout/_root/usr/bin/miio_sdk.sh                 |  39 +-
+ .../xout/_root/usr/bin/miio_send_line              | Bin 5312 -> 5376 bytes
+ .../xout/_root/usr/bin/mjac => dev/null}           | Bin 41264 -> 0 bytes
+ .../xout/_root/usr/bin/reboot.sh                   |   2 +
+ .../xout/_root/usr/bin/record_events.sh}           | 179 ++++
+ .../4.3.3_1100/xout/_root/usr/bin/report_data.sh}  | 123 +++
+ .../xout/_root/usr/bin/softap_down => dev/null}    | Bin 6680 -> 0 bytes
+ .../xout/_root/usr/bin/softap_test => dev/null}    | Bin 6704 -> 0 bytes
+ .../xout/_root/usr/bin/softap_up => dev/null}      | Bin 6936 -> 0 bytes
+ .../xout/_root/usr/bin/start_ap.sh                 |  23 +-
+ .../xout/_root/usr/bin/start_ap_hook.sh            |   1 +
+ .../xout/_root/usr/bin/start_sta.sh                |  22 +-
+ .../xout/_root/usr/bin/sysmon.sh                   |   6 +-
+ .../4.3.3_1100/xout/_root/usr/bin/udhcpc.sh}       |  18 +
+ .../xout/_root/usr/bin/wifi_cli => dev/null}       | Bin 86968 -> 0 bytes
+ .../xout/_root/usr/bin/wifi_connect                | 159 +++-
+ .../xout/_root/usr/bin/wifi_manager => dev/null}   | Bin 245488 -> 0 bytes
+ .../xout/_root/usr/bin/wifi_setup.sh               | 166 +---
+ .../xout/_root/usr/bin/wifi_start.sh               | 671 +++++++++++++--
+ .../xout/_root/usr/bin/wifi_state.sh => dev/null}  |  91 --
+ .../xout/_root/usr/bin/wpa_cli                     | Bin 90872 -> 91152 bytes
+ .../4.3.3_1100/xout/_root/usr/bin/wpa_event.sh}    |  71 ++
+ .../xout/_root/usr/bin/wpa_passphrase              | Bin 44616 -> 44616 bytes
+ .../xout/_root/usr/bin/wpa_supplicant              | Bin 1387776 -> 1387776 bytes
+ .../xout/_root/usr/lib/libip4tc.so}                |   0
+ .../4.3.3_1100/xout/_root/usr/lib/libip4tc.so.0}   |   0
+ .../xout/_root/usr/lib/libip4tc.so.0.1.0}          | Bin 0 -> 24632 bytes
+ .../4.3.3_1100/xout/_root/usr/lib/libip6tc.so}     |   0
+ .../4.3.3_1100/xout/_root/usr/lib/libip6tc.so.0}   |   0
+ .../xout/_root/usr/lib/libip6tc.so.0.1.0}          | Bin 0 -> 25512 bytes
+ .../4.3.3_1100/xout/_root/usr/lib/libiptc.so}      |   0
+ .../4.3.3_1100/xout/_root/usr/lib/libiptc.so.0}    |   0
+ .../xout/_root/usr/lib/libiptc.so.0.0.0}           | Bin 0 -> 4168 bytes
+ .../_root/usr/lib/libjson-c.so.2.0.2 => dev/null}  | Bin 32440 -> 0 bytes
+ .../xout/_root/usr/lib/libsoftap.so => dev/null}   | Bin 19200 -> 0 bytes
+ .../4.3.3_1100/xout/_root/usr/lib/libxtables.so}   |   0
+ .../xout/_root/usr/lib/libxtables.so.10}           |   0
+ .../xout/_root/usr/lib/libxtables.so.10.0.0}       | Bin 0 -> 44816 bytes
+ .../usr/lib/tree_lib/libclotho_route_nodes.so      | Bin 5904992 -> 5884520 bytes
+ .../usr/lib/tree_lib/libclotho_tactics_tree.so     | Bin 1657416 -> 1667608 bytes
+ .../xout/_root/usr/lib/tree_lib/libclotho_tree.so  | Bin 8025768 -> 8097200 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_DNAT.so}    | Bin 0 -> 8488 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_DNPT.so}    | Bin 0 -> 6912 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_HL.so}      | Bin 0 -> 6952 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_LOG.so}     | Bin 0 -> 8152 bytes
+ .../_root/usr/lib/xtables/libip6t_MASQUERADE.so}   | Bin 0 -> 6920 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_NETMAP.so}  | Bin 0 -> 6856 bytes
+ .../_root/usr/lib/xtables/libip6t_REDIRECT.so}     | Bin 0 -> 6928 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_REJECT.so}  | Bin 0 -> 7416 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_SNAT.so}    | Bin 0 -> 8472 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_SNPT.so}    | Bin 0 -> 6912 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_ah.so}      | Bin 0 -> 6936 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_dst.so}     | Bin 0 -> 7704 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_eui64.so}   | Bin 0 -> 4632 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_frag.so}    | Bin 0 -> 7384 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_hbh.so}     | Bin 0 -> 7768 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_hl.so}      | Bin 0 -> 7056 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_icmp6.so}   | Bin 0 -> 9136 bytes
+ .../_root/usr/lib/xtables/libip6t_ipv6header.so}   | Bin 0 -> 8720 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_mh.so}      | Bin 0 -> 8384 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_rt.so}      | Bin 0 -> 9080 bytes
+ .../_root/usr/lib/xtables/libipt_CLUSTERIP.so}     | Bin 0 -> 7608 bytes
+ .../xout/_root/usr/lib/xtables/libipt_DNAT.so}     | Bin 0 -> 8536 bytes
+ .../xout/_root/usr/lib/xtables/libipt_ECN.so}      | Bin 0 -> 7000 bytes
+ .../xout/_root/usr/lib/xtables/libipt_LOG.so}      | Bin 0 -> 8160 bytes
+ .../_root/usr/lib/xtables/libipt_MASQUERADE.so}    | Bin 0 -> 6920 bytes
+ .../xout/_root/usr/lib/xtables/libipt_MIRROR.so}   | Bin 0 -> 4640 bytes
+ .../xout/_root/usr/lib/xtables/libipt_NETMAP.so}   | Bin 0 -> 5784 bytes
+ .../xout/_root/usr/lib/xtables/libipt_REDIRECT.so} | Bin 0 -> 6928 bytes
+ .../xout/_root/usr/lib/xtables/libipt_REJECT.so}   | Bin 0 -> 8328 bytes
+ .../xout/_root/usr/lib/xtables/libipt_SAME.so}     | Bin 0 -> 7600 bytes
+ .../xout/_root/usr/lib/xtables/libipt_SNAT.so}     | Bin 0 -> 8520 bytes
+ .../xout/_root/usr/lib/xtables/libipt_TTL.so}      | Bin 0 -> 6952 bytes
+ .../xout/_root/usr/lib/xtables/libipt_ULOG.so}     | Bin 0 -> 7032 bytes
+ .../xout/_root/usr/lib/xtables/libipt_ah.so}       | Bin 0 -> 6848 bytes
+ .../xout/_root/usr/lib/xtables/libipt_icmp.so}     | Bin 0 -> 11632 bytes
+ .../xout/_root/usr/lib/xtables/libipt_realm.so}    | Bin 0 -> 7136 bytes
+ .../xout/_root/usr/lib/xtables/libipt_ttl.so}      | Bin 0 -> 6992 bytes
+ .../xout/_root/usr/lib/xtables/libipt_unclean.so}  | Bin 0 -> 4632 bytes
+ .../xout/_root/usr/lib/xtables/libxt_AUDIT.so}     | Bin 0 -> 6864 bytes
+ .../xout/_root/usr/lib/xtables/libxt_CHECKSUM.so}  | Bin 0 -> 5592 bytes
+ .../xout/_root/usr/lib/xtables/libxt_CLASSIFY.so}  | Bin 0 -> 6864 bytes
+ .../xout/_root/usr/lib/xtables/libxt_CONNMARK.so}  | Bin 0 -> 9944 bytes
+ .../_root/usr/lib/xtables/libxt_CONNSECMARK.so}    | Bin 0 -> 6904 bytes
+ .../xout/_root/usr/lib/xtables/libxt_CT.so}        | Bin 0 -> 12840 bytes
+ .../xout/_root/usr/lib/xtables/libxt_DSCP.so}      | Bin 0 -> 7640 bytes
+ .../xout/_root/usr/lib/xtables/libxt_HMARK.so}     | Bin 0 -> 12080 bytes
+ .../xout/_root/usr/lib/xtables/libxt_IDLETIMER.so} | Bin 0 -> 5704 bytes
+ .../xout/_root/usr/lib/xtables/libxt_LED.so}       | Bin 0 -> 7112 bytes
+ .../xout/_root/usr/lib/xtables/libxt_MARK.so}      | Bin 0 -> 8880 bytes
+ .../xout/_root/usr/lib/xtables/libxt_NFLOG.so}     | Bin 0 -> 7016 bytes
+ .../xout/_root/usr/lib/xtables/libxt_NFQUEUE.so}   | Bin 0 -> 8424 bytes
+ .../xout/_root/usr/lib/xtables/libxt_NOTRACK.so}   | Bin 0 -> 12840 bytes
+ .../xout/_root/usr/lib/xtables/libxt_RATEEST.so}   | Bin 0 -> 7528 bytes
+ .../xout/_root/usr/lib/xtables/libxt_SECMARK.so}   | Bin 0 -> 5768 bytes
+ .../xout/_root/usr/lib/xtables/libxt_SET.so}       | Bin 0 -> 13048 bytes
+ .../xout/_root/usr/lib/xtables/libxt_SYNPROXY.so}  | Bin 0 -> 7040 bytes
+ .../xout/_root/usr/lib/xtables/libxt_TCPMSS.so}    | Bin 0 -> 7232 bytes
+ .../_root/usr/lib/xtables/libxt_TCPOPTSTRIP.so}    | Bin 0 -> 7584 bytes
+ .../xout/_root/usr/lib/xtables/libxt_TEE.so}       | Bin 0 -> 7120 bytes
+ .../xout/_root/usr/lib/xtables/libxt_TOS.so}       | Bin 0 -> 8512 bytes
+ .../xout/_root/usr/lib/xtables/libxt_TPROXY.so}    | Bin 0 -> 7640 bytes
+ .../xout/_root/usr/lib/xtables/libxt_TRACE.so}     | Bin 0 -> 4640 bytes
+ .../xout/_root/usr/lib/xtables/libxt_addrtype.so}  | Bin 0 -> 9856 bytes
+ .../xout/_root/usr/lib/xtables/libxt_bpf.so}       | Bin 0 -> 7000 bytes
+ .../xout/_root/usr/lib/xtables/libxt_cluster.so}   | Bin 0 -> 7024 bytes
+ .../xout/_root/usr/lib/xtables/libxt_comment.so}   | Bin 0 -> 5584 bytes
+ .../xout/_root/usr/lib/xtables/libxt_connbytes.so} | Bin 0 -> 7424 bytes
+ .../xout/_root/usr/lib/xtables/libxt_connlimit.so} | Bin 0 -> 8656 bytes
+ .../xout/_root/usr/lib/xtables/libxt_connmark.so}  | Bin 0 -> 7032 bytes
+ .../xout/_root/usr/lib/xtables/libxt_conntrack.so} | Bin 0 -> 24280 bytes
+ .../xout/_root/usr/lib/xtables/libxt_cpu.so}       | Bin 0 -> 5520 bytes
+ .../xout/_root/usr/lib/xtables/libxt_dccp.so}      | Bin 0 -> 9088 bytes
+ .../xout/_root/usr/lib/xtables/libxt_devgroup.so}  | Bin 0 -> 7728 bytes
+ .../xout/_root/usr/lib/xtables/libxt_dscp.so}      | Bin 0 -> 7584 bytes
+ .../xout/_root/usr/lib/xtables/libxt_ecn.so}       | Bin 0 -> 6944 bytes
+ .../xout/_root/usr/lib/xtables/libxt_esp.so}       | Bin 0 -> 6840 bytes
+ .../xout/_root/usr/lib/xtables/libxt_hashlimit.so} | Bin 0 -> 16536 bytes
+ .../xout/_root/usr/lib/xtables/libxt_helper.so}    | Bin 0 -> 5704 bytes
+ .../xout/_root/usr/lib/xtables/libxt_iprange.so}   | Bin 0 -> 11448 bytes
+ .../xout/_root/usr/lib/xtables/libxt_ipvs.so}      | Bin 0 -> 9928 bytes
+ .../xout/_root/usr/lib/xtables/libxt_length.so}    | Bin 0 -> 5840 bytes
+ .../xout/_root/usr/lib/xtables/libxt_limit.so}     | Bin 0 -> 7216 bytes
+ .../xout/_root/usr/lib/xtables/libxt_mac.so}       | Bin 0 -> 5704 bytes
+ .../xout/_root/usr/lib/xtables/libxt_mark.so}      | Bin 0 -> 7024 bytes
+ .../xout/_root/usr/lib/xtables/libxt_multiport.so} | Bin 0 -> 11736 bytes
+ .../xout/_root/usr/lib/xtables/libxt_nfacct.so}    | Bin 0 -> 6864 bytes
+ .../xout/_root/usr/lib/xtables/libxt_osf.so}       | Bin 0 -> 6944 bytes
+ .../xout/_root/usr/lib/xtables/libxt_owner.so}     | Bin 0 -> 12624 bytes
+ .../xout/_root/usr/lib/xtables/libxt_physdev.so}   | Bin 0 -> 7344 bytes
+ .../xout/_root/usr/lib/xtables/libxt_pkttype.so}   | Bin 0 -> 7008 bytes
+ .../xout/_root/usr/lib/xtables/libxt_policy.so}    | Bin 0 -> 12024 bytes
+ .../xout/_root/usr/lib/xtables/libxt_quota.so}     | Bin 0 -> 5536 bytes
+ .../xout/_root/usr/lib/xtables/libxt_rateest.so}   | Bin 0 -> 11920 bytes
+ .../xout/_root/usr/lib/xtables/libxt_recent.so}    | Bin 0 -> 12440 bytes
+ .../xout/_root/usr/lib/xtables/libxt_rpfilter.so}  | Bin 0 -> 6984 bytes
+ .../xout/_root/usr/lib/xtables/libxt_sctp.so}      | Bin 0 -> 13304 bytes
+ .../xout/_root/usr/lib/xtables/libxt_set.so}       | Bin 0 -> 16240 bytes
+ .../xout/_root/usr/lib/xtables/libxt_socket.so}    | Bin 0 -> 7352 bytes
+ .../xout/_root/usr/lib/xtables/libxt_standard.so}  | Bin 0 -> 4840 bytes
+ .../xout/_root/usr/lib/xtables/libxt_state.so}     | Bin 0 -> 24280 bytes
+ .../xout/_root/usr/lib/xtables/libxt_statistic.so} | Bin 0 -> 7184 bytes
+ .../xout/_root/usr/lib/xtables/libxt_string.so}    | Bin 0 -> 11432 bytes
+ .../xout/_root/usr/lib/xtables/libxt_tcp.so}       | Bin 0 -> 11312 bytes
+ .../xout/_root/usr/lib/xtables/libxt_tcpmss.so}    | Bin 0 -> 5832 bytes
+ .../xout/_root/usr/lib/xtables/libxt_time.so}      | Bin 0 -> 12576 bytes
+ .../xout/_root/usr/lib/xtables/libxt_tos.so}       | Bin 0 -> 7520 bytes
+ .../xout/_root/usr/lib/xtables/libxt_u32.so}       | Bin 0 -> 8456 bytes
+ .../xout/_root/usr/lib/xtables/libxt_udp.so}       | Bin 0 -> 7000 bytes
+ .../4.3.3_1100/xout/_root/usr/sbin/ip6tables}      |   0
+ .../xout/_root/usr/sbin/ip6tables-restore}         |   0
+ .../4.3.3_1100/xout/_root/usr/sbin/ip6tables-save} |   0
+ .../4.3.3_1100/xout/_root/usr/sbin/iptables}       |   0
+ .../xout/_root/usr/sbin/iptables-restore}          |   0
+ .../4.3.3_1100/xout/_root/usr/sbin/iptables-save}  |   0
+ .../4.3.3_1100/xout/_root/usr/sbin/xtables-multi}  | Bin 0 -> 79880 bytes
+ .../xout/_root/version_record                      |  16 +-
+ .../{4.1.8_1086 => 4.3.3_1100}/xout/kernel.img     | Bin 10524672 -> 10524672 bytes
+ .../{4.1.8_1086 => 4.3.3_1100}/xout/mcu.bin        | Bin 148844 -> 149820 bytes
+ .../{4.1.8_1086 => 4.3.3_1100}/xout/toc1.fex       | Bin 1196032 -> 1196032 bytes
+ 290 files changed, 1916 insertions(+), 1004 deletions(-)

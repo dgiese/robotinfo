@@ -1,0 +1,27 @@
+Firmware diff for Roborock Q7 Max (roborock.vacuum.a38)
+Old version: 4.3.5_0906 New version: 4.3.5_0918
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/OS_VERSION                      |   8 ++++----
+ .../xout/_root/etc/os-release                      |   2 +-
+ .../xout/_root/etc/rr-info                         |   2 +-
+ .../xout/_root/lib/modules/3.4.39/8189es.ko        | Bin 2129136 -> 2129136 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 266404 -> 266428 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 57464 -> 57492 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 3443672 -> 3443672 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ ...A14.G1_M4.1.0_RELEASE_20230927-185222_FULL.bin} | Bin 491504 -> 491504 bytes
+ ...14_M4.1.0_RELEASE_20230927-184954_INV_FULL.bin} | Bin 491504 -> 491504 bytes
+ ...1_M4.1.0_RELEASE_20230927-184651_512K_FULL.bin} | Bin 491504 -> 491504 bytes
+ ...1_M4.1.0_RELEASE_20230927-184751_256K_FULL.bin} | Bin 229360 -> 229360 bytes
+ ....1.0_RELEASE_20230927-184354_512K_INV_FULL.bin} | Bin 491504 -> 491504 bytes
+ ....1.0_RELEASE_20230927-184459_256K_INV_FULL.bin} | Bin 229360 -> 229360 bytes
+ .../firmware/uart_test-4.0.2-20230927185247}       | Bin 475188 -> 475188 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_rr         | Bin 207200 -> 207200 bytes
+ .../xout/bootout_aboot/zImage                      | Bin 3797976 -> 3798024 bytes
+ .../xout/bootout_aboot/zImage_4.3.5_0918.elf}      | Bin 9960617 -> 9960617 bytes
+ .../{4.3.5_0906 => 4.3.5_0918}/xout/kernel.img     | Bin 3801088 -> 3801088 bytes
+ 21 files changed, 9 insertions(+), 9 deletions(-)

@@ -1,0 +1,68 @@
+Firmware diff for Mijia Robot Vacuum-Mop Ultra Slim (dreame.vacuum.p2148o)
+Old version: 4.1.2_1030 New version: 4.1.2_1036
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_com.so                 | Bin 37504 -> 37504 bytes
+ .../xout/_root/ava/lib/node_health_lachesis.so     | Bin 185312 -> 181552 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 98784 -> 98784 bytes
+ .../xout/_root/ava/lib/node_lachesis.so            | Bin 871696 -> 875800 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 36416 -> 36416 bytes
+ .../xout/_root/ava/lib/node_map_accumulator.so     | Bin 839704 -> 839704 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 77648 -> 77648 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 812024 -> 832384 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 73632 -> 73632 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 123328 -> 123328 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 103560 -> 103560 bytes
+ .../xout/_root/ava/script/mediad_script.sh         |  13 ++-
+ .../xout/_root/etc/os-release                      |   6 +-
+ .../xout/_root/misc/data.tar.bz2                   | Bin 631 -> 630 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ofilm_calibration           | Bin 16792 -> 16792 bytes
+ .../xout/_root/usr/bin/sunny_calibration           | Bin 31960 -> 31960 bytes
+ .../usr/lib/ckport/db/libao.ckport => dev/null}    |  33 --------
+ .../glog/glog-config-version.cmake => dev/null}    |  46 ----------
+ .../lib/cmake/glog/glog-config.cmake => dev/null}  |  21 -----
+ .../glog/glog-targets-release.cmake => dev/null}   |  19 -----
+ .../lib/cmake/glog/glog-targets.cmake => dev/null} |  94 ---------------------
+ .../usr/lib/engines-1.1/afalg.so => dev/null}      | Bin 15456 -> 0 bytes
+ .../_root/usr/lib/engines-1.1/capi.so => dev/null} | Bin 4256 -> 0 bytes
+ .../usr/lib/engines-1.1/padlock.so => dev/null}    | Bin 4256 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/basic.a => dev/null}     | Bin 4710 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/basic.la => dev/null}    |  41 ---------
+ .../usr/lib/libnl/cli/cls/basic.so => dev/null}    | Bin 6712 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/cgroup.a => dev/null}    | Bin 3968 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/cgroup.la => dev/null}   |  41 ---------
+ .../usr/lib/libnl/cli/cls/cgroup.so => dev/null}   | Bin 5704 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/bfifo.a => dev/null}   | Bin 4208 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/bfifo.la => dev/null}  |  41 ---------
+ .../usr/lib/libnl/cli/qdisc/bfifo.so => dev/null}  | Bin 6648 -> 0 bytes
+ .../lib/libnl/cli/qdisc/blackhole.a => dev/null}   | Bin 3624 -> 0 bytes
+ .../lib/libnl/cli/qdisc/blackhole.la => dev/null}  |  41 ---------
+ .../lib/libnl/cli/qdisc/blackhole.so => dev/null}  | Bin 5248 -> 0 bytes
+ .../lib/libnl/cli/qdisc/fq_codel.a => dev/null}    | Bin 5126 -> 0 bytes
+ .../lib/libnl/cli/qdisc/fq_codel.la => dev/null}   |  41 ---------
+ .../lib/libnl/cli/qdisc/fq_codel.so => dev/null}   | Bin 6800 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/hfsc.a => dev/null}    | Bin 7670 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/hfsc.la => dev/null}   |  41 ---------
+ .../usr/lib/libnl/cli/qdisc/hfsc.so => dev/null}   | Bin 8536 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/htb.a => dev/null}     | Bin 7956 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/htb.la => dev/null}    |  41 ---------
+ .../usr/lib/libnl/cli/qdisc/htb.so => dev/null}    | Bin 8792 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/ingress.a => dev/null} | Bin 3588 -> 0 bytes
+ .../lib/libnl/cli/qdisc/ingress.la => dev/null}    |  41 ---------
+ .../lib/libnl/cli/qdisc/ingress.so => dev/null}    | Bin 5216 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/pfifo.a => dev/null}   | Bin 3984 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/pfifo.la => dev/null}  |  41 ---------
+ .../usr/lib/libnl/cli/qdisc/pfifo.so => dev/null}  | Bin 5680 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/plug.a => dev/null}    | Bin 5678 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/plug.la => dev/null}   |  41 ---------
+ .../usr/lib/libnl/cli/qdisc/plug.so => dev/null}   | Bin 7480 -> 0 bytes
+ .../usr/lib/tree_lib/liblachesis_route_nodes.so    | Bin 4206768 -> 4190416 bytes
+ .../usr/lib/tree_lib/liblachesis_tactics_tree.so   | Bin 1097200 -> 1101096 bytes
+ .../_root/usr/lib/tree_lib/liblachesis_tree.so     | Bin 5517976 -> 5544344 bytes
+ .../xout/_root/version_record                      |   8 +-
+ .../{4.1.2_1030 => 4.1.2_1036}/xout/kernel.img     | Bin 10379264 -> 10379264 bytes
+ .../{4.1.2_1030 => 4.1.2_1036}/xout/mcu.bin        | Bin 138112 -> 138128 bytes
+ .../{4.1.2_1030 => 4.1.2_1036}/xout/toc1.fex       | Bin 1179648 -> 1179648 bytes
+ 62 files changed, 18 insertions(+), 634 deletions(-)

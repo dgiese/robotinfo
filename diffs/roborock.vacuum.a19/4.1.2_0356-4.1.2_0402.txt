@@ -1,0 +1,58 @@
+Firmware diff for Roborock S4 Max (roborock.vacuum.a19)
+Old version: 4.1.2_0356 New version: 4.1.2_0402
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/OS_VERSION                      |   8 +-
+ .../xout/_root/etc/inittab                         |   2 +-
+ .../xout/_root/etc/os-release                      |   2 +-
+ .../xout/_root/etc/rr-info                         |   2 +-
+ .../4.1.2_0402/xout/_root/etc/ssv6x5x-wifi.cfg}    |   4 +
+ .../xout/_root/lib/modules/3.4.39/8189es.ko        | Bin 2255720 -> 2255892 bytes
+ .../xout/_root/lib/modules/3.4.39/Module.symvers   | 101 +++++++++++++++++++++
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 301448 -> 301416 bytes
+ .../xout/_root/lib/modules/3.4.39/modules.alias    |   3 +
+ .../_root/lib/modules/3.4.39/modules.alias.bin     | Bin 171 -> 340 bytes
+ .../xout/_root/lib/modules/3.4.39/modules.dep      |   1 +
+ .../xout/_root/lib/modules/3.4.39/modules.dep.bin  | Bin 684 -> 710 bytes
+ .../xout/_root/lib/modules/3.4.39/modules.symbols  |  26 ++++++
+ .../_root/lib/modules/3.4.39/modules.symbols.bin   | Bin 11521 -> 12809 bytes
+ .../xout/_root/lib/modules/3.4.39/ssv6x5x.ko}      | Bin 0 -> 582428 bytes
+ .../xout/_root/lib/modules/3.4.39/st480.ko         | Bin 48672 -> 48672 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 66064 -> 66056 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../xout/_root/opt/rockrobo/cleaner/bin/AppProxy   | Bin 876128 -> 888512 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboController  | Bin 232364 -> 232364 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerM | Bin 298364 -> 298364 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerR | Bin 232364 -> 232364 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/SysUpdate  | Bin 101456 -> 101456 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/rr_loader  | Bin 69228 -> 69228 bytes
+ .../_root/opt/rockrobo/cleaner/lib/libroboipc.so   | Bin 44776 -> 44776 bytes
+ .../opt/rockrobo/cleaner/lib/librobopersist.so     | Bin 67868 -> 67868 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_chassis.so   | Bin 63428 -> 63428 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_compass.so   | Bin 22224 -> 22224 bytes
+ .../opt/rockrobo/cleaner/lib/librr_plugin_laser.so | Bin 59432 -> 59432 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_logger.so    | Bin 5544 -> 5544 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrlog.so     | Bin 294556 -> 294556 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 2396124 -> 2396124 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrslamdrv.so | Bin 281212 -> 281212 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrutils.so   | Bin 9788 -> 9788 bytes
+ .../xout/_root/opt/rockrobo/cleaner/lib/libstat.so | Bin 328520 -> 374032 bytes
+ .../opt/rockrobo/cleaner/lib/libuart_api.so.4.0.1  | Bin 126976 -> 127336 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ ....A3.G1_M4.0.1_RELEASE_20210514-154854_FULL.bin} | Bin 217072 -> 217072 bytes
+ ...A3_M4.0.1_RELEASE_20210514-154510_INV_FULL.bin} | Bin 217072 -> 217072 bytes
+ .../firmware/uart_test-4.0.1-20210111 => dev/null} | Bin 488844 -> 0 bytes
+ .../rockrobo/firmware/uart_test-4.0.1-20210514}    | Bin 0 -> 493032 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_rr         | Bin 186704 -> 190808 bytes
+ .../xout/_root/opt/rockrobo/rrlog/rrlogd           | Bin 285216 -> 285220 bytes
+ .../xout/_root/opt/rockrobo/scripts/provision.sh   |   6 +-
+ .../xout/_root/opt/rockrobo/watchdog/WatchDoge     | Bin 80212 -> 80212 bytes
+ .../xout/_root/opt/rockrobo/wlan/wifi_start.sh     |  88 +++++++++++++-----
+ .../xout/_root/opt/rockrobo/wlan/wlanmgr           | Bin 34804 -> 38932 bytes
+ .../xout/bootout_aboot/bootimg.cfg                 |   2 +-
+ .../xout/bootout_aboot/zImage                      | Bin 3827064 -> 3949424 bytes
+ .../xout/bootout_aboot/zImage_4.1.2_0402.elf}      | Bin 9974427 -> 10303078 bytes
+ .../{4.1.2_0356 => 4.1.2_0402}/xout/kernel.img     | Bin 3829760 -> 3952640 bytes
+ 52 files changed, 214 insertions(+), 37 deletions(-)

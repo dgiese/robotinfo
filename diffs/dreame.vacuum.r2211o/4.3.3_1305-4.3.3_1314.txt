@@ -1,0 +1,26 @@
+Firmware diff for Xiaomi Robot Vacuum S10+ (dreame.vacuum.r2211o)
+Old version: 4.3.3_1305 New version: 4.3.3_1314
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/audio/EN/126.ogg                    | Bin 21217 -> 10220 bytes
+ .../xout/_root/audio/EN/14.ogg                     | Bin 94684 -> 48738 bytes
+ .../xout/_root/audio/EN/30.ogg                     | Bin 35848 -> 18794 bytes
+ .../xout/_root/audio/EN/34.ogg                     | Bin 66299 -> 31887 bytes
+ .../xout/_root/audio/EN/37.ogg                     | Bin 32706 -> 16976 bytes
+ .../xout/_root/audio/EN/38.ogg                     | Bin 32746 -> 17767 bytes
+ .../xout/_root/audio/EN/86.ogg                     | Bin 34583 -> 16857 bytes
+ .../xout/_root/etc/os-release                      |   6 +++---
+ .../xout/_root/misc/data.tar.bz2                   | Bin 553 -> 544 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/daemon                      | Bin 22664 -> 22664 bytes
+ .../4.3.3_1314/xout/_root/usr/lib/libfmt.so}       |   0
+ .../4.3.3_1314/xout/_root/usr/lib/libfmt.so.6}     |   0
+ .../4.3.3_1314/xout/_root/usr/lib/libfmt.so.6.0.0} | Bin 0 -> 176500 bytes
+ .../xout/_root/usr/lib/libsys_guard.so             | Bin 31832 -> 31832 bytes
+ .../xout/_root/version_record                      |   6 +++---
+ .../{4.3.3_1305 => 4.3.3_1314}/xout/kernel.img     | Bin 2932736 -> 2932736 bytes
+ .../{4.3.3_1305 => 4.3.3_1314}/xout/mcu.bin        | Bin 188552 -> 199792 bytes
+ .../{4.3.3_1305 => 4.3.3_1314}/xout/toc0.fex       | Bin 114688 -> 114688 bytes
+ .../{4.3.3_1305 => 4.3.3_1314}/xout/toc1.fex       | Bin 1507328 -> 1507328 bytes
+ 20 files changed, 7 insertions(+), 7 deletions(-)

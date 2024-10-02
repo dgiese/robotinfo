@@ -1,0 +1,380 @@
+Firmware diff for Dreame Bot D9 Max (dreame.vacuum.p2259)
+Old version: 3.5.8_1004 New version: 3.5.8_1109
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/audio/CAL/EN/1.ogg                  | Bin 12889 -> 9229 bytes
+ .../xout/_root/audio/CAL/EN/10.ogg                 | Bin 21732 -> 16136 bytes
+ .../xout/_root/audio/CAL/EN/11.ogg                 | Bin 11022 -> 6918 bytes
+ .../xout/_root/audio/CAL/EN/12.ogg                 | Bin 10688 -> 7104 bytes
+ .../xout/_root/audio/CAL/EN/13.ogg                 | Bin 7701 -> 5222 bytes
+ .../xout/_root/audio/CAL/EN/2.ogg                  | Bin 19604 -> 13796 bytes
+ .../xout/_root/audio/CAL/EN/3.ogg                  | Bin 14138 -> 9913 bytes
+ .../xout/_root/audio/CAL/EN/4.ogg                  | Bin 20255 -> 14616 bytes
+ .../xout/_root/audio/CAL/EN/5.ogg                  | Bin 15419 -> 11035 bytes
+ .../xout/_root/audio/CAL/EN/6.ogg                  | Bin 15730 -> 11474 bytes
+ .../xout/_root/audio/CAL/EN/7.ogg                  | Bin 20934 -> 15818 bytes
+ .../xout/_root/audio/CAL/EN/8.ogg                  | Bin 15834 -> 11329 bytes
+ .../xout/_root/audio/CAL/EN/9.ogg                  | Bin 16205 -> 11763 bytes
+ .../xout/_root/audio/CAL/ZH/1.ogg                  | Bin 10257 -> 7575 bytes
+ .../xout/_root/audio/CAL/ZH/10.ogg                 | Bin 13606 -> 9992 bytes
+ .../xout/_root/audio/CAL/ZH/11.ogg                 | Bin 8606 -> 5366 bytes
+ .../xout/_root/audio/CAL/ZH/12.ogg                 | Bin 8439 -> 5524 bytes
+ .../xout/_root/audio/CAL/ZH/13.ogg                 | Bin 8350 -> 5489 bytes
+ .../xout/_root/audio/CAL/ZH/2.ogg                  | Bin 15768 -> 11117 bytes
+ .../xout/_root/audio/CAL/ZH/3.ogg                  | Bin 9246 -> 7067 bytes
+ .../xout/_root/audio/CAL/ZH/4.ogg                  | Bin 13603 -> 10122 bytes
+ .../xout/_root/audio/CAL/ZH/5.ogg                  | Bin 9544 -> 7139 bytes
+ .../xout/_root/audio/CAL/ZH/6.ogg                  | Bin 9775 -> 7342 bytes
+ .../xout/_root/audio/CAL/ZH/7.ogg                  | Bin 13373 -> 9970 bytes
+ .../xout/_root/audio/CAL/ZH/8.ogg                  | Bin 10210 -> 7534 bytes
+ .../xout/_root/audio/CAL/ZH/9.ogg                  | Bin 9918 -> 7608 bytes
+ .../xout/_root/audio/EN/46.ogg                     | Bin 42300 -> 52424 bytes
+ .../audio/SYS/CAL/ai_califile_non-existent.ogg}    | Bin 0 -> 8498 bytes
+ .../audio/SYS/CAL/laser_califile_non-existent.ogg} | Bin 0 -> 9394 bytes
+ .../audio/SYS/CAL/lds_califile_non-existent.ogg}   | Bin 0 -> 9699 bytes
+ .../audio/SYS/CAL/machine_camera_uncalibrated.ogg} | Bin 0 -> 7841 bytes
+ .../CAL/tof_external_parameter_uncalibrated.ogg}   | Bin 0 -> 10260 bytes
+ .../xout/_root/audio/SYS/adb_usage_warn.ogg}       | Bin 0 -> 12793 bytes
+ .../xout/_root/audio/SYS/burn_number_fail.ogg      | Bin 9175 -> 5664 bytes
+ .../_root/audio/SYS/burn_number_successful.ogg     | Bin 9090 -> 5757 bytes
+ .../_root/audio/SYS/data_space_usage_overtop.ogg   | Bin 13020 -> 8097 bytes
+ .../_root/audio/SYS/firmware_download_failed.ogg}  | Bin 0 -> 6658 bytes
+ .../SYS/firmware_md5_verification_failed.ogg}      | Bin 0 -> 8239 bytes
+ .../machine_camera_uncalibrated.ogg => dev/null}   | Bin 12636 -> 0 bytes
+ .../xout/_root/audio/SYS/machine_no_burning.ogg    | Bin 9756 -> 6014 bytes
+ .../xout/_root/audio/SYS/main_program_crash.ogg    | Bin 14278 -> 9905 bytes
+ .../audio/SYS/main_program_openfile_overmuch.ogg   | Bin 15633 -> 9732 bytes
+ .../xout/_root/audio/SYS/main_program_stutter.ogg  | Bin 9388 -> 6467 bytes
+ .../xout/_root/audio/SYS/memory_usage_overtop.ogg  | Bin 12254 -> 7613 bytes
+ .../xout/_root/audio/SYS/net_scan_ok.ogg           | Bin 8843 -> 6764 bytes
+ .../xout/_root/audio/SYS/start_burn_number.ogg     | Bin 9257 -> 5571 bytes
+ .../xout/_root/audio/SYS/start_core_board_test.ogg | Bin 12214 -> 7480 bytes
+ .../_root/audio/SYS/start_udisk_record_log.ogg     | Bin 11945 -> 8615 bytes
+ .../xout/_root/audio/SYS/wifi_load_fail.ogg        | Bin 11846 -> 8410 bytes
+ .../xout/_root/audio/TEST/29.ogg => dev/null}      | Bin 10856 -> 0 bytes
+ .../xout/_root/audio/TEST/30.ogg => dev/null}      | Bin 10258 -> 0 bytes
+ .../xout/_root/audio/TEST/31.ogg => dev/null}      | Bin 26136 -> 0 bytes
+ .../xout/_root/audio/TEST/32.ogg => dev/null}      | Bin 27992 -> 0 bytes
+ .../xout/_root/audio/TEST/33.ogg => dev/null}      | Bin 29683 -> 0 bytes
+ .../xout/_root/audio/TEST/34.ogg => dev/null}      | Bin 28688 -> 0 bytes
+ .../xout/_root/audio/TEST/35.ogg => dev/null}      | Bin 19360 -> 0 bytes
+ .../xout/_root/audio/TEST/36.ogg => dev/null}      | Bin 19668 -> 0 bytes
+ .../xout/_root/audio/TEST/37.ogg => dev/null}      | Bin 8606 -> 0 bytes
+ .../xout/_root/audio/TEST/38.ogg => dev/null}      | Bin 8439 -> 0 bytes
+ .../xout/_root/audio/TEST/39.ogg => dev/null}      | Bin 11554 -> 0 bytes
+ .../xout/_root/audio/TEST/40.ogg => dev/null}      | Bin 20938 -> 0 bytes
+ .../xout/_root/audio/TEST/7.ogg                    | Bin 8264 -> 12255 bytes
+ .../_root/audio/TEST/BLEMEDIA.ogg => dev/null}     | Bin 23199 -> 0 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/10.ogg}    | Bin 0 -> 6535 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/11.ogg}    | Bin 0 -> 13412 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/12.ogg}    | Bin 0 -> 12908 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/13.ogg}    | Bin 0 -> 7201 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/14.ogg}    | Bin 0 -> 7036 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/15.ogg}    | Bin 0 -> 6966 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/16.ogg}    | Bin 0 -> 6496 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/17.ogg}    | Bin 0 -> 6857 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/18.ogg}    | Bin 0 -> 6655 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/19.ogg}    | Bin 0 -> 6573 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/20.ogg}    | Bin 0 -> 7190 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/21.ogg}    | Bin 0 -> 13398 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/22.ogg}    | Bin 0 -> 7465 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/23.ogg}    | Bin 0 -> 7287 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/24.ogg}    | Bin 0 -> 6913 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/25.ogg}    | Bin 0 -> 7314 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/26.ogg}    | Bin 0 -> 11238 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/27.ogg}    | Bin 0 -> 10904 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/28.ogg}    | Bin 0 -> 10495 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/29.ogg}    | Bin 0 -> 9697 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/30.ogg}    | Bin 0 -> 9561 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/31.ogg}    | Bin 0 -> 9049 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/32.ogg}    | Bin 0 -> 10803 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/33.ogg}    | Bin 0 -> 15010 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/34.ogg}    | Bin 0 -> 14987 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/35.ogg}    | Bin 0 -> 3751 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/37.ogg}    | Bin 0 -> 6733 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/38.ogg}    | Bin 0 -> 7431 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/39.ogg}    | Bin 0 -> 11969 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/4.ogg}     | Bin 0 -> 10568 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/41.ogg}    | Bin 0 -> 8098 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/42.ogg}    | Bin 0 -> 8017 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/43.ogg}    | Bin 0 -> 9059 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/44.ogg}    | Bin 0 -> 5116 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/5.ogg}     | Bin 0 -> 5499 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/6.ogg}     | Bin 0 -> 10669 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/7.ogg}     | Bin 0 -> 9541 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/8.ogg}     | Bin 0 -> 7145 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/EN/9.ogg}     | Bin 0 -> 17916 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/10.ogg}    | Bin 0 -> 8658 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/11.ogg}    | Bin 0 -> 8711 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/12.ogg}    | Bin 0 -> 8671 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/13.ogg}    | Bin 0 -> 6831 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/14.ogg}    | Bin 0 -> 6764 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/15.ogg}    | Bin 0 -> 6104 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/16.ogg}    | Bin 0 -> 6480 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/17.ogg}    | Bin 0 -> 6054 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/18.ogg}    | Bin 0 -> 6750 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/19.ogg}    | Bin 0 -> 5934 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/20.ogg}    | Bin 0 -> 6339 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/21.ogg}    | Bin 0 -> 12044 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/22.ogg}    | Bin 0 -> 6156 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/23.ogg}    | Bin 0 -> 6169 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/24.ogg}    | Bin 0 -> 6116 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/25.ogg}    | Bin 0 -> 6464 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/26.ogg}    | Bin 0 -> 10367 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/27.ogg}    | Bin 0 -> 9720 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/28.ogg}    | Bin 0 -> 10366 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/29.ogg}    | Bin 0 -> 7300 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/30.ogg}    | Bin 0 -> 6514 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/31.ogg}    | Bin 0 -> 9242 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/32.ogg}    | Bin 0 -> 9680 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/33.ogg}    | Bin 0 -> 10524 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/34.ogg}    | Bin 0 -> 10398 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/35.ogg}    | Bin 0 -> 3751 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/37.ogg}    | Bin 0 -> 5366 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/38.ogg}    | Bin 0 -> 5524 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/39.ogg}    | Bin 0 -> 8413 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/4.ogg}     | Bin 0 -> 11013 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/41.ogg}    | Bin 0 -> 6189 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/42.ogg}    | Bin 0 -> 5307 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/43.ogg}    | Bin 0 -> 5824 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/44.ogg}    | Bin 0 -> 5551 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/5.ogg}     | Bin 0 -> 5954 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/6.ogg}     | Bin 0 -> 10642 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/7.ogg}     | Bin 0 -> 8264 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/8.ogg}     | Bin 0 -> 8108 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/9.ogg}     | Bin 0 -> 18119 bytes
+ .../xout/_root/audio/TEST/ZH/BLEMEDIA.ogg}         | Bin 0 -> 8603 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/NUM_0.ogg} | Bin 0 -> 3900 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/NUM_1.ogg} | Bin 0 -> 3582 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/NUM_2.ogg} | Bin 0 -> 3711 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/NUM_3.ogg} | Bin 0 -> 3685 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/NUM_4.ogg} | Bin 0 -> 3999 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/NUM_5.ogg} | Bin 0 -> 3794 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/NUM_6.ogg} | Bin 0 -> 3751 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/NUM_7.ogg} | Bin 0 -> 3863 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/NUM_8.ogg} | Bin 0 -> 3592 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/NUM_9.ogg} | Bin 0 -> 3833 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/NUM_A.ogg} | Bin 0 -> 3688 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/NUM_B.ogg} | Bin 0 -> 3644 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/NUM_C.ogg} | Bin 0 -> 4078 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/NUM_D.ogg} | Bin 0 -> 3646 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/NUM_E.ogg} | Bin 0 -> 3637 bytes
+ .../3.5.8_1109/xout/_root/audio/TEST/ZH/NUM_F.ogg} | Bin 0 -> 3947 bytes
+ .../xout/_root/audio/TEST/ZH/WIFIMEDIA.ogg}        | Bin 0 -> 8708 bytes
+ .../xout/_root/audio/ZH/46.ogg                     | Bin 32066 -> 55806 bytes
+ .../xout/_root/ava/conf/ota.conf                   |   3 +-
+ .../xout/_root/ava/conf/p2259.conf                 |   6 +-
+ .../xout/_root/ava/conf/setting.yaml               |   5 +
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 62464 -> 68912 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 29680 -> 35656 bytes
+ .../xout/_root/ava/lib/node_health_kharon.so       | Bin 151048 -> 251528 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 92808 -> 113748 bytes
+ .../xout/_root/ava/lib/node_kharon.so              | Bin 816832 -> 2286932 bytes
+ .../xout/_root/ava/lib/node_lds.so                 | Bin 171588 -> 176928 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 106292 -> 126004 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 1547388 -> 2248192 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 30884 -> 117748 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 459604 -> 741288 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 70892 -> 73288 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 725836 -> 829528 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 65088 -> 68016 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 141156 -> 377364 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 106308 -> 125792 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 94696 -> 106852 bytes
+ .../xout/_root/ava/script/ACLCodeOps.sh}           |   9 +
+ .../xout/_root/ava/script/audio_record.sh}         |  20 ++
+ .../xout/_root/ava/script/fds_hook.sh              | 129 ++++++-
+ .../xout/_root/ava/script/gdb_attach_ava.sh        |  10 +-
+ .../xout/_root/ava/script/gdb_cmd.txt              |   7 +-
+ .../xout/_root/ava/script/get_size.sh              |   7 +
+ .../xout/_root/ava/script/ivr_test.sh              |   2 +-
+ .../xout/_root/ava/script/mediad_script.sh         |  14 +-
+ .../xout/_root/ava/script/msg_cvt.sh               | 222 +++++++++---
+ .../xout/_root/ava/script/ota_arm_update.sh        |  53 ++-
+ .../xout/_root/ava/script/ota_base_station.sh}     | 110 ++++++
+ .../xout/_root/ava/script/ota_dw_fw.sh             |  39 ++-
+ .../xout/_root/ava/script/ota_mcu_update.sh        |  12 +-
+ .../xout/_root/ava/script/ota_unpack.sh            |  48 +++
+ .../xout/_root/ava/script/ota_watch_mcu_update.sh  |  35 +-
+ .../xout/_root/ava/script/ota_x3m_arm_check.sh}    | 168 +++++++++
+ .../xout/_root/ava/script/ota_x3m_arm_update.sh}   | 130 +++++++
+ .../xout/_root/ava/script/set_media_volume.sh}     |  60 ++++
+ .../xout/_root/ava/script/sys_set_private.sh       |  84 +++--
+ .../xout/_root/ava/script/tof_test.sh              |   2 +-
+ .../xout/_root/ava/script/wifi_test.sh             | 121 ++++---
+ .../{3.5.8_1004 => 3.5.8_1109}/xout/_root/bin/adbd | Bin 101552 -> 102624 bytes
+ .../3.5.8_1109/xout/_root/board_type}              |   1 +
+ .../xout/_root/etc/crontabs/root                   |   7 +-
+ .../xout/_root/etc/factory_reset.conf              |   2 +-
+ .../xout/_root/etc/init.d/factory_ap.sh            |  65 +++-
+ .../xout/_root/etc/init.d/mount_data.sh            |  33 +-
+ .../xout/_root/etc/init.d/play_boot_music.sh       |   4 +
+ .../xout/_root/etc/init.d/set_device_conf.sh       | 120 +++++--
+ .../xout/_root/etc/init.d/wpa_supplicant.sh        |  34 +-
+ .../xout/_root/etc/os-release                      |   6 +-
+ .../xout/_root/etc/profile                         |   2 +-
+ .../xout/_root/etc/rc.d/dropbear.sh                |   3 +-
+ .../xout/_root/etc/rc.d/factory_reset_daemon.sh    |   6 +-
+ .../xout/_root/etc/rc.d/get_ava_thread_cpu.sh}     |  57 +++
+ .../3.5.8_1109/xout/_root/etc/rc.d/get_cpu_use.sh} |  78 +++++
+ .../xout/_root/etc/rc.d/inetd.sh                   |   3 +-
+ .../xout/_root/etc/rc.d/iot_sdk_monitor.sh         |  12 +-
+ .../xout/_root/etc/rc.d/mcu_monitor_arm.sh         |  26 +-
+ .../xout/_root/etc/rc.d/miio.sh                    | 124 ++++---
+ .../xout/_root/etc/rc.d/miio_monitor.sh            |  33 +-
+ .../xout/_root/etc/rc.d/monitor.sh                 | 390 ++++++++++-----------
+ .../xout/_root/etc/rc.d/monitor_cpu.sh             | 133 +++++--
+ .../xout/_root/etc/rc.d/msg_trans.sh               |  16 +-
+ .../xout/_root/etc/rc.d/msg_trans_monitor.sh       |   6 +-
+ .../3.5.8_1109/xout/_root/etc/rc.d/pidstat_log.sh} |  48 +++
+ .../xout/_root/etc/rc.d/telnetd.sh                 |   3 +-
+ .../xout/_root/etc/rc.d/wifi_manager.sh            |  78 +++--
+ .../xout/_root/etc/rc.d/wifi_monitor.sh            | 297 ++++++++++------
+ .../xout/_root/etc/rc.final                        |  12 +-
+ .../xout/_root/etc/rc.start                        |  18 +
+ .../xout/_root/etc/rc.sysinit                      |   4 +-
+ .../xout/_root/etc/rsyslog.conf                    |  17 +-
+ .../xout/_root/etc/ssl/ct_log_list.cnf             |   4 +-
+ .../xout/_root/etc/ssl/ct_log_list.cnf.dist        |   4 +-
+ .../xout/_root/etc/ssl/misc/tsget.pl               |   2 +-
+ .../xout/_root/etc/ssl/openssl.cnf                 |  13 +
+ .../xout/_root/etc/ssl/openssl.cnf.dist            |   6 +-
+ .../xout/_root/etc/wifi/hostapd.conf               |   2 +-
+ .../xout/_root/etc/wifi/udhcpc.sh                  |  11 +-
+ .../xout/_root/etc/wifi/wifi_manager.json          |   2 +-
+ .../3.5.8_1109/xout/_root/mi_iot_version}          |   1 +
+ .../xout/_root/misc/data.tar.bz2                   | Bin 636 -> 765 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../3.5.8_1109/xout/_root/toolchain}               |   1 +
+ .../3.5.8_1109/xout/_root/usr/bin/ACLCodeOps.sh}   |   9 +
+ .../3.5.8_1109/xout/_root/usr/bin/MQTTVersion}     | Bin 0 -> 6492 bytes
+ .../xout/_root/usr/bin/auto_factory_reset.sh}      |  15 +
+ .../xout/_root/usr/bin/autossh.sh => dev/null}     |  40 ---
+ .../xout/_root/usr/bin/ava                         | Bin 135096 -> 158004 bytes
+ .../xout/_root/usr/bin/ava_crash_dog.sh            |   1 +
+ .../xout/_root/usr/bin/avacmd                      | Bin 5884 -> 8816 bytes
+ .../xout/_root/usr/bin/backup_config.sh}           |  21 ++
+ .../xout/_root/usr/bin/backup_key.sh               |  23 +-
+ .../xout/_root/usr/bin/boardconfig                 |   2 +
+ .../xout/_root/usr/bin/c_rehash                    |   4 +-
+ .../3.5.8_1109/xout/_root/usr/bin/ca.crt}          |  19 +
+ .../usr/bin/change_internal_user.sh => dev/null}   |  52 ---
+ .../xout/_root/usr/bin/check_restart_ava.sh}       |  60 ++++
+ .../xout/_root/usr/bin/check_silent_upgrade.sh     | 168 ++-------
+ .../xout/_root/usr/bin/config                      |  31 +-
+ .../3.5.8_1109/xout/_root/usr/bin/cpu.sh}          |  33 ++
+ .../_root/usr/bin/curl_download.sh => dev/null}    |  17 -
+ .../xout/_root/usr/bin/curl_upload.sh => dev/null} |  15 -
+ .../3.5.8_1109/xout/_root/usr/bin/dmio.sh}         |  34 ++
+ .../3.5.8_1109/xout/_root/usr/bin/dmio_monitor.sh} |  28 ++
+ .../3.5.8_1109/xout/_root/usr/bin/dmio_sdk.sh}     |  67 ++++
+ .../3.5.8_1109/xout/_root/usr/bin/dmio_settime.sh} |  10 +
+ .../xout/_root/usr/bin/dmio_start_wifi.sh}         | 215 ++++++++++++
+ .../3.5.8_1109/xout/_root/usr/bin/dmiot}           | Bin 0 -> 260528 bytes
+ .../xout/_root/usr/bin/do_start_ap.sh              |  48 ++-
+ .../3.5.8_1109/xout/_root/usr/bin/dreameiot}       | Bin 0 -> 111580 bytes
+ .../3.5.8_1109/xout/_root/usr/bin/dreameiot_cli}   | Bin 0 -> 90732 bytes
+ .../3.5.8_1109/xout/_root/usr/bin/dummy_cli}       | Bin 0 -> 7760 bytes
+ .../xout/_root/usr/bin/exec_proc                   | Bin 8196 -> 8248 bytes
+ .../xout/_root/usr/bin/factory_reset.sh            |  81 ++++-
+ .../xout/_root/usr/bin/factory_reset_daemon        | Bin 7912 -> 7912 bytes
+ .../xout/_root/usr/bin/force_recover_mem.sh}       |  29 ++
+ .../xout/_root/usr/bin/fw_printenv                 | Bin 25172 -> 25172 bytes
+ .../xout/_root/usr/bin/getssid                     |   4 +-
+ .../xout/_root/usr/bin/iot_sdk.sh                  |  12 +-
+ .../3.5.8_1109/xout/_root/usr/bin/lock_area.sh}    |  68 ++++
+ .../3.5.8_1109/xout/_root/usr/bin/memtool}         | Bin 0 -> 18252 bytes
+ .../_root/usr/bin/miio_client_helper_nomqtt.sh     |  66 +++-
+ .../xout/_root/usr/bin/miio_sdk.sh                 |  31 +-
+ .../xout/_root/usr/bin/mount_partition.sh          |  41 +--
+ .../xout/_root/usr/bin/msg_trans                   | Bin 20180 -> 35648 bytes
+ .../3.5.8_1109/xout/_root/usr/bin/net_config}      |  35 ++
+ .../xout/_root/usr/bin/network_hook.sh             |  33 +-
+ .../xout/_root/usr/bin/openssl                     | Bin 522844 -> 526100 bytes
+ .../xout/_root/usr/bin/packlog.sh                  |   1 +
+ .../3.5.8_1109/xout/_root/usr/bin/pidstat}         | Bin 0 -> 38800 bytes
+ .../xout/_root/usr/bin/play_wifi_tip_media.sh      |  46 ++-
+ .../xout/_root/usr/bin/reboot.sh                   |   2 +
+ .../xout/_root/usr/bin/record_events.sh}           | 189 ++++++++++
+ .../xout/_root/usr/bin/record_mcu_log              | Bin 22664 -> 22664 bytes
+ .../3.5.8_1109/xout/_root/usr/bin/report_data.sh}  | 123 +++++++
+ .../xout/_root/usr/bin/start_ap_hook.sh            |   4 +-
+ .../xout/_root/usr/bin/sysmon.sh                   |   9 +-
+ .../xout/_root/usr/bin/uart_hex                    | Bin 7240 -> 7352 bytes
+ .../3.5.8_1109/xout/_root/usr/bin/wifi_act.sh}     |  68 ++++
+ .../xout/_root/usr/bin/wifi_cli                    | Bin 80012 -> 80012 bytes
+ .../xout/_root/usr/bin/wifi_conf_monitor.sh        |  12 +-
+ .../xout/_root/usr/bin/wifi_connect                | 159 ++++++++-
+ .../xout/_root/usr/bin/wifi_manager                | Bin 221104 -> 223500 bytes
+ .../xout/_root/usr/bin/wifi_setup.sh               |  37 +-
+ .../xout/_root/usr/bin/wifi_start.sh               |  16 +-
+ .../xout/_root/usr/bin/wifi_state.sh               |  18 +-
+ .../xout/_root/usr/bin/wpa_cli                     | Bin 77264 -> 77596 bytes
+ .../xout/_root/usr/bin/wpa_passphrase              | Bin 35008 -> 35056 bytes
+ .../xout/_root/usr/bin/wpa_supplicant              | Bin 1341636 -> 1340952 bytes
+ .../xout/_root/usr/bin/ymodem                      | Bin 14380 -> 10704 bytes
+ .../xout/_root/usr/bin/zclient                     | Bin 9880 -> 4092 bytes
+ .../xout/_root/usr/bin/zdump => dev/null}          | Bin 59592 -> 0 bytes
+ .../usr/lib/ckport/db/libao.ckport => dev/null}    |  33 --
+ .../usr/lib/engines-1.1/afalg.so => dev/null}      | Bin 12156 -> 0 bytes
+ .../_root/usr/lib/engines-1.1/capi.so => dev/null} | Bin 2872 -> 0 bytes
+ .../usr/lib/engines-1.1/padlock.so => dev/null}    | Bin 2872 -> 0 bytes
+ .../xout/_root/usr/lib/libRakNetDLL.so             | Bin 1795040 -> 1795056 bytes
+ .../xout/_root/usr/lib/libbehaviortree_cpp.so      | Bin 1659764 -> 636372 bytes
+ .../xout/_root/usr/lib/libcrypto.so.1.1            | Bin 1851572 -> 1889436 bytes
+ .../xout/_root/usr/lib/libgtest.so => dev/null}    | Bin 760604 -> 0 bytes
+ .../_root/usr/lib/libgtest_main.so => dev/null}    | Bin 4364 -> 0 bytes
+ .../xout/_root/usr/lib/libmessenger.so             | Bin 44788 -> 62108 bytes
+ .../xout/_root/usr/lib/libnanomsg.so.5.1.0         | Bin 323044 -> 323056 bytes
+ .../usr/lib/libnl/cli/cls/basic.a => dev/null}     | Bin 3450 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/basic.la => dev/null}    |  41 ---
+ .../usr/lib/libnl/cli/cls/basic.so => dev/null}    | Bin 4536 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/cgroup.a => dev/null}    | Bin 2900 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/cgroup.la => dev/null}   |  41 ---
+ .../usr/lib/libnl/cli/cls/cgroup.so => dev/null}   | Bin 3896 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/bfifo.a => dev/null}   | Bin 3092 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/bfifo.la => dev/null}  |  41 ---
+ .../usr/lib/libnl/cli/qdisc/bfifo.so => dev/null}  | Bin 4068 -> 0 bytes
+ .../lib/libnl/cli/qdisc/blackhole.a => dev/null}   | Bin 2700 -> 0 bytes
+ .../lib/libnl/cli/qdisc/blackhole.la => dev/null}  |  41 ---
+ .../lib/libnl/cli/qdisc/blackhole.so => dev/null}  | Bin 3580 -> 0 bytes
+ .../lib/libnl/cli/qdisc/fq_codel.a => dev/null}    | Bin 3722 -> 0 bytes
+ .../lib/libnl/cli/qdisc/fq_codel.la => dev/null}   |  41 ---
+ .../lib/libnl/cli/qdisc/fq_codel.so => dev/null}   | Bin 4768 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/hfsc.a => dev/null}    | Bin 5410 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/hfsc.la => dev/null}   |  41 ---
+ .../usr/lib/libnl/cli/qdisc/hfsc.so => dev/null}   | Bin 6300 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/htb.a => dev/null}     | Bin 5656 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/htb.la => dev/null}    |  41 ---
+ .../usr/lib/libnl/cli/qdisc/htb.so => dev/null}    | Bin 6464 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/ingress.a => dev/null} | Bin 2660 -> 0 bytes
+ .../lib/libnl/cli/qdisc/ingress.la => dev/null}    |  41 ---
+ .../lib/libnl/cli/qdisc/ingress.so => dev/null}    | Bin 3560 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/pfifo.a => dev/null}   | Bin 2952 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/pfifo.la => dev/null}  |  41 ---
+ .../usr/lib/libnl/cli/qdisc/pfifo.so => dev/null}  | Bin 3928 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/plug.a => dev/null}    | Bin 4466 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/plug.la => dev/null}   |  41 ---
+ .../usr/lib/libnl/cli/qdisc/plug.so => dev/null}   | Bin 5772 -> 0 bytes
+ .../xout/_root/usr/lib/libpaho-mqtt3as.so}         |   0
+ .../xout/_root/usr/lib/libpaho-mqtt3as.so.1}       |   0
+ .../xout/_root/usr/lib/libpaho-mqtt3as.so.1.3.10}  | Bin 0 -> 186760 bytes
+ .../xout/_root/usr/lib/libpaho-mqtt3cs.so}         |   0
+ .../xout/_root/usr/lib/libpaho-mqtt3cs.so.1}       |   0
+ .../xout/_root/usr/lib/libpaho-mqtt3cs.so.1.3.10}  | Bin 0 -> 162064 bytes
+ .../xout/_root/usr/lib/libpaho-mqttpp3.so}         |   0
+ .../xout/_root/usr/lib/libpaho-mqttpp3.so.1}       |   0
+ .../xout/_root/usr/lib/libpaho-mqttpp3.so.1.2.0}   | Bin 0 -> 851840 bytes
+ .../3.5.8_1109/xout/_root/usr/lib/libserial.so}    | Bin 0 -> 4476 bytes
+ .../xout/_root/usr/lib/libssl.so.1.1               | Bin 430020 -> 430652 bytes
+ .../usr/lib/modules/4.9.118/external/8189fs.ko     | Bin 1322952 -> 1322952 bytes
+ .../usr/lib/tree_lib/libkharon_route_nodes.so      | Bin 3988888 -> 6234056 bytes
+ .../usr/lib/tree_lib/libkharon_tactics_tree.so     | Bin 965328 -> 1617272 bytes
+ .../xout/_root/usr/lib/tree_lib/libkharon_tree.so  | Bin 6225332 -> 2634076 bytes
+ .../xout/_root/usr/sbin/zic => dev/null}           | Bin 64720 -> 0 bytes
+ .../xout/_root/version_record                      |  20 +-
+ .../xout/boot_package.fex                          | Bin 933888 -> 933888 bytes
+ .../{3.5.8_1004 => 3.5.8_1109}/xout/kernel.img     | Bin 2396160 -> 2396160 bytes
+ .../{3.5.8_1004 => 3.5.8_1109}/xout/mcu.bin        | Bin 136412 -> 136592 bytes
+ 374 files changed, 3855 insertions(+), 1586 deletions(-)

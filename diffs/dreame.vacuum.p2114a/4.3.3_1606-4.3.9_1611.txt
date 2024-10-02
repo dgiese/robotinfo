@@ -1,0 +1,40 @@
+Firmware diff for Xiaomi Robot Vacuum X10+ (dreame.vacuum.p2114a)
+Old version: 4.3.3_1606 New version: 4.3.9_1611
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/audio/EN/126.ogg                    | Bin 21217 -> 10220 bytes
+ .../xout/_root/audio/EN/14.ogg                     | Bin 94684 -> 48738 bytes
+ .../xout/_root/audio/EN/30.ogg                     | Bin 35848 -> 18794 bytes
+ .../xout/_root/audio/EN/34.ogg                     | Bin 66299 -> 31887 bytes
+ .../xout/_root/audio/EN/37.ogg                     | Bin 32706 -> 16976 bytes
+ .../xout/_root/audio/EN/38.ogg                     | Bin 32746 -> 17767 bytes
+ .../xout/_root/audio/EN/86.ogg                     | Bin 34583 -> 16857 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 124352 -> 124352 bytes
+ .../xout/_root/ava/lib/node_laser_transfer.so      | Bin 1762432 -> 1766536 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 1114320 -> 1110456 bytes
+ .../xout/_root/etc/os-release                      |   6 +++---
+ .../xout/_root/etc/rc.d/ava.sh                     |   2 +-
+ .../xout/_root/etc/rc.d/miio.sh                    |   5 ++---
+ .../xout/_root/etc/rc.d/miio_monitor.sh            |  12 +++++++-----
+ .../xout/_root/mi_iot_version                      |   2 +-
+ .../xout/_root/misc/data.tar.bz2                   | Bin 560 -> 565 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/miio_client                 | Bin 721280 -> 726536 bytes
+ .../_root/usr/bin/miio_client_helper_nomqtt.sh     |   5 +++--
+ .../xout/_root/usr/bin/miio_recv_line              | Bin 5312 -> 5568 bytes
+ .../xout/_root/usr/bin/miio_send_line              | Bin 5376 -> 5640 bytes
+ .../4.3.9_1611/xout/_root/usr/lib/libfmt.so}       |   0
+ .../4.3.9_1611/xout/_root/usr/lib/libfmt.so.6}     |   0
+ .../4.3.9_1611/xout/_root/usr/lib/libfmt.so.6.1.3} | Bin 0 -> 301896 bytes
+ .../usr/lib/modules/4.9.191/external/8723ds.ko     | Bin 3132944 -> 2228888 bytes
+ .../lib/modules/4.9.191/external/ov8856_mipi.ko    | Bin 20032 -> 19936 bytes
+ .../lib/modules/4.9.191/external/sc035gs_mipi.ko   | Bin 25104 -> 25128 bytes
+ .../usr/lib/tree_lib/libnemesis_route_nodes.so     | Bin 9916000 -> 9912112 bytes
+ .../usr/lib/tree_lib/libnemesis_tactics_tree.so    | Bin 1271800 -> 1267848 bytes
+ .../xout/_root/usr/share/udhcpc/default.script     |  14 +++++++-------
+ .../xout/_root/version_record                      |   8 ++++----
+ .../{4.3.3_1606 => 4.3.9_1611}/xout/kernel.img     | Bin 10835968 -> 10684416 bytes
+ .../{4.3.3_1606 => 4.3.9_1611}/xout/mcu.bin        | Bin 163936 -> 165428 bytes
+ .../{4.3.3_1606 => 4.3.9_1611}/xout/toc1.fex       | Bin 1245184 -> 1245184 bytes
+ 34 files changed, 29 insertions(+), 27 deletions(-)

@@ -1,0 +1,20 @@
+Firmware diff for DEEBOT X1 TURBO (ecovacs.2o4lnm)
+Old version: 1.9.3 New version: 1.9.4
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_recovery/etc/fw.manifest                 |   4 ++--
+ .../xout/_root/etc/conf/medusa/erp_hook.sh         |  11 ++++++++++-
+ .../{1.9.3 => 1.9.4}/xout/_root/etc/fw.fix         |   2 +-
+ .../{1.9.3 => 1.9.4}/xout/_root/etc/fw.manifest    |   4 ++--
+ .../xout/_root/etc/rc.d/speech_recognition.sh      |   4 ++--
+ .../{1.9.3 => 1.9.4}/xout/_root/opt/data.tar.bz2   | Bin 415 -> 418 bytes
+ .../xout/_root/usr/bin/speech_inter_client         | Bin 548496 -> 552592 bytes
+ .../xout/_root/usr/bin/speech_sleep                | Bin 6872 -> 69200 bytes
+ .../{1.9.3 => 1.9.4}/xout/_root/usr/doc/update.log |  21 +++++++++++++--------
+ .../_root/usr/lib/WHmethods/libWHMapMethods.so     | Bin 212984 -> 212984 bytes
+ .../xout/_root/usr/lib/WHmethods/libWHmethods.so   | Bin 459888 -> 455960 bytes
+ .../_root/usr/lib/hbmedia/libmultimedia.so.1.2.2   | Bin 903520 -> 903568 bytes
+ .../usr/lib/node/liberos_node_job_schedule.so      | Bin 507736 -> 507744 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     | Bin 560952 -> 560952 bytes
+ 14 files changed, 30 insertions(+), 16 deletions(-)

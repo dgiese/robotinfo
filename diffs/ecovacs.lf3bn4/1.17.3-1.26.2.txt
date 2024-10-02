@@ -1,0 +1,156 @@
+Firmware diff for DEEBOT X2 (ecovacs.lf3bn4)
+Old version: 1.17.3 New version: 1.26.2
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../{1.17.3 => 1.26.2}/xout/_model/models.json     |  12 +-
+ .../{1.17.3 => 1.26.2}/xout/_model/net-en8.bin     | Bin 3671728 -> 3671792 bytes
+ .../1.17.3/xout/_model/rl_navi.bin => dev/null}    | Bin 2831314 -> 0 bytes
+ .../xout/_model/rl_navi_230619.bin}                | Bin 4659439 -> 4659439 bytes
+ .../1.26.2/xout/_model/rl_navi_230629.bin}         | Bin 0 -> 12976783 bytes
+ .../xout/_root/etc/conf/SettingConfig.json         |   9 +-
+ .../xout/_root/etc/conf/medusa/WiFiledStatusCtl.sh |   2 +-
+ .../xout/_root/etc/conf/medusa/deebot_x3_dz.conf   |   1 +
+ .../_root/etc/conf/medusa/download_fw_hook_v3.sh   |  17 ++-
+ .../xout/_root/etc/conf/medusa/erp_hook.sh         |  53 ++++---
+ .../xout/_root/etc/conf/medusa/get_audio_help.sh   |   8 +-
+ .../xout/_root/etc/conf/medusa/press_key_help.sh   |   3 +-
+ .../xout/_root/etc/conf/medusa/sl_ota_hook.sh      |   2 +-
+ .../_root/etc/conf/medusa/xmpp_server_status.sh    |   2 +-
+ .../xout/_root/etc/conf/speech_inter.conf          |   1 +
+ .../xout/_root/etc/conf/speech_recognition.conf    |   1 +
+ .../xout/_root/etc/conf/speech_unique_wakeup.conf  |   6 +-
+ .../{1.17.3 => 1.26.2}/xout/_root/etc/fw.manifest  |   6 +-
+ .../xout/_root/etc/rc.d/post_boot.sh               |  14 ++
+ .../xout/_root/etc/rc.d/speech_recognition.sh      |  10 ++
+ .../{1.17.3 => 1.26.2}/xout/_root/opt/data.tar.bz2 | Bin 4233 -> 4238 bytes
+ .../{1.17.3 => 1.26.2}/xout/_root/opt/dsp-fw.json  |   2 +-
+ .../dsp-t10-ch-v1.00.018.00648.bin => dev/null}    | Bin 6401172 -> 0 bytes
+ .../xout/_root/opt/dsp-t10-ch-v1.00.018.00663.bin} | Bin 0 -> 6401540 bytes
+ .../dsp-t10-en-v1.00.018.00652.bin => dev/null}    | Bin 5081428 -> 0 bytes
+ .../xout/_root/opt/dsp-t10-en-v1.00.018.00663.bin} | Bin 0 -> 5081796 bytes
+ .../{1.17.3 => 1.26.2}/xout/_root/opt/mcu_sl.bin   | Bin 83068 -> 85487 bytes
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 4297752 -> 4383976 bytes
+ .../xout/_root/usr/bin/aimodels_hotupdate.sh       | 136 ++++++++---------
+ .../xout/_root/usr/bin/alsa_pcm_capture            | Bin 10152 -> 10152 bytes
+ .../xout/_root/usr/bin/audio_record                | Bin 22616 -> 22616 bytes
+ .../xout/_root/usr/bin/fw_cut.sh                   |   7 +-
+ .../xout/_root/usr/bin/setNetConfig_check.sh}      | 161 +++++++++++++++++++++
+ .../xout/_root/usr/bin/speech_ecovacs_tts          | Bin 26624 -> 26624 bytes
+ .../xout/_root/usr/bin/speech_inter_client         | Bin 690472 -> 747840 bytes
+ .../xout/_root/usr/bin/speech_play_local_audio     | Bin 141408 -> 141408 bytes
+ .../xout/_root/usr/bin/speech_recognition          | Bin 555328 -> 555328 bytes
+ .../xout/_root/usr/bin/speech_sleep                | Bin 104536 -> 104536 bytes
+ .../xout/_root/usr/bin/speech_wakeup               | Bin 26704 -> 26704 bytes
+ .../{1.17.3 => 1.26.2}/xout/_root/usr/bin/udisk.sh |   4 +-
+ .../xout/_root/usr/bin/wakeup_hook.sh              |   3 +-
+ .../xout/_root/usr/bin/wifi_repair.sh              |   2 +-
+ .../xout/_root/usr/bin/xspace_tool                 | Bin 450592 -> 450592 bytes
+ .../xout/_root/usr/lib/eros_node_clean.pc          |   4 +-
+ .../xout/_root/usr/lib/eros_node_return.pc         |   4 +-
+ .../xout/_root/usr/lib/libEdgeFollow.so            | Bin 945280 -> 953512 bytes
+ .../xout/_root/usr/lib/libPerception.so            | Bin 1139312 -> 1142856 bytes
+ .../xout/_root/usr/lib/libPln.so                   | Bin 3481264 -> 3477192 bytes
+ .../xout/_root/usr/lib/libXspace.so.1.0            | Bin 958664 -> 956984 bytes
+ .../xout/_root/usr/lib/liberos_pb_msg.so           | Bin 351944 -> 353728 bytes
+ .../xout/_root/usr/lib/libjob_schedule_midware.so  | Bin 3070432 -> 3079584 bytes
+ .../_root/usr/lib/libjob_schedule_ros_convert.so   | Bin 2676320 -> 2669680 bytes
+ .../xout/_root/usr/lib/libnavigation.so            | Bin 467200 -> 471296 bytes
+ .../xout/_root/usr/lib/librelocation.so            | Bin 58520 -> 61112 bytes
+ .../xout/_root/usr/lib/libreturnnavigation.so      | Bin 458696 -> 479832 bytes
+ .../xout/_root/usr/lib/librl_navi.so               | Bin 298088 -> 315976 bytes
+ .../xout/_root/usr/lib/libsmallAreaReturn.so       | Bin 32784 -> 32696 bytes
+ .../xout/_root/usr/lib/libstuck.so                 | Bin 254416 -> 287560 bytes
+ .../xout/_root/usr/lib/medusa/plug_dev_status.so   | Bin 26936 -> 26944 bytes
+ .../xout/_root/usr/lib/medusa/plug_kvs_push.so     | Bin 308040 -> 308040 bytes
+ .../xout/_root/usr/lib/medusa/plug_link.so         | Bin 44424 -> 40328 bytes
+ .../xout/_root/usr/lib/medusa/plug_network.so      | Bin 35304 -> 31208 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/ac101.ko    | Bin 44864 -> 44864 bytes
+ .../_root/usr/lib/modules/4.14.87/ac108_driver.ko  | Bin 98208 -> 98208 bytes
+ .../_root/usr/lib/modules/4.14.87/bif_dev_sd.ko    | Bin 46664 -> 46664 bytes
+ .../_root/usr/lib/modules/4.14.87/bif_dev_spi.ko   | Bin 41264 -> 41264 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/bif_lite.ko | Bin 39008 -> 39008 bytes
+ .../_root/usr/lib/modules/4.14.87/bif_platform.ko  | Bin 5936 -> 5936 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/bif_sio.ko  | Bin 36680 -> 36680 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/bifbase.ko  | Bin 73616 -> 73616 bytes
+ .../_root/usr/lib/modules/4.14.87/bpu_cores.ko     | Bin 47105 -> 46384 bytes
+ .../_root/usr/lib/modules/4.14.87/bpu_framework.ko | Bin 80616 -> 81024 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/btbcm.ko    | Bin 17464 -> 17464 bytes
+ .../_root/usr/lib/modules/4.14.87/crypto_engine.ko | Bin 12368 -> 12368 bytes
+ .../_root/usr/lib/modules/4.14.87/dummy-cpudai.ko  | Bin 10312 -> 10312 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/es7210.ko   | Bin 30560 -> 30560 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/es8156.ko   | Bin 26016 -> 26016 bytes
+ .../usr/lib/modules/4.14.87/extcon-vbus-gpio.ko    | Bin 9456 -> 9456 bytes
+ .../usr/lib/modules/4.14.87/external/rtl8723.ko    | Bin 3604856 -> 3604664 bytes
+ .../_root/usr/lib/modules/4.14.87/hbipc_lite.ko    | Bin 48016 -> 48016 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/hci_uart.ko | Bin 69576 -> 69576 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot-cpudai.ko  | Bin 32256 -> 32256 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/hobot-fb.ko | Bin 19704 -> 19704 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot-i2s-dma.ko | Bin 41456 -> 41456 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot-snd-101.ko | Bin 15856 -> 15856 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot-snd-102.ko | Bin 15224 -> 15224 bytes
+ .../usr/lib/modules/4.14.87/hobot-snd-1977.ko      | Bin 15456 -> 15456 bytes
+ .../usr/lib/modules/4.14.87/hobot-snd-7210.ko      | Bin 15440 -> 15440 bytes
+ .../usr/lib/modules/4.14.87/hobot-snd-8156.ko      | Bin 15272 -> 15272 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot-snd-96.ko  | Bin 15776 -> 15776 bytes
+ .../usr/lib/modules/4.14.87/hobot-snd-dummy.ko     | Bin 15720 -> 15720 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_bifsd.ko   | Bin 27472 -> 27472 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_bifspi.ko  | Bin 29384 -> 29384 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_codec.ko   | Bin 8944 -> 8944 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_dwe.ko     | Bin 106728 -> 106728 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_gdc.ko     | Bin 46160 -> 46160 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_ipu.ko     | Bin 244600 -> 244600 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/hobot_iq.ko | Bin 110224 -> 110224 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_isp.ko     | Bin 972640 -> 972640 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_isp_log.ko | Bin 10888 -> 11176 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_jpu.ko     | Bin 93568 -> 93568 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_lens.ko    | Bin 64592 -> 64592 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_osd.ko     | Bin 99576 -> 99576 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_pym.ko     | Bin 136320 -> 136320 bytes
+ .../usr/lib/modules/4.14.87/hobot_remoteproc.ko    | Bin 33192 -> 33192 bytes
+ .../usr/lib/modules/4.14.87/hobot_rpmsg_char.ko    | Bin 35408 -> 35408 bytes
+ .../usr/lib/modules/4.14.87/hobot_sched_logger.ko  | Bin 14616 -> 14616 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_sensor.ko  | Bin 102400 -> 102400 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_sif.ko     | Bin 202112 -> 202112 bytes
+ .../usr/lib/modules/4.14.87/hobot_sns_bridge.ko    | Bin 50440 -> 50440 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_spidev.ko  | Bin 51600 -> 51600 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_sscg.ko    | Bin 38128 -> 38128 bytes
+ .../_root/usr/lib/modules/4.14.87/hobot_vpu.ko     | Bin 177472 -> 177472 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/iar.ko      | Bin 300800 -> 300800 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/iar_cdev.ko | Bin 48744 -> 48744 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/iar_mmap.ko | Bin 8168 -> 8168 bytes
+ .../_root/usr/lib/modules/4.14.87/remoteproc.ko    | Bin 71784 -> 71784 bytes
+ .../_root/usr/lib/modules/4.14.87/rpmsg_core.ko    | Bin 16032 -> 16032 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/sc1330t.ko  | Bin 12992 -> 12992 bytes
+ .../_root/usr/lib/modules/4.14.87/snd-hwdep.ko     | Bin 20528 -> 20528 bytes
+ .../_root/usr/lib/modules/4.14.87/snd-rawmidi.ko   | Bin 48928 -> 48928 bytes
+ .../_root/usr/lib/modules/4.14.87/snd-soc-ac102.ko | Bin 44904 -> 44904 bytes
+ .../lib/modules/4.14.87/snd-soc-adau1977-i2c.ko    | Bin 6016 -> 6016 bytes
+ .../usr/lib/modules/4.14.87/snd-soc-adau1977.ko    | Bin 24152 -> 24152 bytes
+ .../_root/usr/lib/modules/4.14.87/snd-usb-audio.ko | Bin 328144 -> 328144 bytes
+ .../usr/lib/modules/4.14.87/snd-usbmidi-lib.ko     | Bin 45416 -> 45416 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/uvcvideo.ko | Bin 141368 -> 141368 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/v4l2-tpg.ko | Bin 66112 -> 66112 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/v4l2_avb.ko | Bin 22264 -> 22264 bytes
+ .../_root/usr/lib/modules/4.14.87/videobuf-core.ko | Bin 32872 -> 32872 bytes
+ .../lib/modules/4.14.87/videobuf2-dma-contig.ko    | Bin 20512 -> 20512 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/virtio.ko   | Bin 15664 -> 15664 bytes
+ .../_root/usr/lib/modules/4.14.87/virtio_crypto.ko | Bin 29632 -> 29632 bytes
+ .../_root/usr/lib/modules/4.14.87/virtio_ring.ko   | Bin 27728 -> 27728 bytes
+ .../usr/lib/modules/4.14.87/virtio_rpmsg_bus.ko    | Bin 27200 -> 27200 bytes
+ .../xout/_root/usr/lib/modules/4.14.87/vivid.ko    | Bin 219472 -> 219472 bytes
+ .../xout/_root/usr/lib/nlp/libeis_sdk.so           | Bin 16486080 -> 16453384 bytes
+ .../usr/lib/node/liberos_node_RobotInfoCollect.so  | Bin 829344 -> 829344 bytes
+ .../xout/_root/usr/lib/node/liberos_node_alert.so  | Bin 222432 -> 198824 bytes
+ .../_root/usr/lib/node/liberos_node_bigdata.so     | Bin 1312112 -> 1417608 bytes
+ .../xout/_root/usr/lib/node/liberos_node_clean.so  | Bin 1088568 -> 1102584 bytes
+ .../usr/lib/node/liberos_node_hardware_platform.so | Bin 1619792 -> 1626040 bytes
+ .../usr/lib/node/liberos_node_house_layout.so      | Bin 348832 -> 357104 bytes
+ .../usr/lib/node/liberos_node_job_schedule.so      | Bin 648600 -> 656864 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    | Bin 2143232 -> 2165040 bytes
+ .../xout/_root/usr/lib/node/liberos_node_omni.so   | Bin 677168 -> 664880 bytes
+ .../_root/usr/lib/node/liberos_node_postTunnel.so  | Bin 1098600 -> 1097112 bytes
+ .../_root/usr/lib/node/liberos_node_relocation.so  | Bin 248600 -> 248688 bytes
+ .../xout/_root/usr/lib/node/liberos_node_return.so | Bin 487960 -> 487968 bytes
+ .../xout/_root/usr/lib/returnnavigation.pc         |   4 +-
+ 150 files changed, 351 insertions(+), 123 deletions(-)

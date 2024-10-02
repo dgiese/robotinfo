@@ -1,0 +1,10 @@
+Firmware diff for GOAT G1 (ecovacs.5xu9h3)
+Old version: 1.21.3 New version: 1.21.5
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../{1.21.3 => 1.21.5}/xout/_root/etc/fw.manifest  |   6 +++---
+ .../{1.21.3 => 1.21.5}/xout/_root/opt/data.tar.bz2 | Bin 4214 -> 4219 bytes
+ .../xout/_root/usr/lib/libai_tof_obstacle.so       | Bin 396552 -> 398136 bytes
+ .../xout/_root/usr/lib/libeco_navi.so              | Bin 13022264 -> 13018168 bytes
+ 4 files changed, 3 insertions(+), 3 deletions(-)

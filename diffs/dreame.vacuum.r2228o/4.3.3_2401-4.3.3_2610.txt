@@ -1,0 +1,48 @@
+Firmware diff for DreameBot L10s Ultra (dreame.vacuum.r2228o)
+Old version: 4.3.3_2401 New version: 4.3.3_2610
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_ai_area_recognition.so | Bin 590152 -> 590080 bytes
+ .../xout/_root/ava/lib/node_arges.so               | Bin 4816608 -> 4817112 bytes
+ .../xout/_root/ava/lib/node_camera_ai.so           | Bin 635544 -> 635544 bytes
+ .../xout/_root/ava/lib/node_camera_laser.so        | Bin 144960 -> 144960 bytes
+ .../xout/_root/ava/lib/node_camera_streamer.so     | Bin 365688 -> 365688 bytes
+ .../xout/_root/ava/lib/node_cameracalibr_ai.so     | Bin 312464 -> 312512 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 73352 -> 73352 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 44824 -> 44824 bytes
+ .../xout/_root/ava/lib/node_health_arges.so        | Bin 340152 -> 340216 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 119944 -> 119944 bytes
+ .../_root/ava/lib/node_laser_point_extractor.so    | Bin 352264 -> 339984 bytes
+ .../xout/_root/ava/lib/node_laser_transfer.so      | Bin 2052472 -> 2060664 bytes
+ .../xout/_root/ava/lib/node_lasercamera_calibr.so  | Bin 222416 -> 222352 bytes
+ .../xout/_root/ava/lib/node_laserplane_calibr.so   | Bin 290544 -> 290544 bytes
+ .../xout/_root/ava/lib/node_lds.so                 | Bin 468464 -> 468464 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 115576 -> 115576 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 2174720 -> 2174720 bytes
+ .../xout/_root/ava/lib/node_linelaser_calibr.so    | Bin 124360 -> 124384 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 133168 -> 133096 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 1426112 -> 1426112 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 103360 -> 103360 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 1338624 -> 1338632 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 82088 -> 82088 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 309056 -> 309056 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 144328 -> 144328 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 123504 -> 123504 bytes
+ .../xout/_root/etc/os-release                      |   6 +++---
+ .../xout/_root/misc/data.tar.bz2                   | Bin 582 -> 592 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 183888 -> 183888 bytes
+ .../xout/_root/usr/bin/boardconfig                 |   4 ++--
+ .../xout/_root/usr/bin/dreameiot                   | Bin 44448 -> 44448 bytes
+ .../xout/_root/usr/bin/exec_proc                   | Bin 15304 -> 15304 bytes
+ .../xout/_root/usr/lib/libdevmapper.so.1.02        | Bin 442992 -> 391296 bytes
+ .../4.3.3_2610/xout/_root/usr/lib/libsmp_shm.so}   | Bin 0 -> 40760 bytes
+ .../_root/usr/lib/tree_lib/libarges_route_nodes.so | Bin 10567744 -> 10568336 bytes
+ .../usr/lib/tree_lib/libarges_tactics_tree.so      | Bin 1384696 -> 1388792 bytes
+ .../xout/_root/usr/lib/tree_lib/libarges_tree.so   | Bin 4562928 -> 4562904 bytes
+ .../xout/_root/version_record                      |   8 ++++----
+ .../{4.3.3_2401 => 4.3.3_2610}/xout/kernel.img     | Bin 10835968 -> 10835968 bytes
+ .../{4.3.3_2401 => 4.3.3_2610}/xout/mcu.bin        | Bin 181540 -> 184588 bytes
+ .../{4.3.3_2401 => 4.3.3_2610}/xout/toc1.fex       | Bin 1245184 -> 1245184 bytes
+ 42 files changed, 10 insertions(+), 10 deletions(-)

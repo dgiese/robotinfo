@@ -1,0 +1,15 @@
+Firmware diff for DEEBOT OZMO T8 AIVI (ecovacs.x5d34r)
+Old version: 1.7.9 New version: 1.8.1
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../{1.7.9 => 1.8.1}/xout/_root/etc/fw.fix         |   2 +-
+ .../{1.7.9 => 1.8.1}/xout/_root/etc/fw.manifest    |   4 +-
+ .../{1.7.9 => 1.8.1}/xout/_root/opt/data.tar.bz2   | Bin 412 -> 428 bytes
+ .../xout/_root/opt/ros/melodic/_setup_util.py      |   2 +-
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 1009224 -> 1020624 bytes
+ .../{1.7.9 => 1.8.1}/xout/_root/usr/doc/update.log |  25 ++++---------
+ .../_root/usr/lib/node/liberos_node_bigdata.so     | Bin 1025472 -> 778616 bytes
+ .../{1.7.9 => 1.8.1}/xout/_root/version.json       |  22 +++++------
+ .../{1.7.9 => 1.8.1}/xout/_root/version.txt        |  41 ++++++++-------------
+ 9 files changed, 37 insertions(+), 59 deletions(-)

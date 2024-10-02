@@ -1,0 +1,259 @@
+Firmware diff for DEEBOT X1 OMNI (ecovacs.1vxt52)
+Old version: 2.3.3 New version: 2.3.9
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../{2.3.3 => 2.3.9}/xout/_model/models.json       |  26 +-
+ .../ecovacs.1vxt52/2.3.9/xout/_model/net-en16.bin} | Bin 0 -> 3739488 bytes
+ .../ecovacs.1vxt52/2.3.9/xout/_model/net-en17.bin} | Bin 0 -> 3739472 bytes
+ .../xout/_recovery/etc/fw.manifest                 |   4 +-
+ .../{2.3.3 => 2.3.9}/xout/_root/etc/fw.manifest    |   4 +-
+ .../xout/_root/etc/rc.d/play_boot_music.sh         |   6 +
+ .../xout/_root/etc/rc.d/speech_recognition.sh      |  11 +
+ .../xout/_root/install/root/etc/conf/nlp/eis.json} |   4 +
+ .../usr/lib/nlp/cmake/c-ares/c-ares-config.cmake}  |  34 +
+ .../cmake/c-ares/c-ares-targets-noconfig.cmake}    |  19 +
+ .../usr/lib/nlp/cmake/c-ares/c-ares-targets.cmake} | 100 +++
+ .../root/usr/lib/nlp/cmake/grpc/gRPCConfig.cmake}  |  15 +
+ .../lib/nlp/cmake/grpc/gRPCConfigVersion.cmake}    |  48 ++
+ .../lib/nlp/cmake/grpc/gRPCTargets-noconfig.cmake} | 429 +++++++++++++
+ .../root/usr/lib/nlp/cmake/grpc/gRPCTargets.cmake} | 710 +++++++++++++++++++++
+ .../lib/nlp/cmake/grpc/modules/Findc-ares.cmake}   |  48 ++
+ .../usr/lib/nlp/cmake/grpc/modules/Findre2.cmake}  |  65 ++
+ .../cmake/protobuf/protobuf-config-version.cmake}  |  60 ++
+ .../lib/nlp/cmake/protobuf/protobuf-config.cmake}  | 152 +++++
+ .../lib/nlp/cmake/protobuf/protobuf-module.cmake}  | 201 ++++++
+ .../lib/nlp/cmake/protobuf/protobuf-options.cmake} |   7 +
+ .../protobuf/protobuf-targets-noconfig.cmake}      |  48 ++
+ .../lib/nlp/cmake/protobuf/protobuf-targets.cmake} | 118 ++++
+ .../lib/nlp/cmake/re2/re2Config-noconfig.cmake}    |  19 +
+ .../root/usr/lib/nlp/cmake/re2/re2Config.cmake}    |  94 +++
+ .../usr/lib/nlp/libabsl_bad_optional_access.so}    | Bin 0 -> 13072 bytes
+ .../usr/lib/nlp/libabsl_bad_variant_access.so}     | Bin 0 -> 13400 bytes
+ .../install/root/usr/lib/nlp/libabsl_base.so}      | Bin 0 -> 48792 bytes
+ .../install/root/usr/lib/nlp/libabsl_city.so}      | Bin 0 -> 22968 bytes
+ .../root/usr/lib/nlp/libabsl_civil_time.so}        | Bin 0 -> 29960 bytes
+ .../install/root/usr/lib/nlp/libabsl_cord.so}      | Bin 0 -> 697496 bytes
+ .../usr/lib/nlp/libabsl_debugging_internal.so}     | Bin 0 -> 36168 bytes
+ .../root/usr/lib/nlp/libabsl_demangle_internal.so} | Bin 0 -> 54944 bytes
+ .../usr/lib/nlp/libabsl_exponential_biased.so}     | Bin 0 -> 11696 bytes
+ .../usr/lib/nlp/libabsl_graphcycles_internal.so}   | Bin 0 -> 61784 bytes
+ .../install/root/usr/lib/nlp/libabsl_hash.so}      | Bin 0 -> 19264 bytes
+ .../usr/lib/nlp/libabsl_hashtablez_sampler.so}     | Bin 0 -> 36808 bytes
+ .../install/root/usr/lib/nlp/libabsl_int128.so}    | Bin 0 -> 49784 bytes
+ .../root/usr/lib/nlp/libabsl_log_severity.so}      | Bin 0 -> 10352 bytes
+ .../root/usr/lib/nlp/libabsl_malloc_internal.so}   | Bin 0 -> 36288 bytes
+ .../root/usr/lib/nlp/libabsl_raw_hash_set.so}      | Bin 0 -> 18632 bytes
+ .../usr/lib/nlp/libabsl_raw_logging_internal.so}   | Bin 0 -> 28656 bytes
+ .../root/usr/lib/nlp/libabsl_spinlock_wait.so}     | Bin 0 -> 14312 bytes
+ .../root/usr/lib/nlp/libabsl_stacktrace.so}        | Bin 0 -> 20544 bytes
+ .../install/root/usr/lib/nlp/libabsl_status.so}    | Bin 0 -> 214144 bytes
+ .../install/root/usr/lib/nlp/libabsl_statusor.so}  | Bin 0 -> 33992 bytes
+ .../usr/lib/nlp/libabsl_str_format_internal.so}    | Bin 0 -> 454992 bytes
+ .../install/root/usr/lib/nlp/libabsl_strings.so}   | Bin 0 -> 299208 bytes
+ .../root/usr/lib/nlp/libabsl_strings_internal.so}  | Bin 0 -> 25536 bytes
+ .../install/root/usr/lib/nlp/libabsl_symbolize.so} | Bin 0 -> 57888 bytes
+ .../root/usr/lib/nlp/libabsl_synchronization.so}   | Bin 0 -> 149432 bytes
+ .../root/usr/lib/nlp/libabsl_throw_delegate.so}    | Bin 0 -> 34648 bytes
+ .../install/root/usr/lib/nlp/libabsl_time.so}      | Bin 0 -> 250392 bytes
+ .../install/root/usr/lib/nlp/libabsl_time_zone.so} | Bin 0 -> 539152 bytes
+ .../install/root/usr/lib/nlp/libabsl_wyhash.so}    | Bin 0 -> 13552 bytes
+ .../root/usr/lib/nlp/libaddress_sorting.so}        |   0
+ .../root/usr/lib/nlp/libaddress_sorting.so.17}     |   0
+ .../root/usr/lib/nlp/libaddress_sorting.so.17.0.0} | Bin 0 -> 17568 bytes
+ .../_root/install/root/usr/lib/nlp/libeis_sdk.so}  | Bin 0 -> 22007336 bytes
+ .../xout/_root/install/root/usr/lib/nlp/libgpr.so} |   0
+ .../_root/install/root/usr/lib/nlp/libgpr.so.17}   |   0
+ .../install/root/usr/lib/nlp/libgpr.so.17.0.0}     | Bin 0 -> 470704 bytes
+ .../_root/install/root/usr/lib/nlp/libgrpc++.so}   |   0
+ .../install/root/usr/lib/nlp/libgrpc++.so.1.39}    |   0
+ .../root/usr/lib/nlp/libgrpc++.so.1.39.0-dev}      | Bin 0 -> 2880080 bytes
+ .../install/root/usr/lib/nlp/libgrpc++_alts.so}    |   0
+ .../root/usr/lib/nlp/libgrpc++_alts.so.1.39}       |   0
+ .../root/usr/lib/nlp/libgrpc++_alts.so.1.39.0-dev} | Bin 0 -> 154952 bytes
+ .../root/usr/lib/nlp/libgrpc++_error_details.so}   |   0
+ .../usr/lib/nlp/libgrpc++_error_details.so.1.39}   |   0
+ .../lib/nlp/libgrpc++_error_details.so.1.39.0-dev} | Bin 0 -> 11408 bytes
+ .../root/usr/lib/nlp/libgrpc++_unsecure.so}        |   0
+ .../root/usr/lib/nlp/libgrpc++_unsecure.so.1.39}   |   0
+ .../usr/lib/nlp/libgrpc++_unsecure.so.1.39.0-dev}  | Bin 0 -> 2512904 bytes
+ .../_root/install/root/usr/lib/nlp/libgrpc.so}     |   0
+ .../_root/install/root/usr/lib/nlp/libgrpc.so.17}  |   0
+ .../install/root/usr/lib/nlp/libgrpc.so.17.0.0}    | Bin 0 -> 17816560 bytes
+ .../install/root/usr/lib/nlp/libgrpc_unsecure.so}  |   0
+ .../root/usr/lib/nlp/libgrpc_unsecure.so.17}       |   0
+ .../root/usr/lib/nlp/libgrpc_unsecure.so.17.0.0}   | Bin 0 -> 9290040 bytes
+ .../_root/install/root/usr/lib/nlp/libnsl.so.1}    | Bin 0 -> 19488 bytes
+ .../install/root/usr/lib/nlp/libprotobuf-lite.so}  |   0
+ .../root/usr/lib/nlp/libprotobuf-lite.so.3.15.8.0} | Bin 0 -> 1648616 bytes
+ .../_root/install/root/usr/lib/nlp/libprotobuf.so} |   0
+ .../root/usr/lib/nlp/libprotobuf.so.3.15.8.0}      | Bin 0 -> 11498144 bytes
+ .../_root/install/root/usr/lib/nlp/libprotoc.so}   |   0
+ .../root/usr/lib/nlp/libprotoc.so.3.15.8.0}        | Bin 0 -> 7113736 bytes
+ .../xout/_root/install/root/usr/lib/nlp/libre2.so} | Bin 0 -> 2120368 bytes
+ .../xout/_root/install/root/usr/lib/nlp/libupb.so} |   0
+ .../_root/install/root/usr/lib/nlp/libupb.so.17}   |   0
+ .../install/root/usr/lib/nlp/libupb.so.17.0.0}     | Bin 0 -> 167240 bytes
+ .../xout/_root/install/root/usr/lib/nlp/libz.so}   |   0
+ .../xout/_root/install/root/usr/lib/nlp/libz.so.1} |   0
+ .../_root/install/root/usr/lib/nlp/libz.so.1.2.11} | Bin 0 -> 134992 bytes
+ .../usr/lib/nlp/pkgconfig/absl_absl_algorithm.pc}  |  12 +
+ .../pkgconfig/absl_absl_algorithm_container.pc}    |  12 +
+ .../root/usr/lib/nlp/pkgconfig/absl_absl_any.pc}   |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_atomic_hook.pc}    |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_bad_any_cast.pc}   |  12 +
+ .../nlp/pkgconfig/absl_absl_bad_any_cast_impl.pc}  |  12 +
+ .../pkgconfig/absl_absl_bad_optional_access.pc}    |  12 +
+ .../nlp/pkgconfig/absl_absl_bad_variant_access.pc} |  12 +
+ .../root/usr/lib/nlp/pkgconfig/absl_absl_base.pc}  |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_base_internal.pc}  |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_bind_front.pc} |  12 +
+ .../root/usr/lib/nlp/pkgconfig/absl_absl_bits.pc}  |  12 +
+ .../root/usr/lib/nlp/pkgconfig/absl_absl_btree.pc} |  12 +
+ .../root/usr/lib/nlp/pkgconfig/absl_absl_city.pc}  |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_civil_time.pc} |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_compare.pc}    |  12 +
+ .../nlp/pkgconfig/absl_absl_compressed_tuple.pc}   |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_config.pc}     |  12 +
+ .../nlp/pkgconfig/absl_absl_container_common.pc}   |  12 +
+ .../nlp/pkgconfig/absl_absl_container_memory.pc}   |  12 +
+ .../root/usr/lib/nlp/pkgconfig/absl_absl_cord.pc}  |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_core_headers.pc}   |  12 +
+ .../nlp/pkgconfig/absl_absl_counting_allocator.pc} |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_debugging.pc}  |  12 +
+ .../nlp/pkgconfig/absl_absl_debugging_internal.pc} |  12 +
+ .../nlp/pkgconfig/absl_absl_demangle_internal.pc}  |  12 +
+ .../pkgconfig/absl_absl_dynamic_annotations.pc}    |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_endian.pc}     |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_errno_saver.pc}    |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_examine_stack.pc}  |  12 +
+ .../nlp/pkgconfig/absl_absl_exponential_biased.pc} |  12 +
+ .../pkgconfig/absl_absl_failure_signal_handler.pc} |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_fast_type_id.pc}   |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_fixed_array.pc}    |  12 +
+ .../root/usr/lib/nlp/pkgconfig/absl_absl_flags.pc} |  12 +
+ .../pkgconfig/absl_absl_flags_commandlineflag.pc}  |  12 +
+ .../absl_absl_flags_commandlineflag_internal.pc}   |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_flags_config.pc}   |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_flags_internal.pc} |  12 +
+ .../nlp/pkgconfig/absl_absl_flags_marshalling.pc}  |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_flags_parse.pc}    |  12 +
+ .../nlp/pkgconfig/absl_absl_flags_path_util.pc}    |  12 +
+ .../absl_absl_flags_private_handle_accessor.pc}    |  12 +
+ .../nlp/pkgconfig/absl_absl_flags_program_name.pc} |  12 +
+ .../nlp/pkgconfig/absl_absl_flags_reflection.pc}   |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_flags_usage.pc}    |  12 +
+ .../pkgconfig/absl_absl_flags_usage_internal.pc}   |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_flat_hash_map.pc}  |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_flat_hash_set.pc}  |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_function_ref.pc}   |  12 +
+ .../pkgconfig/absl_absl_graphcycles_internal.pc}   |  12 +
+ .../root/usr/lib/nlp/pkgconfig/absl_absl_hash.pc}  |  12 +
+ .../pkgconfig/absl_absl_hash_function_defaults.pc} |  12 +
+ .../nlp/pkgconfig/absl_absl_hash_policy_traits.pc} |  12 +
+ .../nlp/pkgconfig/absl_absl_hashtable_debug.pc}    |  12 +
+ .../pkgconfig/absl_absl_hashtable_debug_hooks.pc}  |  12 +
+ .../nlp/pkgconfig/absl_absl_hashtablez_sampler.pc} |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_have_sse.pc}   |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_inlined_vector.pc} |  12 +
+ .../absl_absl_inlined_vector_internal.pc}          |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_int128.pc}     |  12 +
+ .../absl_absl_kernel_timeout_internal.pc}          |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_layout.pc}     |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_leak_check.pc} |  12 +
+ .../nlp/pkgconfig/absl_absl_leak_check_disable.pc} |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_log_severity.pc}   |  12 +
+ .../nlp/pkgconfig/absl_absl_malloc_internal.pc}    |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_memory.pc}     |  12 +
+ .../root/usr/lib/nlp/pkgconfig/absl_absl_meta.pc}  |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_node_hash_map.pc}  |  12 +
+ .../nlp/pkgconfig/absl_absl_node_hash_policy.pc}   |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_node_hash_set.pc}  |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_numeric.pc}    |  12 +
+ .../pkgconfig/absl_absl_numeric_representation.pc} |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_optional.pc}   |  12 +
+ .../nlp/pkgconfig/absl_absl_periodic_sampler.pc}   |  12 +
+ .../nlp/pkgconfig/absl_absl_pretty_function.pc}    |  12 +
+ .../nlp/pkgconfig/absl_absl_random_bit_gen_ref.pc} |  12 +
+ .../pkgconfig/absl_absl_random_distributions.pc}   |  12 +
+ ...sl_absl_random_internal_distribution_caller.pc} |  12 +
+ ...absl_random_internal_distribution_test_util.pc} |  12 +
+ ...absl_absl_random_internal_fast_uniform_bits.pc} |  12 +
+ .../absl_absl_random_internal_fastmath.pc}         |  12 +
+ .../absl_absl_random_internal_generate_real.pc}    |  12 +
+ ...l_absl_random_internal_iostream_state_saver.pc} |  12 +
+ .../absl_absl_random_internal_mock_helpers.pc}     |  12 +
+ .../absl_absl_random_internal_nonsecure_base.pc}   |  12 +
+ .../absl_absl_random_internal_pcg_engine.pc}       |  12 +
+ .../absl_absl_random_internal_platform.pc}         |  12 +
+ .../absl_absl_random_internal_pool_urbg.pc}        |  12 +
+ .../pkgconfig/absl_absl_random_internal_randen.pc} |  12 +
+ .../absl_absl_random_internal_randen_engine.pc}    |  12 +
+ .../absl_absl_random_internal_randen_hwaes.pc}     |  12 +
+ ...absl_absl_random_internal_randen_hwaes_impl.pc} |  12 +
+ .../absl_absl_random_internal_randen_slow.pc}      |  12 +
+ .../absl_absl_random_internal_salted_seed_seq.pc}  |  12 +
+ .../absl_absl_random_internal_seed_material.pc}    |  12 +
+ .../pkgconfig/absl_absl_random_internal_traits.pc} |  12 +
+ .../absl_absl_random_internal_uniform_helper.pc}   |  12 +
+ .../absl_absl_random_internal_wide_multiply.pc}    |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_random_random.pc}  |  12 +
+ .../absl_absl_random_seed_gen_exception.pc}        |  12 +
+ .../pkgconfig/absl_absl_random_seed_sequences.pc}  |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_raw_hash_map.pc}   |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_raw_hash_set.pc}   |  12 +
+ .../pkgconfig/absl_absl_raw_logging_internal.pc}   |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_scoped_set_env.pc} |  12 +
+ .../root/usr/lib/nlp/pkgconfig/absl_absl_span.pc}  |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_spinlock_wait.pc}  |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_stacktrace.pc} |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_status.pc}     |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_statusor.pc}   |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_str_format.pc} |  12 +
+ .../pkgconfig/absl_absl_str_format_internal.pc}    |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_strerror.pc}   |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_strings.pc}    |  12 +
+ .../nlp/pkgconfig/absl_absl_strings_internal.pc}   |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_symbolize.pc}  |  12 +
+ .../nlp/pkgconfig/absl_absl_synchronization.pc}    |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_throw_delegate.pc} |  12 +
+ .../root/usr/lib/nlp/pkgconfig/absl_absl_time.pc}  |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_time_zone.pc}  |  12 +
+ .../lib/nlp/pkgconfig/absl_absl_type_traits.pc}    |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_utility.pc}    |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_variant.pc}    |  12 +
+ .../usr/lib/nlp/pkgconfig/absl_absl_wyhash.pc}     |  12 +
+ .../install/root/usr/lib/nlp/pkgconfig/gpr.pc}     |  12 +
+ .../install/root/usr/lib/nlp/pkgconfig/grpc++.pc}  |  12 +
+ .../root/usr/lib/nlp/pkgconfig/grpc++_unsecure.pc} |  12 +
+ .../install/root/usr/lib/nlp/pkgconfig/grpc.pc}    |  12 +
+ .../root/usr/lib/nlp/pkgconfig/grpc_unsecure.pc}   |  12 +
+ .../root/usr/lib/nlp/pkgconfig/libcares.pc}        |  20 +
+ .../root/usr/lib/nlp/pkgconfig/protobuf-lite.pc}   |  11 +
+ .../root/usr/lib/nlp/pkgconfig/protobuf.pc}        |  11 +
+ .../2.3.9/xout/_root/media/music/EN/1655.ogg}      | Bin 0 -> 22785 bytes
+ .../{2.3.3 => 2.3.9}/xout/_root/opt/data.tar.bz2   | Bin 412 -> 422 bytes
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 1950736 -> 2044528 bytes
+ .../xout/_root/usr/bin/factory_fun                 |   1 +
+ .../xout/_root/usr/bin/factory_reset.sh            |   3 +
+ .../xout/_root/usr/bin/speech_inter_client         | Bin 581200 -> 581136 bytes
+ .../_root/usr/lib/WHmethods/libWHMapMethods.so     | Bin 221568 -> 233592 bytes
+ .../xout/_root/usr/lib/WHmethods/libWHWbMethods.so | Bin 171704 -> 177048 bytes
+ .../xout/_root/usr/lib/WHmethods/libWHmethods.so   | Bin 522032 -> 539904 bytes
+ .../_root/usr/lib/eros_node_hardware_platform.pc}  |   8 +
+ .../xout/_root/usr/lib/libDeebot.so                | Bin 134560 -> 134584 bytes
+ .../{2.3.3 => 2.3.9}/xout/_root/usr/lib/libPln.so  | Bin 3790176 -> 3794528 bytes
+ .../xout/_root/usr/lib/libai_map.so                | Bin 2493216 -> 2544488 bytes
+ .../xout/_root/usr/lib/liberos_pb_msg.so           | Bin 285696 -> 285696 bytes
+ .../xout/_root/usr/lib/libjob_schedule_midware.so  | Bin 4223608 -> 4287768 bytes
+ .../xout/_root/usr/lib/libslam_error_check.so      | Bin 62864 -> 65688 bytes
+ .../xout/_root/usr/lib/medusa/plug_kvs_webrtc.so   | Bin 257272 -> 257272 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_ros_node.so  | Bin 135088 -> 140960 bytes
+ .../_root/usr/lib/node/liberos_node_bigdata.so     | Bin 2162912 -> 2180368 bytes
+ .../xout/_root/usr/lib/node/liberos_node_clean.so  | Bin 1038688 -> 1069432 bytes
+ .../usr/lib/node/liberos_node_hardware_platform.so | Bin 1372848 -> 1376992 bytes
+ .../usr/lib/node/liberos_node_job_schedule.so      | Bin 656280 -> 668616 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    | Bin 1754648 -> 1755544 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     | Bin 741832 -> 744464 bytes
+ .../xout/_root/usr/lib/node/liberos_node_slam.so   | Bin 495472 -> 495464 bytes
+ 253 files changed, 3843 insertions(+), 5 deletions(-)

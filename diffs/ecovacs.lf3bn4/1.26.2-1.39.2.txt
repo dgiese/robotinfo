@@ -1,0 +1,117 @@
+Firmware diff for DEEBOT X2 (ecovacs.lf3bn4)
+Old version: 1.26.2 New version: 1.39.2
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../1.39.2/xout/_model/rl_navi_230705.bin}         | Bin 0 -> 12907025 bytes
+ .../xout/_root/etc/conf/medusa/MdsFuncTest.sh}     | 299 +++++++++++++++++++++
+ .../xout/_root/etc/conf/medusa/audio_play_hook.sh  |  46 ++++
+ .../_root/etc/conf/medusa/download_fw_hook_v3.sh   |   5 +
+ .../xout/_root/etc/conf/medusa/erp_hook.sh         |   2 +-
+ .../xout/_root/etc/conf/medusa/get_audio_help.sh   |  11 +-
+ .../xout/_root/etc/conf/medusa/start_ota.sh        |   3 +
+ .../_root/etc/conf/medusa/xmpp_server_status.sh    |   2 +-
+ .../xout/_root/etc/conf/pln_config.json            |  32 +++
+ .../xout/_root/etc/conf/speech_inter.conf          |   3 +-
+ .../{1.26.2 => 1.39.2}/xout/_root/etc/fw.manifest  |   6 +-
+ .../xout/_root/etc/rc.d/medusa.sh                  |   2 +-
+ .../xout/_root/etc/rc.d/speech_recognition.sh      |   5 +-
+ .../xout/_root/etc/wifi/rtl8723.tar.bz2            | Bin 1540 -> 1561 bytes
+ .../EN/native_audio/DTOF_STOP_PLEASE_DETECTION.mp3 | Bin 17712 -> 20592 bytes
+ .../EXPAND_ERROR_BUILD_AGAIN.mp3 => dev/null}      | Bin 20592 -> 0 bytes
+ .../EXPAND_ERROR_RETRY.mp3 => dev/null}            | Bin 16272 -> 0 bytes
+ .../EN/native_audio/EXPAND_OVER.mp3 => dev/null}   | Bin 17136 -> 0 bytes
+ .../FILTER_UNINSTALL_CHECK_CLEAN.mp3 => dev/null}  | Bin 24336 -> 0 bytes
+ .../music/EN/native_audio/IN_POSITION_TRY.mp3      | Bin 14976 -> 11952 bytes
+ .../_root/media/music/EN/native_audio/I_AM_1.mp3   | Bin 5616 -> 6048 bytes
+ .../_root/media/music/EN/native_audio/I_AM_2.mp3   | Bin 8928 -> 7920 bytes
+ .../_root/media/music/EN/native_audio/I_AM_3.mp3   | Bin 7920 -> 6480 bytes
+ .../native_audio/NO_MAP_WILL_BUDIL_THEN_CLEAN.mp3  | Bin 36000 -> 29088 bytes
+ .../music/EN/native_audio/OK_CALL_ME_IF_NEED.mp3}  | Bin 0 -> 11520 bytes
+ .../EN/native_audio/OK_START_FAST_BUILDMAP.mp3     | Bin 21456 -> 22752 bytes
+ .../PLEASE_ADD_DETERGENT.mp3 => dev/null}          | Bin 29376 -> 0 bytes
+ .../music/EN/native_audio/PLEASE_CALL_ME_OUT.mp3   | Bin 14112 -> 13968 bytes
+ .../music/EN/native_audio/RELOCATE_SUCCESS.mp3}    | Bin 0 -> 9216 bytes
+ .../EN/native_audio/SORRY_IN_CLEAN_NOT_MODE.mp3    | Bin 21168 -> 14976 bytes
+ .../EN/native_audio/SORRY_MULTI_MODE_CYCLE.mp3}    | Bin 0 -> 15552 bytes
+ .../EN/native_audio/START_EXPAND.mp3 => dev/null}  | Bin 8496 -> 0 bytes
+ .../music/EN/native_audio/START_FAST_BUILDMAP.mp3  | Bin 8784 -> 7488 bytes
+ .../START_FAST_BUILDMAP_THEN_CLEAN.mp3             | Bin 28080 -> 21888 bytes
+ .../media/music/EN/native_kb/kb230407b1/qa.json    |   2 +-
+ .../media/music/EN/native_kb/kb230512b1/qa.json    |   2 +-
+ .../xout/_root/media/music/EN/version.json         |   2 +-
+ .../ZH/native_audio/CLEAN_TANK_WATER_FULL.mp3      | Bin 9432 -> 7992 bytes
+ .../ZH/native_audio/DTOF_STOP_PLEASE_DETECTION.mp3 | Bin 6408 -> 8208 bytes
+ .../EXPAND_ERROR_BUILD_AGAIN.mp3 => dev/null}      | Bin 5328 -> 0 bytes
+ .../EXPAND_ERROR_RETRY.mp3 => dev/null}            | Bin 4104 -> 0 bytes
+ .../ZH/native_audio/EXPAND_OVER.mp3 => dev/null}   | Bin 5976 -> 0 bytes
+ .../FILTER_UNINSTALL_CHECK_CLEAN.mp3 => dev/null}  | Bin 9360 -> 0 bytes
+ .../music/ZH/native_audio/IN_POSITION_TRY.mp3      | Bin 4392 -> 5112 bytes
+ .../media/music/ZH/native_audio/MOVE_ROBOT_OK.mp3} | Bin 0 -> 1080 bytes
+ .../native_audio/NO_MAP_WILL_BUDIL_THEN_CLEAN.mp3  | Bin 11952 -> 11232 bytes
+ .../music/ZH/native_audio/OK_CALL_ME_IF_NEED.mp3}  | Bin 0 -> 4608 bytes
+ .../music/ZH/native_audio/OK_I_CAN_AUTO_CLEAN.mp3  | Bin 24408 -> 24408 bytes
+ .../ZH/native_audio/OK_I_CAN_CLEAN_BEDROOM.mp3     | Bin 22896 -> 22968 bytes
+ .../music/ZH/native_audio/OK_I_CAN_COLECT_DIRT.mp3 | Bin 24552 -> 24552 bytes
+ .../music/ZH/native_audio/OK_I_CAN_CONSUMABLE.mp3  | Bin 25488 -> 25560 bytes
+ .../music/ZH/native_audio/OK_I_CAN_CONTINUE.mp3    | Bin 22320 -> 22320 bytes
+ .../media/music/ZH/native_audio/OK_I_CAN_PAUSE.mp3 | Bin 22464 -> 22392 bytes
+ .../music/ZH/native_audio/OK_I_CAN_RETURN.mp3      | Bin 22320 -> 22320 bytes
+ .../music/ZH/native_audio/OK_I_CAN_SELFCLEAN.mp3   | Bin 25416 -> 25632 bytes
+ .../music/ZH/native_audio/OK_I_CAN_SUCK_NORMAL.mp3 | Bin 25632 -> 25704 bytes
+ .../ZH/native_audio/OK_I_CAN_SWEEP_BEFORE_MOP.mp3  | Bin 24408 -> 24480 bytes
+ .../music/ZH/native_audio/OK_I_CAN_VOLUME_50.mp3   | Bin 25272 -> 25416 bytes
+ .../music/ZH/native_audio/OK_I_CAN_WASHMOP.mp3     | Bin 24984 -> 24912 bytes
+ .../ZH/native_audio/OK_I_CAN_WATER_MIDDLE.mp3      | Bin 25416 -> 25632 bytes
+ .../music/ZH/native_audio/OK_I_CAN_WHERE_YOU.mp3   | Bin 22752 -> 22752 bytes
+ .../ZH/native_audio/OK_START_FAST_BUILDMAP.mp3     | Bin 9072 -> 8352 bytes
+ .../music/ZH/native_audio/OMNI_WORK_COMPLETE.mp3   | Bin 2088 -> 1872 bytes
+ .../music/ZH/native_audio/PARDON_WHICH_TIME.mp3    | Bin 4896 -> 5256 bytes
+ .../PLEASE_ADD_DETERGENT.mp3 => dev/null}          | Bin 11376 -> 0 bytes
+ .../music/ZH/native_audio/PLEASE_CALL_ME_OUT.mp3   | Bin 4032 -> 4392 bytes
+ .../music/ZH/native_audio/RELOCATE_SUCCESS.mp3}    | Bin 0 -> 1872 bytes
+ .../ZH/native_audio/SORRY_IN_CLEAN_NOT_MODE.mp3    | Bin 9936 -> 5472 bytes
+ .../music/ZH/native_audio/SORRY_SAY_WHAT_DO.mp3    | Bin 14328 -> 14328 bytes
+ .../ZH/native_audio/START_EXPAND.mp3 => dev/null}  | Bin 1872 -> 0 bytes
+ .../music/ZH/native_audio/START_FAST_BUILDMAP.mp3  | Bin 2808 -> 2088 bytes
+ .../START_FAST_BUILDMAP_THEN_CLEAN.mp3             | Bin 9072 -> 8280 bytes
+ .../media/music/ZH/native_audio/WATEROVER_PUMP.mp3 | Bin 5832 -> 10152 bytes
+ .../media/music/ZH/native_kb/kb230322b0/qa.json    |   2 +-
+ .../media/music/ZH/native_kb/kb230331b1/qa.json    |   2 +-
+ .../media/music/ZH/native_kb/kb230331b2/qa.json    |   2 +-
+ .../xout/_root/media/music/ZH/version.json         |   2 +-
+ .../{1.26.2 => 1.39.2}/xout/_root/opt/data.tar.bz2 | Bin 4238 -> 4231 bytes
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 4383976 -> 4371704 bytes
+ .../xout/_root/usr/bin/eros_data_upload.sh         |  54 ++--
+ .../xout/_root/usr/bin/medusa_status_check.sh}     |  79 ++++++
+ .../xout/_root/usr/bin/setNetConfig_check.sh       |  16 +-
+ .../xout/_root/usr/bin/speech_inter_client         | Bin 747840 -> 739648 bytes
+ .../xout/_root/usr/bin/speech_recognition          | Bin 555328 -> 575824 bytes
+ .../xout/_root/usr/lib/eros_node_setting.pc        |   4 +-
+ .../xout/_root/usr/lib/libEdgeFollow.so            | Bin 953512 -> 953544 bytes
+ .../xout/_root/usr/lib/libPerception.so            | Bin 1142856 -> 1140312 bytes
+ .../xout/_root/usr/lib/libPln.so                   | Bin 3477192 -> 3511232 bytes
+ .../xout/_root/usr/lib/libjob_schedule_midware.so  | Bin 3079584 -> 3112816 bytes
+ .../_root/usr/lib/libjob_schedule_ros_convert.so   | Bin 2669680 -> 2668752 bytes
+ .../xout/_root/usr/lib/libreturnnavigation.so      | Bin 479832 -> 483608 bytes
+ .../xout/_root/usr/lib/librl_navi.so               | Bin 315976 -> 322472 bytes
+ .../xout/_root/usr/lib/libslam_house_layout.so     | Bin 197888 -> 209664 bytes
+ .../xout/_root/usr/lib/libstuck.so                 | Bin 287560 -> 283760 bytes
+ .../xout/_root/usr/lib/medusa/plug_kvs_push.so     | Bin 308040 -> 308384 bytes
+ .../xout/_root/usr/lib/nlp/libeis_sdk.so           | Bin 16453384 -> 16598240 bytes
+ .../xout/_root/usr/lib/nlp/libeis_wakeup.so        | Bin 2994832 -> 2994864 bytes
+ .../usr/lib/node/liberos_node_RobotInfoCollect.so  | Bin 829344 -> 836192 bytes
+ .../xout/_root/usr/lib/node/liberos_node_alert.so  | Bin 198824 -> 199448 bytes
+ .../_root/usr/lib/node/liberos_node_bigdata.so     | Bin 1417608 -> 1447464 bytes
+ .../xout/_root/usr/lib/node/liberos_node_clean.so  | Bin 1102584 -> 1176080 bytes
+ .../_root/usr/lib/node/liberos_node_data_filter.so | Bin 724504 -> 724504 bytes
+ .../usr/lib/node/liberos_node_hardware_platform.so | Bin 1626040 -> 1623976 bytes
+ .../usr/lib/node/liberos_node_house_layout.so      | Bin 357104 -> 353008 bytes
+ .../usr/lib/node/liberos_node_job_schedule.so      | Bin 656864 -> 660968 bytes
+ .../_root/usr/lib/node/liberos_node_lifespan.so    | Bin 311424 -> 312096 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    | Bin 2165040 -> 2144352 bytes
+ .../xout/_root/usr/lib/node/liberos_node_omni.so   | Bin 664880 -> 668976 bytes
+ .../_root/usr/lib/node/liberos_node_postTunnel.so  | Bin 1097112 -> 1097128 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     | Bin 1013568 -> 1010552 bytes
+ .../xout/_root/usr/lib/node/liberos_node_slam.so   | Bin 513256 -> 512928 bytes
+ 111 files changed, 540 insertions(+), 43 deletions(-)

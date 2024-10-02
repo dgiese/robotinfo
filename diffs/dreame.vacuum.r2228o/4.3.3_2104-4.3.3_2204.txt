@@ -1,0 +1,31 @@
+Firmware diff for DreameBot L10s Ultra (dreame.vacuum.r2228o)
+Old version: 4.3.3_2104 New version: 4.3.3_2204
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../conf/dreame_obstacle7_v0.10.mnn => dev/null}   | Bin 3465496 -> 0 bytes
+ .../_root/ava/conf/dreame_obstacle7_v1.0.json}     |   0
+ .../xout/_root/ava/conf/dreame_obstacle7_v1.0.mnn} | Bin 0 -> 3465496 bytes
+ .../_root/ava/conf/dreame_obstacle7_v1.0_cache}    | Bin 1170520 -> 1170520 bytes
+ .../xout/_root/ava/conf/r2228.conf                 |   4 ++--
+ .../xout/_root/ava/lib/node_arges.so               | Bin 4807856 -> 4807856 bytes
+ .../xout/_root/ava/lib/node_camera_ai.so           | Bin 635544 -> 635544 bytes
+ .../xout/_root/ava/lib/node_camera_laser.so        | Bin 147400 -> 144936 bytes
+ .../_root/ava/lib/node_laser_point_extractor.so    | Bin 356360 -> 352264 bytes
+ .../xout/_root/ava/lib/node_laser_transfer.so      | Bin 2056560 -> 2052472 bytes
+ .../xout/_root/ava/lib/node_lasercamera_calibr.so  | Bin 221776 -> 222416 bytes
+ .../xout/_root/ava/lib/node_laserplane_calibr.so   | Bin 287600 -> 290544 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 2166496 -> 2174720 bytes
+ .../xout/_root/ava/lib/node_linelaser_calibr.so    | Bin 124672 -> 124360 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 1430152 -> 1426112 bytes
+ .../xout/_root/etc/os-release                      |   6 +++---
+ .../xout/_root/misc/data.tar.bz2                   | Bin 573 -> 571 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../_root/usr/lib/tree_lib/libarges_route_nodes.so | Bin 10524960 -> 10541184 bytes
+ .../usr/lib/tree_lib/libarges_tactics_tree.so      | Bin 1392888 -> 1384696 bytes
+ .../xout/_root/usr/lib/tree_lib/libarges_tree.so   | Bin 4523744 -> 4538504 bytes
+ .../xout/_root/version_record                      |   8 ++++----
+ .../{4.3.3_2104 => 4.3.3_2204}/xout/kernel.img     | Bin 10835968 -> 10835968 bytes
+ .../{4.3.3_2104 => 4.3.3_2204}/xout/mcu.bin        | Bin 181568 -> 181592 bytes
+ .../{4.3.3_2104 => 4.3.3_2204}/xout/toc1.fex       | Bin 1245184 -> 1245184 bytes
+ 25 files changed, 10 insertions(+), 10 deletions(-)

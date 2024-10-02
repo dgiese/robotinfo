@@ -1,0 +1,26 @@
+Firmware diff for Roborock T7 (roborock.vacuum.a11)
+Old version: 3.5.8_0596 New version: 3.5.8_0640
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/OS_VERSION                      |   8 ++++----
+ .../xout/_root/etc/os-release                      |   2 +-
+ .../xout/_root/etc/rr-info                         |   2 +-
+ .../xout/_root/lib/modules/3.4.39/8189es.ko        | Bin 2208812 -> 2208812 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 302088 -> 302088 bytes
+ .../xout/_root/lib/modules/3.4.39/st480.ko         | Bin 37228 -> 50816 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 66308 -> 66308 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerM | Bin 298376 -> 298376 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_chassis.so   | Bin 63428 -> 63428 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 2375636 -> 2375636 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ ....A3.G1_M4.0.0_RELEASE_20200817-191147_FULL.bin} | Bin 217072 -> 217072 bytes
+ .../firmware/uart_test-4.0.0-20200717 => dev/null} | Bin 477120 -> 0 bytes
+ .../rockrobo/firmware/uart_test-4.0.0-20200817}    | Bin 0 -> 477120 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_rr         | Bin 182620 -> 182620 bytes
+ .../xout/bootout_aboot/zImage                      | Bin 3827072 -> 3827064 bytes
+ .../xout/bootout_aboot/zImage_3.5.8_0640.elf}      | Bin 9974457 -> 9974457 bytes
+ .../{3.5.8_0596 => 3.5.8_0640}/xout/kernel.img     | Bin 3829760 -> 3829760 bytes
+ 20 files changed, 9 insertions(+), 9 deletions(-)

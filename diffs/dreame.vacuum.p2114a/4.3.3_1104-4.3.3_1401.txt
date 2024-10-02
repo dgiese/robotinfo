@@ -1,0 +1,52 @@
+Firmware diff for Xiaomi Robot Vacuum X10+ (dreame.vacuum.p2114a)
+Old version: 4.3.3_1104 New version: 4.3.3_1401
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../4.3.3_1401/xout/_root/audio/EN/334.ogg}        | Bin 0 -> 37149 bytes
+ .../4.3.3_1401/xout/_root/audio/EN/335.ogg}        | Bin 0 -> 19241 bytes
+ .../4.3.3_1401/xout/_root/audio/ZH/334.ogg}        | Bin 0 -> 20034 bytes
+ .../4.3.3_1401/xout/_root/audio/ZH/335.ogg}        | Bin 0 -> 12866 bytes
+ .../_root/ava/conf/dreame_furniture9_v0.7.2.json}  |   2 +-
+ .../_root/ava/conf/dreame_furniture9_v0.7.2.mnn}   | Bin 0 -> 3861264 bytes
+ .../_root/ava/conf/dreame_furniture9_v0.7.2_cache} | Bin 1145240 -> 1145240 bytes
+ .../conf/dreame_furniture9_v0.7.mnn => dev/null}   | Bin 3861248 -> 0 bytes
+ .../xout/_root/ava/conf/p2114.conf                 |   4 ++--
+ .../xout/_root/ava/lib/node_ai_area_recognition.so | Bin 618720 -> 613304 bytes
+ .../xout/_root/ava/lib/node_camera_ai.so           | Bin 515144 -> 515144 bytes
+ .../xout/_root/ava/lib/node_camera_laser.so        | Bin 103928 -> 103928 bytes
+ .../xout/_root/ava/lib/node_camera_streamer.so     | Bin 345360 -> 345360 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 73352 -> 73352 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 44824 -> 44824 bytes
+ .../xout/_root/ava/lib/node_health_nemesis.so      | Bin 335000 -> 335000 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 124352 -> 124352 bytes
+ .../_root/ava/lib/node_laser_point_extractor.so    | Bin 323960 -> 323960 bytes
+ .../xout/_root/ava/lib/node_laser_transfer.so      | Bin 1733576 -> 1733576 bytes
+ .../xout/_root/ava/lib/node_lasercali.so           | Bin 204576 -> 200448 bytes
+ .../xout/_root/ava/lib/node_lasercamera_calibr.so  | Bin 221792 -> 221792 bytes
+ .../xout/_root/ava/lib/node_laserplane_calibr.so   | Bin 324008 -> 324008 bytes
+ .../xout/_root/ava/lib/node_lds.so                 | Bin 377640 -> 377640 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 115576 -> 115576 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 2063496 -> 2063496 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 133168 -> 133168 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 1069576 -> 1073712 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 100088 -> 100088 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 1085984 -> 1106024 bytes
+ .../xout/_root/ava/lib/node_nemesis.so             | Bin 4046848 -> 4055168 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 78464 -> 78464 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 579592 -> 579592 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 144312 -> 144312 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 123520 -> 123520 bytes
+ .../xout/_root/etc/os-release                      |   6 +++---
+ .../xout/_root/misc/data.tar.bz2                   | Bin 555 -> 555 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 183888 -> 183888 bytes
+ .../xout/_root/usr/lib/libMNN_CL.so                | Bin 882688 -> 882688 bytes
+ .../usr/lib/tree_lib/libnemesis_route_nodes.so     | Bin 9891048 -> 9902704 bytes
+ .../usr/lib/tree_lib/libnemesis_tactics_tree.so    | Bin 1254968 -> 1267472 bytes
+ .../xout/_root/usr/lib/tree_lib/libnemesis_tree.so | Bin 3924064 -> 3957472 bytes
+ .../xout/_root/version_record                      |  22 ++++++++++-----------
+ .../{4.3.3_1104 => 4.3.3_1401}/xout/kernel.img     | Bin 10684416 -> 10684416 bytes
+ .../{4.3.3_1104 => 4.3.3_1401}/xout/mcu.bin        | Bin 160244 -> 163140 bytes
+ .../{4.3.3_1104 => 4.3.3_1401}/xout/toc1.fex       | Bin 1245184 -> 1245184 bytes
+ 46 files changed, 18 insertions(+), 18 deletions(-)

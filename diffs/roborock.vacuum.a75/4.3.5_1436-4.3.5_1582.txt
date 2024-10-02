@@ -1,0 +1,26 @@
+Firmware diff for Roborock Qrevo (roborock.vacuum.a75)
+Old version: 4.3.5_1436 New version: 4.3.5_1582
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/rr-info                         |   2 +-
+ .../xout/_root/etc/signature                       | Bin 11644 -> 11632 bytes
+ .../xout/_root/lib/modules/3.4.39/8189fs.ko        | Bin 2151572 -> 2151572 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 281020 -> 280964 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 60548 -> 60528 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../xout/_root/opt/rockrobo/cleaner/bin/AppProxy   | Bin 1422076 -> 1422076 bytes
+ .../opt/rockrobo/cleaner/lib/libNavUnitTest.so     | Bin 1420228 -> 1235612 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 4942460 -> 4954748 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ ...PEARL.A14.G1_M6.0.0_R_20230823-154613_FULL.bin} | Bin 524288 -> 524288 bytes
+ ..._PEARL.A3.G1_M6.0.0_R_20230823-154347_FULL.bin} | Bin 262144 -> 262144 bytes
+ .../rockrobo/firmware/robo_tool-6.0.0-20230906}    | Bin 1051768 -> 1051768 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_rr         | Bin 170048 -> 170048 bytes
+ .../xout/_root/opt/rockrobo/wlan/wlanmgr           | Bin 55388 -> 55408 bytes
+ .../xout/bootout_aboot/bootimg.cfg                 |   2 +-
+ .../xout/bootout_aboot/zImage                      | Bin 3888944 -> 3889952 bytes
+ .../xout/bootout_aboot/zImage_4.3.5_1582.elf}      | Bin 10203143 -> 10203179 bytes
+ .../{4.3.5_1436 => 4.3.5_1582}/xout/kernel.img     | Bin 3891712 -> 3893760 bytes
+ 20 files changed, 5 insertions(+), 5 deletions(-)

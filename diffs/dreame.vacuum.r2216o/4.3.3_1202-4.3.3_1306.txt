@@ -1,0 +1,36 @@
+Firmware diff for DreameBot L10s Pro (dreame.vacuum.r2216o)
+Old version: 4.3.3_1202 New version: 4.3.3_1306
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_camera_laser.so        | Bin 106596 -> 126676 bytes
+ .../_root/ava/lib/node_laser_point_extractor.so    | Bin 295836 -> 291376 bytes
+ .../xout/_root/ava/lib/node_laser_transfer.so      | Bin 1028868 -> 1028880 bytes
+ .../xout/_root/ava/lib/node_lasercamera_calibr.so  | Bin 205900 -> 255068 bytes
+ .../xout/_root/ava/lib/node_laserplane_calibr.so   | Bin 274804 -> 287156 bytes
+ .../xout/_root/ava/lib/node_lds.so                 | Bin 369700 -> 371920 bytes
+ .../xout/_root/ava/lib/node_linelaser_calibr.so    | Bin 118060 -> 118848 bytes
+ .../xout/_root/etc/os-release                      |   4 ++--
+ .../xout/_root/misc/data.tar.bz2                   | Bin 556 -> 560 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/cpu.sh                      |   2 +-
+ .../xout/_root/usr/bin/dreameiot                   | Bin 112824 -> 112824 bytes
+ .../xout/_root/usr/bin/dreameiot_cli               | Bin 93648 -> 93648 bytes
+ .../xout/_root/usr/bin/dummy_cli                   | Bin 10256 -> 10256 bytes
+ .../4.3.3_1306/xout/_root/usr/lib/libfmt.so}       |   0
+ .../4.3.3_1306/xout/_root/usr/lib/libfmt.so.6}     |   0
+ .../4.3.3_1306/xout/_root/usr/lib/libfmt.so.6.0.0} | Bin 0 -> 176500 bytes
+ .../xout/_root/usr/lib/libiniparser.so             | Bin 11128 -> 11560 bytes
+ .../xout/_root/usr/lib/libisp.so                   | Bin 84764 -> 87476 bytes
+ .../xout/_root/usr/lib/libisp_dev.so               | Bin 37496 -> 37512 bytes
+ .../xout/_root/usr/lib/libisp_ini.so               | Bin 1663444 -> 1663916 bytes
+ .../4.3.3_1306/xout/_root/usr/lib/libsmp_shm.so}   | Bin 0 -> 39016 bytes
+ .../usr/lib/modules/4.9.118+/external/8723ds.ko    | Bin 2676436 -> 2676436 bytes
+ .../lib/modules/4.9.118+/external/sc031gs_mipi.ko  | Bin 17620 -> 17724 bytes
+ .../lib/modules/4.9.118+/external/sc035gs_mipi.ko  | Bin 17748 -> 17852 bytes
+ .../usr/lib/tree_lib/libtethys_route_nodes.so      | Bin 9263640 -> 9263640 bytes
+ .../xout/_root/version_record                      |  12 ++++++------
+ .../xout/boot_package.fex                          | Bin 1507328 -> 1490944 bytes
+ .../{4.3.3_1202 => 4.3.3_1306}/xout/kernel.img     | Bin 2934784 -> 2932736 bytes
+ .../{4.3.3_1202 => 4.3.3_1306}/xout/toc1.fex       | Bin 1507328 -> 1507328 bytes
+ 30 files changed, 10 insertions(+), 10 deletions(-)

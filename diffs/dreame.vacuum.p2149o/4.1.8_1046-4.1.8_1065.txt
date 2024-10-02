@@ -1,0 +1,59 @@
+Firmware diff for Mijia Self-Cleaning Robot Vacuum-Mop Pro (dreame.vacuum.p2149o)
+Old version: 4.1.8_1046 New version: 4.1.8_1065
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/conf/ota.conf                   |   2 +-
+ .../xout/_root/ava/conf/p2149.conf                 |   2 +-
+ .../xout/_root/ava/lib/node_clotho.so              | Bin 2068696 -> 2083680 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 70240 -> 73336 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 40648 -> 40648 bytes
+ .../xout/_root/ava/lib/node_health_clotho.so       | Bin 240824 -> 252552 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 115648 -> 124280 bytes
+ .../xout/_root/ava/lib/node_lds.so                 | Bin 181448 -> 181448 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 115560 -> 115560 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 2088872 -> 2166944 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 40608 -> 40896 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 627440 -> 770256 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 94376 -> 94376 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 900296 -> 904088 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 77936 -> 77936 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 200208 -> 200208 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 140392 -> 140184 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 106864 -> 106864 bytes
+ .../xout/_root/ava/script/fds_hook.sh              |   2 +-
+ .../xout/_root/ava/script/msg_cvt.sh               |  12 ++
+ .../xout/_root/ava/script/ota_arm_update.sh        |   4 +-
+ .../xout/_root/ava/script/sys_set_private.sh       |   1 +
+ .../xout/_root/etc/init.d/set_device_conf.sh       | 106 ++++++++++------
+ .../xout/_root/etc/init.d/set_gpio.sh              |   2 +-
+ .../xout/_root/etc/os-release                      |   6 +-
+ .../xout/_root/etc/rc.d/factory_reset_daemon.sh    |   6 +-
+ .../xout/_root/etc/rc.d/mcu_monitor_arm.sh         |   4 +
+ .../xout/_root/etc/rc.d/miio.sh                    | 137 +++++++++++----------
+ .../xout/_root/etc/rc.d/miio_monitor.sh            |  27 ++--
+ .../xout/_root/etc/rc.d/monitor.sh                 |   8 +-
+ .../xout/_root/misc/data.tar.bz2                   | Bin 772 -> 643 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 175864 -> 175872 bytes
+ .../xout/_root/usr/bin/avacmd                      | Bin 11520 -> 11696 bytes
+ .../xout/_root/usr/bin/boardconfig                 |   2 +
+ .../xout/_root/usr/bin/check_restart_ava.sh        |   5 +-
+ .../xout/_root/usr/bin/config                      |  17 ++-
+ .../xout/_root/usr/bin/exec_proc                   | Bin 11160 -> 11160 bytes
+ .../xout/_root/usr/bin/fw_printenv                 | Bin 27832 -> 27832 bytes
+ .../4.1.8_1065/xout/_root/usr/bin/getmodel}        |   2 +
+ .../xout/_root/usr/bin/iot_sdk.sh                  |  12 +-
+ .../_root/usr/bin/miio_client_helper_nomqtt.sh}    |  20 +--
+ .../xout/_root/usr/bin/mount_partition.sh          |  12 +-
+ .../xout/_root/usr/bin/product_config => dev/null} |   1 -
+ .../xout/_root/usr/lib/libbehaviortree_cpp.so      | Bin 2013816 -> 2168952 bytes
+ .../usr/lib/modules/4.9.191/external/8723ds.ko     | Bin 3258176 -> 3258176 bytes
+ .../usr/lib/tree_lib/libclotho_route_nodes.so      | Bin 5593232 -> 5847104 bytes
+ .../usr/lib/tree_lib/libclotho_tactics_tree.so     | Bin 1510728 -> 1572616 bytes
+ .../xout/_root/usr/lib/tree_lib/libclotho_tree.so  | Bin 7829440 -> 7905640 bytes
+ .../xout/_root/version_record                      |  20 +--
+ .../{4.1.8_1046 => 4.1.8_1065}/xout/kernel.img     | Bin 10313728 -> 10313728 bytes
+ .../{4.1.8_1046 => 4.1.8_1065}/xout/mcu.bin        | Bin 145388 -> 147756 bytes
+ .../{4.1.8_1046 => 4.1.8_1065}/xout/toc1.fex       | Bin 1196032 -> 1196032 bytes
+ 53 files changed, 242 insertions(+), 170 deletions(-)

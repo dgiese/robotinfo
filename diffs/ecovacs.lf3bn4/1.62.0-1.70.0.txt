@@ -1,0 +1,91 @@
+Firmware diff for DEEBOT X2 (ecovacs.lf3bn4)
+Old version: 1.62.0 New version: 1.70.0
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/conf/medusa/process_picture.sh  |   4 ++--
+ .../xout/_root/etc/conf/slam_node_config.json      |  10 ++++++++++
+ .../xout/_root/etc/conf/slamlib_config.json        |   2 +-
+ .../{1.62.0 => 1.70.0}/xout/_root/etc/fw.manifest  |   6 +++---
+ .../OK_COMPLETEWORK_START_TRUSTSHIP.mp3            | Bin 22608 -> 20304 bytes
+ .../native_audio/SORRY_IN_TRUSTSHIP_NOT_CHANGE.mp3 | Bin 31536 -> 23616 bytes
+ .../media/music/EN/native_audio/WHEEL_FALL.mp3     | Bin 15408 -> 21600 bytes
+ .../media/music/EN/native_kb/kb230407b1/qa.json    |   2 +-
+ .../media/music/EN/native_kb/kb230512b1/qa.json    |   2 +-
+ .../xout/_root/media/music/EN/version.json         |   2 +-
+ .../music/ZH/native_audio/CLEAN_COMPLETE_1.mp3}    | Bin 0 -> 11520 bytes
+ .../music/ZH/native_audio/CLEAN_COMPLETE_2.mp3}    | Bin 0 -> 10152 bytes
+ .../music/ZH/native_audio/CLEAN_COMPLETE_3.mp3}    | Bin 0 -> 11160 bytes
+ .../native_audio/NO_HANDLE_DUSTER.mp3 => dev/null} | Bin 7416 -> 0 bytes
+ .../ZH/native_audio/OK_RETURN_HOT_WASH_MOP_1.mp3}  | Bin 0 -> 12960 bytes
+ .../ZH/native_audio/OK_RETURN_HOT_WASH_MOP_2.mp3}  | Bin 0 -> 11880 bytes
+ .../ZH/native_audio/OK_RETURN_HOT_WASH_MOP_3.mp3}  | Bin 0 -> 12816 bytes
+ .../music/ZH/native_audio/OK_RETURN_OMNI_1.mp3}    | Bin 0 -> 10512 bytes
+ .../music/ZH/native_audio/OK_RETURN_OMNI_2.mp3}    | Bin 0 -> 9072 bytes
+ .../music/ZH/native_audio/OK_RETURN_OMNI_3.mp3}    | Bin 0 -> 10152 bytes
+ .../ZH/native_audio/OK_RETURN_WASH_MOP_1.mp3}      | Bin 0 -> 12168 bytes
+ .../ZH/native_audio/OK_RETURN_WASH_MOP_2.mp3}      | Bin 0 -> 11016 bytes
+ .../ZH/native_audio/OK_RETURN_WASH_MOP_3.mp3}      | Bin 0 -> 11952 bytes
+ .../OK_START_HAND_COLECT_DIRT.mp3 => dev/null}     | Bin 4392 -> 0 bytes
+ .../ZH/native_audio/OK_START_HOT_WASH_MOP_1.mp3}   | Bin 0 -> 12888 bytes
+ .../ZH/native_audio/OK_START_HOT_WASH_MOP_2.mp3}   | Bin 0 -> 11736 bytes
+ .../ZH/native_audio/OK_START_HOT_WASH_MOP_3.mp3}   | Bin 0 -> 12672 bytes
+ .../music/ZH/native_audio/OK_START_SWEEP_1.mp3}    | Bin 0 -> 10584 bytes
+ .../music/ZH/native_audio/OK_START_SWEEP_2.mp3}    | Bin 0 -> 10152 bytes
+ .../music/ZH/native_audio/OK_START_SWEEP_3.mp3}    | Bin 0 -> 9216 bytes
+ .../ZH/native_audio/OK_START_SWEEP_AND_MOP_1.mp3}  | Bin 0 -> 14112 bytes
+ .../ZH/native_audio/OK_START_SWEEP_AND_MOP_2.mp3}  | Bin 0 -> 11592 bytes
+ .../ZH/native_audio/OK_START_SWEEP_AND_MOP_3.mp3}  | Bin 0 -> 12960 bytes
+ .../native_audio/OK_START_SWEEP_BEFORE_MOP_1.mp3}  | Bin 0 -> 14112 bytes
+ .../native_audio/OK_START_SWEEP_BEFORE_MOP_2.mp3}  | Bin 0 -> 11592 bytes
+ .../native_audio/OK_START_SWEEP_BEFORE_MOP_3.mp3}  | Bin 0 -> 12960 bytes
+ .../music/ZH/native_audio/OK_START_WASHMOP_1.mp3}  | Bin 0 -> 12096 bytes
+ .../music/ZH/native_audio/OK_START_WASHMOP_2.mp3}  | Bin 0 -> 10944 bytes
+ .../music/ZH/native_audio/OK_START_WASHMOP_3.mp3}  | Bin 0 -> 11880 bytes
+ .../ZH/native_audio/START_FAST_BUILDMAP_1.mp3}     | Bin 0 -> 10584 bytes
+ .../ZH/native_audio/START_FAST_BUILDMAP_2.mp3}     | Bin 0 -> 9576 bytes
+ .../ZH/native_audio/START_FAST_BUILDMAP_3.mp3}     | Bin 0 -> 8352 bytes
+ .../START_FAST_BUILDMAP_THEN_CLEAN_1.mp3}          | Bin 0 -> 16776 bytes
+ .../START_FAST_BUILDMAP_THEN_CLEAN_2.mp3}          | Bin 0 -> 15768 bytes
+ .../START_FAST_BUILDMAP_THEN_CLEAN_3.mp3}          | Bin 0 -> 14472 bytes
+ .../START_HAND_COLECT_DIRT.mp3 => dev/null}        | Bin 2880 -> 0 bytes
+ .../media/music/ZH/native_audio/WHEEL_FALL.mp3     | Bin 5184 -> 5184 bytes
+ .../ZH/native_kb/kb230322b0/qa.json => dev/null}   |   1 -
+ .../media/music/ZH/native_kb/kb230331b1/qa.json    |   2 +-
+ .../media/music/ZH/native_kb/kb230331b2/qa.json    |   2 +-
+ .../media/music/ZH/native_kb/kb231208b2/qa.json}   |   1 +
+ .../media/music/ZH/native_kb/kb231208b2}/task.json |   0
+ .../xout/_root/media/music/ZH/version.json         |   2 +-
+ .../{1.62.0 => 1.70.0}/xout/_root/opt/data.tar.bz2 | Bin 4231 -> 4231 bytes
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 4544360 -> 4544360 bytes
+ .../_root/usr/lib/eros_node_hardware_platform.pc   |   4 ++--
+ .../xout/_root/usr/lib/eros_node_map.pc            |   4 ++--
+ .../xout/_root/usr/lib/eros_node_return.pc         |   4 ++--
+ .../xout/_root/usr/lib/eros_node_slam.pc           |   4 ++--
+ .../xout/_root/usr/lib/libBaseStationMatch.so}     | Bin 0 -> 197184 bytes
+ .../xout/_root/usr/lib/libEdgeFollow.so            | Bin 974144 -> 1002912 bytes
+ .../xout/_root/usr/lib/libPerception.so            | Bin 1163432 -> 1225256 bytes
+ .../xout/_root/usr/lib/libPln.so                   | Bin 3646128 -> 3664744 bytes
+ .../xout/_root/usr/lib/libbigdata.so               | Bin 180696 -> 191272 bytes
+ .../xout/_root/usr/lib/libjob_schedule_midware.so  | Bin 3226208 -> 3226264 bytes
+ .../_root/usr/lib/libjob_schedule_ros_convert.so   | Bin 2705816 -> 2722200 bytes
+ .../xout/_root/usr/lib/libnavigation.so            | Bin 467200 -> 471288 bytes
+ .../xout/_root/usr/lib/libreturnnavigation.so      | Bin 482576 -> 482336 bytes
+ .../xout/_root/usr/lib/librl_navi.so               | Bin 418968 -> 431352 bytes
+ .../xout/_root/usr/lib/libslam.so                  | Bin 240000 -> 252816 bytes
+ .../xout/_root/usr/lib/libslam_common.so           | Bin 164128 -> 163752 bytes
+ .../xout/_root/usr/lib/libstuck.so                 | Bin 279624 -> 291544 bytes
+ .../xout/_root/usr/lib/libtaskmanager.so           | Bin 313496 -> 314560 bytes
+ .../xout/_root/usr/lib/nlp/libeis_sdk.so           | Bin 17030240 -> 16972840 bytes
+ .../xout/_root/usr/lib/nlp/libeis_wakeup.so        | Bin 3080488 -> 2064672 bytes
+ .../usr/lib/node/liberos_node_RobotInfoCollect.so  | Bin 829776 -> 829776 bytes
+ .../_root/usr/lib/node/liberos_node_bigdata.so     | Bin 1552728 -> 1672592 bytes
+ .../xout/_root/usr/lib/node/liberos_node_clean.so  | Bin 1196504 -> 1225984 bytes
+ .../usr/lib/node/liberos_node_hardware_platform.so | Bin 1644712 -> 1646504 bytes
+ .../usr/lib/node/liberos_node_job_schedule.so      | Bin 687152 -> 687448 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    | Bin 2183872 -> 2183936 bytes
+ .../xout/_root/usr/lib/node/liberos_node_omni.so   | Bin 690024 -> 690024 bytes
+ .../xout/_root/usr/lib/node/liberos_node_return.so | Bin 487968 -> 487976 bytes
+ .../xout/_root/usr/lib/node/liberos_node_slam.so   | Bin 650232 -> 715304 bytes
+ .../xout/_root/usr/lib/node/liberos_node_voice.so  | Bin 210592 -> 208640 bytes
+ 85 files changed, 31 insertions(+), 21 deletions(-)

@@ -1,0 +1,81 @@
+Firmware diff for Dreame Robot Vacuum D9  (dreame.vacuum.p2009)
+Old version: 3.5.8_1058 New version: 3.5.8_1072
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../3.5.8_1072/xout/_root/audio/TEST/31.ogg}       | Bin 0 -> 26136 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/32.ogg}       | Bin 0 -> 27992 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/33.ogg}       | Bin 0 -> 29683 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/34.ogg}       | Bin 0 -> 28688 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/NUM_1.ogg}    | Bin 0 -> 6116 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/NUM_2.ogg}    | Bin 0 -> 6456 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/NUM_3.ogg}    | Bin 0 -> 6617 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/NUM_4.ogg}    | Bin 0 -> 6958 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/NUM_5.ogg}    | Bin 0 -> 6147 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/NUM_6.ogg}    | Bin 0 -> 6958 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/NUM_7.ogg}    | Bin 0 -> 6610 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/NUM_8.ogg}    | Bin 0 -> 6677 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/NUM_9.ogg}    | Bin 0 -> 7308 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/NUM_A.ogg}    | Bin 0 -> 6026 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/NUM_B.ogg}    | Bin 0 -> 6118 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/NUM_C.ogg}    | Bin 0 -> 6850 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/NUM_D.ogg}    | Bin 0 -> 6016 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/NUM_E.ogg}    | Bin 0 -> 5867 bytes
+ .../3.5.8_1072/xout/_root/audio/TEST/NUM_F.ogg}    | Bin 0 -> 6774 bytes
+ .../xout/_root/audio/TEST/WIFIMEDIA.ogg}           | Bin 0 -> 20720 bytes
+ .../xout/_root/ava/conf/config.json                |   4 +-
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 242192 -> 242192 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 32112 -> 32128 bytes
+ .../xout/_root/ava/lib/node_gaea.so                | Bin 631104 -> 644060 bytes
+ .../xout/_root/ava/lib/node_health_gaea.so         | Bin 89888 -> 98380 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 91096 -> 91180 bytes
+ .../xout/_root/ava/lib/node_lds.so                 | Bin 167408 -> 167408 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 92948 -> 93336 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 938072 -> 1032468 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 30888 -> 30888 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 390316 -> 405760 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 70724 -> 70836 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 598508 -> 619336 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 66140 -> 66156 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 179520 -> 218168 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 103568 -> 103616 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 90424 -> 90472 bytes
+ .../xout/_root/ava/script/sys_set_private.sh       |   2 +-
+ .../xout/_root/etc/banner                          |   3 +
+ .../xout/_root/etc/factory_reset.conf              |   3 +-
+ .../xout/_root/etc/hostname                        |   2 +-
+ .../xout/_root/etc/init.d/play_boot_music.sh       |  42 ++++++++++---
+ .../xout/_root/etc/os-release                      |   6 +-
+ .../xout/_root/etc/profile                         |   5 +-
+ .../xout/_root/etc/rc.d/miio.sh                    |   6 +-
+ .../xout/_root/etc/rc.d/miio_monitor.sh            |   8 ++-
+ .../xout/_root/etc/rc.d/monitor.sh                 |  70 +++++++++++++++------
+ .../xout/_root/etc/rc.d/monitor_cpu.sh             |   4 +-
+ .../xout/_root/etc/rc.d/wifi_monitor.sh            |   2 +-
+ .../xout/_root/etc/rc.start                        |   5 ++
+ .../xout/_root/misc/data.tar.bz2                   | Bin 738 -> 738 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../3.5.8_1072/xout/_root/usr/bin/autossh.sh}      |  35 +++++++++++
+ .../xout/_root/usr/bin/ava                         | Bin 538988 -> 551304 bytes
+ .../xout/_root/usr/bin/check_silent_upgrade.sh     |  13 ++++
+ .../xout/_root/usr/bin/config                      |   7 +++
+ .../3.5.8_1072/xout/_root/usr/bin/connect_robot}   |   1 +
+ .../xout/_root/usr/bin/curl_download.sh}           |  17 +++++
+ .../3.5.8_1072/xout/_root/usr/bin/curl_upload.sh}  |  15 +++++
+ .../xout/_root/usr/bin/factory_reset.sh            |  47 +++++++++-----
+ .../xout/_root/usr/bin/factory_reset_daemon        | Bin 7764 -> 7912 bytes
+ .../xout/_root/usr/bin/mediad                      | Bin 20392 -> 20972 bytes
+ .../3.5.8_1072/xout/_root/usr/bin/open_getty.sh}   |   5 ++
+ .../xout/_root/usr/bin/play_wifi_tip_media.sh}     |  31 +++++++++
+ .../3.5.8_1072/xout/_root/usr/bin/procmem}         | Bin 0 -> 12984 bytes
+ .../3.5.8_1072/xout/_root/usr/bin/procrank}        | Bin 0 -> 14144 bytes
+ .../xout/_root/usr/bin/record_cpu_max_usage.sh}    |  18 ++++++
+ .../xout/_root/usr/bin/report_system_usage.sh}     |  53 ++++++++++++++++
+ .../xout/_root/usr/bin/start_ap_hook.sh            |   2 +
+ .../xout/_root/usr/lib/libmessenger.so             | Bin 34824 -> 34824 bytes
+ .../_root/usr/lib/tree_lib/libgaea_route_nodes.so  | Bin 3201160 -> 3313832 bytes
+ .../_root/usr/lib/tree_lib/libgaea_tactics_tree.so | Bin 755640 -> 766612 bytes
+ .../xout/_root/usr/lib/tree_lib/libgaea_tree.so    | Bin 12389756 -> 13679924 bytes
+ .../xout/_root/version_record                      |  14 +++--
+ .../{3.5.8_1058 => 3.5.8_1072}/xout/mcu.bin        | Bin 126796 -> 126016 bytes
+ 75 files changed, 362 insertions(+), 60 deletions(-)

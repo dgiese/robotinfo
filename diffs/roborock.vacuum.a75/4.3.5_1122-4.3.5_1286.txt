@@ -1,0 +1,24 @@
+Firmware diff for Roborock Qrevo (roborock.vacuum.a75)
+Old version: 4.3.5_1122 New version: 4.3.5_1286
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/rr-info                         |   2 +-
+ .../xout/_root/etc/signature                       | Bin 11644 -> 11644 bytes
+ .../xout/_root/lib/modules/3.4.39/8189fs.ko        | Bin 2151572 -> 2151572 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 280964 -> 281036 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 60528 -> 60556 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 4860444 -> 4860444 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ ...PEARL.A14.G1_M6.0.0_R_20230608-143233_FULL.bin} | Bin 524288 -> 524288 bytes
+ ...PEARL.A14.G2_M6.0.0_R_20230608-143421_FULL.bin} | Bin 524288 -> 524288 bytes
+ ..._PEARL.A3.G1_M6.0.0_R_20230608-142911_FULL.bin} | Bin 262144 -> 262144 bytes
+ ..._PEARL.A3.G2_M6.0.0_R_20230608-143052_FULL.bin} | Bin 262144 -> 262144 bytes
+ .../rockrobo/firmware/robo_tool-6.0.0-20230608}    | Bin 1046360 -> 1046360 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_rr         | Bin 170048 -> 170048 bytes
+ .../xout/bootout_aboot/zImage                      | Bin 3886320 -> 3886312 bytes
+ .../xout/bootout_aboot/zImage_4.3.5_1286.elf}      | Bin 10202689 -> 10202689 bytes
+ .../{4.3.5_1122 => 4.3.5_1286}/xout/kernel.img     | Bin 3889664 -> 3889664 bytes
+ 18 files changed, 4 insertions(+), 4 deletions(-)

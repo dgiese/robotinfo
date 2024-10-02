@@ -1,0 +1,21 @@
+Firmware diff for Roborock S4 (roborock.vacuum.s4)
+Old version: 3.5.7_0314 New version: 3.5.7_0328
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/boot/zImage                         | Bin 3885800 -> 3885800 bytes
+ .../xout/_root/etc/OS_VERSION                      |   8 ++++----
+ .../xout/_root/etc/os-release                      |   2 +-
+ .../xout/_root/lib/modules/3.4.39/8189es.ko        | Bin 1666142 -> 1666142 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 3370113 -> 3370201 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 671239 -> 671271 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../xout/_root/opt/rockrobo/cleaner/bin/AppProxy   | Bin 773488 -> 773488 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 1978564 -> 1978564 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ .../_root/opt/rockrobo/firmware/img/McuVersion.txt |   2 +-
+ ...M32.G1_M4.0.0_RELEASE_20200118-110027_FULL.bin} | Bin 215040 -> 215040 bytes
+ .../rockrobo/firmware/uart_test-4.0.0-20200118}    | Bin 510976 -> 510976 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/var/cache/ldconfig/aux-cache        | Bin 13257 -> 13257 bytes
+ 15 files changed, 9 insertions(+), 9 deletions(-)

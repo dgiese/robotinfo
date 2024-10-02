@@ -1,0 +1,16 @@
+Firmware diff for DreameBot L10s Ultra (dreame.vacuum.r2228o)
+Old version: 4.3.6_3015 New version: 4.3.6_3018
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 124264 -> 124264 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 1458016 -> 1458016 bytes
+ .../xout/_root/etc/os-release                      |   4 ++--
+ .../xout/_root/misc/data.tar.bz2                   | Bin 565 -> 567 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/dmiot                       | Bin 321752 -> 321736 bytes
+ .../xout/_root/usr/bin/dreameiot                   | Bin 53096 -> 53096 bytes
+ .../xout/_root/version_record                      |   8 ++++----
+ .../{4.3.6_3015 => 4.3.6_3018}/xout/kernel.img     | Bin 10835968 -> 10835968 bytes
+ .../{4.3.6_3015 => 4.3.6_3018}/xout/toc1.fex       | Bin 1245184 -> 1245184 bytes
+ 10 files changed, 7 insertions(+), 7 deletions(-)

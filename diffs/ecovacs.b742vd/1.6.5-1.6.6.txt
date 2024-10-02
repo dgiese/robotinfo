@@ -1,0 +1,11 @@
+Firmware diff for DEEBOT OZMO T8 (ecovacs.b742vd)
+Old version: 1.6.5 New version: 1.6.6
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../{1.6.5 => 1.6.6}/xout/_root/etc/fw.fix         |   2 +-
+ .../{1.6.5 => 1.6.6}/xout/_root/etc/fw.manifest    |   4 ++--
+ .../{1.6.5 => 1.6.6}/xout/_root/opt/data.tar.bz2   | Bin 416 -> 410 bytes
+ .../xout/_root/opt/ros/melodic/_setup_util.py      |   2 +-
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 1063016 -> 1063016 bytes
+ 5 files changed, 4 insertions(+), 4 deletions(-)

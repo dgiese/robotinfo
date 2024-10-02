@@ -1,0 +1,274 @@
+Firmware diff for DEEBOT OZMO T8 AIVI (ecovacs.x5d34r)
+Old version: 1.10.3 New version: 1.10.5
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/conf/wifi_service.conf          |   2 +-
+ .../{1.10.3 => 1.10.5}/xout/_root/etc/fw.manifest  |   4 +-
+ .../1.10.5/xout/_root/media/music/DE/172.ogg}      | Bin 0 -> 11732 bytes
+ .../1.10.5/xout/_root/media/music/DE/173.ogg}      | Bin 0 -> 27109 bytes
+ .../1.10.5/xout/_root/media/music/DE/175.ogg}      | Bin 0 -> 24285 bytes
+ .../1.10.5/xout/_root/media/music/DE/198.ogg}      | Bin 0 -> 30265 bytes
+ .../1.10.5/xout/_root/media/music/DE/200.ogg}      | Bin 0 -> 17052 bytes
+ .../1.10.5/xout/_root/media/music/EN/172.ogg}      | Bin 0 -> 12923 bytes
+ .../1.10.5/xout/_root/media/music/EN/173.ogg}      | Bin 0 -> 24701 bytes
+ .../1.10.5/xout/_root/media/music/EN/175.ogg}      | Bin 0 -> 21485 bytes
+ .../1.10.5/xout/_root/media/music/EN/198.ogg}      | Bin 0 -> 28089 bytes
+ .../1.10.5/xout/_root/media/music/EN/200.ogg}      | Bin 0 -> 14048 bytes
+ .../1.10.5/xout/_root/media/music/ES/172.ogg}      | Bin 0 -> 14012 bytes
+ .../1.10.5/xout/_root/media/music/ES/173.ogg}      | Bin 0 -> 25593 bytes
+ .../1.10.5/xout/_root/media/music/ES/175.ogg}      | Bin 0 -> 18357 bytes
+ .../1.10.5/xout/_root/media/music/ES/198.ogg}      | Bin 0 -> 28370 bytes
+ .../1.10.5/xout/_root/media/music/ES/200.ogg}      | Bin 0 -> 14375 bytes
+ .../1.10.5/xout/_root/media/music/FR/172.ogg}      | Bin 0 -> 14831 bytes
+ .../1.10.5/xout/_root/media/music/FR/173.ogg}      | Bin 0 -> 30823 bytes
+ .../1.10.5/xout/_root/media/music/FR/175.ogg}      | Bin 0 -> 18328 bytes
+ .../1.10.5/xout/_root/media/music/FR/198.ogg}      | Bin 0 -> 34966 bytes
+ .../1.10.5/xout/_root/media/music/FR/200.ogg}      | Bin 0 -> 17850 bytes
+ .../1.10.5/xout/_root/media/music/HK/172.ogg}      | Bin 0 -> 14176 bytes
+ .../1.10.5/xout/_root/media/music/HK/173.ogg}      | Bin 0 -> 23065 bytes
+ .../1.10.5/xout/_root/media/music/HK/175.ogg}      | Bin 0 -> 15959 bytes
+ .../1.10.5/xout/_root/media/music/HK/198.ogg}      | Bin 0 -> 28506 bytes
+ .../1.10.5/xout/_root/media/music/HK/200.ogg}      | Bin 0 -> 15052 bytes
+ .../1.10.5/xout/_root/media/music/IT/172.ogg}      | Bin 0 -> 18522 bytes
+ .../1.10.5/xout/_root/media/music/IT/173.ogg}      | Bin 0 -> 31044 bytes
+ .../1.10.5/xout/_root/media/music/IT/175.ogg}      | Bin 0 -> 21592 bytes
+ .../1.10.5/xout/_root/media/music/IT/198.ogg}      | Bin 0 -> 35674 bytes
+ .../1.10.5/xout/_root/media/music/IT/200.ogg}      | Bin 0 -> 20278 bytes
+ .../1.10.5/xout/_root/media/music/JA/172.ogg}      | Bin 0 -> 15573 bytes
+ .../1.10.5/xout/_root/media/music/JA/173.ogg}      | Bin 0 -> 34997 bytes
+ .../1.10.5/xout/_root/media/music/JA/175.ogg}      | Bin 0 -> 26721 bytes
+ .../1.10.5/xout/_root/media/music/JA/198.ogg}      | Bin 0 -> 35430 bytes
+ .../1.10.5/xout/_root/media/music/JA/200.ogg}      | Bin 0 -> 18347 bytes
+ .../1.10.5/xout/_root/media/music/KO/172.ogg}      | Bin 0 -> 18016 bytes
+ .../1.10.5/xout/_root/media/music/KO/173.ogg}      | Bin 0 -> 27965 bytes
+ .../1.10.5/xout/_root/media/music/KO/175.ogg}      | Bin 0 -> 19206 bytes
+ .../1.10.5/xout/_root/media/music/KO/198.ogg}      | Bin 0 -> 29108 bytes
+ .../1.10.5/xout/_root/media/music/KO/200.ogg}      | Bin 0 -> 14424 bytes
+ .../1.10.5/xout/_root/media/music/RU/172.ogg}      | Bin 0 -> 16960 bytes
+ .../1.10.5/xout/_root/media/music/RU/173.ogg}      | Bin 0 -> 20418 bytes
+ .../1.10.5/xout/_root/media/music/RU/175.ogg}      | Bin 0 -> 21164 bytes
+ .../1.10.5/xout/_root/media/music/RU/198.ogg}      | Bin 0 -> 31050 bytes
+ .../1.10.5/xout/_root/media/music/RU/200.ogg}      | Bin 0 -> 19526 bytes
+ .../1.10.5/xout/_root/media/music/TH/0.ogg}        | Bin 0 -> 29260 bytes
+ .../1.10.5/xout/_root/media/music/TH/101.ogg}      | Bin 0 -> 30968 bytes
+ .../1.10.5/xout/_root/media/music/TH/102.ogg}      | Bin 0 -> 20323 bytes
+ .../1.10.5/xout/_root/media/music/TH/105.ogg}      | Bin 0 -> 23848 bytes
+ .../1.10.5/xout/_root/media/music/TH/106.ogg}      | Bin 0 -> 24630 bytes
+ .../1.10.5/xout/_root/media/music/TH/107.ogg}      | Bin 0 -> 34828 bytes
+ .../1.10.5/xout/_root/media/music/TH/108.ogg}      | Bin 0 -> 14385 bytes
+ .../1.10.5/xout/_root/media/music/TH/116.ogg}      | Bin 0 -> 17206 bytes
+ .../1.10.5/xout/_root/media/music/TH/117.ogg}      | Bin 0 -> 15834 bytes
+ .../1.10.5/xout/_root/media/music/TH/118.ogg}      | Bin 0 -> 13620 bytes
+ .../1.10.5/xout/_root/media/music/TH/119.ogg}      | Bin 0 -> 9559 bytes
+ .../1.10.5/xout/_root/media/music/TH/120.ogg}      | Bin 0 -> 21486 bytes
+ .../1.10.5/xout/_root/media/music/TH/121.ogg}      | Bin 0 -> 22848 bytes
+ .../1.10.5/xout/_root/media/music/TH/122.ogg}      | Bin 0 -> 18630 bytes
+ .../1.10.5/xout/_root/media/music/TH/124.ogg}      | Bin 0 -> 35315 bytes
+ .../1.10.5/xout/_root/media/music/TH/125.ogg}      | Bin 0 -> 29314 bytes
+ .../1.10.5/xout/_root/media/music/TH/131.ogg}      | Bin 0 -> 21768 bytes
+ .../1.10.5/xout/_root/media/music/TH/136.ogg}      | Bin 0 -> 27910 bytes
+ .../1.10.5/xout/_root/media/music/TH/137.ogg}      | Bin 0 -> 17415 bytes
+ .../1.10.5/xout/_root/media/music/TH/147.ogg}      | Bin 0 -> 17386 bytes
+ .../1.10.5/xout/_root/media/music/TH/155.ogg}      | Bin 0 -> 29972 bytes
+ .../1.10.5/xout/_root/media/music/TH/156.ogg}      | Bin 0 -> 26169 bytes
+ .../1.10.5/xout/_root/media/music/TH/157.ogg}      | Bin 0 -> 16423 bytes
+ .../1.10.5/xout/_root/media/music/TH/158.ogg}      | Bin 0 -> 12896 bytes
+ .../1.10.5/xout/_root/media/music/TH/160.ogg}      | Bin 0 -> 14919 bytes
+ .../1.10.5/xout/_root/media/music/TH/165.ogg}      | Bin 0 -> 27413 bytes
+ .../1.10.5/xout/_root/media/music/TH/166.ogg}      | Bin 0 -> 20322 bytes
+ .../1.10.5/xout/_root/media/music/TH/167.ogg}      | Bin 0 -> 28366 bytes
+ .../1.10.5/xout/_root/media/music/TH/168.ogg}      | Bin 0 -> 22489 bytes
+ .../1.10.5/xout/_root/media/music/TH/169.ogg}      | Bin 0 -> 19331 bytes
+ .../1.10.5/xout/_root/media/music/TH/17.ogg}       | Bin 0 -> 8603 bytes
+ .../1.10.5/xout/_root/media/music/TH/171.ogg}      | Bin 0 -> 27564 bytes
+ .../1.10.5/xout/_root/media/music/TH/172.ogg}      | Bin 0 -> 12239 bytes
+ .../1.10.5/xout/_root/media/music/TH/173.ogg}      | Bin 0 -> 22273 bytes
+ .../1.10.5/xout/_root/media/music/TH/175.ogg}      | Bin 0 -> 25017 bytes
+ .../1.10.5/xout/_root/media/music/TH/176.ogg}      | Bin 0 -> 12980 bytes
+ .../1.10.5/xout/_root/media/music/TH/177.ogg}      | Bin 0 -> 12980 bytes
+ .../1.10.5/xout/_root/media/music/TH/178.ogg}      | Bin 0 -> 12980 bytes
+ .../1.10.5/xout/_root/media/music/TH/180.ogg}      | Bin 0 -> 27324 bytes
+ .../1.10.5/xout/_root/media/music/TH/187.ogg}      | Bin 0 -> 20572 bytes
+ .../1.10.5/xout/_root/media/music/TH/193.ogg}      | Bin 0 -> 27604 bytes
+ .../1.10.5/xout/_root/media/music/TH/194.ogg}      | Bin 0 -> 32516 bytes
+ .../1.10.5/xout/_root/media/music/TH/196.ogg}      | Bin 0 -> 27329 bytes
+ .../1.10.5/xout/_root/media/music/TH/197.ogg}      | Bin 0 -> 12290 bytes
+ .../1.10.5/xout/_root/media/music/TH/198.ogg}      | Bin 0 -> 26904 bytes
+ .../1.10.5/xout/_root/media/music/TH/20.ogg}       | Bin 0 -> 10333 bytes
+ .../1.10.5/xout/_root/media/music/TH/200.ogg}      | Bin 0 -> 14586 bytes
+ .../1.10.5/xout/_root/media/music/TH/203.ogg}      | Bin 0 -> 15973 bytes
+ .../1.10.5/xout/_root/media/music/TH/204.ogg}      | Bin 0 -> 13299 bytes
+ .../1.10.5/xout/_root/media/music/TH/205.ogg}      | Bin 0 -> 15435 bytes
+ .../1.10.5/xout/_root/media/music/TH/24.ogg}       | Bin 0 -> 17818 bytes
+ .../1.10.5/xout/_root/media/music/TH/29.ogg}       | Bin 0 -> 14604 bytes
+ .../1.10.5/xout/_root/media/music/TH/3.ogg}        | Bin 0 -> 12731 bytes
+ .../1.10.5/xout/_root/media/music/TH/30.ogg}       | Bin 0 -> 18559 bytes
+ .../1.10.5/xout/_root/media/music/TH/31.ogg}       | Bin 0 -> 21613 bytes
+ .../1.10.5/xout/_root/media/music/TH/35.ogg}       | Bin 0 -> 23711 bytes
+ .../1.10.5/xout/_root/media/music/TH/4.ogg}        | Bin 0 -> 15944 bytes
+ .../1.10.5/xout/_root/media/music/TH/48.ogg}       | Bin 0 -> 24136 bytes
+ .../1.10.5/xout/_root/media/music/TH/55.ogg}       | Bin 0 -> 21961 bytes
+ .../1.10.5/xout/_root/media/music/TH/56.ogg}       | Bin 0 -> 10164 bytes
+ .../1.10.5/xout/_root/media/music/TH/6.ogg}        | Bin 0 -> 13108 bytes
+ .../1.10.5/xout/_root/media/music/TH/65.ogg}       | Bin 0 -> 18317 bytes
+ .../1.10.5/xout/_root/media/music/TH/69.ogg}       | Bin 0 -> 28299 bytes
+ .../1.10.5/xout/_root/media/music/TH/73.ogg}       | Bin 0 -> 21783 bytes
+ .../1.10.5/xout/_root/media/music/TH/76.ogg}       | Bin 0 -> 20919 bytes
+ .../1.10.5/xout/_root/media/music/TH/79.ogg}       | Bin 0 -> 13981 bytes
+ .../1.10.5/xout/_root/media/music/TH/84.ogg}       | Bin 0 -> 14716 bytes
+ .../1.10.5/xout/_root/media/music/TH/90.ogg}       | Bin 0 -> 19265 bytes
+ .../1.10.5/xout/_root/media/music/TW/172.ogg}      | Bin 0 -> 13315 bytes
+ .../1.10.5/xout/_root/media/music/TW/173.ogg}      | Bin 0 -> 24561 bytes
+ .../1.10.5/xout/_root/media/music/TW/175.ogg}      | Bin 0 -> 15492 bytes
+ .../1.10.5/xout/_root/media/music/TW/198.ogg}      | Bin 0 -> 31006 bytes
+ .../1.10.5/xout/_root/media/music/TW/200.ogg}      | Bin 0 -> 13760 bytes
+ .../1.10.5/xout/_root/media/music/VN/0.ogg}        | Bin 0 -> 29260 bytes
+ .../1.10.5/xout/_root/media/music/VN/101.ogg}      | Bin 0 -> 25389 bytes
+ .../1.10.5/xout/_root/media/music/VN/102.ogg}      | Bin 0 -> 13776 bytes
+ .../1.10.5/xout/_root/media/music/VN/105.ogg}      | Bin 0 -> 18417 bytes
+ .../1.10.5/xout/_root/media/music/VN/106.ogg}      | Bin 0 -> 19845 bytes
+ .../1.10.5/xout/_root/media/music/VN/107.ogg}      | Bin 0 -> 22197 bytes
+ .../1.10.5/xout/_root/media/music/VN/108.ogg}      | Bin 0 -> 12585 bytes
+ .../1.10.5/xout/_root/media/music/VN/116.ogg}      | Bin 0 -> 13465 bytes
+ .../1.10.5/xout/_root/media/music/VN/117.ogg}      | Bin 0 -> 13467 bytes
+ .../1.10.5/xout/_root/media/music/VN/118.ogg}      | Bin 0 -> 10791 bytes
+ .../1.10.5/xout/_root/media/music/VN/119.ogg}      | Bin 0 -> 11483 bytes
+ .../1.10.5/xout/_root/media/music/VN/120.ogg}      | Bin 0 -> 13619 bytes
+ .../1.10.5/xout/_root/media/music/VN/121.ogg}      | Bin 0 -> 21629 bytes
+ .../1.10.5/xout/_root/media/music/VN/122.ogg}      | Bin 0 -> 13170 bytes
+ .../1.10.5/xout/_root/media/music/VN/124.ogg}      | Bin 0 -> 29732 bytes
+ .../1.10.5/xout/_root/media/music/VN/125.ogg}      | Bin 0 -> 27221 bytes
+ .../1.10.5/xout/_root/media/music/VN/131.ogg}      | Bin 0 -> 18315 bytes
+ .../1.10.5/xout/_root/media/music/VN/136.ogg}      | Bin 0 -> 20141 bytes
+ .../1.10.5/xout/_root/media/music/VN/137.ogg}      | Bin 0 -> 12836 bytes
+ .../1.10.5/xout/_root/media/music/VN/147.ogg}      | Bin 0 -> 13328 bytes
+ .../1.10.5/xout/_root/media/music/VN/155.ogg}      | Bin 0 -> 16808 bytes
+ .../1.10.5/xout/_root/media/music/VN/156.ogg}      | Bin 0 -> 23053 bytes
+ .../1.10.5/xout/_root/media/music/VN/157.ogg}      | Bin 0 -> 15518 bytes
+ .../1.10.5/xout/_root/media/music/VN/158.ogg}      | Bin 0 -> 10531 bytes
+ .../1.10.5/xout/_root/media/music/VN/160.ogg}      | Bin 0 -> 10369 bytes
+ .../1.10.5/xout/_root/media/music/VN/165.ogg}      | Bin 0 -> 18457 bytes
+ .../1.10.5/xout/_root/media/music/VN/166.ogg}      | Bin 0 -> 17877 bytes
+ .../1.10.5/xout/_root/media/music/VN/167.ogg}      | Bin 0 -> 23278 bytes
+ .../1.10.5/xout/_root/media/music/VN/168.ogg}      | Bin 0 -> 18566 bytes
+ .../1.10.5/xout/_root/media/music/VN/169.ogg}      | Bin 0 -> 13854 bytes
+ .../1.10.5/xout/_root/media/music/VN/17.ogg}       | Bin 0 -> 8603 bytes
+ .../1.10.5/xout/_root/media/music/VN/171.ogg}      | Bin 0 -> 27046 bytes
+ .../1.10.5/xout/_root/media/music/VN/172.ogg}      | Bin 0 -> 12573 bytes
+ .../1.10.5/xout/_root/media/music/VN/173.ogg}      | Bin 0 -> 22422 bytes
+ .../1.10.5/xout/_root/media/music/VN/175.ogg}      | Bin 0 -> 13560 bytes
+ .../1.10.5/xout/_root/media/music/VN/176.ogg}      | Bin 0 -> 11851 bytes
+ .../1.10.5/xout/_root/media/music/VN/177.ogg}      | Bin 0 -> 11851 bytes
+ .../1.10.5/xout/_root/media/music/VN/178.ogg}      | Bin 0 -> 11851 bytes
+ .../1.10.5/xout/_root/media/music/VN/180.ogg}      | Bin 0 -> 20238 bytes
+ .../1.10.5/xout/_root/media/music/VN/187.ogg}      | Bin 0 -> 12574 bytes
+ .../1.10.5/xout/_root/media/music/VN/193.ogg}      | Bin 0 -> 27090 bytes
+ .../1.10.5/xout/_root/media/music/VN/194.ogg}      | Bin 0 -> 23004 bytes
+ .../1.10.5/xout/_root/media/music/VN/196.ogg}      | Bin 0 -> 19239 bytes
+ .../1.10.5/xout/_root/media/music/VN/197.ogg}      | Bin 0 -> 13301 bytes
+ .../1.10.5/xout/_root/media/music/VN/198.ogg}      | Bin 0 -> 24143 bytes
+ .../1.10.5/xout/_root/media/music/VN/20.ogg}       | Bin 0 -> 9429 bytes
+ .../1.10.5/xout/_root/media/music/VN/200.ogg}      | Bin 0 -> 15441 bytes
+ .../1.10.5/xout/_root/media/music/VN/203.ogg}      | Bin 0 -> 11528 bytes
+ .../1.10.5/xout/_root/media/music/VN/204.ogg}      | Bin 0 -> 10697 bytes
+ .../1.10.5/xout/_root/media/music/VN/205.ogg}      | Bin 0 -> 13424 bytes
+ .../1.10.5/xout/_root/media/music/VN/24.ogg}       | Bin 0 -> 13578 bytes
+ .../1.10.5/xout/_root/media/music/VN/29.ogg}       | Bin 0 -> 14594 bytes
+ .../1.10.5/xout/_root/media/music/VN/3.ogg}        | Bin 0 -> 10158 bytes
+ .../1.10.5/xout/_root/media/music/VN/30.ogg}       | Bin 0 -> 10858 bytes
+ .../1.10.5/xout/_root/media/music/VN/31.ogg}       | Bin 0 -> 19437 bytes
+ .../1.10.5/xout/_root/media/music/VN/35.ogg}       | Bin 0 -> 16979 bytes
+ .../1.10.5/xout/_root/media/music/VN/4.ogg}        | Bin 0 -> 14917 bytes
+ .../1.10.5/xout/_root/media/music/VN/48.ogg}       | Bin 0 -> 18370 bytes
+ .../1.10.5/xout/_root/media/music/VN/55.ogg}       | Bin 0 -> 14796 bytes
+ .../1.10.5/xout/_root/media/music/VN/56.ogg}       | Bin 0 -> 11387 bytes
+ .../1.10.5/xout/_root/media/music/VN/6.ogg}        | Bin 0 -> 13836 bytes
+ .../1.10.5/xout/_root/media/music/VN/65.ogg}       | Bin 0 -> 12134 bytes
+ .../1.10.5/xout/_root/media/music/VN/69.ogg}       | Bin 0 -> 22760 bytes
+ .../1.10.5/xout/_root/media/music/VN/73.ogg}       | Bin 0 -> 17399 bytes
+ .../1.10.5/xout/_root/media/music/VN/76.ogg}       | Bin 0 -> 18124 bytes
+ .../1.10.5/xout/_root/media/music/VN/79.ogg}       | Bin 0 -> 12668 bytes
+ .../1.10.5/xout/_root/media/music/VN/84.ogg}       | Bin 0 -> 11142 bytes
+ .../1.10.5/xout/_root/media/music/VN/90.ogg}       | Bin 0 -> 13563 bytes
+ .../xout/_root/media/music/ZH/103.ogg => dev/null} | Bin 13600 -> 0 bytes
+ .../xout/_root/media/music/ZH/104.ogg => dev/null} | Bin 12995 -> 0 bytes
+ .../xout/_root/media/music/ZH/109.ogg => dev/null} | Bin 17935 -> 0 bytes
+ .../xout/_root/media/music/ZH/110.ogg => dev/null} | Bin 12271 -> 0 bytes
+ .../xout/_root/media/music/ZH/111.ogg => dev/null} | Bin 12133 -> 0 bytes
+ .../xout/_root/media/music/ZH/112.ogg => dev/null} | Bin 12711 -> 0 bytes
+ .../xout/_root/media/music/ZH/113.ogg => dev/null} | Bin 13781 -> 0 bytes
+ .../xout/_root/media/music/ZH/114.ogg => dev/null} | Bin 14834 -> 0 bytes
+ .../xout/_root/media/music/ZH/115.ogg => dev/null} | Bin 10218 -> 0 bytes
+ .../xout/_root/media/music/ZH/123.ogg => dev/null} | Bin 20136 -> 0 bytes
+ .../xout/_root/media/music/ZH/126.ogg => dev/null} | Bin 20484 -> 0 bytes
+ .../xout/_root/media/music/ZH/127.ogg => dev/null} | Bin 22147 -> 0 bytes
+ .../xout/_root/media/music/ZH/128.ogg => dev/null} | Bin 23718 -> 0 bytes
+ .../xout/_root/media/music/ZH/129.ogg => dev/null} | Bin 19542 -> 0 bytes
+ .../xout/_root/media/music/ZH/130.ogg => dev/null} | Bin 20590 -> 0 bytes
+ .../xout/_root/media/music/ZH/132.ogg => dev/null} | Bin 21646 -> 0 bytes
+ .../xout/_root/media/music/ZH/133.ogg => dev/null} | Bin 14322 -> 0 bytes
+ .../xout/_root/media/music/ZH/134.ogg => dev/null} | Bin 15037 -> 0 bytes
+ .../xout/_root/media/music/ZH/135.ogg => dev/null} | Bin 15148 -> 0 bytes
+ .../xout/_root/media/music/ZH/138.ogg => dev/null} | Bin 15358 -> 0 bytes
+ .../xout/_root/media/music/ZH/139.ogg => dev/null} | Bin 15242 -> 0 bytes
+ .../xout/_root/media/music/ZH/140.ogg => dev/null} | Bin 15038 -> 0 bytes
+ .../xout/_root/media/music/ZH/143.ogg => dev/null} | Bin 14536 -> 0 bytes
+ .../xout/_root/media/music/ZH/144.ogg => dev/null} | Bin 12959 -> 0 bytes
+ .../xout/_root/media/music/ZH/145.ogg => dev/null} | Bin 22431 -> 0 bytes
+ .../xout/_root/media/music/ZH/148.ogg => dev/null} | Bin 16305 -> 0 bytes
+ .../xout/_root/media/music/ZH/149.ogg => dev/null} | Bin 16630 -> 0 bytes
+ .../xout/_root/media/music/ZH/150.ogg => dev/null} | Bin 17321 -> 0 bytes
+ .../xout/_root/media/music/ZH/151.ogg => dev/null} | Bin 17109 -> 0 bytes
+ .../xout/_root/media/music/ZH/152.ogg => dev/null} | Bin 22571 -> 0 bytes
+ .../xout/_root/media/music/ZH/153.ogg => dev/null} | Bin 21162 -> 0 bytes
+ .../xout/_root/media/music/ZH/154.ogg => dev/null} | Bin 19972 -> 0 bytes
+ .../xout/_root/media/music/ZH/159.ogg => dev/null} | Bin 9561 -> 0 bytes
+ .../xout/_root/media/music/ZH/161.ogg => dev/null} | Bin 116626 -> 0 bytes
+ .../xout/_root/media/music/ZH/162.ogg => dev/null} | Bin 121766 -> 0 bytes
+ .../xout/_root/media/music/ZH/163.ogg => dev/null} | Bin 121047 -> 0 bytes
+ .../xout/_root/media/music/ZH/164.ogg => dev/null} | Bin 74550 -> 0 bytes
+ .../xout/_root/media/music/ZH/174.ogg => dev/null} | Bin 68644 -> 0 bytes
+ .../1.10.5/xout/_root/media/music/ZH/176.ogg}      | Bin 0 -> 48732 bytes
+ .../1.10.5/xout/_root/media/music/ZH/177.ogg}      | Bin 0 -> 54318 bytes
+ .../1.10.5/xout/_root/media/music/ZH/178.ogg}      | Bin 0 -> 50681 bytes
+ .../xout/_root/media/music/ZH/18.ogg => dev/null}  | Bin 8250 -> 0 bytes
+ .../1.10.5/xout/_root/media/music/ZH/180.ogg}      | Bin 0 -> 51829 bytes
+ .../1.10.5/xout/_root/media/music/ZH/187.ogg}      | Bin 0 -> 53542 bytes
+ .../1.10.5/xout/_root/media/music/ZH/202.ogg}      | Bin 0 -> 34040 bytes
+ .../1.10.5/xout/_root/media/music/ZH/208.ogg}      | Bin 0 -> 31964 bytes
+ .../xout/_root/media/music/ZH/250.ogg => dev/null} | Bin 7988 -> 0 bytes
+ .../xout/_root/media/music/ZH/251.ogg => dev/null} | Bin 8928 -> 0 bytes
+ .../xout/_root/media/music/ZH/252.ogg => dev/null} | Bin 6789 -> 0 bytes
+ .../xout/_root/media/music/ZH/253.ogg => dev/null} | Bin 7243 -> 0 bytes
+ .../xout/_root/media/music/ZH/254.ogg => dev/null} | Bin 7786 -> 0 bytes
+ .../xout/_root/media/music/ZH/255.ogg => dev/null} | Bin 8822 -> 0 bytes
+ .../xout/_root/media/music/ZH/35.ogg               | Bin 19609 -> 15514 bytes
+ .../xout/_root/media/music/ZH/71.ogg => dev/null}  | Bin 22217 -> 0 bytes
+ .../xout/_root/media/music/ZH/80.ogg => dev/null}  | Bin 13941 -> 0 bytes
+ .../xout/_root/media/music/ZH/81.ogg => dev/null}  | Bin 12084 -> 0 bytes
+ .../xout/_root/media/music/ZH/82.ogg => dev/null}  | Bin 13258 -> 0 bytes
+ .../xout/_root/media/music/ZH/83.ogg => dev/null}  | Bin 15564 -> 0 bytes
+ .../{1.10.3 => 1.10.5}/xout/_root/opt/data.tar.bz2 | Bin 410 -> 411 bytes
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 1067112 -> 1063016 bytes
+ .../{1.10.3 => 1.10.5}/xout/_root/usr/bin/scan_ap  | Bin 77672 -> 77672 bytes
+ .../xout/_root/usr/doc/_update.log                 |   9 ++--
+ .../1.10.5/xout/_root/usr/doc/patrol_report.json}  |  26 ++++++++++
+ .../xout/_root/usr/doc/personal_clean_report.json} |  28 +++++++++++
+ .../1.10.5/xout/_root/usr/doc/report.json}         |  31 ++++++++++++
+ .../xout/_root/usr/doc/update.log                  |  18 ++++---
+ .../xout/_root/usr/lib/WHmethods/libWHmethods.so   | Bin 288136 -> 288136 bytes
+ .../xout/_root/usr/lib/libDeebot.so                | Bin 605072 -> 518344 bytes
+ .../xout/_root/usr/lib/libmap_optimization_lib.so  | Bin 31896 -> 45792 bytes
+ .../xout/_root/usr/lib/libroom_analyze.so          | Bin 132456 -> 132936 bytes
+ .../xout/_root/usr/lib/libslam.so                  | Bin 70553 -> 70817 bytes
+ .../_root/usr/lib/node/liberos_node_bigdata.so     | Bin 1009368 -> 1013464 bytes
+ .../xout/_root/usr/lib/node/liberos_node_clean.so  | Bin 737696 -> 740352 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    | Bin 835176 -> 839344 bytes
+ .../xout/_root/usr/lib/node/liberos_node_return.so | Bin 441208 -> 444792 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     | Bin 389600 -> 389600 bytes
+ .../xout/_root/usr/lib/node/liberos_node_slam.so   | Bin 352032 -> 407880 bytes
+ .../usr/lib/node/liberos_node_task_manager.so      | Bin 2118648 -> 2143784 bytes
+ .../{1.10.3 => 1.10.5}/xout/_root/version.json     |  54 +++++++++++++++-----
+ .../{1.10.3 => 1.10.5}/xout/_root/version.txt      |  56 +++++++++++++++------
+ 268 files changed, 187 insertions(+), 41 deletions(-)

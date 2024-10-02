@@ -1,0 +1,43 @@
+Firmware diff for Roborock T4 (roborock.vacuum.t4)
+Old version: 3.5.7_0328 New version: 3.5.8_0358
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/boot/zImage                         | Bin 3885800 -> 3885800 bytes
+ .../xout/_root/etc/OS_VERSION                      |   8 ++++----
+ .../xout/_root/etc/os-release                      |   2 +-
+ .../xout/_root/lib/modules/3.4.39/8189es.ko        | Bin 1666142 -> 1666142 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 3370201 -> 3370113 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 671271 -> 671239 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 1978564 -> 1978564 bytes
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ .../_root/opt/rockrobo/firmware/img/McuVersion.txt |   6 +++---
+ ...M32.G1_M4.0.0_RELEASE_20200326-192309_FULL.bin} | Bin 215040 -> 215040 bytes
+ .../rockrobo/firmware/uart_test-4.0.0-20200326}    | Bin 510976 -> 510976 bytes
+ .../xout/_root/opt/rockrobo/miio/miio_client       | Bin 115480 -> 117288 bytes
+ .../xout/_root/opt/rockrobo/miio/miio_recv_line    | Bin 3688 -> 3780 bytes
+ .../sounds/Facsounds/en/UART_TEST_CAMERA.wav}      | Bin 0 -> 16044 bytes
+ .../sounds/Facsounds/en/UART_TEST_COOKER_MODE.wav} | Bin 0 -> 29484 bytes
+ .../Facsounds/en/UART_TEST_COOKER_NOISE.wav}       | Bin 0 -> 191404 bytes
+ .../sounds/Facsounds/en/UART_TEST_IR_FRONT.wav}    | Bin 0 -> 28204 bytes
+ .../sounds/Facsounds/en/UART_TEST_IR_FRONT_L.wav}  | Bin 0 -> 37804 bytes
+ .../sounds/Facsounds/en/UART_TEST_IR_FRONT_R.wav}  | Bin 0 -> 36524 bytes
+ .../sounds/Facsounds/en/UART_TEST_IR_SIDE_R.wav}   | Bin 0 -> 32044 bytes
+ .../en/UART_TEST_MENU_COOKER_MT_MODE.wav}          | Bin 0 -> 185644 bytes
+ .../sounds/Facsounds/en/UART_TEST_NOISE_MODE.wav}  | Bin 0 -> 30124 bytes
+ .../sounds/Facsounds/en/UART_TEST_PUMP.wav}        | Bin 0 -> 35884 bytes
+ .../Facsounds/en/UART_TEST_SELF_CALI_MODE.wav}     | Bin 0 -> 39084 bytes
+ .../Facsounds/prc/UART_TEST_COOKER_MODE.wav}       | Bin 0 -> 46764 bytes
+ .../Facsounds/prc/UART_TEST_COOKER_NOISE.wav}      | Bin 0 -> 160044 bytes
+ .../sounds/Facsounds/prc/UART_TEST_IR_FRONT.wav}   | Bin 0 -> 31404 bytes
+ .../sounds/Facsounds/prc/UART_TEST_IR_FRONT_L.wav} | Bin 0 -> 21804 bytes
+ .../sounds/Facsounds/prc/UART_TEST_IR_FRONT_R.wav} | Bin 0 -> 22444 bytes
+ .../sounds/Facsounds/prc/UART_TEST_IR_SIDE_R.wav}  | Bin 0 -> 25004 bytes
+ .../prc/UART_TEST_MENU_COOKER_MT_MODE.wav}         | Bin 0 -> 159404 bytes
+ .../sounds/Facsounds/prc/UART_TEST_NOISE_MODE.wav} | Bin 0 -> 48044 bytes
+ .../sounds/Facsounds/prc/UART_TEST_PUMP.wav}       | Bin 0 -> 21164 bytes
+ .../Facsounds/prc/UART_TEST_SELF_CALI_MODE.wav}    | Bin 0 -> 36524 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/var/cache/ldconfig/aux-cache        | Bin 13257 -> 13257 bytes
+ 37 files changed, 11 insertions(+), 11 deletions(-)

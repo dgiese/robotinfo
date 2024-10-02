@@ -1,0 +1,33 @@
+Firmware diff for DreameBot L10s Pro (dreame.vacuum.r2216o)
+Old version: 4.3.3_1146 New version: 4.3.3_1153
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../_root/ava/lib/node_laser_point_extractor.so    | Bin 299820 -> 295624 bytes
+ .../xout/_root/ava/lib/node_laser_transfer.so      | Bin 1028956 -> 1028668 bytes
+ .../xout/_root/ava/lib/node_laserplane_calibr.so   | Bin 266508 -> 274804 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 1851708 -> 1851708 bytes
+ .../xout/_root/ava/lib/node_linelaser_calibr.so    | Bin 118060 -> 118060 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 545124 -> 545124 bytes
+ .../xout/_root/ava/lib/node_tethys.so              | Bin 3393912 -> 3393912 bytes
+ .../xout/_root/etc/init.d/checkcputable.sh}        |   6 +
+ .../xout/_root/etc/os-release                      |   6 +-
+ .../xout/_root/etc/rc.sysinit                      |   1 +
+ .../xout/_root/misc/data.tar.bz2                   | Bin 550 -> 553 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/cpu.sh                      | 132 ++++++++++++++++++---
+ .../xout/_root/usr/bin/dmiot                       | Bin 233412 -> 233380 bytes
+ .../xout/_root/usr/bin/dreameiot                   | Bin 112824 -> 112824 bytes
+ .../xout/_root/usr/bin/dreameiot_cli               | Bin 93648 -> 93648 bytes
+ .../xout/_root/usr/bin/dummy_cli                   | Bin 10256 -> 10256 bytes
+ .../usr/lib/modules/4.9.118+/external/8723ds.ko    | Bin 2704496 -> 2676436 bytes
+ .../usr/lib/tree_lib/libtethys_route_nodes.so      | Bin 9255440 -> 9263640 bytes
+ .../usr/lib/tree_lib/libtethys_tactics_tree.so     | Bin 1077048 -> 1077256 bytes
+ .../xout/_root/usr/lib/tree_lib/libtethys_tree.so  | Bin 3129888 -> 3130344 bytes
+ .../xout/_root/version_record                      |  12 +-
+ .../xout/boot_package.fex                          | Bin 1507328 -> 1507328 bytes
+ .../{4.3.3_1146 => 4.3.3_1153}/xout/kernel.img     | Bin 2936832 -> 2934784 bytes
+ .../{4.3.3_1146 => 4.3.3_1153}/xout/mcu.bin        | Bin 188656 -> 188652 bytes
+ .../{4.3.3_1146 => 4.3.3_1153}/xout/toc0.fex       | Bin 114688 -> 114688 bytes
+ .../{4.3.3_1146 => 4.3.3_1153}/xout/toc1.fex       | Bin 1507328 -> 1507328 bytes
+ 27 files changed, 130 insertions(+), 29 deletions(-)

@@ -1,0 +1,85 @@
+Firmware diff for DEEBOT X1 TURBO (ecovacs.2o4lnm)
+Old version: 1.13.5 New version: 1.14.7
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../{1.13.5 => 1.14.7}/xout/_model/models.json     | 3156 ++++++++++++--------
+ .../{1.13.5 => 1.14.7}/xout/_model/net-en11.bin    |  Bin 3739488 -> 3739504 bytes
+ .../xout/_recovery/etc/fw.manifest                 |    4 +-
+ .../xout/_root/etc/conf/data_filter_node.json      |    2 +-
+ .../xout/_root/etc/conf/medusa/deebot_x3.conf      |    3 +-
+ .../xout/_root/etc/conf/medusa/start_ota.sh        |   67 +-
+ .../_root/etc/conf/medusa/xmpp_server_status.sh    |   11 +-
+ .../{1.13.5 => 1.14.7}/xout/_root/etc/fw.manifest  |    4 +-
+ .../xout/_root/etc/rc.d/speech_recognition.sh      |    7 +-
+ .../xout/_root/etc/ssl/certs/iotspeechwss.pem      |    0
+ .../1.14.7/xout/_root/media/music/EN/1646.ogg}     |  Bin 0 -> 26962 bytes
+ .../1.14.7/xout/_root/media/music/EN/1647.ogg}     |  Bin 0 -> 36284 bytes
+ .../xout/_root/media/music/EN/219.ogg              |  Bin 35091 -> 14315 bytes
+ .../xout/_root/media/music/EN/220.ogg => dev/null} |  Bin 49210 -> 0 bytes
+ .../xout/_root/media/music/EN/221.ogg              |  Bin 24870 -> 11118 bytes
+ .../1.14.7/xout/_root/media/music/EN/268.ogg}      |  Bin 0 -> 12231 bytes
+ .../1.14.7/xout/_root/media/music/EN/269.ogg}      |  Bin 0 -> 26962 bytes
+ .../1.14.7/xout/_root/media/music/EN/270.ogg}      |  Bin 0 -> 8680 bytes
+ .../1.14.7/xout/_root/media/music/ZH/1646.ogg}     |  Bin 0 -> 17814 bytes
+ .../1.14.7/xout/_root/media/music/ZH/1647.ogg}     |  Bin 0 -> 24956 bytes
+ .../xout/_root/media/music/ZH/219.ogg              |  Bin 20215 -> 10584 bytes
+ .../xout/_root/media/music/ZH/220.ogg => dev/null} |  Bin 32758 -> 0 bytes
+ .../xout/_root/media/music/ZH/221.ogg              |  Bin 16688 -> 9371 bytes
+ .../1.14.7/xout/_root/media/music/ZH/268.ogg}      |  Bin 0 -> 9272 bytes
+ .../1.14.7/xout/_root/media/music/ZH/269.ogg}      |  Bin 0 -> 15151 bytes
+ .../1.14.7/xout/_root/media/music/ZH/270.ogg}      |  Bin 0 -> 7666 bytes
+ .../{1.13.5 => 1.14.7}/xout/_root/opt/data.tar.bz2 |  Bin 416 -> 426 bytes
+ .../{1.13.5 => 1.14.7}/xout/_root/opt/dsp-fw.json  |    2 +-
+ .../xout/_root/opt/dsp-t10-v1.3.7K.278.bin}        |  Bin 1628756 -> 1645908 bytes
+ .../xout/_root/opt/ros/melodic/_setup_util.py      |    2 +-
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    |  Bin 1825984 -> 1855360 bytes
+ .../xout/_root/usr/bin/aimodels_hotupdate.sh       |   12 +-
+ .../xout/_root/usr/bin/autoOTA.sh                  |   55 +-
+ .../xout/_root/usr/bin/bds_audio_service           |  Bin 22024 -> 22032 bytes
+ .../xout/_root/usr/bin/eros_data_upload.sh         |   20 +-
+ .../1.14.7/xout/_root/usr/bin/testaudrpcclient}    |  Bin 0 -> 8856 bytes
+ .../1.14.7/xout/_root/usr/bin/testaudrpcserver}    |  Bin 0 -> 7144 bytes
+ .../xout/_root/usr/bin/upload_workLog.sh           |    4 +-
+ .../xout/_root/usr/bin/xspace_tool                 |  Bin 240344 -> 416960 bytes
+ .../_root/usr/lib/WHmethods/libWHMapMethods.so     |  Bin 218560 -> 217176 bytes
+ .../xout/_root/usr/lib/WHmethods/libWHmethods.so   |  Bin 482048 -> 486960 bytes
+ .../1.14.7/xout/_root/usr/lib/eros_node_alert.pc}  |    8 +
+ .../xout/_root/usr/lib/eros_node_clean.pc          |    4 +-
+ .../xout/_root/usr/lib/eros_node_job_schedule.pc   |    4 +-
+ .../xout/_root/usr/lib/eros_node_map.pc            |    4 +-
+ .../xout/_root/usr/lib/eros_node_omni.pc           |    4 +-
+ .../xout/_root/usr/lib/eros_node_setting.pc        |    4 +-
+ .../xout/_root/usr/lib/hbmedia/libhbmedia.so       |  Bin 1285888 -> 1285896 bytes
+ .../xout/_root/usr/lib/libBDSpeechSDK.so           |  Bin 1750864 -> 1750048 bytes
+ .../xout/_root/usr/lib/libDeebot.so                |  Bin 130400 -> 134528 bytes
+ .../xout/_root/usr/lib/libPln.so                   |  Bin 3711568 -> 3712400 bytes
+ .../xout/_root/usr/lib/libXspace.so.1.0            |  Bin 746184 -> 922352 bytes
+ .../xout/_root/usr/lib/libai_image_filter.so       |  Bin 375920 -> 402512 bytes
+ .../xout/_root/usr/lib/libaudrpc_spil.so           |  Bin 40912 -> 40904 bytes
+ .../xout/_root/usr/lib/libbdAudProxy.so            |  Bin 138112 -> 144928 bytes
+ .../xout/_root/usr/lib/libbd_alsa_audio_client.so  |  Bin 57992 -> 57960 bytes
+ .../xout/_root/usr/lib/libbd_audio_vdev.so         |  Bin 157208 -> 157824 bytes
+ .../xout/_root/usr/lib/libbddspdev.so              |  Bin 219624 -> 222088 bytes
+ .../xout/_root/usr/lib/libbds_audio_client.so      |  Bin 440856 -> 461664 bytes
+ .../xout/_root/usr/lib/libdata_filter.so           |  Bin 512112 -> 524448 bytes
+ .../xout/_root/usr/lib/libdock_dector3.so          |  Bin 22296 -> 19848 bytes
+ .../xout/_root/usr/lib/libjob_schedule_midware.so  |  Bin 3848248 -> 3923544 bytes
+ .../xout/_root/usr/lib/libpixel2location.so        |  Bin 77664 -> 77672 bytes
+ .../xout/_root/usr/lib/libsmallAreaReturn.so       |  Bin 83576 -> 83568 bytes
+ .../xout/_root/usr/lib/medusa/plug_lvision.so      |  Bin 213504 -> 209408 bytes
+ .../_root/usr/lib/medusa/plug_medusa_plugin_bpu.so |  Bin 54424 -> 50616 bytes
+ .../medusa/plug_medusa_plugin_objectDetector.so    |  Bin 500448 -> 500920 bytes
+ .../usr/lib/medusa/plug_medusa_plugin_ros_node.so  |  Bin 132424 -> 135280 bytes
+ .../xout/_root/usr/lib/node/liberos_node_alert.so  |  Bin 214376 -> 214376 bytes
+ .../_root/usr/lib/node/liberos_node_bigdata.so     |  Bin 1998600 -> 2008096 bytes
+ .../xout/_root/usr/lib/node/liberos_node_clean.so  |  Bin 983496 -> 1029216 bytes
+ .../_root/usr/lib/node/liberos_node_data_filter.so |  Bin 666632 -> 716216 bytes
+ .../usr/lib/node/liberos_node_job_schedule.so      |  Bin 520120 -> 521720 bytes
+ .../_root/usr/lib/node/liberos_node_lifespan.so    |  Bin 272272 -> 295408 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    |  Bin 1662768 -> 1670976 bytes
+ .../xout/_root/usr/lib/node/liberos_node_omni.so   |  Bin 385592 -> 381984 bytes
+ .../xout/_root/usr/lib/node/liberos_node_return.so |  Bin 530120 -> 529848 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     |  Bin 587792 -> 593976 bytes
+ .../xout/_root/usr/lib/node/liberos_node_slam.so   |  Bin 483064 -> 483064 bytes
+ 79 files changed, 2035 insertions(+), 1342 deletions(-)

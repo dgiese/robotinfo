@@ -1,0 +1,10 @@
+Firmware diff for DEEBOT T20 OMNI (ecovacs.p1jij8)
+Old version: 1.4.7 New version: 1.5.4
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../{1.4.7 => 1.5.4}/xout/_root/etc/fw.manifest    |   6 +++---
+ .../xout/_root/etc/wifi/station_ap.sh              |  14 +++++++-------
+ .../{1.4.7 => 1.5.4}/xout/_root/opt/data.tar.bz2   | Bin 3946 -> 3956 bytes
+ .../usr/lib/modules/4.4.185/external/rtl8189.ko    | Bin 2999904 -> 2860184 bytes
+ 4 files changed, 10 insertions(+), 10 deletions(-)

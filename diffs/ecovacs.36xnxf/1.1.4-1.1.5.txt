@@ -1,0 +1,76 @@
+Firmware diff for DEEBOT N8 (ecovacs.36xnxf)
+Old version: 1.1.4 New version: 1.1.5
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../{1.1.4 => 1.1.5}/xout/_root/etc/fw.manifest    |   4 +--
+ .../xout/_root/media/music/KO/0.ogg                | Bin 16707 -> 13764 bytes
+ .../1.1.5/xout/_root/media/music/KO/100.ogg}       | Bin 0 -> 21413 bytes
+ .../xout/_root/media/music/KO/101.ogg              | Bin 27033 -> 20538 bytes
+ .../xout/_root/media/music/KO/102.ogg              | Bin 14572 -> 13973 bytes
+ .../xout/_root/media/music/KO/105.ogg              | Bin 21277 -> 17040 bytes
+ .../xout/_root/media/music/KO/106.ogg              | Bin 23193 -> 16347 bytes
+ .../xout/_root/media/music/KO/107.ogg              | Bin 24459 -> 18958 bytes
+ .../xout/_root/media/music/KO/108.ogg              | Bin 11660 -> 11698 bytes
+ .../xout/_root/media/music/KO/116.ogg              | Bin 12700 -> 11532 bytes
+ .../xout/_root/media/music/KO/117.ogg              | Bin 11936 -> 14592 bytes
+ .../xout/_root/media/music/KO/118.ogg              | Bin 11962 -> 13438 bytes
+ .../xout/_root/media/music/KO/119.ogg              | Bin 12027 -> 11373 bytes
+ .../xout/_root/media/music/KO/120.ogg              | Bin 13169 -> 20895 bytes
+ .../xout/_root/media/music/KO/121.ogg              | Bin 24878 -> 21387 bytes
+ .../xout/_root/media/music/KO/122.ogg              | Bin 12096 -> 16940 bytes
+ .../xout/_root/media/music/KO/124.ogg              | Bin 33687 -> 33151 bytes
+ .../xout/_root/media/music/KO/125.ogg              | Bin 23119 -> 19279 bytes
+ .../xout/_root/media/music/KO/131.ogg              | Bin 21656 -> 17439 bytes
+ .../xout/_root/media/music/KO/136.ogg              | Bin 21844 -> 17948 bytes
+ .../xout/_root/media/music/KO/137.ogg              | Bin 14341 -> 15235 bytes
+ .../xout/_root/media/music/KO/142.ogg              | Bin 20117 -> 17884 bytes
+ .../xout/_root/media/music/KO/147.ogg => dev/null} | Bin 12453 -> 0 bytes
+ .../xout/_root/media/music/KO/155.ogg              | Bin 14635 -> 14616 bytes
+ .../xout/_root/media/music/KO/156.ogg              | Bin 20908 -> 19195 bytes
+ .../xout/_root/media/music/KO/169.ogg              | Bin 13983 -> 15131 bytes
+ .../xout/_root/media/music/KO/17.ogg               | Bin 5482 -> 5081 bytes
+ .../xout/_root/media/music/KO/170.ogg => dev/null} | Bin 11664 -> 0 bytes
+ .../xout/_root/media/music/KO/172.ogg              | Bin 15318 -> 14438 bytes
+ .../xout/_root/media/music/KO/173.ogg              | Bin 24455 -> 21674 bytes
+ .../xout/_root/media/music/KO/175.ogg              | Bin 16152 -> 16031 bytes
+ .../xout/_root/media/music/KO/176.ogg              | Bin 11280 -> 17586 bytes
+ .../xout/_root/media/music/KO/177.ogg              | Bin 11132 -> 13887 bytes
+ .../xout/_root/media/music/KO/178.ogg              | Bin 11571 -> 11697 bytes
+ .../xout/_root/media/music/KO/180.ogg              | Bin 17805 -> 15183 bytes
+ .../xout/_root/media/music/KO/187.ogg              | Bin 17638 -> 19321 bytes
+ .../1.1.5/xout/_root/media/music/KO/193.ogg}       | Bin 0 -> 21194 bytes
+ .../xout/_root/media/music/KO/198.ogg              | Bin 24405 -> 23137 bytes
+ .../xout/_root/media/music/KO/20.ogg               | Bin 9423 -> 16340 bytes
+ .../xout/_root/media/music/KO/200.ogg              | Bin 12764 -> 11829 bytes
+ .../xout/_root/media/music/KO/205.ogg              | Bin 11830 -> 12657 bytes
+ .../1.1.5/xout/_root/media/music/KO/208.ogg}       | Bin 0 -> 16824 bytes
+ .../xout/_root/media/music/KO/24.ogg               | Bin 18724 -> 16837 bytes
+ .../xout/_root/media/music/KO/29.ogg               | Bin 15658 -> 13892 bytes
+ .../xout/_root/media/music/KO/3.ogg                | Bin 15326 -> 13173 bytes
+ .../xout/_root/media/music/KO/30.ogg               | Bin 12852 -> 9505 bytes
+ .../xout/_root/media/music/KO/31.ogg               | Bin 21650 -> 21242 bytes
+ .../xout/_root/media/music/KO/35.ogg               | Bin 16265 -> 13989 bytes
+ .../xout/_root/media/music/KO/4.ogg                | Bin 13029 -> 11188 bytes
+ .../xout/_root/media/music/KO/48.ogg               | Bin 22346 -> 21194 bytes
+ .../xout/_root/media/music/KO/55.ogg               | Bin 21198 -> 17419 bytes
+ .../xout/_root/media/music/KO/56.ogg               | Bin 11161 -> 8617 bytes
+ .../xout/_root/media/music/KO/6.ogg                | Bin 12277 -> 11941 bytes
+ .../xout/_root/media/music/KO/65.ogg               | Bin 14021 -> 14062 bytes
+ .../xout/_root/media/music/KO/69.ogg               | Bin 22719 -> 19109 bytes
+ .../xout/_root/media/music/KO/73.ogg               | Bin 19885 -> 17029 bytes
+ .../xout/_root/media/music/KO/76.ogg               | Bin 17484 -> 18626 bytes
+ .../xout/_root/media/music/KO/79.ogg               | Bin 11660 -> 11428 bytes
+ .../xout/_root/media/music/KO/83.ogg => dev/null}  | Bin 18087 -> 0 bytes
+ .../xout/_root/media/music/KO/84.ogg               | Bin 12739 -> 11569 bytes
+ .../xout/_root/media/music/KO/90.ogg               | Bin 19526 -> 17376 bytes
+ .../{1.1.4 => 1.1.5}/xout/_root/opt/data.tar.bz2   | Bin 426 -> 422 bytes
+ .../xout/_root/usr/doc/_update.log                 |  33 ++++--------------
+ .../1.1.5/xout/_root/usr/doc/cleanareareport.json} |  28 ++++++++++++++++
+ .../xout/_root/usr/doc/cleanorderreport.json}      |  28 ++++++++++++++++
+ .../1.1.5/xout/_root/usr/doc/cleanreport.json}     |  28 ++++++++++++++++
+ .../{1.1.4 => 1.1.5}/xout/_root/usr/doc/update.log |  26 +++++++--------
+ .../xout/_root/usr/lib/libDeebot.so                | Bin 750688 -> 659576 bytes
+ .../{1.1.4 => 1.1.5}/xout/_root/version.json       |  37 ++++++++++++++++++---
+ .../{1.1.4 => 1.1.5}/xout/_root/version.txt        |  34 +++++++++++++++----
+ 70 files changed, 165 insertions(+), 53 deletions(-)

@@ -1,0 +1,5 @@
+Firmware diff for Roborock S5 Max (roborock.vacuum.s5e)
+Old version: 3.5.8_0862 New version: 3.5.8_0876
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---

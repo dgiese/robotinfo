@@ -1,0 +1,35 @@
+Firmware diff for DreameBot W10 (dreame.vacuum.p2027)
+Old version: 4.1.6_1044 New version: 4.1.6_1058
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 67824 -> 67824 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 31784 -> 31784 bytes
+ .../xout/_root/ava/lib/node_health_typhon.so       | Bin 207716 -> 207716 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 97020 -> 97020 bytes
+ .../xout/_root/ava/lib/node_lds.so                 | Bin 175748 -> 175748 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 109456 -> 109456 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 1859328 -> 1855180 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 35028 -> 35028 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 562732 -> 563436 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 85072 -> 85072 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 811568 -> 812896 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 68616 -> 68616 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 308420 -> 308604 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 109200 -> 109200 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 95064 -> 95064 bytes
+ .../xout/_root/ava/lib/node_typhon.so              | Bin 1968884 -> 1989528 bytes
+ .../xout/_root/etc/os-release                      |   6 +++---
+ .../xout/_root/etc/rc.d/monitor.sh                 |   2 +-
+ .../xout/_root/misc/data.tar.bz2                   | Bin 627 -> 755 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 155824 -> 155824 bytes
+ .../usr/lib/modules/4.9.118+/external/8188fu.ko    | Bin 2309840 -> 2285248 bytes
+ .../usr/lib/modules/4.9.118+/external/8189fs.ko    | Bin 1353344 -> 1353344 bytes
+ .../usr/lib/tree_lib/libtyphon_route_nodes.so      | Bin 5153112 -> 5168304 bytes
+ .../usr/lib/tree_lib/libtyphon_tactics_tree.so     | Bin 1291768 -> 1305096 bytes
+ .../xout/_root/usr/lib/tree_lib/libtyphon_tree.so  | Bin 7957912 -> 7971552 bytes
+ .../xout/_root/version_record                      |  14 +++++++-------
+ .../{4.1.6_1044 => 4.1.6_1058}/xout/kernel.img     | Bin 2787328 -> 2787328 bytes
+ .../{4.1.6_1044 => 4.1.6_1058}/xout/mcu.bin        | Bin 142408 -> 142896 bytes
+ 29 files changed, 12 insertions(+), 12 deletions(-)

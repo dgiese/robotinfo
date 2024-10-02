@@ -1,0 +1,30 @@
+Firmware diff for DreameBot L10s Ultra (dreame.vacuum.r2228o)
+Old version: 4.3.6_3030 New version: 4.3.9_3031
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_arges.so               | Bin 5971456 -> 5971456 bytes
+ .../xout/_root/ava/lib/node_laserplane_calibr.so   | Bin 299584 -> 299600 bytes
+ .../xout/_root/etc/init.d/mount_data.sh            |   2 +-
+ .../xout/_root/etc/os-release                      |   4 ++--
+ .../xout/_root/mi_iot_version                      |   2 +-
+ .../xout/_root/misc/data.tar.bz2                   | Bin 572 -> 574 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/dmio_monitor.sh             |   4 ++--
+ .../xout/_root/usr/bin/dmiot                       | Bin 321736 -> 321744 bytes
+ .../xout/_root/usr/bin/dreame_bt                   | Bin 206696 -> 206696 bytes
+ .../xout/_root/usr/bin/dreameiot                   | Bin 53096 -> 53096 bytes
+ .../xout/_root/usr/bin/miio_client                 | Bin 706040 -> 726536 bytes
+ .../4.3.9_3031/xout/_root/usr/lib/libfmt.so}       |   0
+ .../4.3.9_3031/xout/_root/usr/lib/libfmt.so.6}     |   0
+ .../4.3.9_3031/xout/_root/usr/lib/libfmt.so.6.1.3} | Bin 0 -> 301896 bytes
+ .../usr/lib/modules/4.9.191/external/8723ds.ko     | Bin 3132944 -> 3132944 bytes
+ .../lib/modules/4.9.191/external/sc031gs_mipi.ko   | Bin 23576 -> 23824 bytes
+ .../lib/modules/4.9.191/external/sc035gs_mipi.ko   | Bin 25008 -> 25128 bytes
+ .../_root/usr/lib/tree_lib/libarges_route_nodes.so | Bin 12294856 -> 12294856 bytes
+ .../usr/lib/tree_lib/libarges_tactics_tree.so      | Bin 2011848 -> 2011856 bytes
+ .../xout/_root/usr/lib/tree_lib/libarges_tree.so   | Bin 5656816 -> 5656816 bytes
+ .../xout/_root/version_record                      |  14 +++++++-------
+ .../{4.3.6_3030 => 4.3.9_3031}/xout/kernel.img     | Bin 10835968 -> 10835968 bytes
+ .../{4.3.6_3030 => 4.3.9_3031}/xout/toc1.fex       | Bin 1245184 -> 1245184 bytes
+ 24 files changed, 14 insertions(+), 14 deletions(-)

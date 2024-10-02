@@ -1,0 +1,33 @@
+Firmware diff for DEEBOT T10 (ecovacs.jtmf04)
+Old version: 1.6.8 New version: 1.7.2
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_recovery/etc/fw.manifest                 |   4 +-
+ .../xout/_root/etc/conf/medusa/deebot_x3.conf      |  10 +-
+ .../xout/_root/etc/conf/speech_recognition.conf    |   1 +
+ .../{1.6.8 => 1.7.2}/xout/_root/etc/fw.manifest    |   4 +-
+ .../{1.6.8 => 1.7.2}/xout/_root/opt/data.tar.bz2   | Bin 418 -> 415 bytes
+ .../xout/_root/opt/ros/melodic/_setup_util.py      |   2 +-
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 1813376 -> 1809488 bytes
+ .../xout/_root/usr/bin/audioDaemon                 | Bin 79200 -> 82032 bytes
+ .../xout/_root/usr/bin/audio_record                | Bin 12344 -> 11304 bytes
+ .../xout/_root/usr/bin/audio_record.sh             |   2 +
+ .../xout/_root/usr/bin/curl_timeout_hook.sh        |  12 +-
+ .../{1.6.8 => 1.7.2}/xout/_root/usr/bin/dns_parse  | Bin 5440 -> 5440 bytes
+ .../xout/_root/usr/bin/get_bd_quadruples.sh        |  10 +-
+ .../xout/_root/usr/bin/speech_inter_client         | Bin 556416 -> 581136 bytes
+ .../xout/_root/usr/bin/speech_mute_notify          | Bin 27952 -> 27952 bytes
+ .../xout/_root/usr/bin/speech_recognition          | Bin 237360 -> 270800 bytes
+ .../xout/_root/usr/bin/speech_sleep                | Bin 69200 -> 69200 bytes
+ .../{1.6.8 => 1.7.2}/xout/_root/usr/bin/speech_tts | Bin 21344 -> 21584 bytes
+ .../xout/_root/usr/bin/speech_wakeup               | Bin 24120 -> 24120 bytes
+ .../xout/_root/usr/bin/upload_wakeup_audio.sh}     | 143 +++++++++++++++++++++
+ .../xout/_root/usr/bin/upload_wakeup_event.sh}     | 126 ++++++++++++++++++
+ .../xout/_root/usr/lib/libkvsWebrtcClient.so       | Bin 1124072 -> 1111824 bytes
+ .../_root/usr/lib/libkvsWebrtcSignalingClient.so   | Bin 158392 -> 158392 bytes
+ .../xout/_root/usr/lib/libwebsockets.so.18         | Bin 431968 -> 431968 bytes
+ .../xout/_root/usr/lib/medusa/plug_lvision.so      | Bin 209872 -> 217600 bytes
+ .../_root/usr/lib/medusa/plug_medusa_plugin_io.so} | Bin 0 -> 13312 bytes
+ .../medusa/plug_medusa_plugin_video_generator.so   | Bin 43792 -> 60416 bytes
+ 27 files changed, 302 insertions(+), 12 deletions(-)

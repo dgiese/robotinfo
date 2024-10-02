@@ -1,0 +1,45 @@
+Firmware diff for Mijia Self-Cleaning Robot Vacuum-Mop Pro (dreame.vacuum.p2149o)
+Old version: 4.3.3_1105 New version: 4.3.3_1111
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/audio/EN/159.ogg => dev/null}       | Bin 33790 -> 0 bytes
+ .../xout/_root/audio/EN/160.ogg => dev/null}       | Bin 51654 -> 0 bytes
+ .../xout/_root/audio/EN/18.ogg                     | Bin 19030 -> 33790 bytes
+ .../4.3.3_1111/xout/_root/audio/EN/181.ogg}        | Bin 0 -> 67729 bytes
+ .../xout/_root/audio/EN/19.ogg                     | Bin 32061 -> 51654 bytes
+ .../xout/_root/audio/ZH/159.ogg => dev/null}       | Bin 27759 -> 0 bytes
+ .../xout/_root/audio/ZH/160.ogg => dev/null}       | Bin 36877 -> 0 bytes
+ .../xout/_root/audio/ZH/18.ogg                     | Bin 17972 -> 27759 bytes
+ .../4.3.3_1111/xout/_root/audio/ZH/181.ogg}        | Bin 0 -> 48758 bytes
+ .../xout/_root/audio/ZH/19.ogg                     | Bin 26942 -> 36877 bytes
+ .../xout/_root/ava/lib/node_clotho.so              | Bin 2213296 -> 2233184 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 77432 -> 77432 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 40648 -> 40648 bytes
+ .../xout/_root/ava/lib/node_health_clotho.so       | Bin 250720 -> 255104 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 124264 -> 124264 bytes
+ .../xout/_root/ava/lib/node_lds.so                 | Bin 181448 -> 181448 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 115560 -> 115560 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 2197168 -> 2193112 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 132992 -> 132992 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 823880 -> 823880 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 94376 -> 94376 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 907664 -> 907664 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 77936 -> 77936 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 203208 -> 203464 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 140184 -> 140184 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 119288 -> 119288 bytes
+ .../xout/_root/ava/script/fds_hook.sh              |   2 +-
+ .../xout/_root/etc/os-release                      |   6 ++--
+ .../xout/_root/misc/data.tar.bz2                   | Bin 560 -> 548 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 175872 -> 175872 bytes
+ .../xout/_root/usr/bin/lock_area.sh                |  39 +++++++++++----------
+ .../usr/lib/tree_lib/libclotho_route_nodes.so      | Bin 5880456 -> 5880456 bytes
+ .../usr/lib/tree_lib/libclotho_tactics_tree.so     | Bin 1656408 -> 1667928 bytes
+ .../xout/_root/usr/lib/tree_lib/libclotho_tree.so  | Bin 8103624 -> 8164488 bytes
+ .../xout/_root/version_record                      |  12 +++----
+ .../{4.3.3_1105 => 4.3.3_1111}/xout/kernel.img     | Bin 10524672 -> 10524672 bytes
+ .../{4.3.3_1105 => 4.3.3_1111}/xout/mcu.bin        | Bin 149964 -> 149928 bytes
+ .../{4.3.3_1105 => 4.3.3_1111}/xout/toc1.fex       | Bin 1196032 -> 1196032 bytes
+ 39 files changed, 31 insertions(+), 30 deletions(-)

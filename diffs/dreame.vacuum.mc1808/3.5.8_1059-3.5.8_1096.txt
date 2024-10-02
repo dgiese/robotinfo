@@ -1,0 +1,146 @@
+Firmware diff for Mi Robot Vacuum-Mop (dreame.vacuum.mc1808)
+Old version: 3.5.8_1059 New version: 3.5.8_1096
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/audio/TEST/7.ogg                    | Bin 12255 -> 166787 bytes
+ .../xout/_root/ava/conf/p1904.conf                 |  23 ++++----
+ .../xout/_root/ava/conf/vslam_settings.json        |  14 ++---
+ .../xout/_root/ava/lib/node_calibr.so              | Bin 193532 -> 214152 bytes
+ .../ava/lib/node_cleanbot_pro.so => dev/null}      | Bin 464224 -> 0 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 61924 -> 242192 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 27896 -> 28412 bytes
+ .../xout/_root/ava/lib/node_health.so => dev/null} | Bin 77896 -> 0 bytes
+ .../xout/_root/ava/lib/node_health_khaos.so}       | Bin 0 -> 94132 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 273476 -> 280840 bytes
+ .../3.5.8_1096/xout/_root/ava/lib/node_khaos.so}   | Bin 0 -> 621748 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 55596 -> 98380 bytes
+ .../xout/_root/ava/lib/node_map_divide.so}         | Bin 0 -> 385640 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 192384 -> 192580 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 684528 -> 701032 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 181212 -> 184612 bytes
+ .../xout/_root/ava/lib/node_signal_tab.so          | Bin 126848 -> 136016 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 308396 -> 312548 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 234000 -> 234056 bytes
+ .../xout/_root/ava/lib/node_tr_vslam.so            | Bin 66292 -> 68492 bytes
+ .../xout/_root/ava/lib/node_tracecheck.so          | Bin 38116 -> 44320 bytes
+ .../xout/_root/ava/lib/node_vision.so              | Bin 1909684 -> 2037060 bytes
+ .../xout/_root/ava/script/fds_hook.sh              |   8 +--
+ .../xout/_root/ava/script/ivr_test.sh              |   2 +-
+ .../xout/_root/ava/script/msg_cvt.sh               |  59 +++++++++++++++------
+ .../xout/_root/ava/script/sys_set_private.sh       |   2 +-
+ .../xout/_root/etc/crontabs/root                   |   2 +-
+ .../xout/_root/etc/os-release                      |   6 +--
+ .../xout/_root/etc/rc.d/ava.sh                     |   4 +-
+ .../xout/_root/etc/rc.d/exec_monitor.sh}           |  10 ++++
+ .../3.5.8_1096/xout/_root/etc/rc.d/exec_proc.sh}   |  16 ++++++
+ .../xout/_root/etc/rc.d/monitor.sh                 |  17 ++++--
+ .../xout/_root/etc/rc.d/wifi_manager.sh            |  10 +++-
+ .../xout/_root/etc/rc.d/wifi_monitor.sh            |  24 ++++++---
+ .../3.5.8_1096/xout/_root/etc/rc.start}            |  14 +++++
+ .../xout/_root/etc/rc.sysinit                      |  11 +++-
+ .../xout/_root/etc/wifi/dnsmasq.conf               |   4 +-
+ .../xout/_root/etc/wifi/udhcpc.sh                  |   2 +-
+ .../xout/_root/etc/wifi/wifi_manager.json          |   2 +-
+ .../xout/_root/misc/data.tar.bz2                   | Bin 590 -> 595 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 133380 -> 538988 bytes
+ .../xout/_root/usr/bin/avacmd                      | Bin 5884 -> 6632 bytes
+ .../3.5.8_1096/xout/_root/usr/bin/backup_key.sh}   |  37 +++++++++++++
+ .../xout/_root/usr/bin/do_start_ap.sh              |   3 ++
+ .../3.5.8_1096/xout/_root/usr/bin/exec_proc}       | Bin 0 -> 14252 bytes
+ .../xout/_root/usr/bin/factory_reset.sh            |  16 +++---
+ .../xout/_root/usr/bin/mediad                      | Bin 33932 -> 33932 bytes
+ .../_root/usr/bin/miio_client_helper_nomqtt.sh     |   9 +++-
+ .../xout/_root/usr/bin/msg_trans                   | Bin 8380 -> 8440 bytes
+ .../3.5.8_1096/xout/_root/usr/bin/packlog.sh}      |  28 ++++++++++
+ .../xout/_root/usr/bin/restart_ava.sh              |  28 +++++++---
+ .../xout/_root/usr/bin/softap_down                 | Bin 4488 -> 4532 bytes
+ .../xout/_root/usr/bin/softap_test                 | Bin 4788 -> 4832 bytes
+ .../xout/_root/usr/bin/softap_up                   | Bin 5248 -> 5288 bytes
+ .../xout/_root/usr/bin/start_ap.sh                 |   6 +++
+ .../xout/_root/usr/bin/wifi_cli                    | Bin 84104 -> 84104 bytes
+ .../xout/_root/usr/bin/wifi_conf_monitor.sh        |   4 +-
+ .../xout/_root/usr/bin/wifi_manager                | Bin 219396 -> 225404 bytes
+ .../xout/_root/usr/bin/wifi_start.sh               |   3 +-
+ .../xout/_root/usr/bin/wifi_state.sh               |   8 ++-
+ .../xout/_root/usr/lib/libDBoW2.so => dev/null}    | Bin 39244 -> 0 bytes
+ .../usr/lib/libORB_SLAM2.so.8255b3e => dev/null}   | Bin 606528 -> 0 bytes
+ .../_root/usr/lib/libRakNetDLL.so => dev/null}     | Bin 1036828 -> 0 bytes
+ .../xout/_root/usr/lib/libbehaviortree_cpp.so      | Bin 1539216 -> 1641992 bytes
+ .../xout/_root/usr/lib/libceres.so.1.14.0          | Bin 1899032 -> 1791252 bytes
+ .../xout/_root/usr/lib/libdlib.so}                 |   0
+ .../xout/_root/usr/lib/libdlib.so.19.19.99}        | Bin 0 -> 2096808 bytes
+ .../xout/_root/usr/lib/libgflags.so.2.2.1          | Bin 117416 -> 117432 bytes
+ .../xout/_root/usr/lib/libgflags_nothreads.so}     |   0
+ .../xout/_root/usr/lib/libgflags_nothreads.so.2.2} |   0
+ .../_root/usr/lib/libgflags_nothreads.so.2.2.1}    | Bin 0 -> 117496 bytes
+ .../xout/_root/usr/lib/libglog.so.0                | Bin 118416 -> 118408 bytes
+ .../3.5.8_1096/xout/_root/usr/lib/libgmock.so}     | Bin 0 -> 93240 bytes
+ .../xout/_root/usr/lib/libgmock_main.so}           | Bin 0 -> 4056 bytes
+ .../3.5.8_1096/xout/_root/usr/lib/libgtest.so}     | Bin 0 -> 760604 bytes
+ .../xout/_root/usr/lib/libgtest_main.so}           | Bin 0 -> 4364 bytes
+ .../xout/_root/usr/lib/libmessenger.so             | Bin 34824 -> 34824 bytes
+ .../xout/_root/usr/lib/libnanomsg.so}              |   0
+ .../lib/libopencv_calib3d.so.3.3.0 => dev/null}    | Bin 1215124 -> 0 bytes
+ .../xout/_root/usr/lib/libopencv_calib3d.so.4.2}   |   0
+ .../xout/_root/usr/lib/libopencv_calib3d.so.4.2.0} | Bin 0 -> 1357212 bytes
+ .../usr/lib/libopencv_core.so.3.3.0 => dev/null}   | Bin 2384652 -> 0 bytes
+ .../xout/_root/usr/lib/libopencv_core.so.4.2}      |   0
+ .../xout/_root/usr/lib/libopencv_core.so.4.2.0}    | Bin 0 -> 2659668 bytes
+ .../lib/libopencv_features2d.so.3.3.0 => dev/null} | Bin 562624 -> 0 bytes
+ .../_root/usr/lib/libopencv_features2d.so.4.2}     |   0
+ .../_root/usr/lib/libopencv_features2d.so.4.2.0}   | Bin 0 -> 581000 bytes
+ .../usr/lib/libopencv_flann.so.3.3.0 => dev/null}  | Bin 248956 -> 0 bytes
+ .../xout/_root/usr/lib/libopencv_flann.so.4.2}     |   0
+ .../xout/_root/usr/lib/libopencv_flann.so.4.2.0}   | Bin 0 -> 256656 bytes
+ .../lib/libopencv_imgcodecs.so.3.3.0 => dev/null}  | Bin 2473904 -> 0 bytes
+ .../xout/_root/usr/lib/libopencv_imgcodecs.so.4.2} |   0
+ .../_root/usr/lib/libopencv_imgcodecs.so.4.2.0}    | Bin 0 -> 1575860 bytes
+ .../lib/libopencv_imgproc.so.3.3.0 => dev/null}    | Bin 2517188 -> 0 bytes
+ .../xout/_root/usr/lib/libopencv_imgproc.so.4.2}   |   0
+ .../xout/_root/usr/lib/libopencv_imgproc.so.4.2.0} | Bin 0 -> 2696840 bytes
+ .../xout/_root/usr/lib/libopencv_video.so}         |   0
+ .../xout/_root/usr/lib/libopencv_video.so.4.2}     |   0
+ .../xout/_root/usr/lib/libopencv_video.so.4.2.0}   | Bin 0 -> 379004 bytes
+ .../xout/_root/usr/lib/libopencv_videoio.so}       |   0
+ .../xout/_root/usr/lib/libopencv_videoio.so.4.2}   |   0
+ .../xout/_root/usr/lib/libopencv_videoio.so.4.2.0} | Bin 0 -> 324136 bytes
+ .../xout/_root/usr/lib/libopencv_ximgproc.so}      |   0
+ .../xout/_root/usr/lib/libopencv_ximgproc.so.4.2}  |   0
+ .../_root/usr/lib/libopencv_ximgproc.so.4.2.0}     | Bin 0 -> 1089076 bytes
+ .../xout/_root/usr/lib/libprotobuf-lite.so}        |   0
+ .../xout/_root/usr/lib/libprotobuf-lite.so.17}     |   0
+ .../xout/_root/usr/lib/libprotobuf-lite.so.17.0.0} | Bin 0 -> 287532 bytes
+ .../xout/_root/usr/lib/libprotobuf-lite.so.3.6.1}  | Bin 0 -> 299780 bytes
+ .../3.5.8_1096/xout/_root/usr/lib/libprotobuf.so}  |   0
+ .../xout/_root/usr/lib/libprotobuf.so.17.0.0       | Bin 2094688 -> 2094688 bytes
+ .../xout/_root/usr/lib/libprotobuf.so.3.6.1}       | Bin 0 -> 2213524 bytes
+ .../xout/_root/usr/lib/libprotobuf_msg.so          | Bin 90652 -> 102272 bytes
+ .../3.5.8_1096/xout/_root/usr/lib/libprotoc.so}    |   0
+ .../3.5.8_1096/xout/_root/usr/lib/libprotoc.so.17} |   0
+ .../xout/_root/usr/lib/libprotoc.so.17.0.0}        | Bin 0 -> 2030676 bytes
+ .../xout/_root/usr/lib/libprotoc.so.3.6.1}         | Bin 0 -> 2116192 bytes
+ .../xout/_root/usr/lib/libsoftap.so                | Bin 24408 -> 24408 bytes
+ .../xout/_root/usr/lib/libyaml-cpp.so.0.6.2        | Bin 406224 -> 426636 bytes
+ .../xout/_root/usr/lib/libz.so.1.2.11              | Bin 125648 -> 93696 bytes
+ .../3.5.8_1096/xout/_root/usr/lib/libzmq.so}       |   0
+ .../xout/_root/usr/lib/libzmq.so.5.2.2             | Bin 690504 -> 691264 bytes
+ .../usr/lib/modules/4.9.118+/external/8189fs.ko    | Bin 2083192 -> 2098684 bytes
+ .../lib/modules/4.9.118+/external/ov7251_mipi.ko   | Bin 12256 -> 12256 bytes
+ .../lib/modules/4.9.118+/external/sc031gs_mipi.ko  | Bin 11544 -> 11800 bytes
+ .../modules/4.9.118+/external/videobuf2-core.ko    | Bin 31764 -> 32336 bytes
+ .../4.9.118+/external/videobuf2-dma-contig.ko      | Bin 13236 -> 14404 bytes
+ .../modules/4.9.118+/external/videobuf2-v4l2.ko    | Bin 17652 -> 17900 bytes
+ .../usr/lib/modules/4.9.118+/external/vin_io.ko    | Bin 47544 -> 48096 bytes
+ .../usr/lib/modules/4.9.118+/external/vin_v4l2.ko  | Bin 219900 -> 220432 bytes
+ .../3.5.8_1096/xout/_root/usr/lib/node_log.so}     | Bin 0 -> 55596 bytes
+ .../tree_lib/libcleanbot_pro_tree.so => dev/null}  | Bin 6439292 -> 0 bytes
+ .../usr/lib/tree_lib/libkhaos_route_nodes.so}      | Bin 0 -> 3225528 bytes
+ .../usr/lib/tree_lib/libkhaos_tactics_tree.so}     | Bin 0 -> 721000 bytes
+ .../xout/_root/usr/lib/tree_lib/libkhaos_tree.so}  | Bin 0 -> 12471380 bytes
+ .../usr/lib/tree_lib/librobottree.so => dev/null}  | Bin 642632 -> 0 bytes
+ .../lib/tree_lib/libroute_nodes.so => dev/null}    | Bin 2074368 -> 0 bytes
+ .../{3.5.8_1059 => 3.5.8_1096}/xout/kernel.img     | Bin 2572288 -> 2830336 bytes
+ .../{3.5.8_1059 => 3.5.8_1096}/xout/mcu.bin        | Bin 129768 -> 132028 bytes
+ 140 files changed, 287 insertions(+), 87 deletions(-)

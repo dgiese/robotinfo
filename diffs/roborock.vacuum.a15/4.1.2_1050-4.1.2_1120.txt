@@ -1,0 +1,50 @@
+Firmware diff for Roborock S7 (roborock.vacuum.a15)
+Old version: 4.1.2_1050 New version: 4.1.2_1120
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/OS_VERSION                      |  10 +++++-----
+ .../xout/_root/etc/os-release                      |   2 +-
+ .../xout/_root/etc/rr-info                         |   2 +-
+ .../xout/_root/lib/modules/3.4.39/8189es.ko        | Bin 2128972 -> 2128972 bytes
+ .../xout/_root/lib/modules/3.4.39/mali.ko          | Bin 265780 -> 265780 bytes
+ .../xout/_root/lib/modules/3.4.39/ump.ko           | Bin 57224 -> 57224 bytes
+ .../xout/_root/opt/rockrobo/buildnumber            |   2 +-
+ .../xout/_root/opt/rockrobo/cleaner/bin/AppProxy   | Bin 946052 -> 946052 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboController  | Bin 277568 -> 277568 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerM | Bin 347664 -> 347664 bytes
+ .../_root/opt/rockrobo/cleaner/bin/RoboControllerR | Bin 277568 -> 277568 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/SysUpdate  | Bin 101456 -> 101456 bytes
+ .../xout/_root/opt/rockrobo/cleaner/bin/rr_loader  | Bin 69048 -> 69360 bytes
+ .../opt/rockrobo/cleaner/lib/libcarpetdetector.so  | Bin 26444 -> 26444 bytes
+ .../_root/opt/rockrobo/cleaner/lib/libroboipc.so   | Bin 49108 -> 49108 bytes
+ .../opt/rockrobo/cleaner/lib/librobopersist.so     | Bin 100892 -> 100892 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_carpet.so    | Bin 13996 -> 13996 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_chassis.so   | Bin 75740 -> 75740 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_compass.so   | Bin 22224 -> 22224 bytes
+ .../opt/rockrobo/cleaner/lib/librr_plugin_laser.so | Bin 59432 -> 63532 bytes
+ .../rockrobo/cleaner/lib/librr_plugin_logger.so    | Bin 5544 -> 5544 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrlocale.so  | Bin 203764 -> 203764 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrnavdrv.so  | Bin 3097388 -> 3097388 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrslamdrv.so | Bin 281212 -> 281212 bytes
+ .../_root/opt/rockrobo/cleaner/lib/librrutils.so   | Bin 18008 -> 18008 bytes
+ .../opt/rockrobo/cleaner/lib/libuart_api.so.4.0.1  | Bin 154804 -> 154900 bytes
+ .../rockrobo/firmware/bin/CARPET_FIRMWARE_MATCH    |   4 ++--
+ .../opt/rockrobo/firmware/bin/MCU_FIRMWARE_MATCH   |   2 +-
+ ..._TANOS-S_CARPET_AT421_C0.7_20210521-222734.bin} | Bin 16384 -> 16384 bytes
+ ..._TANOS-S_CARPET_GD330_C0.7_20210521-222707.bin} | Bin 16384 -> 16384 bytes
+ ...A14.G1_M4.0.1_RELEASE_20210521-223451_FULL.bin} | Bin 0 -> 217072 bytes
+ ...14_M4.0.1_RELEASE_20210521-223317_INV_FULL.bin} | Bin 0 -> 217072 bytes
+ ....A3.G1_M4.0.1_RELEASE_20210521-223143_FULL.bin} | Bin 217072 -> 217072 bytes
+ ...A3_M4.0.1_RELEASE_20210521-223016_INV_FULL.bin} | Bin 217072 -> 217072 bytes
+ .../firmware/uart_test-4.0.1-20210428 => dev/null} | Bin 601136 -> 0 bytes
+ .../rockrobo/firmware/uart_test-4.0.1-20210521}    | Bin 0 -> 605252 bytes
+ .../xout/_root/opt/rockrobo/rr-release             |   2 +-
+ .../xout/_root/opt/rockrobo/rriot/rriot_rr         | Bin 190804 -> 190804 bytes
+ .../xout/_root/opt/rockrobo/rrlog/rrlogd           | Bin 295472 -> 295472 bytes
+ .../xout/_root/opt/rockrobo/watchdog/WatchDoge     | Bin 80212 -> 80212 bytes
+ .../xout/_root/opt/rockrobo/wlan/wlanmgr           | Bin 38904 -> 38904 bytes
+ .../xout/bootout_aboot/zImage                      | Bin 3950368 -> 3950216 bytes
+ .../xout/bootout_aboot/zImage_4.1.2_1120.elf}      | Bin 10316265 -> 10316265 bytes
+ .../{4.1.2_1050 => 4.1.2_1120}/xout/kernel.img     | Bin 3952640 -> 3952640 bytes
+ 44 files changed, 12 insertions(+), 12 deletions(-)

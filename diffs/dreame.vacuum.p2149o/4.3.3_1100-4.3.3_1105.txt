@@ -1,0 +1,163 @@
+Firmware diff for Mijia Self-Cleaning Robot Vacuum-Mop Pro (dreame.vacuum.p2149o)
+Old version: 4.3.3_1100 New version: 4.3.3_1105
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/audio/EN/148.ogg                    | Bin 38056 -> 28468 bytes
+ .../xout/_root/audio/EN/30.ogg                     | Bin 21009 -> 35848 bytes
+ .../xout/_root/audio/ZH/148.ogg                    | Bin 23657 -> 20471 bytes
+ .../xout/_root/audio/ZH/30.ogg                     | Bin 31431 -> 33908 bytes
+ .../xout/_root/ava/lib/node_clotho.so              | Bin 2209424 -> 2213296 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 124264 -> 124264 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 115560 -> 115560 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 2194968 -> 2197168 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 823880 -> 823880 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 907672 -> 907664 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 201520 -> 203208 bytes
+ .../xout/_root/ava/script/msg_cvt.sh               |   2 +
+ .../xout/_root/etc/init.d/wpa_supplicant.sh        |   1 +
+ .../xout/_root/etc/os-release                      |   6 +-
+ .../xout/_root/etc/rc.d/monitor.sh                 |   4 +-
+ .../xout/_root/misc/data.tar.bz2                   | Bin 540 -> 560 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/iptables-xml}               |   0
+ .../_root/usr/lib/libip4tc.so.0.1.0 => dev/null}   | Bin 24632 -> 0 bytes
+ .../xout/_root/usr/lib/libip4tc.so.2}              |   0
+ .../xout/_root/usr/lib/libip4tc.so.2.0.0}          | Bin 0 -> 24832 bytes
+ .../_root/usr/lib/libip6tc.so.0.1.0 => dev/null}   | Bin 25512 -> 0 bytes
+ .../xout/_root/usr/lib/libip6tc.so.2}              |   0
+ .../xout/_root/usr/lib/libip6tc.so.2.0.0}          | Bin 0 -> 25704 bytes
+ .../_root/usr/lib/libiptc.so.0.0.0 => dev/null}    | Bin 4168 -> 0 bytes
+ .../4.3.3_1105/xout/_root/usr/lib/libperf.so}      | Bin 0 -> 23616 bytes
+ .../usr/lib/libxtables.so.10.0.0 => dev/null}      | Bin 44816 -> 0 bytes
+ .../xout/_root/usr/lib/libxtables.so.12}           |   0
+ .../xout/_root/usr/lib/libxtables.so.12.4.0}       | Bin 0 -> 49048 bytes
+ .../usr/lib/tree_lib/libclotho_route_nodes.so      | Bin 5884520 -> 5880456 bytes
+ .../usr/lib/tree_lib/libclotho_tactics_tree.so     | Bin 1667608 -> 1656408 bytes
+ .../xout/_root/usr/lib/tree_lib/libclotho_tree.so  | Bin 8097200 -> 8103624 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_DNAT.so     | Bin 8488 -> 11328 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_DNPT.so     | Bin 6912 -> 6920 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_HL.so       | Bin 6952 -> 6960 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_LOG.so      | Bin 8152 -> 9256 bytes
+ .../_root/usr/lib/xtables/libip6t_MASQUERADE.so    | Bin 6920 -> 7312 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_NETMAP.so   | Bin 6856 -> 6864 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_REDIRECT.so | Bin 6928 -> 7176 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_REJECT.so   | Bin 7416 -> 8216 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_SNAT.so     | Bin 8472 -> 9216 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_SNPT.so     | Bin 6912 -> 6920 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_ah.so       | Bin 6936 -> 7160 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_dst.so      | Bin 7704 -> 7752 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_eui64.so    | Bin 4632 -> 4672 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_frag.so     | Bin 7384 -> 7992 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_hbh.so      | Bin 7768 -> 8048 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_hl.so       | Bin 7056 -> 7104 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_icmp6.so    | Bin 9136 -> 11496 bytes
+ .../_root/usr/lib/xtables/libip6t_ipv6header.so    | Bin 8720 -> 8760 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_mh.so       | Bin 8384 -> 8728 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_rt.so       | Bin 9080 -> 9664 bytes
+ .../xout/_root/usr/lib/xtables/libip6t_srh.so}     | Bin 0 -> 13880 bytes
+ .../xout/_root/usr/lib/xtables/libipt_CLUSTERIP.so | Bin 7608 -> 7648 bytes
+ .../xout/_root/usr/lib/xtables/libipt_DNAT.so      | Bin 8536 -> 11672 bytes
+ .../xout/_root/usr/lib/xtables/libipt_ECN.so       | Bin 7000 -> 7008 bytes
+ .../xout/_root/usr/lib/xtables/libipt_LOG.so       | Bin 8160 -> 9256 bytes
+ .../_root/usr/lib/xtables/libipt_MASQUERADE.so     | Bin 6920 -> 7296 bytes
+ .../usr/lib/xtables/libipt_MIRROR.so => dev/null}  | Bin 4640 -> 0 bytes
+ .../xout/_root/usr/lib/xtables/libipt_NETMAP.so    | Bin 5784 -> 5856 bytes
+ .../xout/_root/usr/lib/xtables/libipt_REDIRECT.so  | Bin 6928 -> 7224 bytes
+ .../xout/_root/usr/lib/xtables/libipt_REJECT.so    | Bin 8328 -> 8872 bytes
+ .../usr/lib/xtables/libipt_SAME.so => dev/null}    | Bin 7600 -> 0 bytes
+ .../xout/_root/usr/lib/xtables/libipt_SNAT.so      | Bin 8520 -> 9432 bytes
+ .../xout/_root/usr/lib/xtables/libipt_TTL.so       | Bin 6952 -> 6960 bytes
+ .../xout/_root/usr/lib/xtables/libipt_ULOG.so      | Bin 7032 -> 7040 bytes
+ .../xout/_root/usr/lib/xtables/libipt_ah.so        | Bin 6848 -> 6864 bytes
+ .../xout/_root/usr/lib/xtables/libipt_icmp.so      | Bin 11632 -> 11648 bytes
+ .../xout/_root/usr/lib/xtables/libipt_realm.so     | Bin 7136 -> 7080 bytes
+ .../xout/_root/usr/lib/xtables/libipt_ttl.so       | Bin 6992 -> 7008 bytes
+ .../usr/lib/xtables/libipt_unclean.so => dev/null} | Bin 4632 -> 0 bytes
+ .../xout/_root/usr/lib/xtables/libxt_AUDIT.so      | Bin 6864 -> 6880 bytes
+ .../xout/_root/usr/lib/xtables/libxt_CHECKSUM.so   | Bin 5592 -> 5616 bytes
+ .../xout/_root/usr/lib/xtables/libxt_CLASSIFY.so   | Bin 6864 -> 7080 bytes
+ .../xout/_root/usr/lib/xtables/libxt_CONNMARK.so   | Bin 9944 -> 13656 bytes
+ .../_root/usr/lib/xtables/libxt_CONNSECMARK.so     | Bin 6904 -> 6912 bytes
+ .../xout/_root/usr/lib/xtables/libxt_CT.so         | Bin 12840 -> 13504 bytes
+ .../xout/_root/usr/lib/xtables/libxt_DSCP.so       | Bin 7640 -> 8328 bytes
+ .../xout/_root/usr/lib/xtables/libxt_HMARK.so      | Bin 12080 -> 12112 bytes
+ .../xout/_root/usr/lib/xtables/libxt_IDLETIMER.so  | Bin 5704 -> 7296 bytes
+ .../xout/_root/usr/lib/xtables/libxt_LED.so        | Bin 7112 -> 7120 bytes
+ .../xout/_root/usr/lib/xtables/libxt_MARK.so       | Bin 8880 -> 12104 bytes
+ .../xout/_root/usr/lib/xtables/libxt_NFLOG.so      | Bin 7016 -> 7576 bytes
+ .../xout/_root/usr/lib/xtables/libxt_NFQUEUE.so    | Bin 8424 -> 11712 bytes
+ .../xout/_root/usr/lib/xtables/libxt_NOTRACK.so    | Bin 12840 -> 0 bytes
+ .../xout/_root/usr/lib/xtables/libxt_RATEEST.so    | Bin 7528 -> 7568 bytes
+ .../xout/_root/usr/lib/xtables/libxt_SECMARK.so    | Bin 5768 -> 5792 bytes
+ .../xout/_root/usr/lib/xtables/libxt_SET.so        | Bin 13048 -> 16224 bytes
+ .../xout/_root/usr/lib/xtables/libxt_SYNPROXY.so   | Bin 7040 -> 7096 bytes
+ .../xout/_root/usr/lib/xtables/libxt_TCPMSS.so     | Bin 7232 -> 7256 bytes
+ .../_root/usr/lib/xtables/libxt_TCPOPTSTRIP.so     | Bin 7584 -> 7624 bytes
+ .../xout/_root/usr/lib/xtables/libxt_TEE.so        | Bin 7120 -> 7280 bytes
+ .../xout/_root/usr/lib/xtables/libxt_TOS.so        | Bin 8512 -> 8840 bytes
+ .../xout/_root/usr/lib/xtables/libxt_TPROXY.so     | Bin 7640 -> 7696 bytes
+ .../xout/_root/usr/lib/xtables/libxt_TRACE.so      | Bin 4640 -> 4832 bytes
+ .../xout/_root/usr/lib/xtables/libxt_addrtype.so   | Bin 9856 -> 11656 bytes
+ .../xout/_root/usr/lib/xtables/libxt_bpf.so        | Bin 7000 -> 9040 bytes
+ .../xout/_root/usr/lib/xtables/libxt_cgroup.so}    | Bin 0 -> 8360 bytes
+ .../xout/_root/usr/lib/xtables/libxt_cluster.so    | Bin 7024 -> 7752 bytes
+ .../xout/_root/usr/lib/xtables/libxt_comment.so    | Bin 5584 -> 6872 bytes
+ .../xout/_root/usr/lib/xtables/libxt_connbytes.so  | Bin 7424 -> 8144 bytes
+ .../xout/_root/usr/lib/xtables/libxt_connlimit.so  | Bin 8656 -> 8704 bytes
+ .../xout/_root/usr/lib/xtables/libxt_connmark.so   | Bin 7032 -> 7064 bytes
+ .../xout/_root/usr/lib/xtables/libxt_conntrack.so  | Bin 24280 -> 27040 bytes
+ .../xout/_root/usr/lib/xtables/libxt_cpu.so        | Bin 5520 -> 5776 bytes
+ .../xout/_root/usr/lib/xtables/libxt_dccp.so       | Bin 9088 -> 11424 bytes
+ .../xout/_root/usr/lib/xtables/libxt_devgroup.so   | Bin 7728 -> 7992 bytes
+ .../xout/_root/usr/lib/xtables/libxt_dscp.so       | Bin 7584 -> 8384 bytes
+ .../xout/_root/usr/lib/xtables/libxt_ecn.so        | Bin 6944 -> 7184 bytes
+ .../xout/_root/usr/lib/xtables/libxt_esp.so        | Bin 6840 -> 6856 bytes
+ .../xout/_root/usr/lib/xtables/libxt_hashlimit.so  | Bin 16536 -> 28176 bytes
+ .../xout/_root/usr/lib/xtables/libxt_helper.so     | Bin 5704 -> 6864 bytes
+ .../xout/_root/usr/lib/xtables/libxt_ipcomp.so}    | Bin 0 -> 6904 bytes
+ .../xout/_root/usr/lib/xtables/libxt_iprange.so    | Bin 11448 -> 11480 bytes
+ .../xout/_root/usr/lib/xtables/libxt_ipvs.so       | Bin 9928 -> 9680 bytes
+ .../xout/_root/usr/lib/xtables/libxt_length.so     | Bin 5840 -> 6856 bytes
+ .../xout/_root/usr/lib/xtables/libxt_limit.so      | Bin 7216 -> 9192 bytes
+ .../xout/_root/usr/lib/xtables/libxt_mac.so        | Bin 5704 -> 6864 bytes
+ .../xout/_root/usr/lib/xtables/libxt_mark.so       | Bin 7024 -> 7056 bytes
+ .../xout/_root/usr/lib/xtables/libxt_multiport.so  | Bin 11736 -> 12992 bytes
+ .../xout/_root/usr/lib/xtables/libxt_nfacct.so     | Bin 6864 -> 7064 bytes
+ .../xout/_root/usr/lib/xtables/libxt_osf.so        | Bin 6944 -> 6952 bytes
+ .../xout/_root/usr/lib/xtables/libxt_owner.so      | Bin 12624 -> 13504 bytes
+ .../xout/_root/usr/lib/xtables/libxt_physdev.so    | Bin 7344 -> 7384 bytes
+ .../xout/_root/usr/lib/xtables/libxt_pkttype.so    | Bin 7008 -> 7144 bytes
+ .../xout/_root/usr/lib/xtables/libxt_policy.so     | Bin 12024 -> 12512 bytes
+ .../xout/_root/usr/lib/xtables/libxt_quota.so      | Bin 5536 -> 5784 bytes
+ .../xout/_root/usr/lib/xtables/libxt_rateest.so    | Bin 11920 -> 11960 bytes
+ .../xout/_root/usr/lib/xtables/libxt_recent.so     | Bin 12440 -> 12464 bytes
+ .../xout/_root/usr/lib/xtables/libxt_rpfilter.so   | Bin 6984 -> 7000 bytes
+ .../xout/_root/usr/lib/xtables/libxt_sctp.so       | Bin 13304 -> 13888 bytes
+ .../xout/_root/usr/lib/xtables/libxt_set.so        | Bin 16240 -> 18024 bytes
+ .../xout/_root/usr/lib/xtables/libxt_socket.so     | Bin 7352 -> 8160 bytes
+ .../xout/_root/usr/lib/xtables/libxt_standard.so   | Bin 4840 -> 4880 bytes
+ .../xout/_root/usr/lib/xtables/libxt_state.so      | Bin 24280 -> 0 bytes
+ .../xout/_root/usr/lib/xtables/libxt_statistic.so  | Bin 7184 -> 7496 bytes
+ .../xout/_root/usr/lib/xtables/libxt_string.so     | Bin 11432 -> 11448 bytes
+ .../xout/_root/usr/lib/xtables/libxt_tcp.so        | Bin 11312 -> 11864 bytes
+ .../xout/_root/usr/lib/xtables/libxt_tcpmss.so     | Bin 5832 -> 6856 bytes
+ .../xout/_root/usr/lib/xtables/libxt_time.so       | Bin 12576 -> 13664 bytes
+ .../xout/_root/usr/lib/xtables/libxt_tos.so        | Bin 7520 -> 7552 bytes
+ .../xout/_root/usr/lib/xtables/libxt_u32.so        | Bin 8456 -> 8480 bytes
+ .../xout/_root/usr/lib/xtables/libxt_udp.so        | Bin 7000 -> 7584 bytes
+ .../xout/_root/usr/sbin/ip6tables-apply}           |   0
+ .../xout/_root/usr/sbin/ip6tables-legacy}          |   0
+ .../xout/_root/usr/sbin/ip6tables-legacy-restore}  |   0
+ .../xout/_root/usr/sbin/ip6tables-legacy-save}     |   0
+ .../4.3.3_1105/xout/_root/usr/sbin/iptables-apply} | 296 +++++++++++++++++++++
+ .../xout/_root/usr/sbin/iptables-legacy}           |   0
+ .../xout/_root/usr/sbin/iptables-legacy-restore}   |   0
+ .../xout/_root/usr/sbin/iptables-legacy-save}      |   0
+ .../xout/_root/usr/sbin/xtables-legacy-multi}      | Bin 0 -> 79944 bytes
+ .../xout/_root/usr/sbin/xtables-multi => dev/null} | Bin 79880 -> 0 bytes
+ .../xout/_root/version_record                      |  12 +-
+ .../{4.3.3_1100 => 4.3.3_1105}/xout/kernel.img     | Bin 10524672 -> 10524672 bytes
+ .../{4.3.3_1100 => 4.3.3_1105}/xout/mcu.bin        | Bin 149820 -> 149964 bytes
+ .../{4.3.3_1100 => 4.3.3_1105}/xout/toc1.fex       | Bin 1196032 -> 1196032 bytes
+ 157 files changed, 311 insertions(+), 12 deletions(-)

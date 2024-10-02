@@ -1,0 +1,72 @@
+Firmware diff for Dreame Robot Vacuum-Mop F9 (dreame.vacuum.p2008)
+Old version: 3.5.8_0018 New version: 3.5.8_1024
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../_root/audio/SYS/data_space_usage_overtop.ogg}  | Bin 0 -> 13020 bytes
+ .../audio/SYS/main_program_openfile_overmuch.ogg}  | Bin 0 -> 15633 bytes
+ .../xout/_root/audio/SYS/memory_usage_overtop.ogg} | Bin 0 -> 12254 bytes
+ .../xout/_root/audio/TEST/7.ogg                    | Bin 166787 -> 4511 bytes
+ .../xout/_root/audio/ZH/0.ogg => dev/null}         | Bin 27194 -> 0 bytes
+ .../3.5.8_1024/xout/_root/audio/ZH/0.wav}          | Bin 0 -> 99406 bytes
+ .../xout/_root/ava/conf/p2008.conf                 |   2 +-
+ .../xout/_root/ava/lib/node_calibr.so              | Bin 214140 -> 214140 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 242192 -> 242192 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 28412 -> 28412 bytes
+ .../xout/_root/ava/lib/node_health_tartarus.so     | Bin 81528 -> 81660 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 91296 -> 91364 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 372816 -> 376600 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 69388 -> 69592 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 556136 -> 556132 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 66144 -> 66152 bytes
+ .../xout/_root/ava/lib/node_signal_tab.so          | Bin 141292 -> 138268 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 105052 -> 105052 bytes
+ .../xout/_root/ava/lib/node_tartarus.so            | Bin 567880 -> 567904 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 94300 -> 94340 bytes
+ .../xout/_root/ava/lib/node_tr_vslam.so            | Bin 68992 -> 68992 bytes
+ .../xout/_root/ava/lib/node_tracecheck.so          | Bin 44316 -> 44316 bytes
+ .../xout/_root/ava/lib/node_vision.so              | Bin 2075572 -> 2052692 bytes
+ .../xout/_root/bin/amixer                          | Bin 39240 -> 39240 bytes
+ .../3.5.8_1024/xout/_root/bin/aplay}               | Bin 0 -> 55972 bytes
+ .../xout/_root/etc/crontabs/root                   |   4 +-
+ .../xout/_root/etc/factory_reset.conf              |   2 +-
+ .../xout/_root/etc/init.d/factory_ap.sh            |   3 +
+ .../xout/_root/etc/init.d/play_boot_music.sh       |  23 +---
+ .../xout/_root/etc/inittab                         |   1 +
+ .../xout/_root/etc/os-release                      |   6 +-
+ .../xout/_root/etc/rc.d/factory_reset_daemon.sh    |   6 +
+ .../xout/_root/etc/rc.d/monitor.sh                 |  39 +++---
+ .../xout/_root/etc/rc.d/monitor_memory.sh}         |  29 +++++
+ .../xout/_root/etc/rc.d/wifi_manager.sh            |   9 +-
+ .../xout/_root/etc/rc.d/wifi_monitor.sh            | 138 +++++++++++++--------
+ .../xout/_root/etc/rc.final                        |   3 +
+ .../xout/_root/misc/data.tar.bz2                   | Bin 713 -> 700 bytes
+ .../3.5.8_1024/xout/_root/platform_md5.py}         |  71 +++++++++++
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 530776 -> 530776 bytes
+ .../xout/_root/usr/bin/avacmd                      | Bin 6632 -> 6632 bytes
+ .../xout/_root/usr/bin/backup_key.sh               |   9 +-
+ .../xout/_root/usr/bin/config                      |  25 ++--
+ .../xout/_root/usr/bin/do_start_ap.sh              |   6 +
+ .../xout/_root/usr/bin/factory_reset.sh            |  46 +++----
+ .../xout/_root/usr/bin/mediad                      | Bin 20676 -> 20392 bytes
+ .../xout/_root/usr/bin/ogg123                      | Bin 51956 -> 51956 bytes
+ .../xout/_root/usr/bin/oggdec => dev/null}         | Bin 11760 -> 0 bytes
+ .../xout/_root/usr/bin/oggenc => dev/null}         | Bin 54080 -> 0 bytes
+ .../xout/_root/usr/bin/ogginfo => dev/null}        | Bin 26668 -> 0 bytes
+ .../3.5.8_1024/xout/_root/usr/bin/packlog.sh}      |  28 +++++
+ .../xout/_root/usr/bin/reboot.sh                   |   1 -
+ .../xout/_root/usr/bin/restart_ava.sh              |   7 +-
+ .../3.5.8_1024/xout/_root/usr/bin/sysmon.sh}       |  75 +++++++++++
+ .../xout/_root/usr/bin/vorbiscomment => dev/null}  | Bin 23824 -> 0 bytes
+ .../xout/_root/usr/bin/wifi_conf_monitor.sh        |   4 +-
+ .../xout/_root/usr/bin/wifi_start.sh               |   1 +
+ .../xout/_root/usr/lib/libmessenger.so             | Bin 34824 -> 34824 bytes
+ .../xout/_root/usr/lib/libopencv_core.so.4.2.0     | Bin 2606388 -> 2606388 bytes
+ .../_root/usr/lib/libopencv_imgcodecs.so.4.2.0     | Bin 280772 -> 281364 bytes
+ .../usr/lib/tree_lib/libtartarus_route_nodes.so    | Bin 2718784 -> 2726064 bytes
+ .../usr/lib/tree_lib/libtartarus_tactics_tree.so   | Bin 663940 -> 663376 bytes
+ .../_root/usr/lib/tree_lib/libtartarus_tree.so     | Bin 10354132 -> 10401944 bytes
+ .../xout/_root/version_record                      |  12 +-
+ .../{3.5.8_0018 => 3.5.8_1024}/xout/mcu.bin        | Bin 132504 -> 119272 bytes
+ 66 files changed, 404 insertions(+), 148 deletions(-)

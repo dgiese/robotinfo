@@ -1,0 +1,15 @@
+Firmware diff for DreameBot L10s Ultra (dreame.vacuum.r2228o)
+Old version: 4.3.3_2303 New version: 4.3.3_2401
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_arges.so               | Bin 4816608 -> 4816608 bytes
+ .../xout/_root/etc/os-release                      |   4 ++--
+ .../xout/_root/misc/data.tar.bz2                   | Bin 582 -> 582 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../_root/usr/lib/tree_lib/libarges_route_nodes.so | Bin 10555376 -> 10567744 bytes
+ .../xout/_root/usr/lib/tree_lib/libarges_tree.so   | Bin 4561560 -> 4562928 bytes
+ .../xout/_root/version_record                      |   2 +-
+ .../{4.3.3_2303 => 4.3.3_2401}/xout/kernel.img     | Bin 10835968 -> 10835968 bytes
+ .../{4.3.3_2303 => 4.3.3_2401}/xout/toc1.fex       | Bin 1245184 -> 1245184 bytes
+ 9 files changed, 4 insertions(+), 4 deletions(-)

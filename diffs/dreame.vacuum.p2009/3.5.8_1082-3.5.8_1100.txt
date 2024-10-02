@@ -1,0 +1,96 @@
+Firmware diff for Dreame Robot Vacuum D9  (dreame.vacuum.p2009)
+Old version: 3.5.8_1082 New version: 3.5.8_1100
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/conf/p2009.conf                 |   1 +
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 62480 -> 62464 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 32144 -> 32152 bytes
+ .../xout/_root/ava/lib/node_gaea.so                | Bin 717800 -> 718180 bytes
+ .../xout/_root/ava/lib/node_health_gaea.so         | Bin 119964 -> 119964 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 91400 -> 92788 bytes
+ .../xout/_root/ava/lib/node_lds.so                 | Bin 167408 -> 171576 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 118804 -> 106292 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 1390924 -> 1395184 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 30888 -> 30888 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 438992 -> 438992 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 71992 -> 71992 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 705032 -> 709140 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 66172 -> 66180 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 239988 -> 239988 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 103696 -> 103736 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 90552 -> 92708 bytes
+ .../xout/_root/ava/script/sys_set_private.sh       |   2 +-
+ .../xout/_root/ava/script/wifi_test.sh             |   2 +-
+ .../_root/etc/firmware/hisilicon/hi3881_fw.bin}    | Bin 0 -> 145664 bytes
+ .../etc/firmware/hisilicon/hi3881_mfg_fw.bin}      | Bin 0 -> 147648 bytes
+ .../xout/_root/etc/firmware/hisilicon/wifi_cfg}    |  11 +++
+ .../xout/_root/etc/init.d/wifi.sh                  | 104 ++++++++++++++++++---
+ .../xout/_root/etc/os-release                      |   6 +-
+ .../xout/_root/etc/rc.d/wifi_monitor.sh            |   2 +-
+ .../xout/_root/etc/wifi/dnsmasq.conf               |   2 +-
+ .../xout/_root/etc/wifi/hostapd.conf               |   2 +-
+ .../xout/_root/misc/data.tar.bz2                   | Bin 629 -> 620 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/autossh.sh => dev/null}     |  39 --------
+ .../xout/_root/usr/bin/ava                         | Bin 135104 -> 135096 bytes
+ .../xout/_root/usr/bin/config                      |   2 +
+ .../_root/usr/bin/curl_download.sh => dev/null}    |  17 ----
+ .../xout/_root/usr/bin/curl_upload.sh => dev/null} |  15 ---
+ .../xout/_root/usr/bin/do_start_ap.sh              |  23 +++--
+ .../xout/_root/usr/bin/factory_reset.sh            |   2 +-
+ .../3.5.8_1100/xout/_root/usr/bin/lock_area.sh}    |  63 +++++++++++++
+ .../xout/_root/usr/bin/softap_down => dev/null}    | Bin 4544 -> 0 bytes
+ .../xout/_root/usr/bin/softap_test => dev/null}    | Bin 4684 -> 0 bytes
+ .../xout/_root/usr/bin/softap_up => dev/null}      | Bin 5104 -> 0 bytes
+ .../xout/_root/usr/bin/start_ap.sh                 |  23 +----
+ .../xout/_root/usr/bin/start_sta.sh                |  22 +----
+ .../3.5.8_1100/xout/_root/usr/bin/wifi_act.sh}     |  55 +++++++++++
+ .../xout/_root/usr/bin/wifi_setup.sh               |  50 ++++++++--
+ .../usr/lib/ckport/db/libao.ckport => dev/null}    |  33 -------
+ .../glog/glog-config-version.cmake => dev/null}    |  46 ---------
+ .../lib/cmake/glog/glog-config.cmake => dev/null}  |  21 -----
+ .../glog/glog-targets-release.cmake => dev/null}   |  19 ----
+ .../lib/cmake/glog/glog-targets.cmake => dev/null} | 100 --------------------
+ .../usr/lib/engines-1.1/afalg.so => dev/null}      | Bin 12156 -> 0 bytes
+ .../_root/usr/lib/engines-1.1/capi.so => dev/null} | Bin 2872 -> 0 bytes
+ .../usr/lib/engines-1.1/padlock.so => dev/null}    | Bin 2872 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/basic.a => dev/null}     | Bin 3450 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/basic.la => dev/null}    |  41 --------
+ .../usr/lib/libnl/cli/cls/basic.so => dev/null}    | Bin 4536 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/cgroup.a => dev/null}    | Bin 2900 -> 0 bytes
+ .../usr/lib/libnl/cli/cls/cgroup.la => dev/null}   |  41 --------
+ .../usr/lib/libnl/cli/cls/cgroup.so => dev/null}   | Bin 3896 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/bfifo.a => dev/null}   | Bin 3092 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/bfifo.la => dev/null}  |  41 --------
+ .../usr/lib/libnl/cli/qdisc/bfifo.so => dev/null}  | Bin 4068 -> 0 bytes
+ .../lib/libnl/cli/qdisc/blackhole.a => dev/null}   | Bin 2700 -> 0 bytes
+ .../lib/libnl/cli/qdisc/blackhole.la => dev/null}  |  41 --------
+ .../lib/libnl/cli/qdisc/blackhole.so => dev/null}  | Bin 3580 -> 0 bytes
+ .../lib/libnl/cli/qdisc/fq_codel.a => dev/null}    | Bin 3722 -> 0 bytes
+ .../lib/libnl/cli/qdisc/fq_codel.la => dev/null}   |  41 --------
+ .../lib/libnl/cli/qdisc/fq_codel.so => dev/null}   | Bin 4768 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/hfsc.a => dev/null}    | Bin 5410 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/hfsc.la => dev/null}   |  41 --------
+ .../usr/lib/libnl/cli/qdisc/hfsc.so => dev/null}   | Bin 6300 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/htb.a => dev/null}     | Bin 5656 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/htb.la => dev/null}    |  41 --------
+ .../usr/lib/libnl/cli/qdisc/htb.so => dev/null}    | Bin 6464 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/ingress.a => dev/null} | Bin 2660 -> 0 bytes
+ .../lib/libnl/cli/qdisc/ingress.la => dev/null}    |  41 --------
+ .../lib/libnl/cli/qdisc/ingress.so => dev/null}    | Bin 3560 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/pfifo.a => dev/null}   | Bin 2952 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/pfifo.la => dev/null}  |  41 --------
+ .../usr/lib/libnl/cli/qdisc/pfifo.so => dev/null}  | Bin 3928 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/plug.a => dev/null}    | Bin 4466 -> 0 bytes
+ .../usr/lib/libnl/cli/qdisc/plug.la => dev/null}   |  41 --------
+ .../usr/lib/libnl/cli/qdisc/plug.so => dev/null}   | Bin 5772 -> 0 bytes
+ .../xout/_root/usr/lib/libsoftap.so => dev/null}   | Bin 15948 -> 0 bytes
+ .../usr/lib/modules/4.9.118+/external/8189fs.ko    | Bin 1353344 -> 1353344 bytes
+ .../usr/lib/modules/4.9.118+/external/hi3881.ko}   | Bin 0 -> 825076 bytes
+ .../_root/usr/lib/tree_lib/libgaea_tactics_tree.so | Bin 836948 -> 836948 bytes
+ .../xout/_root/version_record                      |  12 +--
+ .../xout/boot_package.fex                          | Bin 1409024 -> 1409024 bytes
+ .../{3.5.8_1082 => 3.5.8_1100}/xout/kernel.img     | Bin 2787328 -> 2787328 bytes
+ .../{3.5.8_1082 => 3.5.8_1100}/xout/mcu.bin        | Bin 129812 -> 132492 bytes
+ 90 files changed, 301 insertions(+), 785 deletions(-)

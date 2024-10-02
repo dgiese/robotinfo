@@ -1,0 +1,53 @@
+Firmware diff for Xiaomi Robot Vacuum S10+ (dreame.vacuum.r2211o)
+Old version: 4.3.3_1053 New version: 4.3.3_1062
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_camera_laser.so        | Bin 101944 -> 101944 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 69236 -> 69236 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 36556 -> 36556 bytes
+ .../xout/_root/ava/lib/node_health_themis.so       | Bin 287068 -> 287068 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 113784 -> 113784 bytes
+ .../_root/ava/lib/node_laser_point_extractor.so    | Bin 304004 -> 304004 bytes
+ .../xout/_root/ava/lib/node_laser_transfer.so      | Bin 1051008 -> 1055192 bytes
+ .../xout/_root/ava/lib/node_lasercali.so           | Bin 169856 -> 172288 bytes
+ .../xout/_root/ava/lib/node_lasercamera_calibr.so  | Bin 209568 -> 197324 bytes
+ .../xout/_root/ava/lib/node_laserplane_calibr.so   | Bin 299608 -> 299608 bytes
+ .../xout/_root/ava/lib/node_lds.so                 | Bin 369932 -> 369932 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 109464 -> 109464 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 1868148 -> 1888844 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 35044 -> 35044 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 950692 -> 950692 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 91224 -> 91224 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 904840 -> 904840 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 69984 -> 69984 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 546396 -> 554428 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 129916 -> 129916 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 110292 -> 110292 bytes
+ .../xout/_root/ava/lib/node_themis.so              | Bin 3452360 -> 3460732 bytes
+ .../xout/_root/etc/init.d/ble.sh                   |  31 ++++++++++-----------
+ .../xout/_root/etc/os-release                      |   4 +--
+ .../xout/_root/etc/rc.d/ava_interment.sh           |   2 ++
+ .../xout/_root/etc/rc.d/wifi_monitor.sh            |   2 +-
+ .../xout/_root/misc/data.tar.bz2                   | Bin 544 -> 541 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 166196 -> 166196 bytes
+ .../xout/_root/usr/bin/factory_reset.sh            |   2 +-
+ .../xout/_root/usr/lib/libbt.so                    | Bin 7832 -> 7848 bytes
+ .../xout/_root/usr/lib/libopencv_aruco.so}         |   0
+ .../xout/_root/usr/lib/libopencv_aruco.so.4.2}     |   0
+ .../xout/_root/usr/lib/libopencv_aruco.so.4.2.0}   | Bin 0 -> 363828 bytes
+ .../xout/_root/usr/lib/libopencv_core.so.4.2.0     | Bin 2644508 -> 2644548 bytes
+ .../xout/_root/usr/lib/libopencv_dnn.so}           |   0
+ .../xout/_root/usr/lib/libopencv_dnn.so.4.2}       |   0
+ .../xout/_root/usr/lib/libopencv_dnn.so.4.2.0}     | Bin 0 -> 3364208 bytes
+ .../xout/_root/usr/lib/libopencv_videoio.so}       |   0
+ .../xout/_root/usr/lib/libopencv_videoio.so.4.2}   |   0
+ .../xout/_root/usr/lib/libopencv_videoio.so.4.2.0} | Bin 0 -> 262404 bytes
+ .../usr/lib/tree_lib/libthemis_route_nodes.so      | Bin 9189168 -> 9204496 bytes
+ .../usr/lib/tree_lib/libthemis_tactics_tree.so     | Bin 1087908 -> 1087960 bytes
+ .../xout/_root/usr/lib/tree_lib/libthemis_tree.so  | Bin 3179540 -> 3182756 bytes
+ .../xout/_root/version_record                      |  20 ++++++-------
+ .../{4.3.3_1053 => 4.3.3_1062}/xout/kernel.img     | Bin 2934784 -> 2934784 bytes
+ .../{4.3.3_1053 => 4.3.3_1062}/xout/toc1.fex       | Bin 1507328 -> 1507328 bytes
+ 47 files changed, 31 insertions(+), 32 deletions(-)

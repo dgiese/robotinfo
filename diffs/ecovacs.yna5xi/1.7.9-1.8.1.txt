@@ -1,0 +1,10 @@
+Firmware diff for DEEBOT OZMO 950 Series (ecovacs.yna5xi)
+Old version: 1.7.9 New version: 1.8.1
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../_root/etc/conf/medusa/deebot_dx3.conf.bak}     | 675 +++++++++++++++++++++
+ .../{1.7.9 => 1.8.1}/xout/_root/etc/fw.manifest    |   4 +-
+ .../{1.7.9 => 1.8.1}/xout/_root/opt/data.tar.bz2   | Bin 344 -> 345 bytes
+ .../xout/_root/usr/lib/librobot_side_cxx.so        | Bin 31008 -> 30948 bytes
+ 4 files changed, 677 insertions(+), 2 deletions(-)

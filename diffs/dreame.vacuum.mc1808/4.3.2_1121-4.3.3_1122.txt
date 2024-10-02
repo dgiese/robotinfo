@@ -1,0 +1,30 @@
+Firmware diff for Mi Robot Vacuum-Mop (dreame.vacuum.mc1808)
+Old version: 4.3.2_1121 New version: 4.3.3_1122
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/ava/lib/node_calibr.so              | Bin 218240 -> 214200 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 62480 -> 62488 bytes
+ .../xout/_root/ava/lib/node_health_khaos.so        | Bin 166876 -> 166880 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 281080 -> 281080 bytes
+ .../xout/_root/ava/lib/node_khaos.so               | Bin 828908 -> 828908 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 446932 -> 446932 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 779908 -> 779908 bytes
+ .../xout/_root/ava/lib/node_signal_tab.so          | Bin 136216 -> 136240 bytes
+ .../xout/_root/ava/lib/node_tracecheck.so          | Bin 44364 -> 44344 bytes
+ .../xout/_root/ava/lib/node_vision.so              | Bin 2016724 -> 2016724 bytes
+ .../xout/_root/ava/script/msg_cvt.sh               |  20 ++++++----
+ .../xout/_root/etc/os-release                      |   4 +-
+ .../4.3.3_1122/xout/_root/etc/private}             |   1 +
+ .../xout/_root/misc/data.tar.bz2                   | Bin 482 -> 484 bytes
+ .../{4.3.2_1121 => 4.3.3_1122}/xout/_root/time.txt |   2 +-
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 145984 -> 145984 bytes
+ .../xout/_root/usr/bin/miio_client                 | Bin 714184 -> 738608 bytes
+ .../_root/usr/bin/miio_client_helper_nomqtt.sh     |  41 +++------------------
+ .../xout/_root/usr/bin/miio_recv_line              | Bin 3988 -> 3832 bytes
+ .../xout/_root/usr/bin/miio_send_line              | Bin 3880 -> 3916 bytes
+ .../_root/usr/lib/tree_lib/libkhaos_route_nodes.so | Bin 4435368 -> 4435368 bytes
+ .../usr/lib/tree_lib/libkhaos_tactics_tree.so      | Bin 1020240 -> 1020240 bytes
+ .../xout/_root/usr/lib/tree_lib/libkhaos_tree.so   | Bin 7011864 -> 7011864 bytes
+ 24 files changed, 22 insertions(+), 48 deletions(-)

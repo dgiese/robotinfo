@@ -1,0 +1,47 @@
+Firmware diff for DEEBOT OZMO T8 AIVI (ecovacs.x5d34r)
+Old version: 1.4.5 New version: 1.4.8
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../xout/_root/etc/conf/audio_daemon.conf          |  12 ++++---
+ .../{1.4.5 => 1.4.8}/xout/_root/etc/fw.fix         |   2 +-
+ .../{1.4.5 => 1.4.8}/xout/_root/etc/fw.manifest    |   4 +--
+ .../{1.4.5 => 1.4.8}/xout/_root/etc/rc.conf        |   2 +-
+ .../{1.4.5 => 1.4.8}/xout/_root/etc/rc.d/dog.sh    |  39 ++++++++++++++-------
+ .../{1.4.5 => 1.4.8}/xout/_root/etc/rc.d/medusa.sh |   2 ++
+ .../{1.4.5 => 1.4.8}/xout/_root/etc/rc.d/wifi.sh   |   3 +-
+ .../xout/_root/etc/wifi/DxAi.tar.gz                | Bin 1027 -> 1038 bytes
+ .../1.4.8/xout/_root/etc/wifi/ZJ1913_20200305.rar} | Bin 0 -> 1133 bytes
+ .../xout/_root/etc/wifi/bumbee_hook.sh             |  18 ++++++----
+ .../xout/_root/etc/wifi/wd_hook.sh                 |  21 ++++++++++-
+ .../{1.4.5 => 1.4.8}/xout/_root/etc/www/reqDo      | Bin 26968 -> 27392 bytes
+ .../{1.4.5 => 1.4.8}/xout/_root/opt/data.tar.bz2   | Bin 422 -> 422 bytes
+ .../opt/ros/melodic/lib/libMdsRosNodeWrapper.so    | Bin 877648 -> 877648 bytes
+ .../xout/_root/usr/bin/audioDaemon                 | Bin 69552 -> 69552 bytes
+ .../{1.4.5 => 1.4.8}/xout/_root/usr/bin/ecoSystem  | Bin 6928 -> 6928 bytes
+ .../xout/_root/usr/lib/WHmethods/libWHmethods.so   | Bin 149088 -> 152368 bytes
+ .../xout/_root/usr/lib/libDeebot.so                | Bin 889024 -> 889496 bytes
+ .../xout/_root/usr/lib/libcf_diff.so.0.0.1         | Bin 17264 -> 17264 bytes
+ .../xout/_root/usr/lib/libcommon.so.0.0.1          | Bin 17560 -> 17560 bytes
+ .../{1.4.5 => 1.4.8}/xout/_root/usr/lib/liberos.so | Bin 302360 -> 303208 bytes
+ .../xout/_root/usr/lib/libfeiyan.so.2.3.0          | Bin 1046488 -> 1030208 bytes
+ .../_root/usr/lib/librbot_docking_to_charge.so     | Bin 190152 -> 190152 bytes
+ .../xout/_root/usr/lib/libroom_analyze.so          | Bin 115792 -> 116504 bytes
+ .../xout/_root/usr/lib/medusa/plug_audio.so        | Bin 48344 -> 48344 bytes
+ .../xout/_root/usr/lib/medusa/plug_dev_status.so   | Bin 16152 -> 16464 bytes
+ .../xout/_root/usr/lib/medusa/plug_file_sink.so    | Bin 15224 -> 15224 bytes
+ .../xout/_root/usr/lib/medusa/plug_input_event.so  | Bin 9464 -> 9464 bytes
+ .../xout/_root/usr/lib/medusa/plug_link_en.so-bk   | Bin 37064 -> 37064 bytes
+ .../xout/_root/usr/lib/medusa/plug_log.so          | Bin 12000 -> 12000 bytes
+ .../xout/_root/usr/lib/medusa/plug_lvision.so-bk   | Bin 2183616 -> 2183616 bytes
+ .../_root/usr/lib/medusa/plug_lvision_en.so-bk     | Bin 2183616 -> 2183616 bytes
+ .../xout/_root/usr/lib/medusa/plug_network.so      | Bin 19944 -> 19944 bytes
+ .../xout/_root/usr/lib/medusa/plug_sys.so          | Bin 40720 -> 40720 bytes
+ .../xout/_root/usr/lib/medusa/plug_time.so         | Bin 21688 -> 21688 bytes
+ .../xout/_root/usr/lib/node/liberos_node_clean.so  | Bin 568000 -> 568752 bytes
+ .../xout/_root/usr/lib/node/liberos_node_map.so    | Bin 654704 -> 654704 bytes
+ .../xout/_root/usr/lib/node/liberos_node_return.so | Bin 356208 -> 343880 bytes
+ .../_root/usr/lib/node/liberos_node_setting.so     | Bin 356888 -> 359968 bytes
+ .../usr/lib/node/liberos_node_task_manager.so      | Bin 1705296 -> 1717672 bytes
+ .../{1.4.5 => 1.4.8}/xout/_root/version.txt        |  16 ++++-----
+ 41 files changed, 80 insertions(+), 39 deletions(-)

@@ -1,0 +1,58 @@
+Firmware diff for DreameBot L10s Ultra (dreame.vacuum.r2228o)
+Old version: 4.3.3_1087 New version: 4.3.3_1121
+Source: https://robotinfo.dev 
+Contact information: https://dontvacuum.me
+---
+ .../_root/ava/conf/dreame_furniture9_v0.7_cache    | Bin 1145336 -> 1145240 bytes
+ .../conf/dreame_obstacle7_v0.9.12.mnn => dev/null} | Bin 3465496 -> 0 bytes
+ .../_root/ava/conf/dreame_obstacle7_v0.9.18.json}  |   4 ++--
+ .../_root/ava/conf/dreame_obstacle7_v0.9.18.mnn}   | Bin 0 -> 3465496 bytes
+ .../_root/ava/conf/dreame_obstacle7_v0.9.18_cache} | Bin 1170616 -> 1170520 bytes
+ .../ava/conf/mobile_bisenet_with_argmax_cache      | Bin 1426900 -> 1426812 bytes
+ .../xout/_root/ava/conf/r2228.conf                 |   4 ++--
+ .../xout/_root/ava/lib/node_ai_area_recognition.so | Bin 613304 -> 617400 bytes
+ .../xout/_root/ava/lib/node_arges.so               | Bin 4166080 -> 4177768 bytes
+ .../xout/_root/ava/lib/node_camera_ai.so           | Bin 522432 -> 522632 bytes
+ .../xout/_root/ava/lib/node_camera_laser.so        | Bin 114960 -> 114960 bytes
+ .../xout/_root/ava/lib/node_camera_streamer.so     | Bin 345560 -> 345560 bytes
+ .../xout/_root/ava/lib/node_cmd.so                 | Bin 73352 -> 73352 bytes
+ .../xout/_root/ava/lib/node_com.so                 | Bin 44824 -> 44824 bytes
+ .../xout/_root/ava/lib/node_health_arges.so        | Bin 334840 -> 340144 bytes
+ .../xout/_root/ava/lib/node_iot.so                 | Bin 124360 -> 124360 bytes
+ .../_root/ava/lib/node_laser_point_extractor.so    | Bin 323960 -> 332152 bytes
+ .../xout/_root/ava/lib/node_laser_transfer.so      | Bin 1736880 -> 1745552 bytes
+ .../xout/_root/ava/lib/node_lasercali.so           | Bin 198232 -> 204576 bytes
+ .../xout/_root/ava/lib/node_lasercamera_calibr.so  | Bin 213424 -> 221744 bytes
+ .../xout/_root/ava/lib/node_laserplane_calibr.so   | Bin 324008 -> 324008 bytes
+ .../xout/_root/ava/lib/node_lds.so                 | Bin 377680 -> 377680 bytes
+ .../xout/_root/ava/lib/node_lds_calibration.so     | Bin 115576 -> 115576 bytes
+ .../xout/_root/ava/lib/node_lidar_slam.so          | Bin 2055328 -> 2055328 bytes
+ .../xout/_root/ava/lib/node_log.so                 | Bin 133168 -> 133168 bytes
+ .../xout/_root/ava/lib/node_map_divide.so          | Bin 1069336 -> 1069336 bytes
+ .../xout/_root/ava/lib/node_media.so               | Bin 100032 -> 100032 bytes
+ .../xout/_root/ava/lib/node_msg_cvt.so             | Bin 1184392 -> 1195560 bytes
+ .../xout/_root/ava/lib/node_ota.so                 | Bin 78488 -> 78488 bytes
+ .../xout/_root/ava/lib/node_signal.so              | Bin 346336 -> 576928 bytes
+ .../xout/_root/ava/lib/node_sys.so                 | Bin 144320 -> 144320 bytes
+ .../xout/_root/ava/lib/node_test.so                | Bin 123512 -> 123512 bytes
+ .../xout/_root/etc/os-release                      |   6 +++---
+ .../xout/_root/etc/rc.d/wifi_monitor.sh            |   2 +-
+ .../xout/_root/misc/data.tar.bz2                   | Bin 579 -> 565 bytes
+ .../xout/_root/timestamp                           |   2 +-
+ .../xout/_root/usr/bin/ava                         | Bin 183888 -> 183888 bytes
+ .../xout/_root/usr/bin/dmio.sh                     |  16 ++++++++++++++++
+ .../xout/_root/usr/bin/dmiot                       | Bin 196472 -> 152304 bytes
+ .../xout/_root/usr/bin/dreameiot                   | Bin 44440 -> 44448 bytes
+ .../xout/_root/usr/lib/libMNN.so                   | Bin 1510648 -> 1721024 bytes
+ .../xout/_root/usr/lib/libMNN_CL.so                | Bin 845976 -> 882688 bytes
+ .../xout/_root/usr/lib/libMNN_Express.so           | Bin 572720 -> 631368 bytes
+ .../xout/_root/usr/lib/libpaho-mqtt3as.so.1.3.10   | Bin 187504 -> 216536 bytes
+ .../xout/_root/usr/lib/libpaho-mqtt3cs.so.1.3.10   | Bin 166928 -> 193944 bytes
+ .../_root/usr/lib/tree_lib/libarges_route_nodes.so | Bin 9926168 -> 9915416 bytes
+ .../usr/lib/tree_lib/libarges_tactics_tree.so      | Bin 1271824 -> 1309632 bytes
+ .../xout/_root/usr/lib/tree_lib/libarges_tree.so   | Bin 3977904 -> 4020240 bytes
+ .../xout/_root/version_record                      |  18 +++++++++---------
+ .../{4.3.3_1087 => 4.3.3_1121}/xout/kernel.img     | Bin 10835968 -> 10835968 bytes
+ .../{4.3.3_1087 => 4.3.3_1121}/xout/mcu.bin        | Bin 159096 -> 169668 bytes
+ .../{4.3.3_1087 => 4.3.3_1121}/xout/toc1.fex       | Bin 1245184 -> 1245184 bytes
+ 52 files changed, 34 insertions(+), 18 deletions(-)
